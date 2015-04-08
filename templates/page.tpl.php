@@ -1,3 +1,19 @@
+
+<header class="header bg-orange">
+  <div class="container-small">
+    <?php if ($logo): ?>
+    <div class="md-col header__brand">
+      <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+    </div>
+    <?php endif; ?>
+    <?php if ($page['top_menu']): ?>
+    <div class="md-col-right header__menu">
+      <?php print render($page['top_menu']) ?>
+    </div>
+    <?php endif; ?>
+  </div>
+</header>
+
 <?php if ($page['help'] || ($show_messages && $messages)): ?>
   <div id="console"><div class="limiter clearfix">
     <?php print render($page['help']); ?>
