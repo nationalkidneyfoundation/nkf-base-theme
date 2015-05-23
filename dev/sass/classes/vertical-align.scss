@@ -1,0 +1,16 @@
+//
+// Vertical Align
+// -------------
+
+// Depends on an appropriate `display` value.
+.vertical-align {
+  &--baseline   { vertical-align: baseline; }
+  &--sub        { vertical-align: sub; }
+  &--super      { vertical-align: super; }
+  &--top        { vertical-align: top; }
+  &--textTop    { vertical-align: text-top; }
+  &--middle     { vertical-align: middle; }
+  &--bottom     { vertical-align: bottom; }
+  &--textBottom { vertical-align: text-bottom; }
+  &--inherit    { vertical-align: inherit; }
+}

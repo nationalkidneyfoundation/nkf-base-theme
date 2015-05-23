@@ -1,0 +1,22 @@
+//
+// Overflow
+// -------------
+.overview {
+  &--visible    { overflow: visible; }
+  &--hidden     { overflow: hidden; }
+  &--scroll     { overflow: scroll; }
+  &--auto       { overflow: auto; }
+  &--inherit    { overflow: inherit; }
+
+  &-x--visible  { overflow-x: visible; }
+  &-x--hidden   { overflow-x: hidden; }
+  &-x--scroll   { overflow-x: scroll; }
+  &-x--auto     { overflow-x: auto; }
+  &-y--inherit  { overflow-x: inherit; }
+
+  &-y--visible  { overflow-y: visible; }
+  &-y--hidden   { overflow-y: hidden; }
+  &-y--scroll   { overflow-y: scroll; }
+  &-y--auto     { overflow-y: auto; }
+  &-y--inherit  { overflow-y: inherit; }
+}

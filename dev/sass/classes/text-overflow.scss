@@ -1,0 +1,9 @@
+//
+// Text Overflow
+// -------------
+.text-overflow {
+  &--clip     { text-overflow: clip; }
+  &--ellipsis { text-overflow: ellipsis; }
+  &--string   { text-overflow: string; }
+  &--inherit  { text-overflow: inherit; }
+}

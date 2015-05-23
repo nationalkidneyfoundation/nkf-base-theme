@@ -1,0 +1,10 @@
+//
+// Text Transform
+// -------------
+.text-transform {
+  &--none       { text-transform: none; }
+  &--capitalize { text-transform: capitalize; }
+  &--uppercase  { text-transform: uppercase; }
+  &--lowercase  { text-transform: lowercase; }
+  &--inherit    { text-transform: inherit; }
+}

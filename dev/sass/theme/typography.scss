@@ -1,0 +1,39 @@
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  font-family: $font-family;
+  line-height: $line-height;
+  font-size: 100%;
+}
+
+a {
+  @extend .text-decoration--none;
+}
+
+h1, .h1 { font-size: $h1; }
+h2, .h2 { font-size: $h2; }
+h3, .h3 { font-size: $h3; }
+h4, .h4 { font-size: $h4; }
+h5, .h5 { font-size: $h5; }
+h6, .h6 { font-size: $h6; }
+
+h1, h2, h3, h4, h5, h6
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: $heading-font-family;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
+}
+
+@each $name, $size in $font-sizes {
+  .font-size--#{$name} {
+    font-size: #{$size};
+  }
+}
+
+.caps {
+  @extend .text-transform--uppercase;
+  letter-spacing: .2rem;
+}

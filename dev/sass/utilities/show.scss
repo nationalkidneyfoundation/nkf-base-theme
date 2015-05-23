@@ -1,0 +1,11 @@
+
+@each $bp, $bp-value in $breakpoints {
+  .#{$bp}--show {
+    @extend .hide;
+  }
+  @media #{$bp-value} {
+    .#{$bp}--show {
+      display: block !important;
+    }
+  }
+}

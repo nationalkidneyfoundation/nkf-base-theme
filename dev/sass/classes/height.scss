@@ -1,0 +1,13 @@
+//
+// Heights
+// -------------
+.height {
+  &--border-box   { height: border-box !important; }
+  &--content-box  { height: content-box !important; }
+  &--max-content  { height: max-content !important; }
+  &--min-content  { height: min-content !important; }
+  &--available    { height: available !important; }
+  &--fit-content  { height: fit-content !important; }
+  &--auto         { height: auto !important; }
+  &--inherit      { height: inherit !important; }
+}

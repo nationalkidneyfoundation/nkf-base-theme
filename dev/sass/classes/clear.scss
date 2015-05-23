@@ -1,0 +1,10 @@
+//
+// Clear
+// -------------
+.clear {
+  &--none    { clear: none; }
+  &--left    { clear: left; }
+  &--right   { clear: right; }
+  &--both    { clear: both; }
+  &--inherit { clear: inherit; }
+}

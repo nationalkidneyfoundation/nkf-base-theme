@@ -1,0 +1,13 @@
+
+
+.list--reset {
+  @extend .list-style--none;
+  @extend .padding-left--none;
+}
+.list--grid {
+  @extend .list--reset;
+  @extend .grid;
+  > li {
+    @extend .grid-cell;
+  }
+}

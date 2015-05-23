@@ -1,0 +1,63 @@
+
+// Creates width rules like:
+// .width--10 { width: 10%; }
+@each $name, $perc in $widths {
+  .width--#{$name} {
+    width: #{$perc};
+  }
+}
+
+@each $name, $height in $heights {
+  .width--#{$name} {
+    width: $height;
+  }
+}
+// Creates width rules for each breakpoint
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    @each $name, $perc in $widths {
+      .#{$bp}--width--#{$name} {
+        width: #{$perc};
+      }
+    }
+  }
+}
+
+.width--fit {
+  display: block;
+  float: left;
+  width: auto;
+}
+
+.width--fill {
+  display: block;
+  overflow: hidden;
+  width: auto;
+}
+
+.width--full {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+}
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--width--fit {
+      display: block;
+      float: left;
+      width: auto;
+    }
+
+    .#{$bp}--width--fill {
+      display: block;
+      overflow: hidden;
+      width: auto;
+    }
+
+    .#{$bp}--width--full {
+      box-sizing: border-box;
+      display: block;
+      width: 100%;
+    }
+  }
+}

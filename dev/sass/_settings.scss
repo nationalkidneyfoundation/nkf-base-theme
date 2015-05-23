@@ -1,0 +1,187 @@
+// Augmented fourth scale
+$scale: (
+    -4: 0.25rem
+  , -3: 0.354rem
+  , -2: 0.5rem
+  , -1: 0.707rem
+  , 1: 1rem
+  , 2: 1.414rem
+  , 3: 1.999rem
+  , 4: 2.827rem
+  , 5: 3.998rem
+  , 6: 5.653rem
+  , 7: 7.993rem
+  , 8: 11.302rem
+  , 9: 15.981rem
+  , 10: 22.597rem
+  , 11: 31.952rem
+  , 12: 45.18rem
+  , 13: 63.884rem
+  , 14: 90.332rem
+  , 15: 127.73rem
+  , 16: 180.61rem
+) !default;
+
+@function scale($x){
+  @return map-get($scale, $x);
+}
+
+// Typography
+$font-size: 15px !default;
+$font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif !default;
+$line-height: 1.5 !default;
+$heading-font-family: $font-family !default;
+$heading-font-weight: bold !default;
+$heading-line-height: 1.25 !default;
+$monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
+
+$font-sizes: (
+    'xs': scale(-2)
+  , 'sm': scale(-1)
+  , 'md': scale(1)
+  , 'lg': scale(2)
+  , 'xl': scale(3)
+  , 'xxl': scale(4)
+  , 'xxxl': scale(5)
+) !default;
+
+@function font-size($x){
+  @return map-get($font-sizes, $x);
+}
+
+$h1: font-size('xxl') !default;
+$h2: font-size('xl')  !default;
+$h3: font-size('lg')  !default;
+$h4: font-size('md')  !default;
+$h5: font-size('sm')  !default;
+$h6: font-size('xs')  !default;
+
+
+// Colors
+$colors: (
+    orange:     #F15E22
+  , blue:       #1E4497
+  , navy:       #26225E
+  , red:        #d51217
+  , mustard:    #FAAD1D
+  , aqua:       #048499
+  , yellow:     #FEDC00
+  , green:      #018241
+  , lime:       #91AE3C
+  , sienna:     #9E2420
+) !default;
+
+$white: #fff !default;
+$gray-1: #eee !default;
+$gray-2: #ccc !default;
+$gray-3: #bbb !default;
+$gray-4: #777 !default;
+$gray-5: #333 !default;
+$black: #000 !default;
+
+$twitter: #4099FF !default;
+$facebook: #3b5998 !default;
+
+@function color($x){
+  @return map-get($colors, $x);
+}
+
+$link-color: color(sienna) !default;
+$link-color-hover: color(red) !default;
+$link-color-active: $link-color !default;
+$link-color-visited: $link-color !default;
+
+// Spacing, used for padding and margin
+$spaces: (
+    'none': 0
+  , 'xxs': scale(-3)
+  , 'xs': scale(-2)
+  , 'sm': scale(-1)
+  , 'md': scale(1)
+  , 'lg': scale(2)
+  , 'xl': scale(3)
+  , 'xxl': scale(4)
+  , 'xxxl': scale(5)
+) !default;
+
+@function space($x){
+  @return map-get($spaces, $x);
+}
+// Widths
+$widths: (
+    '5': 5%
+  , '10': 10%
+  , '15': 15%
+  , '20': 20%
+  , '25': 25%
+  , '30': 30%
+  , '33': 1/3 * 100%
+  , '35': 35%
+  , '40': 40%
+  , '45': 45%
+  , '50': 50%
+  , '55': 55%
+  , '60': 60%
+  , '65': 65%
+  , '66': 2/3 * 100%
+  , '70': 70%
+  , '75': 75%
+  , '80': 80%
+  , '85': 85%
+  , '90': 90%
+  , '95': 95%
+  , '100': 100%
+
+) !default;
+
+@function width($width){
+  @return map-get($widths, $width);
+}
+
+// Heights
+$heights: (
+    'xs': scale(1)
+  , 'sm': scale(3)
+  , 'md': scale(5)
+  , 'lg': scale(9)
+  , 'xl': scale(13)
+) !default;
+
+
+@function height($x){
+  @return map-get($heights, $x);
+}
+
+$containers: (
+    'xs': scale(1)
+  , 'sm': scale(3)
+  , 'md': scale(9)
+  , 'lg': scale(13)
+  , 'xl': scale(15)
+) !default;
+
+// Borders
+$border-widths: (
+    'none': 0
+  , 'xs': 1px
+  , 'sm': 2px
+  , 'md': scale(-4)
+  , 'lg': scale(-2)
+  , 'xl': scale(1)
+) !default;
+
+@function border-width($x){
+  @return map-get($border-widths, $x);
+}
+
+$breakpoints: (
+    'xs': '(min-width: 20em)'
+  , 'sm': '(min-width: 40em)'
+  , 'md': '(min-width: 52em)'
+  , 'lg': '(min-width: 64em)'
+  , 'xl': '(min-width: 75em)'
+) !default;
+
+@function breakpoint($breakpoint){
+  @return map-get($breakpoints, $breakpoint);
+}

@@ -1,0 +1,10 @@
+//
+// Text Decoration
+// -------------
+.text-decoration {
+  &--none         { text-decoration: none; }
+  &--underline    { text-decoration: underline; }
+  &--overline     { text-decoration: overline; }
+  &--lineThrough  { text-decoration: line-through; }
+  &--inherit      { text-decoration: inherit; }
+}

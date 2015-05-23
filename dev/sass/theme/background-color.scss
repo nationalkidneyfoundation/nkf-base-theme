@@ -1,0 +1,36 @@
+@each $name, $color in $colors {
+  .background-color,
+  .bg {
+    &--#{$name} {
+      background-color: $color;
+    }
+    &--#{$name}--l1 {
+      background-color: lighten($color, 10%);
+    }
+    &--#{$name}--l2 {
+      background-color: lighten($color, 20%);
+    }
+    &--#{$name}--d1 {
+      background-color: darken($color, 10%);
+    }
+    &--#{$name}--d2 {
+      background-color: darken($color, 20%);
+    }
+  }
+  .hover {
+    &--background-color--#{$name}:hover,
+    &--bg--#{$name}:hover {
+      background-color: $color;
+    }
+  }
+}
+.background-color,
+.bg {
+  &--white   { background-color: $white; }
+  &--gray-1  { background-color: $gray-1; }
+  &--gray-2  { background-color: $gray-2; }
+  &--gray-3  { background-color: $gray-3; }
+  &--gray-4  { background-color: $gray-4; }
+  &--gray-5  { background-color: $gray-5; }
+  &--black   { background-color: $black; }
+}

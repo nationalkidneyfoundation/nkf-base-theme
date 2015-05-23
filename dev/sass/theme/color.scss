@@ -1,0 +1,52 @@
+a {
+  color: $link-color;
+}
+a:active {
+  color: $link-color-active;
+}
+a:visited {
+  color: $link-color-visited;
+}
+a:hover {
+  color: $link-color-hover;
+}
+
+@each $name, $color in $colors {
+  .color--#{$name},
+  .#{$name} {
+    color: $color;
+  }
+  .color--#{$name}--l1,
+  .#{$name}--l1 {
+    color: lighten($color, 10%);
+  }
+  .color--#{$name}--l2,
+  .#{$name}--l2 {
+    color: lighten($color, 20%);
+  }
+  .color--#{$name}--d1,
+  .#{$name}--d1 {
+    color: darken($color, 10%);
+  }
+  .color--#{$name}--d2,
+  .#{$name}--d2 {
+    color: darken($color, 20%);
+  }
+  .hover {
+    &--color--#{$name}:hover,
+    &--#{$name}:hover {
+      color: $color;
+    }
+  }
+}
+.color {
+  &--white    { color: $white; }
+  &--gray-1   { color: $gray-1; }
+  &--gray-2   { color: $gray-2; }
+  &--gray-3   { color: $gray-3; }
+  &--gray-4   { color: $gray-4; }
+  &--gray-5   { color: $gray-5; }
+  &--black    { color: $black; }
+  &--twitter  { color: $twitter; }
+  &--facebook { color: $facebook; }
+}

@@ -1,0 +1,115 @@
+@each $name, $color in $colors {
+  .button--#{$name} {
+    @extend .button;
+    @extend .background-color--#{$name};
+    @extend .border-color--#{$name};
+    //background-color: transparent;
+    &::before {
+      @extend .background-color--#{$name};
+    }
+    //&:hover {
+    //  @extend .background-color--#{$name}--d1;
+    //}
+  }
+}
+
+.button {
+  &--white   {
+    @extend .button;
+    @extend .background-color--white;
+    @extend .border-color--white;
+    @extend .color--black;
+    &::before {
+      @extend .background-color--white;
+    }
+  }
+  &--gray-1  {
+    @extend .button;
+    background-color: $gray-1;
+  }
+  &--gray-2  {
+    @extend .button;
+    background-color: $gray-2;
+  }
+  &--gray-3  {
+    @extend .button;
+    background-color: $gray-3;
+  }
+  &--gray-4  {
+    @extend .button;
+    background-color: $gray-4;
+  }
+  &--gray-5  {
+    @extend .button;
+    background-color: $gray-5;
+  }
+  &--black   {
+    @extend .button;
+    @extend .border-color--black;
+    @extend .color--white;
+    &::before {
+      @extend .background-color--black;
+    }
+  }
+}
+
+@each $name, $color in $colors {
+  .button--outline--#{$name} {
+    @extend .button;
+    @extend .color--#{$name};
+    @extend .border-color--#{$name};
+    @extend .position--relative;
+    background-color: transparent;
+    z-index: 2;
+    &::before {
+      @extend .display--block;
+      @extend .cover-absolute;
+      content: '';
+      z-index: -1;
+    }
+    &:hover::before,
+    &:focus::before,
+    &.active::before {
+      opacity: .125;
+      background-color: currentcolor;
+    }
+  }
+}
+
+.button {
+  &--outline--white   {
+    @extend .button;
+    background-color:$white;
+    background-color: transparent;
+  }
+  &--outline--gray-1  {
+    @extend .button;
+    background-color: $gray-1;
+    background-color: transparent;
+  }
+  &--outline--gray-2  {
+    @extend .button;
+    background-color: $gray-2;
+    background-color: transparent;
+  }
+  &--outline--gray-3  {
+    @extend .button;
+    background-color: $gray-3;
+    background-color: transparent;
+  }
+  &--outline--gray-4  {
+    @extend .button;
+    background-color: $gray-4;
+    background-color: transparent;
+  }
+  &--outline--gray-5  {
+    @extend .button;
+    background-color: $gray-5;
+    background-color: transparent;
+  }
+  &--outline--black   {
+    @extend .button;
+    background-color: $black;
+    background-color: transparent;
+  }
+}

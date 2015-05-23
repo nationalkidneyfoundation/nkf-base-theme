@@ -1,0 +1,15 @@
+//
+//  Clearfix
+//  -------------------------
+
+//  Micro clearfix to clear floats.
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  @extend .display-table;
+}
+
+.clearfix:after {
+  @extend .clear-both;
+}

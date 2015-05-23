@@ -1,0 +1,8 @@
+// Border Style
+// -------------
+.border-style {
+  &--none   { border-style: none; }
+  &--dashed { border-style: dashed; }
+  &--dotted { border-style: dotted; }
+  &--solid  { border-style: solid; }
+}

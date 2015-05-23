@@ -1,0 +1,29 @@
+
+@each $name, $space in $spaces {
+  .margin {
+    &--#{$name}         { margin: $space; }
+    &-top--#{$name}     { margin-top: $space; }
+    &-right--#{$name}   { margin-right: $space; }
+    &-bottom--#{$name}  { margin-bottom: $space; }
+    &-left--#{$name}    { margin-left: $space; }
+    &-x--#{$name}       { margin-left: $space; margin-right: $space; }
+    &-y--#{$name}       { margin-top: $space; margin-bottom: $space; }
+  }
+}
+
+// Creates width rules for each breakpoint
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    @each $name, $space in $spaces {
+      .#{$bp}--margin {
+        &--#{$name}         { margin: $space; }
+        &-top--#{$name}     { margin-top: $space; }
+        &-right--#{$name}   { margin-right: $space; }
+        &-bottom--#{$name}  { margin-bottom: $space; }
+        &-left--#{$name}    { margin-left: $space; }
+        &-x--#{$name}       { margin-left: $space; margin-right: $space; }
+        &-y--#{$name}       { margin-top: $space; margin-bottom: $space; }
+      }
+    }
+  }
+}

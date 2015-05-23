@@ -1,0 +1,12 @@
+//
+// Position
+// -------------
+
+// 1. Promote fixed elements into a new layer for performance.
+.position {
+  &--fixed    { position: fixed; backface-visibility: hidden; /* 1 */ }
+  &--absolute { position: absolute; }
+  &--relative { position: relative; }
+  &--static   { position: static; }
+  &--inherit  { position: inherit; }
+}

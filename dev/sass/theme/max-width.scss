@@ -1,0 +1,17 @@
+
+
+@each $name, $value in $scale {
+  .max-width--#{$name} {
+    max-width: #{$value};
+  }
+}
+
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    @each $name, $value in $scale {
+      .#{$bp}--max-width--#{$name} {
+        max-width: #{$value};
+      }
+    }
+  }
+}

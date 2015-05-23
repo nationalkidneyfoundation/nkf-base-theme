@@ -1,0 +1,7 @@
+
+.truncate {
+  @extend .display--block;
+  @extend .overflow--hidden;
+  @extend .text-overflow--ellipsis;
+  @extend .white-space--nowrap;
+}

@@ -1,0 +1,10 @@
+//
+// Cursor
+// -------------
+.cursor {
+  &--default  { cursor: default; }
+  &--text     { cursor: text; }
+  &--pointer  { cursor: pointer; }
+  &--move     { cursor: move; }
+  &--inherit  { cursor: inherit; }
+}

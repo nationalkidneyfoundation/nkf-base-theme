@@ -15,11 +15,19 @@ regions[footer]             = Footer
 regions[page_top]           = Page top
 regions[page_bottom]        = Page bottom
 regions[highlighted]        = Highlighted
+regions[top_menu]           = Top Menu
+regions[navigation]         = Main Navigation
 
 ; Stylesheets =================================================================
 
-;stylesheets[all][]         = reset.css
-;stylesheets[all][]         = base.css
+stylesheets[all][]          = reset.css
+stylesheets[all][]          = base.css
 ;stylesheets[screen][]      = drupal.css
 ;stylesheets[ie][lte IE 7]  = ie.css
 stylesheets[all][]          = css/styles.min.css
+
+; Scripts =====================================================================
+scripts[] = js/scripts.js
+
+; Panels  =====================================================================
+plugins[panels][layouts]    = layouts

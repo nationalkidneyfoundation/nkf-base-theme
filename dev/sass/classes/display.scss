@@ -1,0 +1,14 @@
+//
+// Display
+// -------------
+.display {
+  &--none         { display: none; }
+  &--block        { display: block; }
+  &--inline       { display: inline; }
+  &--inline-block { display: inline-block; *display: inline; }
+  &--inline-table { display: inline-table; }
+  &--table        { display: table; }
+  &--table-cell   { display: table-cell; }
+  &--table-column { display: table-column; }
+  &--table-row    { display: table-row; }
+}

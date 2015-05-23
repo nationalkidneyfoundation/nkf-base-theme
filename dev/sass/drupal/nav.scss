@@ -1,0 +1,101 @@
+
+// for the primary nav
+.header__nav {
+  .menu {
+    @extend .grid;
+    @extend .margin--none;
+    @extend .padding--none;
+
+  }
+  li {
+    @extend .grid-cell;
+  }
+  a {
+    @extend .display--inline-block;
+    @extend .padding--md;
+  }
+}
+.header__nav--primary {
+  @extend .text-align--center;
+  a {
+    @extend .background-color--white;
+    @extend .border-width--none;
+    @extend .border-bottom-width--lg;
+    @extend .border-style--solid;
+    @extend .position--relative;
+    @extend .color--black;
+    //@extend .text-transform--uppercase;
+    //@extend .h5;
+    //z-index: 2;
+    &:hover {
+      @extend .color--black;
+    }
+    &::before {
+      @extend .display--block;
+      @extend .cover-absolute;
+      @extend .opacity--30;
+      content: '';
+      //z-index: -1;
+    }
+    &:hover::before {
+      @extend .opacity--40;
+    }
+  }
+  .awareness {
+    @extend .border-color--orange;
+    &::before {
+      @extend .background-color--orange;
+    }
+  }
+  .prevention {
+    @extend .border-color--yellow;
+    &::before {
+      @extend .background-color--yellow;
+    }
+  }
+  .patients {
+    @extend .border-color--lime;
+    &::before {
+      @extend .background-color--lime;
+    }
+  }
+  .professionals {
+    @extend .border-color--red;
+    &::before {
+      @extend .background-color--red;
+    }
+  }
+  .involved {
+    @extend .border-color--blue;
+    &::before {
+      @extend .background-color--blue;
+    }
+  }
+  .search {
+    @extend .border-color--navy;
+    @extend .background-color--navy;
+    @extend .color--white;
+    &:hover {
+      @extend .color--white;
+    }
+    &::before {
+      @extend .hide;
+    }
+  }
+}
+
+.header__nav--secondary {
+  @extend .text-align--right;
+  .donate {
+    @extend .button--white;
+    @extend .padding--md;
+    &::before {
+      @extend .button--outline--white::before;
+    }
+    &:hover::before,
+    &:focus::before {
+      @extend .button--outline--white:hover::before;
+    }
+    //@extend .background-color--white;
+  }
+}

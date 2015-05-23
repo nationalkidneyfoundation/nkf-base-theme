@@ -1,0 +1,8 @@
+
+.background-hero {
+  @extend .background-size--cover;
+  background-repeat: no-repeat;
+  min-height: 700px;
+  background-position: center left;
+  background-attachment: fixed;
+}

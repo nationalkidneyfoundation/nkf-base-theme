@@ -1,0 +1,8 @@
+
+.background-position {
+  &--center { background-position: center; }
+  &--top    { background-position: top; }
+  &--right  { background-position: right; }
+  &--bottom { background-position: bottom; }
+  &--left   { background-position: left; }
+}

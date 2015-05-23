@@ -1,0 +1,10 @@
+
+@each $name, $width in $border-widths {
+  .border {
+    &-width--#{$name}         { border-width: $width; }
+    &-top-width--#{$name}     { border-top-width: $width; }
+    &-right-width--#{$name}   { border-right-width: $width; }
+    &-bottom-width--#{$name}  { border-bottom-width: $width; }
+    &-left-width--#{$name}    { border-left-width: $width; }
+  }
+}

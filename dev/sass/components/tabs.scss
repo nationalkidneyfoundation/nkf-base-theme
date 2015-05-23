@@ -1,0 +1,21 @@
+
+
+.tabs {
+  @extend .list--grid;
+  @extend .padding--md;
+  @extend .border-width--none;
+  @extend .border-bottom-width--md;
+  @extend .border-style--solid;
+  @extend .border-color--gray-2;
+  @extend .background-color--gray-1;
+  @extend .display--inline-block;
+  a {
+    @extend .padding--md;
+    @extend .text-decoration--none;
+    @extend .color--gray-4;
+    &.active {
+      @extend .background-color--white;
+      @extend .padding-y--lg;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+//
+// Font Style
+// -------------
+.font-style {
+  &--normal  { font-style: normal; }
+  &--italic  { font-style: italic; }
+  &--oblique { font-style: oblique; }
+  &--inherit { font-style: inherit; }
+}

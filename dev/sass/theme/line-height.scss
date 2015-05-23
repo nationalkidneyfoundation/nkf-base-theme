@@ -1,0 +1,18 @@
+
+.line-height {
+  @each $name, $height in $heights {
+    &--#{$name} { line-height: $height; }
+  }
+  &--10  { line-height: 10%; }
+  &--20  { line-height: 20%; }
+  &--25  { line-height: 25%; }
+  &--30  { line-height: 30%; }
+  &--40  { line-height: 40%; }
+  &--50  { line-height: 50%; }
+  &--60  { line-height: 60%; }
+  &--70  { line-height: 70%; }
+  &--75  { line-height: 75%; }
+  &--80  { line-height: 80%; }
+  &--90  { line-height: 90%; }
+  &--100 { line-height: 100%; }
+}

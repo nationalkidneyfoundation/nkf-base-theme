@@ -1,0 +1,8 @@
+
+.form-item {
+  @extend .padding-y--sm;
+}
+
+.form-item .description {
+  @extend .color--gray-3;
+}
