@@ -6,21 +6,25 @@
   &-top {
     @extend .border-color--gray-2;
     @extend .border-width--none;
+    @extend .border-style--solid;
     @extend .border-top-width--xs;
   }
   &-right {
     @extend .border-color--gray-2;
     @extend .border-width--none;
+    @extend .border-style--solid;
     @extend .border-right-width--xs;
   }
   &-bottom {
     @extend .border-color--gray-2;
     @extend .border-width--none;
+    @extend .border-style--solid;
     @extend .border-bottom-width--xs;
   }
   &-left {
     @extend .border-color--gray-2;
     @extend .border-width--none;
+    @extend .border-style--solid;
     @extend .border-left-width--xs;
   }
 }
