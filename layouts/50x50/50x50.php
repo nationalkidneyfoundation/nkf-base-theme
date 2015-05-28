@@ -5,10 +5,10 @@
   <div class="grid-cell width--100">
     <?php print $content['top']; ?>
   </div>
-  <div class="grid-cell sm--width--75 width--100">
+  <div class="grid-cell sm--width--50 width--100">
     <?php print $content['left']; ?>
   </div>
-  <div class="grid-cell sm--width--25 width--100">
+  <div class="grid-cell sm--width--50 width--100">
     <?php print $content['right']; ?>
   </div>
   <div class="grid-cell width--100">
