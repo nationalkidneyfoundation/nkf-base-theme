@@ -37,13 +37,13 @@
 
   // this is the form container
   #redhen-donation-form {
-    //@extend .grid-cell;
     @extend .background-color--white;
     @extend .border-radius--lg;
     @extend .width--100;
-    //@extend .sm--width--75;
-    //@extend .md--width--60;
     @extend .padding--none;
+    //@extend .border-width--xs;
+    //@extend .border-style--solid;
+    //@extend .border-color--black;
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
   }
 
@@ -83,8 +83,9 @@
     @extend .border-bottom-width--none;
     @extend .h3;
     @extend .padding--none;
-    @extend .padding-top--lg;
-    @extend .padding-bottom--xl;
+    @extend .padding-top--sm;
+    @extend .padding-bottom--lg;
+  //  @extend .color--orange;
   }
 
   // Amount section
@@ -143,7 +144,6 @@
 
 
   // contact information
-
   #edit-redhen-contact {
     @extend .grid;
   }
@@ -156,7 +156,7 @@
     @extend .grid-cell;
     @extend .sm--width--50;
   }
-  .form-item-field-newsletter-signup {
+  .field-type-mailchimp-lists-subscription {
     @extend .grid-cell;
   }
 
@@ -171,6 +171,9 @@
   }
 
   // Address section
+  .field-type-addressfield legend {
+    @extend .hide;
+  }
   .country {
     @extend .width--100;
   }
@@ -181,7 +184,7 @@
     }
     .form-item-commerce-customer-address-und-0-administrative-area {
       @extend .width--100;
-      @extend .sm--width--60;
+      @extend .sm--width--70;
       @extend .margin--none;
     }
     .state {
@@ -189,7 +192,7 @@
     }
     .form-item-commerce-customer-address-und-0-postal-code {
       @extend .width--100;
-      @extend .sm--width--40;
+      @extend .sm--width--30;
       @extend .margin--none;
     }
   }
@@ -264,7 +267,7 @@
   // previous next
   .previous-next {
     @extend .padding--lg;
-    @extend .margin-top--lg;
+    //@extend .margin-top--lg;
     @extend .border-width--none;
     @extend .border-top-width--xs;
     @extend .border-color--gray-2;

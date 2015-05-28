@@ -1,0 +1,26 @@
+
+.border {
+  @extend .border-width--xs;
+  @extend .border-color--gray-2;
+  @extend .border-style--solid;
+  &-top {
+    @extend .border;
+    @extend .border-width--none;
+    @extend .border-top-width--xs;
+  }
+  &-right {
+    @extend .border;
+    @extend .border-width--none;
+    @extend .border-right-width--xs;
+  }
+  &-bottom {
+    @extend .border;
+    @extend .border-width--none;
+    @extend .border-bottom-width--xs;
+  }
+  &-left {
+    @extend .border;
+    @extend .border-width--none;
+    @extend .border-left-width--xs;
+  }
+}
