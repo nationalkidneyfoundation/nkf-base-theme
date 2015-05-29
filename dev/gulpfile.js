@@ -34,7 +34,7 @@ var paths = {
 }
 
 // css prefix options
-var cssPrefixOptions = {}
+var cssPrefixOptions = { browsers: ['last 2 versions','> 5% in US'] };
 
 // scripts run on npm's postinstall, see package.json
 /*gulp.task('postinstall', shell.task([

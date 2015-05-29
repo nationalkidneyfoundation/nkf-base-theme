@@ -15,7 +15,8 @@
           if(checkRequiredFields($form)) {
             if (!e.isPropagationStopped()) {
               $('input.form-submit', $(this))
-                .attr('disabled', 'disabled');
+                .attr('disabled', 'disabled')
+                .val('processing');
               return true;
             }
           }
