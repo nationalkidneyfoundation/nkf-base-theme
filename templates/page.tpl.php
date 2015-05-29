@@ -32,8 +32,8 @@
     <?php endif; ?>
   </header>
   <?php if ($page['help'] || ($show_messages && $messages)): ?>
-  <section>
-    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xxl">
+  <section class="background-color--white">
+    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg padding-y--lg sm--padding-y--xxl">
       <?php print render($page['help']); ?>
       <?php if ($show_messages && $messages): print $messages; endif; ?>
     </div>

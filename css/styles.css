@@ -864,7 +864,7 @@ a:hover {
 .hover--color--navy:hover, .hover--navy:hover {
   color: #26225E; }
 
-.color--red, .button--outline--red, .marker, .form-required, .red {
+.color--red, .button--outline--red, div.error, tr.error, .marker, .form-required, .red {
   color: #d51217; }
 
 .color--red--l1, .red--l1 {
@@ -1002,7 +1002,7 @@ a:hover {
   color: #777; }
 .color--gray-5 {
   color: #333; }
-.color--black, .button--white, .header__nav--secondary .donate, .node-type-donation .previous, .header__nav--primary a, .header__nav--primary a:hover {
+.color--black, .button--white, .header__nav--secondary .donate, .node-type-donation .previous, div.warning, tr.warning, .header__nav--primary a, .header__nav--primary a:hover {
   color: #000; }
 .color--twitter {
   color: #4099FF; }
@@ -4446,21 +4446,19 @@ thead th {
   text-align: auto; }
 
 div.error {
-  border: 1px solid #d77; }
+  border: none; }
 
 div.warning {
-  border: 1px solid #f0c020; }
+  border: none; }
 
 div.ok {
-  border: 1px solid #00aa00; }
+  border: none; }
 
 div.error, tr.error {
-  background-color: #fcc;
-  color: #200; }
+  background-color: transparent; }
 
 div.warning, tr.warning {
-  background-color: #ffd;
-  color: #220; }
+  background-color: transparent; }
 
 div.ok, tr.ok {
   background: #dfd;

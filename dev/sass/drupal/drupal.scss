@@ -125,20 +125,20 @@ thead th { text-align:auto; }
 //.warning { color:#e09010; }
 //.ok { color:#008000; }
 
-div.error { border:1px solid #d77; }
-div.warning { border:1px solid #f0c020; }
-div.ok { border:1px solid #00aa00; }
+div.error { border:none; }//1px solid #d77; }
+div.warning { border:none; }//1px solid #f0c020; }
+div.ok { border:none; }//1px solid #00aa00; }
 
 div.error,
 tr.error {
-  background-color:#fcc;
-  color:#200;
+  @extend .color--red;
+  background-color: transparent;//#fcc;
   }
 
 div.warning,
 tr.warning {
-  background-color:#ffd;
-  color:#220;
+  @extend .color--black;
+  background-color: transparent;//#ffd;
   }
 
 div.ok,
