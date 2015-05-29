@@ -4768,3 +4768,7 @@ html.js .js-hide {
   height: 1.999rem;
   width: 1.999rem;
   line-height: 1.999rem; }
+
+@media print {
+  .header__nav, footer {
+    display: none; } }
