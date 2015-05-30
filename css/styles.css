@@ -339,7 +339,7 @@ img {
 
 .background-size--cover {
   background-size: cover; }
-.background-size--contain, .background-hero {
+.background-size--contain, .background-hero, .node-type-donation .main {
   background-size: contain; }
 
 .border-style--none {
@@ -4793,6 +4793,11 @@ html.js .js-hide {
 .header__nav--primary a::before {
   content: ''; }
 
+.node-type-donation .main {
+  background-image: url('../img/donation-hero.jpg');
+  background-repeat: no-repeat;
+  min-height: 500px;
+  background-position: bottom right; }
 .node-type-donation #redhen-donation-form {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); }
 .node-type-donation label:not(.option) {

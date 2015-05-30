@@ -48,7 +48,8 @@
   </section>
   <?php endif; ?>
 
-  <section <?php if(isset($hero_background)): print $hero_background; endif; ?>>
+  <!--<section <?php //if(isset($hero_background)): print $hero_background; endif; ?>>-->
+  <section class="main">
     <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
       <div class="grid">
         <?php if ($page['sidebar_first']): ?>

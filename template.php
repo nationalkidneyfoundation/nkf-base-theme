@@ -27,7 +27,7 @@ function nkf_base_preprocess_page(&$vars) {
   if(!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
      && isset($vars['node']->field_hero_image_background['und'][0]['uri'])) {
-    $vars['hero_image_background'] = $vars['node']->field_hero_image_background['und'][0]['uri'];//image_style_url('full_page_background', $vars['node']->field_hero_image_background['und'][0]['uri']);
+    $vars['hero_image_background'] = image_style_url('full_page_background', $vars['node']->field_hero_image_background['und'][0]['uri']);
     $vars['hero_background'] = 'class="background-hero " style="background-image:url(' . $vars['hero_image_background'] . ')"';
   }
   if(!empty($vars['node'])
