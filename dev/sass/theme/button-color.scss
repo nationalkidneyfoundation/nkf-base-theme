@@ -64,14 +64,21 @@
     &::before {
       @extend .display--block;
       @extend .cover-absolute;
+      opacity: .125;
+      background-color: currentcolor;
       content: '';
       z-index: -1;
+    }
+    &:hover,
+    &:focus,
+    &.active {
+      color: #fff;
     }
     &:hover::before,
     &:focus::before,
     &.active::before {
-      opacity: .125;
-      background-color: currentcolor;
+      opacity: 1;
+      background-color: $color;
     }
   }
 }

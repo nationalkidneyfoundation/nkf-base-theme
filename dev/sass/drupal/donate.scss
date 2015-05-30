@@ -14,13 +14,13 @@
 
   }
 
-  @extend .background-color--orange;
+  //@extend .background-color--orange;
 
   // hide title from view
   h1 {
     //@extend .invisible;
     @extend .font-size--xl;
-    @extend .color--white;
+    //@extend .color--white;
   }
   // hide tabs for anon
   &.not-logged-in {
@@ -41,9 +41,10 @@
     @extend .border-radius--lg;
     @extend .width--100;
     @extend .padding--none;
-    //@extend .border-width--xs;
-    //@extend .border-style--solid;
-    //@extend .border-color--black;
+    @extend .border-width--xs;
+    @extend .border-style--solid;
+    @extend .border-color--gray-2;
+    @extend .position--absolute;
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
   }
 
@@ -130,12 +131,13 @@
       @extend .hide;
     }
     label {
-      @extend .button--outline--orange;
+      @extend .button--outline--blue;
       @extend .padding--md;
       @extend .width--100;
     }
     input:checked+label{
-      @extend .button--outline--orange:focus;
+      @extend .button--outline--blue:focus;
+
     }
   }
   .form-item-donation-other {
@@ -210,8 +212,28 @@
     }
   }
 
+  // notified
+  .field-name-field-notify-firstname,
+  .field-name-field-notify-lastname {
+    @extend .grid-cell;
+    @extend .width--100;
+    @extend .sm--width--50;
+  }
 
-
+  .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area {
+    @extend .grid-cell;
+    @extend .width--100;
+    @extend .sm--width--70;
+    @extend .margin--none;
+    @extend .margin-right--none;
+  }
+  .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code {
+    @extend .grid-cell;
+    @extend .width--100;
+    @extend .sm--width--30;
+    @extend .margin--none;
+    @extend .margin-right--none;
+  }
   // Office
   .form-item-field-benefiting-office-und select {
     @extend .width--100;

@@ -113,7 +113,7 @@
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <div class="content"<?php print $content_attributes; ?>>
+  <div class="content position--relative"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
@@ -121,29 +121,20 @@
       //print render($content);
     ?>
     <?php if (isset($content['field_donation_tag_line'])): ?>
-      <?php print render($content['field_donation_tag_line']); ?>
+      <div class="padding-bottom--lg color--white font-size--lg"><?php print render($content['field_donation_tag_line']); ?></div>
     <?php endif; ?>
     <div class="grid">
-      <div class="grid-cell sm--width--60 width--100 sm--padding-right--lg">
+      <div class="grid-cell position--absolute sm--width--55 width--100 sm--padding-right--lg">
         <?php print render($content['field_donation_type']); ?>
       </div>
       <?php if (isset($content['body']) || isset($content['field_hero_image'])): ?>
-        <div class="grid-cell sm--width--40 width--100 sm--padding-left--lg">
-          <div class="padding--md background-color--orange--l1">
+        <div class="grid-cell sm--width--45 push--55 width--100 sm--padding-left--lg">
+          <div class="padding--md 1background-color--orange--l1">
             <?php print render($content['field_hero_image']); ?>
             <?php print render($content['body']); ?>
           </div>
         </div>
       <?php endif; ?>
-      <!--<div class="grid-cell sm--width--5 width--100 sm--padding-left--lg">
-        <div class="grid">
-          <div class="grid-cell">
-            <a href=""><i class="fa fa-twitter padding--sm text-align--center width--100 background-color--orange--l1 color--twitter fa-3x margin-bottom--lg"></i></a>
-            <a href=""><i class="fa fa-facebook width--100 background-color--white  color--facebook fa-3x"></i></a>
-          </div>
-          <div class="grid-cell"></div>
-        </div>
-      </div>-->
     </div>
   </div>
 

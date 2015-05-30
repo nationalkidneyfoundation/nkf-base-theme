@@ -22,8 +22,10 @@ regions[navigation]         = Main Navigation
 
 stylesheets[all][]          = reset.css
 stylesheets[all][]          = base.css
-;stylesheets[screen][]      = drupal.css
+stylesheets[screen][]      = drupal.css
 ;stylesheets[ie][lte IE 7]  = ie.css
+stylesheets[all][]          = system.messages.css
+stylesheets[all][]          = addressfield.css
 stylesheets[all][]          = css/styles.min.css
 
 ; Scripts =====================================================================

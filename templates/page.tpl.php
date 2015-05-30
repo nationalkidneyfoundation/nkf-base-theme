@@ -33,7 +33,7 @@
   </header>
   <?php if ($page['help'] || ($show_messages && $messages)): ?>
   <section class="background-color--white">
-    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg padding-y--lg sm--padding-y--xxl">
+    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg padding-y--lg sm--padding-y--xl">
       <?php print render($page['help']); ?>
       <?php if ($show_messages && $messages): print $messages; endif; ?>
     </div>
@@ -42,14 +42,14 @@
 
   <?php if ($page['highlighted']): ?>
   <section>
-    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xxl">
+    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
       <?php print render($page['highlighted']); ?>
     </div>
   </section>
   <?php endif; ?>
 
   <section <?php if(isset($hero_background)): print $hero_background; endif; ?>>
-    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xxl">
+    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
       <div class="grid">
         <?php if ($page['sidebar_first']): ?>
           <div class="grid-cell width--25"><?php print render($page['sidebar_first']) ?></div>
@@ -74,8 +74,8 @@
   </section>
 
 
-  <footer>
-    <div class="bg--orange container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xxl">
+  <footer class="bg--orange padding-y--xxl">
+    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xxl">
       <?php if ($page['footer']): ?>
       <?php print render($page['footer']); ?>
       <?php endif; ?>

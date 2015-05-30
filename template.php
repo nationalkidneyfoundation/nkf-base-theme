@@ -12,7 +12,7 @@ function nkf_base_css_alter(&$css) {
  */
 function nkf_base_preprocess_page(&$vars) {
   // add font icons
-  drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('group' => CSS_THEME, 'type' => 'external'));
+  //drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('group' => CSS_THEME, 'type' => 'external'));
 
   $columns = 1;
   $columns += !empty($vars['page']['sidebar_first'])? 1 : 0;
@@ -27,7 +27,7 @@ function nkf_base_preprocess_page(&$vars) {
   if(!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
      && isset($vars['node']->field_hero_image_background['und'][0]['uri'])) {
-    $vars['hero_image_background'] = image_style_url('full_page_background', $vars['node']->field_hero_image_background['und'][0]['uri']);
+    $vars['hero_image_background'] = $vars['node']->field_hero_image_background['und'][0]['uri'];//image_style_url('full_page_background', $vars['node']->field_hero_image_background['und'][0]['uri']);
     $vars['hero_background'] = 'class="background-hero " style="background-image:url(' . $vars['hero_image_background'] . ')"';
   }
   if(!empty($vars['node'])
