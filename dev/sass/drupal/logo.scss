@@ -1,0 +1,9 @@
+
+#logo {
+  @extend .display--inline-block;
+  @extend .background-size--contain;
+  background-repeat: no-repeat;
+  height: 50px;
+  min-width: 300px;
+  background-image: url(../logo.png);
+}

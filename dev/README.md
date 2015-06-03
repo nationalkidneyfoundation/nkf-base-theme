@@ -1,3 +1,7 @@
+### Build process
+
+- make sure to brew install graphicsmagick
+
 
 ### Directory Structure
 

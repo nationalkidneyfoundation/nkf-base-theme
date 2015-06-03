@@ -3,12 +3,17 @@
 .node-type-donation {
 
   // set background image
-  .main {
-    @extend .background-size--contain;
+  .hero {
+    @extend .background-size--cover;
+    @extend .position--absolute;
+    //@extend .background-color--orange;
     background-image: url('../img/donation-hero.jpg');
     background-repeat: no-repeat;
     min-height: 500px;
-    background-position: bottom right;
+    background-position: center;
+    top: 0;
+    left: 0;
+    right: 0;
   }
 
   // show full form on error
@@ -25,10 +30,31 @@
 
   //@extend .background-color--orange;
 
+  // compress the nav
+  .header__logo-image {
+    max-height: 40px;
+  }
+  header {
+    @extend .background-color--gray-1;
+    .container {
+      @extend .sm--padding-y--md;
+    }
+  }
+  #logo {
+    background-image: url(../img/NKF-logoR_Hori_OB.png);
+  }
+  .main {
+    @extend .background-color--gray-1;
+    @extend .padding-bottom--xxxl;
+  }
   // hide title from view
   h1 {
     //@extend .invisible;
+    @extend .caps;
+    @extend .font-weight--400;
     @extend .font-size--xl;
+    @extend .sm--width--60;
+    @extend .text-align--center;
     //@extend .color--white;
   }
   // hide tabs for anon
@@ -39,6 +65,7 @@
   }
 
   .donation-step__inner {
+    @extend .position--relative;
     @extend .padding--lg;
     @extend .padding-bottom--xl;
   }
@@ -47,17 +74,18 @@
   // this is the form container
   #redhen-donation-form {
     @extend .background-color--white;
-    @extend .border-radius--lg;
+    //@extend .border-radius--lg;
     @extend .width--100;
     @extend .padding--none;
-    @extend .border-width--xs;
-    @extend .border-style--solid;
-    @extend .border-color--gray-2;
-    @extend .position--absolute;
+    @extend .border-width--none;
+    //@extend .border-width--xs;
+    //@extend .border-style--solid;
+    //@extend .border-color--gray-4;
+    //@extend .position--absolute;
     box-shadow: 0 6px 20px rgba(0,0,0,0.5);
   }
 
-  label {
+  .form-item label {
     @extend .font-weight--400;
     //@extend .font-size--lg;
     &:not(.option) {
@@ -88,7 +116,9 @@
   }
 
   legend {
-    @extend .caps;
+    //@extend .caps;
+    @extend .grid-cell;
+    @extend .width--100;
     @extend .text-align--center;
     @extend .border-bottom-width--none;
     @extend .h3;
@@ -188,14 +218,35 @@
   .country {
     @extend .width--100;
   }
+
+  .street-block {
+    @extend .grid;
+    .form-item {
+      @extend .grid-cell;
+    }
+  }
+  .form-item-commerce-customer-address-und-0-thoroughfare {
+    @extend .width--100;
+    @extend .sm--width--75;
+  }
+  .form-item-commerce-customer-address-und-0-premise {
+    @extend .width--100;
+    @extend .sm--width--25;
+  }
+
   .locality-block {
     @extend .grid;
     .form-item {
       @extend .grid-cell;
     }
+    .form-item-commerce-customer-address-und-0-locality {
+      @extend .width--100;
+      @extend .sm--width--55;
+      @extend .margin--none;
+    }
     .form-item-commerce-customer-address-und-0-administrative-area {
       @extend .width--100;
-      @extend .sm--width--70;
+      @extend .sm--width--20;
       @extend .margin--none;
     }
     .state {
@@ -203,7 +254,7 @@
     }
     .form-item-commerce-customer-address-und-0-postal-code {
       @extend .width--100;
-      @extend .sm--width--30;
+      @extend .sm--width--25;
       @extend .margin--none;
     }
   }
@@ -297,44 +348,48 @@
   // steps
   // previous next
   .previous-next {
-    @extend .padding--lg;
+    @extend .padding-x--lg;
+    @extend .padding-y--md;
+    @extend .background-color--orange;
     //@extend .margin-top--lg;
     @extend .border-width--none;
-    @extend .border-top-width--xs;
-    @extend .border-color--gray-2;
-    @extend .border-style--solid;
+    //@extend .border-top-width--xs;
+    //@extend .border-color--gray-4;
+    //@extend .border-style--solid;
     @extend .sm--show;
+    border-radius: 0 0 3px 3px;
   }
   .next {
-    @extend .button--black;
+    @extend .button--white;
     @extend .float--right;
     @extend .caps;
   }
   .previous {
-    @extend .button--white;
+    @extend .button--orange;
     @extend .float--left;
     @extend .caps;
   }
   .steps {
     @extend .grid;
     @extend .text-align--center;
-    @extend .padding-y--lg;
+    @extend .padding-y--md;
     @extend .border-width--none;
-    @extend .border-bottom-width--xs;
-    @extend .border-style--solid;
-    @extend .border-color--gray-2;
+    @extend .background-color--orange;
+    //@extend .border-bottom-width--xs;
+    //@extend .border-style--solid;
+    //@extend .border-color--gray-4;
+      border-radius: 3px 3px 0 0;
   }
   .step {
     @extend .grid-cell;
     @extend .margin-x--xs;
     @extend .circle;
-    @extend .background-color--gray-1;
     height: scale(3);
     width: scale(3);
     line-height: scale(3);
   }
   .step.active {
-    @extend .background-color--black;
-    @extend .color--white;
+    @extend .background-color--white;
+    @extend .color--black;
   }
 }

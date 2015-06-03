@@ -154,7 +154,8 @@ thead th { text-align:auto; }
 .form-item textarea.error,
 .form-item select.error {
   border-color: color(red) !important;
-  //border-style:solid;
+  border-style:solid;
+  border-width: 1px;
 }
 .form-item label {
   display:block;

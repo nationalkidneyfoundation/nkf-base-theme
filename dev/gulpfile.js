@@ -18,15 +18,22 @@ var jade          = require('gulp-jade');
 var size          = require('gulp-size');
 var browserSync   = require('browser-sync');
 var compress      = require('compression');
+var imageresize   = require('gulp-image-resize');
+var imagemin      = require('gulp-imagemin');
+var pngquant      = require('imagemin-pngquant');
+
 
 
 // Paths
 var paths = {
-  index:           './templates/index.jade'
+  index:              './templates/index.jade'
   , style:            './sass/styles.scss'
   , styles:           './sass/**/*.scss'
   , styleMin:         './styles.min.css'
   , stylesDistDir:    '../css'
+  , images:           './img/**/*'
+  , imagesDir:        './img'
+  , imagesDistDir:    '../img'
   , vendorDir:        './sass/vendor'
   , normalizeSrc:     './node_modules/normalize.css/normalize.css'
   , normalizeSass:    'normalize.scss'
@@ -96,14 +103,37 @@ gulp.task('html-build', function () {
     ;
 });
 
+gulp.task('images-build-logos', function() {
+  gulp.src(paths.imagesDir + '/logos/*')
+    .pipe(imageresize({width: 300, crop: false}))
+    .pipe(imagemin({
+        progressive: true,
+        //use: [pngquant()]
+    }))
+    .pipe(gulp.dest(paths.imagesDistDir));
+});
+
+gulp.task('images-build-heros', function() {
+  gulp.src(paths.imagesDir + '/heros/*')
+    //.pipe(imageresize({width: 300, crop: false}))
+    .pipe(imagemin({
+        progressive: true,
+        //use: [pngquant()]
+    }))
+    .pipe(gulp.dest(paths.imagesDistDir));
+});
+
+gulp.task('images-build', ['images-build-logos', 'images-build-heros']);
+
 
 // combine builds
-gulp.task('build', ['css-build', 'html-build']);
+gulp.task('build', ['css-build', 'html-build', 'images-build']);
 
 // watch for changes
 gulp.task('watch', function () {
   gulp.watch(paths.styles, ['css-build']);
   gulp.watch(paths.index, ['html-build']);
+  gulp.watch(paths.images, ['images-build']);
 });
 
 // let's get started

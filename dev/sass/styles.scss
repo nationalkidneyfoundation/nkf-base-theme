@@ -38,6 +38,7 @@
 @import "classes/text-transform";
 @import "classes/vertical-align";
 @import "classes/white-space";
+@import "classes/z-index";
 
 
 // Utilities
@@ -86,6 +87,7 @@
 // Drupal
 // -------------------------
 @import "drupal/drupal";
+@import "drupal/logo";
 @import "drupal/form";
 @import "drupal/nav";
 @import "drupal/donate";

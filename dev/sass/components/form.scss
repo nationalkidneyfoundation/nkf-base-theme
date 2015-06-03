@@ -50,6 +50,7 @@ textarea:focus {
 }
 
 select:not([multiple]) {
+  padding: 0;
   height: scale(4);
 }
 
