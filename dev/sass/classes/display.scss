@@ -5,7 +5,7 @@
   &--none         { display: none; }
   &--block        { display: block; }
   &--inline       { display: inline; }
-  &--inline-block { display: inline-block; *display: inline; }
+  &--inline-block { display: inline-block; *display: inline; zoom: 1}
   &--inline-table { display: inline-table; }
   &--table        { display: table; }
   &--table-cell   { display: table-cell; }

@@ -30,7 +30,7 @@
         if(v % 1 == 0) {
           v = parseFloat(v).toFixed(0);
         }
-        return "$" + v.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+        return "$" + v.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
       }
 
       // helper function to get the donation amount
