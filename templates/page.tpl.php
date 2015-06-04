@@ -6,11 +6,11 @@
 ?>
 <div class="<?php print $page_classes; ?>">
   <header class="bg--orange header background-size--cover background-position--center">
-    <div class="container padding-x--sm sm--padding-x--lg sm--padding-y--lg">
+    <div class="container padding-x--sm sm--padding-x--lg padding-y--md sm--padding-y--lg">
       <div class="grid">
         <?php if ($logo): ?>
         <div class="grid-cell md--width--50 header__brand">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="header__logo-image" /></a>
+          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"></a>
         </div>
         <?php endif; ?>
         <?php if (isset($page['top_menu'])): ?>
@@ -49,8 +49,9 @@
   <?php endif; ?>
 
   <!--<section <?php //if(isset($hero_background)): print $hero_background; endif; ?>>-->
-  <section class="main">
-    <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
+  <section class="main position--relative">
+    <div class="hero sm--show"></div>
+    <div class="container position--relative z-index--1 padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
       <div class="grid">
         <?php if ($page['sidebar_first']): ?>
           <div class="grid-cell width--25"><?php print render($page['sidebar_first']) ?></div>
@@ -72,6 +73,7 @@
         <?php endif; ?>
       </div>
     </div>
+
   </section>
 
 

@@ -106,14 +106,13 @@
 ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
   <?php print render($title_prefix); ?>
   <?php if (!$page): ?>
     <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
   <?php endif; ?>
   <?php print render($title_suffix); ?>
 
-  <div class="content position--relative"<?php print $content_attributes; ?>>
+  <div class="content position--relative1"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
       hide($content['comments']);
@@ -123,8 +122,8 @@
     <?php if (isset($content['field_donation_tag_line'])): ?>
       <div class="padding-bottom--lg color--white font-size--lg"><?php print render($content['field_donation_tag_line']); ?></div>
     <?php endif; ?>
-    <div class="grid">
-      <div class="grid-cell position--absolute sm--width--55 width--100 sm--padding-right--lg">
+    <div class="grid width--100">
+      <div class="grid-cell sm--width--60 width--100">
         <?php print render($content['field_donation_type']); ?>
       </div>
       <?php if (isset($content['body']) || isset($content['field_hero_image'])): ?>

@@ -1,5 +1,18 @@
 <?php
 
+
+/**
+ * Implementation of hook_addressfield_administrative_areas_alter
+ * force all US stats to be abbreviations.
+ */
+
+function nkf_base_addressfield_administrative_areas_alter(&$adminstrative_areas) {
+  foreach ($adminstrative_areas['US'] as $key => $value) {
+    $adminstrative_areas['US'][$key] = $key;
+  }
+}
+
+
 function nkf_base_css_alter(&$css) {
   $exclude = array(
     'profiles/kidneys_distro/modules/contrib/commerce/modules/payment/theme/commerce_payment.theme.css' => FALSE,
