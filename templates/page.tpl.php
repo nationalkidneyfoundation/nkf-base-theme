@@ -32,7 +32,7 @@
     <?php endif; ?>
   </header>
   <?php if ($page['help'] || ($show_messages && $messages)): ?>
-  <section class="background-color--white">
+  <section class="background-color--gray-1">
     <div class="container padding-x--sm sm--padding-x--lg padding-y--lg padding-y--lg sm--padding-y--xl">
       <?php print render($page['help']); ?>
       <?php if ($show_messages && $messages): print $messages; endif; ?>
