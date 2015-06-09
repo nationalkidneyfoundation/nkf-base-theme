@@ -57,8 +57,9 @@
   .button--outline--#{$name} {
     @extend .button;
     @extend .color--#{$name};
-    @extend .border-color--#{$name};
+    //@extend .border-color--#{$name};
     @extend .position--relative;
+    border-color: lighten(color(blue), 40);
     background-color: transparent;
     z-index: 2;
     &::before {
