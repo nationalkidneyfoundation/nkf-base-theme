@@ -82,6 +82,16 @@
       <?php if ($page['footer']): ?>
       <?php print render($page['footer']); ?>
       <?php endif; ?>
+      <?php if ($page['footer_half_left'] || $page['footer_half_right']): ?>
+        <div class="grid">
+          <div class="grid-cell width--50">
+          <?php print render($page['footer_half_left']); ?>
+          </div>
+          <div class="grid-cell width--50">
+          <?php print render($page['footer_half_right']); ?>
+          </div>
+        </div>
+      <?php endif; ?>
     </div>
   </footer>
 </div>
