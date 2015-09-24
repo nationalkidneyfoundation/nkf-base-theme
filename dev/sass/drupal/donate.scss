@@ -1,6 +1,7 @@
 
 // target only select pages
-.node-type-donation {
+.node-type-donation,
+.node-type-membership-page {
 
   // set background image
   .hero {
@@ -143,7 +144,8 @@
     @extend .padding-y--md;
   }
   // hide radio buttons
-  .form-item-donation-select > label:not(.option) {
+  .form-item-donation-select > label:not(.option),
+  .form-item-field-member-category-und > label:not(.option) {
     @extend .hide;
   }
 
@@ -158,13 +160,15 @@
     @extend .grid;
   }
 
-  #edit-donation-select {
+  #edit-donation-select,
+  #edit-field-member-category-und {
     @extend .grid;
     @extend .width--100;
     > * {
       @extend .grid-cell;
-      @extend .sm--width--25;
+      //@extend .sm--width--25;
       @extend .width--50;
+      @extend .padding--xs;
     }
     input {
       @extend .hide;
@@ -206,9 +210,15 @@
   }
 
   .form-item-first-name,
-  .form-item-last-name {
+  .form-item-last-name,
+  .field-name-field-company-name,
+  .field-name-field-professional-credentials,
+  .field-name-field-prefix {
     @extend .grid-cell;
     @extend .sm--width--50;
+  }
+  .field-name-field-isrnm-co-membership {
+    @extend .text-align--center;
   }
 
   // Address section

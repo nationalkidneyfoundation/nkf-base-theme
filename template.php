@@ -33,8 +33,8 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['columns'] = $columns;
 
   // donate form js
-  if (!empty($vars['node']) && $vars['node']->type == 'donation') {
-    drupal_add_js(drupal_get_path('theme', 'nkf_base') . '/js/donate-form.js');
+  if (!empty($vars['node']) && in_array($vars['node']->type, array('donation','membership_page'))) {
+    drupal_add_js(drupal_get_path('theme', 'nkf_base_bootstrap') . '/js/donate-form.js');
   }
 
   if(!empty($vars['node'])

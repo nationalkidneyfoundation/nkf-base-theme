@@ -1,6 +1,6 @@
 
 .background-hero {
-  @extend .background-size--contain;
+  background-size: contain;
   background-repeat: no-repeat;
   min-height: 500px;
   background-position: bottom right;

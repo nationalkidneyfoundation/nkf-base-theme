@@ -21,8 +21,8 @@ input[type="submit"],
   margin: 0;
   -webkit-appearance: none;
   &::before {
-    @extend .display--block;
     @extend .cover-absolute;
+    display: block;
     content: '';
     z-index: -1;
   }

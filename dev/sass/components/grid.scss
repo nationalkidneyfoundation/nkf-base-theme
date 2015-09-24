@@ -12,8 +12,8 @@
 }
 
 .grid-cell {
-  @extend .display--inline-block;
-  @extend .vertical-align--top;
+  display: inline-block;
+  vertical-align: top;
   zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;

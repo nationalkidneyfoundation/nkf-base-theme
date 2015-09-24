@@ -1,10 +1,11 @@
 (function ($, Drupal) {
+  alert('test');
   var donationProcessed = false;
   Drupal.behaviors.nkf_base_donate_form = {
     attach: function(context, settings) {
 
       // disable the submit button after first click
-      $('#redhen-donation-form', context).once('hideSubmitButton', function () {
+      $('.field-type-redhen-donation', context).once('hideSubmitButton', function () {
         var $form = $(this);
         $form.find('.form-submit').click(function (e) {
           var el = $(this);
@@ -71,10 +72,10 @@
 
           // add buttons for textfield style donations
           // TODO make this configurable through the UI
-          var amountOptions = $('<div class="amount-options"></div>').insertBefore(textDonation);
-          $.each([[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']], function(i, v) {
-            var buttonOuter = $('<div class="grid-cell width--33 padding--xs"></div>').appendTo($(amountOptions));
-            var button = $('<div class="button button--blue--light width--100 padding-y--md" data-amount="' + v[0] + '">' + v[1] + '</div>')
+          var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
+          $.each([[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [0, 'Other']], function(i, v) {
+            var buttonOuter = $('<div class="grid-cell width--20 padding--xs"></div>').appendTo($(amountOptions));
+            var button = $('<div class="button button--outline--blue width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</div>')
               .appendTo(buttonOuter);
             button.click(function(e) {
                 $('.amount-options .button').removeClass('active');
@@ -89,7 +90,7 @@
           });
 
         }
-        var steps = $('<div class="steps sm--show"></div>').prependTo($('#redhen-donation-form > div'));
+        var steps = $('<div class="steps sm--show"></div>').prependTo($('.field-type-redhen-donation > form > div'));
         var donationSteps = $('.donation-step');
         $('.donation-step').each(function(i, v) {
           steps.append('<div class="step"><div class="step-' + i + '">'+ (i + 1) +'</div>');
