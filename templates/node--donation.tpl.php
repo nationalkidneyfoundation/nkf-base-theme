@@ -119,21 +119,24 @@
       hide($content['links']);
       //print render($content);
     ?>
+    <!--
     <?php if (isset($content['field_donation_tag_line'])): ?>
-      <div class="padding-bottom--lg color--white font-size--lg"><?php print render($content['field_donation_tag_line']); ?></div>
+      <div class="padding-bottom--lg font-size--lg"><?php print render($content['field_donation_tag_line']); ?></div>
+    <?php endif; ?>
+  -->
+    <?php if (isset($content['body']) || isset($content['field_hero_image'])): ?>
+      <div class="grid-cell sm--width--60 width--100 sm--padding-left--lg">
+        <div class="padding-bottom--md">
+          <?php print render($content['field_hero_image']); ?>
+          <?php print render($content['body']); ?>
+        </div>
+      </div>
     <?php endif; ?>
     <div class="grid width--100">
       <div class="grid-cell sm--width--60 width--100">
         <?php print render($content['field_donation_type']); ?>
       </div>
-      <?php if (isset($content['body']) || isset($content['field_hero_image'])): ?>
-        <div class="grid-cell sm--width--45 push--55 width--100 sm--padding-left--lg">
-          <div class="padding--md 1background-color--orange--l1">
-            <?php print render($content['field_hero_image']); ?>
-            <?php print render($content['body']); ?>
-          </div>
-        </div>
-      <?php endif; ?>
+
     </div>
   </div>
 
