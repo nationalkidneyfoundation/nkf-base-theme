@@ -46,18 +46,20 @@
         var t = 0;
         // handle required fields per section
         $(context).find('input.required, select.required').each(function(i, d) {
-          if($(d).val().trim() == '') {
+          if($(d).val().trim() === '') {
             // set focus on first required field without value
-            if(t == 0) {
+            if(t === 0) {
               $(d).focus();
             }
             t += 1;
             $(d).addClass('error').change(function() {
-              if($(this).val().trim() != '') $(this).removeClass('error');
+              if($(this).val().trim() !== '') {
+                $(this).removeClass('error');
+              }
             });
           }
         });
-        return t == 0 ? true: false;
+        return t === 0 ? true: false;
       }
 
       // update the submit button with current donation amount
@@ -72,8 +74,8 @@
           // add buttons for textfield style donations
           // TODO make this configurable through the UI
           var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
-          $.each([[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [0, 'Other']], function(i, v) {
-            var buttonOuter = $('<div class="grid-cell width--20 padding--xs"></div>').appendTo($(amountOptions));
+          $.each([[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']], function(i, v) {
+            var buttonOuter = $('<div class="grid-cell width--33 padding--xs"></div>').appendTo($(amountOptions));
             var button = $('<div class="button button--outline--blue width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</div>')
               .appendTo(buttonOuter);
             button.click(function(e) {

@@ -1,8 +1,8 @@
 
 
 .list--reset {
-  @extend .list-style--none;
-  @extend .padding-left--none;
+  list-style: none;
+  padding-left: 0;
 }
 .list--grid {
   @extend .list--reset;

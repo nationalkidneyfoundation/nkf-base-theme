@@ -2,20 +2,21 @@
 
 .tabs {
   @extend .list--grid;
-  @extend .padding--md;
-  @extend .border-width--none;
-  @extend .border-bottom-width--md;
-  @extend .border-style--solid;
-  @extend .border-color--gray-2;
-  @extend .background-color--gray-1;
-  @extend .display--inline-block;
+  padding: space(md);
+  border: solid $gray-2;
+  border-width: 0 0 border-width(md);
+  background-color: $gray-1;
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
   a {
-    @extend .padding--md;
-    @extend .text-decoration--none;
-    @extend .color--gray-4;
+    padding: space(md);
+    text-decoration: none;
+    color: $gray-4;
     &.active {
-      @extend .background-color--white;
-      @extend .padding-y--lg;
+      background-color: $white;
+      padding-top: space(lg);
+      padding-bottm: space(lg);
     }
   }
 }

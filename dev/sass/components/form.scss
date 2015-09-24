@@ -15,14 +15,12 @@ input[type="tel"],
 input[type="color"],
 select,
 textarea {
-  @extend .padding-x--xs;
-  @extend .padding-y--md;
-  @extend .background-color--white;
-  @extend .border-width--xs;
-  @extend .border-style--solid;
-  @extend .border-color--gray-2;
-  @extend .border-radius--sm;
-  @extend .vertical-align--middle;
+  padding-left: space(xs);
+  padding-right: space(xs);
+  background-color: $white;
+  border: solid $gray-2 border-width(xs);
+  border-radius: border-width(sm);
+  vertical-align: middle;
   height: scale(4);
   box-sizing: border-box;
 }
@@ -45,7 +43,7 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  @extend .border-color--gray-4;
+  border-color: $gray-4;
   outline: 0;
 }
 
@@ -55,16 +53,14 @@ select:not([multiple]) {
 }
 
 fieldset {
-  @extend .margin--none;
-  @extend .padding--md;
-  @extend .border-width--none;
+  margin: none;
+  padding: space(md);
+  border-width: 0;
 }
 legend {
-  @extend .display--block;
-  @extend .width--100;
-  @extend .padding-y--md;
-  //@extend .margin-bottom--md;
-  @extend .border-style--solid;
-  @extend .border-bottom-width--xs;
-  @extend .border-color--gray-2;
-}
+  display: block;
+  width: width(100);
+  padding-top: space(md);
+  padding-bottom: space(md);
+  border-bottom: solid border-width(xs) $gray-2;
+;}

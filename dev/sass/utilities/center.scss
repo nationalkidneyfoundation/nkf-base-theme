@@ -6,7 +6,7 @@
 }
 
 .center--y {
-  @extend .position-relative;
+  position: relative;
   top: 50%;
   transform : translateY(-50%);
 }

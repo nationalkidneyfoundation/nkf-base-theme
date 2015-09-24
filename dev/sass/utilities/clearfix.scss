@@ -7,9 +7,9 @@
 .clearfix:before,
 .clearfix:after {
   content: "";
-  @extend .display-table;
+  display: table;
 }
 
 .clearfix:after {
-  @extend .clear-both;
+  clear: both;
 }
