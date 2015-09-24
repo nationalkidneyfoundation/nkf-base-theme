@@ -66,7 +66,7 @@
       $(".form-item-donation input").once().change(setDonationAmount);
 
       // build donation sections and misc donation stuff
-      if(!donationProcessed) {
+      if(!donationProcessed && !ie8) {
         var textDonation = $('.form-item-donation.form-type-textfield');
         if(textDonation.length > 0) {
           //$('input', textDonation).attr('placeholder', 'Enter a dollar amount');
