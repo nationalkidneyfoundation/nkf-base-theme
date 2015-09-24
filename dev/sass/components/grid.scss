@@ -14,10 +14,11 @@
 .grid-cell {
   display: inline-block;
   vertical-align: top;
-  zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  *zoom: 1;
+  *display: inline;
 }
 /*
 .grid [class *= "grid-cell"] {
