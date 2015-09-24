@@ -1,5 +1,4 @@
 (function ($, Drupal) {
-  alert('test');
   var donationProcessed = false;
   Drupal.behaviors.nkf_base_donate_form = {
     attach: function(context, settings) {
