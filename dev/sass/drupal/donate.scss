@@ -15,6 +15,7 @@
     top: 0;
     left: 0;
     right: 0;
+    //background-color: $gray-1;
   }
 
   // show full form on error
@@ -36,7 +37,7 @@
     max-height: 40px;
   }
   header {
-    @extend .background-color--gray-1;
+    background-color: $gray-1;
     .container {
       @extend .sm--padding-y--md;
     }
@@ -45,23 +46,23 @@
     background-image: url(../img/NKF-logoR_Hori_OB.png);
   }
   .main {
-    @extend .background-color--gray-1;
+    //@extend .background-color--gray-1;
     @extend .padding-bottom--xxxl;
   }
   // hide title from view
   h1 {
     //@extend .invisible;
     @extend .caps;
-    @extend .font-weight--400;
+    //@extend .font-weight--400;
     @extend .font-size--xl;
-    @extend .sm--width--60;
-    @extend .text-align--center;
+    //@extend .sm--width--60;
+    //@extend .text-align--center;
     //@extend .color--white;
   }
   // hide tabs for anon
   &.not-logged-in {
     .tabs {
-      @extend .hide;
+      display: none !important;
     }
   }
 
@@ -74,8 +75,7 @@
 
   // this is the form container
   #redhen-donation-form {
-    @extend .background-color--white;
-    //@extend .border-radius--lg;
+    @extend .border-radius--lg;
     @extend .width--100;
     @extend .padding--none;
     @extend .border-width--none;
@@ -83,7 +83,10 @@
     //@extend .border-style--solid;
     //@extend .border-color--gray-4;
     //@extend .position--absolute;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    //box-shadow: 0 1px 15px rgba(0,0,0,0.5);
+    //border: solid $gray-1;
+    //border-width: 0 border-width(xl);
+    background-color: #fafafa;
   }
 
   .form-item label {
@@ -345,7 +348,7 @@
   }
   .form-submit {
     @extend .button--blue;
-    @extend .color--white;
+    //@extend .color--white;
     @extend .padding--lg;
     @extend .text-transform--uppercase;
   }
@@ -360,22 +363,26 @@
   .previous-next {
     @extend .padding-x--lg;
     @extend .padding-y--md;
-    @extend .background-color--orange;
+    //@extend .background-color--orange;
     //@extend .margin-top--lg;
     @extend .border-width--none;
     //@extend .border-top-width--xs;
     //@extend .border-color--gray-4;
     //@extend .border-style--solid;
     @extend .sm--show;
+    background-color: $gray-1;
     border-radius: 0 0 3px 3px;
   }
   .next {
-    @extend .button--white;
+    @extend .button--blue;
     @extend .float--right;
     @extend .caps;
+    //background-color: $gray-3;
+    //color: $black;
+    //border-color: $gray-3;
   }
   .previous {
-    @extend .button--orange;
+    @extend .button--white;
     @extend .float--left;
     @extend .caps;
   }
@@ -384,11 +391,12 @@
     @extend .text-align--center;
     @extend .padding-y--md;
     @extend .border-width--none;
-    @extend .background-color--orange;
+    //@extend .background-color--orange;
     //@extend .border-bottom-width--xs;
     //@extend .border-style--solid;
     //@extend .border-color--gray-4;
-      border-radius: 3px 3px 0 0;
+    background-color: $gray-1;
+    border-radius: 3px 3px 0 0;
   }
   .step {
     @extend .grid-cell;
@@ -399,7 +407,7 @@
     line-height: scale(3);
   }
   .step.active {
-    @extend .background-color--white;
-    @extend .color--black;
+    background-color: $gray-3;
+    color: $black;
   }
 }

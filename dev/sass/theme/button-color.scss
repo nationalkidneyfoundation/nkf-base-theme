@@ -1,54 +1,92 @@
 @each $name, $color in $colors {
   .button--#{$name} {
     @extend .button;
-    @extend .background-color--#{$name};
-    @extend .border-color--#{$name};
-    //background-color: transparent;
-    &::before {
-      @extend .background-color--#{$name};
+    border-color: lighten($color, 30%);
+    background-color: lighten($color, 30%);
+    color: $color;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $color;
+      color: white;
     }
-    //&:hover {
-    //  @extend .background-color--#{$name}--d1;
-    //}
   }
 }
 
 .button {
   &--white   {
     @extend .button;
-    @extend .background-color--white;
-    @extend .border-color--white;
-    @extend .color--black;
-    &::before {
-      @extend .background-color--white;
+    background-color: $white;
+    color: $gray-5;
+    border-color: $white;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $color;
+      color: $black;
     }
   }
   &--gray-1  {
     @extend .button;
     background-color: $gray-1;
+    border-color: $gray-1;
+    color: $black;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $gray-2;
+    }
   }
   &--gray-2  {
     @extend .button;
     background-color: $gray-2;
+    border-color: $gray-2;
+    color: $black;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $gray-3;
+    }
   }
   &--gray-3  {
     @extend .button;
     background-color: $gray-3;
+    border-color: $gray-3;
+    color: $black;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $gray-4;
+    }
   }
   &--gray-4  {
     @extend .button;
     background-color: $gray-4;
+    border-color: $gray-4;
+    color: $black;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $gray-5;
+    }
   }
   &--gray-5  {
     @extend .button;
-    background-color: $gray-5;
+    border-color: $gray-5;
+    color: $white;
+    &::before {
+      background-color: $gray-5;
+    }
   }
   &--black   {
     @extend .button;
-    @extend .border-color--black;
-    @extend .color--white;
-    &::before {
-      @extend .background-color--black;
+    background-color: $gray-5;
+    border-color: $gray-5;
+    color: $white;
+    &:hover,
+    &:active,
+    &.active {
+      background-color: $black;
     }
   }
 }

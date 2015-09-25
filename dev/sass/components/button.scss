@@ -22,17 +22,21 @@ input[type="submit"],
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
+  /*
   &::before {
     @extend .cover-absolute;
     display: block;
+    border-radius: border-width(md);
     content: '';
     z-index: -1;
+    opacity: .5;
   }
   &:hover::before,
   &:focus::before,
   &.active::before {
-    opacity: .725;
+    opacity: 1;
   }
+  */
 }
 
 button:after,
