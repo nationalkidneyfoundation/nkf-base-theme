@@ -106,11 +106,7 @@
 ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
+
 
   <div class="content position--relative1"<?php print $content_attributes; ?>>
     <?php
@@ -124,17 +120,21 @@
       <div class="padding-bottom--lg font-size--lg"><?php print render($content['field_donation_tag_line']); ?></div>
     <?php endif; ?>
   -->
-    <div class="grid width--100">
-      <?php if ((isset($content['body']) || isset($content['field_hero_image']))): ?>
-      <div class="grid-cell sm--width--50 width--100 sm--padding-right--lg">
-        <div class="padding-bottom--md">
-          <?php print render($content['field_hero_image']); ?>
-          <p class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></p>
-          <?php print render($content['body']); ?>
-        </div>
-      </div>
-      <?php endif; ?>
 
+    <div class="grid width--100">
+
+      <div class="grid-cell sm--width--50 width--100 sm--padding-right--lg">
+        <?php print render($title_prefix); ?>
+        <?php if (!$page): ?>
+          <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
+        <?php endif; ?>
+        <?php print render($title_suffix); ?>
+        <?php if (isset($content['body']) || isset($content['field_hero_image'])): ?>
+          <div class=""><?php print render($content['field_hero_image']); ?></div>
+          <p class="font-weight--800 font-size--lg"><?php print render($content['field_donation_tag_line']); ?></p>
+          <div class="color--gray-4"><?php print render($content['body']); ?></div>
+        <?php endif; ?>
+      </div>
       <div class="grid-cell sm--width--50 width--100 sm--padding-left--lg">
         <?php print render($content['field_donation_type']); ?>
       </div>

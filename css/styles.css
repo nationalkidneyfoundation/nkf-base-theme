@@ -418,7 +418,7 @@ img {
   font-weight: 200; }
 .font-weight--300 {
   font-weight: 300; }
-.font-weight--400, .node-type-donation h1, .node-type-membership-page h1, .node-type-donation .form-item label, .node-type-membership-page .form-item label {
+.font-weight--400, .node-type-donation .form-item label, .node-type-membership-page .form-item label {
   font-weight: 400; }
 .font-weight--500 {
   font-weight: 500; }
@@ -535,7 +535,7 @@ img {
 
 .text-align--left {
   text-align: left; }
-.text-align--center, .header__nav--primary, .node-type-donation h1, .node-type-membership-page h1, .node-type-donation legend, .node-type-membership-page legend, .node-type-donation .form-type-textfield.form-item-donation, .node-type-membership-page .form-type-textfield.form-item-donation, .node-type-donation .field-name-field-isrnm-co-membership, .node-type-membership-page .field-name-field-isrnm-co-membership, .node-type-donation .form-actions, .node-type-membership-page .form-actions, .node-type-donation .form-item-signup, .node-type-membership-page .form-item-signup, .node-type-donation .steps, .node-type-membership-page .steps {
+.text-align--center, .header__nav--primary, .node-type-donation legend, .node-type-membership-page legend, .node-type-donation .form-type-textfield.form-item-donation, .node-type-membership-page .form-type-textfield.form-item-donation, .node-type-donation .field-name-field-isrnm-co-membership, .node-type-membership-page .field-name-field-isrnm-co-membership, .node-type-donation .form-actions, .node-type-membership-page .form-actions, .node-type-donation .form-item-signup, .node-type-membership-page .form-item-signup, .node-type-donation .steps, .node-type-membership-page .steps {
   text-align: center; }
 .text-align--right, .header__nav--secondary {
   text-align: right; }
@@ -637,7 +637,7 @@ img {
 .clearfix:after {
   clear: both; }
 
-.hide, .xs--show, .node-type-donation .errors .donation-step, .node-type-membership-page .errors .donation-step, .sm--show, .node-type-donation .previous-next, .node-type-membership-page .previous-next, .md--show, .lg--show, .xl--show, .password-suggestions, .header__nav--primary .search::before, .node-type-donation.not-logged-in .tabs, .node-type-membership-page.not-logged-in .tabs, .node-type-donation .form-item-donation .description, .node-type-membership-page .form-item-donation .description, .node-type-donation .form-item-donation-select > label:not(.option), .node-type-donation .form-item-field-member-category-und > label:not(.option), .node-type-membership-page .form-item-donation-select > label:not(.option), .node-type-membership-page .form-item-field-member-category-und > label:not(.option), .node-type-donation #edit-donation-select input, .node-type-donation #edit-field-member-category-und input, .node-type-membership-page #edit-donation-select input, .node-type-membership-page #edit-field-member-category-und input, .node-type-donation .field-type-addressfield legend, .node-type-membership-page .field-type-addressfield legend, .node-type-donation .commerce-month-year-divider, .node-type-membership-page .commerce-month-year-divider, .hidden {
+.hide, .xs--show, .node-type-donation .errors .donation-step, .node-type-membership-page .errors .donation-step, .sm--show, .node-type-donation .previous-next, .node-type-membership-page .previous-next, .md--show, .lg--show, .xl--show, .password-suggestions, .header__nav--primary .search::before, .node-type-donation .form-item-donation .description, .node-type-membership-page .form-item-donation .description, .node-type-donation .form-item-donation-select > label:not(.option), .node-type-donation .form-item-field-member-category-und > label:not(.option), .node-type-membership-page .form-item-donation-select > label:not(.option), .node-type-membership-page .form-item-field-member-category-und > label:not(.option), .node-type-donation #edit-donation-select input, .node-type-donation #edit-field-member-category-und input, .node-type-membership-page #edit-donation-select input, .node-type-membership-page #edit-field-member-category-und input, .node-type-donation .field-type-addressfield legend, .node-type-membership-page .field-type-addressfield legend, .node-type-donation .commerce-month-year-divider, .node-type-membership-page .commerce-month-year-divider, .hidden {
   display: none !important; }
 
 .invisible, .wf-loading h1, .wf-loading h2, .wf-loading h3, .wf-loading h4, .wf-loading h5, .wf-loading h6, .wf-loading p, .wf-loading span, .wf-loading a, .wf-loading time, .wf-loading strong, .wf-loading em, .wf-loading b, .wf-loading i, .wf-loading button, .wf-loading td, .wf-loading input, .wf-loading textarea, .wf-loading label {
@@ -723,7 +723,7 @@ img {
   list-style: none;
   padding-left: 0; }
 
-.cover-absolute, button::before, input[type="submit"]::before, .button::before, .button--orange::before, .node-type-donation .previous::before, .node-type-membership-page .previous::before, .button--blue::before, .node-type-donation .form-submit::before, .node-type-membership-page .form-submit::before, .button--navy::before, .button--red::before, .button--mustard::before, .button--aqua::before, .button--yellow::before, .button--green::before, .button--lime::before, .button--sienna::before, .button--white::before, .header__nav--secondary .donate::before, .node-type-donation .next::before, .node-type-membership-page .next::before, .button--gray-1::before, .button--gray-2::before, .button--gray-3::before, .button--gray-4::before, .button--gray-5::before, .button--black::before, .button--outline--orange::before, .button--outline--blue::before, .node-type-donation #edit-donation-select label::before, .node-type-donation #edit-field-member-category-und label::before, .node-type-membership-page #edit-donation-select label::before, .node-type-membership-page #edit-field-member-category-und label::before, .button--outline--navy::before, .button--outline--red::before, .button--outline--mustard::before, .button--outline--aqua::before, .button--outline--yellow::before, .button--outline--green::before, .button--outline--lime::before, .button--outline--sienna::before, .button--orange--light::before, .button--blue--light::before, .button--navy--light::before, .button--red--light::before, .button--mustard--light::before, .button--aqua--light::before, .button--yellow--light::before, .button--green--light::before, .button--lime--light::before, .button--sienna--light::before, .button--outline--white::before, .button--outline--gray-1::before, .button--outline--gray-2::before, .button--outline--gray-3::before, .button--outline--gray-4::before, .button--outline--gray-5::before, .button--outline--black::before, .header__nav--primary a::before {
+.cover-absolute, .button--outline--orange::before, .button--outline--blue::before, .node-type-donation #edit-donation-select label::before, .node-type-donation #edit-field-member-category-und label::before, .node-type-membership-page #edit-donation-select label::before, .node-type-membership-page #edit-field-member-category-und label::before, .button--outline--navy::before, .button--outline--red::before, .button--outline--mustard::before, .button--outline--aqua::before, .button--outline--yellow::before, .button--outline--green::before, .button--outline--lime::before, .button--outline--sienna::before, .button--orange--light::before, .button--blue--light::before, .button--navy--light::before, .button--red--light::before, .button--mustard--light::before, .button--aqua--light::before, .button--yellow--light::before, .button--green--light::before, .button--lime--light::before, .button--sienna--light::before, .header__nav--primary a::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -764,7 +764,7 @@ img {
   text-overflow: ellipsis;
   white-space: nowrap; }
 
-button, input[type="submit"], .button, .button--orange, .node-type-donation .previous, .node-type-membership-page .previous, .button--blue, .node-type-donation .form-submit, .node-type-membership-page .form-submit, .button--navy, .button--red, .button--mustard, .button--aqua, .button--yellow, .button--green, .button--lime, .button--sienna, .button--white, .header__nav--secondary .donate, .node-type-donation .next, .node-type-membership-page .next, .button--gray-1, .button--gray-2, .button--gray-3, .button--gray-4, .button--gray-5, .button--black, .button--outline--orange, .button--outline--blue, .node-type-donation #edit-donation-select label, .node-type-donation #edit-field-member-category-und label, .node-type-membership-page #edit-donation-select label, .node-type-membership-page #edit-field-member-category-und label, .button--outline--navy, .button--outline--red, .button--outline--mustard, .button--outline--aqua, .button--outline--yellow, .button--outline--green, .button--outline--lime, .button--outline--sienna, .button--orange--light, .button--blue--light, .button--navy--light, .button--red--light, .button--mustard--light, .button--aqua--light, .button--yellow--light, .button--green--light, .button--lime--light, .button--sienna--light, .button--outline--white, .button--outline--gray-1, .button--outline--gray-2, .button--outline--gray-3, .button--outline--gray-4, .button--outline--gray-5, .button--outline--black {
+button, input[type="submit"], .button, .button--orange, .button--blue, .node-type-donation .form-submit, .node-type-membership-page .form-submit, .node-type-donation .next, .node-type-membership-page .next, .button--navy, .button--red, .button--mustard, .button--aqua, .button--yellow, .button--green, .button--lime, .button--sienna, .button--white, .header__nav--secondary .donate, .node-type-donation .previous, .node-type-membership-page .previous, .button--gray-1, .button--gray-2, .button--gray-3, .button--gray-4, .button--gray-5, .button--black, .button--outline--orange, .button--outline--blue, .node-type-donation #edit-donation-select label, .node-type-donation #edit-field-member-category-und label, .node-type-membership-page #edit-donation-select label, .node-type-membership-page #edit-field-member-category-und label, .button--outline--navy, .button--outline--red, .button--outline--mustard, .button--outline--aqua, .button--outline--yellow, .button--outline--green, .button--outline--lime, .button--outline--sienna, .button--orange--light, .button--blue--light, .button--navy--light, .button--red--light, .button--mustard--light, .button--aqua--light, .button--yellow--light, .button--green--light, .button--lime--light, .button--sienna--light, .button--outline--white, .button--outline--gray-1, .button--outline--gray-2, .button--outline--gray-3, .button--outline--gray-4, .button--outline--gray-5, .button--outline--black {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -785,28 +785,37 @@ button, input[type="submit"], .button, .button--orange, .node-type-donation .pre
   line-height: normal;
   box-sizing: border-box;
   margin: 0;
-  -webkit-appearance: none; }
-  button::before, input[type="submit"]::before, .button::before, .button--orange::before, .node-type-donation .previous::before, .node-type-membership-page .previous::before, .button--blue::before, .node-type-donation .form-submit::before, .node-type-membership-page .form-submit::before, .button--navy::before, .button--red::before, .button--mustard::before, .button--aqua::before, .button--yellow::before, .button--green::before, .button--lime::before, .button--sienna::before, .button--white::before, .header__nav--secondary .donate::before, .node-type-donation .next::before, .node-type-membership-page .next::before, .button--gray-1::before, .button--gray-2::before, .button--gray-3::before, .button--gray-4::before, .button--gray-5::before, .button--black::before, .button--outline--orange::before, .button--outline--blue::before, .node-type-donation #edit-donation-select label::before, .node-type-donation #edit-field-member-category-und label::before, .node-type-membership-page #edit-donation-select label::before, .node-type-membership-page #edit-field-member-category-und label::before, .button--outline--navy::before, .button--outline--red::before, .button--outline--mustard::before, .button--outline--aqua::before, .button--outline--yellow::before, .button--outline--green::before, .button--outline--lime::before, .button--outline--sienna::before, .button--orange--light::before, .button--blue--light::before, .button--navy--light::before, .button--red--light::before, .button--mustard--light::before, .button--aqua--light::before, .button--yellow--light::before, .button--green--light::before, .button--lime--light::before, .button--sienna--light::before, .button--outline--white::before, .button--outline--gray-1::before, .button--outline--gray-2::before, .button--outline--gray-3::before, .button--outline--gray-4::before, .button--outline--gray-5::before, .button--outline--black::before {
+  -webkit-appearance: none;
+  /*
+  &::before {
+    @extend .cover-absolute;
     display: block;
+    border-radius: border-width(md);
     content: '';
-    z-index: -1; }
-  button:hover::before, button:focus::before, button.active::before, input[type="submit"]:hover::before, input[type="submit"]:focus::before, input[type="submit"].active::before, .button:hover::before, .button--orange:hover::before, .node-type-donation .previous:hover::before, .node-type-membership-page .previous:hover::before, .button--blue:hover::before, .node-type-donation .form-submit:hover::before, .node-type-membership-page .form-submit:hover::before, .button--navy:hover::before, .button--red:hover::before, .button--mustard:hover::before, .button--aqua:hover::before, .button--yellow:hover::before, .button--green:hover::before, .button--lime:hover::before, .button--sienna:hover::before, .button--white:hover::before, .header__nav--secondary .donate:hover::before, .node-type-donation .next:hover::before, .node-type-membership-page .next:hover::before, .button--gray-1:hover::before, .button--gray-2:hover::before, .button--gray-3:hover::before, .button--gray-4:hover::before, .button--gray-5:hover::before, .button--black:hover::before, .button--outline--orange:hover::before, .button--outline--blue:hover::before, .node-type-donation #edit-donation-select label:hover::before, .node-type-donation #edit-field-member-category-und label:hover::before, .node-type-membership-page #edit-donation-select label:hover::before, .node-type-membership-page #edit-field-member-category-und label:hover::before, .button--outline--navy:hover::before, .button--outline--red:hover::before, .button--outline--mustard:hover::before, .button--outline--aqua:hover::before, .button--outline--yellow:hover::before, .button--outline--green:hover::before, .button--outline--lime:hover::before, .button--outline--sienna:hover::before, .button--orange--light:hover::before, .button--blue--light:hover::before, .button--navy--light:hover::before, .button--red--light:hover::before, .button--mustard--light:hover::before, .button--aqua--light:hover::before, .button--yellow--light:hover::before, .button--green--light:hover::before, .button--lime--light:hover::before, .button--sienna--light:hover::before, .button--outline--white:hover::before, .header__nav--secondary .donate:focus::before, .button--outline--gray-1:hover::before, .button--outline--gray-2:hover::before, .button--outline--gray-3:hover::before, .button--outline--gray-4:hover::before, .button--outline--gray-5:hover::before, .button--outline--black:hover::before, .button:focus::before, .button--orange:focus::before, .node-type-donation .previous:focus::before, .node-type-membership-page .previous:focus::before, .button--blue:focus::before, .node-type-donation .form-submit:focus::before, .node-type-membership-page .form-submit:focus::before, .button--navy:focus::before, .button--red:focus::before, .button--mustard:focus::before, .button--aqua:focus::before, .button--yellow:focus::before, .button--green:focus::before, .button--lime:focus::before, .button--sienna:focus::before, .button--white:focus::before, .header__nav--secondary .donate:focus::before, .node-type-donation .next:focus::before, .node-type-membership-page .next:focus::before, .button--gray-1:focus::before, .button--gray-2:focus::before, .button--gray-3:focus::before, .button--gray-4:focus::before, .button--gray-5:focus::before, .button--black:focus::before, .button--outline--orange:focus::before, .button--outline--blue:focus::before, .node-type-donation #edit-donation-select label:focus::before, .node-type-donation #edit-field-member-category-und label:focus::before, .node-type-membership-page #edit-donation-select label:focus::before, .node-type-membership-page #edit-field-member-category-und label:focus::before, .node-type-donation #edit-donation-select input:checked + label::before, .node-type-donation #edit-field-member-category-und input:checked + label::before, .node-type-membership-page #edit-donation-select input:checked + label::before, .node-type-membership-page #edit-field-member-category-und input:checked + label::before, .button--outline--navy:focus::before, .button--outline--red:focus::before, .button--outline--mustard:focus::before, .button--outline--aqua:focus::before, .button--outline--yellow:focus::before, .button--outline--green:focus::before, .button--outline--lime:focus::before, .button--outline--sienna:focus::before, .button--orange--light:focus::before, .button--blue--light:focus::before, .button--navy--light:focus::before, .button--red--light:focus::before, .button--mustard--light:focus::before, .button--aqua--light:focus::before, .button--yellow--light:focus::before, .button--green--light:focus::before, .button--lime--light:focus::before, .button--sienna--light:focus::before, .button--outline--white:focus::before, .button--outline--gray-1:focus::before, .button--outline--gray-2:focus::before, .button--outline--gray-3:focus::before, .button--outline--gray-4:focus::before, .button--outline--gray-5:focus::before, .button--outline--black:focus::before, .button.active::before, .active.button--orange::before, .node-type-donation .active.previous::before, .node-type-membership-page .active.previous::before, .active.button--blue::before, .node-type-donation .active.form-submit::before, .node-type-membership-page .active.form-submit::before, .active.button--navy::before, .active.button--red::before, .active.button--mustard::before, .active.button--aqua::before, .active.button--yellow::before, .active.button--green::before, .active.button--lime::before, .active.button--sienna::before, .active.button--white::before, .header__nav--secondary .active.donate::before, .node-type-donation .active.next::before, .node-type-membership-page .active.next::before, .active.button--gray-1::before, .active.button--gray-2::before, .active.button--gray-3::before, .active.button--gray-4::before, .active.button--gray-5::before, .active.button--black::before, .active.button--outline--orange::before, .active.button--outline--blue::before, .node-type-donation #edit-donation-select label.active::before, .node-type-donation #edit-field-member-category-und label.active::before, .node-type-membership-page #edit-donation-select label.active::before, .node-type-membership-page #edit-field-member-category-und label.active::before, .active.button--outline--navy::before, .active.button--outline--red::before, .active.button--outline--mustard::before, .active.button--outline--aqua::before, .active.button--outline--yellow::before, .active.button--outline--green::before, .active.button--outline--lime::before, .active.button--outline--sienna::before, .active.button--orange--light::before, .active.button--blue--light::before, .active.button--navy--light::before, .active.button--red--light::before, .active.button--mustard--light::before, .active.button--aqua--light::before, .active.button--yellow--light::before, .active.button--green--light::before, .active.button--lime--light::before, .active.button--sienna--light::before, .active.button--outline--white::before, .active.button--outline--gray-1::before, .active.button--outline--gray-2::before, .active.button--outline--gray-3::before, .active.button--outline--gray-4::before, .active.button--outline--gray-5::before, .active.button--outline--black::before {
-    opacity: .725; }
+    z-index: -1;
+    opacity: .5;
+  }
+  &:hover::before,
+  &:focus::before,
+  &.active::before {
+    opacity: 1;
+  }
+  */ }
 
-button:after, button:before, input[type="submit"]:after, input[type="submit"]:before, .button:after, .button--orange:after, .node-type-donation .previous:after, .node-type-membership-page .previous:after, .button--blue:after, .node-type-donation .form-submit:after, .node-type-membership-page .form-submit:after, .button--navy:after, .button--red:after, .button--mustard:after, .button--aqua:after, .button--yellow:after, .button--green:after, .button--lime:after, .button--sienna:after, .button--white:after, .header__nav--secondary .donate:after, .node-type-donation .next:after, .node-type-membership-page .next:after, .button--gray-1:after, .button--gray-2:after, .button--gray-3:after, .button--gray-4:after, .button--gray-5:after, .button--black:after, .button--outline--orange:after, .button--outline--blue:after, .node-type-donation #edit-donation-select label:after, .node-type-donation #edit-field-member-category-und label:after, .node-type-membership-page #edit-donation-select label:after, .node-type-membership-page #edit-field-member-category-und label:after, .button--outline--navy:after, .button--outline--red:after, .button--outline--mustard:after, .button--outline--aqua:after, .button--outline--yellow:after, .button--outline--green:after, .button--outline--lime:after, .button--outline--sienna:after, .button--orange--light:after, .button--blue--light:after, .button--navy--light:after, .button--red--light:after, .button--mustard--light:after, .button--aqua--light:after, .button--yellow--light:after, .button--green--light:after, .button--lime--light:after, .button--sienna--light:after, .button--outline--white:after, .button--outline--gray-1:after, .button--outline--gray-2:after, .button--outline--gray-3:after, .button--outline--gray-4:after, .button--outline--gray-5:after, .button--outline--black:after, .button:before, .button--orange:before, .node-type-donation .previous:before, .node-type-membership-page .previous:before, .button--blue:before, .node-type-donation .form-submit:before, .node-type-membership-page .form-submit:before, .button--navy:before, .button--red:before, .button--mustard:before, .button--aqua:before, .button--yellow:before, .button--green:before, .button--lime:before, .button--sienna:before, .button--white:before, .header__nav--secondary .donate:before, .node-type-donation .next:before, .node-type-membership-page .next:before, .button--gray-1:before, .button--gray-2:before, .button--gray-3:before, .button--gray-4:before, .button--gray-5:before, .button--black:before, .button--outline--orange:before, .button--outline--blue:before, .node-type-donation #edit-donation-select label:before, .node-type-donation #edit-field-member-category-und label:before, .node-type-membership-page #edit-donation-select label:before, .node-type-membership-page #edit-field-member-category-und label:before, .button--outline--navy:before, .button--outline--red:before, .button--outline--mustard:before, .button--outline--aqua:before, .button--outline--yellow:before, .button--outline--green:before, .button--outline--lime:before, .button--outline--sienna:before, .button--orange--light:before, .button--blue--light:before, .button--navy--light:before, .button--red--light:before, .button--mustard--light:before, .button--aqua--light:before, .button--yellow--light:before, .button--green--light:before, .button--lime--light:before, .button--sienna--light:before, .button--outline--white:before, .button--outline--gray-1:before, .button--outline--gray-2:before, .button--outline--gray-3:before, .button--outline--gray-4:before, .button--outline--gray-5:before, .button--outline--black:before {
+button:after, button:before, input[type="submit"]:after, input[type="submit"]:before, .button:after, .button--orange:after, .button--blue:after, .node-type-donation .form-submit:after, .node-type-membership-page .form-submit:after, .node-type-donation .next:after, .node-type-membership-page .next:after, .button--navy:after, .button--red:after, .button--mustard:after, .button--aqua:after, .button--yellow:after, .button--green:after, .button--lime:after, .button--sienna:after, .button--white:after, .header__nav--secondary .donate:after, .node-type-donation .previous:after, .node-type-membership-page .previous:after, .button--gray-1:after, .button--gray-2:after, .button--gray-3:after, .button--gray-4:after, .button--gray-5:after, .button--black:after, .button--outline--orange:after, .button--outline--blue:after, .node-type-donation #edit-donation-select label:after, .node-type-donation #edit-field-member-category-und label:after, .node-type-membership-page #edit-donation-select label:after, .node-type-membership-page #edit-field-member-category-und label:after, .button--outline--navy:after, .button--outline--red:after, .button--outline--mustard:after, .button--outline--aqua:after, .button--outline--yellow:after, .button--outline--green:after, .button--outline--lime:after, .button--outline--sienna:after, .button--orange--light:after, .button--blue--light:after, .button--navy--light:after, .button--red--light:after, .button--mustard--light:after, .button--aqua--light:after, .button--yellow--light:after, .button--green--light:after, .button--lime--light:after, .button--sienna--light:after, .button--outline--white:after, .button--outline--gray-1:after, .button--outline--gray-2:after, .button--outline--gray-3:after, .button--outline--gray-4:after, .button--outline--gray-5:after, .button--outline--black:after, .button:before, .button--orange:before, .button--blue:before, .node-type-donation .form-submit:before, .node-type-membership-page .form-submit:before, .node-type-donation .next:before, .node-type-membership-page .next:before, .button--navy:before, .button--red:before, .button--mustard:before, .button--aqua:before, .button--yellow:before, .button--green:before, .button--lime:before, .button--sienna:before, .button--white:before, .header__nav--secondary .donate:before, .node-type-donation .previous:before, .node-type-membership-page .previous:before, .button--gray-1:before, .button--gray-2:before, .button--gray-3:before, .button--gray-4:before, .button--gray-5:before, .button--black:before, .button--outline--orange:before, .button--outline--blue:before, .node-type-donation #edit-donation-select label:before, .node-type-donation #edit-field-member-category-und label:before, .node-type-membership-page #edit-donation-select label:before, .node-type-membership-page #edit-field-member-category-und label:before, .button--outline--navy:before, .button--outline--red:before, .button--outline--mustard:before, .button--outline--aqua:before, .button--outline--yellow:before, .button--outline--green:before, .button--outline--lime:before, .button--outline--sienna:before, .button--orange--light:before, .button--blue--light:before, .button--navy--light:before, .button--red--light:before, .button--mustard--light:before, .button--aqua--light:before, .button--yellow--light:before, .button--green--light:before, .button--lime--light:before, .button--sienna--light:before, .button--outline--white:before, .button--outline--gray-1:before, .button--outline--gray-2:before, .button--outline--gray-3:before, .button--outline--gray-4:before, .button--outline--gray-5:before, .button--outline--black:before {
   box-sizing: border-box; }
 
-button:focus, input[type="submit"]:focus, .button:focus, .button--orange:focus, .node-type-donation .previous:focus, .node-type-membership-page .previous:focus, .button--blue:focus, .node-type-donation .form-submit:focus, .node-type-membership-page .form-submit:focus, .button--navy:focus, .button--red:focus, .button--mustard:focus, .button--aqua:focus, .button--yellow:focus, .button--green:focus, .button--lime:focus, .button--sienna:focus, .button--white:focus, .header__nav--secondary .donate:focus, .node-type-donation .next:focus, .node-type-membership-page .next:focus, .button--gray-1:focus, .button--gray-2:focus, .button--gray-3:focus, .button--gray-4:focus, .button--gray-5:focus, .button--black:focus, .button--outline--orange:focus, .button--outline--blue:focus, .node-type-donation #edit-donation-select label:focus, .node-type-donation #edit-field-member-category-und label:focus, .node-type-membership-page #edit-donation-select label:focus, .node-type-membership-page #edit-field-member-category-und label:focus, .node-type-donation #edit-donation-select input:checked + label, .node-type-donation #edit-field-member-category-und input:checked + label, .node-type-membership-page #edit-donation-select input:checked + label, .node-type-membership-page #edit-field-member-category-und input:checked + label, .button--outline--navy:focus, .button--outline--red:focus, .button--outline--mustard:focus, .button--outline--aqua:focus, .button--outline--yellow:focus, .button--outline--green:focus, .button--outline--lime:focus, .button--outline--sienna:focus, .button--orange--light:focus, .button--blue--light:focus, .button--navy--light:focus, .button--red--light:focus, .button--mustard--light:focus, .button--aqua--light:focus, .button--yellow--light:focus, .button--green--light:focus, .button--lime--light:focus, .button--sienna--light:focus, .button--outline--white:focus, .button--outline--gray-1:focus, .button--outline--gray-2:focus, .button--outline--gray-3:focus, .button--outline--gray-4:focus, .button--outline--gray-5:focus, .button--outline--black:focus {
+button:focus, input[type="submit"]:focus, .button:focus, .button--orange:focus, .button--blue:focus, .node-type-donation .form-submit:focus, .node-type-membership-page .form-submit:focus, .node-type-donation .next:focus, .node-type-membership-page .next:focus, .button--navy:focus, .button--red:focus, .button--mustard:focus, .button--aqua:focus, .button--yellow:focus, .button--green:focus, .button--lime:focus, .button--sienna:focus, .button--white:focus, .header__nav--secondary .donate:focus, .node-type-donation .previous:focus, .node-type-membership-page .previous:focus, .button--gray-1:focus, .button--gray-2:focus, .button--gray-3:focus, .button--gray-4:focus, .button--gray-5:focus, .button--black:focus, .button--outline--orange:focus, .button--outline--blue:focus, .node-type-donation #edit-donation-select label:focus, .node-type-donation #edit-field-member-category-und label:focus, .node-type-membership-page #edit-donation-select label:focus, .node-type-membership-page #edit-field-member-category-und label:focus, .node-type-donation #edit-donation-select input:checked + label, .node-type-donation #edit-field-member-category-und input:checked + label, .node-type-membership-page #edit-donation-select input:checked + label, .node-type-membership-page #edit-field-member-category-und input:checked + label, .button--outline--navy:focus, .button--outline--red:focus, .button--outline--mustard:focus, .button--outline--aqua:focus, .button--outline--yellow:focus, .button--outline--green:focus, .button--outline--lime:focus, .button--outline--sienna:focus, .button--orange--light:focus, .button--blue--light:focus, .button--navy--light:focus, .button--red--light:focus, .button--mustard--light:focus, .button--aqua--light:focus, .button--yellow--light:focus, .button--green--light:focus, .button--lime--light:focus, .button--sienna--light:focus, .button--outline--white:focus, .button--outline--gray-1:focus, .button--outline--gray-2:focus, .button--outline--gray-3:focus, .button--outline--gray-4:focus, .button--outline--gray-5:focus, .button--outline--black:focus {
   outline: 0; }
 
 ::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-button:hover, input[type="submit"]:hover, .button:hover, .button--orange:hover, .node-type-donation .previous:hover, .node-type-membership-page .previous:hover, .button--blue:hover, .node-type-donation .form-submit:hover, .node-type-membership-page .form-submit:hover, .button--navy:hover, .button--red:hover, .button--mustard:hover, .button--aqua:hover, .button--yellow:hover, .button--green:hover, .button--lime:hover, .button--sienna:hover, .button--white:hover, .header__nav--secondary .donate:hover, .node-type-donation .next:hover, .node-type-membership-page .next:hover, .button--gray-1:hover, .button--gray-2:hover, .button--gray-3:hover, .button--gray-4:hover, .button--gray-5:hover, .button--black:hover, .button--outline--orange:hover, .button--outline--blue:hover, .node-type-donation #edit-donation-select label:hover, .node-type-donation #edit-field-member-category-und label:hover, .node-type-membership-page #edit-donation-select label:hover, .node-type-membership-page #edit-field-member-category-und label:hover, .button--outline--navy:hover, .button--outline--red:hover, .button--outline--mustard:hover, .button--outline--aqua:hover, .button--outline--yellow:hover, .button--outline--green:hover, .button--outline--lime:hover, .button--outline--sienna:hover, .button--orange--light:hover, .button--blue--light:hover, .button--navy--light:hover, .button--red--light:hover, .button--mustard--light:hover, .button--aqua--light:hover, .button--yellow--light:hover, .button--green--light:hover, .button--lime--light:hover, .button--sienna--light:hover, .button--outline--white:hover, .button--outline--gray-1:hover, .button--outline--gray-2:hover, .button--outline--gray-3:hover, .button--outline--gray-4:hover, .button--outline--gray-5:hover, .button--outline--black:hover {
+button:hover, input[type="submit"]:hover, .button:hover, .button--orange:hover, .button--blue:hover, .node-type-donation .form-submit:hover, .node-type-membership-page .form-submit:hover, .node-type-donation .next:hover, .node-type-membership-page .next:hover, .button--navy:hover, .button--red:hover, .button--mustard:hover, .button--aqua:hover, .button--yellow:hover, .button--green:hover, .button--lime:hover, .button--sienna:hover, .button--white:hover, .header__nav--secondary .donate:hover, .node-type-donation .previous:hover, .node-type-membership-page .previous:hover, .button--gray-1:hover, .button--gray-2:hover, .button--gray-3:hover, .button--gray-4:hover, .button--gray-5:hover, .button--black:hover, .button--outline--orange:hover, .button--outline--blue:hover, .node-type-donation #edit-donation-select label:hover, .node-type-donation #edit-field-member-category-und label:hover, .node-type-membership-page #edit-donation-select label:hover, .node-type-membership-page #edit-field-member-category-und label:hover, .button--outline--navy:hover, .button--outline--red:hover, .button--outline--mustard:hover, .button--outline--aqua:hover, .button--outline--yellow:hover, .button--outline--green:hover, .button--outline--lime:hover, .button--outline--sienna:hover, .button--orange--light:hover, .button--blue--light:hover, .button--navy--light:hover, .button--red--light:hover, .button--mustard--light:hover, .button--aqua--light:hover, .button--yellow--light:hover, .button--green--light:hover, .button--lime--light:hover, .button--sienna--light:hover, .button--outline--white:hover, .button--outline--gray-1:hover, .button--outline--gray-2:hover, .button--outline--gray-3:hover, .button--outline--gray-4:hover, .button--outline--gray-5:hover, .button--outline--black:hover {
   text-decoration: none; }
 
-button:disabled, input[type="submit"]:disabled, .button:disabled, .button--orange:disabled, .node-type-donation .previous:disabled, .node-type-membership-page .previous:disabled, .button--blue:disabled, .node-type-donation .form-submit:disabled, .node-type-membership-page .form-submit:disabled, .button--navy:disabled, .button--red:disabled, .button--mustard:disabled, .button--aqua:disabled, .button--yellow:disabled, .button--green:disabled, .button--lime:disabled, .button--sienna:disabled, .button--white:disabled, .header__nav--secondary .donate:disabled, .node-type-donation .next:disabled, .node-type-membership-page .next:disabled, .button--gray-1:disabled, .button--gray-2:disabled, .button--gray-3:disabled, .button--gray-4:disabled, .button--gray-5:disabled, .button--black:disabled, .button--outline--orange:disabled, .button--outline--blue:disabled, .node-type-donation #edit-donation-select label:disabled, .node-type-donation #edit-field-member-category-und label:disabled, .node-type-membership-page #edit-donation-select label:disabled, .node-type-membership-page #edit-field-member-category-und label:disabled, .button--outline--navy:disabled, .button--outline--red:disabled, .button--outline--mustard:disabled, .button--outline--aqua:disabled, .button--outline--yellow:disabled, .button--outline--green:disabled, .button--outline--lime:disabled, .button--outline--sienna:disabled, .button--orange--light:disabled, .button--blue--light:disabled, .button--navy--light:disabled, .button--red--light:disabled, .button--mustard--light:disabled, .button--aqua--light:disabled, .button--yellow--light:disabled, .button--green--light:disabled, .button--lime--light:disabled, .button--sienna--light:disabled, .button--outline--white:disabled, .button--outline--gray-1:disabled, .button--outline--gray-2:disabled, .button--outline--gray-3:disabled, .button--outline--gray-4:disabled, .button--outline--gray-5:disabled, .button--outline--black:disabled, button.is-disabled, input[type="submit"].is-disabled, .button.is-disabled, .is-disabled.button--orange, .node-type-donation .is-disabled.previous, .node-type-membership-page .is-disabled.previous, .is-disabled.button--blue, .node-type-donation .is-disabled.form-submit, .node-type-membership-page .is-disabled.form-submit, .is-disabled.button--navy, .is-disabled.button--red, .is-disabled.button--mustard, .is-disabled.button--aqua, .is-disabled.button--yellow, .is-disabled.button--green, .is-disabled.button--lime, .is-disabled.button--sienna, .is-disabled.button--white, .header__nav--secondary .is-disabled.donate, .node-type-donation .is-disabled.next, .node-type-membership-page .is-disabled.next, .is-disabled.button--gray-1, .is-disabled.button--gray-2, .is-disabled.button--gray-3, .is-disabled.button--gray-4, .is-disabled.button--gray-5, .is-disabled.button--black, .is-disabled.button--outline--orange, .is-disabled.button--outline--blue, .node-type-donation #edit-donation-select label.is-disabled, .node-type-donation #edit-field-member-category-und label.is-disabled, .node-type-membership-page #edit-donation-select label.is-disabled, .node-type-membership-page #edit-field-member-category-und label.is-disabled, .is-disabled.button--outline--navy, .is-disabled.button--outline--red, .is-disabled.button--outline--mustard, .is-disabled.button--outline--aqua, .is-disabled.button--outline--yellow, .is-disabled.button--outline--green, .is-disabled.button--outline--lime, .is-disabled.button--outline--sienna, .is-disabled.button--orange--light, .is-disabled.button--blue--light, .is-disabled.button--navy--light, .is-disabled.button--red--light, .is-disabled.button--mustard--light, .is-disabled.button--aqua--light, .is-disabled.button--yellow--light, .is-disabled.button--green--light, .is-disabled.button--lime--light, .is-disabled.button--sienna--light, .is-disabled.button--outline--white, .is-disabled.button--outline--gray-1, .is-disabled.button--outline--gray-2, .is-disabled.button--outline--gray-3, .is-disabled.button--outline--gray-4, .is-disabled.button--outline--gray-5, .is-disabled.button--outline--black {
+button:disabled, input[type="submit"]:disabled, .button:disabled, .button--orange:disabled, .button--blue:disabled, .node-type-donation .form-submit:disabled, .node-type-membership-page .form-submit:disabled, .node-type-donation .next:disabled, .node-type-membership-page .next:disabled, .button--navy:disabled, .button--red:disabled, .button--mustard:disabled, .button--aqua:disabled, .button--yellow:disabled, .button--green:disabled, .button--lime:disabled, .button--sienna:disabled, .button--white:disabled, .header__nav--secondary .donate:disabled, .node-type-donation .previous:disabled, .node-type-membership-page .previous:disabled, .button--gray-1:disabled, .button--gray-2:disabled, .button--gray-3:disabled, .button--gray-4:disabled, .button--gray-5:disabled, .button--black:disabled, .button--outline--orange:disabled, .button--outline--blue:disabled, .node-type-donation #edit-donation-select label:disabled, .node-type-donation #edit-field-member-category-und label:disabled, .node-type-membership-page #edit-donation-select label:disabled, .node-type-membership-page #edit-field-member-category-und label:disabled, .button--outline--navy:disabled, .button--outline--red:disabled, .button--outline--mustard:disabled, .button--outline--aqua:disabled, .button--outline--yellow:disabled, .button--outline--green:disabled, .button--outline--lime:disabled, .button--outline--sienna:disabled, .button--orange--light:disabled, .button--blue--light:disabled, .button--navy--light:disabled, .button--red--light:disabled, .button--mustard--light:disabled, .button--aqua--light:disabled, .button--yellow--light:disabled, .button--green--light:disabled, .button--lime--light:disabled, .button--sienna--light:disabled, .button--outline--white:disabled, .button--outline--gray-1:disabled, .button--outline--gray-2:disabled, .button--outline--gray-3:disabled, .button--outline--gray-4:disabled, .button--outline--gray-5:disabled, .button--outline--black:disabled, button.is-disabled, input[type="submit"].is-disabled, .button.is-disabled, .is-disabled.button--orange, .is-disabled.button--blue, .node-type-donation .is-disabled.form-submit, .node-type-membership-page .is-disabled.form-submit, .node-type-donation .is-disabled.next, .node-type-membership-page .is-disabled.next, .is-disabled.button--navy, .is-disabled.button--red, .is-disabled.button--mustard, .is-disabled.button--aqua, .is-disabled.button--yellow, .is-disabled.button--green, .is-disabled.button--lime, .is-disabled.button--sienna, .is-disabled.button--white, .header__nav--secondary .is-disabled.donate, .node-type-donation .is-disabled.previous, .node-type-membership-page .is-disabled.previous, .is-disabled.button--gray-1, .is-disabled.button--gray-2, .is-disabled.button--gray-3, .is-disabled.button--gray-4, .is-disabled.button--gray-5, .is-disabled.button--black, .is-disabled.button--outline--orange, .is-disabled.button--outline--blue, .node-type-donation #edit-donation-select label.is-disabled, .node-type-donation #edit-field-member-category-und label.is-disabled, .node-type-membership-page #edit-donation-select label.is-disabled, .node-type-membership-page #edit-field-member-category-und label.is-disabled, .is-disabled.button--outline--navy, .is-disabled.button--outline--red, .is-disabled.button--outline--mustard, .is-disabled.button--outline--aqua, .is-disabled.button--outline--yellow, .is-disabled.button--outline--green, .is-disabled.button--outline--lime, .is-disabled.button--outline--sienna, .is-disabled.button--orange--light, .is-disabled.button--blue--light, .is-disabled.button--navy--light, .is-disabled.button--red--light, .is-disabled.button--mustard--light, .is-disabled.button--aqua--light, .is-disabled.button--yellow--light, .is-disabled.button--green--light, .is-disabled.button--lime--light, .is-disabled.button--sienna--light, .is-disabled.button--outline--white, .is-disabled.button--outline--gray-1, .is-disabled.button--outline--gray-2, .is-disabled.button--outline--gray-3, .is-disabled.button--outline--gray-4, .is-disabled.button--outline--gray-5, .is-disabled.button--outline--black {
   opacity: .5; }
 
 input[type="text"], input[type="password"], input[type="email"], input[type="url"], input[type="date"], input[type="month"], input[type="time"], input[type="datetime"], input[type="datetime-local"], input[type="week"], input[type="number"], input[type="search"], input[type="tel"], input[type="color"], select, textarea {
@@ -1082,7 +1091,7 @@ a:hover {
 .hover--color--sienna:hover, .hover--sienna:hover {
   color: #9E2420; }
 
-.color--white, .button--black, .header__nav--primary .search, .header__nav--primary .search:hover, .node-type-donation .form-submit, .node-type-membership-page .form-submit {
+.color--white, .button--black, .header__nav--primary .search, .header__nav--primary .search:hover {
   color: #fff; }
 .color--gray-1 {
   color: #eee; }
@@ -1094,14 +1103,14 @@ a:hover {
   color: #777; }
 .color--gray-5 {
   color: #333; }
-.color--black, .button--white, .header__nav--secondary .donate, .node-type-donation .next, .node-type-membership-page .next, .warning, .header__nav--primary a, .header__nav--primary a:hover, .node-type-donation .step.active, .node-type-membership-page .step.active {
+.color--black, .button--white, .header__nav--secondary .donate, .node-type-donation .previous, .node-type-membership-page .previous, .warning, .header__nav--primary a, .header__nav--primary a:hover {
   color: #000; }
 .color--twitter {
   color: #4099FF; }
 .color--facebook {
   color: #3b5998; }
 
-.background-color--orange, .button--orange, .node-type-donation .previous, .node-type-membership-page .previous, .button--orange::before, .node-type-donation .previous::before, .node-type-membership-page .previous::before, .header__nav--primary .awareness::before, .node-type-donation .previous-next, .node-type-membership-page .previous-next, .node-type-donation .steps, .node-type-membership-page .steps, .bg--orange {
+.background-color--orange, .header__nav--primary .awareness::before, .bg--orange {
   background-color: #F15E22; }
 .background-color--orange--l1, .bg--orange--l1 {
   background-color: #f48152; }
@@ -1115,7 +1124,7 @@ a:hover {
 .hover--background-color--orange:hover, .hover--bg--orange:hover {
   background-color: #F15E22; }
 
-.background-color--blue, .button--blue, .node-type-donation .form-submit, .node-type-membership-page .form-submit, .button--blue::before, .node-type-donation .form-submit::before, .node-type-membership-page .form-submit::before, .header__nav--primary .involved::before, .bg--blue {
+.background-color--blue, .header__nav--primary .involved::before, .bg--blue {
   background-color: #1E4497; }
 .background-color--blue--l1, .bg--blue--l1 {
   background-color: #2657c2; }
@@ -1129,7 +1138,7 @@ a:hover {
 .hover--background-color--blue:hover, .hover--bg--blue:hover {
   background-color: #1E4497; }
 
-.background-color--navy, .button--navy, .button--navy::before, .header__nav--primary .search, .bg--navy {
+.background-color--navy, .header__nav--primary .search, .bg--navy {
   background-color: #26225E; }
 .background-color--navy--l1, .bg--navy--l1 {
   background-color: #353083; }
@@ -1143,7 +1152,7 @@ a:hover {
 .hover--background-color--navy:hover, .hover--bg--navy:hover {
   background-color: #26225E; }
 
-.background-color--red, .button--red, .button--red::before, .header__nav--primary .professionals::before, .bg--red {
+.background-color--red, .header__nav--primary .professionals::before, .bg--red {
   background-color: #d51217; }
 .background-color--red--l1, .bg--red--l1 {
   background-color: #ed2d32; }
@@ -1157,7 +1166,7 @@ a:hover {
 .hover--background-color--red:hover, .hover--bg--red:hover {
   background-color: #d51217; }
 
-.background-color--mustard, .button--mustard, .button--mustard::before, .bg--mustard {
+.background-color--mustard, .bg--mustard {
   background-color: #FAAD1D; }
 .background-color--mustard--l1, .bg--mustard--l1 {
   background-color: #fbbf4f; }
@@ -1171,7 +1180,7 @@ a:hover {
 .hover--background-color--mustard:hover, .hover--bg--mustard:hover {
   background-color: #FAAD1D; }
 
-.background-color--aqua, .button--aqua, .button--aqua::before, .bg--aqua {
+.background-color--aqua, .bg--aqua {
   background-color: #048499; }
 .background-color--aqua--l1, .bg--aqua--l1 {
   background-color: #05afcb; }
@@ -1185,7 +1194,7 @@ a:hover {
 .hover--background-color--aqua:hover, .hover--bg--aqua:hover {
   background-color: #048499; }
 
-.background-color--yellow, .button--yellow, .button--yellow::before, .header__nav--primary .prevention::before, .bg--yellow {
+.background-color--yellow, .header__nav--primary .prevention::before, .bg--yellow {
   background-color: #FEDC00; }
 .background-color--yellow--l1, .bg--yellow--l1 {
   background-color: #ffe432; }
@@ -1199,7 +1208,7 @@ a:hover {
 .hover--background-color--yellow:hover, .hover--bg--yellow:hover {
   background-color: #FEDC00; }
 
-.background-color--green, .button--green, .button--green::before, .password-indicator div, .bg--green {
+.background-color--green, .password-indicator div, .bg--green {
   background-color: #018241; }
 .background-color--green--l1, .bg--green--l1 {
   background-color: #01b55a; }
@@ -1213,7 +1222,7 @@ a:hover {
 .hover--background-color--green:hover, .hover--bg--green:hover {
   background-color: #018241; }
 
-.background-color--lime, .button--lime, .button--lime::before, .header__nav--primary .patients::before, .bg--lime {
+.background-color--lime, .header__nav--primary .patients::before, .bg--lime {
   background-color: #91AE3C; }
 .background-color--lime--l1, .bg--lime--l1 {
   background-color: #a9c558; }
@@ -1227,7 +1236,7 @@ a:hover {
 .hover--background-color--lime:hover, .hover--bg--lime:hover {
   background-color: #91AE3C; }
 
-.background-color--sienna, .button--sienna, .button--sienna::before, .bg--sienna {
+.background-color--sienna, .bg--sienna {
   background-color: #9E2420; }
 .background-color--sienna--l1, .bg--sienna--l1 {
   background-color: #c82e29; }
@@ -1241,9 +1250,9 @@ a:hover {
 .hover--background-color--sienna:hover, .hover--bg--sienna:hover {
   background-color: #9E2420; }
 
-.background-color--white, .button--white, .header__nav--secondary .donate, .node-type-donation .next, .node-type-membership-page .next, .button--white::before, .header__nav--secondary .donate::before, .node-type-donation .next::before, .node-type-membership-page .next::before, .header__nav--primary a, .node-type-donation #redhen-donation-form, .node-type-membership-page #redhen-donation-form, .node-type-donation .step.active, .node-type-membership-page .step.active, .bg--white {
+.background-color--white, .button--white, .header__nav--secondary .donate, .node-type-donation .previous, .node-type-membership-page .previous, .button--white::before, .header__nav--secondary .donate::before, .node-type-donation .previous::before, .node-type-membership-page .previous::before, .header__nav--primary a, .bg--white {
   background-color: #fff; }
-.background-color--gray-1, .node-type-donation header, .node-type-membership-page header, .node-type-donation .main, .node-type-membership-page .main, .bg--gray-1 {
+.background-color--gray-1, .bg--gray-1 {
   background-color: #eee; }
 .background-color--gray-2, .password-indicator, .bg--gray-2 {
   background-color: #ccc; }
@@ -1256,37 +1265,37 @@ a:hover {
 .background-color--black, .button--black::before, .bg--black {
   background-color: #000; }
 
-.border-color--orange, .button--orange, .node-type-donation .previous, .node-type-membership-page .previous, .header__nav--primary .awareness {
+.border-color--orange, .header__nav--primary .awareness {
   border-color: #F15E22; }
 
-.border-color--blue, .button--blue, .node-type-donation .form-submit, .node-type-membership-page .form-submit, .header__nav--primary .involved {
+.border-color--blue, .header__nav--primary .involved {
   border-color: #1E4497; }
 
-.border-color--navy, .button--navy, .header__nav--primary .search {
+.border-color--navy, .header__nav--primary .search {
   border-color: #26225E; }
 
-.border-color--red, .button--red, .header__nav--primary .professionals {
+.border-color--red, .header__nav--primary .professionals {
   border-color: #d51217; }
 
-.border-color--mustard, .button--mustard {
+.border-color--mustard {
   border-color: #FAAD1D; }
 
-.border-color--aqua, .button--aqua {
+.border-color--aqua {
   border-color: #048499; }
 
-.border-color--yellow, .button--yellow, .header__nav--primary .prevention {
+.border-color--yellow, .header__nav--primary .prevention {
   border-color: #FEDC00; }
 
-.border-color--green, .button--green {
+.border-color--green {
   border-color: #018241; }
 
-.border-color--lime, .button--lime, .header__nav--primary .patients {
+.border-color--lime, .header__nav--primary .patients {
   border-color: #91AE3C; }
 
-.border-color--sienna, .button--sienna {
+.border-color--sienna {
   border-color: #9E2420; }
 
-.border-color--white, .button--white, .header__nav--secondary .donate, .node-type-donation .next, .node-type-membership-page .next {
+.border-color--white, .button--white, .header__nav--secondary .donate, .node-type-donation .previous, .node-type-membership-page .previous {
   border-color: #fff; }
 .border-color--gray-1 {
   border-color: #eee; }
@@ -1309,7 +1318,7 @@ a:hover {
   border-radius: 2px; }
 .border-radius--md, .rounded {
   border-radius: 0.25rem; }
-.border-radius--lg {
+.border-radius--lg, .node-type-donation #redhen-donation-form, .node-type-membership-page #redhen-donation-form {
   border-radius: 0.5rem; }
 .border-radius--xl {
   border-radius: 1rem; }
@@ -1382,16 +1391,106 @@ a:hover {
 .border-left-width--xl {
   border-left-width: 1rem; }
 
+.button--orange {
+  border-color: #fac7b2;
+  background-color: #fac7b2;
+  color: #F15E22; }
+  .button--orange:hover, .button--orange:active, .button--orange.active {
+    background-color: #F15E22;
+    color: white; }
+
+.button--blue, .node-type-donation .form-submit, .node-type-membership-page .form-submit, .node-type-donation .next, .node-type-membership-page .next {
+  border-color: #6c91e2;
+  background-color: #6c91e2;
+  color: #1E4497; }
+  .button--blue:hover, .node-type-donation .form-submit:hover, .node-type-membership-page .form-submit:hover, .node-type-donation .next:hover, .node-type-membership-page .next:hover, .button--blue:active, .node-type-donation .form-submit:active, .node-type-membership-page .form-submit:active, .node-type-donation .next:active, .node-type-membership-page .next:active, .button--blue.active, .node-type-donation .active.form-submit, .node-type-membership-page .active.form-submit, .node-type-donation .active.next, .node-type-membership-page .active.next {
+    background-color: #1E4497;
+    color: white; }
+
+.button--navy {
+  border-color: #5e57c2;
+  background-color: #5e57c2;
+  color: #26225E; }
+  .button--navy:hover, .button--navy:active, .button--navy.active {
+    background-color: #26225E;
+    color: white; }
+
+.button--red {
+  border-color: #f58b8e;
+  background-color: #f58b8e;
+  color: #d51217; }
+  .button--red:hover, .button--red:active, .button--red.active {
+    background-color: #d51217;
+    color: white; }
+
+.button--mustard {
+  border-color: #fde3b3;
+  background-color: #fde3b3;
+  color: #FAAD1D; }
+  .button--mustard:hover, .button--mustard:active, .button--mustard.active {
+    background-color: #FAAD1D;
+    color: white; }
+
+.button--aqua {
+  border-color: #3cdffa;
+  background-color: #3cdffa;
+  color: #048499; }
+  .button--aqua:hover, .button--aqua:active, .button--aqua.active {
+    background-color: #048499;
+    color: white; }
+
+.button--yellow {
+  border-color: #fff198;
+  background-color: #fff198;
+  color: #FEDC00; }
+  .button--yellow:hover, .button--yellow:active, .button--yellow.active {
+    background-color: #FEDC00;
+    color: white; }
+
+.button--green {
+  border-color: #1ffd8d;
+  background-color: #1ffd8d;
+  color: #018241; }
+  .button--green:hover, .button--green:active, .button--green.active {
+    background-color: #018241;
+    color: white; }
+
+.button--lime {
+  border-color: #d0dfa4;
+  background-color: #d0dfa4;
+  color: #91AE3C; }
+  .button--lime:hover, .button--lime:active, .button--lime.active {
+    background-color: #91AE3C;
+    color: white; }
+
+.button--sienna {
+  border-color: #e37874;
+  background-color: #e37874;
+  color: #9E2420; }
+  .button--sienna:hover, .button--sienna:active, .button--sienna.active {
+    background-color: #9E2420;
+    color: white; }
+
 .button--gray-1 {
-  background-color: #eee; }
+  border-color: #eee; }
+  .button--gray-1::before {
+    background-color: #eee; }
 .button--gray-2 {
-  background-color: #ccc; }
+  border-color: #ccc; }
+  .button--gray-2::before {
+    background-color: #ccc; }
 .button--gray-3 {
-  background-color: #bbb; }
+  border-color: transparent; }
+  .button--gray-3::before {
+    background-color: #bbb; }
 .button--gray-4 {
-  background-color: #777; }
+  border-color: #777; }
+  .button--gray-4::before {
+    background-color: #777; }
 .button--gray-5 {
-  background-color: #333; }
+  border-color: #333; }
+  .button--gray-5::before {
+    background-color: #333; }
 
 .button--outline--orange {
   border-color: #97b1ea;
@@ -4405,7 +4504,7 @@ h1, h2, h3, h4, h5, h6 .h1, .h2, .h3, .node-type-donation legend, .node-type-mem
     width: 50%; }
   .sm--width--55, .node-type-donation .locality-block .form-item-commerce-customer-address-und-0-locality, .node-type-membership-page .locality-block .form-item-commerce-customer-address-und-0-locality {
     width: 55%; }
-  .sm--width--60, .node-type-donation h1, .node-type-membership-page h1 {
+  .sm--width--60 {
     width: 60%; }
   .sm--width--65 {
     width: 65%; }
@@ -5054,10 +5153,14 @@ html.js .js-hide {
   right: 0; }
 .node-type-donation .header__logo-image, .node-type-membership-page .header__logo-image {
   max-height: 40px; }
+.node-type-donation header, .node-type-membership-page header {
+  background-color: #eee; }
 .node-type-donation #logo, .node-type-membership-page #logo {
   background-image: url(../img/NKF-logoR_Hori_OB.png); }
+.node-type-donation.not-logged-in .tabs, .node-type-membership-page.not-logged-in .tabs {
+  display: none !important; }
 .node-type-donation #redhen-donation-form, .node-type-membership-page #redhen-donation-form {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); }
+  background-color: #fafafa; }
 .node-type-donation .form-item label:not(.option), .node-type-membership-page .form-item label:not(.option) {
   white-space: nowrap; }
 .node-type-donation .commerce-credit-card-expiration .form-item, .node-type-membership-page .commerce-credit-card-expiration .form-item {
@@ -5067,13 +5170,18 @@ html.js .js-hide {
 .node-type-donation .commerce-credit-card-expiration select, .node-type-membership-page .commerce-credit-card-expiration select {
   width: 100%; }
 .node-type-donation .previous-next, .node-type-membership-page .previous-next {
+  background-color: #eee;
   border-radius: 0 0 3px 3px; }
 .node-type-donation .steps, .node-type-membership-page .steps {
+  background-color: #eee;
   border-radius: 3px 3px 0 0; }
 .node-type-donation .step, .node-type-membership-page .step {
   height: 1.999rem;
   width: 1.999rem;
   line-height: 1.999rem; }
+.node-type-donation .step.active, .node-type-membership-page .step.active {
+  background-color: #bbb;
+  color: #000; }
 
 @media print {
   .header__nav, footer {

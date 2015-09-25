@@ -39,7 +39,24 @@
         if(v != 'select_or_other') {
           $('#edit-submit').val('Donate ' + currencyFormat(v));
         }
+        setActiveButton();
       }
+
+      // helper to set the active button
+      function setActiveButton() {
+        var v = $(".form-item-donation input").val();
+        $('.amount-options .button').removeClass('active');
+        if (v > 0) {
+          var b = $("[data-amount='" + v + "']");
+          if (b.length > 0) {
+            b.addClass('active');
+          }
+          else {
+            $("[data-amount='0']").addClass('active');
+          }
+        }
+      }
+
 
       function checkRequiredFields(context) {
         //return true;
@@ -63,7 +80,7 @@
       }
 
       // update the submit button with current donation amount
-      $(".form-item-donation input").once().change(setDonationAmount);
+      $(".form-item-donation input").once().on('input', setDonationAmount);
 
       // build donation sections and misc donation stuff
       if(!donationProcessed && !ie8) {
@@ -76,20 +93,22 @@
           var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
           $.each([[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']], function(i, v) {
             var buttonOuter = $('<div class="grid-cell width--33 padding--xs"></div>').appendTo($(amountOptions));
-            var button = $('<div class="button button--outline--blue width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</div>')
+            var button = $('<div class="button button--orange color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</div>')
               .appendTo(buttonOuter);
             button.click(function(e) {
-                $('.amount-options .button').removeClass('active');
-                $(this).addClass('active');
+                //$('.amount-options .button').removeClass('active');
+                //$(this).addClass('active');
                 if($(this).data('amount') == 0) {
-                  $('input', textDonation).val('').focus().change();
+                  $('input', textDonation).val('').focus().trigger('input');
                 } else {
-                  $('input', textDonation).val($(this).data('amount')).change();
+                  $('input', textDonation).val($(this).data('amount')).trigger('input');
                 }
                 e.preventDefault();
               });
           });
-
+          // let's try to set the active button once on load
+          // as the value might be prefilled
+          setActiveButton();
         }
         var steps = $('<div class="steps sm--show"></div>').prependTo($('.field-type-redhen-donation > form > div'));
         var donationSteps = $('.donation-step');

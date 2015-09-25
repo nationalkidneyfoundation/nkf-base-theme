@@ -50,7 +50,9 @@
 
   <!--<section <?php //if(isset($hero_background)): print $hero_background; endif; ?>>-->
   <section class="main position--relative">
-    <div class="hero sm--show"></div>
+    <?php if(!$has_image): ?>
+      <div class="hero sm--show"></div>
+    <?php endif; ?>
     <div class="container position--relative z-index--1 padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
       <div class="grid">
         <?php if ($page['sidebar_first']): ?>
