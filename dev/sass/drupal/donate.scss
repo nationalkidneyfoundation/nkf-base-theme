@@ -143,8 +143,14 @@
   .form-type-textfield.form-item-donation {
     @extend .sm--width--50;
     @extend .center;
-    @extend .text-align--center;
     @extend .padding-y--md;
+    input {
+      text-align: center;
+      font-weight: bold;
+      padding: 0 space(xl);
+      height: height(md);
+      font-size: font-size(xl);
+    }
   }
   // hide radio buttons
   .form-item-donation-select > label:not(.option),
@@ -339,6 +345,14 @@
     @extend .grid-cell;
     @extend .sm--width--50;
     //width: 50% !important;
+  }
+
+  // sub sections
+  .field-name-field-company-match,
+  .honor-info,
+  .field-name-field-benefiting-office {
+    margin: 0 space(xs) space(xs);
+    background-color: $gray-1;
   }
 
   // submit button

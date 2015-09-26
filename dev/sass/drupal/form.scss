@@ -6,3 +6,32 @@
 .form-item .description {
   @extend .color--gray-3;
 }
+
+.form-type-checkbox {
+  position: relative;
+  label {
+    margin-left: 33px;
+    &:before {
+      content: "";
+      display: inline-block;
+      border: 1px solid $gray-2;
+      border-radius: border-width(sm);
+      height: 23px;
+      width: 23px;
+      background-color: $white;
+      position: absolute;
+      text-align: center;
+      left: .5rem;
+      color: $black;
+      font-weight: bold;
+      font-size: font-size(lg);
+    }
+  }
+  input {
+    @extend .invisible;
+  }
+  input[type=checkbox]:checked+label:before {
+    content: "\00d7";
+    line-height: 22px;
+  }
+}

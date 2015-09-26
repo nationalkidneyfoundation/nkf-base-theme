@@ -1,8 +1,9 @@
 
 // Require dependencies.
 var gulp          = require('gulp');
-//var rework        = require('gulp-rework');
+var rework        = require('gulp-rework');
 //var reworkNpm     = require('rework-npm');
+var reworkRemToPx       = require('rework-rem-fallback');
 //var reworkVars    = require('rework-vars');
 //var reworkMedia   = require('rework-custom-media');
 //var reworkCalc    = require('rework-calc');
@@ -82,6 +83,9 @@ gulp.task('css-build', function () {
   gulp.src(paths.style)
     .pipe(sass({errLogToConsole: true}))
     .pipe(cssAutoprefix(cssPrefixOptions))
+    .pipe(rework(
+      reworkRemToPx()
+    ))
     .pipe(size({gzip: false, showFiles: true, title:'Raw css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Raw gzipped css'}))
     .pipe(gulp.dest(paths.stylesDistDir))
