@@ -93,7 +93,7 @@
           var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
           $.each([[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']], function(i, v) {
             var buttonOuter = $('<div class="grid-cell width--33 padding--xs"></div>').appendTo($(amountOptions));
-            var button = $('<div class="button button--orange color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</div>')
+            var button = $('<a class="button button--orange color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
               .appendTo(buttonOuter);
             button.click(function(e) {
                 //$('.amount-options .button').removeClass('active');

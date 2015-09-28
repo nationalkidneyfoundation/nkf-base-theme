@@ -11282,6 +11282,10 @@ html.js .js-hide {
   line-height: 22px;
 }
 
+.form-type-checkbox input[type=checkbox]:focus + label:before {
+  border-color: #777;
+}
+
 .header__nav--primary a::before {
   content: '';
 }

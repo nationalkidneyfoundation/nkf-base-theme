@@ -34,4 +34,7 @@
     content: "\00d7";
     line-height: 22px;
   }
+  input[type=checkbox]:focus+label:before {
+    border-color: $gray-4;
+  }
 }
