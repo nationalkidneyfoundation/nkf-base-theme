@@ -109,7 +109,8 @@ $spaces: (
 }
 // Widths
 $widths: (
-    '5': 5%
+    '0': 0
+  , '5': 5%
   , '10': 10%
   , '15': 15%
   , '20': 20%
@@ -140,7 +141,9 @@ $widths: (
 
 // Heights
 $heights: (
-    'xs': scale(1)
+    'xxxs': scale(-2)
+  , 'xxs': scale(-1)
+  , 'xs': scale(1)
   , 'sm': scale(3)
   , 'md': scale(5)
   , 'lg': scale(9)
