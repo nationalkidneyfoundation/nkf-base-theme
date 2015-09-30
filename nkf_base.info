@@ -32,6 +32,7 @@ stylesheets[all][]          = css/styles.min.css
 
 ; Scripts =====================================================================
 scripts[] = js/scripts.js
+scripts[] = js/donate-form.js
 
 ; Panels  =====================================================================
 plugins[panels][layouts]    = layouts
