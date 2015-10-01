@@ -2752,7 +2752,6 @@ legend {
 }
 
 [class*="donut--"] > * {
-  position: absolute;
   background-color: white;
   border: 1px solid white;
   border-radius: 50%;
@@ -2760,8 +2759,6 @@ legend {
   box-sizing: border-box;
   width: 84px;
   height: 84px;
-  margin-left: 7px;
-  margin-top: 7px;
 }
 
 .donut--0 {
@@ -3784,8 +3781,6 @@ legend {
 .donut--xs > * {
   width: 6px;
   height: 6px;
-  margin-top: 6px;
-  margin-left: 6px;
 }
 
 .donut--sm {
@@ -3796,8 +3791,6 @@ legend {
 .donut--sm > * {
   width: 15px;
   height: 15px;
-  margin-top: 12px;
-  margin-left: 12px;
 }
 
 .donut--lg {
@@ -3808,8 +3801,6 @@ legend {
 .donut--lg > * {
   width: 180px;
   height: 180px;
-  margin-top: 9px;
-  margin-left: 9px;
 }
 
 .donut--xl {
@@ -3820,8 +3811,6 @@ legend {
 .donut--xl > * {
   width: 274px;
   height: 274px;
-  margin-top: 12px;
-  margin-left: 12px;
 }
 
 a {
