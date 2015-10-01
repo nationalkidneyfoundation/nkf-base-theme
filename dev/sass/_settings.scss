@@ -188,3 +188,8 @@ $breakpoints: (
 @function breakpoint($breakpoint){
   @return map-get($breakpoints, $breakpoint);
 }
+
+// helper functions
+@function strip-units($number) {
+  @return ($number / ($number * 0 + 1)) / 100;
+}

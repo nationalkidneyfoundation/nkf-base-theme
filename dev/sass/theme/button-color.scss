@@ -4,6 +4,9 @@
     border-color: lighten($color, 30%);
     background-color: lighten($color, 30%);
     color: $color;
+    &:visited {
+      color: $color;
+    }
     &:hover,
     &:active,
     &.active {
@@ -19,6 +22,9 @@
     background-color: $white;
     color: $gray-5;
     border-color: $white;
+    &:visited {
+      color: $gray-5;
+    }
     &:hover,
     &:active,
     &.active {
@@ -31,6 +37,9 @@
     background-color: $gray-1;
     border-color: $gray-1;
     color: $black;
+    &:visited {
+      color: $black;
+    }
     &:hover,
     &:active,
     &.active {
@@ -42,6 +51,9 @@
     background-color: $gray-2;
     border-color: $gray-2;
     color: $black;
+    &:visited {
+      color: $black;
+    }
     &:hover,
     &:active,
     &.active {
@@ -53,6 +65,9 @@
     background-color: $gray-3;
     border-color: $gray-3;
     color: $black;
+    &:visited {
+      color: $black;
+    }
     &:hover,
     &:active,
     &.active {
@@ -64,6 +79,9 @@
     background-color: $gray-4;
     border-color: $gray-4;
     color: $black;
+    &:visited {
+      color: $black;
+    }
     &:hover,
     &:active,
     &.active {
@@ -74,6 +92,9 @@
     @extend .button;
     border-color: $gray-5;
     color: $white;
+    &:visited {
+      color: $white;
+    }
     &::before {
       background-color: $gray-5;
     }
@@ -83,6 +104,9 @@
     background-color: $gray-5;
     border-color: $gray-5;
     color: $white;
+    &:visited {
+      color: $white;
+    }
     &:hover,
     &:active,
     &.active {

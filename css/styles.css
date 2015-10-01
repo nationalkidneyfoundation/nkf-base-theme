@@ -1866,7 +1866,7 @@ input[type="submit"],
   text-decoration: none;
   cursor: pointer;
   line-height: normal;
-  padding: 8px 16px;
+  padding: 8px 15px;
   padding: 0.5rem 1rem;
   height: auto;
   border-width: 1px;
@@ -2356,7 +2356,7 @@ textarea {
   border: solid #ccc 1px;
   border-radius: 2px;
   vertical-align: middle;
-  height: 45px;
+  height: 42px;
   height: 2.827rem;
   box-sizing: border-box;
 }
@@ -2387,22 +2387,22 @@ textarea:focus {
 
 select:not([multiple]) {
   padding: 0;
-  height: 45px;
+  height: 42px;
   height: 2.827rem;
 }
 
 fieldset {
   margin: none;
-  padding: 16px;
+  padding: 15px;
   padding: 1rem;
   border-width: 0;
 }
 
 legend {
   display: block;
-  padding-top: 16px;
+  padding-top: 15px;
   padding-top: 1rem;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   padding-bottom: 1rem;
   border-bottom: solid 1px #ccc;
 }
@@ -2708,7 +2708,7 @@ legend {
 }
 
 .tabs {
-  padding: 16px;
+  padding: 15px;
   padding: 1rem;
   border: solid #ccc;
   border-width: 0 0 4px;
@@ -2720,7 +2720,7 @@ legend {
 }
 
 .tabs a {
-  padding: 16px;
+  padding: 15px;
   padding: 1rem;
   text-decoration: none;
   color: #777;
@@ -2728,9 +2728,9 @@ legend {
 
 .tabs a.active {
   background-color: #fff;
-  padding-top: 23px;
+  padding-top: 21px;
   padding-top: 1.414rem;
-  padding-bottm: 23px;
+  padding-bottm: 21px;
   padding-bottm: 1.414rem;
 }
 
@@ -2739,6 +2739,1091 @@ legend {
   background-repeat: no-repeat;
   min-height: 500px;
   background-position: bottom right;
+}
+
+[class*="donut--"] {
+  border-radius: 50%;
+  border: 1px solid white;
+  width: 100px;
+  height: 100px;
+  float: left;
+  position: relative;
+}
+
+[class*="donut--"] > * {
+  position: absolute;
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 50%;
+  text-align: center;
+  box-sizing: border-box;
+  width: 66px;
+  height: 66px;
+  line-height: 66px;
+  margin-left: 17px;
+  margin-top: 17px;
+}
+
+.donut--0 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(90deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--0--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(90deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--0--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(90deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--0--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(90deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--0--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(90deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--0--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(90deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--0--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(90deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--0--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(90deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--0--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(90deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--0--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(90deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--0--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(90deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--5 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(108deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--5--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(108deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--5--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(108deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--5--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(108deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--5--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(108deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--5--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(108deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--5--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(108deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--5--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(108deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--5--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(108deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--5--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(108deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--5--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(108deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--10 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(126deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--10--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(126deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--10--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(126deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--10--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(126deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--10--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(126deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--10--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(126deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--10--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(126deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--10--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(126deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--10--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(126deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--10--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(126deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--10--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(126deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--15 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(144deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--15--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(144deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--15--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(144deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--15--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(144deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--15--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(144deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--15--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(144deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--15--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(144deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--15--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(144deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--15--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(144deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--15--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(144deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--15--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(144deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--20 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(162deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--20--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(162deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--20--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(162deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--20--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(162deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--20--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(162deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--20--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(162deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--20--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(162deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--20--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(162deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--20--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(162deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--20--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(162deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--20--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(162deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--25 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(180deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--25--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(180deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--25--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(180deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--25--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(180deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--25--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(180deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--25--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(180deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--25--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(180deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--25--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(180deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--25--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(180deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--25--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(180deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--25--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(180deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--30 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(198deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--30--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(198deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--30--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(198deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--30--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(198deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--30--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(198deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--30--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(198deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--30--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(198deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--30--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(198deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--30--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(198deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--30--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(198deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--30--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(198deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--33 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(210deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--33--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(210deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--33--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(210deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--33--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(210deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--33--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(210deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--33--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(210deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--33--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(210deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--33--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(210deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--33--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(210deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--33--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(210deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--33--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(210deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--35 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(216deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--35--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(216deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--35--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(216deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--35--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(216deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--35--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(216deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--35--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(216deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--35--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(216deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--35--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(216deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--35--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(216deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--35--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(216deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--35--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(216deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--40 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(234deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--40--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(234deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--40--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(234deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--40--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(234deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--40--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(234deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--40--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(234deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--40--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(234deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--40--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(234deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--40--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(234deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--40--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(234deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--40--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(234deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--45 {
+  background-image: linear-gradient(90deg, #ccc 50%, transparent 50%, transparent), linear-gradient(252deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--45--orange {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(252deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--45--blue {
+  background-image: linear-gradient(90deg, #c1d1f3 50%, transparent 50%, transparent), linear-gradient(252deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--45--navy {
+  background-image: linear-gradient(90deg, #a6a2dd 50%, transparent 50%, transparent), linear-gradient(252deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--45--red {
+  background-image: linear-gradient(90deg, #fde9e9 50%, transparent 50%, transparent), linear-gradient(252deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--45--mustard {
+  background-image: linear-gradient(90deg, #ffffff 50%, transparent 50%, transparent), linear-gradient(252deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--45--aqua {
+  background-image: linear-gradient(90deg, #9feffd 50%, transparent 50%, transparent), linear-gradient(252deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--45--yellow {
+  background-image: linear-gradient(90deg, #fffffe 50%, transparent 50%, transparent), linear-gradient(252deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--45--green {
+  background-image: linear-gradient(90deg, #84fec1 50%, transparent 50%, transparent), linear-gradient(252deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--45--lime {
+  background-image: linear-gradient(90deg, #f7faef 50%, transparent 50%, transparent), linear-gradient(252deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--45--sienna {
+  background-image: linear-gradient(90deg, #f4cac9 50%, transparent 50%, transparent), linear-gradient(252deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--50 {
+  background-image: linear-gradient(-90deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--50--orange {
+  background-image: linear-gradient(-90deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--50--blue {
+  background-image: linear-gradient(-90deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--50--navy {
+  background-image: linear-gradient(-90deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--50--red {
+  background-image: linear-gradient(-90deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--50--mustard {
+  background-image: linear-gradient(-90deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--50--aqua {
+  background-image: linear-gradient(-90deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--50--yellow {
+  background-image: linear-gradient(-90deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--50--green {
+  background-image: linear-gradient(-90deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--50--lime {
+  background-image: linear-gradient(-90deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--50--sienna {
+  background-image: linear-gradient(-90deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--55 {
+  background-image: linear-gradient(-72deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--55--orange {
+  background-image: linear-gradient(-72deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--55--blue {
+  background-image: linear-gradient(-72deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--55--navy {
+  background-image: linear-gradient(-72deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--55--red {
+  background-image: linear-gradient(-72deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--55--mustard {
+  background-image: linear-gradient(-72deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--55--aqua {
+  background-image: linear-gradient(-72deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--55--yellow {
+  background-image: linear-gradient(-72deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--55--green {
+  background-image: linear-gradient(-72deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--55--lime {
+  background-image: linear-gradient(-72deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--55--sienna {
+  background-image: linear-gradient(-72deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--60 {
+  background-image: linear-gradient(-54deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--60--orange {
+  background-image: linear-gradient(-54deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--60--blue {
+  background-image: linear-gradient(-54deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--60--navy {
+  background-image: linear-gradient(-54deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--60--red {
+  background-image: linear-gradient(-54deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--60--mustard {
+  background-image: linear-gradient(-54deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--60--aqua {
+  background-image: linear-gradient(-54deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--60--yellow {
+  background-image: linear-gradient(-54deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--60--green {
+  background-image: linear-gradient(-54deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--60--lime {
+  background-image: linear-gradient(-54deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--60--sienna {
+  background-image: linear-gradient(-54deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--65 {
+  background-image: linear-gradient(-36deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--65--orange {
+  background-image: linear-gradient(-36deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--65--blue {
+  background-image: linear-gradient(-36deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--65--navy {
+  background-image: linear-gradient(-36deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--65--red {
+  background-image: linear-gradient(-36deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--65--mustard {
+  background-image: linear-gradient(-36deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--65--aqua {
+  background-image: linear-gradient(-36deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--65--yellow {
+  background-image: linear-gradient(-36deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--65--green {
+  background-image: linear-gradient(-36deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--65--lime {
+  background-image: linear-gradient(-36deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--65--sienna {
+  background-image: linear-gradient(-36deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--66 {
+  background-image: linear-gradient(-30deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--66--orange {
+  background-image: linear-gradient(-30deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--66--blue {
+  background-image: linear-gradient(-30deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--66--navy {
+  background-image: linear-gradient(-30deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--66--red {
+  background-image: linear-gradient(-30deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--66--mustard {
+  background-image: linear-gradient(-30deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--66--aqua {
+  background-image: linear-gradient(-30deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--66--yellow {
+  background-image: linear-gradient(-30deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--66--green {
+  background-image: linear-gradient(-30deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--66--lime {
+  background-image: linear-gradient(-30deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--66--sienna {
+  background-image: linear-gradient(-30deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--70 {
+  background-image: linear-gradient(-18deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--70--orange {
+  background-image: linear-gradient(-18deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--70--blue {
+  background-image: linear-gradient(-18deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--70--navy {
+  background-image: linear-gradient(-18deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--70--red {
+  background-image: linear-gradient(-18deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--70--mustard {
+  background-image: linear-gradient(-18deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--70--aqua {
+  background-image: linear-gradient(-18deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--70--yellow {
+  background-image: linear-gradient(-18deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--70--green {
+  background-image: linear-gradient(-18deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--70--lime {
+  background-image: linear-gradient(-18deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--70--sienna {
+  background-image: linear-gradient(-18deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--75 {
+  background-image: linear-gradient(0deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--75--orange {
+  background-image: linear-gradient(0deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--75--blue {
+  background-image: linear-gradient(0deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--75--navy {
+  background-image: linear-gradient(0deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--75--red {
+  background-image: linear-gradient(0deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--75--mustard {
+  background-image: linear-gradient(0deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--75--aqua {
+  background-image: linear-gradient(0deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--75--yellow {
+  background-image: linear-gradient(0deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--75--green {
+  background-image: linear-gradient(0deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--75--lime {
+  background-image: linear-gradient(0deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--75--sienna {
+  background-image: linear-gradient(0deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--80 {
+  background-image: linear-gradient(18deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--80--orange {
+  background-image: linear-gradient(18deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--80--blue {
+  background-image: linear-gradient(18deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--80--navy {
+  background-image: linear-gradient(18deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--80--red {
+  background-image: linear-gradient(18deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--80--mustard {
+  background-image: linear-gradient(18deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--80--aqua {
+  background-image: linear-gradient(18deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--80--yellow {
+  background-image: linear-gradient(18deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--80--green {
+  background-image: linear-gradient(18deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--80--lime {
+  background-image: linear-gradient(18deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--80--sienna {
+  background-image: linear-gradient(18deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--85 {
+  background-image: linear-gradient(36deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--85--orange {
+  background-image: linear-gradient(36deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--85--blue {
+  background-image: linear-gradient(36deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--85--navy {
+  background-image: linear-gradient(36deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--85--red {
+  background-image: linear-gradient(36deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--85--mustard {
+  background-image: linear-gradient(36deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--85--aqua {
+  background-image: linear-gradient(36deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--85--yellow {
+  background-image: linear-gradient(36deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--85--green {
+  background-image: linear-gradient(36deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--85--lime {
+  background-image: linear-gradient(36deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--85--sienna {
+  background-image: linear-gradient(36deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--90 {
+  background-image: linear-gradient(54deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--90--orange {
+  background-image: linear-gradient(54deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--90--blue {
+  background-image: linear-gradient(54deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--90--navy {
+  background-image: linear-gradient(54deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--90--red {
+  background-image: linear-gradient(54deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--90--mustard {
+  background-image: linear-gradient(54deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--90--aqua {
+  background-image: linear-gradient(54deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--90--yellow {
+  background-image: linear-gradient(54deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--90--green {
+  background-image: linear-gradient(54deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--90--lime {
+  background-image: linear-gradient(54deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--90--sienna {
+  background-image: linear-gradient(54deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--95 {
+  background-image: linear-gradient(72deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--95--orange {
+  background-image: linear-gradient(72deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--95--blue {
+  background-image: linear-gradient(72deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--95--navy {
+  background-image: linear-gradient(72deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--95--red {
+  background-image: linear-gradient(72deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--95--mustard {
+  background-image: linear-gradient(72deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--95--aqua {
+  background-image: linear-gradient(72deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--95--yellow {
+  background-image: linear-gradient(72deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--95--green {
+  background-image: linear-gradient(72deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--95--lime {
+  background-image: linear-gradient(72deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--95--sienna {
+  background-image: linear-gradient(72deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--100 {
+  background-image: linear-gradient(90deg, #000 50%, transparent 50%, transparent), linear-gradient(270deg, #000 50%, #ccc 50%, #ccc);
+}
+
+.donut--100--orange {
+  background-image: linear-gradient(90deg, #F15E22 50%, transparent 50%, transparent), linear-gradient(270deg, #F15E22 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--100--blue {
+  background-image: linear-gradient(90deg, #1E4497 50%, transparent 50%, transparent), linear-gradient(270deg, #1E4497 50%, #c1d1f3 50%, #c1d1f3);
+}
+
+.donut--100--navy {
+  background-image: linear-gradient(90deg, #26225E 50%, transparent 50%, transparent), linear-gradient(270deg, #26225E 50%, #a6a2dd 50%, #a6a2dd);
+}
+
+.donut--100--red {
+  background-image: linear-gradient(90deg, #d51217 50%, transparent 50%, transparent), linear-gradient(270deg, #d51217 50%, #fde9e9 50%, #fde9e9);
+}
+
+.donut--100--mustard {
+  background-image: linear-gradient(90deg, #FAAD1D 50%, transparent 50%, transparent), linear-gradient(270deg, #FAAD1D 50%, #ffffff 50%, #ffffff);
+}
+
+.donut--100--aqua {
+  background-image: linear-gradient(90deg, #048499 50%, transparent 50%, transparent), linear-gradient(270deg, #048499 50%, #9feffd 50%, #9feffd);
+}
+
+.donut--100--yellow {
+  background-image: linear-gradient(90deg, #FEDC00 50%, transparent 50%, transparent), linear-gradient(270deg, #FEDC00 50%, #fffffe 50%, #fffffe);
+}
+
+.donut--100--green {
+  background-image: linear-gradient(90deg, #018241 50%, transparent 50%, transparent), linear-gradient(270deg, #018241 50%, #84fec1 50%, #84fec1);
+}
+
+.donut--100--lime {
+  background-image: linear-gradient(90deg, #91AE3C 50%, transparent 50%, transparent), linear-gradient(270deg, #91AE3C 50%, #f7faef 50%, #f7faef);
+}
+
+.donut--100--sienna {
+  background-image: linear-gradient(90deg, #9E2420 50%, transparent 50%, transparent), linear-gradient(270deg, #9E2420 50%, #f4cac9 50%, #f4cac9);
+}
+
+.donut--xs {
+  height: 20px;
+  width: 20px;
+}
+
+.donut--xs > * {
+  width: 6px;
+  height: 6px;
+  margin-top: 6px;
+  margin-left: 6px;
+}
+
+.donut--sm {
+  height: 40px;
+  width: 40px;
+}
+
+.donut--sm > * {
+  width: 15px;
+  height: 15px;
+  margin-top: 12px;
+  margin-left: 12px;
+}
+
+.donut--lg {
+  height: 200px;
+  width: 200px;
+}
+
+.donut--lg > * {
+  width: 160px;
+  height: 160px;
+  line-height: 160px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.donut--xl {
+  height: 300px;
+  width: 300px;
+}
+
+.donut--xl > * {
+  width: 240px;
+  height: 240px;
+  line-height: 240px;
+  margin-top: 30px;
+  margin-left: 30px;
 }
 
 a {
@@ -3585,7 +4670,7 @@ a:hover {
 }
 
 .border-radius--xl {
-  border-radius: 16px;
+  border-radius: 15px;
   border-radius: 1rem;
 }
 
@@ -3736,33 +4821,37 @@ a:hover {
 }
 
 .border-width--xl {
-  border-width: 16px;
+  border-width: 15px;
   border-width: 1rem;
 }
 
 .border-top-width--xl {
-  border-top-width: 16px;
+  border-top-width: 15px;
   border-top-width: 1rem;
 }
 
 .border-right-width--xl {
-  border-right-width: 16px;
+  border-right-width: 15px;
   border-right-width: 1rem;
 }
 
 .border-bottom-width--xl {
-  border-bottom-width: 16px;
+  border-bottom-width: 15px;
   border-bottom-width: 1rem;
 }
 
 .border-left-width--xl {
-  border-left-width: 16px;
+  border-left-width: 15px;
   border-left-width: 1rem;
 }
 
 .button--orange {
   border-color: #fac7b2;
   background-color: #fac7b2;
+  color: #F15E22;
+}
+
+.button--orange:visited {
   color: #F15E22;
 }
 
@@ -3784,6 +4873,18 @@ a:hover {
 .page-campaigns .next {
   border-color: #6c91e2;
   background-color: #6c91e2;
+  color: #1E4497;
+}
+
+.button--blue:visited,
+.node-type-donation .form-submit:visited,
+.node-type-membership-page .form-submit:visited,
+.node-type-fundraising-campaign .form-submit:visited,
+.page-campaigns .form-submit:visited,
+.node-type-donation .next:visited,
+.node-type-membership-page .next:visited,
+.node-type-fundraising-campaign .next:visited,
+.page-campaigns .next:visited {
   color: #1E4497;
 }
 
@@ -3824,6 +4925,10 @@ a:hover {
   color: #26225E;
 }
 
+.button--navy:visited {
+  color: #26225E;
+}
+
 .button--navy:hover,
 .button--navy:active,
 .button--navy.active {
@@ -3834,6 +4939,10 @@ a:hover {
 .button--red {
   border-color: #f58b8e;
   background-color: #f58b8e;
+  color: #d51217;
+}
+
+.button--red:visited {
   color: #d51217;
 }
 
@@ -3850,6 +4959,10 @@ a:hover {
   color: #FAAD1D;
 }
 
+.button--mustard:visited {
+  color: #FAAD1D;
+}
+
 .button--mustard:hover,
 .button--mustard:active,
 .button--mustard.active {
@@ -3860,6 +4973,10 @@ a:hover {
 .button--aqua {
   border-color: #3cdffa;
   background-color: #3cdffa;
+  color: #048499;
+}
+
+.button--aqua:visited {
   color: #048499;
 }
 
@@ -3876,6 +4993,10 @@ a:hover {
   color: #FEDC00;
 }
 
+.button--yellow:visited {
+  color: #FEDC00;
+}
+
 .button--yellow:hover,
 .button--yellow:active,
 .button--yellow.active {
@@ -3886,6 +5007,10 @@ a:hover {
 .button--green {
   border-color: #1ffd8d;
   background-color: #1ffd8d;
+  color: #018241;
+}
+
+.button--green:visited {
   color: #018241;
 }
 
@@ -3902,6 +5027,10 @@ a:hover {
   color: #91AE3C;
 }
 
+.button--lime:visited {
+  color: #91AE3C;
+}
+
 .button--lime:hover,
 .button--lime:active,
 .button--lime.active {
@@ -3912,6 +5041,10 @@ a:hover {
 .button--sienna {
   border-color: #e37874;
   background-color: #e37874;
+  color: #9E2420;
+}
+
+.button--sienna:visited {
   color: #9E2420;
 }
 
@@ -3931,6 +5064,15 @@ a:hover {
   background-color: #fff;
   color: #333;
   border-color: #fff;
+}
+
+.button--white:visited,
+.header__nav--secondary .donate:visited,
+.node-type-donation .previous:visited,
+.node-type-membership-page .previous:visited,
+.node-type-fundraising-campaign .previous:visited,
+.page-campaigns .previous:visited {
+  color: #333;
 }
 
 .button--white:hover,
@@ -3961,6 +5103,10 @@ a:hover {
   color: #000;
 }
 
+.button--gray-1:visited {
+  color: #000;
+}
+
 .button--gray-1:hover,
 .button--gray-1:active,
 .button--gray-1.active {
@@ -3970,6 +5116,10 @@ a:hover {
 .button--gray-2 {
   background-color: #ccc;
   border-color: #ccc;
+  color: #000;
+}
+
+.button--gray-2:visited {
   color: #000;
 }
 
@@ -3985,6 +5135,10 @@ a:hover {
   color: #000;
 }
 
+.button--gray-3:visited {
+  color: #000;
+}
+
 .button--gray-3:hover,
 .button--gray-3:active,
 .button--gray-3.active {
@@ -3994,6 +5148,10 @@ a:hover {
 .button--gray-4 {
   background-color: #777;
   border-color: #777;
+  color: #000;
+}
+
+.button--gray-4:visited {
   color: #000;
 }
 
@@ -4008,6 +5166,10 @@ a:hover {
   color: #fff;
 }
 
+.button--gray-5:visited {
+  color: #fff;
+}
+
 .button--gray-5::before {
   background-color: #333;
 }
@@ -4015,6 +5177,10 @@ a:hover {
 .button--black {
   background-color: #333;
   border-color: #333;
+  color: #fff;
+}
+
+.button--black:visited {
   color: #fff;
 }
 
@@ -4660,27 +5826,27 @@ a:hover {
 }
 
 .height--xs {
-  height: 16px;
+  height: 15px;
   height: 1rem;
 }
 
 .height--sm {
-  height: 32px;
+  height: 30px;
   height: 1.999rem;
 }
 
 .height--md {
-  height: 64px;
+  height: 60px;
   height: 3.998rem;
 }
 
 .height--lg {
-  height: 256px;
+  height: 240px;
   height: 15.981rem;
 }
 
 .height--xl {
-  height: 1022px;
+  height: 958px;
   height: 63.884rem;
 }
 
@@ -4733,162 +5899,162 @@ a:hover {
 }
 
 .container--xs {
-  max-width: 16px;
+  max-width: 15px;
   max-width: 1rem;
 }
 
 .container--sm {
-  max-width: 32px;
+  max-width: 30px;
   max-width: 1.999rem;
 }
 
 .container--md {
-  max-width: 256px;
+  max-width: 240px;
   max-width: 15.981rem;
 }
 
 .container--lg,
 .container {
-  max-width: 1022px;
+  max-width: 958px;
   max-width: 63.884rem;
 }
 
 .container--xl {
-  max-width: 2044px;
+  max-width: 1916px;
   max-width: 127.73rem;
 }
 
 @media (min-width: 20em) {
   .xs--container--xs {
-    max-width: 16px;
+    max-width: 15px;
     max-width: 1rem;
   }
 
   .xs--container--sm {
-    max-width: 32px;
+    max-width: 30px;
     max-width: 1.999rem;
   }
 
   .xs--container--md {
-    max-width: 256px;
+    max-width: 240px;
     max-width: 15.981rem;
   }
 
   .xs--container--lg {
-    max-width: 1022px;
+    max-width: 958px;
     max-width: 63.884rem;
   }
 
   .xs--container--xl {
-    max-width: 2044px;
+    max-width: 1916px;
     max-width: 127.73rem;
   }
 }
 
 @media (min-width: 40em) {
   .sm--container--xs {
-    max-width: 16px;
+    max-width: 15px;
     max-width: 1rem;
   }
 
   .sm--container--sm {
-    max-width: 32px;
+    max-width: 30px;
     max-width: 1.999rem;
   }
 
   .sm--container--md {
-    max-width: 256px;
+    max-width: 240px;
     max-width: 15.981rem;
   }
 
   .sm--container--lg {
-    max-width: 1022px;
+    max-width: 958px;
     max-width: 63.884rem;
   }
 
   .sm--container--xl {
-    max-width: 2044px;
+    max-width: 1916px;
     max-width: 127.73rem;
   }
 }
 
 @media (min-width: 52em) {
   .md--container--xs {
-    max-width: 16px;
+    max-width: 15px;
     max-width: 1rem;
   }
 
   .md--container--sm {
-    max-width: 32px;
+    max-width: 30px;
     max-width: 1.999rem;
   }
 
   .md--container--md {
-    max-width: 256px;
+    max-width: 240px;
     max-width: 15.981rem;
   }
 
   .md--container--lg {
-    max-width: 1022px;
+    max-width: 958px;
     max-width: 63.884rem;
   }
 
   .md--container--xl {
-    max-width: 2044px;
+    max-width: 1916px;
     max-width: 127.73rem;
   }
 }
 
 @media (min-width: 64em) {
   .lg--container--xs {
-    max-width: 16px;
+    max-width: 15px;
     max-width: 1rem;
   }
 
   .lg--container--sm {
-    max-width: 32px;
+    max-width: 30px;
     max-width: 1.999rem;
   }
 
   .lg--container--md {
-    max-width: 256px;
+    max-width: 240px;
     max-width: 15.981rem;
   }
 
   .lg--container--lg {
-    max-width: 1022px;
+    max-width: 958px;
     max-width: 63.884rem;
   }
 
   .lg--container--xl {
-    max-width: 2044px;
+    max-width: 1916px;
     max-width: 127.73rem;
   }
 }
 
 @media (min-width: 75em) {
   .xl--container--xs {
-    max-width: 16px;
+    max-width: 15px;
     max-width: 1rem;
   }
 
   .xl--container--sm {
-    max-width: 32px;
+    max-width: 30px;
     max-width: 1.999rem;
   }
 
   .xl--container--md {
-    max-width: 256px;
+    max-width: 240px;
     max-width: 15.981rem;
   }
 
   .xl--container--lg {
-    max-width: 1022px;
+    max-width: 958px;
     max-width: 63.884rem;
   }
 
   .xl--container--xl {
-    max-width: 2044px;
+    max-width: 1916px;
     max-width: 127.73rem;
   }
 }
@@ -4904,27 +6070,27 @@ a:hover {
 }
 
 .line-height--xs {
-  line-height: 16px;
+  line-height: 15px;
   line-height: 1rem;
 }
 
 .line-height--sm {
-  line-height: 32px;
+  line-height: 30px;
   line-height: 1.999rem;
 }
 
 .line-height--md {
-  line-height: 64px;
+  line-height: 60px;
   line-height: 3.998rem;
 }
 
 .line-height--lg {
-  line-height: 256px;
+  line-height: 240px;
   line-height: 15.981rem;
 }
 
 .line-height--xl {
-  line-height: 1022px;
+  line-height: 958px;
   line-height: 63.884rem;
 }
 
@@ -5036,41 +6202,41 @@ a:hover {
 }
 
 .margin--xxs {
-  margin: 6px;
+  margin: 5px;
   margin: 0.354rem;
 }
 
 .margin-top--xxs {
-  margin-top: 6px;
+  margin-top: 5px;
   margin-top: 0.354rem;
 }
 
 .margin-right--xxs {
-  margin-right: 6px;
+  margin-right: 5px;
   margin-right: 0.354rem;
 }
 
 .margin-bottom--xxs {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   margin-bottom: 0.354rem;
 }
 
 .margin-left--xxs {
-  margin-left: 6px;
+  margin-left: 5px;
   margin-left: 0.354rem;
 }
 
 .margin-x--xxs {
-  margin-left: 6px;
+  margin-left: 5px;
   margin-left: 0.354rem;
-  margin-right: 6px;
+  margin-right: 5px;
   margin-right: 0.354rem;
 }
 
 .margin-y--xxs {
-  margin-top: 6px;
+  margin-top: 5px;
   margin-top: 0.354rem;
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   margin-bottom: 0.354rem;
 }
 
@@ -5157,197 +6323,197 @@ a:hover {
 }
 
 .margin--md {
-  margin: 16px;
+  margin: 15px;
   margin: 1rem;
 }
 
 .margin-top--md {
-  margin-top: 16px;
+  margin-top: 15px;
   margin-top: 1rem;
 }
 
 .margin-right--md {
-  margin-right: 16px;
+  margin-right: 15px;
   margin-right: 1rem;
 }
 
 .margin-bottom--md {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   margin-bottom: 1rem;
 }
 
 .margin-left--md {
-  margin-left: 16px;
+  margin-left: 15px;
   margin-left: 1rem;
 }
 
 .margin-x--md {
-  margin-left: 16px;
+  margin-left: 15px;
   margin-left: 1rem;
-  margin-right: 16px;
+  margin-right: 15px;
   margin-right: 1rem;
 }
 
 .margin-y--md {
-  margin-top: 16px;
+  margin-top: 15px;
   margin-top: 1rem;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   margin-bottom: 1rem;
 }
 
 .margin--lg {
-  margin: 23px;
+  margin: 21px;
   margin: 1.414rem;
 }
 
 .margin-top--lg {
-  margin-top: 23px;
+  margin-top: 21px;
   margin-top: 1.414rem;
 }
 
 .margin-right--lg {
-  margin-right: 23px;
+  margin-right: 21px;
   margin-right: 1.414rem;
 }
 
 .margin-bottom--lg {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   margin-bottom: 1.414rem;
 }
 
 .margin-left--lg {
-  margin-left: 23px;
+  margin-left: 21px;
   margin-left: 1.414rem;
 }
 
 .margin-x--lg {
-  margin-left: 23px;
+  margin-left: 21px;
   margin-left: 1.414rem;
-  margin-right: 23px;
+  margin-right: 21px;
   margin-right: 1.414rem;
 }
 
 .margin-y--lg {
-  margin-top: 23px;
+  margin-top: 21px;
   margin-top: 1.414rem;
-  margin-bottom: 23px;
+  margin-bottom: 21px;
   margin-bottom: 1.414rem;
 }
 
 .margin--xl {
-  margin: 32px;
+  margin: 30px;
   margin: 1.999rem;
 }
 
 .margin-top--xl {
-  margin-top: 32px;
+  margin-top: 30px;
   margin-top: 1.999rem;
 }
 
 .margin-right--xl {
-  margin-right: 32px;
+  margin-right: 30px;
   margin-right: 1.999rem;
 }
 
 .margin-bottom--xl {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   margin-bottom: 1.999rem;
 }
 
 .margin-left--xl {
-  margin-left: 32px;
+  margin-left: 30px;
   margin-left: 1.999rem;
 }
 
 .margin-x--xl {
-  margin-left: 32px;
+  margin-left: 30px;
   margin-left: 1.999rem;
-  margin-right: 32px;
+  margin-right: 30px;
   margin-right: 1.999rem;
 }
 
 .margin-y--xl {
-  margin-top: 32px;
+  margin-top: 30px;
   margin-top: 1.999rem;
-  margin-bottom: 32px;
+  margin-bottom: 30px;
   margin-bottom: 1.999rem;
 }
 
 .margin--xxl {
-  margin: 45px;
+  margin: 42px;
   margin: 2.827rem;
 }
 
 .margin-top--xxl {
-  margin-top: 45px;
+  margin-top: 42px;
   margin-top: 2.827rem;
 }
 
 .margin-right--xxl {
-  margin-right: 45px;
+  margin-right: 42px;
   margin-right: 2.827rem;
 }
 
 .margin-bottom--xxl {
-  margin-bottom: 45px;
+  margin-bottom: 42px;
   margin-bottom: 2.827rem;
 }
 
 .margin-left--xxl {
-  margin-left: 45px;
+  margin-left: 42px;
   margin-left: 2.827rem;
 }
 
 .margin-x--xxl {
-  margin-left: 45px;
+  margin-left: 42px;
   margin-left: 2.827rem;
-  margin-right: 45px;
+  margin-right: 42px;
   margin-right: 2.827rem;
 }
 
 .margin-y--xxl {
-  margin-top: 45px;
+  margin-top: 42px;
   margin-top: 2.827rem;
-  margin-bottom: 45px;
+  margin-bottom: 42px;
   margin-bottom: 2.827rem;
 }
 
 .margin--xxxl {
-  margin: 64px;
+  margin: 60px;
   margin: 3.998rem;
 }
 
 .margin-top--xxxl {
-  margin-top: 64px;
+  margin-top: 60px;
   margin-top: 3.998rem;
 }
 
 .margin-right--xxxl {
-  margin-right: 64px;
+  margin-right: 60px;
   margin-right: 3.998rem;
 }
 
 .margin-bottom--xxxl {
-  margin-bottom: 64px;
+  margin-bottom: 60px;
   margin-bottom: 3.998rem;
 }
 
 .margin-left--xxxl {
-  margin-left: 64px;
+  margin-left: 60px;
   margin-left: 3.998rem;
 }
 
 .margin-x--xxxl {
-  margin-left: 64px;
+  margin-left: 60px;
   margin-left: 3.998rem;
-  margin-right: 64px;
+  margin-right: 60px;
   margin-right: 3.998rem;
 }
 
 .margin-y--xxxl {
-  margin-top: 64px;
+  margin-top: 60px;
   margin-top: 3.998rem;
-  margin-bottom: 64px;
+  margin-bottom: 60px;
   margin-bottom: 3.998rem;
 }
 
@@ -5383,41 +6549,41 @@ a:hover {
   }
 
   .xs--margin--xxs {
-    margin: 6px;
+    margin: 5px;
     margin: 0.354rem;
   }
 
   .xs--margin-top--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
   }
 
   .xs--margin-right--xxs {
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .xs--margin-bottom--xxs {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
   .xs--margin-left--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
   }
 
   .xs--margin-x--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .xs--margin-y--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
@@ -5500,197 +6666,197 @@ a:hover {
   }
 
   .xs--margin--md {
-    margin: 16px;
+    margin: 15px;
     margin: 1rem;
   }
 
   .xs--margin-top--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
   }
 
   .xs--margin-right--md {
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .xs--margin-bottom--md {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .xs--margin-left--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
   }
 
   .xs--margin-x--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .xs--margin-y--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .xs--margin--lg {
-    margin: 23px;
+    margin: 21px;
     margin: 1.414rem;
   }
 
   .xs--margin-top--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
   }
 
   .xs--margin-right--lg {
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .xs--margin-bottom--lg {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .xs--margin-left--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
   }
 
   .xs--margin-x--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .xs--margin-y--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .xs--margin--xl {
-    margin: 32px;
+    margin: 30px;
     margin: 1.999rem;
   }
 
   .xs--margin-top--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
   }
 
   .xs--margin-right--xl {
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .xs--margin-bottom--xl {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .xs--margin-left--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
   }
 
   .xs--margin-x--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .xs--margin-y--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .xs--margin--xxl {
-    margin: 45px;
+    margin: 42px;
     margin: 2.827rem;
   }
 
   .xs--margin-top--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
   }
 
   .xs--margin-right--xxl {
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .xs--margin-bottom--xxl {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .xs--margin-left--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
   }
 
   .xs--margin-x--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .xs--margin-y--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .xs--margin--xxxl {
-    margin: 64px;
+    margin: 60px;
     margin: 3.998rem;
   }
 
   .xs--margin-top--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
   }
 
   .xs--margin-right--xxxl {
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .xs--margin-bottom--xxxl {
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 
   .xs--margin-left--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
   }
 
   .xs--margin-x--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .xs--margin-y--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 }
@@ -5727,41 +6893,41 @@ a:hover {
   }
 
   .sm--margin--xxs {
-    margin: 6px;
+    margin: 5px;
     margin: 0.354rem;
   }
 
   .sm--margin-top--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
   }
 
   .sm--margin-right--xxs {
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .sm--margin-bottom--xxs {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
   .sm--margin-left--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
   }
 
   .sm--margin-x--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .sm--margin-y--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
@@ -5844,197 +7010,197 @@ a:hover {
   }
 
   .sm--margin--md {
-    margin: 16px;
+    margin: 15px;
     margin: 1rem;
   }
 
   .sm--margin-top--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
   }
 
   .sm--margin-right--md {
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .sm--margin-bottom--md {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .sm--margin-left--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
   }
 
   .sm--margin-x--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .sm--margin-y--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .sm--margin--lg {
-    margin: 23px;
+    margin: 21px;
     margin: 1.414rem;
   }
 
   .sm--margin-top--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
   }
 
   .sm--margin-right--lg {
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .sm--margin-bottom--lg {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .sm--margin-left--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
   }
 
   .sm--margin-x--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .sm--margin-y--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .sm--margin--xl {
-    margin: 32px;
+    margin: 30px;
     margin: 1.999rem;
   }
 
   .sm--margin-top--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
   }
 
   .sm--margin-right--xl {
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .sm--margin-bottom--xl {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .sm--margin-left--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
   }
 
   .sm--margin-x--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .sm--margin-y--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .sm--margin--xxl {
-    margin: 45px;
+    margin: 42px;
     margin: 2.827rem;
   }
 
   .sm--margin-top--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
   }
 
   .sm--margin-right--xxl {
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .sm--margin-bottom--xxl {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .sm--margin-left--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
   }
 
   .sm--margin-x--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .sm--margin-y--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .sm--margin--xxxl {
-    margin: 64px;
+    margin: 60px;
     margin: 3.998rem;
   }
 
   .sm--margin-top--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
   }
 
   .sm--margin-right--xxxl {
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .sm--margin-bottom--xxxl {
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 
   .sm--margin-left--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
   }
 
   .sm--margin-x--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .sm--margin-y--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 }
@@ -6071,41 +7237,41 @@ a:hover {
   }
 
   .md--margin--xxs {
-    margin: 6px;
+    margin: 5px;
     margin: 0.354rem;
   }
 
   .md--margin-top--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
   }
 
   .md--margin-right--xxs {
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .md--margin-bottom--xxs {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
   .md--margin-left--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
   }
 
   .md--margin-x--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .md--margin-y--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
@@ -6188,197 +7354,197 @@ a:hover {
   }
 
   .md--margin--md {
-    margin: 16px;
+    margin: 15px;
     margin: 1rem;
   }
 
   .md--margin-top--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
   }
 
   .md--margin-right--md {
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .md--margin-bottom--md {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .md--margin-left--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
   }
 
   .md--margin-x--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .md--margin-y--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .md--margin--lg {
-    margin: 23px;
+    margin: 21px;
     margin: 1.414rem;
   }
 
   .md--margin-top--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
   }
 
   .md--margin-right--lg {
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .md--margin-bottom--lg {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .md--margin-left--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
   }
 
   .md--margin-x--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .md--margin-y--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .md--margin--xl {
-    margin: 32px;
+    margin: 30px;
     margin: 1.999rem;
   }
 
   .md--margin-top--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
   }
 
   .md--margin-right--xl {
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .md--margin-bottom--xl {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .md--margin-left--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
   }
 
   .md--margin-x--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .md--margin-y--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .md--margin--xxl {
-    margin: 45px;
+    margin: 42px;
     margin: 2.827rem;
   }
 
   .md--margin-top--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
   }
 
   .md--margin-right--xxl {
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .md--margin-bottom--xxl {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .md--margin-left--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
   }
 
   .md--margin-x--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .md--margin-y--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .md--margin--xxxl {
-    margin: 64px;
+    margin: 60px;
     margin: 3.998rem;
   }
 
   .md--margin-top--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
   }
 
   .md--margin-right--xxxl {
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .md--margin-bottom--xxxl {
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 
   .md--margin-left--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
   }
 
   .md--margin-x--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .md--margin-y--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 }
@@ -6415,41 +7581,41 @@ a:hover {
   }
 
   .lg--margin--xxs {
-    margin: 6px;
+    margin: 5px;
     margin: 0.354rem;
   }
 
   .lg--margin-top--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
   }
 
   .lg--margin-right--xxs {
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .lg--margin-bottom--xxs {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
   .lg--margin-left--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
   }
 
   .lg--margin-x--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .lg--margin-y--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
@@ -6532,197 +7698,197 @@ a:hover {
   }
 
   .lg--margin--md {
-    margin: 16px;
+    margin: 15px;
     margin: 1rem;
   }
 
   .lg--margin-top--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
   }
 
   .lg--margin-right--md {
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .lg--margin-bottom--md {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .lg--margin-left--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
   }
 
   .lg--margin-x--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .lg--margin-y--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .lg--margin--lg {
-    margin: 23px;
+    margin: 21px;
     margin: 1.414rem;
   }
 
   .lg--margin-top--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
   }
 
   .lg--margin-right--lg {
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .lg--margin-bottom--lg {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .lg--margin-left--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
   }
 
   .lg--margin-x--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .lg--margin-y--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .lg--margin--xl {
-    margin: 32px;
+    margin: 30px;
     margin: 1.999rem;
   }
 
   .lg--margin-top--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
   }
 
   .lg--margin-right--xl {
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .lg--margin-bottom--xl {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .lg--margin-left--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
   }
 
   .lg--margin-x--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .lg--margin-y--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .lg--margin--xxl {
-    margin: 45px;
+    margin: 42px;
     margin: 2.827rem;
   }
 
   .lg--margin-top--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
   }
 
   .lg--margin-right--xxl {
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .lg--margin-bottom--xxl {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .lg--margin-left--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
   }
 
   .lg--margin-x--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .lg--margin-y--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .lg--margin--xxxl {
-    margin: 64px;
+    margin: 60px;
     margin: 3.998rem;
   }
 
   .lg--margin-top--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
   }
 
   .lg--margin-right--xxxl {
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .lg--margin-bottom--xxxl {
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 
   .lg--margin-left--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
   }
 
   .lg--margin-x--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .lg--margin-y--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 }
@@ -6759,41 +7925,41 @@ a:hover {
   }
 
   .xl--margin--xxs {
-    margin: 6px;
+    margin: 5px;
     margin: 0.354rem;
   }
 
   .xl--margin-top--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
   }
 
   .xl--margin-right--xxs {
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .xl--margin-bottom--xxs {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
   .xl--margin-left--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
   }
 
   .xl--margin-x--xxs {
-    margin-left: 6px;
+    margin-left: 5px;
     margin-left: 0.354rem;
-    margin-right: 6px;
+    margin-right: 5px;
     margin-right: 0.354rem;
   }
 
   .xl--margin-y--xxs {
-    margin-top: 6px;
+    margin-top: 5px;
     margin-top: 0.354rem;
-    margin-bottom: 6px;
+    margin-bottom: 5px;
     margin-bottom: 0.354rem;
   }
 
@@ -6876,197 +8042,197 @@ a:hover {
   }
 
   .xl--margin--md {
-    margin: 16px;
+    margin: 15px;
     margin: 1rem;
   }
 
   .xl--margin-top--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
   }
 
   .xl--margin-right--md {
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .xl--margin-bottom--md {
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .xl--margin-left--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
   }
 
   .xl--margin-x--md {
-    margin-left: 16px;
+    margin-left: 15px;
     margin-left: 1rem;
-    margin-right: 16px;
+    margin-right: 15px;
     margin-right: 1rem;
   }
 
   .xl--margin-y--md {
-    margin-top: 16px;
+    margin-top: 15px;
     margin-top: 1rem;
-    margin-bottom: 16px;
+    margin-bottom: 15px;
     margin-bottom: 1rem;
   }
 
   .xl--margin--lg {
-    margin: 23px;
+    margin: 21px;
     margin: 1.414rem;
   }
 
   .xl--margin-top--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
   }
 
   .xl--margin-right--lg {
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .xl--margin-bottom--lg {
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .xl--margin-left--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
   }
 
   .xl--margin-x--lg {
-    margin-left: 23px;
+    margin-left: 21px;
     margin-left: 1.414rem;
-    margin-right: 23px;
+    margin-right: 21px;
     margin-right: 1.414rem;
   }
 
   .xl--margin-y--lg {
-    margin-top: 23px;
+    margin-top: 21px;
     margin-top: 1.414rem;
-    margin-bottom: 23px;
+    margin-bottom: 21px;
     margin-bottom: 1.414rem;
   }
 
   .xl--margin--xl {
-    margin: 32px;
+    margin: 30px;
     margin: 1.999rem;
   }
 
   .xl--margin-top--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
   }
 
   .xl--margin-right--xl {
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .xl--margin-bottom--xl {
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .xl--margin-left--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
   }
 
   .xl--margin-x--xl {
-    margin-left: 32px;
+    margin-left: 30px;
     margin-left: 1.999rem;
-    margin-right: 32px;
+    margin-right: 30px;
     margin-right: 1.999rem;
   }
 
   .xl--margin-y--xl {
-    margin-top: 32px;
+    margin-top: 30px;
     margin-top: 1.999rem;
-    margin-bottom: 32px;
+    margin-bottom: 30px;
     margin-bottom: 1.999rem;
   }
 
   .xl--margin--xxl {
-    margin: 45px;
+    margin: 42px;
     margin: 2.827rem;
   }
 
   .xl--margin-top--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
   }
 
   .xl--margin-right--xxl {
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .xl--margin-bottom--xxl {
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .xl--margin-left--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
   }
 
   .xl--margin-x--xxl {
-    margin-left: 45px;
+    margin-left: 42px;
     margin-left: 2.827rem;
-    margin-right: 45px;
+    margin-right: 42px;
     margin-right: 2.827rem;
   }
 
   .xl--margin-y--xxl {
-    margin-top: 45px;
+    margin-top: 42px;
     margin-top: 2.827rem;
-    margin-bottom: 45px;
+    margin-bottom: 42px;
     margin-bottom: 2.827rem;
   }
 
   .xl--margin--xxxl {
-    margin: 64px;
+    margin: 60px;
     margin: 3.998rem;
   }
 
   .xl--margin-top--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
   }
 
   .xl--margin-right--xxxl {
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .xl--margin-bottom--xxxl {
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 
   .xl--margin-left--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
   }
 
   .xl--margin-x--xxxl {
-    margin-left: 64px;
+    margin-left: 60px;
     margin-left: 3.998rem;
-    margin-right: 64px;
+    margin-right: 60px;
     margin-right: 3.998rem;
   }
 
   .xl--margin-y--xxxl {
-    margin-top: 64px;
+    margin-top: 60px;
     margin-top: 3.998rem;
-    margin-bottom: 64px;
+    margin-bottom: 60px;
     margin-bottom: 3.998rem;
   }
 }
@@ -7123,41 +8289,41 @@ a:hover {
 }
 
 .padding--xxs {
-  padding: 6px;
+  padding: 5px;
   padding: 0.354rem;
 }
 
 .padding-top--xxs {
-  padding-top: 6px;
+  padding-top: 5px;
   padding-top: 0.354rem;
 }
 
 .padding-right--xxs {
-  padding-right: 6px;
+  padding-right: 5px;
   padding-right: 0.354rem;
 }
 
 .padding-bottom--xxs {
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   padding-bottom: 0.354rem;
 }
 
 .padding-left--xxs {
-  padding-left: 6px;
+  padding-left: 5px;
   padding-left: 0.354rem;
 }
 
 .padding-x--xxs {
-  padding-left: 6px;
+  padding-left: 5px;
   padding-left: 0.354rem;
-  padding-right: 6px;
+  padding-right: 5px;
   padding-right: 0.354rem;
 }
 
 .padding-y--xxs {
-  padding-top: 6px;
+  padding-top: 5px;
   padding-top: 0.354rem;
-  padding-bottom: 6px;
+  padding-bottom: 5px;
   padding-bottom: 0.354rem;
 }
 
@@ -7277,34 +8443,34 @@ a:hover {
 .node-type-fundraising-campaign #edit-field-member-category-und label,
 .page-campaigns #edit-donation-select label,
 .page-campaigns #edit-field-member-category-und label {
-  padding: 16px;
+  padding: 15px;
   padding: 1rem;
 }
 
 .padding-top--md {
-  padding-top: 16px;
+  padding-top: 15px;
   padding-top: 1rem;
 }
 
 .padding-right--md {
-  padding-right: 16px;
+  padding-right: 15px;
   padding-right: 1rem;
 }
 
 .padding-bottom--md {
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   padding-bottom: 1rem;
 }
 
 .padding-left--md {
-  padding-left: 16px;
+  padding-left: 15px;
   padding-left: 1rem;
 }
 
 .padding-x--md {
-  padding-left: 16px;
+  padding-left: 15px;
   padding-left: 1rem;
-  padding-right: 16px;
+  padding-right: 15px;
   padding-right: 1rem;
 }
 
@@ -7321,9 +8487,9 @@ a:hover {
 .node-type-membership-page .steps,
 .node-type-fundraising-campaign .steps,
 .page-campaigns .steps {
-  padding-top: 16px;
+  padding-top: 15px;
   padding-top: 1rem;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   padding-bottom: 1rem;
 }
 
@@ -7336,17 +8502,17 @@ a:hover {
 .node-type-membership-page .form-submit,
 .node-type-fundraising-campaign .form-submit,
 .page-campaigns .form-submit {
-  padding: 23px;
+  padding: 21px;
   padding: 1.414rem;
 }
 
 .padding-top--lg {
-  padding-top: 23px;
+  padding-top: 21px;
   padding-top: 1.414rem;
 }
 
 .padding-right--lg {
-  padding-right: 23px;
+  padding-right: 21px;
   padding-right: 1.414rem;
 }
 
@@ -7355,12 +8521,12 @@ a:hover {
 .node-type-membership-page legend,
 .node-type-fundraising-campaign legend,
 .page-campaigns legend {
-  padding-bottom: 23px;
+  padding-bottom: 21px;
   padding-bottom: 1.414rem;
 }
 
 .padding-left--lg {
-  padding-left: 23px;
+  padding-left: 21px;
   padding-left: 1.414rem;
 }
 
@@ -7369,31 +8535,31 @@ a:hover {
 .node-type-membership-page .previous-next,
 .node-type-fundraising-campaign .previous-next,
 .page-campaigns .previous-next {
-  padding-left: 23px;
+  padding-left: 21px;
   padding-left: 1.414rem;
-  padding-right: 23px;
+  padding-right: 21px;
   padding-right: 1.414rem;
 }
 
 .padding-y--lg {
-  padding-top: 23px;
+  padding-top: 21px;
   padding-top: 1.414rem;
-  padding-bottom: 23px;
+  padding-bottom: 21px;
   padding-bottom: 1.414rem;
 }
 
 .padding--xl {
-  padding: 32px;
+  padding: 30px;
   padding: 1.999rem;
 }
 
 .padding-top--xl {
-  padding-top: 32px;
+  padding-top: 30px;
   padding-top: 1.999rem;
 }
 
 .padding-right--xl {
-  padding-right: 32px;
+  padding-right: 30px;
   padding-right: 1.999rem;
 }
 
@@ -7402,80 +8568,80 @@ a:hover {
 .node-type-membership-page .donation-step__inner,
 .node-type-fundraising-campaign .donation-step__inner,
 .page-campaigns .donation-step__inner {
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   padding-bottom: 1.999rem;
 }
 
 .padding-left--xl {
-  padding-left: 32px;
+  padding-left: 30px;
   padding-left: 1.999rem;
 }
 
 .padding-x--xl {
-  padding-left: 32px;
+  padding-left: 30px;
   padding-left: 1.999rem;
-  padding-right: 32px;
+  padding-right: 30px;
   padding-right: 1.999rem;
 }
 
 .padding-y--xl {
-  padding-top: 32px;
+  padding-top: 30px;
   padding-top: 1.999rem;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
   padding-bottom: 1.999rem;
 }
 
 .padding--xxl {
-  padding: 45px;
+  padding: 42px;
   padding: 2.827rem;
 }
 
 .padding-top--xxl {
-  padding-top: 45px;
+  padding-top: 42px;
   padding-top: 2.827rem;
 }
 
 .padding-right--xxl {
-  padding-right: 45px;
+  padding-right: 42px;
   padding-right: 2.827rem;
 }
 
 .padding-bottom--xxl {
-  padding-bottom: 45px;
+  padding-bottom: 42px;
   padding-bottom: 2.827rem;
 }
 
 .padding-left--xxl {
-  padding-left: 45px;
+  padding-left: 42px;
   padding-left: 2.827rem;
 }
 
 .padding-x--xxl {
-  padding-left: 45px;
+  padding-left: 42px;
   padding-left: 2.827rem;
-  padding-right: 45px;
+  padding-right: 42px;
   padding-right: 2.827rem;
 }
 
 .padding-y--xxl {
-  padding-top: 45px;
+  padding-top: 42px;
   padding-top: 2.827rem;
-  padding-bottom: 45px;
+  padding-bottom: 42px;
   padding-bottom: 2.827rem;
 }
 
 .padding--xxxl {
-  padding: 64px;
+  padding: 60px;
   padding: 3.998rem;
 }
 
 .padding-top--xxxl {
-  padding-top: 64px;
+  padding-top: 60px;
   padding-top: 3.998rem;
 }
 
 .padding-right--xxxl {
-  padding-right: 64px;
+  padding-right: 60px;
   padding-right: 3.998rem;
 }
 
@@ -7484,19 +8650,19 @@ a:hover {
 .node-type-membership-page .main,
 .node-type-fundraising-campaign .main,
 .page-campaigns .main {
-  padding-bottom: 64px;
+  padding-bottom: 60px;
   padding-bottom: 3.998rem;
 }
 
 .padding-left--xxxl {
-  padding-left: 64px;
+  padding-left: 60px;
   padding-left: 3.998rem;
 }
 
 .padding-x--xxxl {
-  padding-left: 64px;
+  padding-left: 60px;
   padding-left: 3.998rem;
-  padding-right: 64px;
+  padding-right: 60px;
   padding-right: 3.998rem;
 }
 
@@ -7505,9 +8671,9 @@ a:hover {
 .node-type-membership-page .form-actions,
 .node-type-fundraising-campaign .form-actions,
 .page-campaigns .form-actions {
-  padding-top: 64px;
+  padding-top: 60px;
   padding-top: 3.998rem;
-  padding-bottom: 64px;
+  padding-bottom: 60px;
   padding-bottom: 3.998rem;
 }
 
@@ -7543,41 +8709,41 @@ a:hover {
   }
 
   .xs--padding--xxs {
-    padding: 6px;
+    padding: 5px;
     padding: 0.354rem;
   }
 
   .xs--padding-top--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
   }
 
   .xs--padding-right--xxs {
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .xs--padding-bottom--xxs {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
   .xs--padding-left--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
   }
 
   .xs--padding-x--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .xs--padding-y--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
@@ -7660,197 +8826,197 @@ a:hover {
   }
 
   .xs--padding--md {
-    padding: 16px;
+    padding: 15px;
     padding: 1rem;
   }
 
   .xs--padding-top--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
   }
 
   .xs--padding-right--md {
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .xs--padding-bottom--md {
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .xs--padding-left--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
   }
 
   .xs--padding-x--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .xs--padding-y--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .xs--padding--lg {
-    padding: 23px;
+    padding: 21px;
     padding: 1.414rem;
   }
 
   .xs--padding-top--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
   }
 
   .xs--padding-right--lg {
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .xs--padding-bottom--lg {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .xs--padding-left--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
   }
 
   .xs--padding-x--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .xs--padding-y--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .xs--padding--xl {
-    padding: 32px;
+    padding: 30px;
     padding: 1.999rem;
   }
 
   .xs--padding-top--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
   }
 
   .xs--padding-right--xl {
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .xs--padding-bottom--xl {
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .xs--padding-left--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
   }
 
   .xs--padding-x--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .xs--padding-y--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .xs--padding--xxl {
-    padding: 45px;
+    padding: 42px;
     padding: 2.827rem;
   }
 
   .xs--padding-top--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
   }
 
   .xs--padding-right--xxl {
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .xs--padding-bottom--xxl {
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .xs--padding-left--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
   }
 
   .xs--padding-x--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .xs--padding-y--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .xs--padding--xxxl {
-    padding: 64px;
+    padding: 60px;
     padding: 3.998rem;
   }
 
   .xs--padding-top--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
   }
 
   .xs--padding-right--xxxl {
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .xs--padding-bottom--xxxl {
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 
   .xs--padding-left--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
   }
 
   .xs--padding-x--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .xs--padding-y--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 }
@@ -7887,41 +9053,41 @@ a:hover {
   }
 
   .sm--padding--xxs {
-    padding: 6px;
+    padding: 5px;
     padding: 0.354rem;
   }
 
   .sm--padding-top--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
   }
 
   .sm--padding-right--xxs {
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .sm--padding-bottom--xxs {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
   .sm--padding-left--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
   }
 
   .sm--padding-x--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .sm--padding-y--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
@@ -8004,34 +9170,34 @@ a:hover {
   }
 
   .sm--padding--md {
-    padding: 16px;
+    padding: 15px;
     padding: 1rem;
   }
 
   .sm--padding-top--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
   }
 
   .sm--padding-right--md {
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .sm--padding-bottom--md {
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .sm--padding-left--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
   }
 
   .sm--padding-x--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
@@ -8040,165 +9206,165 @@ a:hover {
   .node-type-membership-page header .container,
   .node-type-fundraising-campaign header .container,
   .page-campaigns header .container {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .sm--padding--lg {
-    padding: 23px;
+    padding: 21px;
     padding: 1.414rem;
   }
 
   .sm--padding-top--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
   }
 
   .sm--padding-right--lg {
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .sm--padding-bottom--lg {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .sm--padding-left--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
   }
 
   .sm--padding-x--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .sm--padding-y--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .sm--padding--xl {
-    padding: 32px;
+    padding: 30px;
     padding: 1.999rem;
   }
 
   .sm--padding-top--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
   }
 
   .sm--padding-right--xl {
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .sm--padding-bottom--xl {
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .sm--padding-left--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
   }
 
   .sm--padding-x--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .sm--padding-y--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .sm--padding--xxl {
-    padding: 45px;
+    padding: 42px;
     padding: 2.827rem;
   }
 
   .sm--padding-top--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
   }
 
   .sm--padding-right--xxl {
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .sm--padding-bottom--xxl {
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .sm--padding-left--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
   }
 
   .sm--padding-x--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .sm--padding-y--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .sm--padding--xxxl {
-    padding: 64px;
+    padding: 60px;
     padding: 3.998rem;
   }
 
   .sm--padding-top--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
   }
 
   .sm--padding-right--xxxl {
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .sm--padding-bottom--xxxl {
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 
   .sm--padding-left--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
   }
 
   .sm--padding-x--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .sm--padding-y--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 }
@@ -8235,41 +9401,41 @@ a:hover {
   }
 
   .md--padding--xxs {
-    padding: 6px;
+    padding: 5px;
     padding: 0.354rem;
   }
 
   .md--padding-top--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
   }
 
   .md--padding-right--xxs {
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .md--padding-bottom--xxs {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
   .md--padding-left--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
   }
 
   .md--padding-x--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .md--padding-y--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
@@ -8352,197 +9518,197 @@ a:hover {
   }
 
   .md--padding--md {
-    padding: 16px;
+    padding: 15px;
     padding: 1rem;
   }
 
   .md--padding-top--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
   }
 
   .md--padding-right--md {
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .md--padding-bottom--md {
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .md--padding-left--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
   }
 
   .md--padding-x--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .md--padding-y--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .md--padding--lg {
-    padding: 23px;
+    padding: 21px;
     padding: 1.414rem;
   }
 
   .md--padding-top--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
   }
 
   .md--padding-right--lg {
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .md--padding-bottom--lg {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .md--padding-left--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
   }
 
   .md--padding-x--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .md--padding-y--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .md--padding--xl {
-    padding: 32px;
+    padding: 30px;
     padding: 1.999rem;
   }
 
   .md--padding-top--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
   }
 
   .md--padding-right--xl {
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .md--padding-bottom--xl {
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .md--padding-left--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
   }
 
   .md--padding-x--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .md--padding-y--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .md--padding--xxl {
-    padding: 45px;
+    padding: 42px;
     padding: 2.827rem;
   }
 
   .md--padding-top--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
   }
 
   .md--padding-right--xxl {
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .md--padding-bottom--xxl {
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .md--padding-left--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
   }
 
   .md--padding-x--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .md--padding-y--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .md--padding--xxxl {
-    padding: 64px;
+    padding: 60px;
     padding: 3.998rem;
   }
 
   .md--padding-top--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
   }
 
   .md--padding-right--xxxl {
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .md--padding-bottom--xxxl {
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 
   .md--padding-left--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
   }
 
   .md--padding-x--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .md--padding-y--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 }
@@ -8579,41 +9745,41 @@ a:hover {
   }
 
   .lg--padding--xxs {
-    padding: 6px;
+    padding: 5px;
     padding: 0.354rem;
   }
 
   .lg--padding-top--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
   }
 
   .lg--padding-right--xxs {
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .lg--padding-bottom--xxs {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
   .lg--padding-left--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
   }
 
   .lg--padding-x--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .lg--padding-y--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
@@ -8696,197 +9862,197 @@ a:hover {
   }
 
   .lg--padding--md {
-    padding: 16px;
+    padding: 15px;
     padding: 1rem;
   }
 
   .lg--padding-top--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
   }
 
   .lg--padding-right--md {
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .lg--padding-bottom--md {
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .lg--padding-left--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
   }
 
   .lg--padding-x--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .lg--padding-y--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .lg--padding--lg {
-    padding: 23px;
+    padding: 21px;
     padding: 1.414rem;
   }
 
   .lg--padding-top--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
   }
 
   .lg--padding-right--lg {
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .lg--padding-bottom--lg {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .lg--padding-left--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
   }
 
   .lg--padding-x--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .lg--padding-y--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .lg--padding--xl {
-    padding: 32px;
+    padding: 30px;
     padding: 1.999rem;
   }
 
   .lg--padding-top--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
   }
 
   .lg--padding-right--xl {
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .lg--padding-bottom--xl {
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .lg--padding-left--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
   }
 
   .lg--padding-x--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .lg--padding-y--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .lg--padding--xxl {
-    padding: 45px;
+    padding: 42px;
     padding: 2.827rem;
   }
 
   .lg--padding-top--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
   }
 
   .lg--padding-right--xxl {
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .lg--padding-bottom--xxl {
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .lg--padding-left--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
   }
 
   .lg--padding-x--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .lg--padding-y--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .lg--padding--xxxl {
-    padding: 64px;
+    padding: 60px;
     padding: 3.998rem;
   }
 
   .lg--padding-top--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
   }
 
   .lg--padding-right--xxxl {
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .lg--padding-bottom--xxxl {
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 
   .lg--padding-left--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
   }
 
   .lg--padding-x--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .lg--padding-y--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 }
@@ -8923,41 +10089,41 @@ a:hover {
   }
 
   .xl--padding--xxs {
-    padding: 6px;
+    padding: 5px;
     padding: 0.354rem;
   }
 
   .xl--padding-top--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
   }
 
   .xl--padding-right--xxs {
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .xl--padding-bottom--xxs {
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
   .xl--padding-left--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
   }
 
   .xl--padding-x--xxs {
-    padding-left: 6px;
+    padding-left: 5px;
     padding-left: 0.354rem;
-    padding-right: 6px;
+    padding-right: 5px;
     padding-right: 0.354rem;
   }
 
   .xl--padding-y--xxs {
-    padding-top: 6px;
+    padding-top: 5px;
     padding-top: 0.354rem;
-    padding-bottom: 6px;
+    padding-bottom: 5px;
     padding-bottom: 0.354rem;
   }
 
@@ -9040,197 +10206,197 @@ a:hover {
   }
 
   .xl--padding--md {
-    padding: 16px;
+    padding: 15px;
     padding: 1rem;
   }
 
   .xl--padding-top--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
   }
 
   .xl--padding-right--md {
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .xl--padding-bottom--md {
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .xl--padding-left--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
   }
 
   .xl--padding-x--md {
-    padding-left: 16px;
+    padding-left: 15px;
     padding-left: 1rem;
-    padding-right: 16px;
+    padding-right: 15px;
     padding-right: 1rem;
   }
 
   .xl--padding-y--md {
-    padding-top: 16px;
+    padding-top: 15px;
     padding-top: 1rem;
-    padding-bottom: 16px;
+    padding-bottom: 15px;
     padding-bottom: 1rem;
   }
 
   .xl--padding--lg {
-    padding: 23px;
+    padding: 21px;
     padding: 1.414rem;
   }
 
   .xl--padding-top--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
   }
 
   .xl--padding-right--lg {
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .xl--padding-bottom--lg {
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .xl--padding-left--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
   }
 
   .xl--padding-x--lg {
-    padding-left: 23px;
+    padding-left: 21px;
     padding-left: 1.414rem;
-    padding-right: 23px;
+    padding-right: 21px;
     padding-right: 1.414rem;
   }
 
   .xl--padding-y--lg {
-    padding-top: 23px;
+    padding-top: 21px;
     padding-top: 1.414rem;
-    padding-bottom: 23px;
+    padding-bottom: 21px;
     padding-bottom: 1.414rem;
   }
 
   .xl--padding--xl {
-    padding: 32px;
+    padding: 30px;
     padding: 1.999rem;
   }
 
   .xl--padding-top--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
   }
 
   .xl--padding-right--xl {
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .xl--padding-bottom--xl {
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .xl--padding-left--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
   }
 
   .xl--padding-x--xl {
-    padding-left: 32px;
+    padding-left: 30px;
     padding-left: 1.999rem;
-    padding-right: 32px;
+    padding-right: 30px;
     padding-right: 1.999rem;
   }
 
   .xl--padding-y--xl {
-    padding-top: 32px;
+    padding-top: 30px;
     padding-top: 1.999rem;
-    padding-bottom: 32px;
+    padding-bottom: 30px;
     padding-bottom: 1.999rem;
   }
 
   .xl--padding--xxl {
-    padding: 45px;
+    padding: 42px;
     padding: 2.827rem;
   }
 
   .xl--padding-top--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
   }
 
   .xl--padding-right--xxl {
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .xl--padding-bottom--xxl {
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .xl--padding-left--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
   }
 
   .xl--padding-x--xxl {
-    padding-left: 45px;
+    padding-left: 42px;
     padding-left: 2.827rem;
-    padding-right: 45px;
+    padding-right: 42px;
     padding-right: 2.827rem;
   }
 
   .xl--padding-y--xxl {
-    padding-top: 45px;
+    padding-top: 42px;
     padding-top: 2.827rem;
-    padding-bottom: 45px;
+    padding-bottom: 42px;
     padding-bottom: 2.827rem;
   }
 
   .xl--padding--xxxl {
-    padding: 64px;
+    padding: 60px;
     padding: 3.998rem;
   }
 
   .xl--padding-top--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
   }
 
   .xl--padding-right--xxxl {
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .xl--padding-bottom--xxxl {
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 
   .xl--padding-left--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
   }
 
   .xl--padding-x--xxxl {
-    padding-left: 64px;
+    padding-left: 60px;
     padding-left: 3.998rem;
-    padding-right: 64px;
+    padding-right: 60px;
     padding-right: 3.998rem;
   }
 
   .xl--padding-y--xxxl {
-    padding-top: 64px;
+    padding-top: 60px;
     padding-top: 3.998rem;
-    padding-bottom: 64px;
+    padding-bottom: 60px;
     padding-bottom: 3.998rem;
   }
 }
@@ -10361,13 +11527,13 @@ body {
 
 h1,
 .h1 {
-  font-size: 45px;
+  font-size: 42px;
   font-size: 2.827rem;
 }
 
 h2,
 .h2 {
-  font-size: 32px;
+  font-size: 30px;
   font-size: 1.999rem;
 }
 
@@ -10377,13 +11543,13 @@ h3,
 .node-type-membership-page legend,
 .node-type-fundraising-campaign legend,
 .page-campaigns legend {
-  font-size: 23px;
+  font-size: 21px;
   font-size: 1.414rem;
 }
 
 h4,
 .h4 {
-  font-size: 16px;
+  font-size: 15px;
   font-size: 1rem;
 }
 
@@ -10430,12 +11596,12 @@ h6 .h1,
 }
 
 .font-size--md {
-  font-size: 16px;
+  font-size: 15px;
   font-size: 1rem;
 }
 
 .font-size--lg {
-  font-size: 23px;
+  font-size: 21px;
   font-size: 1.414rem;
 }
 
@@ -10444,17 +11610,17 @@ h6 .h1,
 .node-type-membership-page h1,
 .node-type-fundraising-campaign h1,
 .page-campaigns h1 {
-  font-size: 32px;
+  font-size: 30px;
   font-size: 1.999rem;
 }
 
 .font-size--xxl {
-  font-size: 45px;
+  font-size: 42px;
   font-size: 2.827rem;
 }
 
 .font-size--xxxl {
-  font-size: 64px;
+  font-size: 60px;
   font-size: 3.998rem;
 }
 
@@ -10678,27 +11844,27 @@ h6 .h1,
 }
 
 .width--xs {
-  width: 16px;
+  width: 15px;
   width: 1rem;
 }
 
 .width--sm {
-  width: 32px;
+  width: 30px;
   width: 1.999rem;
 }
 
 .width--md {
-  width: 64px;
+  width: 60px;
   width: 3.998rem;
 }
 
 .width--lg {
-  width: 256px;
+  width: 240px;
   width: 15.981rem;
 }
 
 .width--xl {
-  width: 1022px;
+  width: 958px;
   width: 63.884rem;
 }
 
@@ -11911,7 +13077,7 @@ html.js .js-hide {
   left: .5rem;
   color: #000;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 21px;
   font-size: 1.414rem;
 }
 
@@ -11989,11 +13155,11 @@ html.js .js-hide {
 .page-campaigns .form-type-textfield.form-item-donation input {
   text-align: center;
   font-weight: bold;
-  padding: 0 32px;
+  padding: 0 30px;
   padding: 0 1.999rem;
-  height: 64px;
+  height: 60px;
   height: 3.998rem;
-  font-size: 32px;
+  font-size: 30px;
   font-size: 1.999rem;
 }
 
@@ -12050,11 +13216,11 @@ html.js .js-hide {
 .node-type-membership-page .step,
 .node-type-fundraising-campaign .step,
 .page-campaigns .step {
-  height: 32px;
+  height: 30px;
   height: 1.999rem;
-  width: 32px;
+  width: 30px;
   width: 1.999rem;
-  line-height: 32px;
+  line-height: 30px;
   line-height: 1.999rem;
 }
 
