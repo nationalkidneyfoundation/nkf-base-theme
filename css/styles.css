@@ -2756,11 +2756,11 @@ legend {
   border-radius: 50%;
   text-align: center;
   box-sizing: border-box;
-  width: 66px;
-  height: 66px;
-  line-height: 66px;
-  margin-left: 17px;
-  margin-top: 17px;
+  width: 84px;
+  height: 84px;
+  line-height: 84px;
+  margin-left: 8px;
+  margin-top: 8px;
 }
 
 .donut--0 {
@@ -3805,11 +3805,11 @@ legend {
 }
 
 .donut--lg > * {
-  width: 160px;
-  height: 160px;
-  line-height: 160px;
-  margin-top: 20px;
-  margin-left: 20px;
+  width: 180px;
+  height: 180px;
+  line-height: 180px;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .donut--xl {
@@ -3818,11 +3818,11 @@ legend {
 }
 
 .donut--xl > * {
-  width: 240px;
-  height: 240px;
-  line-height: 240px;
-  margin-top: 30px;
-  margin-left: 30px;
+  width: 274px;
+  height: 274px;
+  line-height: 274px;
+  margin-top: 13px;
+  margin-left: 13px;
 }
 
 a {
