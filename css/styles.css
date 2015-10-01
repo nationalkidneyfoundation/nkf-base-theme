@@ -3774,23 +3774,23 @@ legend {
 }
 
 .donut--xs {
-  height: 20px;
-  width: 20px;
-}
-
-.donut--xs > * {
-  width: 6px;
-  height: 6px;
-}
-
-.donut--sm {
   height: 40px;
   width: 40px;
 }
 
+.donut--xs > * {
+  width: 14px;
+  height: 14px;
+}
+
+.donut--sm {
+  height: 70px;
+  width: 70px;
+}
+
 .donut--sm > * {
-  width: 15px;
-  height: 15px;
+  width: 64px;
+  height: 64px;
 }
 
 .donut--lg {
@@ -13085,7 +13085,6 @@ html.js .js-hide {
 .node-type-membership-page .hero,
 .node-type-fundraising-campaign .hero,
 .page-campaigns .hero {
-  background-image: url('../img/donation-hero.jpg');
   background-repeat: no-repeat;
   min-height: 500px;
   background-position: center;

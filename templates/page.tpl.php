@@ -48,10 +48,9 @@
   </section>
   <?php endif; ?>
 
-  <!--<section <?php //if(isset($hero_background)): print $hero_background; endif; ?>>-->
   <section class="main position--relative">
-    <?php if(!$has_image): ?>
-      <div class="hero sm--show"></div>
+    <?php if($background_image): ?>
+      <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
     <?php endif; ?>
     <div class="container position--relative z-index--1 padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
       <div class="grid">

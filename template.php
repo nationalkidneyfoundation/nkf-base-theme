@@ -34,22 +34,26 @@ function nkf_base_preprocess_page(&$vars) {
 
   // donate form js
   $vars['has_image'] = false;
-  if (!empty($vars['node']) && in_array($vars['node']->type, array('donation','membership_page','fundraising_campaign'))) {
+  //if (!empty($vars['node']) && in_array($vars['node']->type, array('donation','membership_page','fundraising_campaign'))) {
     //drupal_add_js(drupal_get_path('theme', 'nkf_base') . '/js/donate-form.js');
-    if (!empty($vars['node']->field_hero_image) ){
-      $vars['has_image'] = true;
-    }
-  }
+    //if (!empty($vars['node']->field_hero_image) ){
+      //$vars['has_image'] = true;
+    //}
+  //}
+
+  //if(!empty($vars['node'])
+  //   && isset($vars['node']->field_hero_image_background)
+  //   && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
+    //$vars['hero_image_background'] = image_style_url('full_page_background', $vars['node']->field_hero_image_background['und'][0]['uri']);
+    //$vars['hero_background'] = 'class="background-hero " style="background-image:url(' . $vars['hero_image_background'] . ')"';
+  //}
 
   if(!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
-     && isset($vars['node']->field_hero_image_background['und'][0]['uri'])) {
-    $vars['hero_image_background'] = image_style_url('full_page_background', $vars['node']->field_hero_image_background['und'][0]['uri']);
-    $vars['hero_background'] = 'class="background-hero " style="background-image:url(' . $vars['hero_image_background'] . ')"';
-  }
-  if(!empty($vars['node'])
-     && isset($vars['node']->field_hero_video_background)
-     && isset($vars['node']->field_hero_video_background['und'][0]['value'])) {
+     && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
+       $vars['background_image'] = true;
+       $vars['background_image_uri'] = file_create_url($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri']);
+       //image_style_url('full_page_background', $vars['node']->field_hero_image_background['LANGUAGE_NONE'][0]['uri']);
   }
 
   $page_classes = array('page');
