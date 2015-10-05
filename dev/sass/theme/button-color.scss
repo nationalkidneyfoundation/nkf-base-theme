@@ -1,11 +1,15 @@
 @each $name, $color in $colors {
   .button--#{$name} {
     @extend .button;
-    border-color: lighten($color, 30%);
-    background-color: lighten($color, 30%);
-    color: $color;
+    //border-color: lighten($color, 30%);
+    //background-color: lighten($color, 30%);
+    border-color: $color;
+    background-color: $color;
+    //color: $color;
+    color: $white;
     &:visited {
-      color: $color;
+      //color: $color;
+      color: $white;
     }
     &:hover,
     &:active,
@@ -148,28 +152,21 @@
 @each $name, $color in $colors {
   .button--#{$name}--light {
     @extend .button;
-    @extend .color--#{$name};
-    @extend .position--relative;
-    background-color: transparent;
-    z-index: 2;
-    &::before {
-      @extend .display--block;
-      @extend .cover-absolute;
-      opacity: .125;
-      background-color: currentcolor;
-      content: '';
-      z-index: -1;
+    border-color: lighten($color, 30%);
+    background-color: lighten($color, 30%);
+    //border-color: $color;
+    //background-color: $color;
+    color: $color;
+    color: $white;
+    &:visited {
+      color: $color;
+      //color: $white;
     }
     &:hover,
-    &:focus,
+    &:active,
     &.active {
-      color: #fff;
-    }
-    &:hover::before,
-    &:focus::before,
-    &.active::before {
-      opacity: 1;
       background-color: $color;
+      color: white;
     }
   }
 }
