@@ -5482,7 +5482,6 @@ a:hover {
   border-color: #fac7b2;
   background-color: #fac7b2;
   color: #F15E22;
-  color: #fff;
 }
 
 .button--orange--light:visited {
@@ -5500,7 +5499,6 @@ a:hover {
   border-color: #6c91e2;
   background-color: #6c91e2;
   color: #1E4497;
-  color: #fff;
 }
 
 .button--blue--light:visited {
@@ -5518,7 +5516,6 @@ a:hover {
   border-color: #5e57c2;
   background-color: #5e57c2;
   color: #26225E;
-  color: #fff;
 }
 
 .button--navy--light:visited {
@@ -5536,7 +5533,6 @@ a:hover {
   border-color: #f58b8e;
   background-color: #f58b8e;
   color: #d51217;
-  color: #fff;
 }
 
 .button--red--light:visited {
@@ -5554,7 +5550,6 @@ a:hover {
   border-color: #fde3b3;
   background-color: #fde3b3;
   color: #FAAD1D;
-  color: #fff;
 }
 
 .button--mustard--light:visited {
@@ -5572,7 +5567,6 @@ a:hover {
   border-color: #3cdffa;
   background-color: #3cdffa;
   color: #048499;
-  color: #fff;
 }
 
 .button--aqua--light:visited {
@@ -5590,7 +5584,6 @@ a:hover {
   border-color: #fff198;
   background-color: #fff198;
   color: #FEDC00;
-  color: #fff;
 }
 
 .button--yellow--light:visited {
@@ -5608,7 +5601,6 @@ a:hover {
   border-color: #1ffd8d;
   background-color: #1ffd8d;
   color: #018241;
-  color: #fff;
 }
 
 .button--green--light:visited {
@@ -5626,7 +5618,6 @@ a:hover {
   border-color: #d0dfa4;
   background-color: #d0dfa4;
   color: #91AE3C;
-  color: #fff;
 }
 
 .button--lime--light:visited {
@@ -5644,7 +5635,6 @@ a:hover {
   border-color: #e37874;
   background-color: #e37874;
   color: #9E2420;
-  color: #fff;
 }
 
 .button--sienna--light:visited {
@@ -12420,6 +12410,46 @@ h6 .h1,
     display: block;
     width: 100%;
   }
+}
+
+.icon-facebook:before,
+.icon-twitter:before {
+  line-height: 1em;
+  font-family: "FontAwesome";
+  font-weight: normal;
+  font-style: normal;
+  display: inline-block;
+  text-decoration: none;
+  vertical-align: middle;
+  text-rendering: optimizeLegibility !important;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+.icon-twitter:before {
+  content: "\f099";
+}
+
+/* embeds the @font-face. use this only once. */
+
+@font-face {
+  font-family: "FontAwesome";
+  src: url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?v=4.2.0");
+  src: url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon-facebook:before {
+  font-size: 14px;
+}
+
+.icon-twitter:before {
+  font-size: 14px;
 }
 
 /**

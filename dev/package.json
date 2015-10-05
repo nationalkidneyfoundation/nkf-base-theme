@@ -22,6 +22,7 @@
     "gulp-rework": "^1.0.3",
     "gulp-sass": "^1.3.3",
     "gulp-size": "^1.2.1",
+    "iconfonts": "^0.7.0",
     "imagemin-pngquant": "^4.1.0",
     "normalize.css": "^3.0.3",
     "rework-rem-fallback": "^1.0.0",

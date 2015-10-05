@@ -1,0 +1,13 @@
+@import '../../node_modules/iconfonts/stylesheets/font-awesome';
+
+/* embeds the @font-face. use this only once. */
+@include fa-font();
+
+
+
+.icon-facebook:before {
+  @include fa-icon("facebook", 14px);
+}
+.icon-twitter:before {
+  @include fa-icon("twitter", 14px);
+}
