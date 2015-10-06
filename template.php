@@ -24,29 +24,18 @@ function nkf_base_css_alter(&$css) {
  * Implementation of preprocess_page().
  */
 function nkf_base_preprocess_page(&$vars) {
-  // add font icons
-  //drupal_add_css('//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array('group' => CSS_THEME, 'type' => 'external'));
+
+  // add magnific popup
+  $magnificpath = libraries_get_path('magnific_popup');
+  drupal_add_js($magnificpath . '/dist/jquery.magnific-popup.js');
+  drupal_add_css($magnificpath . '/dist/magnific-popup.css');
 
   $columns = 1;
   $columns += !empty($vars['page']['sidebar_first'])? 1 : 0;
   $columns += !empty($vars['page']['sidebar_second'])? 1 : 0;
   $vars['columns'] = $columns;
 
-  // donate form js
-  //$vars['has_image'] = false;
-  //if (!empty($vars['node']) && in_array($vars['node']->type, array('donation','membership_page','fundraising_campaign'))) {
-    //drupal_add_js(drupal_get_path('theme', 'nkf_base') . '/js/donate-form.js');
-    //if (!empty($vars['node']->field_hero_image) ){
-      //$vars['has_image'] = true;
-    //}
-  //}
 
-  //if(!empty($vars['node'])
-  //   && isset($vars['node']->field_hero_image_background)
-  //   && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
-    //$vars['hero_image_background'] = image_style_url('full_page_background', $vars['node']->field_hero_image_background['und'][0]['uri']);
-    //$vars['hero_background'] = 'class="background-hero " style="background-image:url(' . $vars['hero_image_background'] . ')"';
-  //}
   $vars['background_image'] = false;
   if(!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
