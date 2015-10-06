@@ -1572,6 +1572,13 @@ a {
   clip: rect(1px, 1px, 1px, 1px) !important;
 }
 
+@media print {
+  .print--hide,
+  .print--hidden {
+    display: none !important;
+  }
+}
+
 @media (min-width: 20em) {
   .xs--hide,
   .node-type-donation .errors .steps,
