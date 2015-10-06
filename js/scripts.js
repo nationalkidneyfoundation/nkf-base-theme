@@ -14,6 +14,12 @@
           .toggleClass($(this).attr('data-class'));
         e.preventDefault();
       });
+
+      // utility for general modal selection
+      $('.modal-trigger').magnificPopup({
+        type:'inline',
+        midClick: true
+      });
     }
   };
 
