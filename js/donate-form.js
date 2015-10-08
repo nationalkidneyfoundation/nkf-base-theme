@@ -4,7 +4,7 @@
     attach: function(context, settings) {
 
       // disable the submit button after first click
-      $('.field-type-redhen-donation', context).once('hideSubmitButton', function () {
+      $('form', context).once('hideSubmitButton', function () {
         var $form = $(this);
         $form.find('.form-submit').click(function (e) {
           var el = $(this);
@@ -142,6 +142,7 @@
           }
         });
         $('.step:first-child').addClass('active');
+        /*
         $(document).keydown(function(e) {
           switch(e.which) {
             case 37: // left
@@ -160,6 +161,7 @@
           }
           e.preventDefault(); // prevent the default action (scroll / move caret)
         });
+        */
 
       }
       donationProcessed = true;
