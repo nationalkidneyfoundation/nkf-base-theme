@@ -7,10 +7,12 @@
   @extend .color--gray-3;
 }
 
-.form-type-checkbox {
+.form-type-checkbox,
+.form-type-radio {
   position: relative;
   label {
-    margin-left: 33px;
+    padding-left: 33px;
+    cursor: pointer;
     &:before {
       content: "";
       display: inline-block;
@@ -25,6 +27,8 @@
       color: $black;
       font-weight: bold;
       font-size: font-size(lg);
+      top: 50%;
+      transform : translateY(-50%);
     }
   }
   input {
@@ -34,7 +38,24 @@
     content: "\00d7";
     line-height: 22px;
   }
-  input[type=checkbox]:focus+label:before {
+  input[type=radio]:checked+label:before {
+    content: "\00b7";
+    line-height: 14px;
+  }
+  input[type=checkbox]:focus+label:before,
+  input[type=radio]:focus+label:before  {
     border-color: $gray-4;
+  }
+}
+.form-type-radio label {
+  margin-top: space(xxs);
+  margin-bottom: space(xxs);
+  &:before {
+    border-radius: 50%;
+    height: 17px;
+    width: 17px;
+    line-height: 14px;
+    font-size: 2.6rem;
+    left: .25rem;
   }
 }

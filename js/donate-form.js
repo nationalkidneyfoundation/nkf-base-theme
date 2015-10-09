@@ -3,6 +3,10 @@
   Drupal.behaviors.nkf_base_donate_form = {
     attach: function(context, settings) {
 
+      // set up some sensible input masks
+      $('.field-type-telephone input').inputmask("mask", {"mask": "(999) 999-9999"});
+      $('[class*="email"] input').inputmask("email");
+
       // disable the submit button after first click
       $('form', context).once('hideSubmitButton', function () {
         var $form = $(this);

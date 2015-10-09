@@ -30,6 +30,14 @@ function nkf_base_preprocess_page(&$vars) {
   drupal_add_js($magnificpath . '/dist/jquery.magnific-popup.js');
   drupal_add_css($magnificpath . '/dist/magnific-popup.css');
 
+  // add jquery.inputmask
+  $inputmask = libraries_get_path('inputmask');
+  drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.min.js');
+  drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.extensions.min.js');
+  drupal_add_js($inputmask . '/dist/min/inputmask/jquery.inputmask.min.js');
+
+
+
   $columns = 1;
   $columns += !empty($vars['page']['sidebar_first'])? 1 : 0;
   $columns += !empty($vars['page']['sidebar_second'])? 1 : 0;

@@ -1562,7 +1562,8 @@ a {
 .wf-loading input,
 .wf-loading textarea,
 .wf-loading label,
-.form-type-checkbox input {
+.form-type-checkbox input,
+.form-type-radio input {
   position: absolute !important;
   overflow: hidden !important;
   width: 1px !important;
@@ -1861,7 +1862,6 @@ input[type="submit"],
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
   /*
   &::before {
     @extend .cover-absolute;
@@ -13000,15 +13000,19 @@ html.js .js-hide {
   background-image: url(../logo.png);
 }
 
-.form-type-checkbox {
+.form-type-checkbox,
+.form-type-radio {
   position: relative;
 }
 
-.form-type-checkbox label {
-  margin-left: 33px;
+.form-type-checkbox label,
+.form-type-radio label {
+  padding-left: 33px;
+  cursor: pointer;
 }
 
-.form-type-checkbox label:before {
+.form-type-checkbox label:before,
+.form-type-radio label:before {
   content: "";
   display: inline-block;
   border: 1px solid #ccc;
@@ -13024,15 +13028,46 @@ html.js .js-hide {
   font-weight: bold;
   font-size: 21px;
   font-size: 1.414rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.form-type-checkbox input[type=checkbox]:checked + label:before {
+.form-type-checkbox input[type=checkbox]:checked + label:before,
+.form-type-radio input[type=checkbox]:checked + label:before {
   content: "\00d7";
   line-height: 22px;
 }
 
-.form-type-checkbox input[type=checkbox]:focus + label:before {
+.form-type-checkbox input[type=radio]:checked + label:before,
+.form-type-radio input[type=radio]:checked + label:before {
+  content: "\00b7";
+  line-height: 14px;
+}
+
+.form-type-checkbox input[type=checkbox]:focus + label:before,
+.form-type-checkbox input[type=radio]:focus + label:before,
+.form-type-radio input[type=checkbox]:focus + label:before,
+.form-type-radio input[type=radio]:focus + label:before {
   border-color: #777;
+}
+
+.form-type-radio label {
+  margin-top: 5px;
+  margin-top: 0.354rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.354rem;
+}
+
+.form-type-radio label:before {
+  border-radius: 50%;
+  height: 17px;
+  width: 17px;
+  line-height: 14px;
+  font-size: 39px;
+  font-size: 2.6rem;
+  left: 4px;
+  left: .25rem;
 }
 
 .header__nav--primary a::before {
