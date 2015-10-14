@@ -121,3 +121,14 @@ function nkf_base_menu_link(array $variables) {
   $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
   return '<li' . drupal_attributes($element ['#attributes']) . '>' . $output . $sub_menu . "</li>\n";
 }
+
+/**
+ * Preprocess variables for panels_pane.tpl.php
+ */
+function nkf_base_preprocess_panels_pane(&$vars) {
+  // Add id and custom class if sent in.
+
+  if ($vars['display']->layout == 'flex') {
+    $vars['classes_array'][] = 'grid-cell';
+  }
+}

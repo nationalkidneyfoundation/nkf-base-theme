@@ -39,7 +39,7 @@
     max-height: 40px;
   }
   header {
-    background-color: $gray-1;
+    background-color: $white;//$gray-1;
     .container {
       @extend .sm--padding-y--md;
     }
@@ -48,8 +48,8 @@
     background-image: url(../img/NKF-logoR_Hori_OB.png);
   }
   .main {
-    //@extend .background-color--gray-1;
     @extend .padding-bottom--xxxl;
+    background-color: $gray-1;
   }
   // hide title from view
   h1 {
@@ -77,10 +77,8 @@
 
   // this is the form container
   #redhen-donation-form {
-    @extend .border-radius--lg;
+    //@extend .border-radius--lg;
     @extend .width--100;
-    @extend .padding--none;
-    @extend .border-width--none;
     //@extend .border-width--xs;
     //@extend .border-style--solid;
     //@extend .border-color--gray-4;
@@ -88,7 +86,9 @@
     //box-shadow: 0 1px 15px rgba(0,0,0,0.5);
     //border: solid $gray-1;
     //border-width: 0 border-width(xl);
-    background-color: #fafafa;
+    background-color: #fff;
+    padding: 0;
+    border: 1px solid $gray-1;
   }
 
   .form-item label {
@@ -171,8 +171,8 @@
     @extend .grid;
   }
 
-  #edit-donation-select,
-  #edit-field-member-category-und {
+  #edit-donation-select {//,
+  //#edit-field-member-category-und {
     @extend .grid;
     @extend .width--100;
     > * {
@@ -227,9 +227,6 @@
   .field-name-field-prefix {
     @extend .grid-cell;
     @extend .sm--width--50;
-  }
-  .field-name-field-isrnm-co-membership {
-    @extend .text-align--center;
   }
 
   // Address section

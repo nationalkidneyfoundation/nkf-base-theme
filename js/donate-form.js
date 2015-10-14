@@ -90,13 +90,13 @@
       if(!donationProcessed && !ie8) {
         var textDonation = $('.form-item-donation.form-type-textfield');
         if(textDonation.length > 0) {
-          //$('input', textDonation).attr('placeholder', 'Enter a dollar amount');
 
+          //$('input', textDonation).attr('placeholder', 'Enter a dollar amount');
           // add buttons for textfield style donations
           // TODO make this configurable through the UI
           var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
           $.each([[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']], function(i, v) {
-            var buttonOuter = $('<div class="grid-cell width--33 padding--xs"></div>').appendTo($(amountOptions));
+            var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
             var button = $('<a class="button button--orange--light width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
               .appendTo(buttonOuter);
             button.click(function(e) {
