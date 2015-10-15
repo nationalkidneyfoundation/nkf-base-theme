@@ -6,8 +6,14 @@
 
 
 .icon-facebook:before {
-  @include fa-icon("facebook", 14px);
+  @include fa-icon("facebook", $font-size);
 }
 .icon-twitter:before {
-  @include fa-icon("twitter", 14px);
+  @include fa-icon("twitter", $font-size);
+}
+.icon-chevron-left:before {
+  @include fa-icon("chevron-left", $font-size);
+}
+.icon-chevron-right:before {
+  @include fa-icon("chevron-right", $font-size);
 }

@@ -12306,7 +12306,9 @@ h6 .h1,
 }
 
 .icon-facebook:before,
-.icon-twitter:before {
+.icon-twitter:before,
+.icon-chevron-left:before,
+.icon-chevron-right:before {
   line-height: 1em;
   font-family: "FontAwesome";
   font-weight: normal;
@@ -12317,6 +12319,14 @@ h6 .h1,
   text-rendering: optimizeLegibility !important;
   -webkit-font-smoothing: antialiased !important;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+.icon-chevron-right:before {
+  content: "\f054";
 }
 
 .icon-facebook:before {
@@ -12338,11 +12348,19 @@ h6 .h1,
 }
 
 .icon-facebook:before {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 .icon-twitter:before {
-  font-size: 14px;
+  font-size: 15px;
+}
+
+.icon-chevron-left:before {
+  font-size: 15px;
+}
+
+.icon-chevron-right:before {
+  font-size: 15px;
 }
 
 /**
