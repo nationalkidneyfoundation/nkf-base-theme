@@ -114,7 +114,7 @@
           // as the value might be prefilled
           setActiveButton();
         }
-        var steps = $('<div class="steps sm--show"></div>').prependTo($('.field-type-redhen-donation > form > div'));
+        var steps = $('<div class="steps sm--show"></div>').prependTo($('form > div'));
         var donationSteps = $('.donation-step');
         $('.donation-step').each(function(i, v) {
           steps.append('<div class="step"><div class="step-' + i + '">'+ (i + 1) +'</div>');
