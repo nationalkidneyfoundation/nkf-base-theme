@@ -383,8 +383,7 @@
     //@extend .border-color--gray-4;
     //@extend .border-style--solid;
     @extend .sm--show;
-    background-color: $gray-2;
-    border-radius: 0 0 3px 3px;
+    border-top: 1px solid $gray-2
   }
   .next {
     @extend .button--blue;
@@ -408,8 +407,9 @@
     //@extend .border-bottom-width--xs;
     //@extend .border-style--solid;
     //@extend .border-color--gray-4;
-    background-color: $gray-1;
-    border-radius: 3px 3px 0 0;
+    background-color: $white;
+    border-bottom: 1px solid $gray-2
+    //border-radius: 3px 3px 0 0;
   }
   .step {
     @extend .grid-cell;

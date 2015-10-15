@@ -13049,16 +13049,15 @@ html.js .js-hide {
 .node-type-membership-page .previous-next,
 .node-type-fundraising-campaign .previous-next,
 .page-campaigns .previous-next {
-  background-color: #ccc;
-  border-radius: 0 0 3px 3px;
+  border-top: 1px solid #ccc;
 }
 
 .node-type-donation .steps,
 .node-type-membership-page .steps,
 .node-type-fundraising-campaign .steps,
 .page-campaigns .steps {
-  background-color: #eee;
-  border-radius: 3px 3px 0 0;
+  background-color: #fff;
+  border-bottom: 1px solid #ccc;
 }
 
 .node-type-donation .step,
