@@ -1752,12 +1752,12 @@ input[type="submit"],
 .node-type-membership-page .form-submit,
 .node-type-fundraising-campaign .form-submit,
 .page-campaigns .form-submit,
+.button--navy,
+.button--red,
 .node-type-donation .next,
 .node-type-membership-page .next,
 .node-type-fundraising-campaign .next,
 .page-campaigns .next,
-.button--navy,
-.button--red,
 .button--mustard,
 .button--aqua,
 .button--yellow,
@@ -1856,12 +1856,12 @@ input[type="submit"]:before,
 .node-type-membership-page .form-submit:after,
 .node-type-fundraising-campaign .form-submit:after,
 .page-campaigns .form-submit:after,
+.button--navy:after,
+.button--red:after,
 .node-type-donation .next:after,
 .node-type-membership-page .next:after,
 .node-type-fundraising-campaign .next:after,
 .page-campaigns .next:after,
-.button--navy:after,
-.button--red:after,
 .button--mustard:after,
 .button--aqua:after,
 .button--yellow:after,
@@ -1918,12 +1918,12 @@ input[type="submit"]:before,
 .node-type-membership-page .form-submit:before,
 .node-type-fundraising-campaign .form-submit:before,
 .page-campaigns .form-submit:before,
+.button--navy:before,
+.button--red:before,
 .node-type-donation .next:before,
 .node-type-membership-page .next:before,
 .node-type-fundraising-campaign .next:before,
 .page-campaigns .next:before,
-.button--navy:before,
-.button--red:before,
 .button--mustard:before,
 .button--aqua:before,
 .button--yellow:before,
@@ -1985,12 +1985,12 @@ input[type="submit"]:focus,
 .node-type-membership-page .form-submit:focus,
 .node-type-fundraising-campaign .form-submit:focus,
 .page-campaigns .form-submit:focus,
+.button--navy:focus,
+.button--red:focus,
 .node-type-donation .next:focus,
 .node-type-membership-page .next:focus,
 .node-type-fundraising-campaign .next:focus,
 .page-campaigns .next:focus,
-.button--navy:focus,
-.button--red:focus,
 .button--mustard:focus,
 .button--aqua:focus,
 .button--yellow:focus,
@@ -2061,12 +2061,12 @@ input[type="submit"]:hover,
 .node-type-membership-page .form-submit:hover,
 .node-type-fundraising-campaign .form-submit:hover,
 .page-campaigns .form-submit:hover,
+.button--navy:hover,
+.button--red:hover,
 .node-type-donation .next:hover,
 .node-type-membership-page .next:hover,
 .node-type-fundraising-campaign .next:hover,
 .page-campaigns .next:hover,
-.button--navy:hover,
-.button--red:hover,
 .button--mustard:hover,
 .button--aqua:hover,
 .button--yellow:hover,
@@ -2128,12 +2128,12 @@ input[type="submit"]:disabled,
 .node-type-membership-page .form-submit:disabled,
 .node-type-fundraising-campaign .form-submit:disabled,
 .page-campaigns .form-submit:disabled,
+.button--navy:disabled,
+.button--red:disabled,
 .node-type-donation .next:disabled,
 .node-type-membership-page .next:disabled,
 .node-type-fundraising-campaign .next:disabled,
 .page-campaigns .next:disabled,
-.button--navy:disabled,
-.button--red:disabled,
 .button--mustard:disabled,
 .button--aqua:disabled,
 .button--yellow:disabled,
@@ -2192,12 +2192,12 @@ input[type="submit"].is-disabled,
 .node-type-membership-page .is-disabled.form-submit,
 .node-type-fundraising-campaign .is-disabled.form-submit,
 .page-campaigns .is-disabled.form-submit,
+.is-disabled.button--navy,
+.is-disabled.button--red,
 .node-type-donation .is-disabled.next,
 .node-type-membership-page .is-disabled.next,
 .node-type-fundraising-campaign .is-disabled.next,
 .page-campaigns .is-disabled.next,
-.is-disabled.button--navy,
-.is-disabled.button--red,
 .is-disabled.button--mustard,
 .is-disabled.button--aqua,
 .is-disabled.button--yellow,
@@ -4761,11 +4761,7 @@ a:hover {
 .node-type-donation .form-submit,
 .node-type-membership-page .form-submit,
 .node-type-fundraising-campaign .form-submit,
-.page-campaigns .form-submit,
-.node-type-donation .next,
-.node-type-membership-page .next,
-.node-type-fundraising-campaign .next,
-.page-campaigns .next {
+.page-campaigns .form-submit {
   border-color: #1E4497;
   background-color: #1E4497;
   color: #fff;
@@ -4775,11 +4771,7 @@ a:hover {
 .node-type-donation .form-submit:visited,
 .node-type-membership-page .form-submit:visited,
 .node-type-fundraising-campaign .form-submit:visited,
-.page-campaigns .form-submit:visited,
-.node-type-donation .next:visited,
-.node-type-membership-page .next:visited,
-.node-type-fundraising-campaign .next:visited,
-.page-campaigns .next:visited {
+.page-campaigns .form-submit:visited {
   color: #fff;
 }
 
@@ -4788,28 +4780,16 @@ a:hover {
 .node-type-membership-page .form-submit:hover,
 .node-type-fundraising-campaign .form-submit:hover,
 .page-campaigns .form-submit:hover,
-.node-type-donation .next:hover,
-.node-type-membership-page .next:hover,
-.node-type-fundraising-campaign .next:hover,
-.page-campaigns .next:hover,
 .button--blue:active,
 .node-type-donation .form-submit:active,
 .node-type-membership-page .form-submit:active,
 .node-type-fundraising-campaign .form-submit:active,
 .page-campaigns .form-submit:active,
-.node-type-donation .next:active,
-.node-type-membership-page .next:active,
-.node-type-fundraising-campaign .next:active,
-.page-campaigns .next:active,
 .button--blue.active,
 .node-type-donation .active.form-submit,
 .node-type-membership-page .active.form-submit,
 .node-type-fundraising-campaign .active.form-submit,
-.page-campaigns .active.form-submit,
-.node-type-donation .active.next,
-.node-type-membership-page .active.next,
-.node-type-fundraising-campaign .active.next,
-.page-campaigns .active.next {
+.page-campaigns .active.form-submit {
   background-color: #1E4497;
   color: white;
 }
@@ -4831,19 +4811,39 @@ a:hover {
   color: white;
 }
 
-.button--red {
+.button--red,
+.node-type-donation .next,
+.node-type-membership-page .next,
+.node-type-fundraising-campaign .next,
+.page-campaigns .next {
   border-color: #d51217;
   background-color: #d51217;
   color: #fff;
 }
 
-.button--red:visited {
+.button--red:visited,
+.node-type-donation .next:visited,
+.node-type-membership-page .next:visited,
+.node-type-fundraising-campaign .next:visited,
+.page-campaigns .next:visited {
   color: #fff;
 }
 
 .button--red:hover,
+.node-type-donation .next:hover,
+.node-type-membership-page .next:hover,
+.node-type-fundraising-campaign .next:hover,
+.page-campaigns .next:hover,
 .button--red:active,
-.button--red.active {
+.node-type-donation .next:active,
+.node-type-membership-page .next:active,
+.node-type-fundraising-campaign .next:active,
+.page-campaigns .next:active,
+.button--red.active,
+.node-type-donation .active.next,
+.node-type-membership-page .active.next,
+.node-type-fundraising-campaign .active.next,
+.page-campaigns .active.next {
   background-color: #d51217;
   color: white;
 }
@@ -12998,6 +12998,13 @@ html.js .js-hide {
   white-space: nowrap;
 }
 
+.node-type-donation .form-item label .form-type-select label,
+.node-type-membership-page .form-item label .form-type-select label,
+.node-type-fundraising-campaign .form-item label .form-type-select label,
+.page-campaigns .form-item label .form-type-select label {
+  display: none;
+}
+
 .node-type-donation .form-type-textfield.form-item-donation input,
 .node-type-membership-page .form-type-textfield.form-item-donation input,
 .node-type-fundraising-campaign .form-type-textfield.form-item-donation input,
@@ -13050,6 +13057,16 @@ html.js .js-hide {
 .node-type-fundraising-campaign .previous-next,
 .page-campaigns .previous-next {
   border-top: 1px solid #ccc;
+}
+
+.node-type-donation .next,
+.node-type-membership-page .next,
+.node-type-fundraising-campaign .next,
+.page-campaigns .next {
+  padding-top: 21px;
+  padding-top: 1.414rem;
+  padding-bottom: 21px;
+  padding-bottom: 1.414rem;
 }
 
 .node-type-donation .steps,

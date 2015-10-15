@@ -124,7 +124,7 @@
           }
           if(i != 0 ) {
             $(v).addClass('sm--hide');
-            $('<a href="#" class="previous grid-cell width--10 padding--lg"><i class="chevron-left"></i></a>')
+            $('<a href="#" class="previous grid-cell width--10"><i class="icon-chevron-left"></i></a>')
               .appendTo(previousNext).click(function(e) {
                 $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
                   .prevAll('.donation-step:first').removeClass('sm--hide').addClass('active');
@@ -133,7 +133,7 @@
               });
           }
           if(i != donationSteps.length - 1) {
-            $('<a href="#" class="next grid-cell width--10 text-align--right padding--lg">next <i class="chevron-right"></i></a>')
+            $('<a href="#" class="next grid-cell width--90 text-align--right float--right">next <i class="iconchevron-right"></i></a>')
               .appendTo(previousNext).click(function(e) {
                 if(checkRequiredFields(v)) {
                   $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')

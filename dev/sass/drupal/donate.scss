@@ -97,6 +97,9 @@
     &:not(.option) {
       white-space: nowrap;
     }
+    .form-type-select label {
+      display: none;
+    }
   }
 
   // reset basic form elements
@@ -386,7 +389,9 @@
     border-top: 1px solid $gray-2
   }
   .next {
-    @extend .button--blue;
+    @extend .button--red;
+    padding-top: space(lg);
+    padding-bottom: space(lg);
     //@extend .float--right;
     @extend .caps;
     //background-color: $gray-3;
