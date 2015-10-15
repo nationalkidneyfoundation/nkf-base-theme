@@ -668,20 +668,12 @@ img {
   float: none;
 }
 
-.float--left,
-.node-type-donation .previous,
-.node-type-membership-page .previous,
-.node-type-fundraising-campaign .previous,
-.page-campaigns .previous {
+.float--left {
   float: left;
 }
 
 .float--right,
-.password-strength-text,
-.node-type-donation .next,
-.node-type-membership-page .next,
-.node-type-fundraising-campaign .next,
-.page-campaigns .next {
+.password-strength-text {
   float: right;
 }
 
@@ -1828,8 +1820,6 @@ input[type="submit"],
   border-width: 1px;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 4px;
-  border-radius: 0.25rem;
   vertical-align: middle;
   text-align: center;
   font-weight: 400;
@@ -8252,10 +8242,6 @@ a:hover {
 .node-type-membership-page .form-type-textfield.form-item-donation,
 .node-type-fundraising-campaign .form-type-textfield.form-item-donation,
 .page-campaigns .form-type-textfield.form-item-donation,
-.node-type-donation .previous-next,
-.node-type-membership-page .previous-next,
-.node-type-fundraising-campaign .previous-next,
-.page-campaigns .previous-next,
 .node-type-donation .steps,
 .node-type-membership-page .steps,
 .node-type-fundraising-campaign .steps,
@@ -8303,11 +8289,7 @@ a:hover {
   padding-left: 1.414rem;
 }
 
-.padding-x--lg,
-.node-type-donation .previous-next,
-.node-type-membership-page .previous-next,
-.node-type-fundraising-campaign .previous-next,
-.page-campaigns .previous-next {
+.padding-x--lg {
   padding-left: 21px;
   padding-left: 1.414rem;
   padding-right: 21px;

@@ -374,8 +374,8 @@
   // steps
   // previous next
   .previous-next {
-    @extend .padding-x--lg;
-    @extend .padding-y--md;
+    //@extend .padding-x--lg;
+    //@extend .padding-y--md;
     //@extend .background-color--orange;
     //@extend .margin-top--lg;
     @extend .border-width--none;
@@ -387,7 +387,7 @@
   }
   .next {
     @extend .button--blue;
-    @extend .float--right;
+    //@extend .float--right;
     @extend .caps;
     //background-color: $gray-3;
     //color: $black;
@@ -395,7 +395,7 @@
   }
   .previous {
     @extend .button--white;
-    @extend .float--left;
+    //@extend .float--left;
     @extend .caps;
   }
   .steps {
