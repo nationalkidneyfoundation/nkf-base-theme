@@ -363,14 +363,15 @@
 
   // submit button
   .form-actions {
-    @extend .padding-y--xxxl;
+    @extend .padding-top--xxxl;
     @extend .text-align--center;
   }
   .form-submit {
-    @extend .button--blue;
+    @extend .button--red;
     //@extend .color--white;
     @extend .padding--lg;
     @extend .text-transform--uppercase;
+    width: 100%;
   }
 
   //signup
