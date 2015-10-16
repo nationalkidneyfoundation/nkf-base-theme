@@ -414,7 +414,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: space(lg);
+    padding: space(md);
     height: scale(3);
     width: scale(3);
     line-height: scale(3);
@@ -442,7 +442,7 @@
   }
   .step.active {
     padding: scale(md);
-    background-color: lighten(color(red), 40%);
+    background-color: $gray-1;//lighten(color(red), 40%);
     //color: $black;
   }
 }

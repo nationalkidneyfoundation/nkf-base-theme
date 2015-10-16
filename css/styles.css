@@ -13039,8 +13039,8 @@ html.js .js-hide {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 21px;
-  padding: 1.414rem;
+  padding: 15px;
+  padding: 1rem;
   height: 30px;
   height: 1.999rem;
   width: 30px;
@@ -13079,7 +13079,7 @@ html.js .js-hide {
 .node-type-membership-page .step.active,
 .node-type-fundraising-campaign .step.active,
 .page-campaigns .step.active {
-  background-color: #f9babb;
+  background-color: #eee;
 }
 
 @media print {
