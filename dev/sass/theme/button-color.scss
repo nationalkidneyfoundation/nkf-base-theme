@@ -14,7 +14,7 @@
     &:hover,
     &:active,
     &.active {
-      background-color: $color;
+      background-color: lighten($color, 10%);
       color: white;
     }
   }

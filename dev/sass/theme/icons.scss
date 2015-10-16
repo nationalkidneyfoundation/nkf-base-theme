@@ -17,3 +17,9 @@
 .icon-chevron-right:before {
   @include fa-icon("chevron-right", $font-size);
 }
+.icon-arrow-right:before {
+  @include fa-icon("arrow-right", $font-size);
+}
+.icon-arrow-left:before {
+  @include fa-icon("arrow-left", $font-size);
+}

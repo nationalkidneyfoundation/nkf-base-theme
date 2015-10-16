@@ -68,13 +68,19 @@
     }
   }
 
+  .form-type-select label {
+    display: none;
+  }
+
   .donation-step__inner {
     @extend .position--relative;
     @extend .padding--lg;
     @extend .padding-bottom--xl;
   }
 
-
+  form {
+    position: relative;
+  }
   // this is the form container
   #redhen-donation-form {
     //@extend .border-radius--lg;
@@ -97,9 +103,7 @@
     &:not(.option) {
       white-space: nowrap;
     }
-    .form-type-select label {
-      display: none;
-    }
+
   }
 
   // reset basic form elements
@@ -381,51 +385,64 @@
     //@extend .padding-y--md;
     //@extend .background-color--orange;
     //@extend .margin-top--lg;
-    @extend .border-width--none;
     //@extend .border-top-width--xs;
     //@extend .border-color--gray-4;
     //@extend .border-style--solid;
     @extend .sm--show;
-    border-top: 1px solid $gray-2
   }
   .next {
     @extend .button--red;
+    position: relative;
     padding-top: space(lg);
     padding-bottom: space(lg);
-    //@extend .float--right;
-    @extend .caps;
-    //background-color: $gray-3;
-    //color: $black;
-    //border-color: $gray-3;
+    line-height: scale(3);
+    i {
+      position: absolute;
+      right: 0;
+      &::before {
+        @extend .circle;
+        background-color: $white;
+        color: color(red);
+        height: scale(3);
+        width: scale(3);
+        line-height: scale(3);
+      }
+    }
   }
+
   .previous {
-    @extend .button--white;
-    //@extend .float--left;
-    @extend .caps;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: space(lg);
+    height: scale(3);
+    width: scale(3);
+    line-height: scale(3);
+    color: $gray-3;
   }
   .steps {
     @extend .grid;
-    @extend .text-align--center;
-    @extend .padding-y--md;
-    @extend .border-width--none;
     //@extend .background-color--orange;
     //@extend .border-bottom-width--xs;
     //@extend .border-style--solid;
     //@extend .border-color--gray-4;
+    padding: space(md) 0;
+    text-align: center;
     background-color: $white;
     border-bottom: 1px solid $gray-2
     //border-radius: 3px 3px 0 0;
   }
   .step {
     @extend .grid-cell;
-    @extend .margin-x--xs;
     @extend .circle;
+    margin: 0 space(xs);
     height: scale(3);
     width: scale(3);
     line-height: scale(3);
   }
   .step.active {
-    background-color: $gray-3;
-    color: $black;
+    padding: scale(md);
+    background-color: lighten(color(red), 40%);
+    //color: $black;
   }
 }
