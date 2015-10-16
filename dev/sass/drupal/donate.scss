@@ -73,9 +73,8 @@
   }
 
   .donation-step__inner {
-    @extend .position--relative;
-    @extend .padding--lg;
-    @extend .padding-bottom--xl;
+    position: relative;
+    padding: space(md);
   }
 
   form {
@@ -250,11 +249,11 @@
       @extend .grid-cell;
     }
   }
-  .form-item-commerce-customer-address-und-0-thoroughfare {
+  [class*="-thoroughfare"] {
     @extend .width--100;
-    @extend .sm--width--75;
+    //@extend .sm--width--75;
   }
-  .form-item-commerce-customer-address-und-0-premise {
+  [class*="-premise"]{
     @extend .width--100;
     @extend .sm--width--25;
   }
@@ -264,12 +263,12 @@
     .form-item {
       @extend .grid-cell;
     }
-    .form-item-commerce-customer-address-und-0-locality {
+    [class*="-locality"] {
       @extend .width--100;
       @extend .sm--width--55;
       @extend .margin--none;
     }
-    .form-item-commerce-customer-address-und-0-administrative-area {
+    [class*="-administrative-area"] {
       @extend .width--100;
       @extend .sm--width--20;
       @extend .margin--none;
@@ -277,7 +276,7 @@
     .state {
       @extend .width--100;
     }
-    .form-item-commerce-customer-address-und-0-postal-code {
+    [class*="-posta-code"]{
       @extend .width--100;
       @extend .sm--width--25;
       @extend .margin--none;
@@ -415,7 +414,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: space(md);
+    padding: space(sm);
     height: scale(3);
     width: scale(3);
     line-height: scale(3);
@@ -427,7 +426,7 @@
     //@extend .border-bottom-width--xs;
     //@extend .border-style--solid;
     //@extend .border-color--gray-4;
-    padding: space(md) 0;
+    padding: space(sm) 0;
     text-align: center;
     background-color: $white;
     border-bottom: 1px solid $gray-2
@@ -436,14 +435,16 @@
   .step {
     @extend .grid-cell;
     @extend .circle;
-    margin: 0 space(xs);
+    margin: 0 space(xxs);
     height: scale(3);
     width: scale(3);
     line-height: scale(3);
   }
   .step.active {
     padding: scale(md);
-    background-color: $gray-1;//lighten(color(red), 40%);
+    background-color: lighten(color(red), 40%);
+    color: $white;
+    font-weight: bold;
     //color: $black;
   }
 }
