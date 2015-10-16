@@ -90,10 +90,11 @@
       if(!donationProcessed && !ie8) {
 
         // ziptastic
-        $('.postal-code ')
+        $('.postal-code')
           .ziptastic()
           .on('zipChange', function(event, country, state, state_short, city, zip) {
-              console.log(state);
+              console.log(event);
+              console.log(state_short);
               console.log(city);
               console.log(zip);
           });
