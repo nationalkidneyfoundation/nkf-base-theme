@@ -93,10 +93,13 @@
         $('.postal-code')
           .ziptastic()
           .on('zipChange', function(event, country, state, state_short, city, zip) {
-              console.log(event);
-              console.log(state_short);
-              console.log(city);
-              console.log(zip);
+            var _a = $(event.target).closest('.field-type-addressfield');
+            $('.state', _a).val(state_short);
+            $('.locality', _a).val(city);
+            console.log(event);
+            console.log(state_short);
+            console.log(city);
+            console.log(zip);
           });
 
         var textDonation = $('.form-item-donation.form-type-textfield');
