@@ -88,6 +88,16 @@
 
       // build donation sections and misc donation stuff
       if(!donationProcessed && !ie8) {
+
+        // ziptastic
+        $('.postal-code ')
+          .ziptastic()
+          .on('zipChange', function(event, country, state, state_short, city, zip) {
+              console.log(state);
+              console.log(city);
+              console.log(zip);
+          });
+
         var textDonation = $('.form-item-donation.form-type-textfield');
         if(textDonation.length > 0) {
 

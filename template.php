@@ -36,6 +36,10 @@ function nkf_base_preprocess_page(&$vars) {
   drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.extensions.min.js');
   drupal_add_js($inputmask . '/dist/min/inputmask/jquery.inputmask.min.js');
 
+  // add ziptastic-jquery-plugin
+  $ziptastic = libraries_get_path('ziptastic-jquery-plugin');
+  drupal_add_js($ziptastic . '/jquery.ziptastic.js');
+
 
 
   $columns = 1;
