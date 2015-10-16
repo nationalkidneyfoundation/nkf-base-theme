@@ -276,7 +276,7 @@
     .state {
       @extend .width--100;
     }
-    [class*="-posta-code"]{
+    [class*="-postal-code"]{
       @extend .width--100;
       @extend .sm--width--25;
       @extend .margin--none;
@@ -435,7 +435,7 @@
   .step {
     @extend .grid-cell;
     @extend .circle;
-    margin: 0 space(xxs);
+    margin: 0;
     height: scale(3);
     width: scale(3);
     line-height: scale(3);
@@ -443,8 +443,7 @@
   .step.active {
     padding: scale(md);
     background-color: lighten(color(red), 40%);
-    color: $white;
-    font-weight: bold;
+    color: black;
     //color: $black;
   }
 }

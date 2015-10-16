@@ -5859,10 +5859,10 @@ a:hover {
 .node-type-membership-page .locality-block [class*="-administrative-area"],
 .node-type-fundraising-campaign .locality-block [class*="-administrative-area"],
 .page-campaigns .locality-block [class*="-administrative-area"],
-.node-type-donation .locality-block [class*="-posta-code"],
-.node-type-membership-page .locality-block [class*="-posta-code"],
-.node-type-fundraising-campaign .locality-block [class*="-posta-code"],
-.page-campaigns .locality-block [class*="-posta-code"],
+.node-type-donation .locality-block [class*="-postal-code"],
+.node-type-membership-page .locality-block [class*="-postal-code"],
+.node-type-fundraising-campaign .locality-block [class*="-postal-code"],
+.page-campaigns .locality-block [class*="-postal-code"],
 .node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
 .node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
 .node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
@@ -11445,10 +11445,10 @@ h6 .h1,
 .node-type-membership-page .locality-block .state,
 .node-type-fundraising-campaign .locality-block .state,
 .page-campaigns .locality-block .state,
-.node-type-donation .locality-block [class*="-posta-code"],
-.node-type-membership-page .locality-block [class*="-posta-code"],
-.node-type-fundraising-campaign .locality-block [class*="-posta-code"],
-.page-campaigns .locality-block [class*="-posta-code"],
+.node-type-donation .locality-block [class*="-postal-code"],
+.node-type-membership-page .locality-block [class*="-postal-code"],
+.node-type-fundraising-campaign .locality-block [class*="-postal-code"],
+.page-campaigns .locality-block [class*="-postal-code"],
 .node-type-donation .required-fields > div,
 .node-type-membership-page .required-fields > div,
 .node-type-fundraising-campaign .required-fields > div,
@@ -11643,10 +11643,10 @@ h6 .h1,
   .node-type-membership-page [class*="-premise"],
   .node-type-fundraising-campaign [class*="-premise"],
   .page-campaigns [class*="-premise"],
-  .node-type-donation .locality-block [class*="-posta-code"],
-  .node-type-membership-page .locality-block [class*="-posta-code"],
-  .node-type-fundraising-campaign .locality-block [class*="-posta-code"],
-  .page-campaigns .locality-block [class*="-posta-code"] {
+  .node-type-donation .locality-block [class*="-postal-code"],
+  .node-type-membership-page .locality-block [class*="-postal-code"],
+  .node-type-fundraising-campaign .locality-block [class*="-postal-code"],
+  .page-campaigns .locality-block [class*="-postal-code"] {
     width: 25%;
   }
 
@@ -13065,8 +13065,7 @@ html.js .js-hide {
 .node-type-membership-page .step,
 .node-type-fundraising-campaign .step,
 .page-campaigns .step {
-  margin: 0 5px;
-  margin: 0 0.354rem;
+  margin: 0;
   height: 30px;
   height: 1.999rem;
   width: 30px;
@@ -13080,8 +13079,7 @@ html.js .js-hide {
 .node-type-fundraising-campaign .step.active,
 .page-campaigns .step.active {
   background-color: #f9babb;
-  color: #fff;
-  font-weight: bold;
+  color: black;
 }
 
 @media print {
