@@ -12862,7 +12862,7 @@ html.js .js-hide {
 .node-type-fundraising-campaign .hero,
 .page-campaigns .hero {
   background-repeat: no-repeat;
-  min-height: 500px;
+  min-height: 550px;
   background-position: center;
   top: 0;
   left: 0;
@@ -12925,6 +12925,7 @@ html.js .js-hide {
 .node-type-fundraising-campaign form,
 .page-campaigns form {
   position: relative;
+  max-width: 475px;
 }
 
 .node-type-donation #redhen-donation-form,
