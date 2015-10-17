@@ -52,9 +52,13 @@ function nkf_base_preprocess_page(&$vars) {
   if(!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
      && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
+       $image_uri = $vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'];
+       $style = 'full_page_background';
+       $derivative_uri = image_style_path($style, $image_uri);
+       $success = file_exists($derivative_uri) || image_style_create_derivative(image_style_load($style), $image_uri, $derivative_uri);
+       $new_image_url  = file_create_url($derivative_uri);
        $vars['background_image'] = true;
-       $vars['background_image_uri'] = file_create_url($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri']);
-       //image_style_url('full_page_background', $vars['node']->field_hero_image_background['LANGUAGE_NONE'][0]['uri']);
+       $vars['background_image_uri'] =  $new_image_url;
   }
 
   $page_classes = array('page');
