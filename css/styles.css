@@ -909,11 +909,7 @@ img {
   /* 1 */
 }
 
-.position--absolute,
-.node-type-donation .hero,
-.node-type-membership-page .hero,
-.node-type-fundraising-campaign .hero,
-.page-campaigns .hero {
+.position--absolute {
   position: absolute;
 }
 
@@ -1225,19 +1221,7 @@ img {
 }
 
 .text-align--center,
-.header__nav--primary,
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend,
-.node-type-donation .form-actions,
-.node-type-membership-page .form-actions,
-.node-type-fundraising-campaign .form-actions,
-.page-campaigns .form-actions,
-.node-type-donation .form-item-signup,
-.node-type-membership-page .form-item-signup,
-.node-type-fundraising-campaign .form-item-signup,
-.page-campaigns .form-item-signup {
+.header__nav--primary {
   text-align: center;
 }
 
@@ -1297,14 +1281,11 @@ a {
 
 .text-transform--uppercase,
 .caps,
+.node-type-donation .node-title,
 .node-type-donation h1,
 .node-type-membership-page h1,
 .node-type-fundraising-campaign h1,
-.page-campaigns h1,
-.node-type-donation .form-submit,
-.node-type-membership-page .form-submit,
-.node-type-fundraising-campaign .form-submit,
-.page-campaigns .form-submit {
+.page-campaigns h1 {
   text-transform: uppercase;
 }
 
@@ -2317,6 +2298,10 @@ legend {
 .node-type-membership-page #payment-details,
 .node-type-fundraising-campaign #payment-details,
 .page-campaigns #payment-details,
+.node-type-donation .form-item-payment-details-credit-card-number,
+.node-type-membership-page .form-item-payment-details-credit-card-number,
+.node-type-fundraising-campaign .form-item-payment-details-credit-card-number,
+.page-campaigns .form-item-payment-details-credit-card-number,
 .node-type-donation .steps,
 .node-type-membership-page .steps,
 .node-type-fundraising-campaign .steps,
@@ -2365,6 +2350,10 @@ legend {
 .node-type-membership-page #payment-details,
 .node-type-fundraising-campaign #payment-details,
 .page-campaigns #payment-details,
+.node-type-donation .form-item-payment-details-credit-card-number,
+.node-type-membership-page .form-item-payment-details-credit-card-number,
+.node-type-fundraising-campaign .form-item-payment-details-credit-card-number,
+.page-campaigns .form-item-payment-details-credit-card-number,
 .node-type-donation .steps,
 .node-type-membership-page .steps,
 .node-type-fundraising-campaign .steps,
@@ -2384,38 +2373,38 @@ legend {
 .node-type-membership-page #edit-donation-select > *,
 .node-type-fundraising-campaign #edit-donation-select > *,
 .page-campaigns #edit-donation-select > *,
-.node-type-donation .form-item-email,
-.node-type-membership-page .form-item-email,
-.node-type-fundraising-campaign .form-item-email,
-.page-campaigns .form-item-email,
-.node-type-donation .field-name-field-phone,
-.node-type-membership-page .field-name-field-phone,
-.node-type-fundraising-campaign .field-name-field-phone,
-.page-campaigns .field-name-field-phone,
-.node-type-donation .field-type-mailchimp-lists-subscription,
-.node-type-membership-page .field-type-mailchimp-lists-subscription,
-.node-type-fundraising-campaign .field-type-mailchimp-lists-subscription,
-.page-campaigns .field-type-mailchimp-lists-subscription,
 .node-type-donation .form-item-first-name,
 .node-type-donation .form-item-last-name,
+.node-type-donation .form-item-email,
+.node-type-donation .field-name-field-phone,
 .node-type-donation .field-name-field-company-name,
 .node-type-donation .field-name-field-professional-credentials,
 .node-type-donation .field-name-field-prefix,
 .node-type-membership-page .form-item-first-name,
 .node-type-membership-page .form-item-last-name,
+.node-type-membership-page .form-item-email,
+.node-type-membership-page .field-name-field-phone,
 .node-type-membership-page .field-name-field-company-name,
 .node-type-membership-page .field-name-field-professional-credentials,
 .node-type-membership-page .field-name-field-prefix,
 .node-type-fundraising-campaign .form-item-first-name,
 .node-type-fundraising-campaign .form-item-last-name,
+.node-type-fundraising-campaign .form-item-email,
+.node-type-fundraising-campaign .field-name-field-phone,
 .node-type-fundraising-campaign .field-name-field-company-name,
 .node-type-fundraising-campaign .field-name-field-professional-credentials,
 .node-type-fundraising-campaign .field-name-field-prefix,
 .page-campaigns .form-item-first-name,
 .page-campaigns .form-item-last-name,
+.page-campaigns .form-item-email,
+.page-campaigns .field-name-field-phone,
 .page-campaigns .field-name-field-company-name,
 .page-campaigns .field-name-field-professional-credentials,
 .page-campaigns .field-name-field-prefix,
+.node-type-donation .field-type-mailchimp-lists-subscription,
+.node-type-membership-page .field-type-mailchimp-lists-subscription,
+.node-type-fundraising-campaign .field-type-mailchimp-lists-subscription,
+.page-campaigns .field-type-mailchimp-lists-subscription,
 .node-type-donation .street-block .form-item,
 .node-type-membership-page .street-block .form-item,
 .node-type-fundraising-campaign .street-block .form-item,
@@ -2436,14 +2425,6 @@ legend {
 .node-type-fundraising-campaign .field-name-field-notify-lastname,
 .page-campaigns .field-name-field-notify-firstname,
 .page-campaigns .field-name-field-notify-lastname,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
 .node-type-donation .form-item-payment-details-credit-card-number,
 .node-type-membership-page .form-item-payment-details-credit-card-number,
 .node-type-fundraising-campaign .form-item-payment-details-credit-card-number,
@@ -2486,38 +2467,38 @@ legend {
 .node-type-membership-page #edit-donation-select > *,
 .node-type-fundraising-campaign #edit-donation-select > *,
 .page-campaigns #edit-donation-select > *,
-.node-type-donation .form-item-email,
-.node-type-membership-page .form-item-email,
-.node-type-fundraising-campaign .form-item-email,
-.page-campaigns .form-item-email,
-.node-type-donation .field-name-field-phone,
-.node-type-membership-page .field-name-field-phone,
-.node-type-fundraising-campaign .field-name-field-phone,
-.page-campaigns .field-name-field-phone,
-.node-type-donation .field-type-mailchimp-lists-subscription,
-.node-type-membership-page .field-type-mailchimp-lists-subscription,
-.node-type-fundraising-campaign .field-type-mailchimp-lists-subscription,
-.page-campaigns .field-type-mailchimp-lists-subscription,
 .node-type-donation .form-item-first-name,
 .node-type-donation .form-item-last-name,
+.node-type-donation .form-item-email,
+.node-type-donation .field-name-field-phone,
 .node-type-donation .field-name-field-company-name,
 .node-type-donation .field-name-field-professional-credentials,
 .node-type-donation .field-name-field-prefix,
 .node-type-membership-page .form-item-first-name,
 .node-type-membership-page .form-item-last-name,
+.node-type-membership-page .form-item-email,
+.node-type-membership-page .field-name-field-phone,
 .node-type-membership-page .field-name-field-company-name,
 .node-type-membership-page .field-name-field-professional-credentials,
 .node-type-membership-page .field-name-field-prefix,
 .node-type-fundraising-campaign .form-item-first-name,
 .node-type-fundraising-campaign .form-item-last-name,
+.node-type-fundraising-campaign .form-item-email,
+.node-type-fundraising-campaign .field-name-field-phone,
 .node-type-fundraising-campaign .field-name-field-company-name,
 .node-type-fundraising-campaign .field-name-field-professional-credentials,
 .node-type-fundraising-campaign .field-name-field-prefix,
 .page-campaigns .form-item-first-name,
 .page-campaigns .form-item-last-name,
+.page-campaigns .form-item-email,
+.page-campaigns .field-name-field-phone,
 .page-campaigns .field-name-field-company-name,
 .page-campaigns .field-name-field-professional-credentials,
 .page-campaigns .field-name-field-prefix,
+.node-type-donation .field-type-mailchimp-lists-subscription,
+.node-type-membership-page .field-type-mailchimp-lists-subscription,
+.node-type-fundraising-campaign .field-type-mailchimp-lists-subscription,
+.page-campaigns .field-type-mailchimp-lists-subscription,
 .node-type-donation .street-block .form-item,
 .node-type-membership-page .street-block .form-item,
 .node-type-fundraising-campaign .street-block .form-item,
@@ -2538,14 +2519,6 @@ legend {
 .node-type-fundraising-campaign .field-name-field-notify-lastname,
 .page-campaigns .field-name-field-notify-firstname,
 .page-campaigns .field-name-field-notify-lastname,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
 .node-type-donation .form-item-payment-details-credit-card-number,
 .node-type-membership-page .form-item-payment-details-credit-card-number,
 .node-type-fundraising-campaign .form-item-payment-details-credit-card-number,
@@ -4051,11 +4024,7 @@ a:hover {
   color: #bbb;
 }
 
-.color--gray-4,
-.node-type-donation .description,
-.node-type-membership-page .description,
-.node-type-fundraising-campaign .description,
-.page-campaigns .description {
+.color--gray-4 {
   color: #777;
 }
 
@@ -4559,11 +4528,7 @@ a:hover {
   border-right-width: 0;
 }
 
-.border-bottom-width--none,
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend {
+.border-bottom-width--none {
   border-bottom-width: 0;
 }
 
@@ -5850,27 +5815,7 @@ a:hover {
 }
 
 .margin--none,
-.header__nav .menu,
-.node-type-donation .locality-block [class*="-locality"],
-.node-type-membership-page .locality-block [class*="-locality"],
-.node-type-fundraising-campaign .locality-block [class*="-locality"],
-.page-campaigns .locality-block [class*="-locality"],
-.node-type-donation .locality-block [class*="-administrative-area"],
-.node-type-membership-page .locality-block [class*="-administrative-area"],
-.node-type-fundraising-campaign .locality-block [class*="-administrative-area"],
-.page-campaigns .locality-block [class*="-administrative-area"],
-.node-type-donation .locality-block [class*="-postal-code"],
-.node-type-membership-page .locality-block [class*="-postal-code"],
-.node-type-fundraising-campaign .locality-block [class*="-postal-code"],
-.page-campaigns .locality-block [class*="-postal-code"],
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code {
+.header__nav .menu {
   margin: 0;
 }
 
@@ -5878,15 +5823,7 @@ a:hover {
   margin-top: 0;
 }
 
-.margin-right--none,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code {
+.margin-right--none {
   margin-right: 0;
 }
 
@@ -7941,23 +7878,7 @@ a:hover {
 }
 
 .padding--none,
-.header__nav .menu,
-.node-type-donation .form-item .form-item,
-.node-type-membership-page .form-item .form-item,
-.node-type-fundraising-campaign .form-item .form-item,
-.page-campaigns .form-item .form-item,
-.node-type-donation fieldset,
-.node-type-membership-page fieldset,
-.node-type-fundraising-campaign fieldset,
-.page-campaigns fieldset,
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend,
-.node-type-donation .form-item.form-type-select-or-other,
-.node-type-membership-page .form-item.form-type-select-or-other,
-.node-type-fundraising-campaign .form-item.form-type-select-or-other,
-.page-campaigns .form-item.form-type-select-or-other {
+.header__nav .menu {
   padding: 0;
 }
 
@@ -8026,23 +7947,7 @@ a:hover {
   padding-bottom: 0.354rem;
 }
 
-.padding--xs,
-.node-type-donation .form-item,
-.node-type-membership-page .form-item,
-.node-type-fundraising-campaign .form-item,
-.page-campaigns .form-item,
-.node-type-donation .form-type-radio.form-item-donation-select,
-.node-type-donation .form-item.form-item-donation-other,
-.node-type-membership-page .form-type-radio.form-item-donation-select,
-.node-type-membership-page .form-item.form-item-donation-other,
-.node-type-fundraising-campaign .form-type-radio.form-item-donation-select,
-.node-type-fundraising-campaign .form-item.form-item-donation-other,
-.page-campaigns .form-type-radio.form-item-donation-select,
-.page-campaigns .form-item.form-item-donation-other,
-.node-type-donation #edit-donation-select > *,
-.node-type-membership-page #edit-donation-select > *,
-.node-type-fundraising-campaign #edit-donation-select > *,
-.page-campaigns #edit-donation-select > * {
+.padding--xs {
   padding: 8px;
   padding: 0.5rem;
 }
@@ -8088,11 +7993,7 @@ a:hover {
 
 .padding-top--sm,
 .password-strength,
-.password-confirm,
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend {
+.password-confirm {
   padding-top: 11px;
   padding-top: 0.707rem;
 }
@@ -8129,11 +8030,7 @@ a:hover {
 
 .padding--md,
 .header__nav a,
-.header__nav--secondary .donate,
-.node-type-donation #edit-donation-select label,
-.node-type-membership-page #edit-donation-select label,
-.node-type-fundraising-campaign #edit-donation-select label,
-.page-campaigns #edit-donation-select label {
+.header__nav--secondary .donate {
   padding: 15px;
   padding: 1rem;
 }
@@ -8165,22 +8062,14 @@ a:hover {
   padding-right: 1rem;
 }
 
-.padding-y--md,
-.node-type-donation .form-type-textfield.form-item-donation,
-.node-type-membership-page .form-type-textfield.form-item-donation,
-.node-type-fundraising-campaign .form-type-textfield.form-item-donation,
-.page-campaigns .form-type-textfield.form-item-donation {
+.padding-y--md {
   padding-top: 15px;
   padding-top: 1rem;
   padding-bottom: 15px;
   padding-bottom: 1rem;
 }
 
-.padding--lg,
-.node-type-donation .form-submit,
-.node-type-membership-page .form-submit,
-.node-type-fundraising-campaign .form-submit,
-.page-campaigns .form-submit {
+.padding--lg {
   padding: 21px;
   padding: 1.414rem;
 }
@@ -8195,11 +8084,7 @@ a:hover {
   padding-right: 1.414rem;
 }
 
-.padding-bottom--lg,
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend {
+.padding-bottom--lg {
   padding-bottom: 21px;
   padding-bottom: 1.414rem;
 }
@@ -8306,11 +8191,7 @@ a:hover {
   padding: 3.998rem;
 }
 
-.padding-top--xxxl,
-.node-type-donation .form-actions,
-.node-type-membership-page .form-actions,
-.node-type-fundraising-campaign .form-actions,
-.page-campaigns .form-actions {
+.padding-top--xxxl {
   padding-top: 60px;
   padding-top: 3.998rem;
 }
@@ -11209,11 +11090,7 @@ h2,
 }
 
 h3,
-.h3,
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend {
+.h3 {
   font-size: 21px;
   font-size: 1.414rem;
 }
@@ -11244,10 +11121,6 @@ h5,
 h6 .h1,
 .h2,
 .h3,
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend,
 .h4,
 .h5,
 .h6 {
@@ -11277,6 +11150,7 @@ h6 .h1,
 }
 
 .font-size--xl,
+.node-type-donation .node-title,
 .node-type-donation h1,
 .node-type-membership-page h1,
 .node-type-fundraising-campaign h1,
@@ -11296,6 +11170,7 @@ h6 .h1,
 }
 
 .caps,
+.node-type-donation .node-title,
 .node-type-donation h1,
 .node-type-membership-page h1,
 .node-type-fundraising-campaign h1,
@@ -11352,7 +11227,11 @@ h6 .h1,
 .node-type-donation #edit-donation-select > *,
 .node-type-membership-page #edit-donation-select > *,
 .node-type-fundraising-campaign #edit-donation-select > *,
-.page-campaigns #edit-donation-select > * {
+.page-campaigns #edit-donation-select > *,
+.node-type-donation .commerce-credit-card-expiration .form-item,
+.node-type-membership-page .commerce-credit-card-expiration .form-item,
+.node-type-fundraising-campaign .commerce-credit-card-expiration .form-item,
+.page-campaigns .commerce-credit-card-expiration .form-item {
   width: 50%;
 }
 
@@ -11397,10 +11276,14 @@ h6 .h1,
 }
 
 .width--100,
-.node-type-donation #redhen-donation-form,
-.node-type-membership-page #redhen-donation-form,
-.node-type-fundraising-campaign #redhen-donation-form,
-.page-campaigns #redhen-donation-form,
+.node-type-donation .header__brand,
+.node-type-membership-page .header__brand,
+.node-type-fundraising-campaign .header__brand,
+.page-campaigns .header__brand,
+.node-type-donation [id*="redhen-donation-form"],
+.node-type-membership-page [id*="redhen-donation-form"],
+.node-type-fundraising-campaign [id*="redhen-donation-form"],
+.page-campaigns [id*="redhen-donation-form"],
 .node-type-donation .form-text,
 .node-type-membership-page .form-text,
 .node-type-fundraising-campaign .form-text,
@@ -11433,22 +11316,22 @@ h6 .h1,
 .node-type-membership-page [class*="-premise"],
 .node-type-fundraising-campaign [class*="-premise"],
 .page-campaigns [class*="-premise"],
-.node-type-donation .locality-block [class*="-locality"],
-.node-type-membership-page .locality-block [class*="-locality"],
-.node-type-fundraising-campaign .locality-block [class*="-locality"],
-.page-campaigns .locality-block [class*="-locality"],
-.node-type-donation .locality-block [class*="-administrative-area"],
-.node-type-membership-page .locality-block [class*="-administrative-area"],
-.node-type-fundraising-campaign .locality-block [class*="-administrative-area"],
-.page-campaigns .locality-block [class*="-administrative-area"],
-.node-type-donation .locality-block .state,
-.node-type-membership-page .locality-block .state,
-.node-type-fundraising-campaign .locality-block .state,
-.page-campaigns .locality-block .state,
-.node-type-donation .locality-block [class*="-postal-code"],
-.node-type-membership-page .locality-block [class*="-postal-code"],
-.node-type-fundraising-campaign .locality-block [class*="-postal-code"],
-.page-campaigns .locality-block [class*="-postal-code"],
+.node-type-donation [class*="-locality"],
+.node-type-membership-page [class*="-locality"],
+.node-type-fundraising-campaign [class*="-locality"],
+.page-campaigns [class*="-locality"],
+.node-type-donation [class*="-administrative-area"],
+.node-type-membership-page [class*="-administrative-area"],
+.node-type-fundraising-campaign [class*="-administrative-area"],
+.page-campaigns [class*="-administrative-area"],
+.node-type-donation .state,
+.node-type-membership-page .state,
+.node-type-fundraising-campaign .state,
+.page-campaigns .state,
+.node-type-donation [class*="-postal-code"],
+.node-type-membership-page [class*="-postal-code"],
+.node-type-fundraising-campaign [class*="-postal-code"],
+.page-campaigns [class*="-postal-code"],
 .node-type-donation .required-fields > div,
 .node-type-membership-page .required-fields > div,
 .node-type-fundraising-campaign .required-fields > div,
@@ -11461,14 +11344,6 @@ h6 .h1,
 .node-type-fundraising-campaign .field-name-field-notify-lastname,
 .page-campaigns .field-name-field-notify-firstname,
 .page-campaigns .field-name-field-notify-lastname,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-.node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-.page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
 .node-type-donation .form-item-field-benefiting-office-und select,
 .node-type-membership-page .form-item-field-benefiting-office-und select,
 .node-type-fundraising-campaign .form-item-field-benefiting-office-und select,
@@ -11480,7 +11355,15 @@ h6 .h1,
 .node-type-donation .commerce-credit-card-expiration,
 .node-type-membership-page .commerce-credit-card-expiration,
 .node-type-fundraising-campaign .commerce-credit-card-expiration,
-.page-campaigns .commerce-credit-card-expiration {
+.page-campaigns .commerce-credit-card-expiration,
+.node-type-donation .commerce-credit-card-expiration select,
+.node-type-membership-page .commerce-credit-card-expiration select,
+.node-type-fundraising-campaign .commerce-credit-card-expiration select,
+.page-campaigns .commerce-credit-card-expiration select,
+.node-type-donation .form-submit,
+.node-type-membership-page .form-submit,
+.node-type-fundraising-campaign .form-submit,
+.page-campaigns .form-submit {
   width: 100%;
 }
 
@@ -11631,10 +11514,10 @@ h6 .h1,
   }
 
   .sm--width--20,
-  .node-type-donation .locality-block [class*="-administrative-area"],
-  .node-type-membership-page .locality-block [class*="-administrative-area"],
-  .node-type-fundraising-campaign .locality-block [class*="-administrative-area"],
-  .page-campaigns .locality-block [class*="-administrative-area"] {
+  .node-type-donation [class*="-administrative-area"],
+  .node-type-membership-page [class*="-administrative-area"],
+  .node-type-fundraising-campaign [class*="-administrative-area"],
+  .page-campaigns [class*="-administrative-area"] {
     width: 20%;
   }
 
@@ -11643,18 +11526,14 @@ h6 .h1,
   .node-type-membership-page [class*="-premise"],
   .node-type-fundraising-campaign [class*="-premise"],
   .page-campaigns [class*="-premise"],
-  .node-type-donation .locality-block [class*="-postal-code"],
-  .node-type-membership-page .locality-block [class*="-postal-code"],
-  .node-type-fundraising-campaign .locality-block [class*="-postal-code"],
-  .page-campaigns .locality-block [class*="-postal-code"] {
+  .node-type-donation [class*="-postal-code"],
+  .node-type-membership-page [class*="-postal-code"],
+  .node-type-fundraising-campaign [class*="-postal-code"],
+  .page-campaigns [class*="-postal-code"] {
     width: 25%;
   }
 
-  .sm--width--30,
-  .node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-  .node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-  .node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code,
-  .page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code {
+  .sm--width--30 {
     width: 30%;
   }
 
@@ -11683,31 +11562,31 @@ h6 .h1,
   .node-type-membership-page .form-item-donation-other,
   .node-type-fundraising-campaign .form-item-donation-other,
   .page-campaigns .form-item-donation-other,
-  .node-type-donation .form-item-email,
-  .node-type-membership-page .form-item-email,
-  .node-type-fundraising-campaign .form-item-email,
-  .page-campaigns .form-item-email,
-  .node-type-donation .field-name-field-phone,
-  .node-type-membership-page .field-name-field-phone,
-  .node-type-fundraising-campaign .field-name-field-phone,
-  .page-campaigns .field-name-field-phone,
   .node-type-donation .form-item-first-name,
   .node-type-donation .form-item-last-name,
+  .node-type-donation .form-item-email,
+  .node-type-donation .field-name-field-phone,
   .node-type-donation .field-name-field-company-name,
   .node-type-donation .field-name-field-professional-credentials,
   .node-type-donation .field-name-field-prefix,
   .node-type-membership-page .form-item-first-name,
   .node-type-membership-page .form-item-last-name,
+  .node-type-membership-page .form-item-email,
+  .node-type-membership-page .field-name-field-phone,
   .node-type-membership-page .field-name-field-company-name,
   .node-type-membership-page .field-name-field-professional-credentials,
   .node-type-membership-page .field-name-field-prefix,
   .node-type-fundraising-campaign .form-item-first-name,
   .node-type-fundraising-campaign .form-item-last-name,
+  .node-type-fundraising-campaign .form-item-email,
+  .node-type-fundraising-campaign .field-name-field-phone,
   .node-type-fundraising-campaign .field-name-field-company-name,
   .node-type-fundraising-campaign .field-name-field-professional-credentials,
   .node-type-fundraising-campaign .field-name-field-prefix,
   .page-campaigns .form-item-first-name,
   .page-campaigns .form-item-last-name,
+  .page-campaigns .form-item-email,
+  .page-campaigns .field-name-field-phone,
   .page-campaigns .field-name-field-company-name,
   .page-campaigns .field-name-field-professional-credentials,
   .page-campaigns .field-name-field-prefix,
@@ -11739,10 +11618,10 @@ h6 .h1,
   }
 
   .sm--width--55,
-  .node-type-donation .locality-block [class*="-locality"],
-  .node-type-membership-page .locality-block [class*="-locality"],
-  .node-type-fundraising-campaign .locality-block [class*="-locality"],
-  .page-campaigns .locality-block [class*="-locality"] {
+  .node-type-donation [class*="-locality"],
+  .node-type-membership-page [class*="-locality"],
+  .node-type-fundraising-campaign [class*="-locality"],
+  .page-campaigns [class*="-locality"] {
     width: 55%;
   }
 
@@ -11758,11 +11637,7 @@ h6 .h1,
     width: 66.66667%;
   }
 
-  .sm--width--70,
-  .node-type-donation .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-  .node-type-membership-page .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-  .node-type-fundraising-campaign .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area,
-  .page-campaigns .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area {
+  .sm--width--70 {
     width: 70%;
   }
 
@@ -12857,23 +12732,44 @@ html.js .js-hide {
   content: '';
 }
 
+.node-type-donation {
+  /*
+  .donation-tagline__container {
+    background-color: rgba(238, 238, 238, .3);
+    margin: 0;
+    max-width: 475px;
+    padding: space(xl) space(lg);
+  }*/
+}
+
+.node-type-donation h1 {
+  display: none;
+}
+
+.node-type-donation .node-title {
+  margin: 0 0 21px;
+  margin: 0 0 1.414rem;
+}
+
+.node-type-donation .donation__container {
+  background-color: rgba(238, 238, 238, 0.3);
+  max-width: 475px;
+  padding: 30px 21px;
+  padding: 1.999rem 1.414rem;
+}
+
 .node-type-donation .hero,
 .node-type-membership-page .hero,
 .node-type-fundraising-campaign .hero,
 .page-campaigns .hero {
+  position: absolute;
   background-repeat: no-repeat;
   min-height: 550px;
   background-position: center;
   top: 0;
   left: 0;
   right: 0;
-}
-
-.node-type-donation .header__logo-image,
-.node-type-membership-page .header__logo-image,
-.node-type-fundraising-campaign .header__logo-image,
-.page-campaigns .header__logo-image {
-  max-height: 40px;
+  background-color: #eee;
 }
 
 .node-type-donation header,
@@ -12881,6 +12777,14 @@ html.js .js-hide {
 .node-type-fundraising-campaign header,
 .page-campaigns header {
   background-color: #fff;
+  text-align: center;
+}
+
+.node-type-donation .header__logo-image,
+.node-type-membership-page .header__logo-image,
+.node-type-fundraising-campaign .header__logo-image,
+.page-campaigns .header__logo-image {
+  max-height: 40px;
 }
 
 .node-type-donation #logo,
@@ -12904,34 +12808,12 @@ html.js .js-hide {
   display: none !important;
 }
 
-.node-type-donation .form-type-select label,
-.node-type-membership-page .form-type-select label,
-.node-type-fundraising-campaign .form-type-select label,
-.page-campaigns .form-type-select label {
-  display: none;
-}
-
-.node-type-donation .donation-step__inner,
-.node-type-membership-page .donation-step__inner,
-.node-type-fundraising-campaign .donation-step__inner,
-.page-campaigns .donation-step__inner {
-  position: relative;
-  padding: 15px;
-  padding: 1rem;
-}
-
-.node-type-donation form,
-.node-type-membership-page form,
-.node-type-fundraising-campaign form,
-.page-campaigns form {
+.node-type-donation [id*="redhen-donation-form"],
+.node-type-membership-page [id*="redhen-donation-form"],
+.node-type-fundraising-campaign [id*="redhen-donation-form"],
+.page-campaigns [id*="redhen-donation-form"] {
   position: relative;
   max-width: 475px;
-}
-
-.node-type-donation #redhen-donation-form,
-.node-type-membership-page #redhen-donation-form,
-.node-type-fundraising-campaign #redhen-donation-form,
-.page-campaigns #redhen-donation-form {
   background-color: #fff;
   padding: 0;
   border: 1px solid #eee;
@@ -12942,6 +12824,64 @@ html.js .js-hide {
 .node-type-fundraising-campaign .form-item label:not(.option),
 .page-campaigns .form-item label:not(.option) {
   white-space: nowrap;
+}
+
+.node-type-donation .form-item,
+.node-type-membership-page .form-item,
+.node-type-fundraising-campaign .form-item,
+.page-campaigns .form-item {
+  padding: 8px;
+  padding: 0.5rem;
+}
+
+.node-type-donation .form-item .form-item,
+.node-type-membership-page .form-item .form-item,
+.node-type-fundraising-campaign .form-item .form-item,
+.page-campaigns .form-item .form-item {
+  padding: 0;
+}
+
+.node-type-donation .description,
+.node-type-membership-page .description,
+.node-type-fundraising-campaign .description,
+.page-campaigns .description {
+  color: #777;
+}
+
+.node-type-donation fieldset,
+.node-type-membership-page fieldset,
+.node-type-fundraising-campaign fieldset,
+.page-campaigns fieldset {
+  padding: 0;
+}
+
+.node-type-donation legend,
+.node-type-membership-page legend,
+.node-type-fundraising-campaign legend,
+.page-campaigns legend {
+  text-align: center;
+  border-bottom-width: 0;
+  font-size: 21px;
+  font-size: 1.414rem;
+  padding: 11px 0 21px 0;
+  padding: 0.707rem 0 1.414rem 0;
+}
+
+.node-type-donation .form-type-select label,
+.node-type-membership-page .form-type-select label,
+.node-type-fundraising-campaign .form-type-select label,
+.page-campaigns .form-type-select label {
+  display: none;
+}
+
+.node-type-donation .form-type-textfield.form-item-donation,
+.node-type-membership-page .form-type-textfield.form-item-donation,
+.node-type-fundraising-campaign .form-type-textfield.form-item-donation,
+.page-campaigns .form-type-textfield.form-item-donation {
+  padding-top: 15px;
+  padding-top: 1rem;
+  padding-bottom: 15px;
+  padding-bottom: 1rem;
 }
 
 .node-type-donation .form-type-textfield.form-item-donation input,
@@ -12958,20 +12898,68 @@ html.js .js-hide {
   font-size: 1.999rem;
 }
 
+.node-type-donation .form-type-radio.form-item-donation-select,
+.node-type-donation .form-item.form-item-donation-other,
+.node-type-membership-page .form-type-radio.form-item-donation-select,
+.node-type-membership-page .form-item.form-item-donation-other,
+.node-type-fundraising-campaign .form-type-radio.form-item-donation-select,
+.node-type-fundraising-campaign .form-item.form-item-donation-other,
+.page-campaigns .form-type-radio.form-item-donation-select,
+.page-campaigns .form-item.form-item-donation-other {
+  padding: 8px;
+  padding: 0.5rem;
+}
+
+.node-type-donation .form-item.form-type-select-or-other,
+.node-type-membership-page .form-item.form-type-select-or-other,
+.node-type-fundraising-campaign .form-item.form-type-select-or-other,
+.page-campaigns .form-item.form-type-select-or-other {
+  padding: 0;
+}
+
+.node-type-donation #edit-donation-select > *,
+.node-type-membership-page #edit-donation-select > *,
+.node-type-fundraising-campaign #edit-donation-select > *,
+.page-campaigns #edit-donation-select > * {
+  padding: 8px;
+  padding: 0.5rem;
+}
+
+.node-type-donation #edit-donation-select label,
+.node-type-membership-page #edit-donation-select label,
+.node-type-fundraising-campaign #edit-donation-select label,
+.page-campaigns #edit-donation-select label {
+  padding: 15px;
+  padding: 1rem;
+}
+
+.node-type-donation [class*="-locality"],
+.node-type-membership-page [class*="-locality"],
+.node-type-fundraising-campaign [class*="-locality"],
+.page-campaigns [class*="-locality"] {
+  margin: 0;
+}
+
+.node-type-donation [class*="-administrative-area"],
+.node-type-membership-page [class*="-administrative-area"],
+.node-type-fundraising-campaign [class*="-administrative-area"],
+.page-campaigns [class*="-administrative-area"] {
+  margin: 0;
+}
+
+.node-type-donation [class*="-postal-code"],
+.node-type-membership-page [class*="-postal-code"],
+.node-type-fundraising-campaign [class*="-postal-code"],
+.page-campaigns [class*="-postal-code"] {
+  margin: 0;
+}
+
 .node-type-donation .commerce-credit-card-expiration .form-item,
 .node-type-membership-page .commerce-credit-card-expiration .form-item,
 .node-type-fundraising-campaign .commerce-credit-card-expiration .form-item,
 .page-campaigns .commerce-credit-card-expiration .form-item {
   display: table-cell;
-  width: 50%;
   vertical-align: bottom;
-}
-
-.node-type-donation .commerce-credit-card-expiration select,
-.node-type-membership-page .commerce-credit-card-expiration select,
-.node-type-fundraising-campaign .commerce-credit-card-expiration select,
-.page-campaigns .commerce-credit-card-expiration select {
-  width: 100%;
 }
 
 .node-type-donation .field-name-field-company-match,
@@ -12991,11 +12979,38 @@ html.js .js-hide {
   background-color: #eee;
 }
 
+.node-type-donation .form-actions,
+.node-type-membership-page .form-actions,
+.node-type-fundraising-campaign .form-actions,
+.page-campaigns .form-actions {
+  padding-top: 60px;
+  padding-top: 3.998rem;
+  text-align: center;
+}
+
 .node-type-donation .form-submit,
 .node-type-membership-page .form-submit,
 .node-type-fundraising-campaign .form-submit,
 .page-campaigns .form-submit {
-  width: 100%;
+  padding: 21px;
+  padding: 1.414rem;
+  text-transform: uppercase;
+}
+
+.node-type-donation .form-item-signup,
+.node-type-membership-page .form-item-signup,
+.node-type-fundraising-campaign .form-item-signup,
+.page-campaigns .form-item-signup {
+  text-align: center;
+}
+
+.node-type-donation .donation-step__inner,
+.node-type-membership-page .donation-step__inner,
+.node-type-fundraising-campaign .donation-step__inner,
+.page-campaigns .donation-step__inner {
+  position: relative;
+  padding: 15px;
+  padding: 1rem;
 }
 
 .node-type-donation .next,

@@ -106,12 +106,6 @@
 ?>
 
 <div id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-  <?php print render($title_prefix); ?>
-  <?php if (!$page): ?>
-    <h2<?php print $title_attributes; ?>><a href="<?php print $node_url; ?>"><?php print $title; ?></a></h2>
-  <?php endif; ?>
-  <?php print render($title_suffix); ?>
-
   <div class="content position--relative1"<?php print $content_attributes; ?>>
     <?php
       // We hide the comments and links now so that we can render them later.
@@ -119,19 +113,27 @@
       hide($content['links']);
       //print render($content);
     ?>
+
     <div class="grid width--100">
       <?php if ((isset($content['body']) || isset($content['field_hero_image']))): ?>
       <div class="grid-cell sm--width--50 width--100 sm--padding-right--xxl">
         <div class="padding-bottom--md">
           <?php print render($content['field_hero_image']); ?>
-          <p class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></p>
           <?php print render($content['body']); ?>
         </div>
       </div>
       <?php endif; ?>
 
       <div class="grid-cell sm--width--50 width--100 ">
-        <?php print render($content['field_donation_type']); ?>
+        <div class="donation__container">
+          <?php print render($title_prefix); ?>
+          <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
+          <?php print render($title_suffix); ?>
+          <?php if (isset($content['field_donation_tag_line'])): ?>
+            <p class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></p>
+          <?php endif; ?>
+          <?php print render($content['field_donation_type']); ?>
+        </div>
       </div>
     </div>
   </div>

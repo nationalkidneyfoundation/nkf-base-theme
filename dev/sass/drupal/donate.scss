@@ -1,4 +1,28 @@
 
+// only for node-type-donation
+.node-type-donation {
+  h1 {
+    display: none;
+  }
+  .node-title {
+    @extend .caps;
+    @extend .font-size--xl;
+    margin: 0 0 space(lg);
+  }
+  /*
+  .donation-tagline__container {
+    background-color: rgba(238, 238, 238, .3);
+    margin: 0;
+    max-width: 475px;
+    padding: space(xl) space(lg);
+  }*/
+  .donation__container {
+    background-color: rgba(238, 238, 238, .3);
+    max-width: 475px;
+    padding: space(xl) space(lg);
+  }
+}
+
 // target only select pages
 .node-type-donation,
 .node-type-membership-page,
@@ -8,16 +32,14 @@
   // set background image
   .hero {
     @extend .background-size--cover;
-    @extend .position--absolute;
-    //@extend .background-color--orange;
-    //background-image: url('../img/donation-hero.jpg');
+    position: absolute;
     background-repeat: no-repeat;
     min-height: 550px;
     background-position: center;
     top: 0;
     left: 0;
     right: 0;
-    //background-color: $gray-1;
+    background-color: $gray-1;
   }
 
   // show full form on error
@@ -29,37 +51,34 @@
     .previous-next {
       @extend .xs--hide;
     }
-
   }
 
-  //@extend .background-color--orange;
-
-  // compress the nav
-  .header__logo-image {
-    max-height: 40px;
-  }
+  // Header and Logo
   header {
-    background-color: $white;//$gray-1;
+    background-color: $white;
+    text-align: center;
     .container {
       @extend .sm--padding-y--md;
     }
   }
+  .header__brand {
+    @extend .width--100;;
+  }
+  .header__logo-image {
+    max-height: 40px;
+  }
   #logo {
     background-image: url(../img/NKF-logoR_Hori_OB.png);
   }
+
+  // main section tweaks
   .main {
     @extend .padding-bottom--xxxl;
     background-color: $gray-1;
   }
-  // hide title from view
   h1 {
-    //@extend .invisible;
     @extend .caps;
-    //@extend .font-weight--400;
     @extend .font-size--xl;
-    //@extend .sm--width--60;
-    //@extend .text-align--center;
-    //@extend .color--white;
   }
   // hide tabs for anon
   &.not-logged-in {
@@ -68,91 +87,69 @@
     }
   }
 
-  .form-type-select label {
-    display: none;
-  }
 
-  .donation-step__inner {
+  // donation form
+  [id*="redhen-donation-form"] {
     position: relative;
-    padding: space(md);
-  }
-
-  form {
-    position: relative;
+    @extend .width--100;;
     max-width: 475px;
-  }
-  // this is the form container
-  #redhen-donation-form {
-    //@extend .border-radius--lg;
-    @extend .width--100;
-    //@extend .border-width--xs;
-    //@extend .border-style--solid;
-    //@extend .border-color--gray-4;
-    //@extend .position--absolute;
-    //box-shadow: 0 1px 15px rgba(0,0,0,0.5);
-    //border: solid $gray-1;
-    //border-width: 0 border-width(xl);
-    background-color: #fff;
+    background-color: $white;
     padding: 0;
     border: 1px solid $gray-1;
+
   }
 
   .form-item label {
     @extend .font-weight--400;
-    //@extend .font-size--lg;
     &:not(.option) {
       white-space: nowrap;
     }
-
   }
 
   // reset basic form elements
   .form-text {
-    @extend .width--100;
+    @extend .width--100;;
   }
 
   .form-item {
-    @extend .width--100;
-    @extend .padding--xs;
+    @extend .width--100;;
+    padding: space(xs);
     // reset sub form items
     .form-item {
-      @extend .padding--none;
+      padding: 0;
     }
   }
-
   .description {
-    @extend .color--gray-4;
+    color: $gray-4;
   }
-
   fieldset {
-    @extend .padding--none;
+    padding: 0;
   }
-
   legend {
-    //@extend .caps;
     @extend .grid-cell;
-    @extend .width--100;
-    @extend .text-align--center;
-    @extend .border-bottom-width--none;
-    @extend .h3;
-    @extend .padding--none;
-    @extend .padding-top--sm;
-    @extend .padding-bottom--lg;
-  //  @extend .color--orange;
+    @extend .width--100;;
+    text-align: center;
+    border-bottom-width: 0;
+    font-size: $h3;
+    padding: space(sm) 0 space(lg) 0;
+
+  }
+  // hide labels for all select lists
+  // this is because we are using placeholders
+  // for other elements
+  .form-type-select label {
+    display: none;
   }
 
   // Amount section
-  // hide amount label
-  .form-item-donation.form-type-textfield label {
-    //@extend .hide;
-  }
   .form-item-donation .description {
     @extend .hide;
   }
   .form-type-textfield.form-item-donation {
     @extend .sm--width--50;
     @extend .center;
-    @extend .padding-y--md;
+    padding-top: space(md);
+    padding-bottom: space(md);
     input {
       text-align: center;
       font-weight: bold;
@@ -166,35 +163,34 @@
   .form-item-field-member-category-und > label:not(.option) {
     @extend .hide;
   }
-
   .form-type-radio.form-item-donation-select,
   .form-item.form-item-donation-other {
-    @extend .padding--xs;
+    padding: space(xs);
   }
   .form-item.form-type-select-or-other {
-    @extend .padding--none;
+    padding: 0;
   }
   .amount-options {
     @extend .grid;
   }
 
+  // if donation amount is select or other field
   #edit-donation-select {//,
   //#edit-field-member-category-und {
     @extend .grid;
-    @extend .width--100;
+    @extend .width--100;;
     > * {
       @extend .grid-cell;
-      //@extend .sm--width--25;
-      @extend .width--50;
-      @extend .padding--xs;
+      @extend .width--50;;
+      padding: space(xs);
     }
     input {
       @extend .hide;
     }
     label {
       @extend .button--outline--blue;
-      @extend .padding--md;
-      @extend .width--100;
+      padding: space(md);
+      @extend .width--100;;
     }
     input:checked+label{
       @extend .button--outline--blue:focus;
@@ -210,12 +206,16 @@
   #edit-redhen-contact {
     @extend .grid;
   }
-
-  .form-item-email {
-    @extend .grid-cell;
-    @extend .sm--width--50;
+  #edit-name {
+    @extend .grid;
   }
-  .field-name-field-phone {
+  .form-item-first-name,
+  .form-item-last-name,
+  .form-item-email,
+  .field-name-field-phone,
+  .field-name-field-company-name,
+  .field-name-field-professional-credentials,
+  .field-name-field-prefix {
     @extend .grid-cell;
     @extend .sm--width--50;
   }
@@ -223,27 +223,13 @@
     @extend .grid-cell;
   }
 
-  #edit-name {
-    @extend .grid;
-  }
-
-  .form-item-first-name,
-  .form-item-last-name,
-  .field-name-field-company-name,
-  .field-name-field-professional-credentials,
-  .field-name-field-prefix {
-    @extend .grid-cell;
-    @extend .sm--width--50;
-  }
-
   // Address section
   .field-type-addressfield legend {
     @extend .hide;
   }
   .country {
-    @extend .width--100;
+    @extend .width--100;;
   }
-
   .street-block {
     @extend .grid;
     .form-item {
@@ -251,37 +237,35 @@
     }
   }
   [class*="-thoroughfare"] {
-    @extend .width--100;
-    //@extend .sm--width--75;
+    @extend .width--100;;
   }
   [class*="-premise"]{
-    @extend .width--100;
+    @extend .width--100;;
     @extend .sm--width--25;
   }
-
   .locality-block {
     @extend .grid;
     .form-item {
       @extend .grid-cell;
     }
-    [class*="-locality"] {
-      @extend .width--100;
-      @extend .sm--width--55;
-      @extend .margin--none;
-    }
-    [class*="-administrative-area"] {
-      @extend .width--100;
-      @extend .sm--width--20;
-      @extend .margin--none;
-    }
-    .state {
-      @extend .width--100;
-    }
-    [class*="-postal-code"]{
-      @extend .width--100;
-      @extend .sm--width--25;
-      @extend .margin--none;
-    }
+  }
+  [class*="-locality"] {
+    @extend .width--100;;
+    @extend .sm--width--55;
+    margin: 0;
+  }
+  [class*="-administrative-area"] {
+    @extend .width--100;;
+    @extend .sm--width--20;
+    margin: 0;
+  }
+  .state {
+    @extend .width--100;;
+  }
+  [class*="-postal-code"]{
+    @extend .width--100;;
+    @extend .sm--width--25;
+    margin: 0;
   }
 
   // honor/memorial
@@ -289,7 +273,7 @@
     @extend .grid;
     > div {
       @extend .grid-cell;
-      @extend .width--100;
+      @extend .width--100;;
     }
     .field-name-field-honoree-first-name,
     .field-name-field-honoree-last-name {
@@ -301,47 +285,36 @@
   .field-name-field-notify-firstname,
   .field-name-field-notify-lastname {
     @extend .grid-cell;
-    @extend .width--100;
+    @extend .width--100;;
     @extend .sm--width--50;
   }
 
-  .form-item-field-notified-party-und-0-field-notify-address-und-0-administrative-area {
-    @extend .grid-cell;
-    @extend .width--100;
-    @extend .sm--width--70;
-    @extend .margin--none;
-    @extend .margin-right--none;
-  }
-  .form-item-field-notified-party-und-0-field-notify-address-und-0-postal-code {
-    @extend .grid-cell;
-    @extend .width--100;
-    @extend .sm--width--30;
-    @extend .margin--none;
-    @extend .margin-right--none;
-  }
   // Office
   .form-item-field-benefiting-office-und select {
-    @extend .width--100;
+    @extend .width--100;;
   }
+
+  // credit card
   #payment-details {
     @extend .grid;
   }
   .form-item-payment-details-credit-card-number {
     @extend .width--100;
     @extend .grid-cell;
+    @extend .grid;
   }
   .commerce-credit-card-expiration {
     @extend .grid-cell;
     @extend .width--100;
     @extend .sm--width--50;
-    //display: table-row;
     .form-item {
       display: table-cell;
-      width: 50%;
+      //@extend .grid-cell;
+      @extend .width--50;
       vertical-align: bottom;
     }
     select {
-      width: 100%;
+      @extend .width--100;;
     }
   }
   .commerce-month-year-divider {
@@ -350,10 +323,9 @@
   .form-item-payment-details-credit-card-code {
     @extend .grid-cell;
     @extend .sm--width--50;
-    //width: 50% !important;
   }
 
-  // sub sections
+  // "hidden" sub sections
   .field-name-field-company-match,
   .honor-info,
   .field-name-field-benefiting-office {
@@ -363,32 +335,29 @@
 
   // submit button
   .form-actions {
-    @extend .padding-top--xxxl;
-    @extend .text-align--center;
+    padding-top: space(xxxl);
+    text-align: center;
   }
   .form-submit {
     @extend .button--red;
-    //@extend .color--white;
-    @extend .padding--lg;
-    @extend .text-transform--uppercase;
-    width: 100%;
+    @extend .width--100;
+    padding: space(lg);
+    text-transform: uppercase;
+
   }
 
   //signup
   .form-item-signup {
-    @extend .text-align--center;
+    text-align: center;
   }
 
   // steps
+  .donation-step__inner {
+    position: relative;
+    padding: space(md);
+  }
   // previous next
   .previous-next {
-    //@extend .padding-x--lg;
-    //@extend .padding-y--md;
-    //@extend .background-color--orange;
-    //@extend .margin-top--lg;
-    //@extend .border-top-width--xs;
-    //@extend .border-color--gray-4;
-    //@extend .border-style--solid;
     @extend .sm--show;
   }
   .next {
@@ -423,15 +392,10 @@
   }
   .steps {
     @extend .grid;
-    //@extend .background-color--orange;
-    //@extend .border-bottom-width--xs;
-    //@extend .border-style--solid;
-    //@extend .border-color--gray-4;
     padding: space(sm) 0;
     text-align: center;
     background-color: $white;
     border-bottom: 1px solid $gray-2
-    //border-radius: 3px 3px 0 0;
   }
   .step {
     @extend .grid-cell;
@@ -445,6 +409,5 @@
     padding: scale(md);
     background-color: lighten(color(red), 40%);
     color: black;
-    //color: $black;
   }
 }

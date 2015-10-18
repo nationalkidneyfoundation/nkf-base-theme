@@ -88,7 +88,7 @@
 
       // build donation sections and misc donation stuff
       if(!donationProcessed && !ie8) {
-
+        /*
         // ziptastic
         $('.postal-code')
           .ziptastic()
@@ -97,7 +97,7 @@
             $('.state', _a).val(state_short);
             $('.locality', _a).val(city);
           });
-
+        */
         var textDonation = $('.form-item-donation.form-type-textfield');
         if(textDonation.length > 0) {
 
@@ -132,16 +132,6 @@
           if(i == 0) {
             $(v).addClass('active');
           }
-          if(i != 0 ) {
-            $(v).addClass('sm--hide');
-            $('<a href="#" class="previous"><i class="icon-arrow-left"></i></a>')
-              .appendTo(previousNext).click(function(e) {
-                $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
-                  .prevAll('.donation-step:first').removeClass('sm--hide').addClass('active');
-                $('.step.active').toggleClass('active').prev('.step').toggleClass('active');
-                e.preventDefault();
-              });
-          }
           if(i != donationSteps.length - 1) {
             var nextHeader = $('legend:first', $(v).next()).text();//$(v).next().first('legend').text();
             $('<a href="#" class="next grid-cell width--100 ">'+nextHeader+' <i class="icon-arrow-right padding-right--lg "></i></a>')
@@ -152,6 +142,16 @@
                     .find('input,select').first().focus();
                   $('.step.active').toggleClass('active').next('.step').toggleClass('active');
                 }
+                e.preventDefault();
+              });
+          }
+          if(i != 0 ) {
+            $(v).addClass('sm--hide');
+            $('<a href="#" class="previous"><i class="icon-arrow-left"></i></a>')
+              .appendTo(previousNext).click(function(e) {
+                $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
+                  .prevAll('.donation-step:first').removeClass('sm--hide').addClass('active');
+                $('.step.active').toggleClass('active').prev('.step').toggleClass('active');
                 e.preventDefault();
               });
           }
