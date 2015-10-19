@@ -128,10 +128,10 @@
         <div class="donation__container">
           <div class=" text-align--center">
             <?php print render($title_prefix); ?>
-            <h2><?php print $title_attributes; ?>><?php print $title; ?></h2>
+            <h2 <?php print $title_attributes; ?>><?php print $title; ?></h2>
             <?php print render($title_suffix); ?>
             <?php if (isset($content['field_donation_tag_line'])): ?>
-              <p class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></p>
+              <div class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></div>
             <?php endif; ?>
           </div>
           <?php print render($content['field_donation_type']); ?>
