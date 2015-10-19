@@ -6,6 +6,7 @@
       // set up some sensible input masks
       $('.field-type-telephone input').inputmask("mask", {"mask": "(999) 999-9999"});
       $('[class*="email"] input').inputmask("email");
+      //$('[id^="edit-donation"] input').inputmask("email");
 
       // disable the submit button after first click
       $('form', context).once('hideSubmitButton', function () {
@@ -98,7 +99,7 @@
       if(!donationProcessed && !ie8) {
 
         // ziptastic
-        /*
+
         $('.postal-code')
           .ziptastic()
           .on('zipChange', function(event, country, state, state_short, city, zip) {
@@ -106,7 +107,7 @@
             $('.state', _a).val(state_short);
             $('.locality', _a).val(city);
           });
-        */
+        
         var textDonation = $('.form-item-donation.form-type-textfield');
         if(textDonation.length > 0) {
 

@@ -124,7 +124,7 @@
       </div>
       <?php endif; ?>
 
-      <div class="grid-cell sm--width--50 md--width--70 width--100 ">
+      <div class="grid-cell sm--width--70 md--width--50 width--100 ">
         <div class="donation__container">
           <div class=" text-align--center">
             <?php print render($title_prefix); ?>
