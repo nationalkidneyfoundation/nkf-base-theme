@@ -26,3 +26,14 @@
 .mfp-removing.mfp-bg {
   opacity: 0;
 }
+
+button.mfp-close {
+  margin: space(md);
+  font-size: font-size(xxl);
+}
+@media #{breakpoint(md)} {
+  button.mfp-close {
+    margin: space(lg);
+    font-size: font-size(xxxl);
+  }
+}
