@@ -1281,7 +1281,6 @@ a {
 
 .text-transform--uppercase,
 .caps,
-.node-type-donation .node-title,
 .node-type-donation h1,
 .node-type-membership-page h1,
 .node-type-fundraising-campaign h1,
@@ -11170,7 +11169,6 @@ h6 .h1,
 }
 
 .caps,
-.node-type-donation .node-title,
 .node-type-donation h1,
 .node-type-membership-page h1,
 .node-type-fundraising-campaign h1,
@@ -12737,6 +12735,7 @@ html.js .js-hide {
 }
 
 .node-type-donation .node-title {
+  font-weight: normal;
   margin: 0 0 15px;
   margin: 0 0 1rem;
   text-align: center;

@@ -5,8 +5,9 @@
     display: none;
   }
   .node-title {
-    @extend .caps;
+    //@extend .caps;
     @extend .font-size--xl;
+    font-weight: normal;
     margin: 0 0 space(md);
     text-align: center;
   }
