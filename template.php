@@ -1,6 +1,21 @@
 <?php
 
 
+ /**
+  * Implements hook_theme().
+  */
+/*
+function nkf_base_theme($existing, $type, $theme, $path) {
+  $items = array();
+  $items['redhen_donation_form'] = array(
+    'render element' => 'form',
+    'template' => 'donate-form',
+    'path' => drupal_get_path('theme', 'nkf_base') . '/templates',
+  );
+  return $items;
+}
+*/
+
 /**
  * Implementation of hook_addressfield_administrative_areas_alter
  * force all US stats to be abbreviations.

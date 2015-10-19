@@ -8,16 +8,10 @@
     @extend .caps;
     @extend .font-size--xl;
     margin: 0 0 space(lg);
+    text-align: center;
   }
-  /*
-  .donation-tagline__container {
-    background-color: rgba(238, 238, 238, .3);
-    margin: 0;
-    max-width: 475px;
-    padding: space(xl) space(lg);
-  }*/
   .donation__container {
-    background-color: rgba(238, 238, 238, .3);
+    background-color: rgba(255, 255, 255, .35);
     max-width: 475px;
     padding: space(xl) space(lg);
   }
@@ -62,7 +56,10 @@
     }
   }
   .header__brand {
-    @extend .width--100;;
+    @extend .width--100;
+  }
+  .header__nav {
+    display: none;
   }
   .header__logo-image {
     max-height: 40px;
@@ -91,7 +88,7 @@
   // donation form
   [id*="redhen-donation-form"] {
     position: relative;
-    @extend .width--100;;
+    @extend .width--100;
     max-width: 475px;
     background-color: $white;
     padding: 0;
@@ -108,11 +105,11 @@
 
   // reset basic form elements
   .form-text {
-    @extend .width--100;;
+    @extend .width--100;
   }
 
   .form-item {
-    @extend .width--100;;
+    @extend .width--100;
     padding: space(xs);
     // reset sub form items
     .form-item {
@@ -127,7 +124,7 @@
   }
   legend {
     @extend .grid-cell;
-    @extend .width--100;;
+    @extend .width--100;
     text-align: center;
     border-bottom-width: 0;
     font-size: $h3;
@@ -178,10 +175,10 @@
   #edit-donation-select {//,
   //#edit-field-member-category-und {
     @extend .grid;
-    @extend .width--100;;
+    @extend .width--100;
     > * {
       @extend .grid-cell;
-      @extend .width--50;;
+      @extend .width--50;
       padding: space(xs);
     }
     input {
@@ -190,7 +187,7 @@
     label {
       @extend .button--outline--blue;
       padding: space(md);
-      @extend .width--100;;
+      @extend .width--100;
     }
     input:checked+label{
       @extend .button--outline--blue:focus;
@@ -228,7 +225,7 @@
     @extend .hide;
   }
   .country {
-    @extend .width--100;;
+    @extend .width--100;
   }
   .street-block {
     @extend .grid;
@@ -237,10 +234,10 @@
     }
   }
   [class*="-thoroughfare"] {
-    @extend .width--100;;
+    @extend .width--100;
   }
   [class*="-premise"]{
-    @extend .width--100;;
+    @extend .width--100;
     @extend .sm--width--25;
   }
   .locality-block {
@@ -250,20 +247,20 @@
     }
   }
   [class*="-locality"] {
-    @extend .width--100;;
+    @extend .width--100;
     @extend .sm--width--55;
     margin: 0;
   }
   [class*="-administrative-area"] {
-    @extend .width--100;;
+    @extend .width--100;
     @extend .sm--width--20;
     margin: 0;
   }
   .state {
-    @extend .width--100;;
+    @extend .width--100;
   }
   [class*="-postal-code"]{
-    @extend .width--100;;
+    @extend .width--100;
     @extend .sm--width--25;
     margin: 0;
   }
@@ -273,7 +270,7 @@
     @extend .grid;
     > div {
       @extend .grid-cell;
-      @extend .width--100;;
+      @extend .width--100;
     }
     .field-name-field-honoree-first-name,
     .field-name-field-honoree-last-name {
@@ -285,13 +282,13 @@
   .field-name-field-notify-firstname,
   .field-name-field-notify-lastname {
     @extend .grid-cell;
-    @extend .width--100;;
+    @extend .width--100;
     @extend .sm--width--50;
   }
 
   // Office
   .form-item-field-benefiting-office-und select {
-    @extend .width--100;;
+    @extend .width--100;
   }
 
   // credit card
@@ -314,7 +311,7 @@
       vertical-align: bottom;
     }
     select {
-      @extend .width--100;;
+      @extend .width--100;
     }
   }
   .commerce-month-year-divider {

@@ -28,6 +28,14 @@
         });
       });
 
+      // move to next section
+      function moveToNextSection() {
+        if($('.donation-step.active').find('.previous-next').is(':visible')) {
+          $('.donation-step.active').find('.next').click();
+          return false;
+        }
+        return true;
+      }
       // basic currency formatter
       function currencyFormat(v) {
         v = parseFloat(v).toFixed(2);
@@ -88,8 +96,9 @@
 
       // build donation sections and misc donation stuff
       if(!donationProcessed && !ie8) {
-        /*
+
         // ziptastic
+        /*
         $('.postal-code')
           .ziptastic()
           .on('zipChange', function(event, country, state, state_short, city, zip) {
@@ -132,6 +141,7 @@
           if(i == 0) {
             $(v).addClass('active');
           }
+
           if(i != donationSteps.length - 1) {
             var nextHeader = $('legend:first', $(v).next()).text();//$(v).next().first('legend').text();
             $('<a href="#" class="next grid-cell width--100 ">'+nextHeader+' <i class="icon-arrow-right padding-right--lg "></i></a>')
