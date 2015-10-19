@@ -12648,8 +12648,8 @@ html.js .js-hide {
 
 #logo {
   background-repeat: no-repeat;
-  height: 50px;
-  min-width: 300px;
+  height: 56px;
+  width: 300px;
   background-image: url(../logo.png);
 }
 

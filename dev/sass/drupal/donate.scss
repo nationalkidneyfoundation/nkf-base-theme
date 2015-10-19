@@ -10,6 +10,7 @@
     margin: 0 0 space(lg);
     text-align: center;
   }
+  .
   .donation__container {
     background-color: rgba(255, 255, 255, .35);
     max-width: 475px;
@@ -336,7 +337,7 @@
     text-align: center;
   }
   .form-submit {
-    @extend .button--red;
+    @extend .button--blue;
     @extend .width--100;
     padding: space(lg);
     text-transform: uppercase;
@@ -358,10 +359,9 @@
     @extend .sm--show;
   }
   .next {
-    @extend .button--red;
+    @extend .button--blue;
     position: relative;
-    padding-top: space(lg);
-    padding-bottom: space(lg);
+    padding-top: space(lg) space(md);
     line-height: scale(3);
     i {
       position: absolute;
@@ -369,7 +369,7 @@
       &::before {
         @extend .circle;
         background-color: $white;
-        color: color(red);
+        color: color(blue);
         height: scale(3);
         width: scale(3);
         line-height: scale(3);
@@ -404,7 +404,7 @@
   }
   .step.active {
     padding: scale(md);
-    background-color: lighten(color(red), 40%);
+    background-color: $gray-1;
     color: black;
   }
 }

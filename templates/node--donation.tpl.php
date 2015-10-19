@@ -126,12 +126,14 @@
 
       <div class="grid-cell sm--width--50 width--100 ">
         <div class="donation__container">
-          <?php print render($title_prefix); ?>
-          <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-          <?php print render($title_suffix); ?>
-          <?php if (isset($content['field_donation_tag_line'])): ?>
-            <p class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></p>
-          <?php endif; ?>
+          <div class=" text-align--center">
+            <?php print render($title_prefix); ?>
+            <h2><?php print $title_attributes; ?>><?php print $title; ?></h2>
+            <?php print render($title_suffix); ?>
+            <?php if (isset($content['field_donation_tag_line'])): ?>
+              <p class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></p>
+            <?php endif; ?>
+          </div>
           <?php print render($content['field_donation_type']); ?>
         </div>
       </div>
