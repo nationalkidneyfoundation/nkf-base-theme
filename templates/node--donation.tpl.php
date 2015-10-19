@@ -131,7 +131,7 @@
             <h2 <?php print $title_attributes; ?>><?php print $title; ?></h2>
             <?php print render($title_suffix); ?>
             <?php if (isset($content['field_donation_tag_line'])): ?>
-              <div class="font-weight--800"><?php print render($content['field_donation_tag_line']); ?></div>
+              <div class="padding-bottom--md"><?php print render($content['field_donation_tag_line']); ?></div>
             <?php endif; ?>
           </div>
           <?php print render($content['field_donation_type']); ?>

@@ -12737,8 +12737,8 @@ html.js .js-hide {
 }
 
 .node-type-donation .node-title {
-  margin: 0 0 21px;
-  margin: 0 0 1.414rem;
+  margin: 0 0 15px;
+  margin: 0 0 1rem;
   text-align: center;
 }
 
@@ -13011,13 +13011,23 @@ html.js .js-hide {
   padding: 1rem;
 }
 
+.node-type-donation .previous-next,
+.node-type-membership-page .previous-next,
+.node-type-fundraising-campaign .previous-next,
+.page-campaigns .previous-next {
+  margin: 0 15px 21px 15px;
+  margin: 0 1rem 1.414rem 1rem;
+}
+
 .node-type-donation .next,
 .node-type-membership-page .next,
 .node-type-fundraising-campaign .next,
 .page-campaigns .next {
   position: relative;
-  padding-top: 21px 15px;
-  padding-top: 1.414rem 1rem;
+  padding-top: 21px;
+  padding-top: 1.414rem;
+  padding-bottom: 21px;
+  padding-bottom: 1.414rem;
   line-height: 30px;
   line-height: 1.999rem;
 }

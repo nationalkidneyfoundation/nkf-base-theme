@@ -7,7 +7,7 @@
   .node-title {
     @extend .caps;
     @extend .font-size--xl;
-    margin: 0 0 space(lg);
+    margin: 0 0 space(md);
     text-align: center;
   }
   .donation__container {
@@ -356,11 +356,13 @@
   // previous next
   .previous-next {
     @extend .sm--show;
+    margin: 0 space(md) space(lg) space(md);
   }
   .next {
     @extend .button--blue;
     position: relative;
-    padding-top: space(lg) space(md);
+    padding-top: space(lg);
+    padding-bottom: space(lg);
     line-height: scale(3);
     i {
       position: absolute;
