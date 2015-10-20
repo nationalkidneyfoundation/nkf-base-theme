@@ -135,7 +135,7 @@
     text-align: center;
     border-bottom-width: 0;
     font-size: $h3;
-    padding: space(sm) 0 space(lg) 0;
+    padding: 0 0 space(md) 0;
 
   }
   // hide labels for all select lists
@@ -157,9 +157,9 @@
     input {
       text-align: center;
       font-weight: bold;
-      padding: 0 space(xl);
-      height: height(md);
-      font-size: font-size(xl);
+      padding: 0 space(lg);
+      //height: space(xxl);
+      font-size: font-size(lg);
     }
   }
   // hide radio buttons

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800);
+@import url("//fonts.googleapis.com/css?family=Open+Sans:400,800");
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
@@ -12885,8 +12885,8 @@ html.js .js-hide {
   border-bottom-width: 0;
   font-size: 21px;
   font-size: 1.414rem;
-  padding: 11px 0 21px 0;
-  padding: 0.707rem 0 1.414rem 0;
+  padding: 0 0 15px 0;
+  padding: 0 0 1rem 0;
 }
 
 .node-type-donation .form-type-select label,
@@ -12912,12 +12912,10 @@ html.js .js-hide {
 .page-campaigns .form-type-textfield.form-item-donation input {
   text-align: center;
   font-weight: bold;
-  padding: 0 30px;
-  padding: 0 1.999rem;
-  height: 60px;
-  height: 3.998rem;
-  font-size: 30px;
-  font-size: 1.999rem;
+  padding: 0 21px;
+  padding: 0 1.414rem;
+  font-size: 21px;
+  font-size: 1.414rem;
 }
 
 .node-type-donation .form-type-radio.form-item-donation-select,
