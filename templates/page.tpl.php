@@ -1,9 +1,4 @@
-<?php
-  //print '<pre>';
-  //var_dump(array_keys(get_defined_vars()));
-  //print_r($_SESSION['nkf_base']['messages']);
-  //print '</pre>';
-?>
+
 <div class="<?php print $page_classes; ?>">
   <header class="bg--orange header background-size--cover background-position--center">
     <div class="container padding-x--sm sm--padding-x--lg padding-y--md sm--padding-y--lg">
