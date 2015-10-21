@@ -11554,11 +11554,6 @@ html.js .js-hide {
   text-rendering: auto;
   *zoom: 1;
   *display: inline;
-  letter-spacing: -0.31em;
-  *letter-spacing: normal;
-  *word-spacing: -0.43em;
-  text-rendering: optimizespeed;
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
 .node-type-donation .commerce-credit-card-expiration,
@@ -11685,6 +11680,7 @@ html.js .js-hide {
 .node-type-membership-page .previous-next,
 .node-type-fundraising-campaign .previous-next,
 .page-campaigns .previous-next {
+  display: none;
   margin: 0 15px 21px 15px;
   margin: 0 1rem 1.414rem 1rem;
 }

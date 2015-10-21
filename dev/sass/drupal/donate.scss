@@ -309,7 +309,6 @@
   .form-item-payment-details-credit-card-number {
     width: 100%;
     @include grid-cell();
-    @include grid();
   }
   .commerce-credit-card-expiration {
     @include grid-cell();
@@ -366,7 +365,8 @@
   }
   // previous next
   .previous-next {
-    @include show(sm);
+    display: none;
+    @include when(sm) { display: block !important; }
     margin: 0 space(md) space(lg) space(md);
   }
   .next {
