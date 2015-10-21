@@ -5,8 +5,7 @@
 
       // set up some sensible input masks
       $('.field-type-telephone input').inputmask("mask", {"mask": "(999) 999-9999"});
-      //$('[class*="email"] input').inputmask("email");
-      //$('[id^="edit-donation"] input').inputmask("email");
+
 
       // disable the submit button after first click
       $('form', context).once('hideSubmitButton', function () {
@@ -48,9 +47,13 @@
 
       // helper function to get the donation amount
       function setDonationAmount() {
-        var v = $(this).val();
+        var v = $(".form-item-donation input").val();
+        var c = ''
         if(v != 'select_or_other') {
-          $('#edit-submit').val('Donate ' + currencyFormat(v));
+          if ($('#edit-field-monthly-recurring-und').is(':checked')) {
+            c = ' / mo';
+          }
+          $('#edit-submit').val('Donate ' + currencyFormat(v) + c);
         }
         setActiveButton();
       }
@@ -94,6 +97,19 @@
 
       // update the submit button with current donation amount
       $(".form-item-donation input").once().on('input', setDonationAmount);
+
+      // listen to recurring gift field
+      $('#edit-field-monthly-recurring-und').once().on('change', function () {
+        //if ($(this).is(':checked')) {
+        $('.form-item-donation').toggleClass('recurring');
+        $('.amount-options .button').each(function() {
+          if ($(this).attr('data-amount') > 0) {
+            //$(this).toggleClass('recurring-button');
+          }
+        });
+        //}
+        setDonationAmount();
+      });
 
       // build donation sections and misc donation stuff
       if(!donationProcessed && !ie8) {

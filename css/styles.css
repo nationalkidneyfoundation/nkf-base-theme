@@ -1933,6 +1933,7 @@ legend {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -11061,6 +11062,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 100%;
@@ -11085,10 +11087,12 @@ html.js .js-hide {
 .page-campaigns .form-type-textfield.form-item-donation {
   margin-left: auto;
   margin-right: auto;
+  position: relative;
   padding-top: 15px;
   padding-top: 1rem;
-  padding-bottom: 15px;
-  padding-bottom: 1rem;
+  padding-bottom: 0;
+  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 40em) {
@@ -11100,16 +11104,52 @@ html.js .js-hide {
   }
 }
 
+.node-type-donation .form-type-textfield.form-item-donation::before,
+.node-type-membership-page .form-type-textfield.form-item-donation::before,
+.node-type-fundraising-campaign .form-type-textfield.form-item-donation::before,
+.page-campaigns .form-type-textfield.form-item-donation::before {
+  content: "$ ";
+  position: absolute;
+  bottom: 0;
+  line-height: 42px;
+  line-height: 2.827rem;
+  left: 15px;
+  left: 1rem;
+}
+
+.node-type-donation .form-type-textfield.form-item-donation.recurring::after,
+.node-type-membership-page .form-type-textfield.form-item-donation.recurring::after,
+.node-type-fundraising-campaign .form-type-textfield.form-item-donation.recurring::after,
+.page-campaigns .form-type-textfield.form-item-donation.recurring::after {
+  content: " /mo";
+  position: absolute;
+  bottom: 0;
+  line-height: 42px;
+  line-height: 2.827rem;
+  right: 15px;
+  right: 1rem;
+  color: #bbb;
+}
+
 .node-type-donation .form-type-textfield.form-item-donation input,
 .node-type-membership-page .form-type-textfield.form-item-donation input,
 .node-type-fundraising-campaign .form-type-textfield.form-item-donation input,
 .page-campaigns .form-type-textfield.form-item-donation input {
-  text-align: center;
   font-weight: bold;
   padding: 0 21px;
   padding: 0 1.414rem;
   font-size: 21px;
   font-size: 1.414rem;
+}
+
+.node-type-donation .recurring-button:after,
+.node-type-membership-page .recurring-button:after,
+.node-type-fundraising-campaign .recurring-button:after,
+.page-campaigns .recurring-button:after {
+  content: ' /mo';
+  color: #777;
+  font-size: 11px;
+  font-size: 0.707rem;
 }
 
 .node-type-donation .form-item-donation-select > label:not(.option),
@@ -11174,6 +11214,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 50%;
@@ -11261,6 +11302,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -11307,6 +11349,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -11345,6 +11388,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -11392,6 +11436,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -11475,6 +11520,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 100%;
@@ -11506,6 +11552,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 100%;
@@ -11552,6 +11599,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -11565,6 +11613,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 100%;
@@ -11611,6 +11660,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -11777,6 +11827,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   border-radius: 100%;

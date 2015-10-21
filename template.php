@@ -48,7 +48,7 @@ function nkf_base_preprocess_page(&$vars) {
   // add jquery.inputmask
   $inputmask = libraries_get_path('inputmask');
   drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.min.js');
-  drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.extensions.min.js');
+  //drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.extensions.min.js');
   drupal_add_js($inputmask . '/dist/min/inputmask/jquery.inputmask.min.js');
 
   // add ziptastic-jquery-plugin

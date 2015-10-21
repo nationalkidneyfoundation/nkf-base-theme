@@ -154,16 +154,42 @@
   .form-type-textfield.form-item-donation {
     @include when(sm) { width: 50%; }
     @include center();
+    position: relative;
     padding-top: space(md);
-    padding-bottom: space(md);
+    padding-bottom: 0;
+    margin-bottom: space(md);
+    &::before {
+      content: "$ ";
+      position: absolute;
+      bottom: 0;
+      line-height: scale(4);
+      left: space(md);
+    }
+    &.recurring::after {
+      content: " /mo";
+      position: absolute;
+      bottom: 0;
+      line-height: scale(4);
+      right: space(md);
+      color: $gray-3;
+    }
     input {
-      text-align: center;
+      //text-align: center;
       font-weight: bold;
       padding: 0 space(lg);
       //height: space(xxl);
       font-size: font-size(lg);
     }
   }
+
+  .recurring-button {
+    &:after {
+      content: ' /mo';
+      color: $gray-4;
+      font-size: font-size(sm);
+    }
+  }
+
   // hide radio buttons
   .form-item-donation-select > label:not(.option),
   .form-item-field-member-category-und > label:not(.option) {
