@@ -145,7 +145,7 @@
 
           if(i != donationSteps.length - 1) {
             var nextHeader = $('legend:first', $(v).next()).text();//$(v).next().first('legend').text();
-            $('<a href="#" class="next grid-cell width--100 ">'+nextHeader+' <i class="icon-arrow-right padding-right--lg "></i></a>')
+            $('<a href="#" class="next grid-cell width--100 ">'+nextHeader+' <i class="icon-arrow-right margin-right--lg "></i></a>')
               .appendTo(previousNext).click(function(e) {
                 if(checkRequiredFields(v)) {
                   $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')

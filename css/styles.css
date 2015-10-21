@@ -11404,7 +11404,7 @@ html.js .js-hide {
   margin: 0;
 }
 
-@media  {
+@media (min-width: 40em) {
   .node-type-donation [class*="-locality"],
   .node-type-membership-page [class*="-locality"],
   .node-type-fundraising-campaign [class*="-locality"],
@@ -11717,12 +11717,7 @@ html.js .js-hide {
 .page-campaigns .next i {
   position: absolute;
   right: 0;
-}
-
-.node-type-donation .next i::before,
-.node-type-membership-page .next i::before,
-.node-type-fundraising-campaign .next i::before,
-.page-campaigns .next i::before {
+  display: inline-block;
   border-radius: 100%;
   background-color: #fff;
   color: #1E4497;
@@ -11732,6 +11727,15 @@ html.js .js-hide {
   width: 1.999rem;
   line-height: 30px;
   line-height: 1.999rem;
+}
+
+.node-type-donation .next i:before,
+.node-type-membership-page .next i:before,
+.node-type-fundraising-campaign .next i:before,
+.page-campaigns .next i:before {
+  line-height: 30px;
+  line-height: 1.999rem;
+  vertical-align: baseline;
 }
 
 .node-type-donation .previous,

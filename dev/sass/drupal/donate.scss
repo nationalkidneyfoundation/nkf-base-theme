@@ -258,7 +258,7 @@
   }
   [class*="-locality"] {
     width: 100%;
-    @include when(55) { width: 55%; }
+    @include when(sm) { width: 55%; }
     margin: 0;
   }
   [class*="-administrative-area"] {
@@ -378,14 +378,20 @@
     i {
       position: absolute;
       right: 0;
-      &::before {
+      display: inline-block;
+      //&::before {
         border-radius: 100%;
         background-color: $white;
         color: color(blue);
         height: scale(3);
         width: scale(3);
         line-height: scale(3);
-      }
+        &:before {
+          line-height: scale(3);
+          vertical-align: baseline;
+          //height: scale(3);
+        }
+      //}
     }
   }
 
