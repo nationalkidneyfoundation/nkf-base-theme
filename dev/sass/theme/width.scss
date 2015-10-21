@@ -1,4 +1,15 @@
 
+
+@mixin width($perc, $media:"") {
+  @if $media != "" {
+    @media #{breakpoint($media)} {
+      width: $perc;
+    }
+  } @else {
+    width: $perc;
+  }
+}
+
 // Creates width rules like:
 // .width--10 { width: 10%; }
 @each $name, $perc in $widths {

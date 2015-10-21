@@ -1,9 +1,10 @@
 
 // Require dependencies.
-var gulp          = require('gulp');
-var rework        = require('gulp-rework');
+var gulp            = require('gulp');
+var rework          = require('gulp-rework');
 //var reworkNpm     = require('rework-npm');
-var reworkRemToPx       = require('rework-rem-fallback');
+var reworkRemToPx   = require('rework-rem-fallback');
+var reworkIeLimits  = require('rework-ie-limits');
 //var reworkVars    = require('rework-vars');
 //var reworkMedia   = require('rework-custom-media');
 //var reworkCalc    = require('rework-calc');
@@ -85,6 +86,7 @@ gulp.task('css-build', function () {
     .pipe(cssAutoprefix(cssPrefixOptions))
     .pipe(rework(
       reworkRemToPx(15) // need to manually check this with _setings.scss
+      , reworkIeLimits
     ))
     .pipe(size({gzip: false, showFiles: true, title:'Raw css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Raw gzipped css'}))

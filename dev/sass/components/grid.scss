@@ -1,9 +1,23 @@
-.grid {
+@mixin grid {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
   text-rendering: optimizespeed;
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+@mixin grid-cell {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  *zoom: 1;
+  *display: inline;
+}
+
+.grid {
+  @include grid();
 }
 
 .opera-only :-o-prefocus,
@@ -12,13 +26,7 @@
 }
 
 .grid-cell {
-  display: inline-block;
-  vertical-align: top;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-rendering: auto;
-  *zoom: 1;
-  *display: inline;
+  @include grid-cell();
 }
 /*
 .grid [class *= "grid-cell"] {

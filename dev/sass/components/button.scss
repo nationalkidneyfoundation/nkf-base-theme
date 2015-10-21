@@ -1,3 +1,51 @@
+@mixin button() {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: normal;
+  padding: space(xs) space(md);
+  height: auto;
+  border-width: border-width(xs);
+  border-style: solid;
+  vertical-align: middle;
+  //border-radius: border-width(md);
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 400;
+  z-index: 2;
+  line-height: normal;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-appearance: none;
+  //box-shadow: 0 1px 6px rgba(0,0,0,.3);
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+
+button,
+input[type="submit"],
+.button {
+  @include button();
+}
+/*
 button,
 input[type="submit"],
 .button {
@@ -23,21 +71,6 @@ input[type="submit"],
   margin: 0;
   -webkit-appearance: none;
   //box-shadow: 0 1px 6px rgba(0,0,0,.3);
-  /*
-  &::before {
-    @extend .cover-absolute;
-    display: block;
-    border-radius: border-width(md);
-    content: '';
-    z-index: -1;
-    opacity: .5;
-  }
-  &:hover::before,
-  &:focus::before,
-  &.active::before {
-    opacity: 1;
-  }
-  */
 }
 
 button:after,
@@ -55,10 +88,6 @@ input[type="submit"]:focus,
   outline: 0;
 }
 
-::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
 
 button:hover,
 input[type="submit"]:hover,
@@ -73,4 +102,10 @@ button.is-disabled,
 input[type="submit"].is-disabled,
 .button.is-disabled {
   opacity: .5;
+}
+*/
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0;
 }

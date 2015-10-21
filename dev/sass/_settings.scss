@@ -189,6 +189,10 @@ $breakpoints: (
   @return map-get($breakpoints, $breakpoint);
 }
 
+@mixin when($media) {
+  @media #{breakpoint($media)} { @content; }
+}
+
 // helper functions
 @function strip-units($number) {
   @return ($number / ($number * 0 + 1)) / 100;

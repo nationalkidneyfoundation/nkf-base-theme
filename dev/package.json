@@ -25,6 +25,7 @@
     "iconfonts": "^0.7.0",
     "imagemin-pngquant": "^4.1.0",
     "normalize.css": "^3.0.3",
+    "rework-ie-limits": "^0.1.1",
     "rework-rem-fallback": "^1.0.0",
     "size": "^1.0.0"
   }

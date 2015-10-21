@@ -5,8 +5,7 @@
     display: none;
   }
   .node-title {
-    //@extend .caps;
-    @extend .font-size--xl;
+    font-size: font-size(xl);
     font-weight: normal;
     margin: 0 0 space(md);
     text-align: center;
@@ -26,7 +25,7 @@
 
   // set background image
   .hero {
-    @extend .background-size--cover;
+    background-size: cover;
     position: absolute;
     background-repeat: no-repeat;
     min-height: 550px;
@@ -46,11 +45,11 @@
   // show full form on error
   .errors {
     .donation-step {
-      @extend .xs--show;
+      @include when(xs) { display: block; }
     }
     .steps,
     .previous-next {
-      @extend .xs--hide;
+      @include when(xs) { display: none; }
     }
   }
 
@@ -59,11 +58,14 @@
     background-color: $white;
     text-align: center;
     .container {
-      @extend .sm--padding-y--md;
+      @include when(sm) {
+        padding-top: space(md);
+        padding-bottom: space(md);
+      }
     }
   }
   .header__brand {
-    @extend .width--100;
+    width: 100%;
   }
   .header__nav {
     display: none;
@@ -77,12 +79,12 @@
 
   // main section tweaks
   .main {
-    @extend .padding-bottom--xxxl;
+    padding-bottom: space(xxxl);
     background-color: $gray-1;
   }
   h1 {
-    @extend .caps;
-    @extend .font-size--xl;
+    @include caps();
+    font-size: font-size(xl);
   }
   // hide tabs for anon
   &.not-logged-in {
@@ -95,7 +97,7 @@
   // donation form
   [id*="redhen-donation-form"] {
     position: relative;
-    @extend .width--100;
+    width: 100%;
     max-width: 475px;
     background-color: $white;
     padding: 0;
@@ -104,7 +106,7 @@
   }
 
   .form-item label {
-    @extend .font-weight--400;
+    font-weight: 400;
     &:not(.option) {
       white-space: nowrap;
     }
@@ -112,11 +114,11 @@
 
   // reset basic form elements
   .form-text {
-    @extend .width--100;
+    width: 100%;
   }
 
   .form-item {
-    @extend .width--100;
+    width: 100%;
     padding: space(xs);
     // reset sub form items
     .form-item {
@@ -130,8 +132,8 @@
     padding: 0;
   }
   legend {
-    @extend .grid-cell;
-    @extend .width--100;
+    @include grid-cell();
+    width: 100%;
     text-align: center;
     border-bottom-width: 0;
     font-size: $h3;
@@ -142,16 +144,16 @@
   // this is because we are using placeholders
   // for other elements
   .form-type-select label {
-    display: none;
+    //display: none;
   }
 
   // Amount section
   .form-item-donation .description {
-    @extend .hide;
+    @include hide();
   }
   .form-type-textfield.form-item-donation {
-    @extend .sm--width--50;
-    @extend .center;
+    @include when(sm) { width: 50%; }
+    @include center();
     padding-top: space(md);
     padding-bottom: space(md);
     input {
@@ -165,7 +167,7 @@
   // hide radio buttons
   .form-item-donation-select > label:not(.option),
   .form-item-field-member-category-und > label:not(.option) {
-    @extend .hide;
+    @include hide();
   }
   .form-type-radio.form-item-donation-select,
   .form-item.form-item-donation-other {
@@ -175,26 +177,26 @@
     padding: 0;
   }
   .amount-options {
-    @extend .grid;
+    @include grid();
   }
 
   // if donation amount is select or other field
   #edit-donation-select {//,
   //#edit-field-member-category-und {
-    @extend .grid;
-    @extend .width--100;
+    @include grid();
+    width: 100%;
     > * {
-      @extend .grid-cell;
-      @extend .width--50;
+      @include grid-cell();
+      width: 50%;
       padding: space(xs);
     }
     input {
-      @extend .hide;
+      @include hide();
     }
     label {
       @extend .button--outline--blue;
       padding: space(md);
-      @extend .width--100;
+      width: 100%;
     }
     input:checked+label{
       @extend .button--outline--blue:focus;
@@ -202,16 +204,17 @@
     }
   }
   .form-item-donation-other {
-    @extend .sm--width--50;
+    @include when(sm) { width: 50%; }
+
   }
 
 
   // contact information
   #edit-redhen-contact {
-    @extend .grid;
+    @include grid();
   }
   #edit-name {
-    @extend .grid;
+    @include grid();
   }
   .form-item-first-name,
   .form-item-last-name,
@@ -220,113 +223,114 @@
   .field-name-field-company-name,
   .field-name-field-professional-credentials,
   .field-name-field-prefix {
-    @extend .grid-cell;
-    @extend .sm--width--50;
+    @include grid-cell();
+    @include when(sm) { width: 50%; }
   }
   .field-type-mailchimp-lists-subscription {
-    @extend .grid-cell;
+    @include grid-cell();
   }
 
   // Address section
   .field-type-addressfield legend {
-    @extend .hide;
+    @include hide();
   }
   .country {
-    @extend .width--100;
+    width: 100%;
   }
   .street-block {
-    @extend .grid;
+    @include grid();
     .form-item {
-      @extend .grid-cell;
+      @include grid-cell();
     }
   }
   [class*="-thoroughfare"] {
-    @extend .width--100;
+    width: 100%;
   }
   [class*="-premise"]{
-    @extend .width--100;
-    @extend .sm--width--25;
+    width: 100%;
+    @include when(sm) { width: 25%; }
   }
   .locality-block {
-    @extend .grid;
+    @include grid();
     .form-item {
-      @extend .grid-cell;
+      @include grid-cell();
     }
   }
   [class*="-locality"] {
-    @extend .width--100;
-    @extend .sm--width--55;
+    width: 100%;
+    @include when(55) { width: 55%; }
     margin: 0;
   }
   [class*="-administrative-area"] {
-    @extend .width--100;
-    @extend .sm--width--20;
+    width: 100%;
+    @include when(sm) { width: 20%; }
     margin: 0;
   }
   .state {
-    @extend .width--100;
+    width: 100%;
   }
   [class*="-postal-code"]{
-    @extend .width--100;
-    @extend .sm--width--25;
+    width: 100%;
+    @include when(sm) { width: 25%; }
     margin: 0;
   }
 
   // honor/memorial
   .required-fields {
-    @extend .grid;
+    @include grid();
+    background-color: $gray-1;
     > div {
-      @extend .grid-cell;
-      @extend .width--100;
+      @include grid-cell();
+      width: 100%;
     }
     .field-name-field-honoree-first-name,
     .field-name-field-honoree-last-name {
-      @extend .sm--width--50;
+      @include when(sm) { width: 50%; }
     }
   }
 
   // notified
   .field-name-field-notify-firstname,
   .field-name-field-notify-lastname {
-    @extend .grid-cell;
-    @extend .width--100;
-    @extend .sm--width--50;
+    @include grid-cell();
+    width: 100%;
+    @include when(sm) { width: 50%; }
   }
 
   // Office
   .form-item-field-benefiting-office-und select {
-    @extend .width--100;
+    width: 100%;
   }
 
   // credit card
   #payment-details {
-    @extend .grid;
+    @include grid();
   }
   .form-item-payment-details-credit-card-number {
-    @extend .width--100;
-    @extend .grid-cell;
-    @extend .grid;
+    width: 100%;
+    @include grid-cell();
+    @include grid();
   }
   .commerce-credit-card-expiration {
-    @extend .grid-cell;
-    @extend .width--100;
-    @extend .sm--width--50;
+    @include grid-cell();
+    width: 100%;
+    @include when(sm) { width: 50%; }
     .form-item {
       display: table-cell;
-      //@extend .grid-cell;
-      @extend .width--50;
+      //@include grid-cell();
+      width: 50%;
       vertical-align: bottom;
     }
     select {
-      @extend .width--100;
+      width: 100%;
     }
   }
   .commerce-month-year-divider {
-    @extend .hide;
+    @include hide();
   }
   .form-item-payment-details-credit-card-code {
-    @extend .grid-cell;
-    @extend .sm--width--50;
+    @include grid-cell();
+    @include when(sm) { width: 50%; }
   }
 
   // "hidden" sub sections
@@ -344,7 +348,7 @@
   }
   .form-submit {
     @extend .button--blue;
-    @extend .width--100;
+    width: 100%;
     padding: space(lg);
     text-transform: uppercase;
 
@@ -362,7 +366,7 @@
   }
   // previous next
   .previous-next {
-    @extend .sm--show;
+    @include show(sm);
     margin: 0 space(md) space(lg) space(md);
   }
   .next {
@@ -375,7 +379,7 @@
       position: absolute;
       right: 0;
       &::before {
-        @extend .circle;
+        border-radius: 100%;
         background-color: $white;
         color: color(blue);
         height: scale(3);
@@ -396,15 +400,15 @@
     color: $gray-3;
   }
   .steps {
-    @extend .grid;
+    @include grid();
     padding: space(sm) 0;
     text-align: center;
     background-color: $white;
     border-bottom: 1px solid $gray-2
   }
   .step {
-    @extend .grid-cell;
-    @extend .circle;
+    @include grid-cell();
+    border-radius: 100%;
     margin: 0;
     height: scale(3);
     width: scale(3);

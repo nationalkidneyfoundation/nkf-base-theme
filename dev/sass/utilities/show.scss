@@ -1,4 +1,14 @@
 
+@mixin show($media:"") {
+  @if $media != "" {
+    @media #{breakpoint($media)} {
+      display: block !important;
+    }
+  } @else {
+    display: block !important;
+  }
+}
+
 @each $bp, $bp-value in $breakpoints {
   .#{$bp}--show {
     @extend .hide;
