@@ -47,6 +47,7 @@
     &:hover,
     &:active,
     &.active {
+      color: $black;
       background-color: $gray-2;
     }
   }
@@ -61,6 +62,7 @@
     &:hover,
     &:active,
     &.active {
+      color: $black;
       background-color: $gray-3;
     }
   }
@@ -75,6 +77,7 @@
     &:hover,
     &:active,
     &.active {
+      color: $black;
       background-color: $gray-4;
     }
   }
@@ -89,6 +92,7 @@
     &:hover,
     &:active,
     &.active {
+      color: $black;
       background-color: $gray-5;
     }
   }
@@ -100,6 +104,7 @@
       color: $white;
     }
     &::before {
+      color: $white;
       background-color: $gray-5;
     }
   }
@@ -114,6 +119,7 @@
     &:hover,
     &:active,
     &.active {
+      color: $white;
       background-color: $black;
     }
   }

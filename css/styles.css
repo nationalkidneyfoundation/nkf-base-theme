@@ -633,7 +633,6 @@ img {
 }
 
 .display--inline-block,
-#logo,
 .header__nav a {
   display: inline-block;
   *display: inline;
@@ -1157,6 +1156,11 @@ a {
   display: none !important;
 }
 
+.js .js--hide,
+.js .js--hidden {
+  display: none !important;
+}
+
 .invisible,
 .wf-loading h1,
 .wf-loading h2,
@@ -1190,7 +1194,9 @@ a {
 
 @media print {
   .print--hide,
-  .print--hidden {
+  .print--hidden,
+  .hide--print,
+  .hidden--print {
     display: none !important;
   }
 }
@@ -1359,11 +1365,240 @@ a {
   }
 }
 
+.js--show {
+  display: none;
+}
+
+.js .js--show {
+  display: block !important;
+}
+
 .truncate {
   display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.animate {
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+
+.animate-duration--1 {
+  -webkit-animation-duration: .1s;
+  animation-duration: .1s;
+}
+
+.animate-duration--2 {
+  -webkit-animation-duration: .2s;
+  animation-duration: .2s;
+}
+
+.animate-duration--3 {
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+}
+
+.animate-duration--4 {
+  -webkit-animation-duration: .4s;
+  animation-duration: .4s;
+}
+
+.animate-duration--5 {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+}
+
+@-webkit-keyframes slide-in-right {
+  0% {
+    right: -7px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    right: -7px;
+  }
+
+  100% {
+    right: 0;
+  }
+}
+
+.slide-in-right {
+  -webkit-animation-name: slide-in-right;
+  animation-name: slide-in-right;
+  position: relative;
+}
+
+@-webkit-keyframes giggle {
+  0% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  25% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes giggle {
+  0% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  25% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0);
+  }
+
+  50% {
+    -webkit-transform: translate3d(-2px, 0, 0);
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(2px, 0, 0);
+    transform: translate3d(2px, 0, 0);
+  }
+
+  100% {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.animate--giggle {
+  -webkit-animation-name: giggle;
+  animation-name: giggle;
+}
+
+@-webkit-keyframes fade-back {
+  0% {
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
+  }
+
+  25% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+    opacity: .7;
+  }
+
+  75% {
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+  }
+
+  100% {
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+    opacity: .7;
+  }
+}
+
+@keyframes fade-back {
+  0% {
+    -webkit-transform: scale(1.02, 1.02);
+    transform: scale(1.02, 1.02);
+  }
+
+  25% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+    opacity: .7;
+  }
+
+  75% {
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+  }
+
+  100% {
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+    opacity: .7;
+  }
+}
+
+.animate--fade-back {
+  -webkit-animation-name: fade-back;
+  animation-name: fade-back;
+}
+
+@-webkit-keyframes subtle-focus {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.01, 1.01);
+    transform: scale(1.01, 1.01);
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes subtle-focus {
+  0% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale(1.01, 1.01);
+    transform: scale(1.01, 1.01);
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+.animate--subtle-focus {
+  -webkit-animation-name: subtle-focus;
+  animation-name: subtle-focus;
 }
 
 button,
@@ -1439,6 +1674,8 @@ input[type="submit"],
   border-width: 1px;
   border-style: solid;
   vertical-align: middle;
+  border-radius: 4px;
+  border-radius: 0.25rem;
   vertical-align: middle;
   text-align: center;
   font-weight: 400;
@@ -4322,6 +4559,7 @@ a:hover {
 .button--gray-1:hover,
 .button--gray-1:active,
 .button--gray-1.active {
+  color: #000;
   background-color: #ccc;
 }
 
@@ -4338,6 +4576,7 @@ a:hover {
 .button--gray-2:hover,
 .button--gray-2:active,
 .button--gray-2.active {
+  color: #000;
   background-color: #bbb;
 }
 
@@ -4354,6 +4593,7 @@ a:hover {
 .button--gray-3:hover,
 .button--gray-3:active,
 .button--gray-3.active {
+  color: #000;
   background-color: #777;
 }
 
@@ -4370,6 +4610,7 @@ a:hover {
 .button--gray-4:hover,
 .button--gray-4:active,
 .button--gray-4.active {
+  color: #000;
   background-color: #333;
 }
 
@@ -4383,6 +4624,7 @@ a:hover {
 }
 
 .button--gray-5::before {
+  color: #fff;
   background-color: #333;
 }
 
@@ -4399,6 +4641,7 @@ a:hover {
 .button--black:hover,
 .button--black:active,
 .button--black.active {
+  color: #fff;
   background-color: #000;
 }
 
@@ -10764,10 +11007,17 @@ html.js .js-hide {
 }
 
 #logo {
+  display: inline-block;
   background-repeat: no-repeat;
   height: 56px;
   width: 300px;
   background-image: url(../logo.png);
+}
+
+@media print {
+  #logo::before {
+    content: url("../img/NKF-logoR_Hori_OB.png");
+  }
 }
 
 .form-type-checkbox,
@@ -10777,27 +11027,25 @@ html.js .js-hide {
 
 .form-type-checkbox label,
 .form-type-radio label {
-  padding-left: 33px;
   cursor: pointer;
 }
 
-.form-type-checkbox label:before,
-.form-type-radio label:before {
+.form-type-checkbox label::before,
+.form-type-radio label::before {
   content: "";
-  display: inline-block;
+  display: block;
   border: 1px solid #ccc;
   border-radius: 2px;
   height: 23px;
   width: 23px;
   background-color: #fff;
-  position: absolute;
   text-align: center;
-  left: 8px;
-  left: .5rem;
   color: #000;
   font-weight: bold;
   font-size: 21px;
   font-size: 1.414rem;
+  float: left;
+  margin-right: 7px;
 }
 
 .form-type-checkbox .description,
@@ -10824,6 +11072,11 @@ html.js .js-hide {
   border-color: #777;
 }
 
+.form-type-checkbox input.error + label:before,
+.form-type-radio input.error + label:before {
+  border-color: #d51217 !important;
+}
+
 .form-type-radio label {
   margin-top: 5px;
   margin-top: 0.354rem;
@@ -10838,11 +11091,6 @@ html.js .js-hide {
   line-height: 14px;
   font-size: 39px;
   font-size: 2.6rem;
-  left: 2px;
-  left: .1rem;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
 .header__nav--primary a::before {
@@ -10865,8 +11113,15 @@ html.js .js-hide {
 .node-type-donation .donation__container {
   background-color: rgba(255, 255, 255, 0.35);
   max-width: 475px;
-  padding: 30px 21px;
-  padding: 1.999rem 1.414rem;
+  padding: 30px 0;
+  padding: 1.999rem 0;
+}
+
+@media (min-width: 40em) {
+  .node-type-donation .donation__container {
+    padding: 30px 21px;
+    padding: 1.999rem 1.414rem;
+  }
 }
 
 .node-type-donation .hero,
@@ -10893,26 +11148,22 @@ html.js .js-hide {
   }
 }
 
-@media (min-width: 20em) {
-  .node-type-donation .errors .donation-step,
-  .node-type-membership-page .errors .donation-step,
-  .node-type-fundraising-campaign .errors .donation-step,
-  .page-campaigns .errors .donation-step {
-    display: block;
-  }
+.node-type-donation .page.errors .donation-step,
+.node-type-membership-page .page.errors .donation-step,
+.node-type-fundraising-campaign .page.errors .donation-step,
+.page-campaigns .page.errors .donation-step {
+  display: block !important;
 }
 
-@media (min-width: 20em) {
-  .node-type-donation .errors .steps,
-  .node-type-donation .errors .previous-next,
-  .node-type-membership-page .errors .steps,
-  .node-type-membership-page .errors .previous-next,
-  .node-type-fundraising-campaign .errors .steps,
-  .node-type-fundraising-campaign .errors .previous-next,
-  .page-campaigns .errors .steps,
-  .page-campaigns .errors .previous-next {
-    display: none;
-  }
+.node-type-donation .page.errors .steps,
+.node-type-donation .page.errors .previous-next,
+.node-type-membership-page .page.errors .steps,
+.node-type-membership-page .page.errors .previous-next,
+.node-type-fundraising-campaign .page.errors .steps,
+.node-type-fundraising-campaign .page.errors .previous-next,
+.page-campaigns .page.errors .steps,
+.page-campaigns .page.errors .previous-next {
+  display: none !important;
 }
 
 .node-type-donation header,
@@ -11191,6 +11442,14 @@ html.js .js-hide {
   *word-spacing: -0.43em;
   text-rendering: optimizespeed;
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+.node-type-donation .amount-options .active,
+.node-type-membership-page .amount-options .active,
+.node-type-fundraising-campaign .amount-options .active,
+.page-campaigns .amount-options .active {
+  background-color: #97b1ea;
+  border-color: #97b1ea;
 }
 
 .node-type-donation #edit-donation-select,
@@ -11539,6 +11798,16 @@ html.js .js-hide {
   }
 }
 
+.node-type-donation .field-name-field-notified-party,
+.node-type-membership-page .field-name-field-notified-party,
+.node-type-fundraising-campaign .field-name-field-notified-party,
+.page-campaigns .field-name-field-notified-party {
+  padding-top: 15px;
+  padding-top: 1rem;
+  padding-bottom: 15px;
+  padding-bottom: 1rem;
+}
+
 .node-type-donation .field-name-field-notify-firstname,
 .node-type-donation .field-name-field-notify-lastname,
 .node-type-membership-page .field-name-field-notify-firstname,
@@ -11616,16 +11885,7 @@ html.js .js-hide {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
-  width: 100%;
-}
-
-@media (min-width: 40em) {
-  .node-type-donation .commerce-credit-card-expiration,
-  .node-type-membership-page .commerce-credit-card-expiration,
-  .node-type-fundraising-campaign .commerce-credit-card-expiration,
-  .page-campaigns .commerce-credit-card-expiration {
-    width: 50%;
-  }
+  width: 60%;
 }
 
 .node-type-donation .commerce-credit-card-expiration .form-item,
@@ -11663,15 +11923,7 @@ html.js .js-hide {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
-}
-
-@media (min-width: 40em) {
-  .node-type-donation .form-item-payment-details-credit-card-code,
-  .node-type-membership-page .form-item-payment-details-credit-card-code,
-  .node-type-fundraising-campaign .form-item-payment-details-credit-card-code,
-  .page-campaigns .form-item-payment-details-credit-card-code {
-    width: 50%;
-  }
+  width: 40%;
 }
 
 .node-type-donation .field-name-field-company-match,
@@ -11707,7 +11959,6 @@ html.js .js-hide {
   width: 100%;
   padding: 21px;
   padding: 1.414rem;
-  text-transform: uppercase;
 }
 
 .node-type-donation .form-item-signup,

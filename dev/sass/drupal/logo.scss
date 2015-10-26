@@ -1,9 +1,14 @@
 
 #logo {
-  @extend .display--inline-block;
   @extend .background-size--contain;
+  display: inline-block;;
   background-repeat: no-repeat;
   height: 56px;
   width: 300px;
   background-image: url(../logo.png);
+}
+@media print {
+  #logo::before {
+    content: url("../img/NKF-logoR_Hori_OB.png")
+  }
 }

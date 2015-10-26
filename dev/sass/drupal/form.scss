@@ -11,22 +11,24 @@
 .form-type-radio {
   position: relative;
   label {
-    padding-left: 33px;
+    //padding-left: 33px;
     cursor: pointer;
-    &:before {
+    &::before {
       content: "";
-      display: inline-block;
+      display: block;
       border: 1px solid $gray-2;
       border-radius: border-width(sm);
       height: 23px;
       width: 23px;
       background-color: $white;
-      position: absolute;
+      //position: absolute;
       text-align: center;
-      left: .5rem;
+      //left: .5rem;
       color: $black;
       font-weight: bold;
       font-size: font-size(lg);
+      float: left;
+      margin-right: 7px;
     }
   }
   .description {
@@ -47,6 +49,9 @@
   input[type=radio]:focus+label:before  {
     border-color: $gray-4;
   }
+  input.error+label:before {
+    border-color: color(red) !important;
+  }
 }
 .form-type-radio label {
   margin-top: space(xxs);
@@ -57,8 +62,8 @@
     width: 20px;
     line-height: 14px;
     font-size: 2.6rem;
-    left: .1rem;
-    top: 50%;
-    transform : translateY(-50%);
+    //left: .1rem;
+    //top: 50%;
+    //transform : translateY(-50%);
   }
 }

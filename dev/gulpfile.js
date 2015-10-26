@@ -86,7 +86,7 @@ gulp.task('css-build', function () {
     .pipe(cssAutoprefix(cssPrefixOptions))
     .pipe(rework(
       reworkRemToPx(15) // need to manually check this with _setings.scss
-      , reworkIeLimits
+      //, reworkIeLimits
     ))
     .pipe(size({gzip: false, showFiles: true, title:'Raw css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Raw gzipped css'}))

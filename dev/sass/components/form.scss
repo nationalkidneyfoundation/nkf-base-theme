@@ -21,7 +21,7 @@ textarea {
   border: solid $gray-2 border-width(xs);
   border-radius: border-width(sm);
   vertical-align: middle;
-  height: scale(4);
+  height: base-scale(4);
   box-sizing: border-box;
 }
 textarea {
@@ -49,7 +49,7 @@ textarea:focus {
 
 select:not([multiple]) {
   padding: 0;
-  height: scale(4);
+  height: base-scale(4);
 }
 
 fieldset {

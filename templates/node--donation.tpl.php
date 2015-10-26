@@ -80,11 +80,7 @@
  * @ingroup themeable
  */
 ?>
-<?php
-  //print '<pre>';
-  //array_keys(var_dump(get_defined_vars()));
-  //print '</pre>';
-?>
+
 <?php
   // FIELDS
   // field_donation_legal
@@ -114,7 +110,7 @@
       //print render($content);
     ?>
 
-    <div class="grid width--100">
+    <div class="grid width--100  <?php print isset($content['field_hero_image_background']) ? '' : 'text-align--center';?>">
       <?php if ((isset($content['body']) || isset($content['field_hero_image']))): ?>
       <div class="grid-cell sm--width--50 width--100 sm--padding-right--xxl">
         <div class="padding-bottom--md">
@@ -124,9 +120,9 @@
       </div>
       <?php endif; ?>
 
-      <div class="grid-cell sm--width--70 md--width--50 width--100 ">
-        <div class="donation__container">
-          <div class=" text-align--center">
+      <div class="grid-cell sm--width--70 md--width--50 width--100">
+        <div class="donation__container center text-align--left">
+          <div class="text-align--center">
             <?php print render($title_prefix); ?>
             <h2 <?php print $title_attributes; ?>><?php print $title; ?></h2>
             <?php print render($title_suffix); ?>

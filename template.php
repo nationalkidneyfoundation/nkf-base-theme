@@ -46,11 +46,15 @@ function nkf_base_preprocess_page(&$vars) {
   drupal_add_css($magnificpath . '/dist/magnific-popup.css');
 
   // add jquery.inputmask
-  $inputmask = libraries_get_path('inputmask');
-  drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.min.js');
+  //$inputmask = libraries_get_path('inputmask');
+  //drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.min.js');
   //drupal_add_js($inputmask . '/dist/min/inputmask/inputmask.extensions.min.js');
-  drupal_add_js($inputmask . '/dist/min/inputmask/jquery.inputmask.min.js');
+  //drupal_add_js($inputmask . '/dist/min/inputmask/jquery.inputmask.min.js');
 
+  // add jquery.payment
+  $payment = libraries_get_path('jquery.payment');
+  drupal_add_js($payment . '/lib/jquery.payment.min.js');
+  
   // add ziptastic-jquery-plugin
   //$ziptastic = libraries_get_path('ziptastic-jquery-plugin');
   //drupal_add_js($ziptastic . '/jquery.ziptastic.js');
@@ -154,73 +158,4 @@ function nkf_base_preprocess_panels_pane(&$vars) {
   if ($vars['display']->layout == 'flex') {
     $vars['classes_array'][] = 'grid-cell';
   }
-}
-
-/**
- * Override theme_form_element
- */
-function nkf_base_form_element($variables) {
-  $element = &$variables['element'];
-
-  // This function is invoked as theme wrapper, but the rendered form element
-  // may not necessarily have been processed by form_builder().
-  $element += array(
-    '#title_display' => 'before',
-  );
-
-  // Add element #id for #type 'item'.
-  if (isset($element['#markup']) && !empty($element['#id'])) {
-    $attributes['id'] = $element['#id'];
-  }
-  // Add element's #type and #name as class to aid with JS/CSS selectors.
-  $attributes['class'] = array('form-item');
-  if (!empty($element['#type'])) {
-    $attributes['class'][] = 'form-type-' . strtr($element['#type'], '_', '-');
-  }
-  if (!empty($element['#name'])) {
-    $attributes['class'][] = 'form-item-' . strtr($element['#name'], array(' ' => '-', '_' => '-', '[' => '-', ']' => ''));
-  }
-  // Add a class for disabled elements to facilitate cross-browser styling.
-  if (!empty($element['#attributes']['disabled'])) {
-    $attributes['class'][] = 'form-disabled';
-  }
-  // if required add class
-  if (!empty($element['#required']))  {
-    $attributes['class'][] = 'required';
-  }
-  $output = '<div' . drupal_attributes($attributes) . '>' . "\n";
-
-  // If #title is not set, we don't display any label or required marker.
-  if (!isset($element['#title'])) {
-    $element['#title_display'] = 'none';
-  }
-  $prefix = isset($element['#field_prefix']) ? '<span class="field-prefix">' . $element['#field_prefix'] . '</span> ' : '';
-  $suffix = isset($element['#field_suffix']) ? ' <span class="field-suffix">' . $element['#field_suffix'] . '</span>' : '';
-
-  switch ($element['#title_display']) {
-    case 'before':
-    case 'invisible':
-      $output .= ' ' . theme('form_element_label', $variables);
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
-
-    case 'after':
-      $output .= ' ' . $prefix . $element['#children'] . $suffix;
-      $output .= ' ' . theme('form_element_label', $variables) . "\n";
-      break;
-
-    case 'none':
-    case 'attribute':
-      // Output no label and no required marker, only the children.
-      $output .= ' ' . $prefix . $element['#children'] . $suffix . "\n";
-      break;
-  }
-
-  if (!empty($element['#description'])) {
-    $output .= '<div class="description">' . $element['#description'] . "</div>\n";
-  }
-
-  $output .= "</div>\n";
-
-  return $output;
 }

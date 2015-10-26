@@ -13,7 +13,8 @@
   .donation__container {
     background-color: rgba(255, 255, 255, .35);
     max-width: 475px;
-    padding: space(xl) space(lg);
+    padding: space(xl) 0;
+    @include when(sm) { padding: space(xl) space(lg); }
   }
 }
 
@@ -43,13 +44,13 @@
   }
 
   // show full form on error
-  .errors {
+  .page.errors {
     .donation-step {
-      @include when(xs) { display: block; }
+      display: block !important;
     }
     .steps,
     .previous-next {
-      @include when(xs) { display: none; }
+      display: none !important;
     }
   }
 
@@ -162,14 +163,14 @@
       content: "$ ";
       position: absolute;
       bottom: 0;
-      line-height: scale(4);
+      line-height: base-scale(4);
       left: space(md);
     }
     &.recurring::after {
       content: " /mo";
       position: absolute;
       bottom: 0;
-      line-height: scale(4);
+      line-height: base-scale(4);
       right: space(md);
       color: $gray-3;
     }
@@ -204,6 +205,10 @@
   }
   .amount-options {
     @include grid();
+    .active {
+      background-color: lighten(color(blue), 40%);
+      border-color: lighten(color(blue), 40%);
+    }
   }
 
   // if donation amount is select or other field
@@ -316,6 +321,11 @@
   }
 
   // notified
+  .field-name-field-notified-party {
+    padding-top: space(md);
+    padding-bottom: space(md);
+  }
+
   .field-name-field-notify-firstname,
   .field-name-field-notify-lastname {
     @include grid-cell();
@@ -338,8 +348,8 @@
   }
   .commerce-credit-card-expiration {
     @include grid-cell();
-    width: 100%;
-    @include when(sm) { width: 50%; }
+    width: 60%;
+    //@include when(xs) { width: 100%; }
     .form-item {
       display: table-cell;
       //@include grid-cell();
@@ -355,7 +365,8 @@
   }
   .form-item-payment-details-credit-card-code {
     @include grid-cell();
-    @include when(sm) { width: 50%; }
+    width: 40%;
+    //@include when(xs) { width: 100%; }
   }
 
   // "hidden" sub sections
@@ -375,7 +386,7 @@
     @extend .button--blue;
     width: 100%;
     padding: space(lg);
-    text-transform: uppercase;
+    //text-transform: uppercase;
 
   }
 
@@ -400,7 +411,7 @@
     position: relative;
     padding-top: space(lg);
     padding-bottom: space(lg);
-    line-height: scale(3);
+    line-height: base-scale(3);
     i {
       position: absolute;
       right: 0;
@@ -409,13 +420,13 @@
         border-radius: 100%;
         background-color: $white;
         color: color(blue);
-        height: scale(3);
-        width: scale(3);
-        line-height: scale(3);
+        height: base-scale(3);
+        width: base-scale(3);
+        line-height: base-scale(3);
         &:before {
-          line-height: scale(3);
+          line-height: base-scale(3);
           vertical-align: baseline;
-          //height: scale(3);
+          //height: base-scale(3);
         }
       //}
     }
@@ -426,9 +437,9 @@
     top: 0;
     left: 0;
     padding: space(sm);
-    height: scale(3);
-    width: scale(3);
-    line-height: scale(3);
+    height: base-scale(3);
+    width: base-scale(3);
+    line-height: base-scale(3);
     color: $gray-3;
   }
   .steps {
@@ -442,12 +453,12 @@
     @include grid-cell();
     border-radius: 100%;
     margin: 0;
-    height: scale(3);
-    width: scale(3);
-    line-height: scale(3);
+    height: base-scale(3);
+    width: base-scale(3);
+    line-height: base-scale(3);
   }
   .step.active {
-    padding: scale(md);
+    padding: base-scale(md);
     background-color: $gray-1;
     color: black;
   }

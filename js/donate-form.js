@@ -4,7 +4,31 @@
     attach: function(context, settings) {
 
       // set up some sensible input masks
-      $('.field-type-telephone input').inputmask("mask", {"mask": "(999) 999-9999"});
+      //$('.field-type-telephone input').inputmask("mask", {"mask": "(999) 999-9999"});
+      //$('.form-item-payment-details-credit-card-number input').inputmask({ mask: "9999 9999 9999 9999"});
+      $('.form-item-payment-details-credit-card-number input').payment('formatCardNumber');
+      $('.form-item-payment-details-credit-card-code input').payment('formatCardCVC');
+
+      restrictFloat = function(e) {
+        if (e.metaKey || e.ctrlKey) {
+          return true;
+        }
+        if (e.which === 32) {
+          return false;
+        }
+        if (e.which === 0) {
+          return true;
+        }
+        if (e.which < 33) {
+          return true;
+        }
+        return !isNaN(this.value+""+String.fromCharCode(e.charCode))
+      }
+      $.payment.fn.restrictFloat = function() {
+        this.on('keypress', restrictFloat);
+        return this;
+      };
+      $('.form-item-donation input').payment('restrictFloat');
 
 
       // disable the submit button after first click
@@ -16,7 +40,19 @@
           return true;
         });
         $form.submit(function (e) {
-          if(checkRequiredFields($form)) {
+          if (checkRequiredFields($form)) {
+            var cc = $('.form-item-payment-details-credit-card-number input');
+            if (cc.length !==0) {
+              cc.closest('.form-item').find('.cc-error').remove();
+              if(!$.payment.validateCardNumber(cc.val())) {
+                cc.addClass('error');
+                cc.closest('.form-item').append('<div class="cc-error error">Oops, double check your credit card number.</div>')
+                return false;
+              } else {
+                cc.removeClass('error');
+              }
+            }
+            //return false;
             if (!e.isPropagationStopped()) {
               $('input.form-submit', $(this))
                 .attr('disabled', 'disabled')
@@ -42,6 +78,9 @@
         if(v % 1 == 0) {
           v = parseFloat(v).toFixed(0);
         }
+        if (isNaN(v)) {
+          return false;
+        }
         return "$" + v.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
       }
 
@@ -53,7 +92,10 @@
           if ($('#edit-field-monthly-recurring-und').is(':checked')) {
             c = ' / mo';
           }
-          $('#edit-submit').val('Donate ' + currencyFormat(v) + c);
+          if (currencyFormat(v)) {
+            $('#edit-submit').val('Donate ' + currencyFormat(v) + c);
+          }
+
         }
         setActiveButton();
       }
@@ -63,6 +105,9 @@
         var v = $(".form-item-donation input").val();
         $('.amount-options .button').removeClass('active');
         if (v > 0) {
+          if (v % 1 == 0) {
+            v = parseInt(v);
+          }
           var b = $("[data-amount='" + v + "']");
           if (b.length > 0) {
             b.addClass('active');
@@ -75,39 +120,77 @@
 
 
       function checkRequiredFields(context) {
-        //return true;
         var t = 0;
         // handle required fields per section
-        $(context).find('input.required, select.required').each(function(i, d) {
-          if($(d).val().trim() === '') {
+        $(context).find('input.required, select.required, textarea.required').each(function(i, d) {
+          var r = false;
+          if ($(d).attr('type') === 'radio') {
+            r = !$("input[name='" + $(d).attr('name') + "']:checked").val()
+          }
+          if($(d).val().trim() === '' || r) {
             // set focus on first required field without value
             if(t === 0) {
               $(d).focus();
             }
             t += 1;
-            $(d).addClass('error').change(function() {
-              if($(this).val().trim() !== '') {
-                $(this).removeClass('error');
-              }
-            });
+            $(d).addClass('error')
+              .closest('.form-item').addClass('animate').addClass('animation-duration--2').animationClass('animate--giggle');
           }
         });
         return t === 0 ? true: false;
       }
 
+      function requiredFieldInputHandler() {
+        if ($(this).attr('type') === 'radio') {
+          if ($("input[name='" + $(this).attr('name') + "']:checked").val()) {
+            $("input[name='" + $(this).attr('name') + "']").removeClass('error');
+          }
+        }
+        if($(this).val().trim() !== '') {
+          $(this).removeClass('error');
+        }
+      }
+
+
+      // listen for changes to required fields to unset error
+      $('input.form-text, textarea').once().on('input', requiredFieldInputHandler);
+      $('input.form-radio, select').once().on('change', requiredFieldInputHandler);
+
       // update the submit button with current donation amount
-      $(".form-item-donation input").once().on('input', setDonationAmount);
+      $(".form-item-donation input").once('donation-value').on('input', setDonationAmount);
+
+      // hack to add class for states-based required fields
+      // the core states.js is inadequate
+      $(document).bind('state:required', function(e) {
+        if (e.trigger) {
+          if (e.value) {
+            $(e.target).closest('.form-item, .form-wrapper').find('input').addClass('required');
+          }
+          else {
+            $(e.target).closest('.form-item, .form-wrapper').find('input').removeClass('required');
+          }
+        }
+      });
+
+      // listen for gift type update to set honoree label
+      $("input[name='field_gift_type[und]']").change(function(){
+        var v = $(this).val();
+        if (v === 'honor') {
+          $('.field-name-field-honoree-full-name label').text("Person you're honoring");
+        }
+        if (v === 'memorial') {
+          $('.field-name-field-honoree-full-name label').text("Person you're memorializing");
+        }
+      });
 
       // listen to recurring gift field
       $('#edit-field-monthly-recurring-und').once().on('change', function () {
-        //if ($(this).is(':checked')) {
         $('.form-item-donation').toggleClass('recurring');
-        $('.amount-options .button').each(function() {
-          if ($(this).attr('data-amount') > 0) {
+        //$('.amount-options .button').each(function() {
+          //if ($(this).attr('data-amount') > 0) {
             //$(this).toggleClass('recurring-button');
-          }
-        });
-        //}
+          //}
+        //});
         setDonationAmount();
       });
 
@@ -148,7 +231,7 @@
           });
           // let's try to set the active button once on load
           // as the value might be prefilled
-          setActiveButton();
+          setDonationAmount();
         }
         var steps = $('<div class="steps sm--show"></div>').prependTo($('form > div'));
         var donationSteps = $('.donation-step');
@@ -166,7 +249,8 @@
                 if(checkRequiredFields(v)) {
                   $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
                     .nextAll('.donation-step:first').removeClass('sm--hide').addClass('active')
-                    .find('input,select').first().focus();
+                    .find('input,select').first().focus()//.addClass('animate').animationClass('animate--subtle-focus');
+                  $('form')
                   $('.step.active').toggleClass('active').next('.step').toggleClass('active');
                 }
                 e.preventDefault();
@@ -184,26 +268,6 @@
           }
         });
         $('.step:first-child').addClass('active');
-        /*
-        $(document).keydown(function(e) {
-          switch(e.which) {
-            case 37: // left
-              if($('.donation-step.active').find('.previous-next').is(':visible')) {
-                $('.donation-step.active').find('.previous').click();
-              }
-            break;
-
-            case 39: // right
-              if($('.donation-step.active').find('.previous-next').is(':visible')) {
-                $('.donation-step.active').find('.next').click();
-              }
-            break;
-
-            default: return; // exit this handler for other keys
-          }
-          e.preventDefault(); // prevent the default action (scroll / move caret)
-        });
-        */
 
       }
       donationProcessed = true;

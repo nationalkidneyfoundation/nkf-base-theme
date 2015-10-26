@@ -22,7 +22,7 @@ $scale: (
   , 16: 180.61rem
 ) !default;
 
-@function scale($x){
+@function base-scale($x){
   @return map-get($scale, $x);
 }
 
@@ -36,13 +36,13 @@ $heading-line-height: 1.25 !default;
 $monospace-font-family: 'Source Code Pro', Consolas, monospace !default;
 
 $font-sizes: (
-    'xs': scale(-2)
-  , 'sm': scale(-1)
-  , 'md': scale(1)
-  , 'lg': scale(2)
-  , 'xl': scale(3)
-  , 'xxl': scale(4)
-  , 'xxxl': scale(5)
+    'xs': base-scale(-2)
+  , 'sm': base-scale(-1)
+  , 'md': base-scale(1)
+  , 'lg': base-scale(2)
+  , 'xl': base-scale(3)
+  , 'xxl': base-scale(4)
+  , 'xxxl': base-scale(5)
 ) !default;
 
 @function font-size($x){
@@ -94,14 +94,14 @@ $link-color-visited: $link-color !default;
 // Spacing, used for padding and margin
 $spaces: (
     'none': 0
-  , 'xxs': scale(-3)
-  , 'xs': scale(-2)
-  , 'sm': scale(-1)
-  , 'md': scale(1)
-  , 'lg': scale(2)
-  , 'xl': scale(3)
-  , 'xxl': scale(4)
-  , 'xxxl': scale(5)
+  , 'xxs': base-scale(-3)
+  , 'xs': base-scale(-2)
+  , 'sm': base-scale(-1)
+  , 'md': base-scale(1)
+  , 'lg': base-scale(2)
+  , 'xl': base-scale(3)
+  , 'xxl': base-scale(4)
+  , 'xxxl': base-scale(5)
 ) !default;
 
 @function space($x){
@@ -141,13 +141,13 @@ $widths: (
 
 // Heights
 $heights: (
-    'xxxs': scale(-2)
-  , 'xxs': scale(-1)
-  , 'xs': scale(1)
-  , 'sm': scale(3)
-  , 'md': scale(5)
-  , 'lg': scale(9)
-  , 'xl': scale(13)
+    'xxxs': base-scale(-2)
+  , 'xxs': base-scale(-1)
+  , 'xs': base-scale(1)
+  , 'sm': base-scale(3)
+  , 'md': base-scale(5)
+  , 'lg': base-scale(9)
+  , 'xl': base-scale(13)
 ) !default;
 
 
@@ -156,11 +156,11 @@ $heights: (
 }
 
 $containers: (
-    'xs': scale(1)
-  , 'sm': scale(3)
-  , 'md': scale(9)
-  , 'lg': scale(14)
-  , 'xl': scale(15)
+    'xs': base-scale(1)
+  , 'sm': base-scale(3)
+  , 'md': base-scale(9)
+  , 'lg': base-scale(14)
+  , 'xl': base-scale(15)
 ) !default;
 
 // Borders
@@ -168,9 +168,9 @@ $border-widths: (
     'none': 0
   , 'xs': 1px
   , 'sm': 2px
-  , 'md': scale(-4)
-  , 'lg': scale(-2)
-  , 'xl': scale(1)
+  , 'md': base-scale(-4)
+  , 'lg': base-scale(-2)
+  , 'xl': base-scale(1)
 ) !default;
 
 @function border-width($x){
