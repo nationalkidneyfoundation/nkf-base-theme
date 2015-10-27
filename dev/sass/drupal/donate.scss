@@ -141,6 +141,11 @@
     padding: 0 0 space(md) 0;
 
   }
+  input[type=checkbox]:checked+label:before,
+  input[type=radio]:checked+label:before {
+    color: color(blue);
+  }
+
   // hide labels for all select lists
   // this is because we are using placeholders
   // for other elements

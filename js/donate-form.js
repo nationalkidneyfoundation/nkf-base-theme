@@ -258,7 +258,7 @@
           }
           if(i != 0 ) {
             $(v).addClass('sm--hide');
-            $('<a href="#" class="previous"><i class="icon-arrow-left"></i></a>')
+            $('<a href="#" class="previous grid-cell"><i class="icon-arrow-left"></i></a>')
               .appendTo(previousNext).click(function(e) {
                 $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
                   .prevAll('.donation-step:first').removeClass('sm--hide').addClass('active');

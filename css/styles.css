@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -441,70 +443,14 @@ th {
   padding: 0;
 }
 
-nav,
-main,
-section,
-article,
-aside,
-header,
-footer,
-div,
-details,
-summary,
-form,
-fieldset,
-textarea,
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="email"],
-input[type="search"],
-input[type="number"],
-input[type="password"],
-nav:before,
-main:before,
-section:before,
-article:before,
-aside:before,
-header:before,
-footer:before,
-div:before,
-details:before,
-summary:before,
-form:before,
-fieldset:before,
-textarea:before,
-input[type="text"]:before,
-input[type="tel"]:before,
-input[type="url"]:before,
-input[type="email"]:before,
-input[type="search"]:before,
-input[type="number"]:before,
-input[type="password"]:before,
-nav:after,
-main:after,
-section:after,
-article:after,
-aside:after,
-header:after,
-footer:after,
-div:after,
-details:after,
-summary:after,
-form:after,
-fieldset:after,
-textarea:after,
-input[type="text"]:after,
-input[type="tel"]:after,
-input[type="url"]:after,
-input[type="email"]:after,
-input[type="search"]:after,
-input[type="number"]:after,
-input[type="password"]:after,
-.border-box,
-.border-box:before,
-.border-box:after {
+html {
   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 img {
@@ -1412,6 +1358,35 @@ a {
 .animate-duration--5 {
   -webkit-animation-duration: .5s;
   animation-duration: .5s;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+.animate--spin {
+  -webkit-animation: spin 2s infinite linear;
+  animation: spin 2s infinite linear;
 }
 
 @-webkit-keyframes slide-in-right {
@@ -10426,81 +10401,111 @@ h6 .h1,
   }
 }
 
-.icon-facebook:before,
-.icon-twitter:before,
-.icon-chevron-left:before,
-.icon-chevron-right:before,
-.icon-arrow-right:before,
-.icon-arrow-left:before {
-  line-height: 1em;
-  font-family: "FontAwesome";
-  font-weight: normal;
-  font-style: normal;
-  display: inline-block;
-  text-decoration: none;
-  vertical-align: middle;
-  text-rendering: optimizeLegibility !important;
-  -webkit-font-smoothing: antialiased !important;
-  -moz-osx-font-smoothing: grayscale;
-}
+/*@import '../../node_modules/iconfonts/stylesheets/font-awesome';
 
-.icon-arrow-left:before {
-  content: "\f060";
-}
+@include fa-font();
 
-.icon-arrow-right:before {
-  content: "\f061";
-}
 
-.icon-chevron-left:before {
-  content: "\f053";
-}
-
-.icon-chevron-right:before {
-  content: "\f054";
-}
 
 .icon-facebook:before {
-  content: "\f09a";
+  @include fa-icon("facebook", $font-size);
 }
-
 .icon-twitter:before {
-  content: "\f099";
+  @include fa-icon("twitter", $font-size);
 }
-
-/* embeds the @font-face. use this only once. */
+.icon-chevron-left:before {
+  @include fa-icon("chevron-left", $font-size);
+}
+.icon-chevron-right:before {
+  @include fa-icon("chevron-right", $font-size);
+}
+.icon-arrow-right:before {
+  @include fa-icon("arrow-right", $font-size);
+}
+.icon-arrow-left:before {
+  @include fa-icon("arrow-left", $font-size);
+}
+*/
 
 @font-face {
-  font-family: "FontAwesome";
-  src: url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?v=4.2.0");
-  src: url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("//netdna.bootstrapcdn.com/font-awesome/4.2.0/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?57985173');
+  src: url('../font/fontello.eot?57985173#iefix') format('embedded-opentype'), url('../font/fontello.woff?57985173') format('woff'), url('../font/fontello.ttf?57985173') format('truetype'), url('../font/fontello.svg?57985173#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
-.icon-facebook:before {
-  font-size: 15px;
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?57985173#fontello') format('svg');
+  }
+}
+*/
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
 .icon-twitter:before {
-  font-size: 15px;
+  content: '\e800';
 }
 
-.icon-chevron-left:before {
-  font-size: 15px;
+/* '' */
+
+.icon-facebook:before {
+  content: '\e801';
 }
 
-.icon-chevron-right:before {
-  font-size: 15px;
-}
-
-.icon-arrow-right:before {
-  font-size: 15px;
-}
+/* '' */
 
 .icon-arrow-left:before {
-  font-size: 15px;
+  content: '\e802';
 }
+
+/* '' */
+
+.icon-arrow-right:before {
+  content: '\e803';
+}
+
+/* '' */
+
+.icon-ok:before {
+  content: '\e807';
+}
+
+/* '' */
 
 /**
  * block/block.css ====================================================
@@ -11042,8 +11047,6 @@ html.js .js-hide {
   text-align: center;
   color: #000;
   font-weight: bold;
-  font-size: 21px;
-  font-size: 1.414rem;
   float: left;
   margin-right: 7px;
 }
@@ -11055,14 +11058,15 @@ html.js .js-hide {
 
 .form-type-checkbox input[type=checkbox]:checked + label:before,
 .form-type-radio input[type=checkbox]:checked + label:before {
-  content: "\00d7";
+  content: "\e807";
   line-height: 22px;
+  font-family: fontello;
 }
 
 .form-type-checkbox input[type=radio]:checked + label:before,
 .form-type-radio input[type=radio]:checked + label:before {
-  content: "\00b7";
-  line-height: 18px;
+  border-width: 8px;
+  border-color: currentColor !important;
 }
 
 .form-type-checkbox input[type=checkbox]:focus + label:before,
@@ -11086,11 +11090,6 @@ html.js .js-hide {
 
 .form-type-radio label:before {
   border-radius: 50%;
-  height: 20px;
-  width: 20px;
-  line-height: 14px;
-  font-size: 39px;
-  font-size: 2.6rem;
 }
 
 .header__nav--primary a::before {
@@ -11323,6 +11322,17 @@ html.js .js-hide {
   font-size: 1.414rem;
   padding: 0 0 15px 0;
   padding: 0 0 1rem 0;
+}
+
+.node-type-donation input[type=checkbox]:checked + label:before,
+.node-type-donation input[type=radio]:checked + label:before,
+.node-type-membership-page input[type=checkbox]:checked + label:before,
+.node-type-membership-page input[type=radio]:checked + label:before,
+.node-type-fundraising-campaign input[type=checkbox]:checked + label:before,
+.node-type-fundraising-campaign input[type=radio]:checked + label:before,
+.page-campaigns input[type=checkbox]:checked + label:before,
+.page-campaigns input[type=radio]:checked + label:before {
+  color: #1E4497;
 }
 
 .node-type-donation .form-item-donation .description,
