@@ -50,6 +50,7 @@
                 return false;
               } else {
                 cc.removeClass('error');
+                cc.val(cc.val().replace(/ /g,''));
               }
             }
             //return false;
