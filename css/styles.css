@@ -1126,9 +1126,7 @@ a {
 .wf-loading td,
 .wf-loading input,
 .wf-loading textarea,
-.wf-loading label,
-.form-type-checkbox input,
-.form-type-radio input {
+.wf-loading label {
   position: absolute !important;
   overflow: hidden !important;
   width: 1px !important;
@@ -1535,6 +1533,49 @@ a {
 .animate--fade-back {
   -webkit-animation-name: fade-back;
   animation-name: fade-back;
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    -webkit-transform: scale(.99, .99);
+    transform: scale(.99, .99);
+    opacity: .7;
+  }
+
+  75% {
+    -webkit-transform: scale(1.01, 1.01);
+    transform: scale(1.01, 1.01);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    -webkit-transform: scale(.99, .99);
+    transform: scale(.99, .99);
+    opacity: .7;
+  }
+
+  75% {
+    -webkit-transform: scale(1.01, 1.01);
+    transform: scale(1.01, 1.01);
+    opacity: 1;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+}
+
+.animate--fade-in {
+  -webkit-animation-name: fade-in;
+  animation-name: fade-in;
 }
 
 @-webkit-keyframes subtle-focus {
@@ -10616,14 +10657,6 @@ thead th {
   border: none;
 }
 
-.error {
-  background-color: transparent;
-}
-
-.warning {
-  background-color: transparent;
-}
-
 .ok {
   background: #dfd;
   color: #020;
@@ -11044,11 +11077,13 @@ html.js .js-hide {
   height: 23px;
   width: 23px;
   background-color: #fff;
+  position: relative;
   text-align: center;
   color: #000;
   font-weight: bold;
   float: left;
   margin-right: 7px;
+  z-index: 100;
 }
 
 .form-type-checkbox .description,
@@ -11056,17 +11091,30 @@ html.js .js-hide {
   padding-left: 33px;
 }
 
+.form-type-checkbox input,
+.form-type-radio input {
+  opacity: 0;
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  margin-top: 2px;
+  z-index: 0;
+}
+
 .form-type-checkbox input[type=checkbox]:checked + label:before,
 .form-type-radio input[type=checkbox]:checked + label:before {
   content: "\e807";
   line-height: 22px;
   font-family: fontello;
+  border-color: currentColor;
 }
 
 .form-type-checkbox input[type=radio]:checked + label:before,
 .form-type-radio input[type=radio]:checked + label:before {
-  border-width: 8px;
   border-color: currentColor !important;
+  border-color: currentColor !important;
+  box-shadow: inset 0 0 0 5px #fff;
+  background-color: currentColor;
 }
 
 .form-type-checkbox input[type=checkbox]:focus + label:before,
@@ -11111,7 +11159,7 @@ html.js .js-hide {
 
 .node-type-donation .donation__container {
   background-color: rgba(255, 255, 255, 0.35);
-  max-width: 475px;
+  max-width: 550px;
   padding: 30px 0;
   padding: 1.999rem 0;
 }
@@ -11246,7 +11294,7 @@ html.js .js-hide {
 .page-campaigns [id*="redhen-donation-form"] {
   position: relative;
   width: 100%;
-  max-width: 475px;
+  max-width: 550px;
   background-color: #fff;
   padding: 0;
   border: 1px solid #eee;
@@ -11812,10 +11860,8 @@ html.js .js-hide {
 .node-type-membership-page .field-name-field-notified-party,
 .node-type-fundraising-campaign .field-name-field-notified-party,
 .page-campaigns .field-name-field-notified-party {
-  padding-top: 15px;
-  padding-top: 1rem;
-  padding-bottom: 15px;
-  padding-bottom: 1rem;
+  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .node-type-donation .field-name-field-notify-firstname,
@@ -11987,6 +12033,16 @@ html.js .js-hide {
   padding: 1rem;
 }
 
+@media (min-width: 40em) {
+  .node-type-donation .donation-step__inner,
+  .node-type-membership-page .donation-step__inner,
+  .node-type-fundraising-campaign .donation-step__inner,
+  .page-campaigns .donation-step__inner {
+    padding: 15px 30px;
+    padding: 1rem 1.999rem;
+  }
+}
+
 .node-type-donation .previous-next,
 .node-type-membership-page .previous-next,
 .node-type-fundraising-campaign .previous-next,
@@ -12002,6 +12058,16 @@ html.js .js-hide {
   .node-type-fundraising-campaign .previous-next,
   .page-campaigns .previous-next {
     display: block !important;
+  }
+}
+
+@media (min-width: 52em) {
+  .node-type-donation .previous-next,
+  .node-type-membership-page .previous-next,
+  .node-type-fundraising-campaign .previous-next,
+  .page-campaigns .previous-next {
+    margin: 0 30px 21px 30px;
+    margin: 0 1.999rem 1.414rem 1.999rem;
   }
 }
 

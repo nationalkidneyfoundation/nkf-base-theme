@@ -159,15 +159,22 @@
       // update the submit button with current donation amount
       $(".form-item-donation input").once('donation-value').on('input', setDonationAmount);
 
+      // listen for state visibility change and add effect
+      $(document).bind('state:visible', function(e) {
+        if(e.trigger) {
+          $(e.target).addClass('animate').animationClass('animate--fade-in');
+        }
+      })
+
       // hack to add class for states-based required fields
       // the core states.js is inadequate
       $(document).bind('state:required', function(e) {
         if (e.trigger) {
           if (e.value) {
-            $(e.target).closest('.form-item, .form-wrapper').find('input').addClass('required');
+            $(e.target).find('input, textarea, select').addClass('required');
           }
           else {
-            $(e.target).closest('.form-item, .form-wrapper').find('input').removeClass('required');
+            $('.required', e.target).removeClass('required');
           }
         }
       });

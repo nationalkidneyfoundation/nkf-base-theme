@@ -131,12 +131,12 @@ thead th { text-align:auto; }
 
 .error {
   @extend .color--red;
-  background-color: transparent;//#fcc;
+  //background-color: transparent;//#fcc;
   }
 
 .warning {
   @extend .color--black;
-  background-color: transparent;//#ffd;
+  //background-color: transparent;//#ffd;
   }
 
 .ok {

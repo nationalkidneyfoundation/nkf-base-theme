@@ -21,7 +21,7 @@
       height: 23px;
       width: 23px;
       background-color: $white;
-      //position: absolute;
+      position: relative;
       text-align: center;
       //left: .5rem;
       color: $black;
@@ -29,24 +29,35 @@
       //font-size: font-size(lg);
       float: left;
       margin-right: 7px;
+      z-index: 100;
     }
   }
   .description {
     padding-left: 33px;
   }
   input {
-    @extend .invisible;
+    //@extend .invisible;
+    opacity: 0;
+    position: absolute;
+    width: 23px;
+    height: 23px;
+    margin-top: 2px;
+    z-index: 0;
   }
   input[type=checkbox]:checked+label:before {
     content: "\e807";
     line-height: 22px;
     font-family: fontello;
+    border-color: currentColor;
   }
   input[type=radio]:checked+label:before {
     //content: "\00b7";
     //line-height: 18px;
-    border-width: 8px;
+    //border-width: 8px;
     border-color: currentColor !important;
+    border-color: currentColor!important;
+    box-shadow: inset 0 0 0 5px #fff;
+    background-color: currentColor;
   }
   input[type=checkbox]:focus+label:before,
   input[type=radio]:focus+label:before  {
@@ -63,6 +74,7 @@
     border-radius: 50%;
     //height: 20px;
     //width: 20px;
+    //margin-top: 2px;
     //line-height: 14px;
     //font-size: 2.6rem;
     //left: .1rem;

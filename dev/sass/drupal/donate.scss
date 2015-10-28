@@ -12,7 +12,7 @@
   }
   .donation__container {
     background-color: rgba(255, 255, 255, .35);
-    max-width: 475px;
+    max-width: 550px;
     padding: space(xl) 0;
     @include when(sm) { padding: space(xl) space(lg); }
   }
@@ -99,7 +99,7 @@
   [id*="redhen-donation-form"] {
     position: relative;
     width: 100%;
-    max-width: 475px;
+    max-width: 550px;
     background-color: $white;
     padding: 0;
     border: 1px solid $gray-1;
@@ -327,8 +327,8 @@
 
   // notified
   .field-name-field-notified-party {
-    padding-top: space(md);
-    padding-bottom: space(md);
+    //padding-top: space(md);
+    margin-bottom: space(md);
   }
 
   .field-name-field-notify-firstname,
@@ -404,12 +404,14 @@
   .donation-step__inner {
     position: relative;
     padding: space(md);
+    @include when(sm) { padding: space(md) space(xl); };
   }
   // previous next
   .previous-next {
     display: none;
     @include when(sm) { display: block !important; }
     margin: 0 space(md) space(lg) space(md);
+    @include when(md) { margin: 0 space(xl) space(lg) space(xl) };
   }
   .next {
     @extend .button--blue;
