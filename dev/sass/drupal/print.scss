@@ -1,5 +1,21 @@
 
 @media print {
+  // decrease size of text
+  html {
+    font-size: 12px;
+  }
+  // hack to deal with extra blank pages
+  div {
+    border: 1px solid white;
+  }
+  header {
+    background-color: $white !important;
+    border-bottom: border-width(xl) solid color(orange);
+  }
+  #logo {
+    background-image: none;
+  }
+
   .header__nav,
   footer {
     display: none;

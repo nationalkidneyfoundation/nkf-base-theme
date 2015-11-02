@@ -2,6 +2,10 @@
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
 
+@import url(./node_modules/animate.css/source/_base.css);
+
+@import url(./node_modules/animate.css/source/zooming_exits/zoomOut.css);
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -1322,299 +1326,6 @@ a {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-.animate {
-  -webkit-animation-duration: .4s;
-  animation-duration: .4s;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
-  -webkit-animation-timing-function: ease-in-out;
-  animation-timing-function: ease-in-out;
-}
-
-.animate-duration--1 {
-  -webkit-animation-duration: .1s;
-  animation-duration: .1s;
-}
-
-.animate-duration--2 {
-  -webkit-animation-duration: .2s;
-  animation-duration: .2s;
-}
-
-.animate-duration--3 {
-  -webkit-animation-duration: .3s;
-  animation-duration: .3s;
-}
-
-.animate-duration--4 {
-  -webkit-animation-duration: .4s;
-  animation-duration: .4s;
-}
-
-.animate-duration--5 {
-  -webkit-animation-duration: .5s;
-  animation-duration: .5s;
-}
-
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-@keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg);
-  }
-}
-
-.animate--spin {
-  -webkit-animation: spin 2s infinite linear;
-  animation: spin 2s infinite linear;
-}
-
-@-webkit-keyframes slide-in-right {
-  0% {
-    right: -7px;
-  }
-
-  100% {
-    right: 0;
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    right: -7px;
-  }
-
-  100% {
-    right: 0;
-  }
-}
-
-.slide-in-right {
-  -webkit-animation-name: slide-in-right;
-  animation-name: slide-in-right;
-  position: relative;
-}
-
-@-webkit-keyframes giggle {
-  0% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-    transform: translate3d(-2px, 0, 0);
-  }
-
-  25% {
-    -webkit-transform: translate3d(2px, 0, 0);
-    transform: translate3d(2px, 0, 0);
-  }
-
-  50% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-    transform: translate3d(-2px, 0, 0);
-  }
-
-  75% {
-    -webkit-transform: translate3d(2px, 0, 0);
-    transform: translate3d(2px, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-@keyframes giggle {
-  0% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-    transform: translate3d(-2px, 0, 0);
-  }
-
-  25% {
-    -webkit-transform: translate3d(2px, 0, 0);
-    transform: translate3d(2px, 0, 0);
-  }
-
-  50% {
-    -webkit-transform: translate3d(-2px, 0, 0);
-    transform: translate3d(-2px, 0, 0);
-  }
-
-  75% {
-    -webkit-transform: translate3d(2px, 0, 0);
-    transform: translate3d(2px, 0, 0);
-  }
-
-  100% {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-
-.animate--giggle {
-  -webkit-animation-name: giggle;
-  animation-name: giggle;
-}
-
-@-webkit-keyframes fade-back {
-  0% {
-    -webkit-transform: scale(1.02, 1.02);
-    transform: scale(1.02, 1.02);
-  }
-
-  25% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale(.8, .8);
-    transform: scale(.8, .8);
-    opacity: .7;
-  }
-
-  75% {
-    -webkit-transform: scale(.8, .8);
-    transform: scale(.8, .8);
-  }
-
-  100% {
-    -webkit-transform: scale(.8, .8);
-    transform: scale(.8, .8);
-    opacity: .7;
-  }
-}
-
-@keyframes fade-back {
-  0% {
-    -webkit-transform: scale(1.02, 1.02);
-    transform: scale(1.02, 1.02);
-  }
-
-  25% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale(.8, .8);
-    transform: scale(.8, .8);
-    opacity: .7;
-  }
-
-  75% {
-    -webkit-transform: scale(.8, .8);
-    transform: scale(.8, .8);
-  }
-
-  100% {
-    -webkit-transform: scale(.8, .8);
-    transform: scale(.8, .8);
-    opacity: .7;
-  }
-}
-
-.animate--fade-back {
-  -webkit-animation-name: fade-back;
-  animation-name: fade-back;
-}
-
-@-webkit-keyframes fade-in {
-  0% {
-    -webkit-transform: scale(.99, .99);
-    transform: scale(.99, .99);
-    opacity: .7;
-  }
-
-  75% {
-    -webkit-transform: scale(1.01, 1.01);
-    transform: scale(1.01, 1.01);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes fade-in {
-  0% {
-    -webkit-transform: scale(.99, .99);
-    transform: scale(.99, .99);
-    opacity: .7;
-  }
-
-  75% {
-    -webkit-transform: scale(1.01, 1.01);
-    transform: scale(1.01, 1.01);
-    opacity: 1;
-  }
-
-  100% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
-
-.animate--fade-in {
-  -webkit-animation-name: fade-in;
-  animation-name: fade-in;
-}
-
-@-webkit-keyframes subtle-focus {
-  0% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale(1.01, 1.01);
-    transform: scale(1.01, 1.01);
-  }
-
-  100% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
-
-@keyframes subtle-focus {
-  0% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-
-  50% {
-    -webkit-transform: scale(1.01, 1.01);
-    transform: scale(1.01, 1.01);
-  }
-
-  100% {
-    -webkit-transform: scale(1, 1);
-    transform: scale(1, 1);
-  }
-}
-
-.animate--subtle-focus {
-  -webkit-animation-name: subtle-focus;
-  animation-name: subtle-focus;
 }
 
 button,
@@ -11399,9 +11110,8 @@ html.js .js-hide {
   position: relative;
   padding-top: 15px;
   padding-top: 1rem;
-  padding-bottom: 0;
-  margin-bottom: 15px;
-  margin-bottom: 1rem;
+  padding-bottom: 15px;
+  padding-bottom: 1rem;
 }
 
 @media (min-width: 40em) {
@@ -11419,7 +11129,8 @@ html.js .js-hide {
 .page-campaigns .form-type-textfield.form-item-donation::before {
   content: "$ ";
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
+  bottom: 1rem;
   line-height: 42px;
   line-height: 2.827rem;
   left: 15px;
@@ -11432,7 +11143,8 @@ html.js .js-hide {
 .page-campaigns .form-type-textfield.form-item-donation.recurring::after {
   content: " /mo";
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
+  bottom: 1rem;
   line-height: 42px;
   line-height: 2.827rem;
   right: 15px;
@@ -12024,6 +11736,34 @@ html.js .js-hide {
   text-align: center;
 }
 
+.node-type-donation .donation-step,
+.node-type-membership-page .donation-step,
+.node-type-fundraising-campaign .donation-step,
+.page-campaigns .donation-step {
+  border-top: 1px solid #ccc;
+  padding: 21px 0;
+  padding: 1.414rem 0;
+  overflow: hidden;
+}
+
+@media (min-width: 40em) {
+  .node-type-donation .donation-step,
+  .node-type-membership-page .donation-step,
+  .node-type-fundraising-campaign .donation-step,
+  .page-campaigns .donation-step {
+    padding: 0;
+  }
+}
+
+@media (min-width: 40em) {
+  .node-type-donation .donation-step,
+  .node-type-membership-page .donation-step,
+  .node-type-fundraising-campaign .donation-step,
+  .page-campaigns .donation-step {
+    border-top: none;
+  }
+}
+
 .node-type-donation .donation-step__inner,
 .node-type-membership-page .donation-step__inner,
 .node-type-fundraising-campaign .donation-step__inner,
@@ -12176,6 +11916,24 @@ html.js .js-hide {
 }
 
 @media print {
+  html {
+    font-size: 12px;
+  }
+
+  div {
+    border: 1px solid white;
+  }
+
+  header {
+    background-color: #fff !important;
+    border-bottom: 15px solid #F15E22;
+    border-bottom: 1rem solid #F15E22;
+  }
+
+  #logo {
+    background-image: none;
+  }
+
   .header__nav,
   footer {
     display: none;

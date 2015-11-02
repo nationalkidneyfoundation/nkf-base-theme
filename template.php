@@ -54,7 +54,7 @@ function nkf_base_preprocess_page(&$vars) {
   // add jquery.payment
   $payment = libraries_get_path('jquery.payment');
   drupal_add_js($payment . '/lib/jquery.payment.min.js');
-  
+
   // add ziptastic-jquery-plugin
   //$ziptastic = libraries_get_path('ziptastic-jquery-plugin');
   //drupal_add_js($ziptastic . '/jquery.ziptastic.js');
@@ -119,9 +119,7 @@ function nkf_base_menu_tree__sub_menu($variables) {
 
 }*/
 function _get_menu_name_css($variables) {
-  //print '<pre>';
-  //print_r($variables);
-  //print '</pre>';
+
   $menu_name = str_replace('menu_tree__', '', $variables['theme_hook_original']);
   $menu_name = drupal_clean_css_identifier($menu_name);
   return $menu_name;

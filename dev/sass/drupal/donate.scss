@@ -162,19 +162,18 @@
     @include center();
     position: relative;
     padding-top: space(md);
-    padding-bottom: 0;
-    margin-bottom: space(md);
+    padding-bottom: space(md);
     &::before {
       content: "$ ";
       position: absolute;
-      bottom: 0;
+      bottom: space(md);
       line-height: base-scale(4);
       left: space(md);
     }
     &.recurring::after {
       content: " /mo";
       position: absolute;
-      bottom: 0;
+      bottom: space(md);
       line-height: base-scale(4);
       right: space(md);
       color: $gray-3;
@@ -401,6 +400,13 @@
   }
 
   // steps
+  .donation-step {
+    border-top: 1px solid $gray-2;
+    padding: space(lg) 0;
+    overflow: hidden;
+    @include when(sm) { padding: 0 };
+    @include when(sm) { border-top: none; }
+  }
   .donation-step__inner {
     position: relative;
     padding: space(md);

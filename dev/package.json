@@ -9,6 +9,7 @@
   "author": "Jacob Lane <lane.jacob@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "animate.css": "^3.4.0",
     "browser-sync": "^2.6.4",
     "compression": "^1.4.4",
     "gulp": "^3.8.11",
