@@ -35,9 +35,10 @@
       }
       $.fn.animationClass = function(animationClass, callback) {
         this.on("animationend webkitAnimationEnd mozAnimationEnd MSAnimationEnd oAnimationEnd", function(){
-          console.log('event end');
           $(this).removeClass(animationClass);
-          callback.call(this);
+          if (callback) {
+            callback.call(this);
+          }
         });
         this.addClass(animationClass);
         return this
