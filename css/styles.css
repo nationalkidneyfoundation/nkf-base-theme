@@ -12322,19 +12322,19 @@ html.js .js-hide {
   list-style: none;
 }
 
-.form-item-search-api-views-fulltext {
+.form-item-search-api-views-fulltext input {
   height: 60px;
   height: 4rem;
 }
 
 @media (min-width: 52em) {
-  .form-item-search-api-views-fulltext {
+  .form-item-search-api-views-fulltext input {
     width: 500px;
   }
 }
 
 @media (min-width: 40em) {
-  .form-item-search-api-views-fulltext {
+  .form-item-search-api-views-fulltext input {
     width: 350px;
   }
 }

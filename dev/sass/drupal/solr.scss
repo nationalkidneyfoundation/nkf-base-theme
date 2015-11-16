@@ -1,4 +1,4 @@
-.form-item-search-api-views-fulltext {
+.form-item-search-api-views-fulltext input {
   height: 4rem;
   @include when(md) { width: 500px; }
   @include when(sm) { width: 350px; }
