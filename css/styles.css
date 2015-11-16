@@ -12322,19 +12322,23 @@ html.js .js-hide {
   list-style: none;
 }
 
-.form-item-search-api-views-fulltext input {
+.facetapi-facet-field-addressadministrative-area {
+  text-transform: uppercase;
+}
+
+.form-item-search input {
   height: 60px;
   height: 4rem;
 }
 
 @media (min-width: 52em) {
-  .form-item-search-api-views-fulltext input {
+  .form-item-search input {
     width: 500px;
   }
 }
 
 @media (min-width: 40em) {
-  .form-item-search-api-views-fulltext input {
+  .form-item-search input {
     width: 350px;
   }
 }
