@@ -1,0 +1,5 @@
+.form-item-search-api-views-fulltext {
+  height: 4rem;
+  @include when(md) { width: 500px; }
+  @include when(sm) { width: 350px; }
+}

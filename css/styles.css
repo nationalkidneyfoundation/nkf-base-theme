@@ -12316,3 +12316,25 @@ html.js .js-hide {
     display: none;
   }
 }
+
+.facetapi-facetapi-checkbox-links {
+  padding: 0;
+  list-style: none;
+}
+
+.form-item-search-api-views-fulltext {
+  height: 60px;
+  height: 4rem;
+}
+
+@media (min-width: 52em) {
+  .form-item-search-api-views-fulltext {
+    width: 500px;
+  }
+}
+
+@media (min-width: 40em) {
+  .form-item-search-api-views-fulltext {
+    width: 350px;
+  }
+}
