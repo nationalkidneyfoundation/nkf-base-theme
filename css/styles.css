@@ -1241,8 +1241,7 @@ a {
 }
 
 .list--reset,
-.list--grid,
-.tabs {
+.list--grid {
   list-style: none;
   padding-left: 0;
 }
@@ -2248,7 +2247,6 @@ legend {
 
 .grid,
 .list--grid,
-.tabs,
 .header__nav .menu {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
@@ -2260,14 +2258,12 @@ legend {
 .opera-only :-o-prefocus,
 .grid,
 .list--grid,
-.tabs,
 .header__nav .menu {
   word-spacing: -0.43em;
 }
 
 .grid-cell,
 .list--grid > li,
-.tabs > li,
 .header__nav li {
   display: inline-block;
   vertical-align: top;
@@ -2286,19 +2282,31 @@ legend {
 
 .grid-cell,
 .list--grid > li,
-.tabs > li,
 .header__nav li {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 .tabs {
-  padding: 15px;
-  padding: 1rem;
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+  margin-bottom: 1rem;
   border: solid #ccc;
-  border-width: 0 0 4px;
-  border-width: 0 0 0.25rem;
-  background-color: #eee;
+  border-width: 0 0 1px;
+}
+
+.tabs li {
   display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -2311,11 +2319,46 @@ legend {
 }
 
 .tabs a.active {
-  background-color: #fff;
-  padding-top: 21px;
-  padding-top: 1.414rem;
-  padding-bottm: 21px;
-  padding-bottm: 1.414rem;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 3px solid #000;
+  margin-bottom: -1px;
+}
+
+.tabs__local {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 15px;
+  margin-bottom: 1rem;
+  border: none;
+}
+
+.tabs__local li {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
+}
+
+.tabs__local a {
+  padding: 15px;
+  padding: 1rem;
+  text-decoration: none;
+  color: #777;
+}
+
+.tabs__local a.active {
+  color: #000;
+  font-weight: bold;
 }
 
 .background-hero {
