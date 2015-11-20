@@ -2294,8 +2294,8 @@ legend {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
   list-style: none;
   padding: 0;
-  margin-bottom: 15px;
-  margin-bottom: 1rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.414rem;
   border: solid #ccc;
   border-width: 0 0 1px;
 }
@@ -2311,14 +2311,17 @@ legend {
   *display: inline;
 }
 
-.tabs a {
+.tabs a,
+.tabs a:visited a:active {
   padding: 15px;
   padding: 1rem;
   text-decoration: none;
   color: #777;
+  display: inline-block;
 }
 
-.tabs a.active {
+.tabs a.active,
+.tabs a:visited a:active.active {
   color: #000;
   font-weight: bold;
   border-bottom: 3px solid #000;
@@ -2333,8 +2336,8 @@ legend {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
   list-style: none;
   padding: 0;
-  margin-bottom: 15px;
-  margin-bottom: 1rem;
+  margin-bottom: 21px;
+  margin-bottom: 1.414rem;
   border: none;
 }
 
@@ -2349,16 +2352,20 @@ legend {
   *display: inline;
 }
 
-.tabs__local a {
-  padding: 15px;
-  padding: 1rem;
+.tabs__local a,
+.tabs__local a:active a:visited {
+  padding: 11px 15px;
+  padding: 0.707rem 1rem;
   text-decoration: none;
   color: #777;
+  display: inline-block;
 }
 
-.tabs__local a.active {
+.tabs__local a.active,
+.tabs__local a:active a:visited.active {
   color: #000;
-  font-weight: bold;
+  background-color: #eee;
+  border-radius: 1000px;
 }
 
 .background-hero {
@@ -12156,41 +12163,14 @@ html.js .js-hide {
   text-align: center;
 }
 
-.node-type-donation .donation-step,
-.node-type-membership-page .donation-step,
-.node-type-fundraising-campaign .donation-step,
-.page-campaigns .donation-step {
-  border-top: 1px solid #ccc;
-  padding: 21px 0;
-  padding: 1.414rem 0;
-  overflow: hidden;
-}
-
-@media (min-width: 40em) {
-  .node-type-donation .donation-step,
-  .node-type-membership-page .donation-step,
-  .node-type-fundraising-campaign .donation-step,
-  .page-campaigns .donation-step {
-    padding: 0;
-  }
-}
-
-@media (min-width: 40em) {
-  .node-type-donation .donation-step,
-  .node-type-membership-page .donation-step,
-  .node-type-fundraising-campaign .donation-step,
-  .page-campaigns .donation-step {
-    border-top: none;
-  }
-}
-
 .node-type-donation .donation-step__inner,
 .node-type-membership-page .donation-step__inner,
 .node-type-fundraising-campaign .donation-step__inner,
 .page-campaigns .donation-step__inner {
   position: relative;
-  padding: 15px;
-  padding: 1rem;
+  padding: 30px 15px;
+  padding: 1.999rem 1rem;
+  border-top: 1px solid #ccc;
 }
 
 @media (min-width: 40em) {
@@ -12198,8 +12178,17 @@ html.js .js-hide {
   .node-type-membership-page .donation-step__inner,
   .node-type-fundraising-campaign .donation-step__inner,
   .page-campaigns .donation-step__inner {
-    padding: 15px 30px;
-    padding: 1rem 1.999rem;
+    padding: 30px 30px;
+    padding: 1.999rem 1.999rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .node-type-donation .donation-step__inner,
+  .node-type-membership-page .donation-step__inner,
+  .node-type-fundraising-campaign .donation-step__inner,
+  .page-campaigns .donation-step__inner {
+    border-top: none;
   }
 }
 

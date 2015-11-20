@@ -4,16 +4,19 @@
   @include grid();
   list-style: none;
   padding: 0;
-  margin-bottom: space(md);
+  margin-bottom: space(lg);
   border: solid $gray-2;
   border-width: 0 0 1px;
   li {
     @include grid-cell();
   }
-  a {
+  a,
+  a:visited
+  a:active {
     padding: space(md);
     text-decoration: none;
     color: $gray-4;
+    display: inline-block;
     &.active {
       color: $black;
       font-weight: bold;
@@ -27,18 +30,22 @@
   @include grid();
   list-style: none;
   padding: 0;
-  margin-bottom: space(md);
+  margin-bottom: space(lg);
   border: none;
   li {
     @include grid-cell();
   }
-  a {
-    padding: space(md);
+  a,
+  a:active
+  a:visited {
+    padding: space(sm) space(md);
     text-decoration: none;
     color: $gray-4;
+    display: inline-block;
     &.active {
       color: $black;
-      font-weight: bold;
+      background-color: $gray-1;
+      border-radius: 1000px;
     }
   }
 }
