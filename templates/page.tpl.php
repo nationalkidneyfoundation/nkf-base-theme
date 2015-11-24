@@ -26,7 +26,7 @@
     </div>
     <?php endif; ?>
   </header>
-  <?php if ($page['help'] || ($show_messages && $messages)): ?>
+  <?php if (!empty($page['help']) || ($show_messages && $messages)): ?>
   <section class="background-color--gray-1">
     <div class="container padding-x--sm sm--padding-x--lg padding-y--lg padding-y--lg sm--padding-y--xl">
       <?php print render($page['help']); ?>
@@ -35,7 +35,7 @@
   </section>
   <?php endif; ?>
 
-  <?php if ($page['highlighted']): ?>
+  <?php if (!empty($page['highlighted'])): ?>
   <section>
     <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
       <?php print render($page['highlighted']); ?>
@@ -47,28 +47,48 @@
     <?php if($background_image): ?>
       <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
     <?php endif; ?>
-    <div class="container position--relative z-index--1 padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
-      <div class="grid">
-        <?php if ($page['sidebar_first']): ?>
-          <div class="grid-cell width--25"><?php print render($page['sidebar_first']) ?></div>
-        <?php endif; ?>
-        <div class="grid-cell sm--padding-right--md <?php print ($columns > 1)? 'width--50' : 'width--100'; ?>">
-          <div class="">
-            <?php if ($breadcrumb && FALSE) print $breadcrumb; ?>
-            <?php print render($title_prefix); ?>
-            <?php if ($title): ?><h1 class="font-size--xxxl"><?php print $title ?></h1><?php endif; ?>
-            <?php print render($title_suffix); ?>
-            <?php if ($primary_local_tasks): ?><ul class="tabs"><?php print render($primary_local_tasks) ?></ul><?php endif; ?>
-            <?php if ($secondary_local_tasks): ?><ul class="tabs__local links clearfix"><?php print render($secondary_local_tasks) ?></ul><?php endif; ?>
-            <?php if ($action_links): ?><ul class="tabs__action links clearfix"><?php print render($action_links); ?></ul><?php endif; ?>
+    <section class="main__title">
+      <?php if ($breadcrumb && FALSE): ?>
+      <div class="container">
+        <?php print $breadcrumb; ?>
+      </div>
+      <?php endif; ?>
+      <div class="container">
+        <?php print render($title_prefix); ?>
+        <?php if ($title): ?><h1 class="font-size--xl sm--font-size--xxl md--font-size--xxl"><?php print $title ?></h1><?php endif; ?>
+        <?php print render($title_suffix); ?>
+      </div>
+      <?php if ($primary_local_tasks): ?>
+      <div class="container border-bottom margin-bottom--lg">
+        <ul class="tabs grid list-style--none padding--none margin--none"><?php print render($primary_local_tasks) ?></ul>
+      </div>
+      <?php endif; ?>
+      <?php if ($secondary_local_tasks): ?>
+      <div class="container margin-bottom--lg">
+        <ul class="tabs__local grid list-style--none padding--none margin--none links "><?php print render($secondary_local_tasks) ?></ul>
+      </div>
+      <?php endif; ?>
+      <?php if ($action_links): ?>
+      <div class="container  margin-bottom--lg">
+        <ul class="tabs__action links "><?php print render($action_links); ?></ul>
+      </div>
+      <?php endif; ?>
+    </section>
+    <section class="main__content">
+      <div class="container position--relative z-index--1 padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
+        <div class="grid">
+          <?php if ($page['sidebar_first']): ?>
+            <div class="grid-cell width--25"><?php print render($page['sidebar_first']) ?></div>
+          <?php endif; ?>
+          <div class="grid-cell sm--padding-right--md <?php print ($columns > 1)? 'width--50' : 'width--100'; ?>">
             <div id="content" class="clearfix"><?php print render($page['content']) ?></div>
           </div>
+          <?php if ($page['sidebar_second']): ?>
+            <div class="grid-cell width--25 px2"><?php print render($page['sidebar_second']) ?></div>
+          <?php endif; ?>
         </div>
-        <?php if ($page['sidebar_second']): ?>
-          <div class="grid-cell width--25 px2"><?php print render($page['sidebar_second']) ?></div>
-        <?php endif; ?>
       </div>
-    </div>
+    </section>
 
   </section>
 

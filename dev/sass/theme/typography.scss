@@ -33,6 +33,18 @@ h1, h2, h3, h4, h5, h6
   }
 }
 
+// Creates width rules for each breakpoint
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    @each $name, $size in $font-sizes {
+      .#{$bp}--font-size--#{$name} {
+        font-size: #{$size};
+      }
+    }
+  }
+}
+
+
 @mixin caps {
   text-transform: uppercase;
   letter-spacing: .2rem;
