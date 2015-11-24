@@ -26,7 +26,7 @@
     </div>
     <?php endif; ?>
   </header>
-  <?php if (!empty($page['help']) || ($show_messages && $messages)): ?>
+  <?php if (!empty($page['help']) || ($show_messages && !empty($messages))): ?>
   <section class="background-color--gray-1">
     <div class="container padding-x--sm sm--padding-x--lg padding-y--lg padding-y--lg sm--padding-y--xl">
       <?php print render($page['help']); ?>
@@ -53,19 +53,19 @@
         <?php print $breadcrumb; ?>
       </div>
       <?php endif; ?>
-      <div class="container">
+      <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1 class="font-size--xl sm--font-size--xxl md--font-size--xxl"><?php print $title ?></h1><?php endif; ?>
         <?php print render($title_suffix); ?>
       </div>
       <?php if ($primary_local_tasks): ?>
       <div class="container border-bottom margin-bottom--lg">
-        <ul class="tabs grid list-style--none padding--none margin--none"><?php print render($primary_local_tasks) ?></ul>
+        <ul class="tabs grid list-style-type--none padding--none margin--none"><?php print render($primary_local_tasks) ?></ul>
       </div>
       <?php endif; ?>
       <?php if ($secondary_local_tasks): ?>
       <div class="container margin-bottom--lg">
-        <ul class="tabs__local grid list-style--none padding--none margin--none links "><?php print render($secondary_local_tasks) ?></ul>
+        <ul class="tabs__local grid list-style-type--none padding--none margin--none links "><?php print render($secondary_local_tasks) ?></ul>
       </div>
       <?php endif; ?>
       <?php if ($action_links): ?>
@@ -75,7 +75,7 @@
       <?php endif; ?>
     </section>
     <section class="main__content">
-      <div class="container position--relative z-index--1 padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
+      <div class="container position--relative z-index--1 padding-x--sm sm--padding-x--lg padding-bottom--xl">
         <div class="grid">
           <?php if ($page['sidebar_first']): ?>
             <div class="grid-cell width--25"><?php print render($page['sidebar_first']) ?></div>

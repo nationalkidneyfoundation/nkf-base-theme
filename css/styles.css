@@ -881,8 +881,7 @@ img {
   text-align: left;
 }
 
-.text-align--center,
-.header__nav--primary {
+.text-align--center {
   text-align: center;
 }
 
@@ -1098,6 +1097,7 @@ a {
 .xl--show,
 .password-suggestions,
 .header__nav--primary .search::before,
+.header__nav--primary .active::before,
 .hidden {
   display: none !important;
 }
@@ -4395,7 +4395,8 @@ a:hover {
   border-width: 0.5rem;
 }
 
-.border-top-width--lg {
+.border-top-width--lg,
+.header__nav--primary a {
   border-top-width: 8px;
   border-top-width: 0.5rem;
 }
@@ -4405,8 +4406,7 @@ a:hover {
   border-right-width: 0.5rem;
 }
 
-.border-bottom-width--lg,
-.header__nav--primary a {
+.border-bottom-width--lg {
   border-bottom-width: 8px;
   border-bottom-width: 0.5rem;
 }
@@ -5602,6 +5602,32 @@ a:hover {
 
 .line-height--100 {
   line-height: 100%;
+}
+
+.list-style--check {
+  padding-left: 1em;
+}
+
+.list-style--check li {
+  list-style-type: none;
+}
+
+.list-style--check li:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-left: -15px;
+  margin-left: -1rem;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  content: '\e804';
 }
 
 .margin--none,
@@ -9746,6 +9772,24 @@ body {
 }
 
 h1,
+h2,
+h3,
+h4,
+h5,
+h6 .h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  font-weight: bold;
+  line-height: 1.25;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
 .h1 {
   font-size: 42px;
   font-size: 2.827rem;
@@ -9779,22 +9823,6 @@ h6,
 .h6 {
   font-size: 8px;
   font-size: 0.5rem;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 .h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-  font-weight: bold;
-  line-height: 1.25;
 }
 
 .font-size--xs {
@@ -11480,6 +11508,10 @@ html.js .js-hide {
 
 .header__nav--primary a::before {
   content: '';
+}
+
+.header__nav--primary .active {
+  border-color: #fff;
 }
 
 .node-type-donation h1 {

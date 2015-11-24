@@ -16,11 +16,11 @@
   }
 }
 .header__nav--primary {
-  @extend .text-align--center;
+  //@extend .text-align--center;
   a {
     @extend .background-color--white;
     @extend .border-width--none;
-    @extend .border-bottom-width--lg;
+    @extend .border-top-width--lg;
     @extend .border-style--solid;
     @extend .position--relative;
     @extend .color--black;
@@ -78,6 +78,12 @@
     &:hover {
       @extend .color--white;
     }
+    &::before {
+      @extend .hide;
+    }
+  }
+  .active {
+    border-color: $white;
     &::before {
       @extend .hide;
     }
