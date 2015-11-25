@@ -9793,18 +9793,24 @@ h1,
 .h1 {
   font-size: 42px;
   font-size: 2.827rem;
+  padding: 21px 0;
+  padding: 1.414rem 0;
 }
 
 h2,
 .h2 {
   font-size: 30px;
   font-size: 1.999rem;
+  padding: 15px 0;
+  padding: 1rem 0;
 }
 
 h3,
 .h3 {
   font-size: 21px;
   font-size: 1.414rem;
+  padding: 15px 0;
+  padding: 1rem 0;
 }
 
 h4,
@@ -9823,6 +9829,12 @@ h6,
 .h6 {
   font-size: 8px;
   font-size: 0.5rem;
+}
+
+p {
+  margin: 0;
+  padding: 15px 15px;
+  padding: 1rem 1rem;
 }
 
 .font-size--xs {

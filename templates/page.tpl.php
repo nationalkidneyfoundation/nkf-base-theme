@@ -26,7 +26,8 @@
     </div>
     <?php endif; ?>
   </header>
-  <?php if (!empty($page['help']) || ($show_messages && !empty($messages))): ?>
+  <?php //if (!empty($page['help']) || ($show_messages && !empty($messages))): ?>
+  <?php if ($show_messages && !empty($messages)): ?>
   <section class="background-color--gray-1">
     <div class="container padding-x--sm sm--padding-x--lg padding-y--lg padding-y--lg sm--padding-y--xl">
       <?php print render($page['help']); ?>
@@ -53,7 +54,7 @@
         <?php print $breadcrumb; ?>
       </div>
       <?php endif; ?>
-      <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg sm--padding-y--xl">
+      <div class="container padding-x--sm sm--padding-x--lg padding-y--lg sm--padding-y--lg md--padding-y--xl">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1 class="font-size--xl sm--font-size--xxl md--font-size--xxl"><?php print $title ?></h1><?php endif; ?>
         <?php print render($title_suffix); ?>
