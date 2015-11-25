@@ -1,19 +1,21 @@
 .list-style--check {
-  padding-left: 1em;
+  padding-left: space(lg);
   li {
     list-style-type: none;
+    padding-bottom: space(sm);
   }
   li:before {
     font-family: "fontello";
     font-style: normal;
     font-weight: normal;
+    font-size: font-size(lg);
     speak: none;
 
     display: inline-block;
     text-decoration: inherit;
-    width: 1em;
-    margin-left: -1rem;
-    text-align: center;
+    width: space(lg);
+    margin-left: -space(lg);
+    text-align: left;
     /* opacity: .8; */
 
     /* For safety - reset parent styles, that can break glyph codes*/

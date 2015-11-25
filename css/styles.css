@@ -5605,24 +5605,29 @@ a:hover {
 }
 
 .list-style--check {
-  padding-left: 1em;
+  padding-left: 21px;
+  padding-left: 1.414rem;
 }
 
 .list-style--check li {
   list-style-type: none;
+  padding-bottom: 11px;
+  padding-bottom: 0.707rem;
 }
 
 .list-style--check li:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
+  font-size: 21px;
+  font-size: 1.414rem;
   speak: none;
   display: inline-block;
   text-decoration: inherit;
-  width: 1em;
-  margin-left: -15px;
-  margin-left: -1rem;
-  text-align: center;
+  width: 21px;
+  width: 1.414rem;
+  margin-left: -space(lg);
+  text-align: left;
   /* opacity: .8; */
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
@@ -11481,7 +11486,7 @@ html.js .js-hide {
 
 .form-type-checkbox input[type=checkbox]:checked + label:before,
 .form-type-radio input[type=checkbox]:checked + label:before {
-  content: "\e807";
+  content: "\e804";
   line-height: 22px;
   font-family: fontello;
   border-color: currentColor;
