@@ -35,7 +35,7 @@ h3, .h3 {
   padding: space(md) 0;
 }
 h4, .h4 {
-  font-size: $h4; 
+  font-size: $h4;
 }
 h5, .h5 {
   font-size: $h5;
@@ -46,7 +46,7 @@ h6, .h6 {
 
 p {
   margin: 0;
-  padding: space(md) space(md);
+  padding: space(md) 0;
 }
 
 @each $name, $size in $font-sizes {
