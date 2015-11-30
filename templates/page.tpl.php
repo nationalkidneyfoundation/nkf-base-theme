@@ -22,8 +22,8 @@
 
   <!-- NAVIGATION REGION -->
   <?php if (!empty($page['navigation'])) : ?>
-  <nav class="nav--primary bg--orange">
-    <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+  <nav class="nav nav--primary bg--orange">
+    <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
       <?php print render($page['navigation']); ?>
     </div>
   </nav>

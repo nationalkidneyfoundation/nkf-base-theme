@@ -11515,9 +11515,8 @@ html.js .js-hide {
 }
 
 .nav--primary {
-  border-bottom: 8px;
-  border-bottom: 0.5rem;
-  border-color: #d51217;
+  border-bottom: solid #d51217 8px;
+  border-bottom: solid #d51217 0.5rem;
 }
 
 .nav--primary a {
