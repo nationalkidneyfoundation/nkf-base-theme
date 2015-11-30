@@ -81,7 +81,7 @@
     <!-- PRIMARY TABS -->
     <?php if ($primary_local_tasks): ?>
     <section class="main__tabs">
-      <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+      <div class="container padding-x--sm sm--padding-x--md md--padding-x--lg">
         <ul class="tabs grid list-style-type--none padding--none margin--none"><?php print render($primary_local_tasks) ?></ul>
       </div>
     </section>
@@ -107,7 +107,7 @@
 
     <!-- MAIN CONTENT -->
     <section class="main__content">
-      <div class="container padding-top--md md--padding-top--lg padding-bottom--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg position--relative z-index--1">
+      <div class="container padding-top--lg padding-bottom--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg position--relative z-index--1">
         <div class="grid">
           <?php if ($page['sidebar_first']): ?>
             <div class="grid-cell width--25"><?php print render($page['sidebar_first']) ?></div>

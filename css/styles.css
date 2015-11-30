@@ -2187,6 +2187,7 @@ textarea {
   height: 42px;
   height: 2.827rem;
   box-sizing: border-box;
+  max-width: 100%;
 }
 
 textarea {
@@ -2290,7 +2291,7 @@ legend {
   text-decoration: none;
   color: #777;
   display: inline-block;
-  border-bottom: 7px solid #000;
+  border-bottom: 7px solid #eee;
 }
 
 .tabs a.active,
