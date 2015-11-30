@@ -1,37 +1,25 @@
 
 
 .tabs {
-  //@include grid();
-  //list-style: none;
-  //padding: 0;
-  //margin-bottom: space(lg);
-  //border: solid $gray-2;
-  //border-width: 0 0 1px;
   li {
     @include grid-cell();
   }
   a,
   a:visited
   a:active {
-    padding: space(md);
+    padding: space(md) space(xl) space(md) 0;
     text-decoration: none;
     color: $gray-4;
     display: inline-block;
+    border-bottom: 7px solid $black;
     &.active {
       color: $black;
       font-weight: bold;
-      border-bottom: 3px solid $black;
-      margin-bottom: -1px;
     }
   }
 }
 
 .tabs__local {
-  //@include grid();
-  //list-style: none;
-  //padding: 0;
-  //margin-bottom: space(lg);
-  //border: none;
   li {
     @include grid-cell();
   }

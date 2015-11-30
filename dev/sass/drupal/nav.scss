@@ -1,100 +1,95 @@
 
-// for the primary nav
-.header__nav {
+.nav {
   .menu {
-    @extend .grid;
-    @extend .margin--none;
-    @extend .padding--none;
-
+    @include grid();
+    margin: 0;
+    padding: 0;
   }
   li {
-    @extend .grid-cell;
+    @include grid-cell();
   }
   a {
-    @extend .display--inline-block;
-    @extend .padding--md;
+    display: inline-block;
+    padding: space(md);
   }
 }
-.header__nav--primary {
-  //@extend .text-align--center;
+.nav--primary {
+  border-bottom: border-width(lg);
+  border-color: color(red);
   a {
-    @extend .background-color--white;
-    @extend .border-width--none;
-    @extend .border-top-width--lg;
-    @extend .border-style--solid;
-    @extend .position--relative;
-    @extend .color--black;
-    //@extend .text-transform--uppercase;
-    //@extend .h5;
-    //z-index: 2;
+    background-color: $white;
+    border-width: 0 0 border-width(lg) 0;
+    border-style: solid;
+    position: relative;
+    margin-bottom: -7px; //hack
+    color: $black;
     &:hover {
-      @extend .color--black;
+      color: $black;
     }
     &::before {
-      @extend .display--block;
-      @extend .cover-absolute;
-      @extend .opacity--30;
+      @include cover-absolute();
       content: '';
-      //z-index: -1;
+      display: block;
+      opacity: .3;
     }
     &:hover::before {
-      @extend .opacity--40;
+      opacity: .4;
     }
   }
   .awareness {
-    @extend .border-color--orange;
+    border-color: color(orange);
     &::before {
-      @extend .background-color--orange;
+      background-color: color(orange);
     }
   }
   .prevention {
-    @extend .border-color--yellow;
+    border-color: color(yellow);
     &::before {
-      @extend .background-color--yellow;
+      background-color: color(yellow);
     }
   }
   .patients {
-    @extend .border-color--lime;
+    border-color: color(lime);
     &::before {
-      @extend .background-color--lime;
+      background-color: color(lime);
     }
   }
   .professionals {
-    @extend .border-color--red;
+    border-color: color(red);
     &::before {
-      @extend .background-color--red;
+      background-color: color(red);
     }
   }
   .involved {
-    @extend .border-color--blue;
+    border-color: color(blue);
     &::before {
-      @extend .background-color--blue;
+    background-color: color(blue);
     }
   }
   .search {
-    @extend .border-color--navy;
-    @extend .background-color--navy;
-    @extend .color--white;
+    border-color: color(navy);
+    background-color: color(navy);
+    color: $white;
     &:hover {
-      @extend .color--white;
+      color: $white;
     }
     &::before {
-      @extend .hide;
+      @include hide();
     }
   }
   .active {
     border-color: $white;
     &::before {
-      @extend .hide;
+      @include hide();
     }
   }
 }
 
-.header__nav--secondary {
-  @extend .text-align--right;
+.nav--secondary {
+  text-align: right;
   .donate {
     @extend .button--white;
-    @extend .padding--md;
+    padding: space(md);
     &::before {
       @extend .button--outline--white::before;
     }

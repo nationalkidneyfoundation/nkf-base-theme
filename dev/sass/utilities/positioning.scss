@@ -1,5 +1,5 @@
 
-.cover-absolute {
+@mixin cover-absolute {
   position: absolute;
   top: 0;
   right: 0;
@@ -8,10 +8,17 @@
   margin: auto;
 }
 
-.cover-fixed {
+@mixin cover-fixed() {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+.cover-absolute {
+  @include cover-absolute();
+}
+
+.cover-fixed {
+  @include cover-fixed();
 }
