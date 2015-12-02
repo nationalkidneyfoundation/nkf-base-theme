@@ -2335,6 +2335,24 @@ legend {
   background-position: bottom right;
 }
 
+.hero {
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  min-height: 550px;
+  background-position: center top;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #eee;
+}
+
+@media (min-width: 64em) {
+  .hero {
+    min-height: 650px;
+  }
+}
+
 [class*="donut--"] {
   border-radius: 50%;
   border: 1px solid white;
@@ -11680,30 +11698,6 @@ html.js .js-hide {
   .node-type-donation .donation__container {
     padding: 30px 21px;
     padding: 1.999rem 1.414rem;
-  }
-}
-
-.node-type-donation .hero,
-.node-type-membership-page .hero,
-.node-type-fundraising-campaign .hero,
-.page-campaigns .hero {
-  background-size: cover;
-  position: absolute;
-  background-repeat: no-repeat;
-  min-height: 550px;
-  background-position: center top;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: #eee;
-}
-
-@media (min-width: 64em) {
-  .node-type-donation .hero,
-  .node-type-membership-page .hero,
-  .node-type-fundraising-campaign .hero,
-  .page-campaigns .hero {
-    min-height: 650px;
   }
 }
 

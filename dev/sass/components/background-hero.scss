@@ -5,3 +5,22 @@
   min-height: 500px;
   background-position: bottom right;
 }
+
+// set background image
+.hero {
+  background-size: cover;
+  position: absolute;
+  background-repeat: no-repeat;
+  min-height: 550px;
+  background-position: center top;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $gray-1;
+}
+
+@media #{breakpoint(lg)} {
+  .hero {
+    min-height: 650px;
+  }
+}
