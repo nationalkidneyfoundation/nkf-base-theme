@@ -22,19 +22,11 @@
   position: fixed;
   top: 0;
   right: 0;
-  padding: space(md);
+  padding: space(xl) space(md) space(md) space(md);
   z-index: 2;
 }
 .nav--primary {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1;
   @include when(sm) {
-    position: static;
-    width: auto;
     border-bottom: solid color(red) border-width(lg);
   }
   li {

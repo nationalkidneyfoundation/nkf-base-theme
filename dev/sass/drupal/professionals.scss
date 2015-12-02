@@ -5,6 +5,13 @@
   .nav--primary {
     background-color: color(sienna);
   }
+  .nav--secondary {
+    a,
+    a:active,
+    a:visited {
+      color: $white;
+    }
+  }
   #logo {
     background-image: url(../img/NKF-logoR_Hori_W.png);
   }

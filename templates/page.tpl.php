@@ -12,7 +12,7 @@
         </div>
         <?php endif; ?>
         <?php if (isset($page['top_menu'])): ?>
-        <div class="grid-cell md--width--70 nav nav--secondary">
+        <div class="grid-cell md--width--70 nav nav--secondary sm--show">
           <?php print render($page['top_menu']) ?>
         </div>
         <?php endif; ?>
@@ -22,11 +22,11 @@
 
   <!-- NAVIGATION REGION -->
   <?php if (!empty($page['navigation'])) : ?>
-  <nav class="nav nav--primary bg--orange sm--show">
-    <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+  <nav class="nav nav--primary bg--orange">
+    <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg sm--show">
       <?php print render($page['navigation']); ?>
     </div>
-    <div class="nav__menu sm--hide" data-toggle="class" data-target=".nav--primary" data-class="sm--show">
+    <div class="nav__menu sm--hide" data-toggle="class" data-target=".nav--primary .container" data-class="sm--show">
       <i class="icon-menu"></i>menu
     </div>
   </nav>
