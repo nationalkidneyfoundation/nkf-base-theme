@@ -73,7 +73,7 @@
     <section class="main__title">
       <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <?php print render($title_prefix); ?>
-        <?php if ($title): ?><h1 class="font-size--xl sm--font-size--xxl md--font-size--xxxl"><?php print $title ?></h1><?php endif; ?>
+        <?php if ($title): ?><h1 class="font-size--xxl md--font-size--xxxl"><?php print $title ?></h1><?php endif; ?>
         <?php print render($title_suffix); ?>
       </div>
     </section>
@@ -125,7 +125,7 @@
 
 
   <!-- FOOTER -->
-  <footer class="footer bg--gray-1">
+  <footer class="footer bg--gray-1 border-top-width--xl border-color--gray-3 border-style--solid">
     <div class="container padding-y--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg ">
       <?php if ($page['footer']): ?>
       <?php print render($page['footer']); ?>

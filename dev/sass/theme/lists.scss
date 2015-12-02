@@ -1,5 +1,5 @@
 .list-style--check {
-  padding-left: space(lg);
+  padding-left: space(xl);
   li {
     list-style-type: none;
     padding-bottom: space(sm);
@@ -13,8 +13,8 @@
 
     display: inline-block;
     text-decoration: inherit;
-    width: space(lg);
-    margin-left: space(lg) * -1;
+    width: space(xl);
+    margin-left: space(xl) * -1;
     text-align: left;
     /* opacity: .8; */
 

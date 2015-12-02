@@ -2298,6 +2298,7 @@ legend {
 .tabs a:visited a:active.active {
   color: #000;
   font-weight: bold;
+  border-color: #000;
 }
 
 .tabs__local li {
@@ -5572,8 +5573,8 @@ a:hover {
 }
 
 .list-style--check {
-  padding-left: 21px;
-  padding-left: 1.414rem;
+  padding-left: 30px;
+  padding-left: 1.999rem;
 }
 
 .list-style--check li {
@@ -5591,10 +5592,10 @@ a:hover {
   speak: none;
   display: inline-block;
   text-decoration: inherit;
-  width: 21px;
-  width: 1.414rem;
-  margin-left: -21px;
-  margin-left: -1.414rem;
+  width: 30px;
+  width: 1.999rem;
+  margin-left: -30px;
+  margin-left: -1.999rem;
   text-align: left;
   /* opacity: .8; */
   /* For safety - reset parent styles, that can break glyph codes*/
@@ -11515,9 +11516,20 @@ html.js .js-hide {
   padding: 1rem;
 }
 
+.js--show--nav {
+  position: relative;
+  left: 0;
+  -webkit-transform: translate3d(85%, 0, 0);
+  transform: translate3d(85%, 0, 0);
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+}
+
 .nav--primary {
-  border-bottom: solid #d51217 8px;
-  border-bottom: solid #d51217 0.5rem;
+  position: static;
+  width: auto;
+  border-bottom: solid #d51217 8px li;
+  border-bottom: solid #d51217 0.5rem li;
 }
 
 .nav--primary a {
@@ -11526,8 +11538,13 @@ html.js .js-hide {
   border-width: 0 0 0.5rem 0;
   border-style: solid;
   position: relative;
-  margin-bottom: -7px;
   color: #000;
+}
+
+@media (min-width: 40em) {
+  .nav--primary a {
+    margin-bottom: -7px;
+  }
 }
 
 .nav--primary a:hover {
@@ -12702,4 +12719,12 @@ html.js .js-hide {
   .form-item-search input {
     width: 350px;
   }
+}
+
+.page-professionals .header {
+  background-color: #9E2420;
+}
+
+.page-professionals #logo {
+  background-image: url(../img/NKF-logoR_Hori_W.png);
 }
