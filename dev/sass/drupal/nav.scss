@@ -15,27 +15,31 @@
 }
 
 .js--show--nav {
-  position: relative;
-  left: 0;
-  transform: translate3d(85%, 0, 0);
-  transition: transform 300ms ease;
-}
 
+}
+.nav__menu {
+  //@include when(sm) { @include hide(); }
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: space(md);
+  z-index: 2;
+}
 .nav--primary {
-  //position: fixed;
-  //top: 0;
-  //bottom: 0;
-  //left: -85%;
-  //width:85%;
-  //z-index: 1;
-  //@include when(sm) {
-  position: static;
-  width: auto;
-  border-bottom: solid color(red) border-width(lg);
-  //}
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+  @include when(sm) {
+    position: static;
+    width: auto;
+    border-bottom: solid color(red) border-width(lg);
+  }
   li {
-    //width: 100%;
-    //@include when(sm) { width: auto; }
+    width: 100%;
+    @include when(sm) { width: auto; }
   }
   a {
     background-color: $white;
@@ -43,7 +47,11 @@
     border-style: solid;
     position: relative;
     color: $black;
-    @include when(sm) { margin-bottom: -7px; }//hack
+    width: 100%;
+    @include when(sm) {
+      margin-bottom: -7px; //hack
+      width: auto;
+    }
     &:hover {
       color: $black;
     }

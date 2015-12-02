@@ -22,8 +22,8 @@
         if (e.which < 33) {
           return true;
         }
-        return !isNaN(this.value+""+String.fromCharCode(e.charCode))
-      }
+        return !isNaN(this.value+""+String.fromCharCode(e.charCode));
+      };
       $.payment.fn.restrictFloat = function() {
         this.on('keypress', restrictFloat);
         return this;
@@ -46,7 +46,7 @@
               cc.closest('.form-item').find('.cc-error').remove();
               if(!$.payment.validateCardNumber(cc.val())) {
                 cc.addClass('error');
-                cc.closest('.form-item').append('<div class="cc-error error">Oops, double check your credit card number.</div>')
+                cc.closest('.form-item').append('<div class="cc-error error">Oops, double check your credit card number.</div>');
                 return false;
               } else {
                 cc.removeClass('error');
@@ -76,7 +76,7 @@
       // basic currency formatter
       function currencyFormat(v) {
         v = parseFloat(v).toFixed(2);
-        if(v % 1 == 0) {
+        if(v % 1 === 0) {
           v = parseFloat(v).toFixed(0);
         }
         if (isNaN(v)) {
@@ -88,7 +88,7 @@
       // helper function to get the donation amount
       function setDonationAmount() {
         var v = $(".form-item-donation input").val();
-        var c = ''
+        var c = '';
         if(v != 'select_or_other') {
           if ($('#edit-field-monthly-recurring-und').is(':checked')) {
             c = ' / mo';
@@ -106,7 +106,7 @@
         var v = $(".form-item-donation input").val();
         $('.amount-options .button').removeClass('active');
         if (v > 0) {
-          if (v % 1 == 0) {
+          if (v % 1 === 0) {
             v = parseInt(v);
           }
           var b = $("[data-amount='" + v + "']");
@@ -126,7 +126,7 @@
         $(context).find('input.required, select.required, textarea.required').each(function(i, d) {
           var r = false;
           if ($(d).attr('type') === 'radio') {
-            r = !$("input[name='" + $(d).attr('name') + "']:checked").val()
+            r = !$("input[name='" + $(d).attr('name') + "']:checked").val();
           }
           if($(d).val().trim() === '' || r) {
             // set focus on first required field without value
@@ -165,7 +165,7 @@
         if(e.trigger) {
           $(e.target).addClass('animate').animationClass('animate--fade-in');
         }
-      })
+      });
 
       // hack to add class for states-based required fields
       // the core states.js is inadequate
@@ -246,7 +246,7 @@
         $('.donation-step').each(function(i, v) {
           steps.append('<div class="step"><div class="step-' + i + '">'+ (i + 1) +'</div>');
           var previousNext = $('<div class="previous-next clearfix grid"></div>').appendTo($(v));
-          if(i == 0) {
+          if(i === 0) {
             $(v).addClass('active');
           }
 
@@ -257,14 +257,13 @@
                 if(checkRequiredFields(v)) {
                   $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
                     .nextAll('.donation-step:first').removeClass('sm--hide').addClass('active')
-                    .find('input,select').first().focus()//.addClass('animate').animationClass('animate--subtle-focus');
-                  $('form')
+                    .find('input,select').first().focus();//.addClass('animate').animationClass('animate--subtle-focus');
                   $('.step.active').toggleClass('active').next('.step').toggleClass('active');
                 }
                 e.preventDefault();
               });
           }
-          if(i != 0 ) {
+          if(i !== 0 ) {
             $(v).addClass('sm--hide');
             $('<a href="#" class="previous grid-cell"><i class="icon-arrow-left"></i></a>')
               .appendTo(previousNext).click(function(e) {

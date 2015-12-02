@@ -22,9 +22,12 @@
 
   <!-- NAVIGATION REGION -->
   <?php if (!empty($page['navigation'])) : ?>
-  <nav class="nav nav--primary bg--orange">
+  <nav class="nav nav--primary bg--orange sm--show">
     <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
       <?php print render($page['navigation']); ?>
+    </div>
+    <div class="nav__menu sm--hide" data-toggle="class" data-target=".nav--primary" data-class="sm--show">
+      <i class="icon-menu"></i>menu
     </div>
   </nav>
   <?php endif; ?>

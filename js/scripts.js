@@ -31,8 +31,8 @@
         this.on("animationend webkitAnimationEnd mozAnimationEnd MSAnimationEnd oAnimationEnd", function() {
           callback.call(this);
         });
-        return this
-      }
+        return this;
+      };
       $.fn.animationClass = function(animationClass, callback) {
         this.on("animationend webkitAnimationEnd mozAnimationEnd MSAnimationEnd oAnimationEnd", function(){
           $(this).removeClass(animationClass);
@@ -41,8 +41,8 @@
           }
         });
         this.addClass(animationClass);
-        return this
-      }
+        return this;
+      };
     }
 
   };
