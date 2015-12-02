@@ -17,6 +17,7 @@
   left: 0;
   right: 0;
   background-color: $gray-1;
+  z-index: -1;
 }
 
 @media #{breakpoint(lg)} {

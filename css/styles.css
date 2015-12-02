@@ -2345,6 +2345,7 @@ legend {
   left: 0;
   right: 0;
   background-color: #eee;
+  z-index: -1;
 }
 
 @media (min-width: 64em) {

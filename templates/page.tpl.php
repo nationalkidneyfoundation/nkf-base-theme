@@ -12,8 +12,8 @@
         </div>
         <?php endif; ?>
         <?php if (isset($page['top_menu'])): ?>
-        <div class="grid-cell md--width--70 nav nav--secondary sm--show">
-          <?php print render($page['top_menu']) ?>
+        <div class="grid-cell md--width--70 nav nav--secondary">
+          <div class="sm--show"><?php print render($page['top_menu']) ?></div>
         </div>
         <?php endif; ?>
       </div>
@@ -26,7 +26,7 @@
     <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg sm--show">
       <?php print render($page['navigation']); ?>
     </div>
-    <div class="nav__menu sm--hide" data-toggle="class" data-target=".nav--primary .container" data-class="sm--show">
+    <div class="nav__menu sm--hide color--white cursor--pointer" data-toggle="class" data-target=".nav--primary .container" data-class="sm--show">
       <i class="icon-menu"></i>menu
     </div>
   </nav>
@@ -58,9 +58,7 @@
   <main class="main position--relative">
     <!-- BACKGROUND IMAGE -->
     <?php if($background_image): ?>
-      <div class="container">
-        <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
-      </div>
+      <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
     <?php endif; ?>
 
     <!-- BREADCRUMBS -->
