@@ -11528,8 +11528,8 @@ html.js .js-hide {
 .nav--primary {
   position: static;
   width: auto;
-  border-bottom: solid #d51217 8px li;
-  border-bottom: solid #d51217 0.5rem li;
+  border-bottom: solid #d51217 8px;
+  border-bottom: solid #d51217 0.5rem;
 }
 
 .nav--primary a {
@@ -12722,6 +12722,10 @@ html.js .js-hide {
 }
 
 .page-professionals .header {
+  background-color: #9E2420;
+}
+
+.page-professionals .nav--primary {
   background-color: #9E2420;
 }
 
