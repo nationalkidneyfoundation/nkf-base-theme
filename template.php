@@ -68,7 +68,7 @@ function nkf_base_preprocess_page(&$vars) {
 
 
   $vars['background_image'] = false;
-  if(!empty($vars['node'])
+  if (!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
      && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
        $image_uri = $vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'];
@@ -79,6 +79,8 @@ function nkf_base_preprocess_page(&$vars) {
        $vars['background_image'] = true;
        $vars['background_image_uri'] =  $new_image_url;
   }
+  $vars['bean_highlight'] = false;
+  //if ()
 
   $page_classes = array('page');
   if (!isset($_SESSION['nkf_base'])) {
@@ -92,6 +94,21 @@ function nkf_base_preprocess_page(&$vars) {
     $page_classes[] = 'alert';
   }
   $vars['page_classes'] = implode(' ', $page_classes);
+}
+
+/**
+ * Override or insert variables into the bean templates.
+ */
+
+function nkf_base_process_entity(&$variables) {
+  if ($variables['entity_type'] == 'bean') {
+    if ($variables['bean']->type == 'banner') {
+      $variables['classes_array'][] = 'your-custom-class';
+      print '<pre>';
+      print_r($variables);
+      print '</pre>';
+    }
+  }
 }
 
 /**

@@ -20,6 +20,17 @@
     </div>
   </header>
 
+
+  <!-- HIGHLIGHTED REGION -->
+  <?php if (!empty($page['highlighted'])): ?>
+  <section>
+    <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+      <?php print render($page['highlighted']); ?>
+    </div>
+  </section>
+  <?php endif; ?>
+
+
   <!-- NAVIGATION REGION -->
   <?php if (!empty($page['navigation'])) : ?>
   <nav class="nav nav--primary bg--orange">
@@ -44,16 +55,6 @@
   <?php endif; ?>
 
 
-  <!-- HIGHLIGHTED REGION -->
-  <?php if (!empty($page['highlighted'])): ?>
-  <section class="padding-x--sm sm--padding-x--lg ">
-    <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
-      <?php print render($page['highlighted']); ?>
-    </div>
-  </section>
-  <?php endif; ?>
-
-
   <!-- MAIN -->
   <main class="main position--relative">
     <!-- BACKGROUND IMAGE -->
@@ -64,7 +65,7 @@
     <!-- BREADCRUMBS -->
     <?php if ($breadcrumb): ?>
     <section class="main__breadcrumbs">
-      <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+      <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <?php print $breadcrumb; ?>
       </div>
     </section>
