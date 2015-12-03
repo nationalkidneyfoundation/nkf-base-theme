@@ -72,7 +72,7 @@
 
     <!-- TITLE -->
     <section class="main__title">
-      <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+      <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <?php print render($title_prefix); ?>
         <?php if ($title): ?><h1 class="font-size--xxl md--font-size--xxxl"><?php print $title ?></h1><?php endif; ?>
         <?php print render($title_suffix); ?>

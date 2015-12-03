@@ -2245,6 +2245,15 @@ legend {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
+.grid--center {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  text-align: center;
+}
+
 .opera-only :-o-prefocus,
 .grid,
 .list--grid {
@@ -2258,6 +2267,7 @@ legend {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -2279,6 +2289,7 @@ legend {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -2307,6 +2318,7 @@ legend {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -10796,8 +10808,8 @@ p {
 
 @font-face {
   font-family: 'fontello';
-  src: url('../font/fontello.eot?37974201');
-  src: url('../font/fontello.eot?37974201#iefix') format('embedded-opentype'), url('../font/fontello.woff?37974201') format('woff'), url('../font/fontello.ttf?37974201') format('truetype'), url('../font/fontello.svg?37974201#fontello') format('svg');
+  src: url('../font/fontello.eot?41074407');
+  src: url('../font/fontello.eot?41074407#iefix') format('embedded-opentype'), url('../font/fontello.woff?41074407') format('woff'), url('../font/fontello.ttf?41074407') format('truetype'), url('../font/fontello.svg?41074407#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -10810,7 +10822,7 @@ p {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?37974201#fontello') format('svg');
+    src: url('../font/fontello.svg?41074407#fontello') format('svg');
   }
 }
 */
@@ -10921,6 +10933,30 @@ p {
 }
 
 /* '' */
+
+.icon-attention:before {
+  content: '\e80d';
+}
+
+/* '' */
+
+.icon-smile:before {
+  content: '\e80e';
+}
+
+/* '' */
+
+.icon-frown:before {
+  content: '\e80f';
+}
+
+/* '' */
+
+.icon-meh:before {
+  content: '\e810';
+}
+
+/* '' */
 
 /**
  * block/block.css ====================================================
@@ -11530,6 +11566,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -11867,6 +11904,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12040,6 +12078,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12128,6 +12167,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12175,6 +12215,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12214,6 +12255,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12262,6 +12304,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12346,6 +12389,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12386,6 +12430,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12433,6 +12478,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12447,6 +12493,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12485,6 +12532,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
@@ -12661,6 +12709,7 @@ html.js .js-hide {
   letter-spacing: normal;
   word-spacing: normal;
   text-rendering: auto;
+  text-align: left;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
