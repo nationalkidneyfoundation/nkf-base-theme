@@ -99,10 +99,24 @@ function nkf_base_preprocess_page(&$vars) {
 /**
  * Override or insert variables into the bean templates.
  */
+function nkf_base_preprocess_bean(&$variables) {
+  // Add a custom class to the bean entity.
+  if ($variables['bean']->type == 'banner') {
+    print 'bean';
+    $variables['classes_array'][] = 'your-custom-class';
+    print '<pre>';
+    print_r($variables);
+    print '</pre>';
+  }
+}
 
-function nkf_base_process_entity(&$variables) {
+/**
+ * Override or insert variables into the bean templates.
+ */
+function nkf_base_preprocess_entity(&$variables) {
   if ($variables['entity_type'] == 'bean') {
     if ($variables['bean']->type == 'banner') {
+      print 'entity';
       $variables['classes_array'][] = 'your-custom-class';
       print '<pre>';
       print_r($variables);
