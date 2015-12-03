@@ -62,7 +62,7 @@
     <?php endif; ?>
 
     <!-- BREADCRUMBS -->
-    <?php if ($breadcrumb && FALSE): ?>
+    <?php if ($breadcrumb): ?>
     <section class="main__breadcrumbs">
       <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <?php print $breadcrumb; ?>
@@ -126,7 +126,7 @@
 
 
   <!-- FOOTER -->
-  <footer class="footer bg--gray-1 border-top-width--lg border-color--gray-3 border-style--solid">
+  <footer class="footer margin-top--xxxl bg--gray-1 border-top-width--lg border-color--gray-3 border-style--solid">
     <div class="container padding-y--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg ">
       <?php if ($page['footer']): ?>
       <?php print render($page['footer']); ?>

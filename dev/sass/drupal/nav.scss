@@ -10,13 +10,13 @@
   }
   a {
     display: inline-block;
-    padding: space(md);
+    padding: space(sm) space(md);
   }
 }
 
 .nav__menu {
   //@include when(sm) { @include hide(); }
-  position: fixed;
+  position: absolute;
   top: 0;
   right: 0;
   padding: space(xl) space(md) space(md) space(md);
