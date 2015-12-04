@@ -4,44 +4,48 @@
 
   <!-- HEADER -->
   <header class="header bg--orange">
-    <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
-      <div class="grid">
-        <?php if ($logo): ?>
-        <div class="grid-cell md--width--30 header__brand">
-          <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"></a>
+    <!-- LOGO & TOP NAV -->
+    <section>
+      <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+        <div class="grid">
+          <?php if ($logo): ?>
+          <div class="grid-cell md--width--30 header__brand">
+            <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"></a>
+          </div>
+          <?php endif; ?>
+          <?php if (isset($page['top_menu'])): ?>
+          <div class="grid-cell md--width--70 nav nav--secondary">
+            <div class="sm--show"><?php print render($page['top_menu']) ?></div>
+          </div>
+          <?php endif; ?>
         </div>
-        <?php endif; ?>
-        <?php if (isset($page['top_menu'])): ?>
-        <div class="grid-cell md--width--70 nav nav--secondary">
-          <div class="sm--show"><?php print render($page['top_menu']) ?></div>
-        </div>
-        <?php endif; ?>
       </div>
-    </div>
+    </section>
+
+
+    <!-- HIGHLIGHTED REGION -->
+    <?php if (!empty($page['highlighted'])): ?>
+    <section class="position--relative">
+      <!--<div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">-->
+        <?php print render($page['highlighted']); ?>
+      <!--<</div>-->
+    </section>
+    <?php endif; ?>
+
+
+    <!-- NAVIGATION REGION -->
+    <?php if (!empty($page['navigation'])) : ?>
+    <nav class="nav nav--primary bg--orange">
+      <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg sm--show">
+        <?php print render($page['navigation']); ?>
+      </div>
+      <div class="nav__menu sm--hide color--white cursor--pointer" data-toggle="class" data-target=".nav--primary .container" data-class="sm--show">
+        <i class="icon-menu"></i>menu
+      </div>
+    </nav>
+    <?php endif; ?>
   </header>
 
-
-  <!-- HIGHLIGHTED REGION -->
-  <?php if (!empty($page['highlighted'])): ?>
-  <section class="position--relative">
-    <!--<div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">-->
-      <?php print render($page['highlighted']); ?>
-    <!--<</div>-->
-  </section>
-  <?php endif; ?>
-
-
-  <!-- NAVIGATION REGION -->
-  <?php if (!empty($page['navigation'])) : ?>
-  <nav class="nav nav--primary bg--orange">
-    <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg sm--show">
-      <?php print render($page['navigation']); ?>
-    </div>
-    <div class="nav__menu sm--hide color--white cursor--pointer" data-toggle="class" data-target=".nav--primary .container" data-class="sm--show">
-      <i class="icon-menu"></i>menu
-    </div>
-  </nav>
-  <?php endif; ?>
 
   <!-- MESSAGES -->
   <?php //if (!empty($page['help']) || ($show_messages && !empty($messages))): ?>

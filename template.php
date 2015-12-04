@@ -4,17 +4,17 @@
  /**
   * Implements hook_theme().
   */
-/*
-function nkf_base_theme($existing, $type, $theme, $path) {
-  $items = array();
-  $items['redhen_donation_form'] = array(
-    'render element' => 'form',
-    'template' => 'donate-form',
-    'path' => drupal_get_path('theme', 'nkf_base') . '/templates',
-  );
-  return $items;
-}
-*/
+
+//function nkf_base_theme($existing, $type, $theme, $path) {
+//  $items = array();
+  //$items['redhen_donation_form'] = array(
+  //  'render element' => 'form',
+  //  'template' => 'donate-form',
+  //  'path' => drupal_get_path('theme', 'nkf_base') . '/templates',
+  //);
+  //return $items;
+//}
+
 
 /**
  * Implementation of hook_addressfield_administrative_areas_alter
@@ -94,7 +94,19 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['page_classes'] = implode(' ', $page_classes);
 }
 
+/**
+ * Override or insert variables into the block templates.
+ */
+function nkf_base_preprocess_block(&$vars) {
 
+  if ($vars['block']->module == 'bean') {
+    $beans = $vars['elements']['bean'];
+    // There is only 1 bean per block.
+    $bean = $beans[reset(element_children($beans))];
+    // Add template suggestions for bean types.
+    $vars['theme_hook_suggestions'][] = 'block__bean__' . $bean['#bundle'];
+  }
+}
 /**
  * Override or insert variables into the bean templates.
  */

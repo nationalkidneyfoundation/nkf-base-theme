@@ -27,6 +27,10 @@
  * @see template_process()
  */
 ?>
-<?php if($background_image): ?>
-  <div class="background-size--cover min-height--xxl" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
-<?php endif; ?>
+
+
+<div class="background-size--cover min-height--xxl" <?php if($background_image): ?>style="background-image: url('<?php print $background_image_uri; ?><?php endif;?>')">
+  <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+    <?php print render($content['field_base_description']); ?>
+  </div>
+</div>

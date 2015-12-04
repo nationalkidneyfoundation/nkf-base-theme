@@ -44,5 +44,4 @@
  * @ingroup themeable
  */
 ?>
-<?php watchdog('theme', 'block bean banner template'); ?>
 <?php print $content ?>
