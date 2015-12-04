@@ -28,5 +28,5 @@
  */
 ?>
 <?php if($background_image): ?>
-  <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
+  <div class="background-size--cover min-height--xxl" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
 <?php endif; ?>

@@ -5307,6 +5307,16 @@ a:hover {
 }
 
 .height--xl {
+  height: 339px;
+  height: 22.597rem;
+}
+
+.height--xxl {
+  height: 479px;
+  height: 31.952rem;
+}
+
+.height--xxxl {
   height: 958px;
   height: 63.884rem;
 }
@@ -5357,6 +5367,51 @@ a:hover {
 
 .height--100 {
   height: 100%;
+}
+
+.min-height--xxxs {
+  height: 8px;
+  height: 0.5rem;
+}
+
+.min-height--xxs {
+  height: 11px;
+  height: 0.707rem;
+}
+
+.min-height--xs {
+  height: 15px;
+  height: 1rem;
+}
+
+.min-height--sm {
+  height: 30px;
+  height: 1.999rem;
+}
+
+.min-height--md {
+  height: 60px;
+  height: 3.998rem;
+}
+
+.min-height--lg {
+  height: 240px;
+  height: 15.981rem;
+}
+
+.min-height--xl {
+  height: 339px;
+  height: 22.597rem;
+}
+
+.min-height--xxl {
+  height: 479px;
+  height: 31.952rem;
+}
+
+.min-height--xxxl {
+  height: 958px;
+  height: 63.884rem;
 }
 
 .container--xs {
@@ -5551,6 +5606,16 @@ a:hover {
 }
 
 .line-height--xl {
+  line-height: 339px;
+  line-height: 22.597rem;
+}
+
+.line-height--xxl {
+  line-height: 479px;
+  line-height: 31.952rem;
+}
+
+.line-height--xxxl {
   line-height: 958px;
   line-height: 63.884rem;
 }
@@ -10188,6 +10253,16 @@ p {
 }
 
 .width--xl {
+  width: 339px;
+  width: 22.597rem;
+}
+
+.width--xxl {
+  width: 479px;
+  width: 31.952rem;
+}
+
+.width--xxxl {
   width: 958px;
   width: 63.884rem;
 }
