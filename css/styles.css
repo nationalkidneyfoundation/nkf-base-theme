@@ -2030,6 +2030,7 @@ input[type="submit"]:hover,
 .button--outline--gray-5:hover,
 .button--outline--black:hover {
   text-decoration: none;
+  color: currentColor;
 }
 
 button:disabled,
@@ -3853,6 +3854,42 @@ a:hover {
   color: #3b5998;
 }
 
+.hover--color--white:hover {
+  color: #fff;
+}
+
+.hover--color--gray-1:hover {
+  color: #eee;
+}
+
+.hover--color--gray-2:hover {
+  color: #ccc;
+}
+
+.hover--color--gray-3:hover {
+  color: #bbb;
+}
+
+.hover--color--gray-4:hover {
+  color: #777;
+}
+
+.hover--color--gray-5:hover {
+  color: #333;
+}
+
+.hover--color--black:hover {
+  color: #000;
+}
+
+.hover--color--twitter:hover {
+  color: #4099FF;
+}
+
+.hover--color--facebook:hover {
+  color: #3b5998;
+}
+
 .background-color--orange,
 .bg--orange {
   background-color: #F15E22;
@@ -5620,26 +5657,6 @@ a:hover {
   line-height: 63.884rem;
 }
 
-.line-height--10 {
-  line-height: 10%;
-}
-
-.line-height--20 {
-  line-height: 20%;
-}
-
-.line-height--25 {
-  line-height: 25%;
-}
-
-.line-height--30 {
-  line-height: 30%;
-}
-
-.line-height--40 {
-  line-height: 40%;
-}
-
 .line-height--50 {
   line-height: 50%;
 }
@@ -5666,6 +5683,22 @@ a:hover {
 
 .line-height--100 {
   line-height: 100%;
+}
+
+.line-height--105 {
+  line-height: 105%;
+}
+
+.line-height--110 {
+  line-height: 110%;
+}
+
+.line-height--115 {
+  line-height: 115%;
+}
+
+.line-height--120 {
+  line-height: 120%;
 }
 
 .list-style--check {

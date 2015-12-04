@@ -50,3 +50,16 @@ a:hover {
   &--twitter  { color: $twitter; }
   &--facebook { color: $facebook; }
 }
+.hover {
+  &--color {
+    &--white:hover    { color: $white; }
+    &--gray-1:hover   { color: $gray-1; }
+    &--gray-2:hover   { color: $gray-2; }
+    &--gray-3:hover   { color: $gray-3; }
+    &--gray-4:hover   { color: $gray-4; }
+    &--gray-5:hover   { color: $gray-5; }
+    &--black:hover    { color: $black; }
+    &--twitter:hover  { color: $twitter; }
+    &--facebook:hover { color: $facebook; }
+  }
+  }

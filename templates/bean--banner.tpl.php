@@ -29,7 +29,7 @@
 ?>
 
 
-<div class="background-size--cover min-height--xxl" <?php if($background_image): ?>style="background-image: url('<?php print $background_image_uri; ?><?php endif;?>')">
+<div class="background-size--cover <?php if($background_image): ?>  min-height--xxl" style="background-image: url('<?php print $background_image_uri; ?><?php endif;?>')">
   <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
     <?php print render($content['field_base_description']); ?>
   </div>
