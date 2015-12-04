@@ -23,10 +23,10 @@
 
   <!-- HIGHLIGHTED REGION -->
   <?php if (!empty($page['highlighted'])): ?>
-  <section>
-    <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+  <section class="position--relative">
+    <!--<div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">-->
       <?php print render($page['highlighted']); ?>
-    </div>
+    <!--<</div>-->
   </section>
   <?php endif; ?>
 

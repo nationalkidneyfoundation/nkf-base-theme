@@ -27,12 +27,6 @@
  * @see template_process()
  */
 ?>
-TEST
-<div class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
-  <div class="content"<?php print $content_attributes; ?>>
-    <?php
-      print render($content);
-    ?>
-  </div>
-</div>
+<?php if($background_image): ?>
+  <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
+<?php endif; ?>

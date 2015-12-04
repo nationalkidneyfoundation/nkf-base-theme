@@ -79,8 +79,6 @@ function nkf_base_preprocess_page(&$vars) {
        $vars['background_image'] = true;
        $vars['background_image_uri'] =  $new_image_url;
   }
-  $vars['bean_highlight'] = false;
-  //if ()
 
   $page_classes = array('page');
   if (!isset($_SESSION['nkf_base'])) {
@@ -96,31 +94,24 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['page_classes'] = implode(' ', $page_classes);
 }
 
-/**
- * Override or insert variables into the bean templates.
- */
-function nkf_base_preprocess_bean(&$variables) {
-  // Add a custom class to the bean entity.
-  if ($variables['bean']->type == 'banner') {
-    print 'bean';
-    $variables['classes_array'][] = 'your-custom-class';
-    print '<pre>';
-    print_r($variables);
-    print '</pre>';
-  }
-}
 
 /**
  * Override or insert variables into the bean templates.
  */
-function nkf_base_preprocess_entity(&$variables) {
-  if ($variables['entity_type'] == 'bean') {
-    if ($variables['bean']->type == 'banner') {
-      print 'entity';
-      $variables['classes_array'][] = 'your-custom-class';
-      print '<pre>';
-      print_r($variables);
-      print '</pre>';
+function nkf_base_preprocess_entity(&$vars) {
+  if ($vars['entity_type'] == 'bean') {
+    if ($vars['bean']->type == 'banner') {
+      $vars['background_image'] = false;
+      if (isset($vars['bean']->field_hero_image_background)
+         && isset($vars['bean']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
+           $image_uri = $vars['bean']->field_hero_image_background[LANGUAGE_NONE][0]['uri'];
+           $style = 'full_page_background';
+           $derivative_uri = image_style_path($style, $image_uri);
+           $success = file_exists($derivative_uri) || image_style_create_derivative(image_style_load($style), $image_uri, $derivative_uri);
+           $new_image_url  = file_create_url($derivative_uri);
+           $vars['background_image'] = TRUE;
+           $vars['background_image_uri'] =  $new_image_url;
+      }
     }
   }
 }
