@@ -1,11 +1,13 @@
 
 #logo {
-  @extend .background-size--contain;
+  background-size: contain;
   display: inline-block;;
   background-repeat: no-repeat;
   height: 56px;
-  width: 300px;
-  background-image: url(../logo.png);
+  width: 56px;
+  @include when(md) { width: 300px; }
+  @include when(md) { background-image: url(../logo.png); }
+  background-image: url(../img/logo__bean--white.png);
 }
 @media print {
   #logo::before {

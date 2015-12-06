@@ -483,8 +483,7 @@ img {
   background-size: cover;
 }
 
-.background-size--contain,
-#logo {
+.background-size--contain {
   background-size: contain;
 }
 
@@ -11563,11 +11562,24 @@ html.js .js-hide {
 }
 
 #logo {
+  background-size: contain;
   display: inline-block;
   background-repeat: no-repeat;
   height: 56px;
-  width: 300px;
-  background-image: url(../logo.png);
+  width: 56px;
+  background-image: url(../img/logo__bean--white.png);
+}
+
+@media (min-width: 52em) {
+  #logo {
+    width: 300px;
+  }
+}
+
+@media (min-width: 52em) {
+  #logo {
+    background-image: url(../logo.png);
+  }
 }
 
 @media print {
@@ -11659,46 +11671,74 @@ html.js .js-hide {
 }
 
 .nav .menu {
-  letter-spacing: -0.31em;
-  *letter-spacing: normal;
-  *word-spacing: -0.43em;
-  text-rendering: optimizespeed;
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  padding-top: 30px;
+  padding-top: 1.999rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  float: right;
+  list-style: none;
+  z-index: 2;
+  background-color: #F15E22;
+}
+
+@media (min-width: 40em) {
+  .nav .menu {
+    padding: 0;
+  }
+}
+
+@media (min-width: 40em) {
+  .nav .menu {
+    display: table-row;
+  }
+}
+
+@media (min-width: 40em) {
+  .nav .menu {
+    position: static;
+  }
 }
 
 .nav li {
-  display: inline-block;
-  vertical-align: top;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-rendering: auto;
-  text-align: left;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
-  *zoom: 1;
-  *display: inline;
+  display: block;
+  height: 56px;
+  vertical-align: middle;
+}
+
+@media (min-width: 40em) {
+  .nav li {
+    display: table-cell;
+  }
 }
 
 .nav a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: .9rem;
+  white-space: nowrap;
   display: inline-block;
-  padding: 11px 15px;
-  padding: 0.707rem 1rem;
+  padding: 11px 11px;
+  padding: 0.707rem 0.707rem;
 }
 
 .nav__menu {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 30px 15px 15px 15px;
-  padding: 1.999rem 1rem 1rem 1rem;
-  z-index: 2;
+  padding: 21px 15px 15px 15px;
+  padding: 1.414rem 1rem 1rem 1rem;
+  z-index: 3;
+  font-size: 30px;
+  font-size: 1.999rem;
 }
 
 @media (min-width: 40em) {
-  .nav--primary {
-    border-bottom: solid #d51217 8px;
-    border-bottom: solid #d51217 0.5rem;
+  .nav__menu {
+    display: none !important;
   }
 }
 
@@ -11713,18 +11753,13 @@ html.js .js-hide {
 }
 
 .nav--primary a {
-  background-color: #fff;
-  border-width: 0 0 8px 0;
-  border-width: 0 0 0.5rem 0;
-  border-style: solid;
   position: relative;
-  color: #000;
+  color: #fff;
   width: 100%;
 }
 
 @media (min-width: 40em) {
   .nav--primary a {
-    margin-bottom: -7px;
     width: auto;
   }
 }
@@ -11910,6 +11945,7 @@ html.js .js-hide {
 .node-type-membership-page #logo,
 .node-type-fundraising-campaign #logo,
 .page-campaigns #logo {
+  background-image: url(../img/NKF-logoR_Hori_OB.png);
   background-image: url(../img/NKF-logoR_Hori_OB.png);
 }
 
@@ -12830,6 +12866,7 @@ html.js .js-hide {
   width: 1.999rem;
   line-height: 30px;
   line-height: 1.999rem;
+  text-align: center;
 }
 
 .node-type-donation .step.active,

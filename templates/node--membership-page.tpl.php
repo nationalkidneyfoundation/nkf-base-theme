@@ -123,7 +123,7 @@
       <div class="padding-bottom--lg color--white font-size--lg"><?php print render($content['field_donation_tag_line']); ?></div>
     <?php endif; ?>
     <div class="grid width--100">
-      <div class="grid-cell sm--width--60 width--100">
+      <div class="grid-cell sm--width--80 md--width--70 lg--width--60 width--100">
         <?php print render($content['field_membership_donation_type']); ?>
       </div>
       <?php if (isset($content['body']) || isset($content['field_hero_image'])): ?>

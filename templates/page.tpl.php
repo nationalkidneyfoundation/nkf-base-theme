@@ -3,17 +3,29 @@
 <div class="<?php print $page_classes; ?>">
 
   <!-- HEADER -->
-  <header class="header bg--orange">
+  <header class="header <?php print (!empty($page['highlighted'])) ? 'bg--white' : 'bg--orange' ?>">
     <!-- LOGO & TOP NAV -->
     <section>
       <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <div class="grid">
+          <!-- LOGO -->
           <?php if ($logo): ?>
-          <div class="grid-cell md--width--30 header__brand">
+          <div class="grid-cell width--30 header__brand">
             <a href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>" rel="home" class="header__logo" id="logo"></a>
           </div>
           <?php endif; ?>
-          <?php if (isset($page['top_menu'])): ?>
+
+          <!-- NAVIGATION REGION -->
+          <?php if (!empty($page['navigation'])) : ?>
+          <nav class="nav nav--primary grid-cell width--70">
+            <div class="nav__nav sm--show"><?php print render($page['navigation']); ?></div>
+            <div class="nav__menu sm--hide color--white cursor--pointer" data-toggle="class" data-target=".nav__nav" data-class="sm--show">
+              <i class="icon-menu"></i>
+            </div>
+          </nav>
+          <?php endif; ?>
+
+          <?php if (isset($page['top_menu']) && FALSE): ?>
           <div class="grid-cell md--width--70 nav nav--secondary">
             <div class="sm--show"><?php print render($page['top_menu']) ?></div>
           </div>
@@ -26,24 +38,11 @@
     <!-- HIGHLIGHTED REGION -->
     <?php if (!empty($page['highlighted'])): ?>
     <section class="position--relative">
-      <!--<div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">-->
-        <?php print render($page['highlighted']); ?>
-      <!--<</div>-->
+      <?php print render($page['highlighted']); ?>
     </section>
     <?php endif; ?>
 
 
-    <!-- NAVIGATION REGION -->
-    <?php if (!empty($page['navigation'])) : ?>
-    <nav class="nav nav--primary bg--orange">
-      <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg sm--show">
-        <?php print render($page['navigation']); ?>
-      </div>
-      <div class="nav__menu sm--hide color--white cursor--pointer" data-toggle="class" data-target=".nav--primary .container" data-class="sm--show">
-        <i class="icon-menu"></i>menu
-      </div>
-    </nav>
-    <?php endif; ?>
   </header>
 
 
@@ -67,7 +66,7 @@
     <?php endif; ?>
 
     <!-- BREADCRUMBS -->
-    <?php if ($breadcrumb): ?>
+    <?php if ($breadcrumb && FALSE): ?>
     <section class="main__breadcrumbs">
       <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <?php print $breadcrumb; ?>

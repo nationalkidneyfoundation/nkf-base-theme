@@ -1,44 +1,65 @@
 
 .nav {
   .menu {
-    @include grid();
+    //@include grid();
     margin: 0;
-    padding: 0;
+    @include when(sm) { padding: 0; }
+    padding-top: space(xl);
+    @include when(sm) { display: table-row; }
+    @include when(sm) { position: static; }
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    float: right;
+    list-style: none;
+    z-index: 2;
+    background-color: color(orange);
   }
   li {
-    @include grid-cell();
+    //@include grid-cell();
+    @include when(sm) { display: table-cell; }
+    display: block;
+    height: 56px;
+    vertical-align: middle;
   }
   a {
+    text-transform: uppercase;
+    font-size: .9rem;
+    white-space: nowrap;
     display: inline-block;
-    padding: space(sm) space(md);
+    padding: space(sm) space(sm);
   }
 }
 
 .nav__menu {
-  //@include when(sm) { @include hide(); }
+  @include when(sm) { @include hide(); }
   position: absolute;
   top: 0;
   right: 0;
-  padding: space(xl) space(md) space(md) space(md);
-  z-index: 2;
+  padding: space(lg) space(md) space(md) space(md);
+  z-index: 3;
+  font-size: font-size(xl);
 }
 .nav--primary {
+
   @include when(sm) {
-    border-bottom: solid color(red) border-width(lg);
+    //border-bottom: solid color(red) border-width(lg);
   }
   li {
     width: 100%;
     @include when(sm) { width: auto; }
   }
   a {
-    background-color: $white;
-    border-width: 0 0 border-width(lg) 0;
-    border-style: solid;
+    //background-color: $white;
+    //border-width: 0 0 border-width(lg) 0;
+    //border-style: solid;
     position: relative;
-    color: $black;
+    color: $white;
     width: 100%;
     @include when(sm) {
-      margin-bottom: -7px; //hack
+      //margin-bottom: -7px; //hack
       width: auto;
     }
     &:hover {

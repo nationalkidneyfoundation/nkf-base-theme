@@ -57,6 +57,7 @@
   }
   #logo {
     background-image: url(../img/NKF-logoR_Hori_OB.png);
+    background-image: url(../img/NKF-logoR_Hori_OB.png);
   }
 
   // main section tweaks
@@ -440,10 +441,8 @@
   }
   .steps {
     @include grid();
-    //padding: space(sm) 0;
     text-align: center;
     background-color: $white;
-    //border-bottom: 1px solid $gray-2
   }
   .step {
     @include grid-cell();
@@ -452,6 +451,7 @@
     height: base-scale(3);
     width: base-scale(3);
     line-height: base-scale(3);
+    text-align: center;
   }
   .step.active {
     padding: base-scale(md);
