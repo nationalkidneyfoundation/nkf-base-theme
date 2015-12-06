@@ -12932,10 +12932,6 @@ html.js .js-hide {
   background-color: #9E2420;
 }
 
-.page-professionals .nav--primary {
-  background-color: #9E2420;
-}
-
 .page-professionals .nav--secondary a,
 .page-professionals .nav--secondary a:active,
 .page-professionals .nav--secondary a:visited {
@@ -12943,5 +12939,11 @@ html.js .js-hide {
 }
 
 .page-professionals #logo {
-  background-image: url(../img/NKF-logoR_Hori_W.png);
+  background-image: url(../img/logo__bean--white.png);
+}
+
+@media (min-width: 40em) {
+  .page-professionals #logo {
+    background-image: url(../img/NKF-logoR_Hori_W.png);
+  }
 }
