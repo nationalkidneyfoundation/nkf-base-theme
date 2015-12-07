@@ -11683,8 +11683,8 @@ html.js .js-hide {
 
 .nav .menu {
   margin: 0;
-  padding-top: 30px;
-  padding-top: 1.999rem;
+  padding: 42px 15px 15px;
+  padding: 2.827rem 1rem 1rem;
   position: absolute;
   top: 0;
   right: 0;
@@ -11693,6 +11693,7 @@ html.js .js-hide {
   float: right;
   list-style: none;
   z-index: 2;
+  background-color: #F15E22;
 }
 
 @media (min-width: 40em) {
@@ -11710,6 +11711,12 @@ html.js .js-hide {
 @media (min-width: 40em) {
   .nav .menu {
     position: static;
+  }
+}
+
+@media (min-width: 52em) {
+  .nav .menu {
+    background-color: transparent;
   }
 }
 
@@ -11795,12 +11802,6 @@ html.js .js-hide {
       @include hide();
     }
   }
-  .active {
-    border-color: $white;
-    &::before {
-      @include hide();
-    }
-  }
   */
 }
 
@@ -11837,6 +11838,14 @@ html.js .js-hide {
 
 .nav--primary a:hover {
   color: #000;
+}
+
+.nav--primary .active {
+  color: #000;
+}
+
+.nav--primary .active::before {
+  display: none !important;
 }
 
 .nav--secondary {
@@ -12935,7 +12944,7 @@ html.js .js-hide {
   background-image: url(../img/logo__bean--white.png);
 }
 
-@media (min-width: 40em) {
+@media (min-width: 52em) {
   .page-professionals #logo {
     background-image: url(../img/NKF-logoR_Hori_W.png);
   }

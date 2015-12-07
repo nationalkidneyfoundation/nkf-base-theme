@@ -4,7 +4,7 @@
     //@include grid();
     margin: 0;
     @include when(sm) { padding: 0; }
-    padding-top: space(xl);
+    padding: space(xxl) space(md) space(md);
     @include when(sm) { display: table-row; }
     @include when(sm) { position: static; }
     position: absolute;
@@ -15,6 +15,8 @@
     float: right;
     list-style: none;
     z-index: 2;
+    @include when(md) { background-color: transparent; }
+    background-color: color(orange);
   }
   li {
     //@include grid-cell();
@@ -116,13 +118,14 @@
       @include hide();
     }
   }
+  */
   .active {
-    border-color: $white;
+    color: $black;
     &::before {
       @include hide();
     }
   }
-  */
+
 }
 
 .nav--secondary {

@@ -13,7 +13,7 @@
     }
   }
   #logo {
-    @include when(sm) { background-image: url(../img/NKF-logoR_Hori_W.png); }
-    background-image: url(../img/logo__bean--white.png); 
+    @include when(md) { background-image: url(../img/NKF-logoR_Hori_W.png); }
+    background-image: url(../img/logo__bean--white.png);
   }
 }
