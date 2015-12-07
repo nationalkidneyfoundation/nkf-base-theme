@@ -2,11 +2,11 @@
 
 // Plugin definition
 $plugin = array(
-  'title' => t('66 x 33'),
+  'title' => t('33 x 33 x 33'),
   'category' => t('NKF Base'),
   'icon' => '66x33.png',
-  'theme' => '66x33',
-  'css' => '66x33.css',
+  'theme' => '33x33x33',
+  'css' => '33x33x33.css',
   'regions' => array(
     'top' => t('Top'),
     'left' => t('Left'),
