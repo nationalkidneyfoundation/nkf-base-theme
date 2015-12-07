@@ -7,7 +7,7 @@
     padding: space(xxl) space(md) space(md);
     @include when(sm) { display: table-row; }
     @include when(sm) { position: static; }
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     bottom: 0;

@@ -4,7 +4,7 @@
 $plugin = array(
   'title' => t('33 x 33 x 33'),
   'category' => t('NKF Base'),
-  'icon' => '66x33.png',
+  'icon' => '33x33x33.png',
   'theme' => '33x33x33',
   'css' => '33x33x33.css',
   'regions' => array(

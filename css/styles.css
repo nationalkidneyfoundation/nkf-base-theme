@@ -11685,7 +11685,7 @@ html.js .js-hide {
   margin: 0;
   padding: 42px 15px 15px;
   padding: 2.827rem 1rem 1rem;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
