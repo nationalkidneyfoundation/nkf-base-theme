@@ -11714,7 +11714,7 @@ html.js .js-hide {
   }
 }
 
-@media (min-width: 52em) {
+@media (min-width: 40em) {
   .nav .menu {
     background-color: transparent;
   }
