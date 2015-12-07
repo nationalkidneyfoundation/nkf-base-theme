@@ -56,8 +56,8 @@
     max-height: 40px;
   }
   #logo {
-    background-image: url(../img/NKF-logoR_Hori_OB.png);
-    background-image: url(../img/NKF-logoR_Hori_OB.png);
+    @include when(md) { background-image: url(../img/NKF-logoR_Hori_OB.png); }
+    background-image: url(../img/logo__bean--orange.png);
   }
 
   // main section tweaks

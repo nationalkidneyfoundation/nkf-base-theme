@@ -13,7 +13,7 @@
   </div>
   <?php endif; ?>
   <?php if (!empty($content['middle'])):?>
-  <div class="grid-cell sm--width--33 width--100 padding-bottom--lg sm--padding-left--lg">
+  <div class="grid-cell sm--width--33 width--100 padding-bottom--lg sm--padding-x--lg">
     <?php print $content['middle']; ?>
   </div>
   <?php endif; ?>

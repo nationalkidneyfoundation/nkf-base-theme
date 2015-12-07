@@ -11947,8 +11947,16 @@ html.js .js-hide {
 .node-type-membership-page #logo,
 .node-type-fundraising-campaign #logo,
 .page-campaigns #logo {
-  background-image: url(../img/NKF-logoR_Hori_OB.png);
-  background-image: url(../img/NKF-logoR_Hori_OB.png);
+  background-image: url(../img/logo__bean--orange.png);
+}
+
+@media (min-width: 52em) {
+  .node-type-donation #logo,
+  .node-type-membership-page #logo,
+  .node-type-fundraising-campaign #logo,
+  .page-campaigns #logo {
+    background-image: url(../img/NKF-logoR_Hori_OB.png);
+  }
 }
 
 .node-type-donation .main,
@@ -12948,4 +12956,13 @@ html.js .js-hide {
   .page-professionals #logo {
     background-image: url(../img/NKF-logoR_Hori_W.png);
   }
+}
+
+.node-type-membership-page .field-name-field-prefix {
+  width: 20%;
+}
+
+.node-type-membership-page #edit-name {
+  width: 80%;
+  display: inline-block;
 }
