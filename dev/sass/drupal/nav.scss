@@ -15,7 +15,6 @@
     float: right;
     list-style: none;
     z-index: 2;
-    background-color: color(orange);
   }
   li {
     //@include grid-cell();
@@ -65,7 +64,7 @@
     &:hover {
       color: $black;
     }
-    &::before {
+    /*&::before {
       @include cover-absolute();
       content: '';
       display: block;
@@ -73,8 +72,9 @@
     }
     &:hover::before {
       opacity: .4;
-    }
+    }*/
   }
+  /*
   .awareness {
     border-color: color(orange);
     &::before {
@@ -122,6 +122,7 @@
       @include hide();
     }
   }
+  */
 }
 
 .nav--secondary {

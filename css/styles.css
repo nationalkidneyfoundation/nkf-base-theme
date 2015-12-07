@@ -10162,6 +10162,17 @@ p {
   letter-spacing: .2rem;
 }
 
+th {
+  border-color: #ccc;
+}
+
+td,
+th {
+  padding: 11px;
+  padding: 0.707rem;
+  border-bottom: 1px solid #eee;
+}
+
 .width--0 {
   width: 0;
 }
@@ -11682,7 +11693,6 @@ html.js .js-hide {
   float: right;
   list-style: none;
   z-index: 2;
-  background-color: #F15E22;
 }
 
 @media (min-width: 40em) {
@@ -11742,6 +11752,58 @@ html.js .js-hide {
   }
 }
 
+.nav--primary {
+  /*
+  .awareness {
+    border-color: color(orange);
+    &::before {
+      background-color: color(orange);
+    }
+  }
+  .prevention {
+    border-color: color(yellow);
+    &::before {
+      background-color: color(yellow);
+    }
+  }
+  .patients {
+    border-color: color(lime);
+    &::before {
+      background-color: color(lime);
+    }
+  }
+  .professionals {
+    border-color: color(red);
+    &::before {
+      background-color: color(red);
+    }
+  }
+  .involved {
+    border-color: color(blue);
+    &::before {
+    background-color: color(blue);
+    }
+  }
+  .search {
+    border-color: color(navy);
+    background-color: color(navy);
+    color: $white;
+    &:hover {
+      color: $white;
+    }
+    &::before {
+      @include hide();
+    }
+  }
+  .active {
+    border-color: $white;
+    &::before {
+      @include hide();
+    }
+  }
+  */
+}
+
 .nav--primary li {
   width: 100%;
 }
@@ -11756,6 +11818,15 @@ html.js .js-hide {
   position: relative;
   color: #fff;
   width: 100%;
+  /*&::before {
+      @include cover-absolute();
+      content: '';
+      display: block;
+      opacity: .3;
+    }
+    &:hover::before {
+      opacity: .4;
+    }*/
 }
 
 @media (min-width: 40em) {
@@ -11766,84 +11837,6 @@ html.js .js-hide {
 
 .nav--primary a:hover {
   color: #000;
-}
-
-.nav--primary a::before {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  content: '';
-  display: block;
-  opacity: .3;
-}
-
-.nav--primary a:hover::before {
-  opacity: .4;
-}
-
-.nav--primary .awareness {
-  border-color: #F15E22;
-}
-
-.nav--primary .awareness::before {
-  background-color: #F15E22;
-}
-
-.nav--primary .prevention {
-  border-color: #FEDC00;
-}
-
-.nav--primary .prevention::before {
-  background-color: #FEDC00;
-}
-
-.nav--primary .patients {
-  border-color: #91AE3C;
-}
-
-.nav--primary .patients::before {
-  background-color: #91AE3C;
-}
-
-.nav--primary .professionals {
-  border-color: #d51217;
-}
-
-.nav--primary .professionals::before {
-  background-color: #d51217;
-}
-
-.nav--primary .involved {
-  border-color: #1E4497;
-}
-
-.nav--primary .involved::before {
-  background-color: #1E4497;
-}
-
-.nav--primary .search {
-  border-color: #26225E;
-  background-color: #26225E;
-  color: #fff;
-}
-
-.nav--primary .search:hover {
-  color: #fff;
-}
-
-.nav--primary .search::before {
-  display: none !important;
-}
-
-.nav--primary .active {
-  border-color: #fff;
-}
-
-.nav--primary .active::before {
-  display: none !important;
 }
 
 .nav--secondary {
