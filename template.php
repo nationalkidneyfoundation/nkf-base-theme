@@ -70,7 +70,9 @@ function nkf_base_preprocess_page(&$vars) {
       $page_classes[] = 'donation-form';
  }
 
-  $vars['background_image'] = false;
+  $vars['node_highlight'] = FALSE;
+  $vars['node_highlight_text'] = '';
+  $vars['background_image'] = FALSE;
   if (!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
      && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
@@ -81,6 +83,13 @@ function nkf_base_preprocess_page(&$vars) {
        $new_image_url  = file_create_url($derivative_uri);
        $vars['background_image'] = true;
        $vars['background_image_uri'] =  $new_image_url;
+       $vars['node_highlight'] = TRUE;
+  }
+  if (!empty($vars['node'])
+     && isset($vars['node']->field_highlight_text)
+     && isset($vars['node']->field_highlight_text[LANGUAGE_NONE][0]['value'])) {
+       $vars['node_highlight_text'] = $vars['node']->field_highlight_text;
+       $vars['node_highlight'] = TRUE;
   }
 
 
