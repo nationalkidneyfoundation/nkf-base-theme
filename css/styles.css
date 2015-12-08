@@ -11633,7 +11633,7 @@ html.js .js-hide {
 
 .form-type-checkbox .description,
 .form-type-radio .description {
-  padding-left: 33px;
+  padding-left: 30px;
 }
 
 .form-type-checkbox input,
@@ -12949,10 +12949,22 @@ html.js .js-hide {
 }
 
 .node-type-membership-page .field-name-field-prefix {
-  width: 20%;
+  width: 100%;
+}
+
+@media (min-width: 40em) {
+  .node-type-membership-page .field-name-field-prefix {
+    width: 20%;
+  }
 }
 
 .node-type-membership-page #edit-name {
-  width: 80%;
+  width: 100%;
   display: inline-block;
+}
+
+@media (min-width: 40em) {
+  .node-type-membership-page #edit-name {
+    width: 80%;
+  }
 }

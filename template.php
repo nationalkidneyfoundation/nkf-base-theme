@@ -65,8 +65,14 @@ function nkf_base_preprocess_page(&$vars) {
   $columns += !empty($vars['page']['sidebar_first'])? 1 : 0;
   $columns += !empty($vars['page']['sidebar_second'])? 1 : 0;
   $vars['columns'] = $columns;
- if (!empty($vars['node'])
-    && (!empty($vars['node']->field_donation_type) || !empty($vars['node']->field_membership_donation_type))) {
+ if (
+    !empty($vars['node'])
+    && (
+      (isset($vars['node']->field_donation_type) && isset($vars['node']->field_donation_type[LANGUAGE_NONE][0]['value']))
+      ||
+      (isset($vars['node']->field_membership_donation_type) && isset($vars['node']->field_membership_donation_type[LANGUAGE_NONE][0]['value']))
+      )
+    ) {
       $page_classes[] = 'donation-form';
  }
 
