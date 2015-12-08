@@ -43,7 +43,7 @@
       <?php else : ?>
         <div class="background-size--cover <?php if($background_image): ?>  min-height--xxl" style="background-image: url('<?php print $background_image_uri; ?><?php endif;?>')">
           <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
-            <?php print render($node_highlight_text); ?>
+            <?php print $node_highlight_text; ?>
           </div>
         </div>
       <?php endif; ?>

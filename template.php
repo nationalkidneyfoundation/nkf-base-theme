@@ -88,7 +88,7 @@ function nkf_base_preprocess_page(&$vars) {
   if (!empty($vars['node'])
      && isset($vars['node']->field_highlight_text)
      && isset($vars['node']->field_highlight_text[LANGUAGE_NONE][0]['value'])) {
-       $vars['node_highlight_text'] = $vars['node']->field_highlight_text;
+       $vars['node_highlight_text'] = render(field_view_field('node', $vars['node'], 'field_highlight_text', array('label' => 'hidden')));
        $vars['node_highlight'] = TRUE;
   }
 
