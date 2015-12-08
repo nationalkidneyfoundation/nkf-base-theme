@@ -11926,20 +11926,6 @@ html.js .js-hide {
   }
 }
 
-.node-type-donation .header__brand,
-.node-type-membership-page .header__brand,
-.node-type-fundraising-campaign .header__brand,
-.page-campaigns .header__brand {
-  width: 100%;
-}
-
-.node-type-donation .header__nav,
-.node-type-membership-page .header__nav,
-.node-type-fundraising-campaign .header__nav,
-.page-campaigns .header__nav {
-  display: none;
-}
-
 .node-type-donation .header__logo-image,
 .node-type-membership-page .header__logo-image,
 .node-type-fundraising-campaign .header__logo-image,
