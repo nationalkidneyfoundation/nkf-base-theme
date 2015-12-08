@@ -39,7 +39,7 @@ function nkf_base_css_alter(&$css) {
  * Implementation of preprocess_page().
  */
 function nkf_base_preprocess_page(&$vars) {
-
+  $page_classes = array('page');
   // add magnific popup
   $magnificpath = libraries_get_path('magnific_popup');
   drupal_add_js($magnificpath . '/dist/jquery.magnific-popup.js');
@@ -65,7 +65,10 @@ function nkf_base_preprocess_page(&$vars) {
   $columns += !empty($vars['page']['sidebar_first'])? 1 : 0;
   $columns += !empty($vars['page']['sidebar_second'])? 1 : 0;
   $vars['columns'] = $columns;
-
+ if (!empty($vars['node'])
+    && (isset($vars['node']->field_donation_type) || isset($vars['node']->field_membership_donation_type))) {
+      $page_classes[] = 'donation-form';
+ }
 
   $vars['background_image'] = false;
   if (!empty($vars['node'])
@@ -80,7 +83,7 @@ function nkf_base_preprocess_page(&$vars) {
        $vars['background_image_uri'] =  $new_image_url;
   }
 
-  $page_classes = array('page');
+
   if (!isset($_SESSION['nkf_base'])) {
     $_SESSION['nkf_base'] = array();
   }

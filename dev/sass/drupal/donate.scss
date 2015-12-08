@@ -367,14 +367,15 @@
   .form-actions {
     padding-top: space(xxxl);
     text-align: center;
-  }
-  .form-submit {
-    @extend .button--blue;
-    width: 100%;
-    padding: space(lg);
-    //text-transform: uppercase;
+    .form-submit {
+      @extend .button--blue;
+      width: 100%;
+      padding: space(lg);
+      //text-transform: uppercase;
 
+    }
   }
+
 
   //signup
   .form-item-signup {

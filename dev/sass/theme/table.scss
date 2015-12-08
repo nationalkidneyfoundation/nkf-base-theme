@@ -1,7 +1,10 @@
+table {
+  width: 100%;
+}
 th {
   border-color: $gray-2;
 }
 td, th {
-  padding: space(sm);
+  padding: space(sm) space(md) space(sm) space(sm);
   border-bottom: 1px solid $gray-1;
 }
