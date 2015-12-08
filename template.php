@@ -98,6 +98,18 @@ function nkf_base_preprocess_page(&$vars) {
        $vars['background_video_mp4'] = $vars['node']->field_hero_video_background_mp4[LANGUAGE_NONE][0]['value'];
        $vars['background_video'] = TRUE;
   }
+  if (!empty($vars['node'])
+     && isset($vars['node']->field_hero_video_background_webm)
+     && isset($vars['node']->field_hero_video_background_webm[LANGUAGE_NONE][0]['value'])) {
+       $vars['background_video_webm'] = $vars['node']->field_hero_video_background_webm[LANGUAGE_NONE][0]['value'];
+       $vars['background_video'] = TRUE;
+  }
+  if (!empty($vars['node'])
+     && isset($vars['node']->field_hero_video_background_ogg)
+     && isset($vars['node']->field_hero_video_background_ogg[LANGUAGE_NONE][0]['value'])) {
+       $vars['background_video_ogg'] = $vars['node']->field_hero_video_background_ogg[LANGUAGE_NONE][0]['value'];
+       $vars['background_video'] = TRUE;
+  }
 
 
   if (!isset($_SESSION['nkf_base'])) {

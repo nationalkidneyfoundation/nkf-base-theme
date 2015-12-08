@@ -41,10 +41,20 @@
       <?php if (!empty($page['highlighted'])) : ?>
         <?php print render($page['highlighted']); ?>
       <?php else : ?>
-        <div class="background-size--cover <?php if($background_image): ?>  min-height--xxl" style="background-image: url('<?php print $background_image_uri; ?><?php endif;?>')">
+        <div class="background-size--cover <?php if ($background_image || $background_video): ?> min-height--xxl<?php endif;?>"
+          <?php if ($background_image): ?> style="background-image: url('<?php print $background_image_uri; ?>')"<?php endif;?>>
           <?php if ($background_video) :?>
             <video class="z-index--100 md--show width--100 height--auto cover-absolute" preload="auto" loop="loop" autoplay="autoplay">
-              <source src="<?php print $background_video_mp4; ?>" type="video/mp4">
+              <?php if (!empty($background_video_mp4)): ?>
+                <source src="<?php print $background_video_mp4; ?>" type="video/mp4">
+              <?php endif;?>
+              <?php if (!empty($background_video_webm)): ?>
+                <source src="<?php print $background_video_webm; ?>" type="video/webm">
+              <?php endif;?>
+              <?php if (!empty($background_video_ogg)): ?>
+                <source src="<?php print $background_video_ogg; ?>" type="video/ogg">
+              <?php endif;?>
+
             </video>
           <?php endif; ?>
           <div class="position--relative z-index--200 container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
