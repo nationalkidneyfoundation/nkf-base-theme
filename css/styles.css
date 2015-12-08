@@ -773,63 +773,63 @@ img {
   opacity: 1;
 }
 
-.overview--visible {
+.overflow--visible {
   overflow: visible;
 }
 
-.overview--hidden {
+.overflow--hidden {
   overflow: hidden;
 }
 
-.overview--scroll {
+.overflow--scroll {
   overflow: scroll;
 }
 
-.overview--auto {
+.overflow--auto {
   overflow: auto;
 }
 
-.overview--inherit {
+.overflow--inherit {
   overflow: inherit;
 }
 
-.overview-x--visible {
+.overflow-x--visible {
   overflow-x: visible;
 }
 
-.overview-x--hidden {
+.overflow-x--hidden {
   overflow-x: hidden;
 }
 
-.overview-x--scroll {
+.overflow-x--scroll {
   overflow-x: scroll;
 }
 
-.overview-x--auto {
+.overflow-x--auto {
   overflow-x: auto;
 }
 
-.overview-y--inherit {
+.overflow-y--inherit {
   overflow-x: inherit;
 }
 
-.overview-y--visible {
+.overflow-y--visible {
   overflow-y: visible;
 }
 
-.overview-y--hidden {
+.overflow-y--hidden {
   overflow-y: hidden;
 }
 
-.overview-y--scroll {
+.overflow-y--scroll {
   overflow-y: scroll;
 }
 
-.overview-y--auto {
+.overflow-y--auto {
   overflow-y: auto;
 }
 
-.overview-y--inherit {
+.overflow-y--inherit {
   overflow-y: inherit;
 }
 

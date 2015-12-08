@@ -37,17 +37,17 @@
 
     <!-- HIGHLIGHTED REGION -->
     <?php if (!empty($page['highlighted']) || $node_highlight): ?>
-    <section class="position--relative">
+    <section class="position--relative overflow--hidden">
       <?php if (!empty($page['highlighted'])) : ?>
         <?php print render($page['highlighted']); ?>
       <?php else : ?>
         <div class="background-size--cover <?php if($background_image): ?>  min-height--xxl" style="background-image: url('<?php print $background_image_uri; ?><?php endif;?>')">
           <?php if ($background_video) :?>
-            <video class="width--100 min-height--xxl position--absolute" preload="auto" loop="loop">
-              <source scr="<?php print $background_video_mp4; ?>" type="video/mp4">
+            <video class="z-index--100 md--show width--100 height--auto cover-absolute" preload="auto" loop="loop" autoplay="autoplay">
+              <source src="<?php print $background_video_mp4; ?>" type="video/mp4">
             </video>
           <?php endif; ?>
-          <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+          <div class="position--relative z-index--200 container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print $node_highlight_text; ?>
           </div>
         </div>
