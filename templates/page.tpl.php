@@ -42,6 +42,11 @@
         <?php print render($page['highlighted']); ?>
       <?php else : ?>
         <div class="background-size--cover <?php if($background_image): ?>  min-height--xxl" style="background-image: url('<?php print $background_image_uri; ?><?php endif;?>')">
+          <?php if ($background_video) :?>
+            <video class="width--100 min-height--xxl position--absolute" preload="auto" loop="loop">
+              <source scr="<?php print $background_video_mp4; ?>" type="video/mp4">
+            </video>
+          <?php endif; ?>
           <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print $node_highlight_text; ?>
           </div>

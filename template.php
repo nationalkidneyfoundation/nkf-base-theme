@@ -73,6 +73,7 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['node_highlight'] = FALSE;
   $vars['node_highlight_text'] = '';
   $vars['background_image'] = FALSE;
+  $vars['$background_video'] = FALSE;
   if (!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
      && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
@@ -90,6 +91,12 @@ function nkf_base_preprocess_page(&$vars) {
      && isset($vars['node']->field_highlight_text[LANGUAGE_NONE][0]['value'])) {
        $vars['node_highlight_text'] = render(field_view_field('node', $vars['node'], 'field_highlight_text', array('label' => 'hidden')));
        $vars['node_highlight'] = TRUE;
+  }
+  if (!empty($vars['node'])
+     && isset($vars['node']->field_hero_video_background_mp4)
+     && isset($vars['node']->field_hero_video_background_mp4[LANGUAGE_NONE][0]['value'])) {
+       $vars['background_video_mp4'] = $vars['node']->field_hero_video_background_mp4[LANGUAGE_NONE][0]['value'];
+       $vars['background_video'] = TRUE;
   }
 
 
