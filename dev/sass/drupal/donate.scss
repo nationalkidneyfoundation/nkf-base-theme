@@ -196,6 +196,9 @@
   }
 
   // if donation amount is select or other field
+  .form-type-radios.form-item-field-membership-term-und > label {
+    @include hide();
+  }
   #edit-donation-select,
   #edit-field-membership-term-und {//,
   //#edit-field-member-category-und {
@@ -219,6 +222,7 @@
     }
     input:checked+label{
       @extend .button--gray-2;
+      border-color: $gray-4;
       //background-color: color(blue);
 
     }

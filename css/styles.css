@@ -11978,6 +11978,10 @@ html.js .js-hide {
   border-color: #97b1ea;
 }
 
+.has-donation-form .form-type-radios.form-item-field-membership-term-und > label {
+  display: none !important;
+}
+
 .has-donation-form #edit-donation-select,
 .has-donation-form #edit-field-membership-term-und {
   letter-spacing: -0.31em;
@@ -12018,6 +12022,11 @@ html.js .js-hide {
 .has-donation-form #edit-donation-select label::before,
 .has-donation-form #edit-field-membership-term-und label::before {
   display: none;
+}
+
+.has-donation-form #edit-donation-select input:checked + label,
+.has-donation-form #edit-field-membership-term-und input:checked + label {
+  border-color: #777;
 }
 
 @media (min-width: 40em) {
