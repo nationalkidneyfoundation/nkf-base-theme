@@ -555,7 +555,6 @@ img {
 .display--block,
 .button--outline--orange::before,
 .button--outline--blue::before,
-.has-dontation-form #edit-donation-select label::before,
 .button--outline--navy::before,
 .button--outline--red::before,
 .button--outline--mustard::before,
@@ -844,7 +843,6 @@ img {
 .position--relative,
 .button--outline--orange,
 .button--outline--blue,
-.has-dontation-form #edit-donation-select label,
 .button--outline--navy,
 .button--outline--red,
 .button--outline--mustard,
@@ -1233,7 +1231,6 @@ a {
 .cover-absolute,
 .button--outline--orange::before,
 .button--outline--blue::before,
-.has-dontation-form #edit-donation-select label::before,
 .button--outline--navy::before,
 .button--outline--red::before,
 .button--outline--mustard::before,
@@ -1689,8 +1686,8 @@ input[type="submit"],
 .button,
 .button--orange,
 .button--blue,
-.has-dontation-form .form-actions .form-submit,
-.has-dontation-form .next,
+.has-donation-form .form-actions .form-submit,
+.has-donation-form .next,
 .button--navy,
 .button--red,
 .button--mustard,
@@ -1703,13 +1700,14 @@ input[type="submit"],
 .nav--secondary .donate,
 .button--gray-1,
 .button--gray-2,
+.has-donation-form #edit-donation-select input:checked + label,
+.has-donation-form #edit-field-membership-term-und input:checked + label,
 .button--gray-3,
 .button--gray-4,
 .button--gray-5,
 .button--black,
 .button--outline--orange,
 .button--outline--blue,
-.has-dontation-form #edit-donation-select label,
 .button--outline--navy,
 .button--outline--red,
 .button--outline--mustard,
@@ -1734,7 +1732,9 @@ input[type="submit"],
 .button--outline--gray-3,
 .button--outline--gray-4,
 .button--outline--gray-5,
-.button--outline--black {
+.button--outline--black,
+.has-donation-form #edit-donation-select label,
+.has-donation-form #edit-field-membership-term-und label {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -1767,8 +1767,8 @@ input[type="submit"]:after,
 .button:before,
 .button--orange:before,
 .button--blue:before,
-.has-dontation-form .form-actions .form-submit:before,
-.has-dontation-form .next:before,
+.has-donation-form .form-actions .form-submit:before,
+.has-donation-form .next:before,
 .button--navy:before,
 .button--red:before,
 .button--mustard:before,
@@ -1781,13 +1781,14 @@ input[type="submit"]:after,
 .nav--secondary .donate:before,
 .button--gray-1:before,
 .button--gray-2:before,
+.has-donation-form #edit-donation-select input:checked + label:before,
+.has-donation-form #edit-field-membership-term-und input:checked + label:before,
 .button--gray-3:before,
 .button--gray-4:before,
 .button--gray-5:before,
 .button--black:before,
 .button--outline--orange:before,
 .button--outline--blue:before,
-.has-dontation-form #edit-donation-select label:before,
 .button--outline--navy:before,
 .button--outline--red:before,
 .button--outline--mustard:before,
@@ -1813,11 +1814,13 @@ input[type="submit"]:after,
 .button--outline--gray-4:before,
 .button--outline--gray-5:before,
 .button--outline--black:before,
+.has-donation-form #edit-donation-select label:before,
+.has-donation-form #edit-field-membership-term-und label:before,
 .button:after,
 .button--orange:after,
 .button--blue:after,
-.has-dontation-form .form-actions .form-submit:after,
-.has-dontation-form .next:after,
+.has-donation-form .form-actions .form-submit:after,
+.has-donation-form .next:after,
 .button--navy:after,
 .button--red:after,
 .button--mustard:after,
@@ -1830,13 +1833,14 @@ input[type="submit"]:after,
 .nav--secondary .donate:after,
 .button--gray-1:after,
 .button--gray-2:after,
+.has-donation-form #edit-donation-select input:checked + label:after,
+.has-donation-form #edit-field-membership-term-und input:checked + label:after,
 .button--gray-3:after,
 .button--gray-4:after,
 .button--gray-5:after,
 .button--black:after,
 .button--outline--orange:after,
 .button--outline--blue:after,
-.has-dontation-form #edit-donation-select label:after,
 .button--outline--navy:after,
 .button--outline--red:after,
 .button--outline--mustard:after,
@@ -1861,7 +1865,9 @@ input[type="submit"]:after,
 .button--outline--gray-3:after,
 .button--outline--gray-4:after,
 .button--outline--gray-5:after,
-.button--outline--black:after {
+.button--outline--black:after,
+.has-donation-form #edit-donation-select label:after,
+.has-donation-form #edit-field-membership-term-und label:after {
   box-sizing: border-box;
 }
 
@@ -1870,8 +1876,8 @@ input[type="submit"]:focus,
 .button:focus,
 .button--orange:focus,
 .button--blue:focus,
-.has-dontation-form .form-actions .form-submit:focus,
-.has-dontation-form .next:focus,
+.has-donation-form .form-actions .form-submit:focus,
+.has-donation-form .next:focus,
 .button--navy:focus,
 .button--red:focus,
 .button--mustard:focus,
@@ -1884,14 +1890,14 @@ input[type="submit"]:focus,
 .nav--secondary .donate:focus,
 .button--gray-1:focus,
 .button--gray-2:focus,
+.has-donation-form #edit-donation-select input:checked + label:focus,
+.has-donation-form #edit-field-membership-term-und input:checked + label:focus,
 .button--gray-3:focus,
 .button--gray-4:focus,
 .button--gray-5:focus,
 .button--black:focus,
 .button--outline--orange:focus,
 .button--outline--blue:focus,
-.has-dontation-form #edit-donation-select label:focus,
-.has-dontation-form #edit-donation-select input:checked + label,
 .button--outline--navy:focus,
 .button--outline--red:focus,
 .button--outline--mustard:focus,
@@ -1916,7 +1922,9 @@ input[type="submit"]:focus,
 .button--outline--gray-3:focus,
 .button--outline--gray-4:focus,
 .button--outline--gray-5:focus,
-.button--outline--black:focus {
+.button--outline--black:focus,
+.has-donation-form #edit-donation-select label:focus,
+.has-donation-form #edit-field-membership-term-und label:focus {
   outline: 0;
 }
 
@@ -1925,8 +1933,8 @@ input[type="submit"]:hover,
 .button:hover,
 .button--orange:hover,
 .button--blue:hover,
-.has-dontation-form .form-actions .form-submit:hover,
-.has-dontation-form .next:hover,
+.has-donation-form .form-actions .form-submit:hover,
+.has-donation-form .next:hover,
 .button--navy:hover,
 .button--red:hover,
 .button--mustard:hover,
@@ -1939,13 +1947,14 @@ input[type="submit"]:hover,
 .nav--secondary .donate:hover,
 .button--gray-1:hover,
 .button--gray-2:hover,
+.has-donation-form #edit-donation-select input:checked + label:hover,
+.has-donation-form #edit-field-membership-term-und input:checked + label:hover,
 .button--gray-3:hover,
 .button--gray-4:hover,
 .button--gray-5:hover,
 .button--black:hover,
 .button--outline--orange:hover,
 .button--outline--blue:hover,
-.has-dontation-form #edit-donation-select label:hover,
 .button--outline--navy:hover,
 .button--outline--red:hover,
 .button--outline--mustard:hover,
@@ -1970,7 +1979,9 @@ input[type="submit"]:hover,
 .button--outline--gray-3:hover,
 .button--outline--gray-4:hover,
 .button--outline--gray-5:hover,
-.button--outline--black:hover {
+.button--outline--black:hover,
+.has-donation-form #edit-donation-select label:hover,
+.has-donation-form #edit-field-membership-term-und label:hover {
   text-decoration: none;
   color: currentColor;
 }
@@ -1980,8 +1991,8 @@ input[type="submit"]:disabled,
 .button:disabled,
 .button--orange:disabled,
 .button--blue:disabled,
-.has-dontation-form .form-actions .form-submit:disabled,
-.has-dontation-form .next:disabled,
+.has-donation-form .form-actions .form-submit:disabled,
+.has-donation-form .next:disabled,
 .button--navy:disabled,
 .button--red:disabled,
 .button--mustard:disabled,
@@ -1994,13 +2005,14 @@ input[type="submit"]:disabled,
 .nav--secondary .donate:disabled,
 .button--gray-1:disabled,
 .button--gray-2:disabled,
+.has-donation-form #edit-donation-select input:checked + label:disabled,
+.has-donation-form #edit-field-membership-term-und input:checked + label:disabled,
 .button--gray-3:disabled,
 .button--gray-4:disabled,
 .button--gray-5:disabled,
 .button--black:disabled,
 .button--outline--orange:disabled,
 .button--outline--blue:disabled,
-.has-dontation-form #edit-donation-select label:disabled,
 .button--outline--navy:disabled,
 .button--outline--red:disabled,
 .button--outline--mustard:disabled,
@@ -2025,7 +2037,9 @@ input[type="submit"]:disabled,
 .button--outline--gray-3:disabled,
 .button--outline--gray-4:disabled,
 .button--outline--gray-5:disabled,
-.button--outline--black:disabled {
+.button--outline--black:disabled,
+.has-donation-form #edit-donation-select label:disabled,
+.has-donation-form #edit-field-membership-term-und label:disabled {
   opacity: .5;
 }
 
@@ -3465,7 +3479,6 @@ a:hover {
 
 .color--blue,
 .button--outline--blue,
-.has-dontation-form #edit-donation-select label,
 .blue {
   color: #1E4497;
 }
@@ -4425,28 +4438,28 @@ a:hover {
 }
 
 .button--blue,
-.has-dontation-form .form-actions .form-submit,
-.has-dontation-form .next {
+.has-donation-form .form-actions .form-submit,
+.has-donation-form .next {
   border-color: #1E4497;
   background-color: #1E4497;
   color: #fff;
 }
 
 .button--blue:visited,
-.has-dontation-form .form-actions .form-submit:visited,
-.has-dontation-form .next:visited {
+.has-donation-form .form-actions .form-submit:visited,
+.has-donation-form .next:visited {
   color: #fff;
 }
 
 .button--blue:hover,
-.has-dontation-form .form-actions .form-submit:hover,
-.has-dontation-form .next:hover,
+.has-donation-form .form-actions .form-submit:hover,
+.has-donation-form .next:hover,
 .button--blue:active,
-.has-dontation-form .form-actions .form-submit:active,
-.has-dontation-form .next:active,
+.has-donation-form .form-actions .form-submit:active,
+.has-donation-form .next:active,
 .button--blue.active,
-.has-dontation-form .form-actions .active.form-submit,
-.has-dontation-form .active.next {
+.has-donation-form .form-actions .active.form-submit,
+.has-donation-form .active.next {
   background-color: #2657c2;
   color: white;
 }
@@ -4626,19 +4639,29 @@ a:hover {
   background-color: #ccc;
 }
 
-.button--gray-2 {
+.button--gray-2,
+.has-donation-form #edit-donation-select input:checked + label,
+.has-donation-form #edit-field-membership-term-und input:checked + label {
   background-color: #ccc;
   border-color: #ccc;
   color: #000;
 }
 
-.button--gray-2:visited {
+.button--gray-2:visited,
+.has-donation-form #edit-donation-select input:checked + label:visited,
+.has-donation-form #edit-field-membership-term-und input:checked + label:visited {
   color: #000;
 }
 
 .button--gray-2:hover,
+.has-donation-form #edit-donation-select input:checked + label:hover,
+.has-donation-form #edit-field-membership-term-und input:checked + label:hover,
 .button--gray-2:active,
-.button--gray-2.active {
+.has-donation-form #edit-donation-select input:checked + label:active,
+.has-donation-form #edit-field-membership-term-und input:checked + label:active,
+.button--gray-2.active,
+.has-donation-form #edit-donation-select input:checked + label.active,
+.has-donation-form #edit-field-membership-term-und input:checked + label.active {
   color: #000;
   background-color: #bbb;
 }
@@ -4734,15 +4757,13 @@ a:hover {
   background-color: #F15E22;
 }
 
-.button--outline--blue,
-.has-dontation-form #edit-donation-select label {
+.button--outline--blue {
   border-color: #97b1ea;
   background-color: transparent;
   z-index: 2;
 }
 
-.button--outline--blue::before,
-.has-dontation-form #edit-donation-select label::before {
+.button--outline--blue::before {
   opacity: .125;
   background-color: currentcolor;
   content: '';
@@ -4750,22 +4771,14 @@ a:hover {
 }
 
 .button--outline--blue:hover,
-.has-dontation-form #edit-donation-select label:hover,
 .button--outline--blue:focus,
-.has-dontation-form #edit-donation-select label:focus,
-.has-dontation-form #edit-donation-select input:checked + label,
-.button--outline--blue.active,
-.has-dontation-form #edit-donation-select label.active {
+.button--outline--blue.active {
   color: #fff;
 }
 
 .button--outline--blue:hover::before,
-.has-dontation-form #edit-donation-select label:hover::before,
 .button--outline--blue:focus::before,
-.has-dontation-form #edit-donation-select label:focus::before,
-.has-dontation-form #edit-donation-select input:checked + label::before,
-.button--outline--blue.active::before,
-.has-dontation-form #edit-donation-select label.active::before {
+.button--outline--blue.active::before {
   opacity: 1;
   background-color: #1E4497;
 }
@@ -11759,22 +11772,22 @@ html.js .js-hide {
   }
 }
 
-.has-dontation-form .page.errors .donation-step {
+.has-donation-form .page.errors .donation-step {
   display: block !important;
 }
 
-.has-dontation-form .page.errors .steps,
-.has-dontation-form .page.errors .previous-next {
+.has-donation-form .page.errors .steps,
+.has-donation-form .page.errors .previous-next {
   display: none !important;
 }
 
-.has-dontation-form header {
+.has-donation-form header {
   background-color: #fff;
   text-align: center;
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form header .container {
+  .has-donation-form header .container {
     padding-top: 15px;
     padding-top: 1rem;
     padding-bottom: 15px;
@@ -11782,27 +11795,27 @@ html.js .js-hide {
   }
 }
 
-.has-dontation-form .header__logo-image {
+.has-donation-form .header__logo-image {
   max-height: 40px;
 }
 
-.has-dontation-form #logo {
+.has-donation-form #logo {
   background-image: url(../img/logo__bean--orange.png);
 }
 
 @media (min-width: 52em) {
-  .has-dontation-form #logo {
+  .has-donation-form #logo {
     background-image: url(../img/NKF-logoR_Hori_OB.png);
   }
 }
 
-.has-dontation-form .main {
+.has-donation-form .main {
   padding-bottom: 60px;
   padding-bottom: 3.998rem;
   background-color: #eee;
 }
 
-.has-dontation-form h1 {
+.has-donation-form h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
   letter-spacing: .2rem;
@@ -11810,11 +11823,11 @@ html.js .js-hide {
   font-size: 1.999rem;
 }
 
-.has-dontation-form.not-logged-in .tabs {
+.has-donation-form.not-logged-in .tabs {
   display: none !important;
 }
 
-.has-dontation-form [id*="redhen-donation-form"] {
+.has-donation-form [id*="redhen-donation-form"] {
   position: relative;
   width: 100%;
   max-width: 550px;
@@ -11823,37 +11836,38 @@ html.js .js-hide {
   border: 1px solid #eee;
 }
 
-.has-dontation-form .form-item label {
+.has-donation-form .form-item label {
   font-weight: 400;
-}
-
-.has-dontation-form .form-item label:not(.option) {
-  white-space: nowrap;
-}
-
-.has-dontation-form .form-text {
   width: 100%;
 }
 
-.has-dontation-form .form-item {
+.has-donation-form .form-item label:not(.option) {
+  white-space: nowrap;
+}
+
+.has-donation-form .form-text {
+  width: 100%;
+}
+
+.has-donation-form .form-item {
   width: 100%;
   padding: 8px;
   padding: 0.5rem;
 }
 
-.has-dontation-form .form-item .form-item {
+.has-donation-form .form-item .form-item {
   padding: 0;
 }
 
-.has-dontation-form .description {
+.has-donation-form .description {
   color: #777;
 }
 
-.has-dontation-form fieldset {
+.has-donation-form fieldset {
   padding: 0;
 }
 
-.has-dontation-form legend {
+.has-donation-form legend {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -11873,16 +11887,16 @@ html.js .js-hide {
   font-weight: bold;
 }
 
-.has-dontation-form input[type=checkbox]:checked + label:before,
-.has-dontation-form input[type=radio]:checked + label:before {
+.has-donation-form input[type=checkbox]:checked + label:before,
+.has-donation-form input[type=radio]:checked + label:before {
   color: #1E4497;
 }
 
-.has-dontation-form .form-item-donation .description {
+.has-donation-form .form-item-donation .description {
   display: none !important;
 }
 
-.has-dontation-form .form-type-textfield.form-item-donation {
+.has-donation-form .form-type-textfield.form-item-donation {
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -11893,12 +11907,12 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form .form-type-textfield.form-item-donation {
+  .has-donation-form .form-type-textfield.form-item-donation {
     width: 50%;
   }
 }
 
-.has-dontation-form .form-type-textfield.form-item-donation::before {
+.has-donation-form .form-type-textfield.form-item-donation::before {
   content: "$ ";
   position: absolute;
   bottom: 15px;
@@ -11909,7 +11923,7 @@ html.js .js-hide {
   left: 1rem;
 }
 
-.has-dontation-form .form-type-textfield.form-item-donation.recurring::after {
+.has-donation-form .form-type-textfield.form-item-donation.recurring::after {
   content: " /mo";
   position: absolute;
   bottom: 15px;
@@ -11921,7 +11935,7 @@ html.js .js-hide {
   color: #bbb;
 }
 
-.has-dontation-form .form-type-textfield.form-item-donation input {
+.has-donation-form .form-type-textfield.form-item-donation input {
   font-weight: bold;
   padding: 0 21px;
   padding: 0 1.414rem;
@@ -11929,29 +11943,29 @@ html.js .js-hide {
   font-size: 1.414rem;
 }
 
-.has-dontation-form .recurring-button:after {
+.has-donation-form .recurring-button:after {
   content: ' /mo';
   color: #777;
   font-size: 11px;
   font-size: 0.707rem;
 }
 
-.has-dontation-form .form-item-donation-select > label:not(.option),
-.has-dontation-form .form-item-field-member-category-und > label:not(.option) {
+.has-donation-form .form-item-donation-select > label:not(.option),
+.has-donation-form .form-item-field-member-category-und > label:not(.option) {
   display: none !important;
 }
 
-.has-dontation-form .form-type-radio.form-item-donation-select,
-.has-dontation-form .form-item.form-item-donation-other {
+.has-donation-form .form-type-radio.form-item-donation-select,
+.has-donation-form .form-item.form-item-donation-other {
   padding: 8px;
   padding: 0.5rem;
 }
 
-.has-dontation-form .form-item.form-type-select-or-other {
+.has-donation-form .form-item.form-type-select-or-other {
   padding: 0;
 }
 
-.has-dontation-form .amount-options {
+.has-donation-form .amount-options {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -11959,12 +11973,13 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.has-dontation-form .amount-options .active {
+.has-donation-form .amount-options .active {
   background-color: #97b1ea;
   border-color: #97b1ea;
 }
 
-.has-dontation-form #edit-donation-select {
+.has-donation-form #edit-donation-select,
+.has-donation-form #edit-field-membership-term-und {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -11973,7 +11988,8 @@ html.js .js-hide {
   width: 100%;
 }
 
-.has-dontation-form #edit-donation-select > * {
+.has-donation-form #edit-donation-select > *,
+.has-donation-form #edit-field-membership-term-und > * {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -11988,23 +12004,29 @@ html.js .js-hide {
   padding: 0.5rem;
 }
 
-.has-dontation-form #edit-donation-select input {
+.has-donation-form #edit-donation-select input,
+.has-donation-form #edit-field-membership-term-und input {
   display: none !important;
 }
 
-.has-dontation-form #edit-donation-select label {
-  padding: 15px;
-  padding: 1rem;
+.has-donation-form #edit-donation-select label,
+.has-donation-form #edit-field-membership-term-und label {
   width: 100%;
+  border-color: #ccc;
+}
+
+.has-donation-form #edit-donation-select label::before,
+.has-donation-form #edit-field-membership-term-und label::before {
+  display: none;
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form .form-item-donation-other {
+  .has-donation-form .form-item-donation-other {
     width: 50%;
   }
 }
 
-.has-dontation-form #edit-redhen-contact {
+.has-donation-form #edit-redhen-contact {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12012,7 +12034,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.has-dontation-form #edit-name {
+.has-donation-form #edit-name {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12020,13 +12042,13 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.has-dontation-form .form-item-first-name,
-.has-dontation-form .form-item-last-name,
-.has-dontation-form .form-item-email,
-.has-dontation-form .field-name-field-phone,
-.has-dontation-form .field-name-field-company-name,
-.has-dontation-form .field-name-field-professional-credentials,
-.has-dontation-form .field-name-field-prefix {
+.has-donation-form .form-item-first-name,
+.has-donation-form .form-item-last-name,
+.has-donation-form .form-item-email,
+.has-donation-form .field-name-field-phone,
+.has-donation-form .field-name-field-company-name,
+.has-donation-form .field-name-field-professional-credentials,
+.has-donation-form .field-name-field-prefix {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12039,18 +12061,18 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form .form-item-first-name,
-  .has-dontation-form .form-item-last-name,
-  .has-dontation-form .form-item-email,
-  .has-dontation-form .field-name-field-phone,
-  .has-dontation-form .field-name-field-company-name,
-  .has-dontation-form .field-name-field-professional-credentials,
-  .has-dontation-form .field-name-field-prefix {
+  .has-donation-form .form-item-first-name,
+  .has-donation-form .form-item-last-name,
+  .has-donation-form .form-item-email,
+  .has-donation-form .field-name-field-phone,
+  .has-donation-form .field-name-field-company-name,
+  .has-donation-form .field-name-field-professional-credentials,
+  .has-donation-form .field-name-field-prefix {
     width: 50%;
   }
 }
 
-.has-dontation-form .field-type-mailchimp-lists-subscription {
+.has-donation-form .field-type-mailchimp-lists-subscription {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12062,15 +12084,15 @@ html.js .js-hide {
   *display: inline;
 }
 
-.has-dontation-form .field-type-addressfield legend {
+.has-donation-form .field-type-addressfield legend {
   display: none !important;
 }
 
-.has-dontation-form .country {
+.has-donation-form .country {
   width: 100%;
 }
 
-.has-dontation-form .street-block {
+.has-donation-form .street-block {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12078,7 +12100,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.has-dontation-form .street-block .form-item {
+.has-donation-form .street-block .form-item {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12090,21 +12112,21 @@ html.js .js-hide {
   *display: inline;
 }
 
-.has-dontation-form [class*="-thoroughfare"] {
+.has-donation-form [class*="-thoroughfare"] {
   width: 100%;
 }
 
-.has-dontation-form [class*="-premise"] {
+.has-donation-form [class*="-premise"] {
   width: 100%;
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form [class*="-premise"] {
+  .has-donation-form [class*="-premise"] {
     width: 25%;
   }
 }
 
-.has-dontation-form .locality-block {
+.has-donation-form .locality-block {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12112,7 +12134,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.has-dontation-form .locality-block .form-item {
+.has-donation-form .locality-block .form-item {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12124,44 +12146,44 @@ html.js .js-hide {
   *display: inline;
 }
 
-.has-dontation-form [class*="-locality"] {
+.has-donation-form [class*="-locality"] {
   width: 100%;
   margin: 0;
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form [class*="-locality"] {
+  .has-donation-form [class*="-locality"] {
     width: 55%;
   }
 }
 
-.has-dontation-form [class*="-administrative-area"] {
+.has-donation-form [class*="-administrative-area"] {
   width: 100%;
   margin: 0;
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form [class*="-administrative-area"] {
+  .has-donation-form [class*="-administrative-area"] {
     width: 20%;
   }
 }
 
-.has-dontation-form .state {
+.has-donation-form .state {
   width: 100%;
 }
 
-.has-dontation-form [class*="-postal-code"] {
+.has-donation-form [class*="-postal-code"] {
   width: 100%;
   margin: 0;
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form [class*="-postal-code"] {
+  .has-donation-form [class*="-postal-code"] {
     width: 25%;
   }
 }
 
-.has-dontation-form .required-fields {
+.has-donation-form .required-fields {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12170,7 +12192,7 @@ html.js .js-hide {
   background-color: #eee;
 }
 
-.has-dontation-form .required-fields > div {
+.has-donation-form .required-fields > div {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12184,19 +12206,19 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form .required-fields .field-name-field-honoree-first-name,
-  .has-dontation-form .required-fields .field-name-field-honoree-last-name {
+  .has-donation-form .required-fields .field-name-field-honoree-first-name,
+  .has-donation-form .required-fields .field-name-field-honoree-last-name {
     width: 50%;
   }
 }
 
-.has-dontation-form .field-name-field-notified-party {
+.has-donation-form .field-name-field-notified-party {
   margin-bottom: 15px;
   margin-bottom: 1rem;
 }
 
-.has-dontation-form .field-name-field-notify-firstname,
-.has-dontation-form .field-name-field-notify-lastname {
+.has-donation-form .field-name-field-notify-firstname,
+.has-donation-form .field-name-field-notify-lastname {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12210,17 +12232,17 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form .field-name-field-notify-firstname,
-  .has-dontation-form .field-name-field-notify-lastname {
+  .has-donation-form .field-name-field-notify-firstname,
+  .has-donation-form .field-name-field-notify-lastname {
     width: 50%;
   }
 }
 
-.has-dontation-form .form-item-field-benefiting-office-und select {
+.has-donation-form .form-item-field-benefiting-office-und select {
   width: 100%;
 }
 
-.has-dontation-form #payment-details {
+.has-donation-form #payment-details {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12228,7 +12250,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.has-dontation-form .form-item-payment-details-credit-card-number {
+.has-donation-form .form-item-payment-details-credit-card-number {
   width: 100%;
   display: inline-block;
   vertical-align: top;
@@ -12241,7 +12263,7 @@ html.js .js-hide {
   *display: inline;
 }
 
-.has-dontation-form .commerce-credit-card-expiration {
+.has-donation-form .commerce-credit-card-expiration {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12254,21 +12276,21 @@ html.js .js-hide {
   width: 60%;
 }
 
-.has-dontation-form .commerce-credit-card-expiration .form-item {
+.has-donation-form .commerce-credit-card-expiration .form-item {
   display: table-cell;
   width: 50%;
   vertical-align: bottom;
 }
 
-.has-dontation-form .commerce-credit-card-expiration select {
+.has-donation-form .commerce-credit-card-expiration select {
   width: 100%;
 }
 
-.has-dontation-form .commerce-month-year-divider {
+.has-donation-form .commerce-month-year-divider {
   display: none !important;
 }
 
-.has-dontation-form .form-item-payment-details-credit-card-code {
+.has-donation-form .form-item-payment-details-credit-card-code {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12281,31 +12303,31 @@ html.js .js-hide {
   width: 40%;
 }
 
-.has-dontation-form .field-name-field-company-match,
-.has-dontation-form .honor-info,
-.has-dontation-form .field-name-field-benefiting-office {
+.has-donation-form .field-name-field-company-match,
+.has-donation-form .honor-info,
+.has-donation-form .field-name-field-benefiting-office {
   margin: 0 8px 8px;
   margin: 0 0.5rem 0.5rem;
   background-color: #eee;
 }
 
-.has-dontation-form .form-actions {
+.has-donation-form .form-actions {
   padding-top: 60px;
   padding-top: 3.998rem;
   text-align: center;
 }
 
-.has-dontation-form .form-actions .form-submit {
+.has-donation-form .form-actions .form-submit {
   width: 100%;
   padding: 21px;
   padding: 1.414rem;
 }
 
-.has-dontation-form .form-item-signup {
+.has-donation-form .form-item-signup {
   text-align: center;
 }
 
-.has-dontation-form .donation-step__inner {
+.has-donation-form .donation-step__inner {
   position: relative;
   padding: 30px 15px;
   padding: 1.999rem 1rem;
@@ -12313,32 +12335,32 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form .donation-step__inner {
+  .has-donation-form .donation-step__inner {
     padding: 30px 30px;
     padding: 1.999rem 1.999rem;
   }
 }
 
-.has-dontation-form .previous-next {
+.has-donation-form .previous-next {
   display: none;
   margin: 0 15px 21px 15px;
   margin: 0 1rem 1.414rem 1rem;
 }
 
 @media (min-width: 40em) {
-  .has-dontation-form .previous-next {
+  .has-donation-form .previous-next {
     display: block !important;
   }
 }
 
 @media (min-width: 52em) {
-  .has-dontation-form .previous-next {
+  .has-donation-form .previous-next {
     margin: 0 30px 21px 30px;
     margin: 0 1.999rem 1.414rem 1.999rem;
   }
 }
 
-.has-dontation-form .next {
+.has-donation-form .next {
   position: relative;
   padding-top: 21px;
   padding-top: 1.414rem;
@@ -12348,7 +12370,7 @@ html.js .js-hide {
   line-height: 1.999rem;
 }
 
-.has-dontation-form .next i {
+.has-donation-form .next i {
   position: absolute;
   right: 0;
   display: inline-block;
@@ -12363,13 +12385,13 @@ html.js .js-hide {
   line-height: 1.999rem;
 }
 
-.has-dontation-form .next i:before {
+.has-donation-form .next i:before {
   line-height: 30px;
   line-height: 1.999rem;
   vertical-align: baseline;
 }
 
-.has-dontation-form .previous {
+.has-donation-form .previous {
   position: absolute;
   top: 0;
   left: 0;
@@ -12384,7 +12406,7 @@ html.js .js-hide {
   color: #bbb;
 }
 
-.has-dontation-form .steps {
+.has-donation-form .steps {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12394,7 +12416,7 @@ html.js .js-hide {
   background-color: #fff;
 }
 
-.has-dontation-form .step {
+.has-donation-form .step {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12416,7 +12438,7 @@ html.js .js-hide {
   text-align: center;
 }
 
-.has-dontation-form .step.active {
+.has-donation-form .step.active {
   background-color: #eee;
   color: black;
 }

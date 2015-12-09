@@ -19,7 +19,7 @@
 }
 
 // target only select pages
-.has-dontation-form {
+.has-donation-form {
 
   // show full form on error
   .page.errors {
@@ -87,6 +87,7 @@
 
   .form-item label {
     font-weight: 400;
+    width: 100%;
     &:not(.option) {
       white-space: nowrap;
     }
@@ -195,7 +196,8 @@
   }
 
   // if donation amount is select or other field
-  #edit-donation-select {//,
+  #edit-donation-select,
+  #edit-field-membership-term-und {//,
   //#edit-field-member-category-und {
     @include grid();
     width: 100%;
@@ -208,12 +210,16 @@
       @include hide();
     }
     label {
-      @extend .button--outline--blue;
-      padding: space(md);
+      @extend .button;
+      //padding: space(md);
       width: 100%;
+      border-color: $gray-2;// !important;
+      //color: $gray-4;
+      &::before { display: none; }
     }
     input:checked+label{
-      @extend .button--outline--blue:focus;
+      @extend .button--gray-2;
+      //background-color: color(blue);
 
     }
   }
