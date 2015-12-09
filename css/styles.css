@@ -555,10 +555,7 @@ img {
 .display--block,
 .button--outline--orange::before,
 .button--outline--blue::before,
-.node-type-donation #edit-donation-select label::before,
-.node-type-membership-page #edit-donation-select label::before,
-.node-type-fundraising-campaign #edit-donation-select label::before,
-.page-campaigns #edit-donation-select label::before,
+.has-dontation-form #edit-donation-select label::before,
 .button--outline--navy::before,
 .button--outline--red::before,
 .button--outline--mustard::before,
@@ -847,10 +844,7 @@ img {
 .position--relative,
 .button--outline--orange,
 .button--outline--blue,
-.node-type-donation #edit-donation-select label,
-.node-type-membership-page #edit-donation-select label,
-.node-type-fundraising-campaign #edit-donation-select label,
-.page-campaigns #edit-donation-select label,
+.has-dontation-form #edit-donation-select label,
 .button--outline--navy,
 .button--outline--red,
 .button--outline--mustard,
@@ -1239,10 +1233,7 @@ a {
 .cover-absolute,
 .button--outline--orange::before,
 .button--outline--blue::before,
-.node-type-donation #edit-donation-select label::before,
-.node-type-membership-page #edit-donation-select label::before,
-.node-type-fundraising-campaign #edit-donation-select label::before,
-.page-campaigns #edit-donation-select label::before,
+.has-dontation-form #edit-donation-select label::before,
 .button--outline--navy::before,
 .button--outline--red::before,
 .button--outline--mustard::before,
@@ -1698,14 +1689,8 @@ input[type="submit"],
 .button,
 .button--orange,
 .button--blue,
-.node-type-donation .form-actions .form-submit,
-.node-type-membership-page .form-actions .form-submit,
-.node-type-fundraising-campaign .form-actions .form-submit,
-.page-campaigns .form-actions .form-submit,
-.node-type-donation .next,
-.node-type-membership-page .next,
-.node-type-fundraising-campaign .next,
-.page-campaigns .next,
+.has-dontation-form .form-actions .form-submit,
+.has-dontation-form .next,
 .button--navy,
 .button--red,
 .button--mustard,
@@ -1724,10 +1709,7 @@ input[type="submit"],
 .button--black,
 .button--outline--orange,
 .button--outline--blue,
-.node-type-donation #edit-donation-select label,
-.node-type-membership-page #edit-donation-select label,
-.node-type-fundraising-campaign #edit-donation-select label,
-.page-campaigns #edit-donation-select label,
+.has-dontation-form #edit-donation-select label,
 .button--outline--navy,
 .button--outline--red,
 .button--outline--mustard,
@@ -1785,14 +1767,8 @@ input[type="submit"]:after,
 .button:before,
 .button--orange:before,
 .button--blue:before,
-.node-type-donation .form-actions .form-submit:before,
-.node-type-membership-page .form-actions .form-submit:before,
-.node-type-fundraising-campaign .form-actions .form-submit:before,
-.page-campaigns .form-actions .form-submit:before,
-.node-type-donation .next:before,
-.node-type-membership-page .next:before,
-.node-type-fundraising-campaign .next:before,
-.page-campaigns .next:before,
+.has-dontation-form .form-actions .form-submit:before,
+.has-dontation-form .next:before,
 .button--navy:before,
 .button--red:before,
 .button--mustard:before,
@@ -1811,10 +1787,7 @@ input[type="submit"]:after,
 .button--black:before,
 .button--outline--orange:before,
 .button--outline--blue:before,
-.node-type-donation #edit-donation-select label:before,
-.node-type-membership-page #edit-donation-select label:before,
-.node-type-fundraising-campaign #edit-donation-select label:before,
-.page-campaigns #edit-donation-select label:before,
+.has-dontation-form #edit-donation-select label:before,
 .button--outline--navy:before,
 .button--outline--red:before,
 .button--outline--mustard:before,
@@ -1843,14 +1816,8 @@ input[type="submit"]:after,
 .button:after,
 .button--orange:after,
 .button--blue:after,
-.node-type-donation .form-actions .form-submit:after,
-.node-type-membership-page .form-actions .form-submit:after,
-.node-type-fundraising-campaign .form-actions .form-submit:after,
-.page-campaigns .form-actions .form-submit:after,
-.node-type-donation .next:after,
-.node-type-membership-page .next:after,
-.node-type-fundraising-campaign .next:after,
-.page-campaigns .next:after,
+.has-dontation-form .form-actions .form-submit:after,
+.has-dontation-form .next:after,
 .button--navy:after,
 .button--red:after,
 .button--mustard:after,
@@ -1869,10 +1836,7 @@ input[type="submit"]:after,
 .button--black:after,
 .button--outline--orange:after,
 .button--outline--blue:after,
-.node-type-donation #edit-donation-select label:after,
-.node-type-membership-page #edit-donation-select label:after,
-.node-type-fundraising-campaign #edit-donation-select label:after,
-.page-campaigns #edit-donation-select label:after,
+.has-dontation-form #edit-donation-select label:after,
 .button--outline--navy:after,
 .button--outline--red:after,
 .button--outline--mustard:after,
@@ -1906,14 +1870,8 @@ input[type="submit"]:focus,
 .button:focus,
 .button--orange:focus,
 .button--blue:focus,
-.node-type-donation .form-actions .form-submit:focus,
-.node-type-membership-page .form-actions .form-submit:focus,
-.node-type-fundraising-campaign .form-actions .form-submit:focus,
-.page-campaigns .form-actions .form-submit:focus,
-.node-type-donation .next:focus,
-.node-type-membership-page .next:focus,
-.node-type-fundraising-campaign .next:focus,
-.page-campaigns .next:focus,
+.has-dontation-form .form-actions .form-submit:focus,
+.has-dontation-form .next:focus,
 .button--navy:focus,
 .button--red:focus,
 .button--mustard:focus,
@@ -1932,14 +1890,8 @@ input[type="submit"]:focus,
 .button--black:focus,
 .button--outline--orange:focus,
 .button--outline--blue:focus,
-.node-type-donation #edit-donation-select label:focus,
-.node-type-membership-page #edit-donation-select label:focus,
-.node-type-fundraising-campaign #edit-donation-select label:focus,
-.page-campaigns #edit-donation-select label:focus,
-.node-type-donation #edit-donation-select input:checked + label,
-.node-type-membership-page #edit-donation-select input:checked + label,
-.node-type-fundraising-campaign #edit-donation-select input:checked + label,
-.page-campaigns #edit-donation-select input:checked + label,
+.has-dontation-form #edit-donation-select label:focus,
+.has-dontation-form #edit-donation-select input:checked + label,
 .button--outline--navy:focus,
 .button--outline--red:focus,
 .button--outline--mustard:focus,
@@ -1973,14 +1925,8 @@ input[type="submit"]:hover,
 .button:hover,
 .button--orange:hover,
 .button--blue:hover,
-.node-type-donation .form-actions .form-submit:hover,
-.node-type-membership-page .form-actions .form-submit:hover,
-.node-type-fundraising-campaign .form-actions .form-submit:hover,
-.page-campaigns .form-actions .form-submit:hover,
-.node-type-donation .next:hover,
-.node-type-membership-page .next:hover,
-.node-type-fundraising-campaign .next:hover,
-.page-campaigns .next:hover,
+.has-dontation-form .form-actions .form-submit:hover,
+.has-dontation-form .next:hover,
 .button--navy:hover,
 .button--red:hover,
 .button--mustard:hover,
@@ -1999,10 +1945,7 @@ input[type="submit"]:hover,
 .button--black:hover,
 .button--outline--orange:hover,
 .button--outline--blue:hover,
-.node-type-donation #edit-donation-select label:hover,
-.node-type-membership-page #edit-donation-select label:hover,
-.node-type-fundraising-campaign #edit-donation-select label:hover,
-.page-campaigns #edit-donation-select label:hover,
+.has-dontation-form #edit-donation-select label:hover,
 .button--outline--navy:hover,
 .button--outline--red:hover,
 .button--outline--mustard:hover,
@@ -2037,14 +1980,8 @@ input[type="submit"]:disabled,
 .button:disabled,
 .button--orange:disabled,
 .button--blue:disabled,
-.node-type-donation .form-actions .form-submit:disabled,
-.node-type-membership-page .form-actions .form-submit:disabled,
-.node-type-fundraising-campaign .form-actions .form-submit:disabled,
-.page-campaigns .form-actions .form-submit:disabled,
-.node-type-donation .next:disabled,
-.node-type-membership-page .next:disabled,
-.node-type-fundraising-campaign .next:disabled,
-.page-campaigns .next:disabled,
+.has-dontation-form .form-actions .form-submit:disabled,
+.has-dontation-form .next:disabled,
 .button--navy:disabled,
 .button--red:disabled,
 .button--mustard:disabled,
@@ -2063,10 +2000,7 @@ input[type="submit"]:disabled,
 .button--black:disabled,
 .button--outline--orange:disabled,
 .button--outline--blue:disabled,
-.node-type-donation #edit-donation-select label:disabled,
-.node-type-membership-page #edit-donation-select label:disabled,
-.node-type-fundraising-campaign #edit-donation-select label:disabled,
-.page-campaigns #edit-donation-select label:disabled,
+.has-dontation-form #edit-donation-select label:disabled,
 .button--outline--navy:disabled,
 .button--outline--red:disabled,
 .button--outline--mustard:disabled,
@@ -3531,10 +3465,7 @@ a:hover {
 
 .color--blue,
 .button--outline--blue,
-.node-type-donation #edit-donation-select label,
-.node-type-membership-page #edit-donation-select label,
-.node-type-fundraising-campaign #edit-donation-select label,
-.page-campaigns #edit-donation-select label,
+.has-dontation-form #edit-donation-select label,
 .blue {
   color: #1E4497;
 }
@@ -4494,58 +4425,28 @@ a:hover {
 }
 
 .button--blue,
-.node-type-donation .form-actions .form-submit,
-.node-type-membership-page .form-actions .form-submit,
-.node-type-fundraising-campaign .form-actions .form-submit,
-.page-campaigns .form-actions .form-submit,
-.node-type-donation .next,
-.node-type-membership-page .next,
-.node-type-fundraising-campaign .next,
-.page-campaigns .next {
+.has-dontation-form .form-actions .form-submit,
+.has-dontation-form .next {
   border-color: #1E4497;
   background-color: #1E4497;
   color: #fff;
 }
 
 .button--blue:visited,
-.node-type-donation .form-actions .form-submit:visited,
-.node-type-membership-page .form-actions .form-submit:visited,
-.node-type-fundraising-campaign .form-actions .form-submit:visited,
-.page-campaigns .form-actions .form-submit:visited,
-.node-type-donation .next:visited,
-.node-type-membership-page .next:visited,
-.node-type-fundraising-campaign .next:visited,
-.page-campaigns .next:visited {
+.has-dontation-form .form-actions .form-submit:visited,
+.has-dontation-form .next:visited {
   color: #fff;
 }
 
 .button--blue:hover,
-.node-type-donation .form-actions .form-submit:hover,
-.node-type-membership-page .form-actions .form-submit:hover,
-.node-type-fundraising-campaign .form-actions .form-submit:hover,
-.page-campaigns .form-actions .form-submit:hover,
-.node-type-donation .next:hover,
-.node-type-membership-page .next:hover,
-.node-type-fundraising-campaign .next:hover,
-.page-campaigns .next:hover,
+.has-dontation-form .form-actions .form-submit:hover,
+.has-dontation-form .next:hover,
 .button--blue:active,
-.node-type-donation .form-actions .form-submit:active,
-.node-type-membership-page .form-actions .form-submit:active,
-.node-type-fundraising-campaign .form-actions .form-submit:active,
-.page-campaigns .form-actions .form-submit:active,
-.node-type-donation .next:active,
-.node-type-membership-page .next:active,
-.node-type-fundraising-campaign .next:active,
-.page-campaigns .next:active,
+.has-dontation-form .form-actions .form-submit:active,
+.has-dontation-form .next:active,
 .button--blue.active,
-.node-type-donation .form-actions .active.form-submit,
-.node-type-membership-page .form-actions .active.form-submit,
-.node-type-fundraising-campaign .form-actions .active.form-submit,
-.page-campaigns .form-actions .active.form-submit,
-.node-type-donation .active.next,
-.node-type-membership-page .active.next,
-.node-type-fundraising-campaign .active.next,
-.page-campaigns .active.next {
+.has-dontation-form .form-actions .active.form-submit,
+.has-dontation-form .active.next {
   background-color: #2657c2;
   color: white;
 }
@@ -4834,20 +4735,14 @@ a:hover {
 }
 
 .button--outline--blue,
-.node-type-donation #edit-donation-select label,
-.node-type-membership-page #edit-donation-select label,
-.node-type-fundraising-campaign #edit-donation-select label,
-.page-campaigns #edit-donation-select label {
+.has-dontation-form #edit-donation-select label {
   border-color: #97b1ea;
   background-color: transparent;
   z-index: 2;
 }
 
 .button--outline--blue::before,
-.node-type-donation #edit-donation-select label::before,
-.node-type-membership-page #edit-donation-select label::before,
-.node-type-fundraising-campaign #edit-donation-select label::before,
-.page-campaigns #edit-donation-select label::before {
+.has-dontation-form #edit-donation-select label::before {
   opacity: .125;
   background-color: currentcolor;
   content: '';
@@ -4855,46 +4750,22 @@ a:hover {
 }
 
 .button--outline--blue:hover,
-.node-type-donation #edit-donation-select label:hover,
-.node-type-membership-page #edit-donation-select label:hover,
-.node-type-fundraising-campaign #edit-donation-select label:hover,
-.page-campaigns #edit-donation-select label:hover,
+.has-dontation-form #edit-donation-select label:hover,
 .button--outline--blue:focus,
-.node-type-donation #edit-donation-select label:focus,
-.node-type-membership-page #edit-donation-select label:focus,
-.node-type-fundraising-campaign #edit-donation-select label:focus,
-.page-campaigns #edit-donation-select label:focus,
-.node-type-donation #edit-donation-select input:checked + label,
-.node-type-membership-page #edit-donation-select input:checked + label,
-.node-type-fundraising-campaign #edit-donation-select input:checked + label,
-.page-campaigns #edit-donation-select input:checked + label,
+.has-dontation-form #edit-donation-select label:focus,
+.has-dontation-form #edit-donation-select input:checked + label,
 .button--outline--blue.active,
-.node-type-donation #edit-donation-select label.active,
-.node-type-membership-page #edit-donation-select label.active,
-.node-type-fundraising-campaign #edit-donation-select label.active,
-.page-campaigns #edit-donation-select label.active {
+.has-dontation-form #edit-donation-select label.active {
   color: #fff;
 }
 
 .button--outline--blue:hover::before,
-.node-type-donation #edit-donation-select label:hover::before,
-.node-type-membership-page #edit-donation-select label:hover::before,
-.node-type-fundraising-campaign #edit-donation-select label:hover::before,
-.page-campaigns #edit-donation-select label:hover::before,
+.has-dontation-form #edit-donation-select label:hover::before,
 .button--outline--blue:focus::before,
-.node-type-donation #edit-donation-select label:focus::before,
-.node-type-membership-page #edit-donation-select label:focus::before,
-.node-type-fundraising-campaign #edit-donation-select label:focus::before,
-.page-campaigns #edit-donation-select label:focus::before,
-.node-type-donation #edit-donation-select input:checked + label::before,
-.node-type-membership-page #edit-donation-select input:checked + label::before,
-.node-type-fundraising-campaign #edit-donation-select input:checked + label::before,
-.page-campaigns #edit-donation-select input:checked + label::before,
+.has-dontation-form #edit-donation-select label:focus::before,
+.has-dontation-form #edit-donation-select input:checked + label::before,
 .button--outline--blue.active::before,
-.node-type-donation #edit-donation-select label.active::before,
-.node-type-membership-page #edit-donation-select label.active::before,
-.node-type-fundraising-campaign #edit-donation-select label.active::before,
-.page-campaigns #edit-donation-select label.active::before {
+.has-dontation-form #edit-donation-select label.active::before {
   opacity: 1;
   background-color: #1E4497;
 }
@@ -11888,37 +11759,22 @@ html.js .js-hide {
   }
 }
 
-.node-type-donation .page.errors .donation-step,
-.node-type-membership-page .page.errors .donation-step,
-.node-type-fundraising-campaign .page.errors .donation-step,
-.page-campaigns .page.errors .donation-step {
+.has-dontation-form .page.errors .donation-step {
   display: block !important;
 }
 
-.node-type-donation .page.errors .steps,
-.node-type-donation .page.errors .previous-next,
-.node-type-membership-page .page.errors .steps,
-.node-type-membership-page .page.errors .previous-next,
-.node-type-fundraising-campaign .page.errors .steps,
-.node-type-fundraising-campaign .page.errors .previous-next,
-.page-campaigns .page.errors .steps,
-.page-campaigns .page.errors .previous-next {
+.has-dontation-form .page.errors .steps,
+.has-dontation-form .page.errors .previous-next {
   display: none !important;
 }
 
-.node-type-donation header,
-.node-type-membership-page header,
-.node-type-fundraising-campaign header,
-.page-campaigns header {
+.has-dontation-form header {
   background-color: #fff;
   text-align: center;
 }
 
 @media (min-width: 40em) {
-  .node-type-donation header .container,
-  .node-type-membership-page header .container,
-  .node-type-fundraising-campaign header .container,
-  .page-campaigns header .container {
+  .has-dontation-form header .container {
     padding-top: 15px;
     padding-top: 1rem;
     padding-bottom: 15px;
@@ -11926,42 +11782,27 @@ html.js .js-hide {
   }
 }
 
-.node-type-donation .header__logo-image,
-.node-type-membership-page .header__logo-image,
-.node-type-fundraising-campaign .header__logo-image,
-.page-campaigns .header__logo-image {
+.has-dontation-form .header__logo-image {
   max-height: 40px;
 }
 
-.node-type-donation #logo,
-.node-type-membership-page #logo,
-.node-type-fundraising-campaign #logo,
-.page-campaigns #logo {
+.has-dontation-form #logo {
   background-image: url(../img/logo__bean--orange.png);
 }
 
 @media (min-width: 52em) {
-  .node-type-donation #logo,
-  .node-type-membership-page #logo,
-  .node-type-fundraising-campaign #logo,
-  .page-campaigns #logo {
+  .has-dontation-form #logo {
     background-image: url(../img/NKF-logoR_Hori_OB.png);
   }
 }
 
-.node-type-donation .main,
-.node-type-membership-page .main,
-.node-type-fundraising-campaign .main,
-.page-campaigns .main {
+.has-dontation-form .main {
   padding-bottom: 60px;
   padding-bottom: 3.998rem;
   background-color: #eee;
 }
 
-.node-type-donation h1,
-.node-type-membership-page h1,
-.node-type-fundraising-campaign h1,
-.page-campaigns h1 {
+.has-dontation-form h1 {
   text-transform: uppercase;
   letter-spacing: 3px;
   letter-spacing: .2rem;
@@ -11969,17 +11810,11 @@ html.js .js-hide {
   font-size: 1.999rem;
 }
 
-.node-type-donation.not-logged-in .tabs,
-.node-type-membership-page.not-logged-in .tabs,
-.node-type-fundraising-campaign.not-logged-in .tabs,
-.page-campaigns.not-logged-in .tabs {
+.has-dontation-form.not-logged-in .tabs {
   display: none !important;
 }
 
-.node-type-donation [id*="redhen-donation-form"],
-.node-type-membership-page [id*="redhen-donation-form"],
-.node-type-fundraising-campaign [id*="redhen-donation-form"],
-.page-campaigns [id*="redhen-donation-form"] {
+.has-dontation-form [id*="redhen-donation-form"] {
   position: relative;
   width: 100%;
   max-width: 550px;
@@ -11988,61 +11823,37 @@ html.js .js-hide {
   border: 1px solid #eee;
 }
 
-.node-type-donation .form-item label,
-.node-type-membership-page .form-item label,
-.node-type-fundraising-campaign .form-item label,
-.page-campaigns .form-item label {
+.has-dontation-form .form-item label {
   font-weight: 400;
 }
 
-.node-type-donation .form-item label:not(.option),
-.node-type-membership-page .form-item label:not(.option),
-.node-type-fundraising-campaign .form-item label:not(.option),
-.page-campaigns .form-item label:not(.option) {
+.has-dontation-form .form-item label:not(.option) {
   white-space: nowrap;
 }
 
-.node-type-donation .form-text,
-.node-type-membership-page .form-text,
-.node-type-fundraising-campaign .form-text,
-.page-campaigns .form-text {
+.has-dontation-form .form-text {
   width: 100%;
 }
 
-.node-type-donation .form-item,
-.node-type-membership-page .form-item,
-.node-type-fundraising-campaign .form-item,
-.page-campaigns .form-item {
+.has-dontation-form .form-item {
   width: 100%;
   padding: 8px;
   padding: 0.5rem;
 }
 
-.node-type-donation .form-item .form-item,
-.node-type-membership-page .form-item .form-item,
-.node-type-fundraising-campaign .form-item .form-item,
-.page-campaigns .form-item .form-item {
+.has-dontation-form .form-item .form-item {
   padding: 0;
 }
 
-.node-type-donation .description,
-.node-type-membership-page .description,
-.node-type-fundraising-campaign .description,
-.page-campaigns .description {
+.has-dontation-form .description {
   color: #777;
 }
 
-.node-type-donation fieldset,
-.node-type-membership-page fieldset,
-.node-type-fundraising-campaign fieldset,
-.page-campaigns fieldset {
+.has-dontation-form fieldset {
   padding: 0;
 }
 
-.node-type-donation legend,
-.node-type-membership-page legend,
-.node-type-fundraising-campaign legend,
-.page-campaigns legend {
+.has-dontation-form legend {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12062,28 +11873,16 @@ html.js .js-hide {
   font-weight: bold;
 }
 
-.node-type-donation input[type=checkbox]:checked + label:before,
-.node-type-donation input[type=radio]:checked + label:before,
-.node-type-membership-page input[type=checkbox]:checked + label:before,
-.node-type-membership-page input[type=radio]:checked + label:before,
-.node-type-fundraising-campaign input[type=checkbox]:checked + label:before,
-.node-type-fundraising-campaign input[type=radio]:checked + label:before,
-.page-campaigns input[type=checkbox]:checked + label:before,
-.page-campaigns input[type=radio]:checked + label:before {
+.has-dontation-form input[type=checkbox]:checked + label:before,
+.has-dontation-form input[type=radio]:checked + label:before {
   color: #1E4497;
 }
 
-.node-type-donation .form-item-donation .description,
-.node-type-membership-page .form-item-donation .description,
-.node-type-fundraising-campaign .form-item-donation .description,
-.page-campaigns .form-item-donation .description {
+.has-dontation-form .form-item-donation .description {
   display: none !important;
 }
 
-.node-type-donation .form-type-textfield.form-item-donation,
-.node-type-membership-page .form-type-textfield.form-item-donation,
-.node-type-fundraising-campaign .form-type-textfield.form-item-donation,
-.page-campaigns .form-type-textfield.form-item-donation {
+.has-dontation-form .form-type-textfield.form-item-donation {
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -12094,18 +11893,12 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .node-type-donation .form-type-textfield.form-item-donation,
-  .node-type-membership-page .form-type-textfield.form-item-donation,
-  .node-type-fundraising-campaign .form-type-textfield.form-item-donation,
-  .page-campaigns .form-type-textfield.form-item-donation {
+  .has-dontation-form .form-type-textfield.form-item-donation {
     width: 50%;
   }
 }
 
-.node-type-donation .form-type-textfield.form-item-donation::before,
-.node-type-membership-page .form-type-textfield.form-item-donation::before,
-.node-type-fundraising-campaign .form-type-textfield.form-item-donation::before,
-.page-campaigns .form-type-textfield.form-item-donation::before {
+.has-dontation-form .form-type-textfield.form-item-donation::before {
   content: "$ ";
   position: absolute;
   bottom: 15px;
@@ -12116,10 +11909,7 @@ html.js .js-hide {
   left: 1rem;
 }
 
-.node-type-donation .form-type-textfield.form-item-donation.recurring::after,
-.node-type-membership-page .form-type-textfield.form-item-donation.recurring::after,
-.node-type-fundraising-campaign .form-type-textfield.form-item-donation.recurring::after,
-.page-campaigns .form-type-textfield.form-item-donation.recurring::after {
+.has-dontation-form .form-type-textfield.form-item-donation.recurring::after {
   content: " /mo";
   position: absolute;
   bottom: 15px;
@@ -12131,10 +11921,7 @@ html.js .js-hide {
   color: #bbb;
 }
 
-.node-type-donation .form-type-textfield.form-item-donation input,
-.node-type-membership-page .form-type-textfield.form-item-donation input,
-.node-type-fundraising-campaign .form-type-textfield.form-item-donation input,
-.page-campaigns .form-type-textfield.form-item-donation input {
+.has-dontation-form .form-type-textfield.form-item-donation input {
   font-weight: bold;
   padding: 0 21px;
   padding: 0 1.414rem;
@@ -12142,50 +11929,29 @@ html.js .js-hide {
   font-size: 1.414rem;
 }
 
-.node-type-donation .recurring-button:after,
-.node-type-membership-page .recurring-button:after,
-.node-type-fundraising-campaign .recurring-button:after,
-.page-campaigns .recurring-button:after {
+.has-dontation-form .recurring-button:after {
   content: ' /mo';
   color: #777;
   font-size: 11px;
   font-size: 0.707rem;
 }
 
-.node-type-donation .form-item-donation-select > label:not(.option),
-.node-type-donation .form-item-field-member-category-und > label:not(.option),
-.node-type-membership-page .form-item-donation-select > label:not(.option),
-.node-type-membership-page .form-item-field-member-category-und > label:not(.option),
-.node-type-fundraising-campaign .form-item-donation-select > label:not(.option),
-.node-type-fundraising-campaign .form-item-field-member-category-und > label:not(.option),
-.page-campaigns .form-item-donation-select > label:not(.option),
-.page-campaigns .form-item-field-member-category-und > label:not(.option) {
+.has-dontation-form .form-item-donation-select > label:not(.option),
+.has-dontation-form .form-item-field-member-category-und > label:not(.option) {
   display: none !important;
 }
 
-.node-type-donation .form-type-radio.form-item-donation-select,
-.node-type-donation .form-item.form-item-donation-other,
-.node-type-membership-page .form-type-radio.form-item-donation-select,
-.node-type-membership-page .form-item.form-item-donation-other,
-.node-type-fundraising-campaign .form-type-radio.form-item-donation-select,
-.node-type-fundraising-campaign .form-item.form-item-donation-other,
-.page-campaigns .form-type-radio.form-item-donation-select,
-.page-campaigns .form-item.form-item-donation-other {
+.has-dontation-form .form-type-radio.form-item-donation-select,
+.has-dontation-form .form-item.form-item-donation-other {
   padding: 8px;
   padding: 0.5rem;
 }
 
-.node-type-donation .form-item.form-type-select-or-other,
-.node-type-membership-page .form-item.form-type-select-or-other,
-.node-type-fundraising-campaign .form-item.form-type-select-or-other,
-.page-campaigns .form-item.form-type-select-or-other {
+.has-dontation-form .form-item.form-type-select-or-other {
   padding: 0;
 }
 
-.node-type-donation .amount-options,
-.node-type-membership-page .amount-options,
-.node-type-fundraising-campaign .amount-options,
-.page-campaigns .amount-options {
+.has-dontation-form .amount-options {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12193,18 +11959,12 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.node-type-donation .amount-options .active,
-.node-type-membership-page .amount-options .active,
-.node-type-fundraising-campaign .amount-options .active,
-.page-campaigns .amount-options .active {
+.has-dontation-form .amount-options .active {
   background-color: #97b1ea;
   border-color: #97b1ea;
 }
 
-.node-type-donation #edit-donation-select,
-.node-type-membership-page #edit-donation-select,
-.node-type-fundraising-campaign #edit-donation-select,
-.page-campaigns #edit-donation-select {
+.has-dontation-form #edit-donation-select {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12213,10 +11973,7 @@ html.js .js-hide {
   width: 100%;
 }
 
-.node-type-donation #edit-donation-select > *,
-.node-type-membership-page #edit-donation-select > *,
-.node-type-fundraising-campaign #edit-donation-select > *,
-.page-campaigns #edit-donation-select > * {
+.has-dontation-form #edit-donation-select > * {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12231,35 +11988,23 @@ html.js .js-hide {
   padding: 0.5rem;
 }
 
-.node-type-donation #edit-donation-select input,
-.node-type-membership-page #edit-donation-select input,
-.node-type-fundraising-campaign #edit-donation-select input,
-.page-campaigns #edit-donation-select input {
+.has-dontation-form #edit-donation-select input {
   display: none !important;
 }
 
-.node-type-donation #edit-donation-select label,
-.node-type-membership-page #edit-donation-select label,
-.node-type-fundraising-campaign #edit-donation-select label,
-.page-campaigns #edit-donation-select label {
+.has-dontation-form #edit-donation-select label {
   padding: 15px;
   padding: 1rem;
   width: 100%;
 }
 
 @media (min-width: 40em) {
-  .node-type-donation .form-item-donation-other,
-  .node-type-membership-page .form-item-donation-other,
-  .node-type-fundraising-campaign .form-item-donation-other,
-  .page-campaigns .form-item-donation-other {
+  .has-dontation-form .form-item-donation-other {
     width: 50%;
   }
 }
 
-.node-type-donation #edit-redhen-contact,
-.node-type-membership-page #edit-redhen-contact,
-.node-type-fundraising-campaign #edit-redhen-contact,
-.page-campaigns #edit-redhen-contact {
+.has-dontation-form #edit-redhen-contact {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12267,10 +12012,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.node-type-donation #edit-name,
-.node-type-membership-page #edit-name,
-.node-type-fundraising-campaign #edit-name,
-.page-campaigns #edit-name {
+.has-dontation-form #edit-name {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12278,34 +12020,13 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.node-type-donation .form-item-first-name,
-.node-type-donation .form-item-last-name,
-.node-type-donation .form-item-email,
-.node-type-donation .field-name-field-phone,
-.node-type-donation .field-name-field-company-name,
-.node-type-donation .field-name-field-professional-credentials,
-.node-type-donation .field-name-field-prefix,
-.node-type-membership-page .form-item-first-name,
-.node-type-membership-page .form-item-last-name,
-.node-type-membership-page .form-item-email,
-.node-type-membership-page .field-name-field-phone,
-.node-type-membership-page .field-name-field-company-name,
-.node-type-membership-page .field-name-field-professional-credentials,
-.node-type-membership-page .field-name-field-prefix,
-.node-type-fundraising-campaign .form-item-first-name,
-.node-type-fundraising-campaign .form-item-last-name,
-.node-type-fundraising-campaign .form-item-email,
-.node-type-fundraising-campaign .field-name-field-phone,
-.node-type-fundraising-campaign .field-name-field-company-name,
-.node-type-fundraising-campaign .field-name-field-professional-credentials,
-.node-type-fundraising-campaign .field-name-field-prefix,
-.page-campaigns .form-item-first-name,
-.page-campaigns .form-item-last-name,
-.page-campaigns .form-item-email,
-.page-campaigns .field-name-field-phone,
-.page-campaigns .field-name-field-company-name,
-.page-campaigns .field-name-field-professional-credentials,
-.page-campaigns .field-name-field-prefix {
+.has-dontation-form .form-item-first-name,
+.has-dontation-form .form-item-last-name,
+.has-dontation-form .form-item-email,
+.has-dontation-form .field-name-field-phone,
+.has-dontation-form .field-name-field-company-name,
+.has-dontation-form .field-name-field-professional-credentials,
+.has-dontation-form .field-name-field-prefix {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12318,42 +12039,18 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .node-type-donation .form-item-first-name,
-  .node-type-donation .form-item-last-name,
-  .node-type-donation .form-item-email,
-  .node-type-donation .field-name-field-phone,
-  .node-type-donation .field-name-field-company-name,
-  .node-type-donation .field-name-field-professional-credentials,
-  .node-type-donation .field-name-field-prefix,
-  .node-type-membership-page .form-item-first-name,
-  .node-type-membership-page .form-item-last-name,
-  .node-type-membership-page .form-item-email,
-  .node-type-membership-page .field-name-field-phone,
-  .node-type-membership-page .field-name-field-company-name,
-  .node-type-membership-page .field-name-field-professional-credentials,
-  .node-type-membership-page .field-name-field-prefix,
-  .node-type-fundraising-campaign .form-item-first-name,
-  .node-type-fundraising-campaign .form-item-last-name,
-  .node-type-fundraising-campaign .form-item-email,
-  .node-type-fundraising-campaign .field-name-field-phone,
-  .node-type-fundraising-campaign .field-name-field-company-name,
-  .node-type-fundraising-campaign .field-name-field-professional-credentials,
-  .node-type-fundraising-campaign .field-name-field-prefix,
-  .page-campaigns .form-item-first-name,
-  .page-campaigns .form-item-last-name,
-  .page-campaigns .form-item-email,
-  .page-campaigns .field-name-field-phone,
-  .page-campaigns .field-name-field-company-name,
-  .page-campaigns .field-name-field-professional-credentials,
-  .page-campaigns .field-name-field-prefix {
+  .has-dontation-form .form-item-first-name,
+  .has-dontation-form .form-item-last-name,
+  .has-dontation-form .form-item-email,
+  .has-dontation-form .field-name-field-phone,
+  .has-dontation-form .field-name-field-company-name,
+  .has-dontation-form .field-name-field-professional-credentials,
+  .has-dontation-form .field-name-field-prefix {
     width: 50%;
   }
 }
 
-.node-type-donation .field-type-mailchimp-lists-subscription,
-.node-type-membership-page .field-type-mailchimp-lists-subscription,
-.node-type-fundraising-campaign .field-type-mailchimp-lists-subscription,
-.page-campaigns .field-type-mailchimp-lists-subscription {
+.has-dontation-form .field-type-mailchimp-lists-subscription {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12365,24 +12062,15 @@ html.js .js-hide {
   *display: inline;
 }
 
-.node-type-donation .field-type-addressfield legend,
-.node-type-membership-page .field-type-addressfield legend,
-.node-type-fundraising-campaign .field-type-addressfield legend,
-.page-campaigns .field-type-addressfield legend {
+.has-dontation-form .field-type-addressfield legend {
   display: none !important;
 }
 
-.node-type-donation .country,
-.node-type-membership-page .country,
-.node-type-fundraising-campaign .country,
-.page-campaigns .country {
+.has-dontation-form .country {
   width: 100%;
 }
 
-.node-type-donation .street-block,
-.node-type-membership-page .street-block,
-.node-type-fundraising-campaign .street-block,
-.page-campaigns .street-block {
+.has-dontation-form .street-block {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12390,10 +12078,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.node-type-donation .street-block .form-item,
-.node-type-membership-page .street-block .form-item,
-.node-type-fundraising-campaign .street-block .form-item,
-.page-campaigns .street-block .form-item {
+.has-dontation-form .street-block .form-item {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12405,33 +12090,21 @@ html.js .js-hide {
   *display: inline;
 }
 
-.node-type-donation [class*="-thoroughfare"],
-.node-type-membership-page [class*="-thoroughfare"],
-.node-type-fundraising-campaign [class*="-thoroughfare"],
-.page-campaigns [class*="-thoroughfare"] {
+.has-dontation-form [class*="-thoroughfare"] {
   width: 100%;
 }
 
-.node-type-donation [class*="-premise"],
-.node-type-membership-page [class*="-premise"],
-.node-type-fundraising-campaign [class*="-premise"],
-.page-campaigns [class*="-premise"] {
+.has-dontation-form [class*="-premise"] {
   width: 100%;
 }
 
 @media (min-width: 40em) {
-  .node-type-donation [class*="-premise"],
-  .node-type-membership-page [class*="-premise"],
-  .node-type-fundraising-campaign [class*="-premise"],
-  .page-campaigns [class*="-premise"] {
+  .has-dontation-form [class*="-premise"] {
     width: 25%;
   }
 }
 
-.node-type-donation .locality-block,
-.node-type-membership-page .locality-block,
-.node-type-fundraising-campaign .locality-block,
-.page-campaigns .locality-block {
+.has-dontation-form .locality-block {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12439,10 +12112,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.node-type-donation .locality-block .form-item,
-.node-type-membership-page .locality-block .form-item,
-.node-type-fundraising-campaign .locality-block .form-item,
-.page-campaigns .locality-block .form-item {
+.has-dontation-form .locality-block .form-item {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12454,68 +12124,44 @@ html.js .js-hide {
   *display: inline;
 }
 
-.node-type-donation [class*="-locality"],
-.node-type-membership-page [class*="-locality"],
-.node-type-fundraising-campaign [class*="-locality"],
-.page-campaigns [class*="-locality"] {
+.has-dontation-form [class*="-locality"] {
   width: 100%;
   margin: 0;
 }
 
 @media (min-width: 40em) {
-  .node-type-donation [class*="-locality"],
-  .node-type-membership-page [class*="-locality"],
-  .node-type-fundraising-campaign [class*="-locality"],
-  .page-campaigns [class*="-locality"] {
+  .has-dontation-form [class*="-locality"] {
     width: 55%;
   }
 }
 
-.node-type-donation [class*="-administrative-area"],
-.node-type-membership-page [class*="-administrative-area"],
-.node-type-fundraising-campaign [class*="-administrative-area"],
-.page-campaigns [class*="-administrative-area"] {
+.has-dontation-form [class*="-administrative-area"] {
   width: 100%;
   margin: 0;
 }
 
 @media (min-width: 40em) {
-  .node-type-donation [class*="-administrative-area"],
-  .node-type-membership-page [class*="-administrative-area"],
-  .node-type-fundraising-campaign [class*="-administrative-area"],
-  .page-campaigns [class*="-administrative-area"] {
+  .has-dontation-form [class*="-administrative-area"] {
     width: 20%;
   }
 }
 
-.node-type-donation .state,
-.node-type-membership-page .state,
-.node-type-fundraising-campaign .state,
-.page-campaigns .state {
+.has-dontation-form .state {
   width: 100%;
 }
 
-.node-type-donation [class*="-postal-code"],
-.node-type-membership-page [class*="-postal-code"],
-.node-type-fundraising-campaign [class*="-postal-code"],
-.page-campaigns [class*="-postal-code"] {
+.has-dontation-form [class*="-postal-code"] {
   width: 100%;
   margin: 0;
 }
 
 @media (min-width: 40em) {
-  .node-type-donation [class*="-postal-code"],
-  .node-type-membership-page [class*="-postal-code"],
-  .node-type-fundraising-campaign [class*="-postal-code"],
-  .page-campaigns [class*="-postal-code"] {
+  .has-dontation-form [class*="-postal-code"] {
     width: 25%;
   }
 }
 
-.node-type-donation .required-fields,
-.node-type-membership-page .required-fields,
-.node-type-fundraising-campaign .required-fields,
-.page-campaigns .required-fields {
+.has-dontation-form .required-fields {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12524,10 +12170,7 @@ html.js .js-hide {
   background-color: #eee;
 }
 
-.node-type-donation .required-fields > div,
-.node-type-membership-page .required-fields > div,
-.node-type-fundraising-campaign .required-fields > div,
-.page-campaigns .required-fields > div {
+.has-dontation-form .required-fields > div {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12541,34 +12184,19 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .node-type-donation .required-fields .field-name-field-honoree-first-name,
-  .node-type-donation .required-fields .field-name-field-honoree-last-name,
-  .node-type-membership-page .required-fields .field-name-field-honoree-first-name,
-  .node-type-membership-page .required-fields .field-name-field-honoree-last-name,
-  .node-type-fundraising-campaign .required-fields .field-name-field-honoree-first-name,
-  .node-type-fundraising-campaign .required-fields .field-name-field-honoree-last-name,
-  .page-campaigns .required-fields .field-name-field-honoree-first-name,
-  .page-campaigns .required-fields .field-name-field-honoree-last-name {
+  .has-dontation-form .required-fields .field-name-field-honoree-first-name,
+  .has-dontation-form .required-fields .field-name-field-honoree-last-name {
     width: 50%;
   }
 }
 
-.node-type-donation .field-name-field-notified-party,
-.node-type-membership-page .field-name-field-notified-party,
-.node-type-fundraising-campaign .field-name-field-notified-party,
-.page-campaigns .field-name-field-notified-party {
+.has-dontation-form .field-name-field-notified-party {
   margin-bottom: 15px;
   margin-bottom: 1rem;
 }
 
-.node-type-donation .field-name-field-notify-firstname,
-.node-type-donation .field-name-field-notify-lastname,
-.node-type-membership-page .field-name-field-notify-firstname,
-.node-type-membership-page .field-name-field-notify-lastname,
-.node-type-fundraising-campaign .field-name-field-notify-firstname,
-.node-type-fundraising-campaign .field-name-field-notify-lastname,
-.page-campaigns .field-name-field-notify-firstname,
-.page-campaigns .field-name-field-notify-lastname {
+.has-dontation-form .field-name-field-notify-firstname,
+.has-dontation-form .field-name-field-notify-lastname {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12582,29 +12210,17 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .node-type-donation .field-name-field-notify-firstname,
-  .node-type-donation .field-name-field-notify-lastname,
-  .node-type-membership-page .field-name-field-notify-firstname,
-  .node-type-membership-page .field-name-field-notify-lastname,
-  .node-type-fundraising-campaign .field-name-field-notify-firstname,
-  .node-type-fundraising-campaign .field-name-field-notify-lastname,
-  .page-campaigns .field-name-field-notify-firstname,
-  .page-campaigns .field-name-field-notify-lastname {
+  .has-dontation-form .field-name-field-notify-firstname,
+  .has-dontation-form .field-name-field-notify-lastname {
     width: 50%;
   }
 }
 
-.node-type-donation .form-item-field-benefiting-office-und select,
-.node-type-membership-page .form-item-field-benefiting-office-und select,
-.node-type-fundraising-campaign .form-item-field-benefiting-office-und select,
-.page-campaigns .form-item-field-benefiting-office-und select {
+.has-dontation-form .form-item-field-benefiting-office-und select {
   width: 100%;
 }
 
-.node-type-donation #payment-details,
-.node-type-membership-page #payment-details,
-.node-type-fundraising-campaign #payment-details,
-.page-campaigns #payment-details {
+.has-dontation-form #payment-details {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12612,10 +12228,7 @@ html.js .js-hide {
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-.node-type-donation .form-item-payment-details-credit-card-number,
-.node-type-membership-page .form-item-payment-details-credit-card-number,
-.node-type-fundraising-campaign .form-item-payment-details-credit-card-number,
-.page-campaigns .form-item-payment-details-credit-card-number {
+.has-dontation-form .form-item-payment-details-credit-card-number {
   width: 100%;
   display: inline-block;
   vertical-align: top;
@@ -12628,10 +12241,7 @@ html.js .js-hide {
   *display: inline;
 }
 
-.node-type-donation .commerce-credit-card-expiration,
-.node-type-membership-page .commerce-credit-card-expiration,
-.node-type-fundraising-campaign .commerce-credit-card-expiration,
-.page-campaigns .commerce-credit-card-expiration {
+.has-dontation-form .commerce-credit-card-expiration {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12644,33 +12254,21 @@ html.js .js-hide {
   width: 60%;
 }
 
-.node-type-donation .commerce-credit-card-expiration .form-item,
-.node-type-membership-page .commerce-credit-card-expiration .form-item,
-.node-type-fundraising-campaign .commerce-credit-card-expiration .form-item,
-.page-campaigns .commerce-credit-card-expiration .form-item {
+.has-dontation-form .commerce-credit-card-expiration .form-item {
   display: table-cell;
   width: 50%;
   vertical-align: bottom;
 }
 
-.node-type-donation .commerce-credit-card-expiration select,
-.node-type-membership-page .commerce-credit-card-expiration select,
-.node-type-fundraising-campaign .commerce-credit-card-expiration select,
-.page-campaigns .commerce-credit-card-expiration select {
+.has-dontation-form .commerce-credit-card-expiration select {
   width: 100%;
 }
 
-.node-type-donation .commerce-month-year-divider,
-.node-type-membership-page .commerce-month-year-divider,
-.node-type-fundraising-campaign .commerce-month-year-divider,
-.page-campaigns .commerce-month-year-divider {
+.has-dontation-form .commerce-month-year-divider {
   display: none !important;
 }
 
-.node-type-donation .form-item-payment-details-credit-card-code,
-.node-type-membership-page .form-item-payment-details-credit-card-code,
-.node-type-fundraising-campaign .form-item-payment-details-credit-card-code,
-.page-campaigns .form-item-payment-details-credit-card-code {
+.has-dontation-form .form-item-payment-details-credit-card-code {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12683,52 +12281,31 @@ html.js .js-hide {
   width: 40%;
 }
 
-.node-type-donation .field-name-field-company-match,
-.node-type-donation .honor-info,
-.node-type-donation .field-name-field-benefiting-office,
-.node-type-membership-page .field-name-field-company-match,
-.node-type-membership-page .honor-info,
-.node-type-membership-page .field-name-field-benefiting-office,
-.node-type-fundraising-campaign .field-name-field-company-match,
-.node-type-fundraising-campaign .honor-info,
-.node-type-fundraising-campaign .field-name-field-benefiting-office,
-.page-campaigns .field-name-field-company-match,
-.page-campaigns .honor-info,
-.page-campaigns .field-name-field-benefiting-office {
+.has-dontation-form .field-name-field-company-match,
+.has-dontation-form .honor-info,
+.has-dontation-form .field-name-field-benefiting-office {
   margin: 0 8px 8px;
   margin: 0 0.5rem 0.5rem;
   background-color: #eee;
 }
 
-.node-type-donation .form-actions,
-.node-type-membership-page .form-actions,
-.node-type-fundraising-campaign .form-actions,
-.page-campaigns .form-actions {
+.has-dontation-form .form-actions {
   padding-top: 60px;
   padding-top: 3.998rem;
   text-align: center;
 }
 
-.node-type-donation .form-actions .form-submit,
-.node-type-membership-page .form-actions .form-submit,
-.node-type-fundraising-campaign .form-actions .form-submit,
-.page-campaigns .form-actions .form-submit {
+.has-dontation-form .form-actions .form-submit {
   width: 100%;
   padding: 21px;
   padding: 1.414rem;
 }
 
-.node-type-donation .form-item-signup,
-.node-type-membership-page .form-item-signup,
-.node-type-fundraising-campaign .form-item-signup,
-.page-campaigns .form-item-signup {
+.has-dontation-form .form-item-signup {
   text-align: center;
 }
 
-.node-type-donation .donation-step__inner,
-.node-type-membership-page .donation-step__inner,
-.node-type-fundraising-campaign .donation-step__inner,
-.page-campaigns .donation-step__inner {
+.has-dontation-form .donation-step__inner {
   position: relative;
   padding: 30px 15px;
   padding: 1.999rem 1rem;
@@ -12736,47 +12313,32 @@ html.js .js-hide {
 }
 
 @media (min-width: 40em) {
-  .node-type-donation .donation-step__inner,
-  .node-type-membership-page .donation-step__inner,
-  .node-type-fundraising-campaign .donation-step__inner,
-  .page-campaigns .donation-step__inner {
+  .has-dontation-form .donation-step__inner {
     padding: 30px 30px;
     padding: 1.999rem 1.999rem;
   }
 }
 
-.node-type-donation .previous-next,
-.node-type-membership-page .previous-next,
-.node-type-fundraising-campaign .previous-next,
-.page-campaigns .previous-next {
+.has-dontation-form .previous-next {
   display: none;
   margin: 0 15px 21px 15px;
   margin: 0 1rem 1.414rem 1rem;
 }
 
 @media (min-width: 40em) {
-  .node-type-donation .previous-next,
-  .node-type-membership-page .previous-next,
-  .node-type-fundraising-campaign .previous-next,
-  .page-campaigns .previous-next {
+  .has-dontation-form .previous-next {
     display: block !important;
   }
 }
 
 @media (min-width: 52em) {
-  .node-type-donation .previous-next,
-  .node-type-membership-page .previous-next,
-  .node-type-fundraising-campaign .previous-next,
-  .page-campaigns .previous-next {
+  .has-dontation-form .previous-next {
     margin: 0 30px 21px 30px;
     margin: 0 1.999rem 1.414rem 1.999rem;
   }
 }
 
-.node-type-donation .next,
-.node-type-membership-page .next,
-.node-type-fundraising-campaign .next,
-.page-campaigns .next {
+.has-dontation-form .next {
   position: relative;
   padding-top: 21px;
   padding-top: 1.414rem;
@@ -12786,10 +12348,7 @@ html.js .js-hide {
   line-height: 1.999rem;
 }
 
-.node-type-donation .next i,
-.node-type-membership-page .next i,
-.node-type-fundraising-campaign .next i,
-.page-campaigns .next i {
+.has-dontation-form .next i {
   position: absolute;
   right: 0;
   display: inline-block;
@@ -12804,19 +12363,13 @@ html.js .js-hide {
   line-height: 1.999rem;
 }
 
-.node-type-donation .next i:before,
-.node-type-membership-page .next i:before,
-.node-type-fundraising-campaign .next i:before,
-.page-campaigns .next i:before {
+.has-dontation-form .next i:before {
   line-height: 30px;
   line-height: 1.999rem;
   vertical-align: baseline;
 }
 
-.node-type-donation .previous,
-.node-type-membership-page .previous,
-.node-type-fundraising-campaign .previous,
-.page-campaigns .previous {
+.has-dontation-form .previous {
   position: absolute;
   top: 0;
   left: 0;
@@ -12831,10 +12384,7 @@ html.js .js-hide {
   color: #bbb;
 }
 
-.node-type-donation .steps,
-.node-type-membership-page .steps,
-.node-type-fundraising-campaign .steps,
-.page-campaigns .steps {
+.has-dontation-form .steps {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -12844,10 +12394,7 @@ html.js .js-hide {
   background-color: #fff;
 }
 
-.node-type-donation .step,
-.node-type-membership-page .step,
-.node-type-fundraising-campaign .step,
-.page-campaigns .step {
+.has-dontation-form .step {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12869,10 +12416,7 @@ html.js .js-hide {
   text-align: center;
 }
 
-.node-type-donation .step.active,
-.node-type-membership-page .step.active,
-.node-type-fundraising-campaign .step.active,
-.page-campaigns .step.active {
+.has-dontation-form .step.active {
   background-color: #eee;
   color: black;
 }

@@ -65,16 +65,16 @@ function nkf_base_preprocess_page(&$vars) {
   $columns += !empty($vars['page']['sidebar_first'])? 1 : 0;
   $columns += !empty($vars['page']['sidebar_second'])? 1 : 0;
   $vars['columns'] = $columns;
- if (
+  if (
     !empty($vars['node'])
     && (
-      (isset($vars['node']->field_donation_type) && isset($vars['node']->field_donation_type[LANGUAGE_NONE][0]['value']))
+      (isset($vars['node']->field_donation_type) && isset($vars['node']->field_donation_type[LANGUAGE_NONE][0]['redhen_donation_type']))
       ||
-      (isset($vars['node']->field_membership_donation_type) && isset($vars['node']->field_membership_donation_type[LANGUAGE_NONE][0]['value']))
+      (isset($vars['node']->field_membership_donation_type) && isset($vars['node']->field_membership_donation_type[LANGUAGE_NONE][0]['redhen_donation_type']))
       )
     ) {
-      $page_classes[] = 'donation-form';
- }
+      $page_classes[] = 'has-donation-form';
+  }
 
   $vars['node_highlight'] = FALSE;
   $vars['node_highlight_text'] = '';
