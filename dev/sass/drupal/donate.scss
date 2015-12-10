@@ -203,11 +203,12 @@
   #edit-field-membership-term-und {//,
   //#edit-field-member-category-und {
     @include grid();
+    padding-bottom: space(lg);
     width: 100%;
     > * {
       @include grid-cell();
       width: 50%;
-      padding: space(xs);
+      padding: 0 space(sm) space(sm) 0;
     }
     input {
       @include hide();

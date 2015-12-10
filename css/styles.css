@@ -11989,6 +11989,8 @@ html.js .js-hide {
   *word-spacing: -0.43em;
   text-rendering: optimizespeed;
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  padding-bottom: 21px;
+  padding-bottom: 1.414rem;
   width: 100%;
 }
 
@@ -12004,8 +12006,8 @@ html.js .js-hide {
   *zoom: 1;
   *display: inline;
   width: 50%;
-  padding: 8px;
-  padding: 0.5rem;
+  padding: 0 11px 11px 0;
+  padding: 0 0.707rem 0.707rem 0;
 }
 
 .has-donation-form #edit-donation-select input,
