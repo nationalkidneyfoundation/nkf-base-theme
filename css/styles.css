@@ -12326,6 +12326,24 @@ html.js .js-hide {
   padding-top: 60px;
   padding-top: 3.998rem;
   text-align: center;
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+.has-donation-form .form-actions > * {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-align: left;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
 }
 
 .has-donation-form .form-actions .form-submit {

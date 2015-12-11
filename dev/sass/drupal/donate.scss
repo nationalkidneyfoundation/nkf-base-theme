@@ -375,6 +375,11 @@
   .form-actions {
     padding-top: space(xxxl);
     text-align: center;
+    @include grid();
+    > * {
+      @include grid-cell();
+      width: 50%;
+    }
     .form-submit {
       @extend .button--blue;
       width: 100%;
