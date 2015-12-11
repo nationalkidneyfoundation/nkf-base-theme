@@ -44,7 +44,7 @@
         <div class="background-size--cover <?php if ($background_image || $background_video): ?> min-height--xxl<?php endif;?>"
           <?php if ($background_image): ?> style="background-image: url('<?php print $background_image_uri; ?>')"<?php endif;?>>
           <?php if ($background_video) :?>
-            <video class="z-index--100 md--show width--100 height--auto cover-absolute" preload="auto" loop="loop" autoplay="autoplay">
+            <video class="z-index--100 md--show width--100 height--auto cover-absolute" preload="auto" loop="loop" autoplay="autoplay" muted="true">
               <?php if (!empty($background_video_mp4)): ?>
                 <source src="<?php print $background_video_mp4; ?>" type="video/mp4">
               <?php endif;?>
@@ -85,7 +85,7 @@
   <!-- MAIN -->
   <main class="main position--relative">
     <!-- BACKGROUND IMAGE -->
-    <?php if($background_image): ?>
+    <?php if($background_image && $node->type =='donation'): ?>
       <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
     <?php endif; ?>
 
