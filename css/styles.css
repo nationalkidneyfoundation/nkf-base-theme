@@ -11882,9 +11882,9 @@ html.js .js-hide {
   border-bottom-width: 0;
   font-size: 21px;
   font-size: 1.414rem;
-  padding: 0 0 15px 0;
-  padding: 0 0 1rem 0;
-  font-weight: bold;
+  padding: 0 0 21px 0;
+  padding: 0 0 1.414rem 0;
+  text-transform: uppercase;
 }
 
 .has-donation-form input[type=checkbox]:checked + label:before,
