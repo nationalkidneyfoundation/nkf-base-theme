@@ -83,7 +83,7 @@
 
 
   <!-- MAIN -->
-  <main class="main position--relative">
+  <main class="main position--relative z-index--100">
     <!-- BACKGROUND IMAGE -->
     <?php if($background_image && $node->type =='donation'): ?>
       <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
