@@ -120,7 +120,7 @@ function nkf_base_preprocess_page(&$vars) {
        $vars['node_highlight'] = TRUE;
   }
   if (!empty($vars['node'])
-     && isset($vars['node']->type =='donation')
+     && $vars['node']->type =='donation'
      && $vars['background_image']) {
        $vars['node_highlight'] = FALSE;
   }
