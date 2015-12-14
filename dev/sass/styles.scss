@@ -15,30 +15,7 @@
 @import "base/box-model";
 @import "base/image";
 
-// Classes
-// -------------------------
 
-@import "classes/background-position";
-@import "classes/background-size";
-@import "classes/border-style";
-@import "classes/clear";
-@import "classes/cursor";
-@import "classes/display";
-@import "classes/float";
-@import "classes/font-style";
-@import "classes/font-weight";
-@import "classes/height";
-@import "classes/list-style";
-@import "classes/opacity";
-@import "classes/overflow";
-@import "classes/position";
-@import "classes/text-align";
-@import "classes/text-decoration";
-@import "classes/text-overflow";
-@import "classes/text-transform";
-@import "classes/vertical-align";
-@import "classes/white-space";
-@import "classes/z-index";
 
 
 // Utilities
@@ -66,6 +43,30 @@
 @import "components/donut";
 @import "components/modal";
 
+// Classes
+// -------------------------
+
+@import "classes/background-position";
+@import "classes/background-size";
+@import "classes/border-style";
+@import "classes/clear";
+@import "classes/cursor";
+@import "classes/display";
+@import "classes/float";
+@import "classes/font-style";
+@import "classes/font-weight";
+@import "classes/height";
+@import "classes/list-style";
+@import "classes/opacity";
+@import "classes/overflow";
+@import "classes/position";
+@import "classes/text-align";
+@import "classes/text-decoration";
+@import "classes/text-overflow";
+@import "classes/text-transform";
+@import "classes/vertical-align";
+@import "classes/white-space";
+@import "classes/z-index";
 
 // Theme
 // -------------------------
