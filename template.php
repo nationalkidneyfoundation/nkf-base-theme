@@ -79,7 +79,7 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['node_highlight'] = FALSE;
   $vars['node_highlight_text'] = '';
   $vars['background_image'] = FALSE;
-  $vars['$background_video'] = FALSE;
+  $vars['background_video'] = FALSE;
   if (!empty($vars['node'])
      && isset($vars['node']->field_hero_image_background)
      && isset($vars['node']->field_hero_image_background[LANGUAGE_NONE][0]['uri'])) {
@@ -119,7 +119,11 @@ function nkf_base_preprocess_page(&$vars) {
        $vars['background_video'] = TRUE;
        $vars['node_highlight'] = TRUE;
   }
-
+  if (!empty($vars['node'])
+     && isset($vars['node']->type =='donation')
+     && $vars['background_image']) {
+       $vars['node_highlight'] = FALSE;
+  }
 
   if (!isset($_SESSION['nkf_base'])) {
     $_SESSION['nkf_base'] = array();
