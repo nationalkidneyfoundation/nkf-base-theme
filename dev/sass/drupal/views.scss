@@ -1,0 +1,7 @@
+.view.grid {
+  .view-header,
+  .view-filters,
+  .view-footer {
+    @include grid-cell();  
+  }  
+}
