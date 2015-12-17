@@ -298,32 +298,32 @@ html.js .no-js { display:none; }
 /*
 ** Progressbar styles
 */
-.progress { font-weight:bold; }
+.progress {  }
 
 .progress .bar {
-  background:#fff url(drupal/progress.gif);
-  border:1px solid #035;
-  height:18px;
+  background:#fff url(../img/progress.gif);
+  border:none;
+  height:5px;
   }
 
 .progress .filled {
   background:#07b;
-  height:18px;
+  height:5px;
   width:0%;
   }
 
-.progress .percentage { float:right; }
-.progress-disabled { float:left; }
-.ajax-progress { float:left; }
+.progress .percentage {  }
+.progress-disabled {  }
+.ajax-progress {  }
 
 .ajax-progress .throbber {
   width:20px;
   height:20px;
-  background:transparent url(drupal/throbber.gif) 50% 50% no-repeat;
+  background:transparent url(../img/throbber.gif) 50% 50% no-repeat;
   float:left;
   }
 
-.ajax-progress-bar { width:16em; }
+.ajax-progress-bar { width:100%; }
 
 /**
  * Formatting for welcome page

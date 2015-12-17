@@ -11265,43 +11265,27 @@ html.js .no-js {
 ** Progressbar styles
 */
 
-.progress {
-  font-weight: bold;
-}
-
 .progress .bar {
-  background: #fff url(drupal/progress.gif);
-  border: 1px solid #035;
-  height: 18px;
+  background: #fff url(../img/progress.gif);
+  border: none;
+  height: 5px;
 }
 
 .progress .filled {
   background: #07b;
-  height: 18px;
+  height: 5px;
   width: 0%;
-}
-
-.progress .percentage {
-  float: right;
-}
-
-.progress-disabled {
-  float: left;
-}
-
-.ajax-progress {
-  float: left;
 }
 
 .ajax-progress .throbber {
   width: 20px;
   height: 20px;
-  background: transparent url(drupal/throbber.gif) 50% 50% no-repeat;
+  background: transparent url(../img/throbber.gif) 50% 50% no-repeat;
   float: left;
 }
 
 .ajax-progress-bar {
-  width: 16em;
+  width: 100%;
 }
 
 /**
@@ -11565,8 +11549,58 @@ html.js .js-hide {
   margin-bottom: 0.354rem;
 }
 
-.form-type-radio label:before {
+.form-type-radio label::before {
   border-radius: 50%;
+}
+
+.radio--button .form-type-radio label {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: normal;
+  padding: 8px 15px;
+  padding: 0.5rem 1rem;
+  height: auto;
+  border-width: 1px;
+  border-style: solid;
+  vertical-align: middle;
+  border-radius: 4px;
+  border-radius: 0.25rem;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 400;
+  z-index: 2;
+  line-height: normal;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-appearance: none;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.radio--button .form-type-radio label:before,
+.radio--button .form-type-radio label:after {
+  box-sizing: border-box;
+}
+
+.radio--button .form-type-radio label:focus {
+  outline: 0;
+}
+
+.radio--button .form-type-radio label:hover {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.radio--button .form-type-radio label:disabled {
+  opacity: .5;
+}
+
+.radio--button .form-type-radio label::before {
+  display: none !important;
 }
 
 .nav .menu {
@@ -12562,4 +12596,21 @@ html.js .js-hide {
   .node-type-membership-page #edit-name {
     width: 80%;
   }
+}
+
+.view.grid .view-header,
+.view.list--grid .view-header,
+.view.grid .view-filters,
+.view.list--grid .view-filters,
+.view.grid .view-footer,
+.view.list--grid .view-footer {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-align: left;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
 }
