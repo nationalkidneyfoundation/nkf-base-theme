@@ -11887,6 +11887,15 @@ html.js .js-hide {
   width: 100%;
   padding: 8px;
   padding: 0.5rem;
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-align: left;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
 }
 
 .has-donation-form .form-item .form-item {
