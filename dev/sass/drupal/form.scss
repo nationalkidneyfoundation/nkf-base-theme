@@ -3,7 +3,6 @@ fieldset {
   margin: 0;
   padding: space(md);
   border: solid $gray-2 border-width(xs);
-  padding: space(sm) 0;
   .collapsed {
     padding: 0 space(md);
     border-width: 1px 0 0 0;

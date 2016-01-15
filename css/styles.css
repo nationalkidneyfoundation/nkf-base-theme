@@ -11459,8 +11459,6 @@ fieldset {
   padding: 15px;
   padding: 1rem;
   border: solid #ccc 1px;
-  padding: 11px 0;
-  padding: 0.707rem 0;
 }
 
 fieldset .collapsed {
@@ -12325,6 +12323,23 @@ legend {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
+}
+
+.has-donation-form .form-item-payment-details-credit-card-type {
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-align: left;
+  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
+}
+
+.has-donation-form .form-item-payment-details-credit-card-type select {
+  width: 100%;
 }
 
 .has-donation-form .commerce-credit-card-expiration {

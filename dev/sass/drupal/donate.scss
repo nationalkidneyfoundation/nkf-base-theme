@@ -344,6 +344,13 @@
     width: 100%;
     @include grid-cell();
   }
+  .form-item-payment-details-credit-card-type{
+    width: 100%;
+    @include grid-cell();
+    select {
+      width: 100%;
+    }
+  }
   .commerce-credit-card-expiration {
     @include grid-cell();
     width: 60%;
