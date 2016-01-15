@@ -112,6 +112,8 @@
   }
   fieldset {
     padding: 0;
+    border: none;
+    text-align: center;
   }
   legend {
     @include grid-cell();

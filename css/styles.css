@@ -11916,6 +11916,8 @@ legend {
 
 .has-donation-form fieldset {
   padding: 0;
+  border: none;
+  text-align: center;
 }
 
 .has-donation-form legend {
