@@ -52,16 +52,3 @@ select:not([multiple]) {
   padding: 0;
   height: base-scale(4);
 }
-
-fieldset {
-  margin: none;
-  padding: space(md);
-  border-width: 0;
-}
-legend {
-  display: block;
-  width: width(100);
-  padding-top: space(md);
-  padding-bottom: space(md);
-  border-bottom: solid border-width(xs) $gray-2;
-;}

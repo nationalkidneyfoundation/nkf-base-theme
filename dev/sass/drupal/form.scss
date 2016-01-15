@@ -1,11 +1,27 @@
 
+fieldset {
+  margin: 0;
+  padding: space(md);
+  border: solid $gray-2 border-width(xs);
+  padding: space(sm) 0;
+  .collapsed {
+    padding: 0 space(md);
+    border-width: 1px 0 0 0;
+  }
+}
+legend {
+  display: block;
+  width: width(100);
+  padding: space(sm);
+}
+
 .form-item,
 .form-actions {
   @extend .padding-y--sm;
 }
 
 .form-item .description {
-  @extend .color--gray-3;
+  color: $gray-3;
 }
 
 .form-type-checkbox,

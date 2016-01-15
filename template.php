@@ -40,6 +40,12 @@ function nkf_base_css_alter(&$css) {
  */
 function nkf_base_preprocess_page(&$vars) {
   $page_classes = array('page');
+  // lets see if we are on a professionals page and add classes
+  $alias = drupal_get_path_alias();
+  if (strpos($alias, 'professionals/membership') !== false) {
+    $page_classes[] = 'page-professionals';
+    $page_classes[] = 'page-professionals-membership';
+  }
   // add magnific popup
   $magnificpath = libraries_get_path('magnific_popup');
   drupal_add_js($magnificpath . '/dist/jquery.magnific-popup.js');

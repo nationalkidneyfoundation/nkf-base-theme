@@ -1612,22 +1612,6 @@ select:not([multiple]) {
   height: 2.827rem;
 }
 
-fieldset {
-  margin: none;
-  padding: 15px;
-  padding: 1rem;
-  border-width: 0;
-}
-
-legend {
-  display: block;
-  padding-top: 15px;
-  padding-top: 1rem;
-  padding-bottom: 15px;
-  padding-bottom: 1rem;
-  border-bottom: solid 1px #ccc;
-}
-
 .grid,
 .list--grid {
   letter-spacing: -0.31em;
@@ -3771,8 +3755,7 @@ a:hover {
   color: #ccc;
 }
 
-.color--gray-3,
-.form-item .description {
+.color--gray-3 {
   color: #bbb;
 }
 
@@ -11469,6 +11452,31 @@ html.js .js-hide {
   #logo::before {
     content: url("../img/NKF-logoR_Hori_OB.png");
   }
+}
+
+fieldset {
+  margin: 0;
+  padding: 15px;
+  padding: 1rem;
+  border: solid #ccc 1px;
+  padding: 11px 0;
+  padding: 0.707rem 0;
+}
+
+fieldset .collapsed {
+  padding: 0 15px;
+  padding: 0 1rem;
+  border-width: 1px 0 0 0;
+}
+
+legend {
+  display: block;
+  padding: 11px;
+  padding: 0.707rem;
+}
+
+.form-item .description {
+  color: #bbb;
 }
 
 .form-type-checkbox,
