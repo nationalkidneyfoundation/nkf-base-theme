@@ -43,6 +43,8 @@ $font-sizes: (
   , 'xl': base-scale(3)
   , 'xxl': base-scale(4)
   , 'xxxl': base-scale(5)
+  , 'xxxxl': base-scale(6)
+  , 'xxxxxl': base-scale(7)
 ) !default;
 
 @function font-size($x){

@@ -9838,6 +9838,16 @@ p {
   font-size: 3.998rem;
 }
 
+.font-size--xxxxl {
+  font-size: 85px;
+  font-size: 5.653rem;
+}
+
+.font-size--xxxxxl {
+  font-size: 120px;
+  font-size: 7.993rem;
+}
+
 @media (min-width: 20em) {
   .xs--font-size--xs {
     font-size: 8px;
@@ -9872,6 +9882,16 @@ p {
   .xs--font-size--xxxl {
     font-size: 60px;
     font-size: 3.998rem;
+  }
+
+  .xs--font-size--xxxxl {
+    font-size: 85px;
+    font-size: 5.653rem;
+  }
+
+  .xs--font-size--xxxxxl {
+    font-size: 120px;
+    font-size: 7.993rem;
   }
 }
 
@@ -9910,6 +9930,16 @@ p {
     font-size: 60px;
     font-size: 3.998rem;
   }
+
+  .sm--font-size--xxxxl {
+    font-size: 85px;
+    font-size: 5.653rem;
+  }
+
+  .sm--font-size--xxxxxl {
+    font-size: 120px;
+    font-size: 7.993rem;
+  }
 }
 
 @media (min-width: 52em) {
@@ -9946,6 +9976,16 @@ p {
   .md--font-size--xxxl {
     font-size: 60px;
     font-size: 3.998rem;
+  }
+
+  .md--font-size--xxxxl {
+    font-size: 85px;
+    font-size: 5.653rem;
+  }
+
+  .md--font-size--xxxxxl {
+    font-size: 120px;
+    font-size: 7.993rem;
   }
 }
 
@@ -9984,6 +10024,16 @@ p {
     font-size: 60px;
     font-size: 3.998rem;
   }
+
+  .lg--font-size--xxxxl {
+    font-size: 85px;
+    font-size: 5.653rem;
+  }
+
+  .lg--font-size--xxxxxl {
+    font-size: 120px;
+    font-size: 7.993rem;
+  }
 }
 
 @media (min-width: 75em) {
@@ -10020,6 +10070,16 @@ p {
   .xl--font-size--xxxl {
     font-size: 60px;
     font-size: 3.998rem;
+  }
+
+  .xl--font-size--xxxxl {
+    font-size: 85px;
+    font-size: 5.653rem;
+  }
+
+  .xl--font-size--xxxxxl {
+    font-size: 120px;
+    font-size: 7.993rem;
   }
 }
 
