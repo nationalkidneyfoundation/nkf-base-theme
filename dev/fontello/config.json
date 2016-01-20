@@ -31,6 +31,24 @@
       "src": "fontawesome"
     },
     {
+      "uid": "c1f1975c885aa9f3dad7810c53b82074",
+      "css": "lock",
+      "code": 59411,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "657ab647f6248a6b57a5b893beaf35a9",
+      "css": "lock-open",
+      "code": 59412,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "d35a1d35efeb784d1dc9ac18b9b6c2b6",
+      "css": "pencil",
+      "code": 59409,
+      "src": "fontawesome"
+    },
+    {
       "uid": "00391fac5d419345ffcccd95b6f76263",
       "css": "attention",
       "code": 59405,
@@ -52,6 +70,12 @@
       "uid": "559647a6f430b3aeadbecd67194451dd",
       "css": "menu",
       "code": 59404,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "98687378abd1faf8f6af97c254eb6cd6",
+      "css": "gear",
+      "code": 59410,
       "src": "fontawesome"
     },
     {
