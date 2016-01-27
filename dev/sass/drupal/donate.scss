@@ -251,7 +251,8 @@
   .field-name-field-phone,
   .field-name-field-company-name,
   .field-name-field-professional-credentials,
-  .field-name-field-prefix {
+  .field-name-field-prefix,
+  .field-name-field-professional-category {
     @include grid-cell();
     @include when(sm) { width: 50%; }
   }
@@ -277,7 +278,6 @@
   }
   [class*="-premise"]{
     width: 100%;
-    @include when(sm) { width: 25%; }
   }
   .locality-block {
     @include grid();

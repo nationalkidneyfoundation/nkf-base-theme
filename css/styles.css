@@ -12194,7 +12194,8 @@ legend {
 .has-donation-form .field-name-field-phone,
 .has-donation-form .field-name-field-company-name,
 .has-donation-form .field-name-field-professional-credentials,
-.has-donation-form .field-name-field-prefix {
+.has-donation-form .field-name-field-prefix,
+.has-donation-form .field-name-field-professional-category {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12213,7 +12214,8 @@ legend {
   .has-donation-form .field-name-field-phone,
   .has-donation-form .field-name-field-company-name,
   .has-donation-form .field-name-field-professional-credentials,
-  .has-donation-form .field-name-field-prefix {
+  .has-donation-form .field-name-field-prefix,
+  .has-donation-form .field-name-field-professional-category {
     width: 50%;
   }
 }
@@ -12264,12 +12266,6 @@ legend {
 
 .has-donation-form [class*="-premise"] {
   width: 100%;
-}
-
-@media (min-width: 40em) {
-  .has-donation-form [class*="-premise"] {
-    width: 25%;
-  }
 }
 
 .has-donation-form .locality-block {
