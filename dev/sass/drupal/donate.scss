@@ -94,7 +94,8 @@
   }
 
   // reset basic form elements
-  .form-text {
+  .form-text,
+  select {
     width: 100%;
   }
 

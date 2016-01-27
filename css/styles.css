@@ -11969,7 +11969,8 @@ legend {
   white-space: nowrap;
 }
 
-.has-donation-form .form-text {
+.has-donation-form .form-text,
+.has-donation-form select {
   width: 100%;
 }
 
