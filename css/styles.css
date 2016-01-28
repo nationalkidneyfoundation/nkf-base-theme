@@ -12167,6 +12167,10 @@ legend {
   border-color: #777;
 }
 
+.has-donation-form .one-term #edit-field-membership-term-und > * {
+  width: 100%;
+}
+
 @media (min-width: 40em) {
   .has-donation-form .form-item-donation-other {
     width: 50%;

@@ -233,6 +233,9 @@
 
     }
   }
+  .one-term #edit-field-membership-term-und > * {
+    width: 100%;
+  }
   .form-item-donation-other {
     @include when(sm) { width: 50%; }
 
