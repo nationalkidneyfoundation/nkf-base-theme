@@ -258,6 +258,7 @@
   .field-name-field-prefix,
   .field-name-field-professional-category {
     @include grid-cell();
+    width: 100%;
     @include when(sm) { width: 50%; }
   }
   .field-type-mailchimp-lists-subscription {

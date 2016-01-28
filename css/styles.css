@@ -12210,6 +12210,7 @@ legend {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
+  width: 100%;
 }
 
 @media (min-width: 40em) {
