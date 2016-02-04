@@ -4,7 +4,7 @@
     //@include grid();
     margin: 0;
     @include when(sm) { padding: 0; }
-    padding: space(xxl) space(md) space(md);
+    padding: space(xxxl) space(md) space(md);
     @include when(sm) { display: table-row; }
     @include when(sm) { position: static; }
     position: fixed;
@@ -14,7 +14,7 @@
     left: 0;
     float: right;
     list-style: none;
-    z-index: 2;
+    z-index: 1000;
     @include when(sm) { background-color: transparent; }
     background-color: color(orange);
   }
@@ -40,7 +40,7 @@
   top: 0;
   right: 0;
   padding: space(lg) space(md) space(md) space(md);
-  z-index: 3;
+  z-index: 1001;
   font-size: font-size(xl);
 }
 .nav--primary {

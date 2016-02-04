@@ -11693,8 +11693,8 @@ legend {
 
 .nav .menu {
   margin: 0;
-  padding: 42px 15px 15px;
-  padding: 2.827rem 1rem 1rem;
+  padding: 60px 15px 15px;
+  padding: 3.998rem 1rem 1rem;
   position: fixed;
   top: 0;
   right: 0;
@@ -11702,7 +11702,7 @@ legend {
   left: 0;
   float: right;
   list-style: none;
-  z-index: 2;
+  z-index: 1000;
   background-color: #F15E22;
 }
 
@@ -11758,7 +11758,7 @@ legend {
   right: 0;
   padding: 21px 15px 15px 15px;
   padding: 1.414rem 1rem 1rem 1rem;
-  z-index: 3;
+  z-index: 1001;
   font-size: 30px;
   font-size: 1.999rem;
 }
