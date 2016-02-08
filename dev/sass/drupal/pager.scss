@@ -1,0 +1,10 @@
+.pager {
+  @include grid();
+  text-align: center;
+  > li {
+    @include grid-cell();
+    > * {
+      padding: space(md);
+    }
+  }
+}
