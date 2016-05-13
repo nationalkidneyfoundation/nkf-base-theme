@@ -1,4 +1,9 @@
-// Augmented fourth scale
+
+
+// The scale variable is used in a variety  of
+// of fuctions to establish consistent sizes for
+// font sizes, heights, etc.
+// Currently this is based on an ugmented fourth scale.
 $scale: (
     -4: 0.25rem
   , -3: 0.354rem
@@ -22,6 +27,7 @@ $scale: (
   , 16: 180.61rem
 ) !default;
 
+// Function that returns a value from the $scale array.
 @function base-scale($x){
   @return map-get($scale, $x);
 }
