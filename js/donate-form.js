@@ -222,9 +222,9 @@
           // add buttons for textfield style donations
           // TODO make this configurable through the UI
           var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
-          var amountOptionsArray = [[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other'];
+          var amountOptionsArray = [[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']];
           if(window.location.href.toLowerCase().indexOf("localboardchallenge") != -1) {
-             amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [2500, '$2,500'], [5000, '$5,000'], [0, 'Other'];
+             amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [2500, '$2,500'], [5000, '$5,000'], [0, 'Other']];
           }
           $.each(amountOptionsArray, function(i, v) {
             var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
