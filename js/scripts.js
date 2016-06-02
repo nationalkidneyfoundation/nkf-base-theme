@@ -43,6 +43,19 @@
         this.addClass(animationClass);
         return this;
       };
+      // general print utility
+      $('.discount__apply').once().click(function(){
+        //$(this).prop('value', '')
+        $(this).html('<i class="icon-smile display--inline-block animate--spin"></i>');
+        $('.discount__apply-alt').trigger('change');
+        return false;
+      });
+      // general print utility
+      $('.discount__reset').once().click(function(){
+        $('.field-name-field-membership-discount-code input').attr('value', '');
+        $('.discount__apply-alt').trigger('change');
+        return false;
+      });
     }
 
   };
