@@ -27,6 +27,25 @@
         return false;
       });
 
+      // Scrolling utility with three scroll by points.
+      $(document).scroll(function(){
+        var scrollTop = $(this).scrollTop();
+        if (scrollTop > 400) {
+          $('.js--scroll--400, .js--scroll--300, .js--scroll--200').not('.js--scrolled')
+            .addClass('js--scrolled').toggleClass('hide');
+        } else if (scrollTop > 300) {
+          $('.js--scroll--300, .js--scroll--200').not('.js--scrolled')
+            .addClass('js--scrolled').toggleClass('hide');
+        } else if (scrollTop > 200) {
+          $('.js--scroll--200').not('.js--scrolled')
+            .addClass('js--scrolled').toggleClass('hide');
+        } else {
+          $('.js--scrolled')
+            .removeClass('js--scrolled').toggleClass('hide');
+        }
+      });
+
+      // animation utilities
       $.fn.animationEnd = function(callback) {
         this.on("animationend webkitAnimationEnd mozAnimationEnd MSAnimationEnd oAnimationEnd", function() {
           callback.call(this);
@@ -43,14 +62,14 @@
         this.addClass(animationClass);
         return this;
       };
-      // general print utility
+      //
       $('.discount__apply').once().click(function(){
         //$(this).prop('value', '')
         $(this).html('<i class="icon-smile display--inline-block animate--spin"></i>');
         $('.discount__apply-alt').trigger('change');
         return false;
       });
-      // general print utility
+      //
       $('.discount__reset').once().click(function(){
         $('.field-name-field-membership-discount-code input').attr('value', '');
         $('.discount__apply-alt').trigger('change');

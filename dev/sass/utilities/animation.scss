@@ -48,13 +48,7 @@
   95%  { transform: translate3d(3px, 0, 0);  }
   100% { transform: translate3d(0, 0, 0); }
 }
-/*
-@keyframes slide-in-right {
-  0%   { right: -100%; }
-  75%  { right: 5%; }
-  95%  { right: 3%; }
-  100% { right: 0; }
-}*/
+
 .animate--slide-in-right  {
   animation-name: slide-in-right;
   position: relative;
@@ -68,6 +62,17 @@
 .animate--slide-out-left  {
   animation-name: slide-out-left;
 }
+
+@keyframes slide-in-down {
+  0%   { transform: translate3d(0, 0, 0); }
+  75%  { transform: translate3d(0, 5%, 0);  }
+  95%  { transform: translate3d(0, 10%, 0);  }
+  100% { transform: translate3d(0, 100%, 0); }
+}
+.animate--slide-in-down  {
+  animation-name: slide-in-down;
+}
+
 @keyframes giggle {
   0%   { transform: translate3d(-2px, 0, 0); }
   25%  { transform: translate3d(2px, 0, 0); }
@@ -109,6 +114,6 @@
   50%  { transform: scale(1.01, 1.01); }
   100%  { transform: scale(1, 1); }
 }
-.animate--subtle-focus{
+.animate--subtle-focus {
   animation-name: subtle-focus;
 }
