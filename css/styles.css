@@ -968,6 +968,8 @@ input[type="submit"],
 .button--gray-4,
 .button--gray-5,
 .button--black,
+.button--twitter,
+.button--facebook,
 .button--outline--orange,
 .button--outline--blue,
 .button--outline--navy,
@@ -1049,6 +1051,8 @@ input[type="submit"]:after,
 .button--gray-4:before,
 .button--gray-5:before,
 .button--black:before,
+.button--twitter:before,
+.button--facebook:before,
 .button--outline--orange:before,
 .button--outline--blue:before,
 .button--outline--navy:before,
@@ -1101,6 +1105,8 @@ input[type="submit"]:after,
 .button--gray-4:after,
 .button--gray-5:after,
 .button--black:after,
+.button--twitter:after,
+.button--facebook:after,
 .button--outline--orange:after,
 .button--outline--blue:after,
 .button--outline--navy:after,
@@ -1158,6 +1164,8 @@ input[type="submit"]:focus,
 .button--gray-4:focus,
 .button--gray-5:focus,
 .button--black:focus,
+.button--twitter:focus,
+.button--facebook:focus,
 .button--outline--orange:focus,
 .button--outline--blue:focus,
 .button--outline--navy:focus,
@@ -1215,6 +1223,8 @@ input[type="submit"]:hover,
 .button--gray-4:hover,
 .button--gray-5:hover,
 .button--black:hover,
+.button--twitter:hover,
+.button--facebook:hover,
 .button--outline--orange:hover,
 .button--outline--blue:hover,
 .button--outline--navy:hover,
@@ -1273,6 +1283,8 @@ input[type="submit"]:disabled,
 .button--gray-4:disabled,
 .button--gray-5:disabled,
 .button--black:disabled,
+.button--twitter:disabled,
+.button--facebook:disabled,
 .button--outline--orange:disabled,
 .button--outline--blue:disabled,
 .button--outline--navy:disabled,
@@ -4539,6 +4551,40 @@ a:hover {
 .button--black.active {
   color: #fff;
   background-color: #000;
+}
+
+.button--twitter {
+  background-color: #4099FF;
+  border-color: #4099FF;
+  color: #fff;
+}
+
+.button--twitter:visited {
+  color: #fff;
+}
+
+.button--twitter:hover,
+.button--twitter:active,
+.button--twitter.active {
+  color: #fff;
+  background-color: #4099FF;
+}
+
+.button--facebook {
+  background-color: #3b5998;
+  border-color: #3b5998;
+  color: #fff;
+}
+
+.button--facebook:visited {
+  color: #fff;
+}
+
+.button--facebook:hover,
+.button--facebook:active,
+.button--facebook.active {
+  color: #fff;
+  background-color: #3b5998;
 }
 
 .button--outline--orange {

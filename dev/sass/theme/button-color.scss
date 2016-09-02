@@ -123,6 +123,36 @@
       background-color: $black;
     }
   }
+  &--twitter   {
+    @extend .button;
+    background-color: $twitter;
+    border-color: $twitter;
+    color: $white;
+    &:visited {
+      color: $white;
+    }
+    &:hover,
+    &:active,
+    &.active {
+      color: $white;
+      background-color: $twitter;
+    }
+  }
+  &--facebook   {
+    @extend .button;
+    background-color: $facebook;
+    border-color: $facebook;
+    color: $white;
+    &:visited {
+      color: $white;
+    }
+    &:hover,
+    &:active,
+    &.active {
+      color: $white;
+      background-color: $facebook;
+    }
+  }
 }
 
 @each $name, $color in $colors {
