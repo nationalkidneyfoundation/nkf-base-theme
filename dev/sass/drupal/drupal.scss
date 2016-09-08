@@ -63,27 +63,27 @@ html.js #user-login li.openid-link { display:block; }
 
 .password-strength,
 .password-confirm {
-  @extend .padding-top--sm;
+  padding-top: space(sm);
   width: 220px;
 }
 .password-strength-text {
-  @extend .float--right;
+  float: right;
 }
 .password-strength-title {
-  @extend .display--inline;
+  display: inline;
 }
 .password-indicator {
-  @extend .background-color--gray-2;
+  background-color: $gray-2;
   height: 5px;
   width: 100%;
 }
 .password-indicator div {
-  @extend .background-color--green;
+  background-color: color(green);
   height: 100%;
   width: 0%;
 }
 .password-suggestions {
-  @extend .hide;
+  @include hide();
 }
 
 /**
@@ -130,12 +130,12 @@ thead th { text-align:auto; }
 .ok { border:none; }//1px solid #00aa00; }
 
 .error {
-  @extend .color--red;
+  color: color(red);
   //background-color: transparent;//#fcc;
   }
 
 .warning {
-  @extend .color--black;
+   color: $black;
   //background-color: transparent;//#ffd;
   }
 
@@ -171,7 +171,7 @@ thead th { text-align:auto; }
 //.form-required { color:#f00; }
 .marker,
 .form-required {
-  @extend .color--red;
+  color: color(red);
 }
 
 .more-link,

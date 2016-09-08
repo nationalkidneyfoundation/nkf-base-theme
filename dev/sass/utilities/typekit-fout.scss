@@ -24,5 +24,5 @@
 .wf-loading input,
 .wf-loading textarea,
 .wf-loading label {
-  @extend .invisible;
+  @include invisible();
 }

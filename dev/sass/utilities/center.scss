@@ -13,8 +13,7 @@
 
 .center,
 .center--x {
-  margin-left: auto;
-  margin-right: auto;
+  @include center();
 }
 
 .center--y {
@@ -24,6 +23,5 @@
 }
 
 .centered {
-  @extend .center--x;
-  @extend .center--y;
+  @include centered();
 }

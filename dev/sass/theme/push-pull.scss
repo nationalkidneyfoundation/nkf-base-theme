@@ -1,11 +1,11 @@
 
 @each $name, $perc in $widths {
   .push--#{$name} {
-    @extend .position--relative;
+    position: relative;
     left: #{$perc};
   }
   .pull--#{$name} {
-    @extend .position--relative;
+    position: relative;
     left: -#{$perc};
   }
 }
@@ -14,11 +14,11 @@
   @media #{$bp-value} {
     @each $name, $perc in $widths {
       .#{$bp}--push--#{$name} {
-        @extend .position--relative;
+        position: relative;
         left: #{$perc};
       }
       .#{$bp}--pull--#{$name} {
-        @extend .position--relative;
+        position: relative;
         left: -#{$perc};
       }
     }

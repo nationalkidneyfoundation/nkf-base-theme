@@ -6,7 +6,7 @@
   height: 100px;
   position: relative;
   > * {
-      @extend .centered;
+      @include centered();
       //position: absolute;
       background-color: white;
       border: 1px solid white;

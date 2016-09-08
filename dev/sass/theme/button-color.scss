@@ -1,6 +1,6 @@
 @each $name, $color in $colors {
   .button--#{$name} {
-    @extend .button;
+    @include button();
     //border-color: lighten($color, 30%);
     //background-color: lighten($color, 30%);
     border-color: $color;
@@ -22,7 +22,7 @@
 
 .button {
   &--white   {
-    @extend .button;
+    @include button();
     background-color: $white;
     color: $gray-5;
     border-color: $white;
@@ -37,7 +37,7 @@
     }
   }
   &--gray-1  {
-    @extend .button;
+    @include button();
     background-color: $gray-1;
     border-color: $gray-1;
     color: $black;
@@ -52,7 +52,7 @@
     }
   }
   &--gray-2  {
-    @extend .button;
+    @include button();
     background-color: $gray-2;
     border-color: $gray-2;
     color: $black;
@@ -67,7 +67,7 @@
     }
   }
   &--gray-3  {
-    @extend .button;
+    @include button();
     background-color: $gray-3;
     border-color: $gray-3;
     color: $black;
@@ -82,7 +82,7 @@
     }
   }
   &--gray-4  {
-    @extend .button;
+    @include button();
     background-color: $gray-4;
     border-color: $gray-4;
     color: $black;
@@ -97,7 +97,7 @@
     }
   }
   &--gray-5  {
-    @extend .button;
+    @include button();
     border-color: $gray-5;
     color: $white;
     &:visited {
@@ -109,7 +109,7 @@
     }
   }
   &--black   {
-    @extend .button;
+    @include button();
     background-color: $gray-5;
     border-color: $gray-5;
     color: $white;
@@ -124,7 +124,7 @@
     }
   }
   &--twitter   {
-    @extend .button;
+    @include button();
     background-color: $twitter;
     border-color: $twitter;
     color: $white;
@@ -139,7 +139,7 @@
     }
   }
   &--facebook   {
-    @extend .button;
+    @include button();
     background-color: $facebook;
     border-color: $facebook;
     color: $white;
@@ -154,7 +154,7 @@
     }
   }
   &--instagram   {
-    @extend .button;
+    @include button();
     background-color: $instagram;
     border-color: $instagram;
     color: $white;
@@ -172,7 +172,7 @@
 
 @each $name, $color in $colors {
   .button--outline--#{$name} {
-    @extend .button;
+    @include button();
     @extend .color--#{$name};
     //@extend .border-color--#{$name};
     @extend .position--relative;
@@ -202,7 +202,7 @@
 }
 @each $name, $color in $colors {
   .button--#{$name}--light {
-    @extend .button;
+    @include button();
     border-color: lighten($color, 30%);
     background-color: lighten($color, 30%);
     //border-color: $color;
@@ -224,37 +224,37 @@
 
 .button {
   &--outline--white   {
-    @extend .button;
+    @include button();
     background-color:$white;
     background-color: transparent;
   }
   &--outline--gray-1  {
-    @extend .button;
+    @include button();
     background-color: $gray-1;
     background-color: transparent;
   }
   &--outline--gray-2  {
-    @extend .button;
+    @include button();
     background-color: $gray-2;
     background-color: transparent;
   }
   &--outline--gray-3  {
-    @extend .button;
+    @include button();
     background-color: $gray-3;
     background-color: transparent;
   }
   &--outline--gray-4  {
-    @extend .button;
+    @include button();
     background-color: $gray-4;
     background-color: transparent;
   }
   &--outline--gray-5  {
-    @extend .button;
+    @include button();
     background-color: $gray-5;
     background-color: transparent;
   }
   &--outline--black   {
-    @extend .button;
+    @include button();
     background-color: $black;
     background-color: transparent;
   }

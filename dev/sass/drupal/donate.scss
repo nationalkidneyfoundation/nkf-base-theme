@@ -219,7 +219,7 @@
       @include hide();
     }
     label {
-      @extend .button;
+      @include button();;
       //padding: space(md);
       width: 100%;
       border-color: $gray-2;// !important;

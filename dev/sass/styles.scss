@@ -16,7 +16,16 @@
 @import "base/image";
 
 
+// Components
+// -------------------------
 
+@import "components/button";
+@import "components/form";
+@import "components/grid";
+@import "components/tabs";
+@import "components/background-hero";
+//@import "components/donut";
+@import "components/modal";
 
 // Utilities
 // -------------------------
@@ -32,16 +41,7 @@
 @import "utilities/animation";
 
 
-// Components
-// -------------------------
 
-@import "components/button";
-@import "components/form";
-@import "components/grid";
-@import "components/tabs";
-@import "components/background-hero";
-@import "components/donut";
-@import "components/modal";
 
 // Classes
 // -------------------------

@@ -16,7 +16,8 @@ legend {
 
 .form-item,
 .form-actions {
-  @extend .padding-y--sm;
+  padding-top: space(sm);
+  padding-bottom: space(sm);
 }
 
 .form-item .description {

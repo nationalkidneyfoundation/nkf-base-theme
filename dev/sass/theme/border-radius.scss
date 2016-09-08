@@ -6,8 +6,8 @@
   &--100 { border-radius: 100%; }
 }
 .rounded {
-  @extend .border-radius--md;
+  border-radius: border-width(md);
 }
 .circle {
-  @extend .border-radius--100;
+  border-radius: 100%;
 }

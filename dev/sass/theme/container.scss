@@ -1,7 +1,7 @@
 
 @each $name, $value in $containers {
   .container--#{$name} {
-    @extend .center;
+    @include center();
     max-width: #{$value};
   }
 }
@@ -12,7 +12,7 @@
   @media #{$bp-value} {
     @each $name, $value in $containers {
       .#{$bp}--container--#{$name} {
-        @extend .center;
+        @include center();
         max-width: #{$value};
       }
     }

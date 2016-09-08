@@ -134,11 +134,11 @@
     @extend .button--white;
     padding: space(md);
     &::before {
-      @extend .button--outline--white::before;
+      //@extend .button--outline--white::before;
     }
     &:hover::before,
     &:focus::before {
-      @extend .button--outline--white:hover::before;
+      //@extend .button--outline--white:hover::before;
     }
     //@extend .background-color--white;
   }

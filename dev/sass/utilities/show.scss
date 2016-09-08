@@ -11,7 +11,7 @@
 
 @each $bp, $bp-value in $breakpoints {
   .#{$bp}--show {
-    @extend .hide;
+    @include hide();
   }
   @media #{$bp-value} {
     .#{$bp}--show {
