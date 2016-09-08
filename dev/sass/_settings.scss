@@ -89,6 +89,7 @@ $black: #000 !default;
 
 $twitter: #4099FF !default;
 $facebook: #3b5998 !default;
+$instagram: #e95950 !default;
 
 @function color($x){
   @return map-get($colors, $x);

@@ -153,6 +153,21 @@
       background-color: $facebook;
     }
   }
+  &--instagram   {
+    @extend .button;
+    background-color: $instagram;
+    border-color: $instagram;
+    color: $white;
+    &:visited {
+      color: $white;
+    }
+    &:hover,
+    &:active,
+    &.active {
+      color: $white;
+      background-color: $instagram;
+    }
+  }
 }
 
 @each $name, $color in $colors {
