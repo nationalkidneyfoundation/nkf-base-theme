@@ -10729,6 +10729,10 @@ th {
   width: 100%;
 }
 
+.width--auto {
+  width: auto;
+}
+
 .width--xxxs {
   width: 8px;
   width: 0.5rem;
@@ -10866,6 +10870,10 @@ th {
   .xs--width--100 {
     width: 100%;
   }
+
+  .xs--width--auto {
+    width: auto;
+  }
 }
 
 @media (min-width: 40em) {
@@ -10959,6 +10967,10 @@ th {
 
   .sm--width--100 {
     width: 100%;
+  }
+
+  .sm--width--auto {
+    width: auto;
   }
 }
 
@@ -11054,6 +11066,10 @@ th {
   .md--width--100 {
     width: 100%;
   }
+
+  .md--width--auto {
+    width: auto;
+  }
 }
 
 @media (min-width: 64em) {
@@ -11148,6 +11164,10 @@ th {
   .lg--width--100 {
     width: 100%;
   }
+
+  .lg--width--auto {
+    width: auto;
+  }
 }
 
 @media (min-width: 75em) {
@@ -11241,6 +11261,10 @@ th {
 
   .xl--width--100 {
     width: 100%;
+  }
+
+  .xl--width--auto {
+    width: auto;
   }
 }
 
