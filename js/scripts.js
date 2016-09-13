@@ -1,7 +1,7 @@
 var nkf_base_init = function($) {
   // utility function to toggle classes on click
   // useful for toggling visibility
-  $('[data-toggle=class]').once().click(function (e) {
+  $('[data-toggle=class]').one('click', function (e) {
     $($(this).attr('data-target'))
       .toggleClass($(this).attr('data-class'));
     e.preventDefault();
@@ -14,7 +14,7 @@ var nkf_base_init = function($) {
   });
 
   // general print utility
-  $('.js--print-link').once().click(function(){
+  $('.js--print-link').one('click', function(){
     window.print();
     return false;
   });
