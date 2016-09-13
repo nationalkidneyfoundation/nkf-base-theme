@@ -57,4 +57,4 @@ var nkf_base_init = function($) {
 
 }
 
-jQuery('document').ready(nkf_base_init());
+jQuery('document').ready(nkf_base_init($));
