@@ -18,7 +18,20 @@
 .cover-absolute {
   @include cover-absolute();
 }
-
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--cover-absolute {
+      @include cover-absolute();
+    }
+  }
+}
 .cover-fixed {
   @include cover-fixed();
+}
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--cover-fixed {
+      @include cover-fixed();
+    }
+  }
 }

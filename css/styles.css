@@ -1010,12 +1010,117 @@ button.mfp-close {
   margin: auto;
 }
 
+@media (min-width: 20em) {
+  .xs--cover-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+@media (min-width: 40em) {
+  .sm--cover-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+@media (min-width: 52em) {
+  .md--cover-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+@media (min-width: 64em) {
+  .lg--cover-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
+@media (min-width: 75em) {
+  .xl--cover-absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+  }
+}
+
 .cover-fixed {
   position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
+}
+
+@media (min-width: 20em) {
+  .xs--cover-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 40em) {
+  .sm--cover-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 52em) {
+  .md--cover-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .lg--cover-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+}
+
+@media (min-width: 75em) {
+  .xl--cover-fixed {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .xs--show {
@@ -1114,6 +1219,10 @@ button.mfp-close {
   animation-duration: .4s;
   animation-fill-mode: both;
   animation-timing-function: ease-in-out;
+}
+
+.animate--all {
+  transition: all 0.5s ease;
 }
 
 .animate-duration--1 {
