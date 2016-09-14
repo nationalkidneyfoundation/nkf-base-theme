@@ -11892,6 +11892,14 @@ p {
   margin: 0;
   padding: 15px 0;
   padding: 1rem 0;
+  max-width: 600px;
+  max-width: 40rem;
+}
+
+ul,
+ol {
+  max-width: 600px;
+  max-width: 40rem;
 }
 
 .font-size--xs {

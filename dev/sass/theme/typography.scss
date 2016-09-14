@@ -47,6 +47,10 @@ h6, .h6 {
 p {
   margin: 0;
   padding: space(md) 0;
+  max-width: 40rem;
+}
+ul, ol {
+  max-width: 40rem;
 }
 
 @each $name, $size in $font-sizes {
