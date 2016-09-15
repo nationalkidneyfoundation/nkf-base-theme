@@ -35,3 +35,31 @@
     }
   }
 }
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--top {
+      top: 0;
+    }
+    .#{$bp}--bottom {
+      bottom: 0;
+    }
+    .#{$bp}--left {
+      left: 0;
+    }
+    .#{$bp}--right {
+      right: 0;
+    }
+  }
+}

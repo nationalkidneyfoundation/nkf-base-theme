@@ -1123,6 +1123,112 @@ button.mfp-close {
   }
 }
 
+.top {
+  top: 0;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  right: 0;
+}
+
+@media (min-width: 20em) {
+  .xs--top {
+    top: 0;
+  }
+
+  .xs--bottom {
+    bottom: 0;
+  }
+
+  .xs--left {
+    left: 0;
+  }
+
+  .xs--right {
+    right: 0;
+  }
+}
+
+@media (min-width: 40em) {
+  .sm--top {
+    top: 0;
+  }
+
+  .sm--bottom {
+    bottom: 0;
+  }
+
+  .sm--left {
+    left: 0;
+  }
+
+  .sm--right {
+    right: 0;
+  }
+}
+
+@media (min-width: 52em) {
+  .md--top {
+    top: 0;
+  }
+
+  .md--bottom {
+    bottom: 0;
+  }
+
+  .md--left {
+    left: 0;
+  }
+
+  .md--right {
+    right: 0;
+  }
+}
+
+@media (min-width: 64em) {
+  .lg--top {
+    top: 0;
+  }
+
+  .lg--bottom {
+    bottom: 0;
+  }
+
+  .lg--left {
+    left: 0;
+  }
+
+  .lg--right {
+    right: 0;
+  }
+}
+
+@media (min-width: 75em) {
+  .xl--top {
+    top: 0;
+  }
+
+  .xl--bottom {
+    bottom: 0;
+  }
+
+  .xl--left {
+    left: 0;
+  }
+
+  .xl--right {
+    right: 0;
+  }
+}
+
 .xs--show {
   display: none !important;
 }
