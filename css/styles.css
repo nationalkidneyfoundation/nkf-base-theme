@@ -599,7 +599,7 @@ textarea {
   padding-right: 8px;
   padding-right: 0.5rem;
   background-color: #fff;
-  border: solid #ccc 1px;
+  border: solid #99a9b3 1px;
   border-radius: 2px;
   vertical-align: middle;
   height: 42px;
@@ -628,7 +628,7 @@ input[type="tel"]:focus,
 input[type="color"]:focus,
 select:focus,
 textarea:focus {
-  border-color: #777;
+  border-color: #3b444f;
   outline: 0;
 }
 
@@ -698,9 +698,9 @@ select:not([multiple]) {
   padding: 15px 30px 15px 0;
   padding: 1rem 1.999rem 1rem 0;
   text-decoration: none;
-  color: #777;
+  color: #3b444f;
   display: inline-block;
-  border-bottom: 7px solid #eee;
+  border-bottom: 7px solid #dbe6ec;
 }
 
 .tabs a.active,
@@ -727,14 +727,14 @@ select:not([multiple]) {
   padding: 8px 15px;
   padding: 0.5rem 1rem;
   text-decoration: none;
-  color: #777;
+  color: #3b444f;
   display: inline-block;
 }
 
 .tabs__local a.active,
 .tabs__local a:active a:visited.active {
   color: #000;
-  background-color: #eee;
+  background-color: #dbe6ec;
   border-radius: 1000px;
 }
 
@@ -754,7 +754,7 @@ select:not([multiple]) {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #eee;
+  background-color: #dbe6ec;
   z-index: -1;
 }
 
@@ -766,6 +766,7 @@ select:not([multiple]) {
 
 .modal {
   background-color: #fff;
+  position: relative;
 }
 
 .modal--full {
@@ -2413,23 +2414,23 @@ a:hover {
 }
 
 .color--gray-1 {
-  color: #eee;
+  color: #dbe6ec;
 }
 
 .color--gray-2 {
-  color: #ccc;
+  color: #99a9b3;
 }
 
 .color--gray-3 {
-  color: #bbb;
+  color: #c7747c;
 }
 
 .color--gray-4 {
-  color: #777;
+  color: #3b444f;
 }
 
 .color--gray-5 {
-  color: #333;
+  color: #2c4643;
 }
 
 .color--black {
@@ -2449,23 +2450,23 @@ a:hover {
 }
 
 .hover--color--gray-1:hover {
-  color: #eee;
+  color: #dbe6ec;
 }
 
 .hover--color--gray-2:hover {
-  color: #ccc;
+  color: #99a9b3;
 }
 
 .hover--color--gray-3:hover {
-  color: #bbb;
+  color: #c7747c;
 }
 
 .hover--color--gray-4:hover {
-  color: #777;
+  color: #3b444f;
 }
 
 .hover--color--gray-5:hover {
-  color: #333;
+  color: #2c4643;
 }
 
 .hover--color--black:hover {
@@ -2787,27 +2788,27 @@ a:hover {
 
 .background-color--gray-1,
 .bg--gray-1 {
-  background-color: #eee;
+  background-color: #dbe6ec;
 }
 
 .background-color--gray-2,
 .bg--gray-2 {
-  background-color: #ccc;
+  background-color: #99a9b3;
 }
 
 .background-color--gray-3,
 .bg--gray-3 {
-  background-color: #bbb;
+  background-color: #c7747c;
 }
 
 .background-color--gray-4,
 .bg--gray-4 {
-  background-color: #777;
+  background-color: #3b444f;
 }
 
 .background-color--gray-5,
 .bg--gray-5 {
-  background-color: #333;
+  background-color: #2c4643;
 }
 
 .background-color--black,
@@ -2875,7 +2876,7 @@ a:hover {
 }
 
 .border-color--gray-1 {
-  border-color: #eee;
+  border-color: #dbe6ec;
 }
 
 .border-color--gray-2,
@@ -2884,19 +2885,19 @@ a:hover {
 .border-right,
 .border-bottom,
 .border-left {
-  border-color: #ccc;
+  border-color: #99a9b3;
 }
 
 .border-color--gray-3 {
-  border-color: #bbb;
+  border-color: #c7747c;
 }
 
 .border-color--gray-4 {
-  border-color: #777;
+  border-color: #3b444f;
 }
 
 .border-color--gray-5 {
-  border-color: #333;
+  border-color: #2c4643;
 }
 
 .border-color--black {
@@ -3713,7 +3714,7 @@ a:hover {
   margin: 0;
   -webkit-appearance: none;
   background-color: #fff;
-  color: #333;
+  color: #2c4643;
   border-color: #fff;
 }
 
@@ -3742,7 +3743,7 @@ a:hover {
 
 .button--white:visited,
 .nav--secondary .donate:visited {
-  color: #333;
+  color: #2c4643;
 }
 
 .button--white:hover,
@@ -3779,8 +3780,8 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #eee;
-  border-color: #eee;
+  background-color: #dbe6ec;
+  border-color: #dbe6ec;
   color: #000;
 }
 
@@ -3810,7 +3811,7 @@ a:hover {
 .button--gray-1:active,
 .button--gray-1.active {
   color: #000;
-  background-color: #ccc;
+  background-color: #99a9b3;
 }
 
 .button--gray-2,
@@ -3839,8 +3840,8 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #ccc;
-  border-color: #ccc;
+  background-color: #99a9b3;
+  border-color: #99a9b3;
   color: #000;
 }
 
@@ -3888,7 +3889,7 @@ a:hover {
 .has-donation-form #edit-donation-select input:checked + label.active,
 .has-donation-form #edit-field-membership-term-und input:checked + label.active {
   color: #000;
-  background-color: #bbb;
+  background-color: #c7747c;
 }
 
 .button--gray-3 {
@@ -3915,8 +3916,8 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #bbb;
-  border-color: #bbb;
+  background-color: #c7747c;
+  border-color: #c7747c;
   color: #000;
 }
 
@@ -3946,7 +3947,7 @@ a:hover {
 .button--gray-3:active,
 .button--gray-3.active {
   color: #000;
-  background-color: #777;
+  background-color: #3b444f;
 }
 
 .button--gray-4 {
@@ -3973,8 +3974,8 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #777;
-  border-color: #777;
+  background-color: #3b444f;
+  border-color: #3b444f;
   color: #000;
 }
 
@@ -4004,7 +4005,7 @@ a:hover {
 .button--gray-4:active,
 .button--gray-4.active {
   color: #000;
-  background-color: #333;
+  background-color: #2c4643;
 }
 
 .button--gray-5 {
@@ -4031,7 +4032,7 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  border-color: #333;
+  border-color: #2c4643;
   color: #fff;
 }
 
@@ -4059,7 +4060,7 @@ a:hover {
 
 .button--gray-5::before {
   color: #fff;
-  background-color: #333;
+  background-color: #2c4643;
 }
 
 .button--black {
@@ -4086,8 +4087,8 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #333;
-  border-color: #333;
+  background-color: #2c4643;
+  border-color: #2c4643;
   color: #fff;
 }
 
@@ -5614,7 +5615,7 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #eee;
+  background-color: #dbe6ec;
   background-color: transparent;
 }
 
@@ -5660,7 +5661,7 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #ccc;
+  background-color: #99a9b3;
   background-color: transparent;
 }
 
@@ -5706,7 +5707,7 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #bbb;
+  background-color: #c7747c;
   background-color: transparent;
 }
 
@@ -5752,7 +5753,7 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #777;
+  background-color: #3b444f;
   background-color: transparent;
 }
 
@@ -5798,7 +5799,7 @@ a:hover {
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
-  background-color: #333;
+  background-color: #2c4643;
   background-color: transparent;
 }
 
@@ -12299,14 +12300,14 @@ table {
 }
 
 th {
-  border-color: #ccc;
+  border-color: #99a9b3;
 }
 
 td,
 th {
   padding: 11px 15px 11px 11px;
   padding: 0.707rem 1rem 0.707rem 0.707rem;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #dbe6ec;
 }
 
 .width--0 {
@@ -13316,7 +13317,7 @@ html.js #user-login li.openid-link { display:block; }
 }
 
 .password-indicator {
-  background-color: #ccc;
+  background-color: #99a9b3;
   height: 5px;
   width: 100%;
 }
@@ -13800,7 +13801,7 @@ fieldset {
   margin: 0;
   padding: 15px;
   padding: 1rem;
-  border: solid #ccc 1px;
+  border: solid #99a9b3 1px;
 }
 
 fieldset .collapsed {
@@ -13824,7 +13825,7 @@ legend {
 }
 
 .form-item .description {
-  color: #bbb;
+  color: #c7747c;
 }
 
 .form-type-checkbox,
@@ -13841,7 +13842,7 @@ legend {
 .form-type-radio label::before {
   content: "";
   display: block;
-  border: 1px solid #ccc;
+  border: 1px solid #99a9b3;
   border-radius: 2px;
   height: 23px;
   width: 23px;
@@ -13890,7 +13891,7 @@ legend {
 .form-type-checkbox input[type=radio]:focus + label:before,
 .form-type-radio input[type=checkbox]:focus + label:before,
 .form-type-radio input[type=radio]:focus + label:before {
-  border-color: #777;
+  border-color: #3b444f;
 }
 
 .form-type-checkbox input.error + label:before,
@@ -14202,7 +14203,7 @@ legend {
 .has-donation-form .main {
   padding-bottom: 60px;
   padding-bottom: 3.998rem;
-  background-color: #eee;
+  background-color: #dbe6ec;
 }
 
 .has-donation-form h1 {
@@ -14223,7 +14224,7 @@ legend {
   max-width: 550px;
   background-color: #fff;
   padding: 0;
-  border: 1px solid #eee;
+  border: 1px solid #dbe6ec;
 }
 
 .has-donation-form .form-item label {
@@ -14260,7 +14261,7 @@ legend {
 }
 
 .has-donation-form .description {
-  color: #777;
+  color: #3b444f;
 }
 
 .has-donation-form fieldset {
@@ -14334,7 +14335,7 @@ legend {
   line-height: 2.827rem;
   right: 15px;
   right: 1rem;
-  color: #bbb;
+  color: #c7747c;
 }
 
 .has-donation-form .form-type-textfield.form-item-donation input {
@@ -14347,7 +14348,7 @@ legend {
 
 .has-donation-form .recurring-button:after {
   content: ' /mo';
-  color: #777;
+  color: #3b444f;
   font-size: 11px;
   font-size: 0.707rem;
 }
@@ -14443,7 +14444,7 @@ legend {
   margin: 0;
   -webkit-appearance: none;
   width: 100%;
-  border-color: #ccc;
+  border-color: #99a9b3;
 }
 
 .has-donation-form #edit-donation-select label:before,
@@ -14476,7 +14477,7 @@ legend {
 
 .has-donation-form #edit-donation-select input:checked + label,
 .has-donation-form #edit-field-membership-term-und input:checked + label {
-  border-color: #777;
+  border-color: #3b444f;
 }
 
 .has-donation-form .one-term #edit-field-membership-term-und > * {
@@ -14649,7 +14650,7 @@ legend {
   *word-spacing: -0.43em;
   text-rendering: optimizespeed;
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-  background-color: #eee;
+  background-color: #dbe6ec;
 }
 
 .has-donation-form .required-fields > div {
@@ -14785,7 +14786,7 @@ legend {
 .has-donation-form .field-name-field-benefiting-office {
   margin: 0 8px 8px;
   margin: 0 0.5rem 0.5rem;
-  background-color: #eee;
+  background-color: #dbe6ec;
 }
 
 .has-donation-form .form-actions {
@@ -14826,7 +14827,7 @@ legend {
   position: relative;
   padding: 30px 15px;
   padding: 1.999rem 1rem;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #99a9b3;
 }
 
 @media (min-width: 40em) {
@@ -14898,7 +14899,7 @@ legend {
   width: 1.999rem;
   line-height: 30px;
   line-height: 1.999rem;
-  color: #bbb;
+  color: #c7747c;
 }
 
 .has-donation-form .steps {
@@ -14934,7 +14935,7 @@ legend {
 }
 
 .has-donation-form .step.active {
-  background-color: #eee;
+  background-color: #dbe6ec;
   color: black;
 }
 
