@@ -11,7 +11,7 @@
   left: 0;
 }
 .mfp-content {
-  
+
 }
 .mfp-container {
   opacity: 0;
@@ -31,12 +31,12 @@
 }
 
 button.mfp-close {
-  margin: space(md);
+  margin: space(sm);
   font-size: font-size(xxl);
 }
 @media #{breakpoint(md)} {
   button.mfp-close {
-    margin: space(lg);
-    font-size: font-size(xxxl);
+    //margin: space(lg);
+    //font-size: font-size(xxxl);
   }
 }
