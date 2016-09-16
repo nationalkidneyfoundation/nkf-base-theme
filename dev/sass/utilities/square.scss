@@ -1,0 +1,8 @@
+
+@each $name, $perc in $widths {
+  .square--#{$name} {
+    height: 0;
+    padding-bottom: $perc;
+    width: $perc;
+  }
+}
