@@ -2240,6 +2240,17 @@ a:hover {
   color: #F15E22;
 }
 
+a.color--orange,
+a.button--outline--orange,
+a.color--orange:active,
+a.button--outline--orange:active,
+a.color--orange:visited,
+a.button--outline--orange:visited,
+a.color--orange:hover,
+a.button--outline--orange:hover {
+  color: #F15E22;
+}
+
 .color--orange--l1,
 .orange--l1 {
   color: #f48152;
@@ -2268,6 +2279,17 @@ a:hover {
 .color--blue,
 .button--outline--blue,
 .blue {
+  color: #1E4497;
+}
+
+a.color--blue,
+a.button--outline--blue,
+a.color--blue:active,
+a.button--outline--blue:active,
+a.color--blue:visited,
+a.button--outline--blue:visited,
+a.color--blue:hover,
+a.button--outline--blue:hover {
   color: #1E4497;
 }
 
@@ -2302,6 +2324,17 @@ a:hover {
   color: #26225E;
 }
 
+a.color--navy,
+a.button--outline--navy,
+a.color--navy:active,
+a.button--outline--navy:active,
+a.color--navy:visited,
+a.button--outline--navy:visited,
+a.color--navy:hover,
+a.button--outline--navy:hover {
+  color: #26225E;
+}
+
 .color--navy--l1,
 .navy--l1 {
   color: #353083;
@@ -2330,6 +2363,17 @@ a:hover {
 .color--red,
 .button--outline--red,
 .red {
+  color: #d51217;
+}
+
+a.color--red,
+a.button--outline--red,
+a.color--red:active,
+a.button--outline--red:active,
+a.color--red:visited,
+a.button--outline--red:visited,
+a.color--red:hover,
+a.button--outline--red:hover {
   color: #d51217;
 }
 
@@ -2364,6 +2408,17 @@ a:hover {
   color: #FAAD1D;
 }
 
+a.color--mustard,
+a.button--outline--mustard,
+a.color--mustard:active,
+a.button--outline--mustard:active,
+a.color--mustard:visited,
+a.button--outline--mustard:visited,
+a.color--mustard:hover,
+a.button--outline--mustard:hover {
+  color: #FAAD1D;
+}
+
 .color--mustard--l1,
 .mustard--l1 {
   color: #fbbf4f;
@@ -2392,6 +2447,17 @@ a:hover {
 .color--aqua,
 .button--outline--aqua,
 .aqua {
+  color: #048499;
+}
+
+a.color--aqua,
+a.button--outline--aqua,
+a.color--aqua:active,
+a.button--outline--aqua:active,
+a.color--aqua:visited,
+a.button--outline--aqua:visited,
+a.color--aqua:hover,
+a.button--outline--aqua:hover {
   color: #048499;
 }
 
@@ -2426,6 +2492,17 @@ a:hover {
   color: #FEDC00;
 }
 
+a.color--yellow,
+a.button--outline--yellow,
+a.color--yellow:active,
+a.button--outline--yellow:active,
+a.color--yellow:visited,
+a.button--outline--yellow:visited,
+a.color--yellow:hover,
+a.button--outline--yellow:hover {
+  color: #FEDC00;
+}
+
 .color--yellow--l1,
 .yellow--l1 {
   color: #ffe432;
@@ -2454,6 +2531,17 @@ a:hover {
 .color--green,
 .button--outline--green,
 .green {
+  color: #018241;
+}
+
+a.color--green,
+a.button--outline--green,
+a.color--green:active,
+a.button--outline--green:active,
+a.color--green:visited,
+a.button--outline--green:visited,
+a.color--green:hover,
+a.button--outline--green:hover {
   color: #018241;
 }
 
@@ -2488,6 +2576,17 @@ a:hover {
   color: #91AE3C;
 }
 
+a.color--lime,
+a.button--outline--lime,
+a.color--lime:active,
+a.button--outline--lime:active,
+a.color--lime:visited,
+a.button--outline--lime:visited,
+a.color--lime:hover,
+a.button--outline--lime:hover {
+  color: #91AE3C;
+}
+
 .color--lime--l1,
 .lime--l1 {
   color: #a9c558;
@@ -2516,6 +2615,17 @@ a:hover {
 .color--sienna,
 .button--outline--sienna,
 .sienna {
+  color: #9E2420;
+}
+
+a.color--sienna,
+a.button--outline--sienna,
+a.color--sienna:active,
+a.button--outline--sienna:active,
+a.color--sienna:visited,
+a.button--outline--sienna:visited,
+a.color--sienna:hover,
+a.button--outline--sienna:hover {
   color: #9E2420;
 }
 

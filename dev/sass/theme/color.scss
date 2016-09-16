@@ -16,6 +16,12 @@ a:hover {
   .#{$name} {
     color: $color;
   }
+  a.color--#{$name},
+  a.color--#{$name}:active,
+  a.color--#{$name}:visited,
+  a.color--#{$name}:hover {
+    color: $color;
+  }
   .color--#{$name}--l1,
   .#{$name}--l1 {
     color: lighten($color, 10%);
@@ -39,6 +45,7 @@ a:hover {
     }
   }
 }
+
 .color {
   &--white    { color: $white; }
   &--gray-1   { color: $gray-1; }
