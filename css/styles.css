@@ -13396,6 +13396,286 @@ th {
 
 /* '' */
 
+.max-width--xxxs {
+  max-width: 8px;
+  max-width: 0.5rem;
+}
+
+.max-width--xxs {
+  max-width: 11px;
+  max-width: 0.707rem;
+}
+
+.max-width--xs {
+  max-width: 15px;
+  max-width: 1rem;
+}
+
+.max-width--sm {
+  max-width: 30px;
+  max-width: 1.999rem;
+}
+
+.max-width--md {
+  max-width: 60px;
+  max-width: 3.998rem;
+}
+
+.max-width--lg {
+  max-width: 240px;
+  max-width: 15.981rem;
+}
+
+.max-width--xl {
+  max-width: 339px;
+  max-width: 22.597rem;
+}
+
+.max-width--xxl {
+  max-width: 479px;
+  max-width: 31.952rem;
+}
+
+.max-width--xxxl {
+  max-width: 958px;
+  max-width: 63.884rem;
+}
+
+@media (min-width: 20em) {
+  .xs--max-width--xxxs {
+    max-width: 8px;
+    max-width: 0.5rem;
+  }
+
+  .xs--max-width--xxs {
+    max-width: 11px;
+    max-width: 0.707rem;
+  }
+
+  .xs--max-width--xs {
+    max-width: 15px;
+    max-width: 1rem;
+  }
+
+  .xs--max-width--sm {
+    max-width: 30px;
+    max-width: 1.999rem;
+  }
+
+  .xs--max-width--md {
+    max-width: 60px;
+    max-width: 3.998rem;
+  }
+
+  .xs--max-width--lg {
+    max-width: 240px;
+    max-width: 15.981rem;
+  }
+
+  .xs--max-width--xl {
+    max-width: 339px;
+    max-width: 22.597rem;
+  }
+
+  .xs--max-width--xxl {
+    max-width: 479px;
+    max-width: 31.952rem;
+  }
+
+  .xs--max-width--xxxl {
+    max-width: 958px;
+    max-width: 63.884rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .sm--max-width--xxxs {
+    max-width: 8px;
+    max-width: 0.5rem;
+  }
+
+  .sm--max-width--xxs {
+    max-width: 11px;
+    max-width: 0.707rem;
+  }
+
+  .sm--max-width--xs {
+    max-width: 15px;
+    max-width: 1rem;
+  }
+
+  .sm--max-width--sm {
+    max-width: 30px;
+    max-width: 1.999rem;
+  }
+
+  .sm--max-width--md {
+    max-width: 60px;
+    max-width: 3.998rem;
+  }
+
+  .sm--max-width--lg {
+    max-width: 240px;
+    max-width: 15.981rem;
+  }
+
+  .sm--max-width--xl {
+    max-width: 339px;
+    max-width: 22.597rem;
+  }
+
+  .sm--max-width--xxl {
+    max-width: 479px;
+    max-width: 31.952rem;
+  }
+
+  .sm--max-width--xxxl {
+    max-width: 958px;
+    max-width: 63.884rem;
+  }
+}
+
+@media (min-width: 52em) {
+  .md--max-width--xxxs {
+    max-width: 8px;
+    max-width: 0.5rem;
+  }
+
+  .md--max-width--xxs {
+    max-width: 11px;
+    max-width: 0.707rem;
+  }
+
+  .md--max-width--xs {
+    max-width: 15px;
+    max-width: 1rem;
+  }
+
+  .md--max-width--sm {
+    max-width: 30px;
+    max-width: 1.999rem;
+  }
+
+  .md--max-width--md {
+    max-width: 60px;
+    max-width: 3.998rem;
+  }
+
+  .md--max-width--lg {
+    max-width: 240px;
+    max-width: 15.981rem;
+  }
+
+  .md--max-width--xl {
+    max-width: 339px;
+    max-width: 22.597rem;
+  }
+
+  .md--max-width--xxl {
+    max-width: 479px;
+    max-width: 31.952rem;
+  }
+
+  .md--max-width--xxxl {
+    max-width: 958px;
+    max-width: 63.884rem;
+  }
+}
+
+@media (min-width: 64em) {
+  .lg--max-width--xxxs {
+    max-width: 8px;
+    max-width: 0.5rem;
+  }
+
+  .lg--max-width--xxs {
+    max-width: 11px;
+    max-width: 0.707rem;
+  }
+
+  .lg--max-width--xs {
+    max-width: 15px;
+    max-width: 1rem;
+  }
+
+  .lg--max-width--sm {
+    max-width: 30px;
+    max-width: 1.999rem;
+  }
+
+  .lg--max-width--md {
+    max-width: 60px;
+    max-width: 3.998rem;
+  }
+
+  .lg--max-width--lg {
+    max-width: 240px;
+    max-width: 15.981rem;
+  }
+
+  .lg--max-width--xl {
+    max-width: 339px;
+    max-width: 22.597rem;
+  }
+
+  .lg--max-width--xxl {
+    max-width: 479px;
+    max-width: 31.952rem;
+  }
+
+  .lg--max-width--xxxl {
+    max-width: 958px;
+    max-width: 63.884rem;
+  }
+}
+
+@media (min-width: 75em) {
+  .xl--max-width--xxxs {
+    max-width: 8px;
+    max-width: 0.5rem;
+  }
+
+  .xl--max-width--xxs {
+    max-width: 11px;
+    max-width: 0.707rem;
+  }
+
+  .xl--max-width--xs {
+    max-width: 15px;
+    max-width: 1rem;
+  }
+
+  .xl--max-width--sm {
+    max-width: 30px;
+    max-width: 1.999rem;
+  }
+
+  .xl--max-width--md {
+    max-width: 60px;
+    max-width: 3.998rem;
+  }
+
+  .xl--max-width--lg {
+    max-width: 240px;
+    max-width: 15.981rem;
+  }
+
+  .xl--max-width--xl {
+    max-width: 339px;
+    max-width: 22.597rem;
+  }
+
+  .xl--max-width--xxl {
+    max-width: 479px;
+    max-width: 31.952rem;
+  }
+
+  .xl--max-width--xxxl {
+    max-width: 958px;
+    max-width: 63.884rem;
+  }
+}
+
 /**
  * block/block.css ====================================================
 

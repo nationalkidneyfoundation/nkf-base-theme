@@ -1,16 +1,16 @@
 
-
-@each $name, $value in $scale {
+@each $name, $height in $heights {
   .max-width--#{$name} {
-    max-width: #{$value};
+    max-width: $height;
   }
 }
 
 @each $bp, $bp-value in $breakpoints {
   @media #{$bp-value} {
-    @each $name, $value in $scale {
+
+    @each $name, $height in $heights {
       .#{$bp}--max-width--#{$name} {
-        max-width: #{$value};
+        max-width: $height;
       }
     }
   }
