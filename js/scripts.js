@@ -2,10 +2,14 @@ var nkf_base_init = function($) {
   // utility function to toggle classes on click
   // useful for toggling visibility
   $('[data-toggle=class]').on('click', function (e) {
-    $($(this).attr('data-target'))
-      .toggleClass($(this).attr('data-class'));
+    var targets = $(this).attr('data-target').split('|');
+    var classes = $(this).attr('data-class').split('|');
+    $(targets).each(function(i, v){
+      $(v).toggleClass(classes[i]);
+    })
     e.preventDefault();
   });
+
 
   // utility for general modal selection
   $('.modal-trigger').magnificPopup({
