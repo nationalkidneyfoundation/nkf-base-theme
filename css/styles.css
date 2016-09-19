@@ -5562,6 +5562,86 @@ a.color--instagram:hover {
   }
 }
 
+.fill--orange {
+  fill: #F15E22;
+}
+
+.fill--blue {
+  fill: #1E4497;
+}
+
+.fill--navy {
+  fill: #26225E;
+}
+
+.fill--red {
+  fill: #d51217;
+}
+
+.fill--mustard {
+  fill: #FAAD1D;
+}
+
+.fill--aqua {
+  fill: #048499;
+}
+
+.fill--yellow {
+  fill: #FEDC00;
+}
+
+.fill--green {
+  fill: #018241;
+}
+
+.fill--lime {
+  fill: #91AE3C;
+}
+
+.fill--sienna {
+  fill: #9E2420;
+}
+
+.fill--white {
+  fill: #FFFFFF;
+}
+
+.fill--gray-1 {
+  fill: #EDEEEF;
+}
+
+.fill--gray-2 {
+  fill: #DBDDDF;
+}
+
+.fill--gray-3 {
+  fill: #A6AAAF;
+}
+
+.fill--gray-4 {
+  fill: #3b444f;
+}
+
+.fill--gray-5 {
+  fill: #363E48;
+}
+
+.fill--black {
+  fill: #111;
+}
+
+.fill--twitter {
+  fill: #4099FF;
+}
+
+.fill--facebook {
+  fill: #3b5998;
+}
+
+.fill--instagram {
+  fill: #e95950;
+}
+
 .line-height--xxxs {
   line-height: 8px;
   line-height: 0.5rem;
