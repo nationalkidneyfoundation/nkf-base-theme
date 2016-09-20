@@ -2,4 +2,5 @@
 .text-highlight--white {
   background-color: $white;
   box-shadow: 0.5rem 0 0 $white, -0.5rem 0 0 $white;
+  box-decoration-break: clone;
 }

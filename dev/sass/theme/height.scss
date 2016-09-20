@@ -11,6 +11,22 @@
     }
   }
 }
+// Creates height rules for each breakpoint
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    @each $name, $perc in $widths {
+      .#{$bp}--height--#{$name} {
+        height: #{$perc};
+      }
+    }
+    @each $name, $height in $heights {
+      .#{$bp}--height--#{$name} { 
+        height: $height;
+      }
+    }
+  }
+}
+
 .min-height {
   @each $name, $height in $heights {
     &--#{$name} { height: $height; }
