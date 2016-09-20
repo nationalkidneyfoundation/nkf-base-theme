@@ -5,18 +5,11 @@
   @each $name, $height in $heights {
     &--#{$name} { height: $height; }
   }
-  &--10  { height: 10%; }
-  &--20  { height: 20%; }
-  &--25  { height: 25%; }
-  &--30  { height: 30%; }
-  &--40  { height: 40%; }
-  &--50  { height: 50%; }
-  &--60  { height: 60%; }
-  &--70  { height: 70%; }
-  &--75  { height: 75%; }
-  &--80  { height: 80%; }
-  &--90  { height: 90%; }
-  &--100 { height: 100%; }
+  @each $name, $perc in $widths {
+    &--#{$name} {
+      height: #{$perc};
+    }
+  }
 }
 .min-height {
   @each $name, $height in $heights {
