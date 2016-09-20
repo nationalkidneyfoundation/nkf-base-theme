@@ -1,5 +1,6 @@
 
-.truncate {
+.truncate,
+.text-truncate {
   //display: block;
   overflow: hidden;
   text-overflow: ellipsis;

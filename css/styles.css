@@ -1269,10 +1269,17 @@ button.mfp-close {
   display: block !important;
 }
 
-.truncate {
+.truncate,
+.text-truncate {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+.text-highlight--white {
+  background-color: #fff;
+  box-shadow: 4px 0 0 #fff, -4px 0 0 #fff;
+  box-shadow: 0.25rem 0 0 #fff, -0.25rem 0 0 #fff;
 }
 
 .wf-loading h1,
