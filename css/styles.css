@@ -3904,7 +3904,7 @@ a.color--instagram:hover {
 .button--orange:active,
 .button--orange.active {
   background-color: #f48152;
-  color: white;
+  color: #000;
 }
 
 .button--blue,
@@ -3981,7 +3981,7 @@ a.color--instagram:hover {
 .has-donation-form .form-actions .active.form-submit,
 .has-donation-form .active.next {
   background-color: #2657c2;
-  color: white;
+  color: #fff;
 }
 
 .button--navy {
@@ -4038,7 +4038,7 @@ a.color--instagram:hover {
 .button--navy:active,
 .button--navy.active {
   background-color: #353083;
-  color: white;
+  color: #fff;
 }
 
 .button--red {
@@ -4095,7 +4095,7 @@ a.color--instagram:hover {
 .button--red:active,
 .button--red.active {
   background-color: #ed2d32;
-  color: white;
+  color: #fff;
 }
 
 .button--mustard {
@@ -4152,7 +4152,7 @@ a.color--instagram:hover {
 .button--mustard:active,
 .button--mustard.active {
   background-color: #fbbf4f;
-  color: white;
+  color: #000;
 }
 
 .button--aqua {
@@ -4209,7 +4209,7 @@ a.color--instagram:hover {
 .button--aqua:active,
 .button--aqua.active {
   background-color: #05afcb;
-  color: white;
+  color: #fff;
 }
 
 .button--yellow {
@@ -4266,7 +4266,7 @@ a.color--instagram:hover {
 .button--yellow:active,
 .button--yellow.active {
   background-color: #ffe432;
-  color: white;
+  color: #000;
 }
 
 .button--green {
@@ -4323,7 +4323,7 @@ a.color--instagram:hover {
 .button--green:active,
 .button--green.active {
   background-color: #01b55a;
-  color: white;
+  color: #fff;
 }
 
 .button--lime {
@@ -4380,7 +4380,7 @@ a.color--instagram:hover {
 .button--lime:active,
 .button--lime.active {
   background-color: #a9c558;
-  color: white;
+  color: #000;
 }
 
 .button--sienna {
@@ -4437,7 +4437,7 @@ a.color--instagram:hover {
 .button--sienna:active,
 .button--sienna.active {
   background-color: #c82e29;
-  color: white;
+  color: #fff;
 }
 
 .button--white,
@@ -4504,7 +4504,7 @@ a.color--instagram:hover {
 .button--white.active,
 .nav--secondary .active.donate {
   background-color: white;
-  color: white;
+  color: #000;
 }
 
 .button--gray-1 {
@@ -4561,7 +4561,7 @@ a.color--instagram:hover {
 .button--gray-1:active,
 .button--gray-1.active {
   background-color: white;
-  color: white;
+  color: #000;
 }
 
 .button--gray-2,
@@ -4638,7 +4638,7 @@ a.color--instagram:hover {
 .has-donation-form #edit-donation-select input:checked + label.active,
 .has-donation-form #edit-field-membership-term-und input:checked + label.active {
   background-color: #f6f7f7;
-  color: white;
+  color: #000;
 }
 
 .button--gray-3 {
@@ -4695,7 +4695,7 @@ a.color--instagram:hover {
 .button--gray-3:active,
 .button--gray-3.active {
   background-color: #c1c4c7;
-  color: white;
+  color: #000;
 }
 
 .button--gray-4 {
@@ -4752,7 +4752,7 @@ a.color--instagram:hover {
 .button--gray-4:active,
 .button--gray-4.active {
   background-color: #515d6c;
-  color: white;
+  color: #fff;
 }
 
 .button--gray-5 {
@@ -4809,7 +4809,7 @@ a.color--instagram:hover {
 .button--gray-5:active,
 .button--gray-5.active {
   background-color: #4c5765;
-  color: white;
+  color: #fff;
 }
 
 .button--black {
@@ -4866,7 +4866,7 @@ a.color--instagram:hover {
 .button--black:active,
 .button--black.active {
   background-color: #2b2b2b;
-  color: white;
+  color: #fff;
 }
 
 .button--twitter {
@@ -4923,7 +4923,7 @@ a.color--instagram:hover {
 .button--twitter:active,
 .button--twitter.active {
   background-color: #73b4ff;
-  color: white;
+  color: #000;
 }
 
 .button--facebook {
@@ -4980,7 +4980,7 @@ a.color--instagram:hover {
 .button--facebook:active,
 .button--facebook.active {
   background-color: #4c70ba;
-  color: white;
+  color: #fff;
 }
 
 .button--instagram {
@@ -5037,7 +5037,7 @@ a.color--instagram:hover {
 .button--instagram:active,
 .button--instagram.active {
   background-color: #ef847d;
-  color: white;
+  color: #000;
 }
 
 /*
