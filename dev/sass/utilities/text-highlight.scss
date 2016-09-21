@@ -1,6 +1,12 @@
-.text-highlight,
-.text-highlight--white {
+.text-highlight {
   background-color: $white;
   box-shadow: 0.5rem 0 0 $white, -0.5rem 0 0 $white;
   box-decoration-break: clone;
+}
+@each $name, $color in $colors {
+  .text-highlight--#{$name} {
+    background-color: $color;
+    box-shadow: 0.5rem 0 0 $color, -0.5rem 0 0 $color;
+    box-decoration-break: clone;
+  }
 }

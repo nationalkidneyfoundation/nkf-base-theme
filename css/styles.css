@@ -1275,11 +1275,170 @@ button.mfp-close {
   white-space: nowrap;
 }
 
-.text-highlight,
-.text-highlight--white {
+.text-highlight {
   background-color: #fff;
   box-shadow: 8px 0 0 #fff, -7px 0 0 #fff;
   box-shadow: 0.5rem 0 0 #fff, -0.5rem 0 0 #fff;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--orange {
+  background-color: #F15E22;
+  box-shadow: 8px 0 0 #F15E22, -7px 0 0 #F15E22;
+  box-shadow: 0.5rem 0 0 #F15E22, -0.5rem 0 0 #F15E22;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--blue {
+  background-color: #1E4497;
+  box-shadow: 8px 0 0 #1E4497, -7px 0 0 #1E4497;
+  box-shadow: 0.5rem 0 0 #1E4497, -0.5rem 0 0 #1E4497;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--navy {
+  background-color: #26225E;
+  box-shadow: 8px 0 0 #26225E, -7px 0 0 #26225E;
+  box-shadow: 0.5rem 0 0 #26225E, -0.5rem 0 0 #26225E;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--red {
+  background-color: #d51217;
+  box-shadow: 8px 0 0 #d51217, -7px 0 0 #d51217;
+  box-shadow: 0.5rem 0 0 #d51217, -0.5rem 0 0 #d51217;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--mustard {
+  background-color: #FAAD1D;
+  box-shadow: 8px 0 0 #FAAD1D, -7px 0 0 #FAAD1D;
+  box-shadow: 0.5rem 0 0 #FAAD1D, -0.5rem 0 0 #FAAD1D;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--aqua {
+  background-color: #048499;
+  box-shadow: 8px 0 0 #048499, -7px 0 0 #048499;
+  box-shadow: 0.5rem 0 0 #048499, -0.5rem 0 0 #048499;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--yellow {
+  background-color: #FEDC00;
+  box-shadow: 8px 0 0 #FEDC00, -7px 0 0 #FEDC00;
+  box-shadow: 0.5rem 0 0 #FEDC00, -0.5rem 0 0 #FEDC00;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--green {
+  background-color: #018241;
+  box-shadow: 8px 0 0 #018241, -7px 0 0 #018241;
+  box-shadow: 0.5rem 0 0 #018241, -0.5rem 0 0 #018241;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--lime {
+  background-color: #91AE3C;
+  box-shadow: 8px 0 0 #91AE3C, -7px 0 0 #91AE3C;
+  box-shadow: 0.5rem 0 0 #91AE3C, -0.5rem 0 0 #91AE3C;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--sienna {
+  background-color: #9E2420;
+  box-shadow: 8px 0 0 #9E2420, -7px 0 0 #9E2420;
+  box-shadow: 0.5rem 0 0 #9E2420, -0.5rem 0 0 #9E2420;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--white {
+  background-color: #FFFFFF;
+  box-shadow: 8px 0 0 #FFFFFF, -7px 0 0 #FFFFFF;
+  box-shadow: 0.5rem 0 0 #FFFFFF, -0.5rem 0 0 #FFFFFF;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--gray-1 {
+  background-color: #EDEEEF;
+  box-shadow: 8px 0 0 #EDEEEF, -7px 0 0 #EDEEEF;
+  box-shadow: 0.5rem 0 0 #EDEEEF, -0.5rem 0 0 #EDEEEF;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--gray-2 {
+  background-color: #DBDDDF;
+  box-shadow: 8px 0 0 #DBDDDF, -7px 0 0 #DBDDDF;
+  box-shadow: 0.5rem 0 0 #DBDDDF, -0.5rem 0 0 #DBDDDF;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--gray-3 {
+  background-color: #A6AAAF;
+  box-shadow: 8px 0 0 #A6AAAF, -7px 0 0 #A6AAAF;
+  box-shadow: 0.5rem 0 0 #A6AAAF, -0.5rem 0 0 #A6AAAF;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--gray-4 {
+  background-color: #3b444f;
+  box-shadow: 8px 0 0 #3b444f, -7px 0 0 #3b444f;
+  box-shadow: 0.5rem 0 0 #3b444f, -0.5rem 0 0 #3b444f;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--gray-5 {
+  background-color: #363E48;
+  box-shadow: 8px 0 0 #363E48, -7px 0 0 #363E48;
+  box-shadow: 0.5rem 0 0 #363E48, -0.5rem 0 0 #363E48;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--black {
+  background-color: #111;
+  box-shadow: 8px 0 0 #111, -7px 0 0 #111;
+  box-shadow: 0.5rem 0 0 #111, -0.5rem 0 0 #111;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--twitter {
+  background-color: #4099FF;
+  box-shadow: 8px 0 0 #4099FF, -7px 0 0 #4099FF;
+  box-shadow: 0.5rem 0 0 #4099FF, -0.5rem 0 0 #4099FF;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--facebook {
+  background-color: #3b5998;
+  box-shadow: 8px 0 0 #3b5998, -7px 0 0 #3b5998;
+  box-shadow: 0.5rem 0 0 #3b5998, -0.5rem 0 0 #3b5998;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.text-highlight--instagram {
+  background-color: #e95950;
+  box-shadow: 8px 0 0 #e95950, -7px 0 0 #e95950;
+  box-shadow: 0.5rem 0 0 #e95950, -0.5rem 0 0 #e95950;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone;
 }
