@@ -73,10 +73,9 @@ ul, ol {
 
 @mixin caps {
   text-transform: uppercase;
-  letter-spacing: .13rem;
+  letter-spacing: .11rem;
 }
 
 .caps {
-  text-transform: uppercase;
-  letter-spacing: .13rem;
+  @include caps();
 }

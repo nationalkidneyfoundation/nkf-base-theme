@@ -12636,7 +12636,7 @@ ol {
 .caps {
   text-transform: uppercase;
   letter-spacing: 2px;
-  letter-spacing: .13rem;
+  letter-spacing: .11rem;
 }
 
 table {
@@ -15057,7 +15057,7 @@ legend {
 .has-donation-form h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
-  letter-spacing: .13rem;
+  letter-spacing: .11rem;
   font-size: 30px;
   font-size: 1.999rem;
 }
