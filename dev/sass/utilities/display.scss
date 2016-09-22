@@ -2,15 +2,15 @@
 @each $bp, $bp-value in $breakpoints {
   @media #{$bp-value} {
     .#{$bp}--display {
-      &--none         { display: none; }
-      &--block        { display: block; }
-      &--inline       { display: inline; }
-      &--inline-block { display: inline-block; *display: inline; zoom: 1}
-      &--inline-table { display: inline-table; }
-      &--table        { display: table; }
-      &--table-cell   { display: table-cell; }
-      &--table-column { display: table-column; }
-      &--table-row    { display: table-row; }
+      &--none         { display: none !important; }
+      &--block        { display: block !important; }
+      &--inline       { display: inline !important; }
+      &--inline-block { display: inline-block !important; *display: inline !important; zoom: 1}
+      &--inline-table { display: inline-table !important; }
+      &--table        { display: table !important; }
+      &--table-cell   { display: table-cell !important; }
+      &--table-column { display: table-column !important; }
+      &--table-row    { display: table-row !important; }
     }
   }
 }
