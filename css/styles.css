@@ -801,10 +801,6 @@ button.mfp-close {
   font-size: 2.827rem;
 }
 
-.video-container {
-  width: 50%;
-}
-
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -12269,7 +12265,7 @@ a.color--instagram:hover {
 }
 
 html {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 body {
@@ -12639,8 +12635,8 @@ ol {
 
 .caps {
   text-transform: uppercase;
-  letter-spacing: 3px;
-  letter-spacing: .2rem;
+  letter-spacing: 2px;
+  letter-spacing: .13rem;
 }
 
 table {
@@ -15060,8 +15056,8 @@ legend {
 
 .has-donation-form h1 {
   text-transform: uppercase;
-  letter-spacing: 3px;
-  letter-spacing: .2rem;
+  letter-spacing: 2px;
+  letter-spacing: .13rem;
   font-size: 30px;
   font-size: 1.999rem;
 }
