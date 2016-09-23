@@ -1839,201 +1839,201 @@ button.mfp-close {
 
 @media (min-width: 20em) {
   .xs--display--none {
-    display: none;
+    display: none !important;
   }
 
   .xs--display--block {
-    display: block;
+    display: block !important;
   }
 
   .xs--display--inline {
-    display: inline;
+    display: inline !important;
   }
 
   .xs--display--inline-block {
-    display: inline-block;
-    *display: inline;
+    display: inline-block !important;
+    *display: inline !important;
     zoom: 1;
   }
 
   .xs--display--inline-table {
-    display: inline-table;
+    display: inline-table !important;
   }
 
   .xs--display--table {
-    display: table;
+    display: table !important;
   }
 
   .xs--display--table-cell {
-    display: table-cell;
+    display: table-cell !important;
   }
 
   .xs--display--table-column {
-    display: table-column;
+    display: table-column !important;
   }
 
   .xs--display--table-row {
-    display: table-row;
+    display: table-row !important;
   }
 }
 
 @media (min-width: 40em) {
   .sm--display--none {
-    display: none;
+    display: none !important;
   }
 
   .sm--display--block {
-    display: block;
+    display: block !important;
   }
 
   .sm--display--inline {
-    display: inline;
+    display: inline !important;
   }
 
   .sm--display--inline-block {
-    display: inline-block;
-    *display: inline;
+    display: inline-block !important;
+    *display: inline !important;
     zoom: 1;
   }
 
   .sm--display--inline-table {
-    display: inline-table;
+    display: inline-table !important;
   }
 
   .sm--display--table {
-    display: table;
+    display: table !important;
   }
 
   .sm--display--table-cell {
-    display: table-cell;
+    display: table-cell !important;
   }
 
   .sm--display--table-column {
-    display: table-column;
+    display: table-column !important;
   }
 
   .sm--display--table-row {
-    display: table-row;
+    display: table-row !important;
   }
 }
 
 @media (min-width: 52em) {
   .md--display--none {
-    display: none;
+    display: none !important;
   }
 
   .md--display--block {
-    display: block;
+    display: block !important;
   }
 
   .md--display--inline {
-    display: inline;
+    display: inline !important;
   }
 
   .md--display--inline-block {
-    display: inline-block;
-    *display: inline;
+    display: inline-block !important;
+    *display: inline !important;
     zoom: 1;
   }
 
   .md--display--inline-table {
-    display: inline-table;
+    display: inline-table !important;
   }
 
   .md--display--table {
-    display: table;
+    display: table !important;
   }
 
   .md--display--table-cell {
-    display: table-cell;
+    display: table-cell !important;
   }
 
   .md--display--table-column {
-    display: table-column;
+    display: table-column !important;
   }
 
   .md--display--table-row {
-    display: table-row;
+    display: table-row !important;
   }
 }
 
 @media (min-width: 64em) {
   .lg--display--none {
-    display: none;
+    display: none !important;
   }
 
   .lg--display--block {
-    display: block;
+    display: block !important;
   }
 
   .lg--display--inline {
-    display: inline;
+    display: inline !important;
   }
 
   .lg--display--inline-block {
-    display: inline-block;
-    *display: inline;
+    display: inline-block !important;
+    *display: inline !important;
     zoom: 1;
   }
 
   .lg--display--inline-table {
-    display: inline-table;
+    display: inline-table !important;
   }
 
   .lg--display--table {
-    display: table;
+    display: table !important;
   }
 
   .lg--display--table-cell {
-    display: table-cell;
+    display: table-cell !important;
   }
 
   .lg--display--table-column {
-    display: table-column;
+    display: table-column !important;
   }
 
   .lg--display--table-row {
-    display: table-row;
+    display: table-row !important;
   }
 }
 
 @media (min-width: 75em) {
   .xl--display--none {
-    display: none;
+    display: none !important;
   }
 
   .xl--display--block {
-    display: block;
+    display: block !important;
   }
 
   .xl--display--inline {
-    display: inline;
+    display: inline !important;
   }
 
   .xl--display--inline-block {
-    display: inline-block;
-    *display: inline;
+    display: inline-block !important;
+    *display: inline !important;
     zoom: 1;
   }
 
   .xl--display--inline-table {
-    display: inline-table;
+    display: inline-table !important;
   }
 
   .xl--display--table {
-    display: table;
+    display: table !important;
   }
 
   .xl--display--table-cell {
-    display: table-cell;
+    display: table-cell !important;
   }
 
   .xl--display--table-column {
-    display: table-column;
+    display: table-column !important;
   }
 
   .xl--display--table-row {
-    display: table-row;
+    display: table-row !important;
   }
 }
 
