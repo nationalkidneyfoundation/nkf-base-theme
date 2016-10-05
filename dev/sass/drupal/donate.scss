@@ -148,6 +148,7 @@
     position: relative;
     padding-top: space(md);
     padding-bottom: space(md);
+    display: block;
     &::before {
       content: "$ ";
       position: absolute;
@@ -340,7 +341,36 @@
   .form-item-field-benefiting-office-und select {
     width: 100%;
   }
-
+  // payment options
+  #edit-payment-method {
+    @include grid();
+  }
+  .form-type-radio.form-item-payment-method {
+    @include grid-cell();
+    width: 50%;
+    padding: space(xs);
+    position: relative;
+    label {
+      @include button();
+      background-color: $gray-1;
+      border-color: $gray-2;
+      text-align: left;
+    }
+    .progress {
+      position: absolute;
+      z-index: 100;
+      padding-right: space(md);
+    }
+  }
+  .commerce-paypal-ec-info {
+    @include grid-cell();
+    padding-top: space(md);
+    padding-left: space(lg);
+    padding-right: space(lg);
+  }
+  .form-type-radios.form-item-payment-method > label {
+    text-align: center;
+  }
   // credit card
   #payment-details {
     @include grid();

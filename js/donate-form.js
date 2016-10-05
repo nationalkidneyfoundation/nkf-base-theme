@@ -202,6 +202,38 @@
         setDonationAmount();
       });
 
+      var textDonation = $('.form-item-donation.form-type-textfield');
+      if(textDonation.length > 0) {
+
+        //$('input', textDonation).attr('placeholder', 'Enter a dollar amount');
+        // add buttons for textfield style donations
+        // TODO make this configurable through the UI
+        // remove all amount buttons first.
+        $('.amount-options').remove();
+        var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
+        var amountOptionsArray = [[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']];
+        if(window.location.href.toLowerCase().indexOf("localboardchallenge") != -1) {
+           amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [2500, '$2,500'], [5000, '$5,000'], [0, 'Other']];
+        }
+        $.each(amountOptionsArray, function(i, v) {
+          var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
+          var button = $('<a class="button button--gray-1 color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
+            .appendTo(buttonOuter);
+          button.click(function(e) {
+              //$('.amount-options .button').removeClass('active');
+              //$(this).addClass('active');
+              if($(this).data('amount') == 0) {
+                $('input', textDonation).val('').focus().trigger('input');
+              } else {
+                $('input', textDonation).val($(this).data('amount')).trigger('input');
+              }
+              e.preventDefault();
+            });
+        });
+        // let's try to set the active button once on load
+        // as the value might be prefilled
+        setDonationAmount();
+      }
       // build donation sections and misc donation stuff
       if(!donationProcessed && !ie8) {
 
@@ -215,36 +247,7 @@
             $('.locality', _a).val(city);
           });
         */
-        var textDonation = $('.form-item-donation.form-type-textfield');
-        if(textDonation.length > 0) {
 
-          //$('input', textDonation).attr('placeholder', 'Enter a dollar amount');
-          // add buttons for textfield style donations
-          // TODO make this configurable through the UI
-          var amountOptions = $('<div class="amount-options text-align--center"></div>').insertBefore(textDonation);
-          var amountOptionsArray = [[50,'$50'],[100,'$100'], [250,'$250'], [500, '$500'], [1000, '$1,000'], [0, 'Other']];
-          if(window.location.href.toLowerCase().indexOf("localboardchallenge") != -1) {
-             amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [2500, '$2,500'], [5000, '$5,000'], [0, 'Other']];
-          }
-          $.each(amountOptionsArray, function(i, v) {
-            var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
-            var button = $('<a class="button button--gray-1 color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
-              .appendTo(buttonOuter);
-            button.click(function(e) {
-                //$('.amount-options .button').removeClass('active');
-                //$(this).addClass('active');
-                if($(this).data('amount') == 0) {
-                  $('input', textDonation).val('').focus().trigger('input');
-                } else {
-                  $('input', textDonation).val($(this).data('amount')).trigger('input');
-                }
-                e.preventDefault();
-              });
-          });
-          // let's try to set the active button once on load
-          // as the value might be prefilled
-          setDonationAmount();
-        }
         var steps = $('<div class="steps sm--show"></div>').prependTo($('form > div'));
         var donationSteps = $('.donation-step');
         $('.donation-step').each(function(i, v) {
