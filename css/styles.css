@@ -12490,8 +12490,8 @@ legend {
   margin: 0 0 15px;
   margin: 0 0 1rem;
   text-align: center;
-  background: url(../img/logo__bean--orange.png) no-repeat 11px center;
-  background: url(../img/logo__bean--orange.png) no-repeat 0.707rem center;
+  background: url(../img/logo__bean--orange.png) no-repeat 8px center;
+  background: url(../img/logo__bean--orange.png) no-repeat 0.5rem center;
 }
 
 .node-type-donation .donation__container {
@@ -12569,8 +12569,8 @@ legend {
   width: 100%;
   max-width: 450px;
   background-color: #fff;
-  padding: 0;
-  border: 1px solid #eee;
+  padding: 15px 0;
+  padding: 1rem 0;
 }
 
 .has-donation-form .form-item label {
@@ -12632,6 +12632,13 @@ legend {
   padding: 15px 0 15px 0;
   padding: 1rem 0 1rem 0;
   text-transform: uppercase;
+  display: block;
+}
+
+@media (min-width: 40em) {
+  .has-donation-form legend {
+    display: none;
+  }
 }
 
 .has-donation-form input[type=checkbox]:checked + label:before,
@@ -12644,20 +12651,12 @@ legend {
 }
 
 .has-donation-form .form-type-textfield.form-item-donation {
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   padding-top: 15px;
   padding-top: 1rem;
   padding-bottom: 15px;
   padding-bottom: 1rem;
   display: block;
-}
-
-@media (min-width: 40em) {
-  .has-donation-form .form-type-textfield.form-item-donation {
-    width: 50%;
-  }
 }
 
 .has-donation-form .form-type-textfield.form-item-donation::before {
@@ -13260,7 +13259,6 @@ legend {
 }
 
 .has-donation-form .form-actions .form-submit {
-  width: 100%;
   padding: 21px;
   padding: 1.414rem;
 }
@@ -13298,8 +13296,8 @@ legend {
 
 @media (min-width: 52em) {
   .has-donation-form .previous-next {
-    margin: 0 30px 21px 30px;
-    margin: 0 1.999rem 1.414rem 1.999rem;
+    margin: 21px 30px;
+    margin: 1.414rem 1.999rem;
   }
 }
 

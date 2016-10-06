@@ -12,7 +12,7 @@
     font-weight: normal;
     margin: 0 0 space(md);
     text-align: center;
-    background: url(../img/logo__bean--orange.png) no-repeat space(sm) center;
+    background: url(../img/logo__bean--orange.png) no-repeat space(xs) center;
   }
   .donation__container {
     background-color: rgba(255, 255, 255, .35);
@@ -85,9 +85,7 @@
     width: 100%;
     max-width: 450px;
     background-color: $white;
-    padding: 0;
-    border: 1px solid $gray-1;
-
+    padding: space(md) 0;
   }
 
   .form-item label {
@@ -126,10 +124,10 @@
     width: 100%;
     text-align: center;
     border-bottom-width: 0;
-    //font-size: $h3;
     padding: space(md) 0 space(md) 0;
-    //font-weight: bold;
     text-transform: uppercase;
+    display: block;
+    @include when(sm) { display: none; }
   }
   input[type=checkbox]:checked+label:before,
   input[type=radio]:checked+label:before {
@@ -148,8 +146,6 @@
     @include hide();
   }
   .form-type-textfield.form-item-donation {
-    @include when(sm) { width: 50%; }
-    @include center();
     position: relative;
     padding-top: space(md);
     padding-bottom: space(md);
@@ -170,10 +166,8 @@
       color: $gray-3;
     }
     input {
-      //text-align: center;
       font-weight: bold;
       padding: 0 space(lg);
-      //height: space(xxl);
       font-size: font-size(lg);
     }
   }
@@ -434,7 +428,6 @@
     }
     .form-submit {
       @extend .button--blue;
-      width: 100%;
       padding: space(lg);
       //text-transform: uppercase;
 
@@ -468,7 +461,7 @@
     text-align: center;
     @include when(sm) { display: block !important; }
     margin: 0 space(md) space(lg) space(md);
-    @include when(md) { margin: 0 space(xl) space(lg) space(xl) };
+    @include when(md) { margin: space(lg) space(xl)  };
   }
   .next {
     //@extend .button--blue;
