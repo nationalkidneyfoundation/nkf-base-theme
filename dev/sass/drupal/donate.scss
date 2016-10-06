@@ -1,6 +1,9 @@
 
 // only for node-type-donation
 .node-type-donation {
+  background-color: $gray-1;
+  max-width: base-scale(14);
+  margin: 0 auto;
   h1 {
     display: none;
   }
@@ -9,12 +12,13 @@
     font-weight: normal;
     margin: 0 0 space(md);
     text-align: center;
+    background: url(../img/logo__bean--orange.png) no-repeat space(sm) center;
   }
   .donation__container {
     background-color: rgba(255, 255, 255, .35);
-    max-width: 550px;
+    max-width: 450px;
     padding: space(xl) 0;
-    @include when(sm) { padding: space(xl) space(lg); }
+    @include when(sm) { padding: space(lg); }
   }
 }
 
@@ -34,6 +38,7 @@
 
   // Header and Logo
   header {
+    display: none;
     background-color: $white;
     text-align: center;
     .container {
@@ -78,7 +83,7 @@
   [id*="redhen-donation-form"] {
     position: relative;
     width: 100%;
-    max-width: 550px;
+    max-width: 450px;
     background-color: $white;
     padding: 0;
     border: 1px solid $gray-1;
@@ -101,7 +106,7 @@
 
   .form-item {
     width: 100%;
-    padding: space(xs);
+    padding: space(xxs);
     @include grid-cell();
     // reset sub form items
     .form-item {
@@ -121,8 +126,8 @@
     width: 100%;
     text-align: center;
     border-bottom-width: 0;
-    font-size: $h3;
-    padding: 0 0 space(lg) 0;
+    //font-size: $h3;
+    padding: space(md) 0 space(md) 0;
     //font-weight: bold;
     text-transform: uppercase;
   }
@@ -348,13 +353,14 @@
   .form-type-radio.form-item-payment-method {
     @include grid-cell();
     width: 50%;
-    padding: space(xs);
+    padding: space(xxs);
     position: relative;
     label {
       @include button();
       background-color: $gray-1;
-      border-color: $gray-2;
+      border-color: $gray-1;
       text-align: left;
+      white-space: nowrap;
     }
     .progress {
       position: absolute;
@@ -451,42 +457,24 @@
   }
   .donation-step__inner {
     position: relative;
-    padding: space(xl) space(md);
-    border-top: 1px solid $gray-2;
-    @include when(sm) { padding: space(xl) space(xl); };
+    padding: space(md) space(md) space(xl) space(md);
+    border-top: 1px solid $gray-1;
+    @include when(sm) { padding: 0 space(lg) space(xl) space(lg); };
     //@include when(sm) { border-top: none; }
   }
   // previous next
   .previous-next {
     display: none;
+    text-align: center;
     @include when(sm) { display: block !important; }
     margin: 0 space(md) space(lg) space(md);
     @include when(md) { margin: 0 space(xl) space(lg) space(xl) };
   }
   .next {
-    @extend .button--blue;
-    position: relative;
-    padding-top: space(lg);
-    padding-bottom: space(lg);
-    line-height: base-scale(3);
-    i {
-      position: absolute;
-      right: 0;
-      display: inline-block;
-      //&::before {
-        border-radius: 100%;
-        background-color: $white;
-        color: color(blue);
-        height: base-scale(3);
-        width: base-scale(3);
-        line-height: base-scale(3);
-        &:before {
-          line-height: base-scale(3);
-          vertical-align: baseline;
-          //height: base-scale(3);
-        }
-      //}
-    }
+    //@extend .button--blue;
+    //position: relative;
+    //padding-top: space(md);
+    //padding-bottom: space(md);
   }
 
   .previous {

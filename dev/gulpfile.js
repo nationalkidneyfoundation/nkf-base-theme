@@ -121,7 +121,7 @@ gulp.task('images-build-logos', function() {
 
 gulp.task('images-build-heros', function() {
   gulp.src(paths.imagesDir + '/heros/*')
-    //.pipe(imageresize({width: 300, crop: false}))
+    .pipe(imageresize({width: 1600, crop: false}))
     .pipe(imagemin({
         progressive: true,
         //use: [pngquant()]

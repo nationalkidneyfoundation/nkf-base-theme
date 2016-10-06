@@ -252,14 +252,14 @@
         var donationSteps = $('.donation-step');
         $('.donation-step').each(function(i, v) {
           steps.append('<div class="step"><div class="step-' + i + '">'+ (i + 1) +'</div>');
-          var previousNext = $('<div class="previous-next clearfix grid"></div>').appendTo($(v));
+          var previousNext = $('<div class="previous-next clearfix grid text-align--center"></div>').appendTo($(v));
           if(i === 0) {
             $(v).addClass('active');
           }
 
           if(i != donationSteps.length - 1) {
             var nextHeader = $('legend:first', $(v).next()).text();//$(v).next().first('legend').text();
-            $('<a href="#" class="next grid-cell width--100 ">'+nextHeader+' <i class="icon-arrow-right margin-right--lg "></i></a>')
+            $('<a href="#" class="next grid-cell button--blue padding-y--md">'+nextHeader+' <i class="icon-arrow-right"></i></a>')
               .appendTo(previousNext).click(function(e) {
                 if(checkRequiredFields(v)) {
                   $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')

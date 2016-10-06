@@ -749,7 +749,7 @@ select:not([multiple]) {
   background-size: cover;
   position: absolute;
   background-repeat: no-repeat;
-  min-height: 550px;
+  min-height: 650px;
   background-position: center top;
   top: 0;
   left: 0;
@@ -2951,8 +2951,7 @@ a:hover {
 }
 
 .button--blue,
-.has-donation-form .form-actions .form-submit,
-.has-donation-form .next {
+.has-donation-form .form-actions .form-submit {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -2983,47 +2982,38 @@ a:hover {
 
 .button--blue:before,
 .has-donation-form .form-actions .form-submit:before,
-.has-donation-form .next:before,
 .button--blue:after,
-.has-donation-form .form-actions .form-submit:after,
-.has-donation-form .next:after {
+.has-donation-form .form-actions .form-submit:after {
   box-sizing: border-box;
 }
 
 .button--blue:focus,
-.has-donation-form .form-actions .form-submit:focus,
-.has-donation-form .next:focus {
+.has-donation-form .form-actions .form-submit:focus {
   outline: 0;
 }
 
 .button--blue:hover,
-.has-donation-form .form-actions .form-submit:hover,
-.has-donation-form .next:hover {
+.has-donation-form .form-actions .form-submit:hover {
   text-decoration: none;
   color: currentColor;
 }
 
 .button--blue:disabled,
-.has-donation-form .form-actions .form-submit:disabled,
-.has-donation-form .next:disabled {
+.has-donation-form .form-actions .form-submit:disabled {
   opacity: .5;
 }
 
 .button--blue:visited,
-.has-donation-form .form-actions .form-submit:visited,
-.has-donation-form .next:visited {
+.has-donation-form .form-actions .form-submit:visited {
   color: #fff;
 }
 
 .button--blue:hover,
 .has-donation-form .form-actions .form-submit:hover,
-.has-donation-form .next:hover,
 .button--blue:active,
 .has-donation-form .form-actions .form-submit:active,
-.has-donation-form .next:active,
 .button--blue.active,
-.has-donation-form .form-actions .active.form-submit,
-.has-donation-form .active.next {
+.has-donation-form .form-actions .active.form-submit {
   background-color: #2657c2;
   color: white;
 }
@@ -12482,6 +12472,13 @@ legend {
   padding: 1rem;
 }
 
+.node-type-donation {
+  background-color: #eee;
+  max-width: 1355px;
+  max-width: 90.332rem;
+  margin: 0 auto;
+}
+
 .node-type-donation h1 {
   display: none;
 }
@@ -12493,19 +12490,21 @@ legend {
   margin: 0 0 15px;
   margin: 0 0 1rem;
   text-align: center;
+  background: url(../img/logo__bean--orange.png) no-repeat 11px center;
+  background: url(../img/logo__bean--orange.png) no-repeat 0.707rem center;
 }
 
 .node-type-donation .donation__container {
   background-color: rgba(255, 255, 255, 0.35);
-  max-width: 550px;
+  max-width: 450px;
   padding: 30px 0;
   padding: 1.999rem 0;
 }
 
 @media (min-width: 40em) {
   .node-type-donation .donation__container {
-    padding: 30px 21px;
-    padding: 1.999rem 1.414rem;
+    padding: 21px;
+    padding: 1.414rem;
   }
 }
 
@@ -12519,6 +12518,7 @@ legend {
 }
 
 .has-donation-form header {
+  display: none;
   background-color: #fff;
   text-align: center;
 }
@@ -12567,7 +12567,7 @@ legend {
 .has-donation-form [id*="redhen-donation-form"] {
   position: relative;
   width: 100%;
-  max-width: 550px;
+  max-width: 450px;
   background-color: #fff;
   padding: 0;
   border: 1px solid #eee;
@@ -12589,8 +12589,8 @@ legend {
 
 .has-donation-form .form-item {
   width: 100%;
-  padding: 8px;
-  padding: 0.5rem;
+  padding: 5px;
+  padding: 0.354rem;
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -12629,10 +12629,8 @@ legend {
   width: 100%;
   text-align: center;
   border-bottom-width: 0;
-  font-size: 21px;
-  font-size: 1.414rem;
-  padding: 0 0 21px 0;
-  padding: 0 0 1.414rem 0;
+  padding: 15px 0 15px 0;
+  padding: 1rem 0 1rem 0;
   text-transform: uppercase;
 }
 
@@ -13069,8 +13067,8 @@ legend {
   *zoom: 1;
   *display: inline;
   width: 50%;
-  padding: 8px;
-  padding: 0.5rem;
+  padding: 5px;
+  padding: 0.354rem;
   position: relative;
 }
 
@@ -13099,8 +13097,9 @@ legend {
   margin: 0;
   -webkit-appearance: none;
   background-color: #eee;
-  border-color: #ccc;
+  border-color: #eee;
   text-align: left;
+  white-space: nowrap;
 }
 
 .has-donation-form .form-type-radio.form-item-payment-method label:before,
@@ -13272,20 +13271,21 @@ legend {
 
 .has-donation-form .donation-step__inner {
   position: relative;
-  padding: 30px 15px;
-  padding: 1.999rem 1rem;
-  border-top: 1px solid #ccc;
+  padding: 15px 15px 30px 15px;
+  padding: 1rem 1rem 1.999rem 1rem;
+  border-top: 1px solid #eee;
 }
 
 @media (min-width: 40em) {
   .has-donation-form .donation-step__inner {
-    padding: 30px 30px;
-    padding: 1.999rem 1.999rem;
+    padding: 0 21px 30px 21px;
+    padding: 0 1.414rem 1.999rem 1.414rem;
   }
 }
 
 .has-donation-form .previous-next {
   display: none;
+  text-align: center;
   margin: 0 15px 21px 15px;
   margin: 0 1rem 1.414rem 1rem;
 }
@@ -13301,37 +13301,6 @@ legend {
     margin: 0 30px 21px 30px;
     margin: 0 1.999rem 1.414rem 1.999rem;
   }
-}
-
-.has-donation-form .next {
-  position: relative;
-  padding-top: 21px;
-  padding-top: 1.414rem;
-  padding-bottom: 21px;
-  padding-bottom: 1.414rem;
-  line-height: 30px;
-  line-height: 1.999rem;
-}
-
-.has-donation-form .next i {
-  position: absolute;
-  right: 0;
-  display: inline-block;
-  border-radius: 100%;
-  background-color: #fff;
-  color: #1E4497;
-  height: 30px;
-  height: 1.999rem;
-  width: 30px;
-  width: 1.999rem;
-  line-height: 30px;
-  line-height: 1.999rem;
-}
-
-.has-donation-form .next i:before {
-  line-height: 30px;
-  line-height: 1.999rem;
-  vertical-align: baseline;
 }
 
 .has-donation-form .previous {
