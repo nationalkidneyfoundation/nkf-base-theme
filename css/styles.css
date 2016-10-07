@@ -4278,13 +4278,12 @@ a.color--instagram:hover {
 .button--orange:hover,
 .button--orange:active,
 .button--orange.active {
-  background-color: #f48152;
+  background-color: #f26e38;
   color: #000;
 }
 
 .button--blue,
-.has-donation-form .form-actions .form-submit,
-.has-donation-form .next {
+.has-donation-form .form-actions .form-submit {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -4314,48 +4313,39 @@ a.color--instagram:hover {
 
 .button--blue:before,
 .has-donation-form .form-actions .form-submit:before,
-.has-donation-form .next:before,
 .button--blue:after,
-.has-donation-form .form-actions .form-submit:after,
-.has-donation-form .next:after {
+.has-donation-form .form-actions .form-submit:after {
   box-sizing: border-box;
 }
 
 .button--blue:focus,
-.has-donation-form .form-actions .form-submit:focus,
-.has-donation-form .next:focus {
+.has-donation-form .form-actions .form-submit:focus {
   outline: 0;
 }
 
 .button--blue:hover,
-.has-donation-form .form-actions .form-submit:hover,
-.has-donation-form .next:hover {
+.has-donation-form .form-actions .form-submit:hover {
   text-decoration: none;
   color: currentColor;
 }
 
 .button--blue:disabled,
-.has-donation-form .form-actions .form-submit:disabled,
-.has-donation-form .next:disabled {
+.has-donation-form .form-actions .form-submit:disabled {
   opacity: .5;
 }
 
 .button--blue:visited,
-.has-donation-form .form-actions .form-submit:visited,
-.has-donation-form .next:visited {
+.has-donation-form .form-actions .form-submit:visited {
   color: #fff;
 }
 
 .button--blue:hover,
 .has-donation-form .form-actions .form-submit:hover,
-.has-donation-form .next:hover,
 .button--blue:active,
 .has-donation-form .form-actions .form-submit:active,
-.has-donation-form .next:active,
 .button--blue.active,
-.has-donation-form .form-actions .active.form-submit,
-.has-donation-form .active.next {
-  background-color: #2657c2;
+.has-donation-form .form-actions .active.form-submit {
+  background-color: #3557a1;
   color: #fff;
 }
 
@@ -4412,7 +4402,7 @@ a.color--instagram:hover {
 .button--navy:hover,
 .button--navy:active,
 .button--navy.active {
-  background-color: #353083;
+  background-color: #3c386e;
   color: #fff;
 }
 
@@ -4469,7 +4459,7 @@ a.color--instagram:hover {
 .button--red:hover,
 .button--red:active,
 .button--red.active {
-  background-color: #ed2d32;
+  background-color: #d92a2e;
   color: #fff;
 }
 
@@ -4526,7 +4516,7 @@ a.color--instagram:hover {
 .button--mustard:hover,
 .button--mustard:active,
 .button--mustard.active {
-  background-color: #fbbf4f;
+  background-color: #fbb534;
   color: #000;
 }
 
@@ -4583,7 +4573,7 @@ a.color--instagram:hover {
 .button--aqua:hover,
 .button--aqua:active,
 .button--aqua.active {
-  background-color: #05afcb;
+  background-color: #1d90a3;
   color: #fff;
 }
 
@@ -4640,7 +4630,7 @@ a.color--instagram:hover {
 .button--yellow:hover,
 .button--yellow:active,
 .button--yellow.active {
-  background-color: #ffe432;
+  background-color: #fee01a;
   color: #000;
 }
 
@@ -4697,7 +4687,7 @@ a.color--instagram:hover {
 .button--green:hover,
 .button--green:active,
 .button--green.active {
-  background-color: #01b55a;
+  background-color: #1a8f54;
   color: #fff;
 }
 
@@ -4754,7 +4744,7 @@ a.color--instagram:hover {
 .button--lime:hover,
 .button--lime:active,
 .button--lime.active {
-  background-color: #a9c558;
+  background-color: #9cb650;
   color: #000;
 }
 
@@ -4811,7 +4801,7 @@ a.color--instagram:hover {
 .button--sienna:hover,
 .button--sienna:active,
 .button--sienna.active {
-  background-color: #c82e29;
+  background-color: #a83a36;
   color: #fff;
 }
 
@@ -4935,7 +4925,7 @@ a.color--instagram:hover {
 .button--gray-1:hover,
 .button--gray-1:active,
 .button--gray-1.active {
-  background-color: white;
+  background-color: #eff0f1;
   color: #000;
 }
 
@@ -5012,7 +5002,7 @@ a.color--instagram:hover {
 .button--gray-2.active,
 .has-donation-form #edit-donation-select input:checked + label.active,
 .has-donation-form #edit-field-membership-term-und input:checked + label.active {
-  background-color: #f6f7f7;
+  background-color: #dfe0e2;
   color: #000;
 }
 
@@ -5069,7 +5059,7 @@ a.color--instagram:hover {
 .button--gray-3:hover,
 .button--gray-3:active,
 .button--gray-3.active {
-  background-color: #c1c4c7;
+  background-color: #afb3b7;
   color: #000;
 }
 
@@ -5126,7 +5116,7 @@ a.color--instagram:hover {
 .button--gray-4:hover,
 .button--gray-4:active,
 .button--gray-4.active {
-  background-color: #515d6c;
+  background-color: #4f5761;
   color: #fff;
 }
 
@@ -5183,7 +5173,7 @@ a.color--instagram:hover {
 .button--gray-5:hover,
 .button--gray-5:active,
 .button--gray-5.active {
-  background-color: #4c5765;
+  background-color: #4a515a;
   color: #fff;
 }
 
@@ -5240,7 +5230,7 @@ a.color--instagram:hover {
 .button--black:hover,
 .button--black:active,
 .button--black.active {
-  background-color: #2b2b2b;
+  background-color: #292929;
   color: #fff;
 }
 
@@ -5297,7 +5287,7 @@ a.color--instagram:hover {
 .button--twitter:hover,
 .button--twitter:active,
 .button--twitter.active {
-  background-color: #73b4ff;
+  background-color: #53a3ff;
   color: #000;
 }
 
@@ -5354,7 +5344,7 @@ a.color--instagram:hover {
 .button--facebook:hover,
 .button--facebook:active,
 .button--facebook.active {
-  background-color: #4c70ba;
+  background-color: #4f6aa2;
   color: #fff;
 }
 
@@ -5411,161 +5401,9 @@ a.color--instagram:hover {
 .button--instagram:hover,
 .button--instagram:active,
 .button--instagram.active {
-  background-color: #ef847d;
+  background-color: #eb6a62;
   color: #000;
 }
-
-/*
-.button {
-  &--white   {
-    @include button();
-    background-color: $white;
-    color: $gray-5;
-    border-color: $white;
-    &:visited {
-      color: $gray-5;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      background-color: $white;
-      color: $black;
-    }
-  }
-  &--gray-1  {
-    @include button();
-    background-color: $gray-1;
-    border-color: $gray-1;
-    color: $black;
-    &:visited {
-      color: $black;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $black;
-      background-color: $gray-2;
-    }
-  }
-  &--gray-2  {
-    @include button();
-    background-color: $gray-2;
-    border-color: $gray-2;
-    color: $black;
-    &:visited {
-      color: $black;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $black;
-      background-color: $gray-3;
-    }
-  }
-  &--gray-3  {
-    @include button();
-    background-color: $gray-3;
-    border-color: $gray-3;
-    color: $black;
-    &:visited {
-      color: $black;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $black;
-      background-color: $gray-4;
-    }
-  }
-  &--gray-4  {
-    @include button();
-    background-color: $gray-4;
-    border-color: $gray-4;
-    color: $black;
-    &:visited {
-      color: $black;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $black;
-      background-color: $gray-5;
-    }
-  }
-  &--gray-5  {
-    @include button();
-    border-color: $gray-5;
-    color: $white;
-    &:visited {
-      color: $white;
-    }
-    &::before {
-      color: $white;
-      background-color: $gray-5;
-    }
-  }
-  &--black   {
-    @include button();
-    background-color: $gray-5;
-    border-color: $gray-5;
-    color: $white;
-    &:visited {
-      color: $white;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $white;
-      background-color: $black;
-    }
-  }
-  &--twitter   {
-    @include button();
-    background-color: $twitter;
-    border-color: $twitter;
-    color: $white;
-    &:visited {
-      color: $white;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $white;
-      background-color: $twitter;
-    }
-  }
-  &--facebook   {
-    @include button();
-    background-color: $facebook;
-    border-color: $facebook;
-    color: $white;
-    &:visited {
-      color: $white;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $white;
-      background-color: $facebook;
-    }
-  }
-  &--instagram   {
-    @include button();
-    background-color: $instagram;
-    border-color: $instagram;
-    color: $white;
-    &:visited {
-      color: $white;
-    }
-    &:hover,
-    &:active,
-    &.active {
-      color: $white;
-      background-color: $instagram;
-    }
-  }
-}
-*/
 
 .height--xxxs {
   height: 8px;
@@ -15184,6 +15022,13 @@ legend {
   padding: 1rem;
 }
 
+.node-type-donation {
+  background-color: #EDEEEF;
+  max-width: 1355px;
+  max-width: 90.332rem;
+  margin: 0 auto;
+}
+
 .node-type-donation h1 {
   display: none;
 }
@@ -15195,19 +15040,21 @@ legend {
   margin: 0 0 15px;
   margin: 0 0 1rem;
   text-align: center;
+  background: url(../img/logo__bean--orange.png) no-repeat 8px center;
+  background: url(../img/logo__bean--orange.png) no-repeat 0.5rem center;
 }
 
 .node-type-donation .donation__container {
   background-color: rgba(255, 255, 255, 0.35);
-  max-width: 550px;
+  max-width: 450px;
   padding: 30px 0;
   padding: 1.999rem 0;
 }
 
 @media (min-width: 40em) {
   .node-type-donation .donation__container {
-    padding: 30px 21px;
-    padding: 1.999rem 1.414rem;
+    padding: 21px;
+    padding: 1.414rem;
   }
 }
 
@@ -15221,6 +15068,7 @@ legend {
 }
 
 .has-donation-form header {
+  display: none;
   background-color: #fff;
   text-align: center;
 }
@@ -15269,10 +15117,10 @@ legend {
 .has-donation-form [id*="redhen-donation-form"] {
   position: relative;
   width: 100%;
-  max-width: 550px;
+  max-width: 450px;
   background-color: #fff;
-  padding: 0;
-  border: 1px solid #EDEEEF;
+  padding: 15px 0;
+  padding: 1rem 0;
 }
 
 .has-donation-form .form-item label {
@@ -15291,8 +15139,8 @@ legend {
 
 .has-donation-form .form-item {
   width: 100%;
-  padding: 8px;
-  padding: 0.5rem;
+  padding: 5px;
+  padding: 0.354rem;
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -15331,11 +15179,16 @@ legend {
   width: 100%;
   text-align: center;
   border-bottom-width: 0;
-  font-size: 21px;
-  font-size: 1.414rem;
-  padding: 0 0 21px 0;
-  padding: 0 0 1.414rem 0;
+  padding: 15px 0 15px 0;
+  padding: 1rem 0 1rem 0;
   text-transform: uppercase;
+  display: block;
+}
+
+@media (min-width: 40em) {
+  .has-donation-form legend {
+    display: none;
+  }
 }
 
 .has-donation-form input[type=checkbox]:checked + label:before,
@@ -15348,19 +15201,12 @@ legend {
 }
 
 .has-donation-form .form-type-textfield.form-item-donation {
-  margin-left: auto;
-  margin-right: auto;
   position: relative;
   padding-top: 15px;
   padding-top: 1rem;
   padding-bottom: 15px;
   padding-bottom: 1rem;
-}
-
-@media (min-width: 40em) {
-  .has-donation-form .form-type-textfield.form-item-donation {
-    width: 50%;
-  }
+  display: block;
 }
 
 .has-donation-form .form-type-textfield.form-item-donation::before {
@@ -15750,6 +15596,106 @@ legend {
   width: 100%;
 }
 
+.has-donation-form #edit-payment-method {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+}
+
+.has-donation-form .form-type-radio.form-item-payment-method {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-align: left;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
+  width: 50%;
+  padding: 5px;
+  padding: 0.354rem;
+  position: relative;
+}
+
+.has-donation-form .form-type-radio.form-item-payment-method label {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: normal;
+  padding: 8px 15px;
+  padding: 0.5rem 1rem;
+  height: auto;
+  border-width: 0;
+  border-style: solid;
+  vertical-align: middle;
+  border-radius: 1000px;
+  vertical-align: middle;
+  text-align: center;
+  font-weight: 400;
+  z-index: 2;
+  line-height: normal;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-appearance: none;
+  background-color: #EDEEEF;
+  border-color: #EDEEEF;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.has-donation-form .form-type-radio.form-item-payment-method label:before,
+.has-donation-form .form-type-radio.form-item-payment-method label:after {
+  box-sizing: border-box;
+}
+
+.has-donation-form .form-type-radio.form-item-payment-method label:focus {
+  outline: 0;
+}
+
+.has-donation-form .form-type-radio.form-item-payment-method label:hover {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.has-donation-form .form-type-radio.form-item-payment-method label:disabled {
+  opacity: .5;
+}
+
+.has-donation-form .form-type-radio.form-item-payment-method .progress {
+  position: absolute;
+  z-index: 100;
+  padding-right: 15px;
+  padding-right: 1rem;
+}
+
+.has-donation-form .commerce-paypal-ec-info {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-align: left;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
+  padding-top: 15px;
+  padding-top: 1rem;
+  padding-left: 21px;
+  padding-left: 1.414rem;
+  padding-right: 21px;
+  padding-right: 1.414rem;
+}
+
+.has-donation-form .form-type-radios.form-item-payment-method > label {
+  text-align: center;
+}
+
 .has-donation-form #payment-details {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
@@ -15861,7 +15807,6 @@ legend {
 }
 
 .has-donation-form .form-actions .form-submit {
-  width: 100%;
   padding: 21px;
   padding: 1.414rem;
 }
@@ -15872,20 +15817,21 @@ legend {
 
 .has-donation-form .donation-step__inner {
   position: relative;
-  padding: 30px 15px;
-  padding: 1.999rem 1rem;
-  border-top: 1px solid #DBDDDF;
+  padding: 15px 15px 30px 15px;
+  padding: 1rem 1rem 1.999rem 1rem;
+  border-top: 1px solid #EDEEEF;
 }
 
 @media (min-width: 40em) {
   .has-donation-form .donation-step__inner {
-    padding: 30px 30px;
-    padding: 1.999rem 1.999rem;
+    padding: 0 21px 30px 21px;
+    padding: 0 1.414rem 1.999rem 1.414rem;
   }
 }
 
 .has-donation-form .previous-next {
   display: none;
+  text-align: center;
   margin: 0 15px 21px 15px;
   margin: 0 1rem 1.414rem 1rem;
 }
@@ -15898,40 +15844,9 @@ legend {
 
 @media (min-width: 52em) {
   .has-donation-form .previous-next {
-    margin: 0 30px 21px 30px;
-    margin: 0 1.999rem 1.414rem 1.999rem;
+    margin: 21px 30px;
+    margin: 1.414rem 1.999rem;
   }
-}
-
-.has-donation-form .next {
-  position: relative;
-  padding-top: 21px;
-  padding-top: 1.414rem;
-  padding-bottom: 21px;
-  padding-bottom: 1.414rem;
-  line-height: 30px;
-  line-height: 1.999rem;
-}
-
-.has-donation-form .next i {
-  position: absolute;
-  right: 0;
-  display: inline-block;
-  border-radius: 100%;
-  background-color: #fff;
-  color: #1E4497;
-  height: 30px;
-  height: 1.999rem;
-  width: 30px;
-  width: 1.999rem;
-  line-height: 30px;
-  line-height: 1.999rem;
-}
-
-.has-donation-form .next i:before {
-  line-height: 30px;
-  line-height: 1.999rem;
-  vertical-align: baseline;
 }
 
 .has-donation-form .previous {

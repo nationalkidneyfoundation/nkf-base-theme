@@ -226,8 +226,9 @@ $breakpoints: (
   @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
 }
 
-// Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
 
+
+// Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
 @function color-contrast($color, $dark: $black, $light: $white) {
   @if $color == null {
     @return null;
