@@ -748,7 +748,7 @@ select:not([multiple]) {
   background-size: cover;
   position: absolute;
   background-repeat: no-repeat;
-  min-height: 550px;
+  min-height: 650px;
   background-position: center top;
   top: 0;
   left: 0;
@@ -759,7 +759,7 @@ select:not([multiple]) {
 
 @media (min-width: 64em) {
   .hero {
-    min-height: 650px;
+    min-height: 750px;
   }
 }
 
@@ -4225,7 +4225,8 @@ a.color--instagram:hover {
   border-left-width: 1rem;
 }
 
-.button--orange {
+.button--orange,
+.has-donation-form .form-actions .form-submit {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -4254,36 +4255,48 @@ a.color--instagram:hover {
 }
 
 .button--orange:before,
-.button--orange:after {
+.has-donation-form .form-actions .form-submit:before,
+.button--orange:after,
+.has-donation-form .form-actions .form-submit:after {
   box-sizing: border-box;
 }
 
-.button--orange:focus {
+.button--orange:focus,
+.has-donation-form .form-actions .form-submit:focus {
   outline: 0;
 }
 
-.button--orange:hover {
+.button--orange:hover,
+.has-donation-form .form-actions .form-submit:hover {
   text-decoration: none;
   color: currentColor;
 }
 
-.button--orange:disabled {
+.button--orange:disabled,
+.has-donation-form .form-actions .form-submit:disabled {
   opacity: .5;
 }
 
-.button--orange:visited {
+.button--orange:visited,
+.has-donation-form .form-actions .form-submit:visited {
   color: #000;
 }
 
 .button--orange:hover,
-.button--orange:active,
-.button--orange.active {
-  background-color: #f26e38;
+.has-donation-form .form-actions .form-submit:hover {
+  background-color: #f47e4e;
   color: #000;
 }
 
-.button--blue,
-.has-donation-form .form-actions .form-submit {
+.button--orange:active,
+.has-donation-form .form-actions .form-submit:active,
+.button--orange.active,
+.has-donation-form .form-actions .active.form-submit {
+  background-color: #c14b1b;
+  color: #fff;
+}
+
+.button--blue {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -4312,40 +4325,35 @@ a.color--instagram:hover {
 }
 
 .button--blue:before,
-.has-donation-form .form-actions .form-submit:before,
-.button--blue:after,
-.has-donation-form .form-actions .form-submit:after {
+.button--blue:after {
   box-sizing: border-box;
 }
 
-.button--blue:focus,
-.has-donation-form .form-actions .form-submit:focus {
+.button--blue:focus {
   outline: 0;
 }
 
-.button--blue:hover,
-.has-donation-form .form-actions .form-submit:hover {
+.button--blue:hover {
   text-decoration: none;
   color: currentColor;
 }
 
-.button--blue:disabled,
-.has-donation-form .form-actions .form-submit:disabled {
+.button--blue:disabled {
   opacity: .5;
 }
 
-.button--blue:visited,
-.has-donation-form .form-actions .form-submit:visited {
+.button--blue:visited {
   color: #fff;
 }
 
-.button--blue:hover,
-.has-donation-form .form-actions .form-submit:hover,
+.button--blue:hover {
+  background-color: #4b69ac;
+  color: #fff;
+}
+
 .button--blue:active,
-.has-donation-form .form-actions .form-submit:active,
-.button--blue.active,
-.has-donation-form .form-actions .active.form-submit {
-  background-color: #3557a1;
+.button--blue.active {
+  background-color: #183679;
   color: #fff;
 }
 
@@ -4399,10 +4407,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--navy:hover,
+.button--navy:hover {
+  background-color: #514e7e;
+  color: #fff;
+}
+
 .button--navy:active,
 .button--navy.active {
-  background-color: #3c386e;
+  background-color: #1e1b4b;
   color: #fff;
 }
 
@@ -4456,10 +4468,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--red:hover,
+.button--red:hover {
+  background-color: #dd4145;
+  color: #fff;
+}
+
 .button--red:active,
 .button--red.active {
-  background-color: #d92a2e;
+  background-color: #aa0e12;
   color: #fff;
 }
 
@@ -4513,10 +4529,14 @@ a.color--instagram:hover {
   color: #000;
 }
 
-.button--mustard:hover,
+.button--mustard:hover {
+  background-color: #fbbd4a;
+  color: #000;
+}
+
 .button--mustard:active,
 .button--mustard.active {
-  background-color: #fbb534;
+  background-color: #c88a17;
   color: #000;
 }
 
@@ -4570,10 +4590,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--aqua:hover,
+.button--aqua:hover {
+  background-color: #369dad;
+  color: #000;
+}
+
 .button--aqua:active,
 .button--aqua.active {
-  background-color: #1d90a3;
+  background-color: #036a7a;
   color: #fff;
 }
 
@@ -4627,10 +4651,14 @@ a.color--instagram:hover {
   color: #000;
 }
 
-.button--yellow:hover,
+.button--yellow:hover {
+  background-color: #fee333;
+  color: #000;
+}
+
 .button--yellow:active,
 .button--yellow.active {
-  background-color: #fee01a;
+  background-color: #cbb000;
   color: #000;
 }
 
@@ -4684,10 +4712,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--green:hover,
+.button--green:hover {
+  background-color: #349b67;
+  color: #fff;
+}
+
 .button--green:active,
 .button--green.active {
-  background-color: #1a8f54;
+  background-color: #016834;
   color: #fff;
 }
 
@@ -4741,11 +4773,15 @@ a.color--instagram:hover {
   color: #000;
 }
 
-.button--lime:hover,
+.button--lime:hover {
+  background-color: #a7be63;
+  color: #000;
+}
+
 .button--lime:active,
 .button--lime.active {
-  background-color: #9cb650;
-  color: #000;
+  background-color: #748b30;
+  color: #fff;
 }
 
 .button--sienna {
@@ -4798,10 +4834,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--sienna:hover,
+.button--sienna:hover {
+  background-color: #b1504d;
+  color: #fff;
+}
+
 .button--sienna:active,
 .button--sienna.active {
-  background-color: #a83a36;
+  background-color: #7e1d1a;
   color: #fff;
 }
 
@@ -4863,12 +4903,16 @@ a.color--instagram:hover {
 }
 
 .button--white:hover,
-.nav--secondary .donate:hover,
+.nav--secondary .donate:hover {
+  background-color: white;
+  color: #000;
+}
+
 .button--white:active,
 .nav--secondary .donate:active,
 .button--white.active,
 .nav--secondary .active.donate {
-  background-color: white;
+  background-color: #cccccc;
   color: #000;
 }
 
@@ -4922,10 +4966,14 @@ a.color--instagram:hover {
   color: #000;
 }
 
-.button--gray-1:hover,
+.button--gray-1:hover {
+  background-color: #f1f1f2;
+  color: #000;
+}
+
 .button--gray-1:active,
 .button--gray-1.active {
-  background-color: #eff0f1;
+  background-color: #bebebf;
   color: #000;
 }
 
@@ -4995,14 +5043,18 @@ a.color--instagram:hover {
 
 .button--gray-2:hover,
 .has-donation-form #edit-donation-select input:checked + label:hover,
-.has-donation-form #edit-field-membership-term-und input:checked + label:hover,
+.has-donation-form #edit-field-membership-term-und input:checked + label:hover {
+  background-color: #e2e4e5;
+  color: #000;
+}
+
 .button--gray-2:active,
 .has-donation-form #edit-donation-select input:checked + label:active,
 .has-donation-form #edit-field-membership-term-und input:checked + label:active,
 .button--gray-2.active,
 .has-donation-form #edit-donation-select input:checked + label.active,
 .has-donation-form #edit-field-membership-term-und input:checked + label.active {
-  background-color: #dfe0e2;
+  background-color: #afb1b2;
   color: #000;
 }
 
@@ -5056,10 +5108,14 @@ a.color--instagram:hover {
   color: #000;
 }
 
-.button--gray-3:hover,
+.button--gray-3:hover {
+  background-color: #b8bbbf;
+  color: #000;
+}
+
 .button--gray-3:active,
 .button--gray-3.active {
-  background-color: #afb3b7;
+  background-color: #85888c;
   color: #000;
 }
 
@@ -5113,10 +5169,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--gray-4:hover,
+.button--gray-4:hover {
+  background-color: #626972;
+  color: #fff;
+}
+
 .button--gray-4:active,
 .button--gray-4.active {
-  background-color: #4f5761;
+  background-color: #2f363f;
   color: #fff;
 }
 
@@ -5170,10 +5230,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--gray-5:hover,
+.button--gray-5:hover {
+  background-color: #5e656d;
+  color: #fff;
+}
+
 .button--gray-5:active,
 .button--gray-5.active {
-  background-color: #4a515a;
+  background-color: #2b323a;
   color: #fff;
 }
 
@@ -5227,10 +5291,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--black:hover,
+.button--black:hover {
+  background-color: #414141;
+  color: #fff;
+}
+
 .button--black:active,
 .button--black.active {
-  background-color: #292929;
+  background-color: #0e0e0e;
   color: #fff;
 }
 
@@ -5284,11 +5352,15 @@ a.color--instagram:hover {
   color: #000;
 }
 
-.button--twitter:hover,
+.button--twitter:hover {
+  background-color: #66adff;
+  color: #000;
+}
+
 .button--twitter:active,
 .button--twitter.active {
-  background-color: #53a3ff;
-  color: #000;
+  background-color: #337acc;
+  color: #fff;
 }
 
 .button--facebook {
@@ -5341,10 +5413,14 @@ a.color--instagram:hover {
   color: #fff;
 }
 
-.button--facebook:hover,
+.button--facebook:hover {
+  background-color: #627aad;
+  color: #fff;
+}
+
 .button--facebook:active,
 .button--facebook.active {
-  background-color: #4f6aa2;
+  background-color: #2f477a;
   color: #fff;
 }
 
@@ -5398,11 +5474,15 @@ a.color--instagram:hover {
   color: #000;
 }
 
-.button--instagram:hover,
+.button--instagram:hover {
+  background-color: #ed7a73;
+  color: #000;
+}
+
 .button--instagram:active,
 .button--instagram.active {
-  background-color: #eb6a62;
-  color: #000;
+  background-color: #ba4740;
+  color: #fff;
 }
 
 .height--xxxs {
@@ -15033,29 +15113,12 @@ legend {
   display: none;
 }
 
-.node-type-donation .node-title {
-  font-size: 30px;
-  font-size: 1.999rem;
-  font-weight: normal;
-  margin: 0 0 15px;
-  margin: 0 0 1rem;
-  text-align: center;
-  background: url(../img/logo__bean--orange.png) no-repeat 8px center;
-  background: url(../img/logo__bean--orange.png) no-repeat 0.5rem center;
-}
-
 .node-type-donation .donation__container {
-  background-color: rgba(255, 255, 255, 0.35);
   max-width: 450px;
-  padding: 30px 0;
-  padding: 1.999rem 0;
 }
 
-@media (min-width: 40em) {
-  .node-type-donation .donation__container {
-    padding: 21px;
-    padding: 1.414rem;
-  }
+.node-type-donation header {
+  display: none;
 }
 
 .has-donation-form .page.errors .donation-step {
@@ -15068,7 +15131,6 @@ legend {
 }
 
 .has-donation-form header {
-  display: none;
   background-color: #fff;
   text-align: center;
 }
@@ -15114,13 +15176,20 @@ legend {
   display: none !important;
 }
 
+.has-donation-form .donation__header {
+  background-image: url(../img/logo__bean--black.png);
+  background-repeat: no-repeat;
+  background-position: 15px center;
+  background-size: 60px;
+}
+
 .has-donation-form [id*="redhen-donation-form"] {
   position: relative;
   width: 100%;
   max-width: 450px;
   background-color: #fff;
-  padding: 15px 0;
-  padding: 1rem 0;
+  padding-bottom: 30px;
+  padding-bottom: 1.999rem;
 }
 
 .has-donation-form .form-item label {
@@ -15268,11 +15337,6 @@ legend {
   *word-spacing: -0.43em;
   text-rendering: optimizespeed;
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-}
-
-.has-donation-form .amount-options .active {
-  background-color: #97b1ea;
-  border-color: #97b1ea;
 }
 
 .has-donation-form .form-type-radios.form-item-field-membership-term-und > label {
@@ -15670,8 +15734,8 @@ legend {
 .has-donation-form .form-type-radio.form-item-payment-method .progress {
   position: absolute;
   z-index: 100;
-  padding-right: 15px;
-  padding-right: 1rem;
+  padding: 0 21px;
+  padding: 0 1.414rem;
 }
 
 .has-donation-form .commerce-paypal-ec-info {
@@ -15803,12 +15867,13 @@ legend {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
-  width: 50%;
 }
 
 .has-donation-form .form-actions .form-submit {
-  padding: 21px;
-  padding: 1.414rem;
+  padding-top: 15px;
+  padding-top: 1rem;
+  padding-bottom: 15px;
+  padding-bottom: 1rem;
 }
 
 .has-donation-form .form-item-signup {
@@ -15817,23 +15882,21 @@ legend {
 
 .has-donation-form .donation-step__inner {
   position: relative;
-  padding: 15px 15px 30px 15px;
-  padding: 1rem 1rem 1.999rem 1rem;
+  padding: 15px;
+  padding: 1rem;
   border-top: 1px solid #EDEEEF;
 }
 
 @media (min-width: 40em) {
   .has-donation-form .donation-step__inner {
-    padding: 0 21px 30px 21px;
-    padding: 0 1.414rem 1.999rem 1.414rem;
+    padding: 30px 30px 21px 30px;
+    padding: 1.999rem 1.999rem 1.414rem 1.999rem;
   }
 }
 
 .has-donation-form .previous-next {
   display: none;
   text-align: center;
-  margin: 0 15px 21px 15px;
-  margin: 0 1rem 1.414rem 1rem;
 }
 
 @media (min-width: 40em) {
@@ -15842,63 +15905,23 @@ legend {
   }
 }
 
-@media (min-width: 52em) {
-  .has-donation-form .previous-next {
-    margin: 21px 30px;
-    margin: 1.414rem 1.999rem;
-  }
-}
-
 .has-donation-form .previous {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 11px;
-  padding: 0.707rem;
+  padding: 5px 11px;
+  padding: 0.354rem 0.707rem;
   height: 30px;
   height: 1.999rem;
   width: 30px;
   width: 1.999rem;
   line-height: 30px;
   line-height: 1.999rem;
-  color: #A6AAAF;
-}
-
-.has-donation-form .steps {
-  letter-spacing: -0.31em;
-  *letter-spacing: normal;
-  *word-spacing: -0.43em;
-  text-rendering: optimizespeed;
-  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
-  text-align: center;
-  background-color: #fff;
-}
-
-.has-donation-form .step {
-  display: inline-block;
-  vertical-align: top;
-  letter-spacing: normal;
-  word-spacing: normal;
-  text-rendering: auto;
-  text-align: left;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
-  *zoom: 1;
-  *display: inline;
-  border-radius: 100%;
-  margin: 11px 0;
-  margin: 0.707rem 0;
-  height: 30px;
-  height: 1.999rem;
-  width: 30px;
-  width: 1.999rem;
-  line-height: 30px;
-  line-height: 1.999rem;
-  text-align: center;
+  color: #000;
 }
 
 .has-donation-form .step.active {
-  background-color: #EDEEEF;
-  color: black;
+  background-color: #000;
 }
 
 @media print {

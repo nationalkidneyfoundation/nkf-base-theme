@@ -248,18 +248,17 @@
           });
         */
 
-        var steps = $('<div class="steps sm--show"></div>').prependTo($('form > div'));
+        var steps = $('<div class="steps grid text-align--center sm--show bg--gray-3--l1"></div>').prependTo($('form > div'));
         var donationSteps = $('.donation-step');
         $('.donation-step').each(function(i, v) {
-          steps.append('<div class="step"><div class="step-' + i + '">'+ (i + 1) +'</div>');
+          steps.append('<div class="step grid-cell border-style--solid border-width--sm width--xs height--xs color--black circle margin-y--sm margin-x--xxs"><div class="step-' + i + '"></div>');
           var previousNext = $('<div class="previous-next clearfix grid text-align--center"></div>').appendTo($(v));
           if(i === 0) {
             $(v).addClass('active');
           }
-
           if(i != donationSteps.length - 1) {
             var nextHeader = $('legend:first', $(v).next()).text();//$(v).next().first('legend').text();
-            $('<a href="#" class="next grid-cell button--blue padding-y--md">'+nextHeader+' <i class="icon-arrow-right"></i></a>')
+            $('<a href="#" class="next grid-cell button--orange padding-y--md">'+nextHeader+' <i class="icon-arrow-right"></i></a>')
               .appendTo(previousNext).click(function(e) {
                 if(checkRequiredFields(v)) {
                   $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')

@@ -7,18 +7,11 @@
   h1 {
     display: none;
   }
-  .node-title {
-    font-size: font-size(xl);
-    font-weight: normal;
-    margin: 0 0 space(md);
-    text-align: center;
-    background: url(../img/logo__bean--orange.png) no-repeat space(xs) center;
-  }
   .donation__container {
-    background-color: rgba(255, 255, 255, .35);
     max-width: 450px;
-    padding: space(xl) 0;
-    @include when(sm) { padding: space(lg); }
+  }
+  header {
+    display: none;
   }
 }
 
@@ -38,7 +31,7 @@
 
   // Header and Logo
   header {
-    display: none;
+
     background-color: $white;
     text-align: center;
     .container {
@@ -77,7 +70,12 @@
       display: none !important;
     }
   }
-
+  .donation__header {
+    background-image: url(../img/logo__bean--black.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 60px;
+  }
 
   // donation form
   [id*="redhen-donation-form"] {
@@ -85,7 +83,7 @@
     width: 100%;
     max-width: 450px;
     background-color: $white;
-    padding: space(md) 0;
+    padding-bottom: space(xl);
   }
 
   .form-item label {
@@ -194,10 +192,6 @@
   }
   .amount-options {
     @include grid();
-    .active {
-      background-color: lighten(color(blue), 40%);
-      border-color: lighten(color(blue), 40%);
-    }
   }
 
   // if donation amount is select or other field
@@ -359,7 +353,7 @@
     .progress {
       position: absolute;
       z-index: 100;
-      padding-right: space(md);
+      padding: 0 space(lg);
     }
   }
   .commerce-paypal-ec-info {
@@ -424,13 +418,12 @@
     @include grid();
     > * {
       @include grid-cell();
-      width: 50%;
+      //width: 50%;
     }
     .form-submit {
-      @extend .button--blue;
-      padding: space(lg);
-      //text-transform: uppercase;
-
+      @extend .button--orange;
+      padding-top: space(md);
+      padding-bottom: space(md);
     }
   }
 
@@ -450,9 +443,9 @@
   }
   .donation-step__inner {
     position: relative;
-    padding: space(md) space(md) space(xl) space(md);
+    padding: space(md);
     border-top: 1px solid $gray-1;
-    @include when(sm) { padding: 0 space(lg) space(xl) space(lg); };
+    @include when(sm) { padding: space(xl) space(xl) space(lg) space(xl); };
     //@include when(sm) { border-top: none; }
   }
   // previous next
@@ -460,8 +453,8 @@
     display: none;
     text-align: center;
     @include when(sm) { display: block !important; }
-    margin: 0 space(md) space(lg) space(md);
-    @include when(md) { margin: space(lg) space(xl)  };
+    //margin: 0 space(md) space(lg) space(md);
+    //@include when(md) { margin: space(lg) space(xl)  };
   }
   .next {
     //@extend .button--blue;
@@ -474,29 +467,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: space(sm);
+    padding: space(xxs) space(sm);
     height: base-scale(3);
     width: base-scale(3);
     line-height: base-scale(3);
-    color: $gray-3;
+    color: $black;
   }
-  .steps {
-    @include grid();
-    text-align: center;
-    background-color: $white;
-  }
-  .step {
-    @include grid-cell();
-    border-radius: 100%;
-    margin: space(sm) 0;
-    height: base-scale(3);
-    width: base-scale(3);
-    line-height: base-scale(3);
-    text-align: center;
-  }
+
   .step.active {
-    padding: base-scale(md);
-    background-color: $gray-1;
-    color: black;
+    background-color: $black;
   }
 }

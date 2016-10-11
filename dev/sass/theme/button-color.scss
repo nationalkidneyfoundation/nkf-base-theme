@@ -1,23 +1,20 @@
 @each $name, $color in $colors {
   .button--#{$name} {
     @include button();
-    //border-color: lighten($color, 30%);
-    //background-color: lighten($color, 30%);
     border-color: $color;
     background-color: $color;
-    //color: $color;
     color: color-contrast($color);//$white;
     &:visited {
-      //color: $color;
       color: color-contrast($color);//$white;
     }
-    &:hover,
+    &:hover{
+      background-color: mix(white, $color, 20%);
+      color: color-contrast(mix(white, $color, 20%));
+    }
     &:active,
     &.active {
-      //background-color: lighten($color, 10%);
-      //color: color-contrast(lighten($color, 10%));
-      background-color: mix(white, $color, 10%);
-      color: color-contrast(mix(white, $color, 10%));
+      background-color: mix(black, $color, 20%);
+      color: color-contrast(mix(black, $color, 20%));
     }
   }
 }

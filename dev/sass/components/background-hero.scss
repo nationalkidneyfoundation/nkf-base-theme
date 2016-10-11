@@ -11,7 +11,7 @@
   background-size: cover;
   position: absolute;
   background-repeat: no-repeat;
-  min-height: 550px;
+  min-height: 650px;
   background-position: center top;
   top: 0;
   left: 0;
@@ -22,6 +22,6 @@
 
 @media #{breakpoint(lg)} {
   .hero {
-    min-height: 650px;
+    min-height: 750px;
   }
 }
