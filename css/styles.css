@@ -15444,7 +15444,7 @@ legend {
   }
 }
 
-.has-donation-form #edit-redhen-contact {
+.has-donation-form #edit-redhen-contact .fieldset-content {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
