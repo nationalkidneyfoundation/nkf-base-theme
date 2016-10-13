@@ -13,6 +13,12 @@
   header {
     display: none;
   }
+  legend {
+    @include when(sm) { display: none; }
+  }
+  .donation-step__inner {
+    @include when(sm) { border-top: none; }
+  }
 }
 
 // target only select pages
@@ -71,7 +77,7 @@
     }
   }
   .donation__header {
-    background-image: url(../img/logo__bean--black.png);
+    background-image: url(../img/logo__bean--white.png);
     background-repeat: no-repeat;
     background-position: 15px center;
     background-size: 60px;
@@ -120,12 +126,12 @@
   legend {
     @include grid-cell();
     width: 100%;
+    font-weight: bold;
     text-align: center;
     border-bottom-width: 0;
     padding: space(md) 0 space(md) 0;
     text-transform: uppercase;
     display: block;
-    @include when(sm) { display: none; }
   }
   input[type=checkbox]:checked+label:before,
   input[type=radio]:checked+label:before {
@@ -421,9 +427,11 @@
       //width: 50%;
     }
     .form-submit {
-      @extend .button--orange;
-      padding-top: space(md);
-      padding-bottom: space(md);
+      @extend .button--blue;
+      padding-top: space(lg);
+      padding-bottom: space(lg);
+      padding-right: space(xl);
+      padding-left: space(xl);
     }
   }
 
@@ -442,11 +450,7 @@
     //@include when(sm) { border-top: none; }
   }
   .donation-step__inner {
-    position: relative;
-    padding: space(md);
     border-top: 1px solid $gray-1;
-    @include when(sm) { padding: space(xl) space(xl) space(lg) space(xl); };
-    //@include when(sm) { border-top: none; }
   }
   // previous next
   .previous-next {
@@ -471,10 +475,10 @@
     height: base-scale(3);
     width: base-scale(3);
     line-height: base-scale(3);
-    color: $black;
+    color: color(blue);
   }
 
   .step.active {
-    background-color: $black;
+    background-color: color(blue);
   }
 }

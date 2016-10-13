@@ -4225,8 +4225,7 @@ a.color--instagram:hover {
   border-left-width: 1rem;
 }
 
-.button--orange,
-.has-donation-form .form-actions .form-submit {
+.button--orange {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -4255,48 +4254,40 @@ a.color--instagram:hover {
 }
 
 .button--orange:before,
-.has-donation-form .form-actions .form-submit:before,
-.button--orange:after,
-.has-donation-form .form-actions .form-submit:after {
+.button--orange:after {
   box-sizing: border-box;
 }
 
-.button--orange:focus,
-.has-donation-form .form-actions .form-submit:focus {
+.button--orange:focus {
   outline: 0;
 }
 
-.button--orange:hover,
-.has-donation-form .form-actions .form-submit:hover {
+.button--orange:hover {
   text-decoration: none;
   color: currentColor;
 }
 
-.button--orange:disabled,
-.has-donation-form .form-actions .form-submit:disabled {
+.button--orange:disabled {
   opacity: .5;
 }
 
-.button--orange:visited,
-.has-donation-form .form-actions .form-submit:visited {
+.button--orange:visited {
   color: #000;
 }
 
-.button--orange:hover,
-.has-donation-form .form-actions .form-submit:hover {
+.button--orange:hover {
   background-color: #f47e4e;
   color: #000;
 }
 
 .button--orange:active,
-.has-donation-form .form-actions .form-submit:active,
-.button--orange.active,
-.has-donation-form .form-actions .active.form-submit {
+.button--orange.active {
   background-color: #c14b1b;
   color: #fff;
 }
 
-.button--blue {
+.button--blue,
+.has-donation-form .form-actions .form-submit {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -4325,34 +4316,43 @@ a.color--instagram:hover {
 }
 
 .button--blue:before,
-.button--blue:after {
+.has-donation-form .form-actions .form-submit:before,
+.button--blue:after,
+.has-donation-form .form-actions .form-submit:after {
   box-sizing: border-box;
 }
 
-.button--blue:focus {
+.button--blue:focus,
+.has-donation-form .form-actions .form-submit:focus {
   outline: 0;
 }
 
-.button--blue:hover {
+.button--blue:hover,
+.has-donation-form .form-actions .form-submit:hover {
   text-decoration: none;
   color: currentColor;
 }
 
-.button--blue:disabled {
+.button--blue:disabled,
+.has-donation-form .form-actions .form-submit:disabled {
   opacity: .5;
 }
 
-.button--blue:visited {
+.button--blue:visited,
+.has-donation-form .form-actions .form-submit:visited {
   color: #fff;
 }
 
-.button--blue:hover {
+.button--blue:hover,
+.has-donation-form .form-actions .form-submit:hover {
   background-color: #4b69ac;
   color: #fff;
 }
 
 .button--blue:active,
-.button--blue.active {
+.has-donation-form .form-actions .form-submit:active,
+.button--blue.active,
+.has-donation-form .form-actions .active.form-submit {
   background-color: #183679;
   color: #fff;
 }
@@ -15121,6 +15121,18 @@ legend {
   display: none;
 }
 
+@media (min-width: 40em) {
+  .node-type-donation legend {
+    display: none;
+  }
+}
+
+@media (min-width: 40em) {
+  .node-type-donation .donation-step__inner {
+    border-top: none;
+  }
+}
+
 .has-donation-form .page.errors .donation-step {
   display: block !important;
 }
@@ -15177,7 +15189,7 @@ legend {
 }
 
 .has-donation-form .donation__header {
-  background-image: url(../img/logo__bean--black.png);
+  background-image: url(../img/logo__bean--white.png);
   background-repeat: no-repeat;
   background-position: 15px center;
   background-size: 60px;
@@ -15246,18 +15258,13 @@ legend {
   *zoom: 1;
   *display: inline;
   width: 100%;
+  font-weight: bold;
   text-align: center;
   border-bottom-width: 0;
   padding: 15px 0 15px 0;
   padding: 1rem 0 1rem 0;
   text-transform: uppercase;
   display: block;
-}
-
-@media (min-width: 40em) {
-  .has-donation-form legend {
-    display: none;
-  }
 }
 
 .has-donation-form input[type=checkbox]:checked + label:before,
@@ -15870,10 +15877,14 @@ legend {
 }
 
 .has-donation-form .form-actions .form-submit {
-  padding-top: 15px;
-  padding-top: 1rem;
-  padding-bottom: 15px;
-  padding-bottom: 1rem;
+  padding-top: 21px;
+  padding-top: 1.414rem;
+  padding-bottom: 21px;
+  padding-bottom: 1.414rem;
+  padding-right: 30px;
+  padding-right: 1.999rem;
+  padding-left: 30px;
+  padding-left: 1.999rem;
 }
 
 .has-donation-form .form-item-signup {
@@ -15881,17 +15892,7 @@ legend {
 }
 
 .has-donation-form .donation-step__inner {
-  position: relative;
-  padding: 15px;
-  padding: 1rem;
   border-top: 1px solid #EDEEEF;
-}
-
-@media (min-width: 40em) {
-  .has-donation-form .donation-step__inner {
-    padding: 30px 30px 21px 30px;
-    padding: 1.999rem 1.999rem 1.414rem 1.999rem;
-  }
 }
 
 .has-donation-form .previous-next {
@@ -15917,11 +15918,11 @@ legend {
   width: 1.999rem;
   line-height: 30px;
   line-height: 1.999rem;
-  color: #000;
+  color: #1E4497;
 }
 
 .has-donation-form .step.active {
-  background-color: #000;
+  background-color: #1E4497;
 }
 
 @media print {
