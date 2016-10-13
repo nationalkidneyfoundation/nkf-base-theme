@@ -124,7 +124,7 @@
     text-align: center;
   }
   legend {
-    @include grid-cell();
+    //@include grid-cell();
     width: 100%;
     font-weight: bold;
     text-align: center;
