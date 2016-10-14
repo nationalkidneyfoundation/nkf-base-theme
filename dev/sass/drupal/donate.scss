@@ -203,9 +203,7 @@
   .form-type-radios.form-item-field-membership-term-und > label {
     @include hide();
   }
-  .form-item-product > label {
-    display: none;
-  }
+
   #edit-product {
     @include grid();
     padding-bottom: space(md);
@@ -214,18 +212,22 @@
     > * {
       @include grid-cell();
       width: auto;
+      padding: 0 space(sm);
     }
     input {
       @include hide();
     }
     label {
       @include caps();
-      font-size: $h4;
-      padding: size(sm);
+      font-size: font-size(sm);
+      font-weight: bold;
+      padding: space(sm);
+      color: $gray-4;
       &::before { display: none; }
     }
     input:checked+label{
       border-bottom: 3px solid;
+      color: $black;
     }
   }
   #edit-donation-select,

@@ -15340,10 +15340,6 @@ legend {
   display: none !important;
 }
 
-.has-donation-form .form-item-product > label {
-  display: none;
-}
-
 .has-donation-form #edit-product {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
@@ -15367,6 +15363,8 @@ legend {
   *zoom: 1;
   *display: inline;
   width: auto;
+  padding: 0 11px;
+  padding: 0 0.707rem;
 }
 
 .has-donation-form #edit-product input {
@@ -15377,9 +15375,12 @@ legend {
   text-transform: uppercase;
   letter-spacing: 2px;
   letter-spacing: .11rem;
-  font-size: 15px;
-  font-size: 1rem;
-  padding: size(sm);
+  font-size: 11px;
+  font-size: 0.707rem;
+  font-weight: bold;
+  padding: 11px;
+  padding: 0.707rem;
+  color: #3b444f;
 }
 
 .has-donation-form #edit-product label::before {
@@ -15388,6 +15389,7 @@ legend {
 
 .has-donation-form #edit-product input:checked + label {
   border-bottom: 3px solid;
+  color: #000;
 }
 
 .has-donation-form #edit-donation-select,
