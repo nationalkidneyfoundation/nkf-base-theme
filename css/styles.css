@@ -15354,6 +15354,52 @@ legend {
   display: none;
 }
 
+.has-donation-form #edit-product {
+  letter-spacing: -0.31em;
+  *letter-spacing: normal;
+  *word-spacing: -0.43em;
+  text-rendering: optimizespeed;
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+  padding-bottom: 15px;
+  padding-bottom: 1rem;
+  width: 100%;
+  text-align: center;
+}
+
+.has-donation-form #edit-product > * {
+  display: inline-block;
+  vertical-align: top;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-rendering: auto;
+  text-align: left;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  *zoom: 1;
+  *display: inline;
+  width: auto;
+}
+
+.has-donation-form #edit-product input {
+  display: none !important;
+}
+
+.has-donation-form #edit-product label {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: .11rem;
+  font-size: 15px;
+  font-size: 1rem;
+  padding: size(sm);
+}
+
+.has-donation-form #edit-product label::before {
+  display: none;
+}
+
+.has-donation-form #edit-product input:checked + label {
+  border-bottom: 3px solid;
+}
+
 .has-donation-form #edit-donation-select,
 .has-donation-form #edit-product,
 .has-donation-form #edit-field-membership-term-und {

@@ -206,10 +206,31 @@
   .form-item-product > label {
     display: none;
   }
+  #edit-product {
+    @include grid();
+    padding-bottom: space(md);
+    width: 100%;
+    text-align: center;
+    > * {
+      @include grid-cell();
+      width: auto;
+    }
+    input {
+      @include hide();
+    }
+    label {
+      @include caps();
+      font-size: $h4;
+      padding: size(sm);
+      &::before { display: none; }
+    }
+    input:checked+label{
+      border-bottom: 3px solid;
+    }
+  }
   #edit-donation-select,
   #edit-product,
-  #edit-field-membership-term-und {//,
-  //#edit-field-member-category-und {
+  #edit-field-membership-term-und {
     @include grid();
     padding-bottom: space(lg);
     width: 100%;
