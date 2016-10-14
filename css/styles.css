@@ -4288,7 +4288,6 @@ a.color--instagram:hover {
 
 .button--blue,
 .has-donation-form #edit-donation-select input:checked + label,
-.has-donation-form #edit-product input:checked + label,
 .has-donation-form #edit-field-membership-term-und input:checked + label,
 .has-donation-form .form-actions .form-submit {
   display: inline-block;
@@ -4320,12 +4319,10 @@ a.color--instagram:hover {
 
 .button--blue:before,
 .has-donation-form #edit-donation-select input:checked + label:before,
-.has-donation-form #edit-product input:checked + label:before,
 .has-donation-form #edit-field-membership-term-und input:checked + label:before,
 .has-donation-form .form-actions .form-submit:before,
 .button--blue:after,
 .has-donation-form #edit-donation-select input:checked + label:after,
-.has-donation-form #edit-product input:checked + label:after,
 .has-donation-form #edit-field-membership-term-und input:checked + label:after,
 .has-donation-form .form-actions .form-submit:after {
   box-sizing: border-box;
@@ -4333,7 +4330,6 @@ a.color--instagram:hover {
 
 .button--blue:focus,
 .has-donation-form #edit-donation-select input:checked + label:focus,
-.has-donation-form #edit-product input:checked + label:focus,
 .has-donation-form #edit-field-membership-term-und input:checked + label:focus,
 .has-donation-form .form-actions .form-submit:focus {
   outline: 0;
@@ -4341,7 +4337,6 @@ a.color--instagram:hover {
 
 .button--blue:hover,
 .has-donation-form #edit-donation-select input:checked + label:hover,
-.has-donation-form #edit-product input:checked + label:hover,
 .has-donation-form #edit-field-membership-term-und input:checked + label:hover,
 .has-donation-form .form-actions .form-submit:hover {
   text-decoration: none;
@@ -4350,7 +4345,6 @@ a.color--instagram:hover {
 
 .button--blue:disabled,
 .has-donation-form #edit-donation-select input:checked + label:disabled,
-.has-donation-form #edit-product input:checked + label:disabled,
 .has-donation-form #edit-field-membership-term-und input:checked + label:disabled,
 .has-donation-form .form-actions .form-submit:disabled {
   opacity: .5;
@@ -4358,7 +4352,6 @@ a.color--instagram:hover {
 
 .button--blue:visited,
 .has-donation-form #edit-donation-select input:checked + label:visited,
-.has-donation-form #edit-product input:checked + label:visited,
 .has-donation-form #edit-field-membership-term-und input:checked + label:visited,
 .has-donation-form .form-actions .form-submit:visited {
   color: #fff;
@@ -4366,7 +4359,6 @@ a.color--instagram:hover {
 
 .button--blue:hover,
 .has-donation-form #edit-donation-select input:checked + label:hover,
-.has-donation-form #edit-product input:checked + label:hover,
 .has-donation-form #edit-field-membership-term-und input:checked + label:hover,
 .has-donation-form .form-actions .form-submit:hover {
   background-color: #4b69ac;
@@ -4375,12 +4367,10 @@ a.color--instagram:hover {
 
 .button--blue:active,
 .has-donation-form #edit-donation-select input:checked + label:active,
-.has-donation-form #edit-product input:checked + label:active,
 .has-donation-form #edit-field-membership-term-und input:checked + label:active,
 .has-donation-form .form-actions .form-submit:active,
 .button--blue.active,
 .has-donation-form #edit-donation-select input:checked + label.active,
-.has-donation-form #edit-product input:checked + label.active,
 .has-donation-form #edit-field-membership-term-und input:checked + label.active,
 .has-donation-form .form-actions .active.form-submit {
   background-color: #183679;
@@ -15401,7 +15391,6 @@ legend {
 }
 
 .has-donation-form #edit-donation-select,
-.has-donation-form #edit-product,
 .has-donation-form #edit-field-membership-term-und {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
@@ -15414,7 +15403,6 @@ legend {
 }
 
 .has-donation-form #edit-donation-select > *,
-.has-donation-form #edit-product > *,
 .has-donation-form #edit-field-membership-term-und > * {
   display: inline-block;
   vertical-align: top;
@@ -15431,13 +15419,11 @@ legend {
 }
 
 .has-donation-form #edit-donation-select input,
-.has-donation-form #edit-product input,
 .has-donation-form #edit-field-membership-term-und input {
   display: none !important;
 }
 
 .has-donation-form #edit-donation-select label,
-.has-donation-form #edit-product label,
 .has-donation-form #edit-field-membership-term-und label {
   display: inline-block;
   *zoom: 1;
@@ -15467,34 +15453,28 @@ legend {
 
 .has-donation-form #edit-donation-select label:before,
 .has-donation-form #edit-donation-select label:after,
-.has-donation-form #edit-product label:before,
-.has-donation-form #edit-product label:after,
 .has-donation-form #edit-field-membership-term-und label:before,
 .has-donation-form #edit-field-membership-term-und label:after {
   box-sizing: border-box;
 }
 
 .has-donation-form #edit-donation-select label:focus,
-.has-donation-form #edit-product label:focus,
 .has-donation-form #edit-field-membership-term-und label:focus {
   outline: 0;
 }
 
 .has-donation-form #edit-donation-select label:hover,
-.has-donation-form #edit-product label:hover,
 .has-donation-form #edit-field-membership-term-und label:hover {
   text-decoration: none;
   color: currentColor;
 }
 
 .has-donation-form #edit-donation-select label:disabled,
-.has-donation-form #edit-product label:disabled,
 .has-donation-form #edit-field-membership-term-und label:disabled {
   opacity: .5;
 }
 
 .has-donation-form #edit-donation-select label::before,
-.has-donation-form #edit-product label::before,
 .has-donation-form #edit-field-membership-term-und label::before {
   display: none;
 }
