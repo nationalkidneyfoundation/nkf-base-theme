@@ -15386,6 +15386,7 @@ legend {
   padding: 0.5rem;
   margin: 0;
   color: #A6AAAF;
+  border-bottom: 3px solid transparent;
 }
 
 .has-donation-form #edit-product label::before {
@@ -15393,7 +15394,7 @@ legend {
 }
 
 .has-donation-form #edit-product input:checked + label {
-  border-bottom: 3px solid;
+  border-color: #000;
   color: #000;
 }
 
