@@ -203,7 +203,11 @@
   .form-type-radios.form-item-field-membership-term-und > label {
     @include hide();
   }
+  .form-item-product > label {
+    display: none;
+  }
   #edit-donation-select,
+  #edit-product,
   #edit-field-membership-term-und {//,
   //#edit-field-member-category-und {
     @include grid();
