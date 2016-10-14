@@ -203,16 +203,18 @@
   .form-type-radios.form-item-field-membership-term-und > label {
     @include hide();
   }
-
+  .form-type-radios.form-item-product > label {
+    display: none;
+  }
   #edit-product {
     @include grid();
-    padding-bottom: space(md);
+    padding-bottom: space(sm);
     width: 100%;
     text-align: center;
     > * {
       @include grid-cell();
       width: auto;
-      padding: 0 space(sm);
+      padding: 0 space(xs);
     }
     input {
       @include hide();
@@ -221,8 +223,9 @@
       @include caps();
       font-size: font-size(sm);
       font-weight: bold;
-      padding: space(sm);
-      color: $gray-4;
+      padding: space(xs);
+      margin: 0;
+      color: $gray-3;
       &::before { display: none; }
     }
     input:checked+label{
