@@ -219,17 +219,12 @@
     }
     label {
       @include button();;
-      //padding: space(md);
       width: 100%;
-      border-color: $gray-2;// !important;
-      //color: $gray-4;
+      background-color: $gray-1;// !important;
       &::before { display: none; }
     }
     input:checked+label{
-      @extend .button--gray-2;
-      border-color: $gray-4;
-      //background-color: color(blue);
-
+      @extend .button--blue;
     }
   }
   .one-term #edit-field-membership-term-und > * {
