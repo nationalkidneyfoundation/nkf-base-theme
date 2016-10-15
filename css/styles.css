@@ -15340,6 +15340,10 @@ legend {
   display: none !important;
 }
 
+.has-donation-form .form-type-radios.form-item-product {
+  padding-top: 0;
+}
+
 .has-donation-form .form-type-radios.form-item-product > label {
   display: none;
 }
@@ -15382,8 +15386,8 @@ legend {
   font-size: 11px;
   font-size: 0.707rem;
   font-weight: bold;
-  padding: 8px;
-  padding: 0.5rem;
+  padding: 5px;
+  padding: 0.354rem;
   margin: 0;
   color: #A6AAAF;
   border-bottom: 3px solid transparent;
@@ -15394,8 +15398,8 @@ legend {
 }
 
 .has-donation-form #edit-product input:checked + label {
-  border-color: #000;
-  color: #000;
+  border-color: #1E4497;
+  color: #1E4497;
 }
 
 .has-donation-form #edit-donation-select,
