@@ -121,10 +121,10 @@
       <?php endif; ?>
 
       <div class="grid-cell sm--width--70 md--width--50 width--100">
-        <div class="donation__container center text-align--left">
-          <div class="text-align--center">
+        <div class="donation__container">
+          <div class="donation__header padding-y--md color--white  bg--orange text-align--center">
             <?php print render($title_prefix); ?>
-            <h2 <?php print $title_attributes; ?>><?php print $title; ?></h2>
+            <h2 class="node-title font-size--lg"><?php print $title; ?></h2>
             <?php print render($title_suffix); ?>
             <?php if (isset($content['field_donation_tag_line'])): ?>
               <div class="padding-bottom--md"><?php print render($content['field_donation_tag_line']); ?></div>

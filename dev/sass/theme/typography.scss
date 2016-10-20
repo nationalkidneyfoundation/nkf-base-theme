@@ -13,7 +13,7 @@ a {
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: $heading-font-family;
   font-weight: $heading-font-weight;
@@ -47,6 +47,10 @@ h6, .h6 {
 p {
   margin: 0;
   padding: space(md) 0;
+  max-width: 37rem;
+}
+ul, ol {
+  max-width: 37rem;
 }
 
 @each $name, $size in $font-sizes {
@@ -69,10 +73,9 @@ p {
 
 @mixin caps {
   text-transform: uppercase;
-  letter-spacing: .2rem;
+  letter-spacing: .11rem;
 }
 
 .caps {
-  text-transform: uppercase;
-  letter-spacing: .2rem;
+  @include caps();
 }

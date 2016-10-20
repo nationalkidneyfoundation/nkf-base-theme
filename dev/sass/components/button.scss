@@ -8,10 +8,10 @@
   line-height: normal;
   padding: space(xs) space(md);
   height: auto;
-  border-width: border-width(xs);
+  border-width: 0;//border-width(xs);
   border-style: solid;
   vertical-align: middle;
-  border-radius: border-width(md);
+  border-radius: 1000px;//border-width(md);
   vertical-align: middle;
   text-align: center;
   font-weight: 400;

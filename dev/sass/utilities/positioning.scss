@@ -18,7 +18,48 @@
 .cover-absolute {
   @include cover-absolute();
 }
-
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--cover-absolute {
+      @include cover-absolute();
+    }
+  }
+}
 .cover-fixed {
   @include cover-fixed();
+}
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--cover-fixed {
+      @include cover-fixed();
+    }
+  }
+}
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.left {
+  left: 0;
+}
+.right {
+  right: 0;
+}
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--top {
+      top: 0;
+    }
+    .#{$bp}--bottom {
+      bottom: 0;
+    }
+    .#{$bp}--left {
+      left: 0;
+    }
+    .#{$bp}--right {
+      right: 0;
+    }
+  }
 }

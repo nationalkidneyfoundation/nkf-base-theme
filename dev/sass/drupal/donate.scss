@@ -7,18 +7,17 @@
   h1 {
     display: none;
   }
-  .node-title {
-    font-size: font-size(xl);
-    font-weight: normal;
-    margin: 0 0 space(md);
-    text-align: center;
-    background: url(../img/logo__bean--orange.png) no-repeat space(xs) center;
-  }
   .donation__container {
-    background-color: rgba(255, 255, 255, .35);
-    max-width: 450px;
-    padding: space(xl) 0;
-    @include when(sm) { padding: space(lg); }
+    max-width: 430px;
+  }
+  header {
+    display: none;
+  }
+  legend {
+    @include when(sm) { display: none; }
+  }
+  .donation-step__inner {
+    @include when(sm) { border-top: none; }
   }
 }
 
@@ -38,7 +37,6 @@
 
   // Header and Logo
   header {
-    display: none;
     background-color: $white;
     text-align: center;
     .container {
@@ -77,15 +75,20 @@
       display: none !important;
     }
   }
-
+  .donation__header {
+    background-image: url(../img/logo__bean--white.png);
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 60px;
+  }
 
   // donation form
   [id*="redhen-donation-form"] {
     position: relative;
     width: 100%;
-    max-width: 450px;
+    max-width: 500px;
     background-color: $white;
-    padding: space(md) 0;
+    padding-bottom: space(xl);
   }
 
   .form-item label {
@@ -120,8 +123,9 @@
     text-align: center;
   }
   legend {
-    @include grid-cell();
+    //@include grid-cell();
     width: 100%;
+    font-weight: bold;
     text-align: center;
     border-bottom-width: 0;
     padding: space(md) 0 space(md) 0;
@@ -194,19 +198,48 @@
   }
   .amount-options {
     @include grid();
-    .active {
-      background-color: lighten(color(blue), 40%);
-      border-color: lighten(color(blue), 40%);
-    }
   }
 
   // if donation amount is select or other field
   .form-type-radios.form-item-field-membership-term-und > label {
     @include hide();
   }
+  .form-type-radios.form-item-product {
+    padding-top: 0;
+    > label {
+      display: none;
+    }
+  }
+  #edit-product {
+    @include grid();
+    padding-bottom: space(sm);
+    width: 100%;
+    text-align: center;
+    > * {
+      @include grid-cell();
+      width: auto;
+      padding: 0 space(xs);
+    }
+    input {
+      @include hide();
+    }
+    label {
+      @include caps();
+      font-size: font-size(sm);
+      font-weight: bold;
+      padding: space(xxs);
+      margin: 0;
+      color: $gray-3;
+      border-bottom: 3px solid transparent;
+      &::before { display: none; }
+    }
+    input:checked+label{
+      border-color: color(blue);
+      color: color(blue);
+    }
+  }
   #edit-donation-select,
-  #edit-field-membership-term-und {//,
-  //#edit-field-member-category-und {
+  #edit-field-membership-term-und {
     @include grid();
     padding-bottom: space(lg);
     width: 100%;
@@ -220,17 +253,12 @@
     }
     label {
       @include button();;
-      //padding: space(md);
       width: 100%;
-      border-color: $gray-2;// !important;
-      //color: $gray-4;
+      background-color: $gray-1;// !important;
       &::before { display: none; }
     }
     input:checked+label{
-      @extend .button--gray-2;
-      border-color: $gray-4;
-      //background-color: color(blue);
-
+      @extend .button--blue;
     }
   }
   .one-term #edit-field-membership-term-und > * {
@@ -243,7 +271,7 @@
 
 
   // contact information
-  #edit-redhen-contact {
+  #edit-redhen-contact .fieldset-content{
     @include grid();
   }
   #edit-name {
@@ -359,7 +387,7 @@
     .progress {
       position: absolute;
       z-index: 100;
-      padding-right: space(md);
+      padding: 0 space(lg);
     }
   }
   .commerce-paypal-ec-info {
@@ -424,13 +452,14 @@
     @include grid();
     > * {
       @include grid-cell();
-      width: 50%;
+      //width: 50%;
     }
     .form-submit {
       @extend .button--blue;
-      padding: space(lg);
-      //text-transform: uppercase;
-
+      padding-top: space(lg);
+      padding-bottom: space(lg);
+      padding-right: space(xl);
+      padding-left: space(xl);
     }
   }
 
@@ -449,19 +478,15 @@
     //@include when(sm) { border-top: none; }
   }
   .donation-step__inner {
-    position: relative;
-    padding: space(md) space(md) space(xl) space(md);
     border-top: 1px solid $gray-1;
-    @include when(sm) { padding: 0 space(lg) space(xl) space(lg); };
-    //@include when(sm) { border-top: none; }
   }
   // previous next
   .previous-next {
     display: none;
     text-align: center;
     @include when(sm) { display: block !important; }
-    margin: 0 space(md) space(lg) space(md);
-    @include when(md) { margin: space(lg) space(xl)  };
+    //margin: 0 space(md) space(lg) space(md);
+    //@include when(md) { margin: space(lg) space(xl)  };
   }
   .next {
     //@extend .button--blue;
@@ -474,29 +499,14 @@
     position: absolute;
     top: 0;
     left: 0;
-    padding: space(sm);
+    padding: space(xxs) space(sm);
     height: base-scale(3);
     width: base-scale(3);
     line-height: base-scale(3);
-    color: $gray-3;
+    color: color(blue);
   }
-  .steps {
-    @include grid();
-    text-align: center;
-    background-color: $white;
-  }
-  .step {
-    @include grid-cell();
-    border-radius: 100%;
-    margin: space(sm) 0;
-    height: base-scale(3);
-    width: base-scale(3);
-    line-height: base-scale(3);
-    text-align: center;
-  }
+
   .step.active {
-    padding: base-scale(md);
-    background-color: $gray-1;
-    color: black;
+    background-color: color(blue);
   }
 }

@@ -33,7 +33,7 @@ $scale: (
 }
 
 // Typography
-$font-size: 15px !default;
+$font-size: 16px !default;
 $font-family: 'Open Sans', 'Helvetica Neue', Helvetica, sans-serif !default;
 $line-height: 1.5 !default;
 $heading-font-family: $font-family !default;
@@ -77,14 +77,24 @@ $colors: (
   , green:      #018241
   , lime:       #91AE3C
   , sienna:     #9E2420
+  , white:      #FFFFFF
+  , gray-1:     #EDEEEF
+  , gray-2:     #DBDDDF
+  , gray-3:     #A6AAAF
+  , gray-4:     #3b444f
+  , gray-5:     #363E48
+  , black:      #111
+  , twitter:    #4099FF
+  , facebook:   #3b5998
+  , instagram:  #e95950
 ) !default;
 
 $white: #fff !default;
-$gray-1: #eee !default;
-$gray-2: #ccc !default;
-$gray-3: #bbb !default;
-$gray-4: #777 !default;
-$gray-5: #333 !default;
+$gray-1: #EDEEEF !default;
+$gray-2: #DBDDDF !default;
+$gray-3: #A6AAAF !default;
+$gray-4: #3b444f !default;
+$gray-5: #363E48 !default;
 $black: #000 !default;
 
 $twitter: #4099FF !default;
@@ -155,7 +165,7 @@ $heights: (
   , 'xxs': base-scale(-1)
   , 'xs': base-scale(1)
   , 'sm': base-scale(3)
-  , 'md': base-scale(5)
+  , 'md': base-scale(6)
   , 'lg': base-scale(9)
   , 'xl': base-scale(10)
   , 'xxl': base-scale(11)
@@ -208,4 +218,26 @@ $breakpoints: (
 // helper functions
 @function strip-units($number) {
   @return ($number / ($number * 0 + 1)) / 100;
+}
+
+//https://codepen.io/bluesaunders/pen/FCLaz/?editors=1100
+// Calculeate brightness of a given color.
+@function brightness($color) {
+  @return ((red($color) * .299) + (green($color) * .587) + (blue($color) * .114)) / 255 * 100%;
+}
+
+
+
+// Compares contrast of a given color to the light/dark arguments and returns whichever is most "contrasty"
+@function color-contrast($color, $dark: $black, $light: $white) {
+  @if $color == null {
+    @return null;
+  }
+  @else {
+    $color-brightness: brightness($color);
+    $light-text-brightness: brightness($light);
+    $dark-text-brightness: brightness($dark);
+
+    @return if(abs($color-brightness - $light-text-brightness) > abs($color-brightness - $dark-text-brightness), $light, $dark);
+  }
 }

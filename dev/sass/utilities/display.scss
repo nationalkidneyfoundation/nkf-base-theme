@@ -1,0 +1,16 @@
+
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--display {
+      &--none         { display: none !important; }
+      &--block        { display: block !important; }
+      &--inline       { display: inline !important; }
+      &--inline-block { display: inline-block !important; *display: inline !important; zoom: 1}
+      &--inline-table { display: inline-table !important; }
+      &--table        { display: table !important; }
+      &--table-cell   { display: table-cell !important; }
+      &--table-column { display: table-column !important; }
+      &--table-row    { display: table-row !important; }
+    }
+  }
+}
