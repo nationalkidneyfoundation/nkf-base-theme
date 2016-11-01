@@ -14,7 +14,8 @@ var nkf_base_init = function($) {
   // utility for general modal selection
   $('.modal-trigger').magnificPopup({
     type:'inline',
-    midClick: true
+    midClick: true,
+    focus: 'input'
   });
 
   // general print utility

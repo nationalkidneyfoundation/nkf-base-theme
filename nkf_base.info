@@ -19,6 +19,9 @@ regions[page_bottom]        = Page bottom
 regions[highlighted]        = Highlighted
 regions[top_menu]           = Top Menu
 regions[navigation]         = Main Navigation
+regions[navigation_search]  = Navigation Search
+regions[main_cta]           = Main CTA
+regions[id_band]            = ID Band
 
 ; Stylesheets =================================================================
 
