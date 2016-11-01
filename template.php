@@ -122,9 +122,6 @@ function nkf_base_preprocess_page(&$vars) {
       (isset($vars['node']->field_membership_donation_type) && isset($vars['node']->field_membership_donation_type[LANGUAGE_NONE][0]['redhen_donation_type']))
       )
     ) {
-      print '<pre>';
-      print_r(array_keys((array) $vars['node']));
-      print '</pre>';
       $page_classes[] = 'has-donation-form';
   }
 
