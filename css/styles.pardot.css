@@ -666,7 +666,7 @@ select:not([multiple]) {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -677,7 +677,7 @@ select:not([multiple]) {
 }*/
 
 .grid-cell {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .center,
@@ -9252,7 +9252,7 @@ html {
 }
 
 body {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 100%;
 }
@@ -9273,7 +9273,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   line-height: 1.25;
   padding: 0;
