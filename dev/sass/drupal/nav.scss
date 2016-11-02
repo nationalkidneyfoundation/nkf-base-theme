@@ -1,5 +1,27 @@
-
+nav {
+  .nav__navigation {
+    .grid-cell {
+      @include when(md) { width: auto; }
+      text-align: center;
+    }
+    a {
+      @include caps();
+      padding: space(md) space(sm);
+      color: color(white);
+      display: block;
+    }
+  }
+  .burger-time {
+    a {
+      @include caps();
+      padding: space(xs) space(md);
+      color: color(white);
+      display: block;
+    }
+  }
+}
 .nav {
+
   .menu {
     //@include grid();
     margin: 0;

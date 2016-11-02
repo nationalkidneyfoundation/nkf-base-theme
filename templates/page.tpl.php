@@ -59,7 +59,7 @@
         <section class="main__title">
           <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print render($title_prefix); ?>
-            <h1 class="font-size--xxl md--font-size--xxxl"><?php print $title ?></h1>
+            <h1 class="font-size--xl sm--font-size--xxl padding-bottom--none"><?php print $title ?></h1>
             <?php print render($title_suffix); ?>
           </div>
         </section>
@@ -98,13 +98,13 @@
       <div class="container padding-top--xl padding-bottom--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg position--relative z-index--1">
         <div class="grid">
           <?php if ($page['sidebar_first']): ?>
-            <div class="grid-cell width--25"><?php print render($page['sidebar_first']) ?></div>
+            <div class="grid-cell sm--width--25 width--100"><?php print render($page['sidebar_first']) ?></div>
           <?php endif; ?>
-          <div class="grid-cell sm--padding-right--md <?php print ($columns > 1)? 'width--50' : 'width--100'; ?>">
+          <div class="grid-cell sm--padding-right--md <?php print ($columns > 1)? 'sm--width--60 width--100' : 'width--100'; ?>">
             <div id="content" class="clearfix"><?php print render($page['content']) ?></div>
           </div>
           <?php if ($page['sidebar_second']): ?>
-            <div class="grid-cell width--25 px2"><?php print render($page['sidebar_second']) ?></div>
+            <div class="grid-cell sm--width--25 width--100 sm--padding-left--md"><?php print render($page['sidebar_second']) ?></div>
           <?php endif; ?>
         </div>
       </div>

@@ -117,9 +117,9 @@ function nkf_base_preprocess_page(&$vars) {
   if (
     !empty($vars['node'])
     && (
-      (isset($vars['node']->field_donation_type) && isset($vars['node']->field_donation_type[LANGUAGE_NONE][0]['redhen_donation_type']))
+      (isset($vars['node']->field_donation_type) && !empty($vars['node']->field_donation_type[LANGUAGE_NONE][0]['redhen_donation_type']))
       ||
-      (isset($vars['node']->field_membership_donation_type) && isset($vars['node']->field_membership_donation_type[LANGUAGE_NONE][0]['redhen_donation_type']))
+      (isset($vars['node']->field_membership_donation_type) && !empty($vars['node']->field_membership_donation_type[LANGUAGE_NONE][0]['redhen_donation_type']))
       )
     ) {
       $page_classes[] = 'has-donation-form';

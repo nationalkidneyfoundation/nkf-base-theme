@@ -8,7 +8,7 @@
  */
 ?>
 <header class="width--100 bg--orange color--white font-size--sm">
-  <div class="container">
+  <nav class="container">
     <div class="display--table width--100">
       <div class="display--table-cell width--100 vertical-align--middle padding-left--md">
         <a href="/" id="logo" class="display--inline-block vertical-align--middle padding-x--md">
@@ -71,9 +71,9 @@
         <?php endif; ?>
     </div>
     <div class="position--absolute right z-index--200">
-      <div class="burger-time hide  grid-cell bg--orange--l1 max-width--xl width--100">
+      <div class="burger-time hide font-size--md grid-cell bg--orange--l1 max-width--xl width--100">
         <?php print render($page['navigation']); ?>
       </div>
     </div>
-  </div>
+  </nav>
 </header>

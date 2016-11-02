@@ -9326,12 +9326,9 @@ p {
   margin: 0;
   padding: 15px 0;
   padding: 1rem 0;
-  max-width: 555px;
-  max-width: 37rem;
 }
 
-ul,
-ol {
+.prose {
   max-width: 555px;
   max-width: 37rem;
 }

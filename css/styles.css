@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -13362,12 +13364,9 @@ p {
   margin: 0;
   padding: 15px 0;
   padding: 1rem 0;
-  max-width: 555px;
-  max-width: 37rem;
 }
 
-ul,
-ol {
+.prose {
   max-width: 555px;
   max-width: 37rem;
 }
@@ -13747,6 +13746,69 @@ ol {
   letter-spacing: 2px;
   letter-spacing: .11rem;
 }
+
+/*
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../font/Graphik-Regular-Web.eot');
+  src: url('../font/Graphik-Regular-Web.eot?#iefix') format('embedded-opentype'),
+     url('../font/Graphik-Regular-Web.woff') format('woff'),
+     url('../font/Graphik-Regular-Web.ttf') format('truetype'),
+     url('../font/Graphik-Regular-Web.svg#Graphik Web') format('svg');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+@font-face {
+  font-family: 'Graphik Web';
+  src: url('../font/Graphik-Bold-Web.eot');
+  src: url('../font/Graphik-Bold-Web.eot?#iefix') format('embedded-opentype'),
+     url('../font/Graphik-Bold-Web.woff') format('woff'),
+     url('../font/Graphik-Bold-Web.ttf') format('truetype'),
+     url('../font/Graphik-Bold-Web.svg#Graphik Web') format('svg');
+  font-weight:  800;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: font-url('Graphik-Regular-Web.eot');
+  src: font-url('Graphik-Regular-Web.eot?#iefix') format('embedded-opentype'),
+     font-url('Graphik-Regular-Web.woff') format('woff'),
+     font-url('Graphik-Regular-Web.ttf') format('truetype'),
+     font-url('Graphik-Regular-Web.svg#Graphik Web') format('svg');
+  font-weight:  400;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: font-url('Graphik-RegularItalic-Web.eot');
+  src: font-url('Graphik-RegularItalic-Web.eot?#iefix') format('embedded-opentype'),
+     font-url('Graphik-RegularItalic-Web.woff') format('woff'),
+     font-url('Graphik-RegularItalic-Web.ttf') format('truetype'),
+     font-url('Graphik-RegularItalic-Web.svg#Graphik Web') format('svg');
+  font-weight:  400;
+  font-style:   italic;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: 'Graphik Web';
+  src: font-url('Graphik-Bold-Web.eot');
+  src: font-url('Graphik-Bold-Web.eot?#iefix') format('embedded-opentype'),
+     font-url('Graphik-Bold-Web.woff') format('woff'),
+     font-url('Graphik-Bold-Web.ttf') format('truetype'),
+     font-url('Graphik-Bold-Web.svg#Graphik Web') format('svg');
+  font-weight:  800;
+  font-style:   normal;
+  font-stretch: normal;
+}
+
+*/
 
 table {
   width: 100%;
@@ -15935,6 +15997,36 @@ legend {
 
 .radio--button .form-type-radio label::before {
   display: none !important;
+}
+
+nav .nav__navigation .grid-cell {
+  text-align: center;
+}
+
+@media (min-width: 52em) {
+  nav .nav__navigation .grid-cell {
+    width: auto;
+  }
+}
+
+nav .nav__navigation a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: .11rem;
+  padding: 15px 11px;
+  padding: 1rem 0.707rem;
+  color: #FFFFFF;
+  display: block;
+}
+
+nav .burger-time a {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  letter-spacing: .11rem;
+  padding: 8px 15px;
+  padding: 0.5rem 1rem;
+  color: #FFFFFF;
+  display: block;
 }
 
 .nav .menu {
