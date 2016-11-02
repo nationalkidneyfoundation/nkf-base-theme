@@ -17204,3 +17204,8 @@ nav .burger-time a {
   padding: 15px;
   padding: 1rem;
 }
+
+.sidebar > * {
+  margin-bottom: 42px;
+  margin-bottom: 2.827rem;
+}
