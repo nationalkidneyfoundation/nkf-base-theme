@@ -9616,84 +9616,94 @@ ol {
   }
 }
 
-.xs--text-align--left {
-  text-align: left;
+@media (min-width: 20em) {
+  .xs--text-align--left {
+    text-align: left;
+  }
+
+  .xs--text-align--center {
+    text-align: center;
+  }
+
+  .xs--text-align--right {
+    text-align: right;
+  }
+
+  .xs--text-align--inherit {
+    text-align: inherit;
+  }
 }
 
-.xs--text-align--center {
-  text-align: center;
+@media (min-width: 40em) {
+  .sm--text-align--left {
+    text-align: left;
+  }
+
+  .sm--text-align--center {
+    text-align: center;
+  }
+
+  .sm--text-align--right {
+    text-align: right;
+  }
+
+  .sm--text-align--inherit {
+    text-align: inherit;
+  }
 }
 
-.xs--text-align--right {
-  text-align: right;
+@media (min-width: 52em) {
+  .md--text-align--left {
+    text-align: left;
+  }
+
+  .md--text-align--center {
+    text-align: center;
+  }
+
+  .md--text-align--right {
+    text-align: right;
+  }
+
+  .md--text-align--inherit {
+    text-align: inherit;
+  }
 }
 
-.xs--text-align--inherit {
-  text-align: inherit;
+@media (min-width: 64em) {
+  .lg--text-align--left {
+    text-align: left;
+  }
+
+  .lg--text-align--center {
+    text-align: center;
+  }
+
+  .lg--text-align--right {
+    text-align: right;
+  }
+
+  .lg--text-align--inherit {
+    text-align: inherit;
+  }
 }
 
-.sm--text-align--left {
-  text-align: left;
-}
+@media (min-width: 75em) {
+  .xl--text-align--left {
+    text-align: left;
+  }
 
-.sm--text-align--center {
-  text-align: center;
-}
+  .xl--text-align--center {
+    text-align: center;
+  }
 
-.sm--text-align--right {
-  text-align: right;
-}
+  .xl--text-align--right {
+    text-align: right;
+  }
 
-.sm--text-align--inherit {
-  text-align: inherit;
-}
-
-.md--text-align--left {
-  text-align: left;
-}
-
-.md--text-align--center {
-  text-align: center;
-}
-
-.md--text-align--right {
-  text-align: right;
-}
-
-.md--text-align--inherit {
-  text-align: inherit;
-}
-
-.lg--text-align--left {
-  text-align: left;
-}
-
-.lg--text-align--center {
-  text-align: center;
-}
-
-.lg--text-align--right {
-  text-align: right;
-}
-
-.lg--text-align--inherit {
-  text-align: inherit;
-}
-
-.xl--text-align--left {
-  text-align: left;
-}
-
-.xl--text-align--center {
-  text-align: center;
-}
-
-.xl--text-align--right {
-  text-align: right;
-}
-
-.xl--text-align--inherit {
-  text-align: inherit;
+  .xl--text-align--inherit {
+    text-align: inherit;
+  }
 }
 
 .caps {
