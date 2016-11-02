@@ -29,7 +29,7 @@ var pngquant      = require('imagemin-pngquant');
 // Paths
 var paths = {
   index:              './templates/index.jade'
-  , style:            './sass/styles.scss'
+  , style:            './sass/styles*.scss'
   , styles:           './sass/**/*.scss'
   , styleMin:         './styles.min.css'
   , stylesDistDir:    '../css'
@@ -92,7 +92,7 @@ gulp.task('css-build', function () {
     .pipe(size({gzip: true, showFiles: true, title:'Raw gzipped css'}))
     .pipe(gulp.dest(paths.stylesDistDir))
     .pipe(cssMinify())
-    .pipe(rename(paths.styleMin))
+    .pipe(rename({suffix: '.min'}))
     .pipe(size({gzip: false, showFiles: true, title:'Min css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Min gzipped css'}))
     .pipe(gulp.dest(paths.stylesDistDir))
