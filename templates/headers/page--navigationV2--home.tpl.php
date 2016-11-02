@@ -30,7 +30,7 @@
 <?php if (!empty($page['navigation'])) : ?>
 <nav class="bg--orange--l1">
   <div class="container font-size--sm text-align--center ">
-    <div class="grid md--display--inline-block display--none width--100 color--white text-align--center center">
+    <div class="nav__navigation grid md--display--inline-block display--none width--100 color--white text-align--center center">
       <?php print render($page['navigation']); ?>
       <?php if (!empty($page['navigation_search']) || TRUE) : ?>
         <div class="grid-cell md--width--auto vertical-align--middle">
