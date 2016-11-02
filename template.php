@@ -68,6 +68,7 @@ function nkf_base_preprocess_page(&$vars) {
   }
 
   $microsites = array(
+    //'scm' => '2017 Spring Clinical Meetings',
     'spring-clinical' => '2017 Spring Clinical Meetings',
     //'kidneycars' => 'Kidney Cars'
   );
@@ -375,6 +376,9 @@ function nkf_base_menu_tree__menu_scm_new($variables) {
 function nkf_base_menu_tree__menu_scm_cta($variables) {
   return $variables['tree'];
 }
+function nkf_base_menu_tree__menu_scm_primary_nav($variables) {
+  return $variables['tree'];
+}
 
 /*
 function nkf_base_menu_tree__sub_menu($variables) {
@@ -401,11 +405,11 @@ function nkf_base_menu_link(array $variables) {
     $sub_menu = drupal_render($element ['#below']);
   }
 
-  if ($element ['#original_link']['menu_name'] == 'menu-scm-new') {
-    $element ['#localized_options']['attributes']['class'][] = 'padding-y--md padding-x--sm caps color--white display--block';
+  if ($element ['#original_link']['menu_name'] == 'menu-scm-new' || $element ['#original_link']['menu_name'] == 'menu-scm-primary-nav') {
+    $element ['#localized_options']['attributes']['class'][] = 'padding-y--xxs';
     $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
-    $element ['#attributes']['class'][] = 'grid-cell md--width--auto width--100  text-align--center vertical-align--middle';
-    return '<div' . drupal_attributes($element ['#attributes']) . '>' . $output . $sub_menu . "</div>\n";
+    $element ['#attributes']['class'][] = 'grid-cell width--100 vertical-align--middle';
+    return '<div' . drupal_attributes($element ['#attributes']) . '>' . $output . "</div>\n";
   }
   if ($element ['#original_link']['menu_name'] == 'menu-scm-cta') {
     $element ['#localized_options']['attributes']['class'][] = 'button--mustard caps';
