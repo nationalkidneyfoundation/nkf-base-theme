@@ -30,8 +30,8 @@
 
 
 <?php if ($video_embed): ?>
-  <div id="<?php print $random; ?>" class="modal--full padding--xl mfp-hide">
-    <div class="max-width--xxxl center">
+  <div id="<?php print $random; ?>" class="modal bg--white padding--xl mfp-hide">
+    <div class="max-width--xxxl padding--lg center">
       <div class="video-wrapper"><?php print $video_embed; ?></div>
     </div>
   </div>
