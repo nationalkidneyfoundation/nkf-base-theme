@@ -30,7 +30,7 @@ function nkf_base_form_alter(&$form, &$form_state, $form_id) {
       );
       $form['submit']['#attributes'] =
         array(
-          'class' => array('width--100', 'button--orange'),
+          'class' => array('width--100', 'button--gray-4'),
       );
     }
   }

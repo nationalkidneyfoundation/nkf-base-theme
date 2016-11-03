@@ -22,23 +22,13 @@ a:hover {
   a.color--#{$name}:hover {
     color: $color;
   }
-  .color--#{$name}--l1,
-  .#{$name}--l1 {
-    color: lighten($color, 10%);
-  }
-  .color--#{$name}--l2,
-  .#{$name}--l2 {
-    color: lighten($color, 20%);
-  }
-  .color--#{$name}--d1,
-  .#{$name}--d1 {
-    color: darken($color, 10%);
-  }
-  .color--#{$name}--d2,
-  .#{$name}--d2 {
-    color: darken($color, 20%);
-  }
   .hover {
+    &--color--#{$name}:hover,
+    &--#{$name}:hover {
+      color: $color;
+    }
+  }
+  a.hover {
     &--color--#{$name}:hover,
     &--#{$name}:hover {
       color: $color;

@@ -37,7 +37,7 @@
     <?php endif; ?>
   </div>
 
-  <div class="sm--display--table-cell display--block sm--width--auto width--100 sm--padding-x--lg">
+  <div class="sm--display--table-cell display--block sm--width--auto width--100 sm--padding--md">
     <?php print $button; ?>
   </div>
 </div>

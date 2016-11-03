@@ -3,7 +3,7 @@
   //@include when(md) { width: 500px; }
   //@include when(sm) { width: 350px; }
   &.error {
-    border: solid $gray-2 border-width(xs);
+    border: solid $gray-3 border-width(xs) !important;
     color: $black;
   }
 }
