@@ -16570,6 +16570,10 @@ nav .nav__navigation a {
   display: block;
 }
 
+nav .nav__navigation a.search {
+  padding: 0;
+}
+
 nav .burger-time a {
   text-transform: uppercase;
   letter-spacing: 2px;

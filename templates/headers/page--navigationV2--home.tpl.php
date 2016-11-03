@@ -34,7 +34,7 @@
       <?php print render($page['navigation']); ?>
       <?php if (!empty($page['navigation_search']) || TRUE) : ?>
         <div class="grid-cell md--width--auto vertical-align--middle">
-          <a href="#search-modal" class="modal-trigger padding-x--xs caps color--white display--block">
+          <a href="#search-modal" class="search modal-trigger padding-x--xs caps color--white display--block">
             <button class="button--orange"><i class="icon-search"></i> <span class="caps">Search</span></button>
           </a>
         </div>
