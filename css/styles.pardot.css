@@ -476,7 +476,6 @@ input[type="submit"],
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -3920,7 +3919,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -3981,7 +3979,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4042,7 +4039,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4103,7 +4099,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4164,7 +4159,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4225,7 +4219,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4286,7 +4279,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4347,7 +4339,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4408,7 +4399,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4469,7 +4459,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4530,7 +4519,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4591,7 +4579,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4652,7 +4639,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4713,7 +4699,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4774,7 +4759,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4835,7 +4819,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4896,7 +4879,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -4957,7 +4939,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -5018,7 +4999,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -5079,7 +5059,6 @@ a.color--instagram:hover {
   border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
-  font-weight: 400;
   z-index: 2;
   line-height: normal;
   box-sizing: border-box;
@@ -9329,8 +9308,8 @@ p {
 }
 
 .prose {
-  max-width: 555px;
-  max-width: 37rem;
+  max-width: 630px;
+  max-width: 42rem;
 }
 
 .font-size--xs {

@@ -98,13 +98,13 @@
       <div class="container padding-top--xl padding-bottom--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg position--relative z-index--1">
         <div class="grid">
           <?php if ($page['sidebar_first']): ?>
-            <div class="grid-cell sm--width--25 width--100"><?php print render($page['sidebar_first']) ?></div>
+            <div class="sidebar grid-cell sm--width--25 width--100"><?php print render($page['sidebar_first']) ?></div>
           <?php endif; ?>
           <div class="grid-cell sm--padding-right--md <?php print ($columns > 1)? 'sm--width--60 width--100' : 'width--100'; ?>">
             <div id="content" class="clearfix"><?php print render($page['content']) ?></div>
           </div>
           <?php if ($page['sidebar_second']): ?>
-            <div class="grid-cell sm--width--25 width--100 sm--padding-left--md"><?php print render($page['sidebar_second']) ?></div>
+            <div class="sidebar grid-cell sm--width--25 width--100 sm--padding-left--md"><?php print render($page['sidebar_second']) ?></div>
           <?php endif; ?>
         </div>
       </div>

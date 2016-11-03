@@ -5,13 +5,13 @@
   background-repeat: no-repeat;
   height: 50px;
   width: 50px;
-  @include when(md) { width: 300px; }
-  @include when(md) { background-image: url(../logo.png); }
+  @include when(sm) { width: 300px; }
+  @include when(sm) { background-image: url(../logo.png); }
   background-image: url(../img/logo__bean--white.png);
 
   // Spring Clinical 2017
   &.scm, &.spring-clinical {
-    @include when(md) { background-image: url(../img/SCM17_Lockup_w.png); }
+    //@include when(md) { background-image: url(../img/SCM17_Lockup_w.png); }
     background-image: url(../img/SCM17_Lockup_w.png);
     height: 110px;
     width: 100%;

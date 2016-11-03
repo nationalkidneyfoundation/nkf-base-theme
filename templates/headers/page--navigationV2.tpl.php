@@ -7,7 +7,7 @@
  * Available variables:
  */
 ?>
-<header class="width--100 bg--orange color--white font-size--sm">
+<header class="width--100 bg--orange color--white bold">
   <nav class="container">
     <div class="display--table width--100">
       <div class="display--table-cell width--100 vertical-align--middle padding-left--md">
@@ -15,15 +15,6 @@
         </a>
       </div>
       <div class="display--table-cell vertical-align--middle width--auto">
-        <!--<a href="#" class="display--inline-block md--padding-y--xl padding-y--lg padding-x--xs white-space--nowrap color--white">
-          <div class="md--show">
-            <i class="icon-menu"></i>
-            <span class="caps">Menu</span>
-          </div>
-          <div class="md--hide font-size--md">
-            <i class="icon-menu"></i>
-          </div>
-        </a>-->
         <a href="#" class="display--block white-space--nowrap color--white" data-toggle="class" data-target=".burger-time" data-class="hide">
           <div class="burger-time md--padding-y--xl padding-y--lg padding-x--xs">
             <div class="md--show">
