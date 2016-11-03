@@ -1,5 +1,9 @@
 .form-item-search input {
   height: 4rem;
-  @include when(md) { width: 500px; }
-  @include when(sm) { width: 350px; }
+  //@include when(md) { width: 500px; }
+  //@include when(sm) { width: 350px; }
+  &.error {
+    border: solid $gray-2 border-width(xs);
+    color: $black;
+  }
 }

@@ -24,7 +24,7 @@ function nkf_base_form_alter(&$form, &$form_state, $form_id) {
   if($form_id == 'views_exposed_form'){// && $form['#id'] == 'views-exposed-form-search-results-subsection-page') {
     $view = $form_state['view'];
     if ($view->name == 'search_results_subsection') {
-      $form['solr-keywords']['#attributes'] =
+      $form['search']['#attributes'] =
         array(
           'class' => array('width--100'),
       );

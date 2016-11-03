@@ -17667,16 +17667,9 @@ nav .burger-time a {
   height: 4rem;
 }
 
-@media (min-width: 52em) {
-  .form-item-search input {
-    width: 500px;
-  }
-}
-
-@media (min-width: 40em) {
-  .form-item-search input {
-    width: 350px;
-  }
+.form-item-search input.error {
+  border: solid #DBDDDF 1px;
+  color: #000;
 }
 
 .page-professionals .header {
