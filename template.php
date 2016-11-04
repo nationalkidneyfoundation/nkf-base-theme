@@ -61,7 +61,7 @@ function nkf_base_preprocess_page(&$vars) {
   $page_classes = array('page');
   $vars['home'] = '';
   // lets see if we are on a professionals page and add classes
-  $alias = drupal_get_path_alias();
+  $alias = strtolower(drupal_get_path_alias());
   if (strpos($alias, 'professionals/membership') !== false) {
     $page_classes[] = 'page-professionals';
     $page_classes[] = 'page-professionals-membership';
@@ -72,7 +72,9 @@ function nkf_base_preprocess_page(&$vars) {
     'spring-clinical' => '2017 Spring Clinical Meetings',
     //'kidneycars' => 'Kidney Cars'
   );
-
+  if ($alias == 'support' && $alias == 'support-nkf') {
+    $vars['v2'] = TRUE;
+  }
   foreach ($microsites as $key => $value) {
     if (strpos($alias, $key) !== false) {
       $vars['v2'] = TRUE;
