@@ -90,7 +90,8 @@
         var v = $(".form-item-donation input").val();
         var c = '';
         if(v != 'select_or_other') {
-          if ($('#edit-field-monthly-recurring-und').is(':checked')) {
+          var r = $("input:radio[name ='product']:checked").val();
+          if (r == 'MONTHLY_DONATION' || $('#edit-field-monthly-recurring-und').is(':checked')) {
             c = ' / mo';
           }
           if (currencyFormat(v)) {
