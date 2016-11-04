@@ -36,7 +36,7 @@
           </div>
         </a>
       </div>
-      <?php if (!empty($page['navigation_search']) || TRUE) : ?>
+      <?php if (!empty($page['navigation_search'])) : ?>
         <div class="display--table-cell vertical-align--middle width--auto">
           <a href="#search-modal" class="modal-trigger display--block md--padding-y--xl padding-y--lg padding-x--xs white-space--nowrap color--white">
             <div class="md--show">
