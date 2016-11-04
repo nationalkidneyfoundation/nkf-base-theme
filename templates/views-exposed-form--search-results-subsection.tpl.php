@@ -27,7 +27,7 @@
     print $q;
   ?>
 <?php endif; ?>
-<div class="sm--display--table display-block max-width--xxl center">
+<div class="sm--display--table display-block max-width--xxl">
   <div class="sm--display--table-cell display--block width--100">
     <?php print $widget->widget; ?>
     <?php if (!empty($widget->description)): ?>
