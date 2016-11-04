@@ -48,8 +48,8 @@
             </div>
           </a>
         </div>
-        <div id="search-modal" class="modal--full padding--xl bg--white--o70 mfp-hide">
-          <div class="max-width--xxxl center md--padding--xxxl padding--xl bg--white">
+        <div id="search-modal" class="modal padding--xl bg--white border-radius--md max-width--xxl center mfp-hide">
+          <div class="center padding-y--lg">
             <div><?php print render($page['navigation_search']); ?></div>
           </div>
         </div>
