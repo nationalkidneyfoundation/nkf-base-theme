@@ -1,3 +1,7 @@
 .sidebar > * {
   margin-bottom: space(xxl);
 }
+.sidebar a.active {
+  color: $black;
+  font-weight: bold;
+}

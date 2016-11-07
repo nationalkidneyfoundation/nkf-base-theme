@@ -7498,8 +7498,8 @@ a.hover--youtube:hover {
 .container {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1355px;
-  max-width: 90.332rem;
+  max-width: 958px;
+  max-width: 63.884rem;
 }
 
 .container--xl {
@@ -7534,8 +7534,8 @@ a.hover--youtube:hover {
   .xs--container--lg {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1355px;
-    max-width: 90.332rem;
+    max-width: 958px;
+    max-width: 63.884rem;
   }
 
   .xs--container--xl {
@@ -7571,8 +7571,8 @@ a.hover--youtube:hover {
   .sm--container--lg {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1355px;
-    max-width: 90.332rem;
+    max-width: 958px;
+    max-width: 63.884rem;
   }
 
   .sm--container--xl {
@@ -7608,8 +7608,8 @@ a.hover--youtube:hover {
   .md--container--lg {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1355px;
-    max-width: 90.332rem;
+    max-width: 958px;
+    max-width: 63.884rem;
   }
 
   .md--container--xl {
@@ -7645,8 +7645,8 @@ a.hover--youtube:hover {
   .lg--container--lg {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1355px;
-    max-width: 90.332rem;
+    max-width: 958px;
+    max-width: 63.884rem;
   }
 
   .lg--container--xl {
@@ -7682,8 +7682,8 @@ a.hover--youtube:hover {
   .xl--container--lg {
     margin-left: auto;
     margin-right: auto;
-    max-width: 1355px;
-    max-width: 90.332rem;
+    max-width: 958px;
+    max-width: 63.884rem;
   }
 
   .xl--container--xl {
@@ -17411,4 +17411,9 @@ nav .burger-time a {
 .sidebar > * {
   margin-bottom: 42px;
   margin-bottom: 2.827rem;
+}
+
+.sidebar a.active {
+  color: #000;
+  font-weight: bold;
 }
