@@ -17413,7 +17413,8 @@ nav .burger-time a {
   margin-bottom: 2.827rem;
 }
 
-.sidebar a.active {
+.sidebar a.active,
+.panel-pane a.active {
   color: #000;
   font-weight: bold;
 }

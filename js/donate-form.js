@@ -195,11 +195,17 @@
       // listen to recurring gift field
       $('#edit-field-monthly-recurring-und').once().on('change', function () {
         $('.form-item-donation').toggleClass('recurring');
-        //$('.amount-options .button').each(function() {
-          //if ($(this).attr('data-amount') > 0) {
-            //$(this).toggleClass('recurring-button');
-          //}
-        //});
+        setDonationAmount();
+      });
+      // listen to recurring gift field
+      $("input:radio[name ='product']").once().on('change', function () {
+        var r = $("input:radio[name ='product']:checked").val();
+        if (r == 'MONTHLY_DONATION') {
+          $('.form-item-donation').addClass('recurring');
+        } else {
+          $('.form-item-donation').removeClass('recurring');
+        }
+
         setDonationAmount();
       });
 

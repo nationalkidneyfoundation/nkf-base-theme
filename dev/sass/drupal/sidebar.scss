@@ -1,7 +1,8 @@
 .sidebar > * {
   margin-bottom: space(xxl);
 }
-.sidebar a.active {
+.sidebar a.active,
+.panel-pane a.active {
   color: $black;
   font-weight: bold;
 }

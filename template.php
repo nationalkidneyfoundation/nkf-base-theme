@@ -72,7 +72,7 @@ function nkf_base_preprocess_page(&$vars) {
     'spring-clinical' => '2017 Spring Clinical Meetings',
     //'kidneycars' => 'Kidney Cars'
   );
-  if ($alias == 'support' || $alias == 'support-nkf') {
+  if ($alias == 'support' || $alias == 'support-nkf' || $alias == 'atoz') {
     $vars['v2'] = TRUE;
   }
   foreach ($microsites as $key => $value) {
