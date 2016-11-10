@@ -198,15 +198,16 @@
         setDonationAmount();
       });
       // listen to recurring gift field
-      $("input:radio[name ='product']").once().on('change', function () {
-        var r = $("input:radio[name ='product']:checked").val();
-        if (r == 'MONTHLY_DONATION') {
-          $('.form-item-donation').addClass('recurring');
-        } else {
-          $('.form-item-donation').removeClass('recurring');
+      $("input:radio[name ='product']").once(function() {
+        $(this).on('change', function () {
+          var r = $("input:radio[name ='product']:checked").val();
+          if (r == 'MONTHLY_DONATION') {
+            $('.form-item-donation').addClass('recurring');
+          } else {
+            $('.form-item-donation').removeClass('recurring');
+          }
+          setDonationAmount();
         }
-
-        setDonationAmount();
       });
 
       var textDonation = $('.form-item-donation.form-type-textfield');
