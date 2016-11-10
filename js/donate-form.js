@@ -207,7 +207,7 @@
             $('.form-item-donation').removeClass('recurring');
           }
           setDonationAmount();
-        }
+        });
       });
 
       var textDonation = $('.form-item-donation.form-type-textfield');
