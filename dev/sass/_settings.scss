@@ -237,6 +237,9 @@ $breakpoints: (
   @if $color == null {
     @return null;
   }
+  @else if $color == color('twitter') or $color == color('facebook') or $color == color('instagram') {
+    @return #ffffff;
+  }
   @else {
     $color-brightness: brightness($color);
     $light-text-brightness: brightness($light);

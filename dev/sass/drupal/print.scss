@@ -10,10 +10,15 @@
   }
   header {
     background-color: $white !important;
-    border-bottom: border-width(xl) solid color(orange);
+    //border-bottom: border-width(xl) solid color(orange);
   }
   #logo {
     background-image: none;
+    min-height: 100px;
+    padding: space(md) 0;
+    &::before {
+      content: url("../img/NKF-logoR_Hori_OB.png")
+    }
   }
 
   .header__nav,

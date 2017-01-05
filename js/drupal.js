@@ -19,6 +19,13 @@
         $('.discount__apply-alt').trigger('change');
         return false;
       });
+
+      $('[data-track="event"]').once().click(function(){
+        nkf_base.gaTrack('event', $(this));
+      });
+      $('[data-track="social"]').once().click(function(){
+        nkf_base.gaTrack('social', $(this));
+      });
     }
 
   };

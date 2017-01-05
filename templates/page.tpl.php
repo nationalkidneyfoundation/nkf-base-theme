@@ -56,7 +56,7 @@
     <!-- TITLE -->
     <?php if (!$microsite_home) : ?>
       <?php if ($title): ?>
-        <section class="main__title">
+        <section class="main__title <?php if ($widescreen) { print 'invisible'; } ?>">
           <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print render($title_prefix); ?>
             <h1 class="font-size--xl sm--font-size--xxl padding-bottom--none"><?php print $title ?></h1>
@@ -95,6 +95,7 @@
 
     <!-- MAIN CONTENT -->
     <section class="main__content">
+      <?php if (!$widescreen): ?>
       <div class="container padding-top--xl padding-bottom--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg position--relative z-index--1">
         <div class="grid">
           <?php if ($page['sidebar_first']): ?>
@@ -108,6 +109,15 @@
           <?php endif; ?>
         </div>
       </div>
+      <?php else: ?>
+      <div class="position--relative z-index--1">
+        <div class="grid">
+          <div class="grid-cell width--100">
+            <div id="content" class="clearfix"><?php print render($page['content']) ?></div>
+          </div>
+        </div>
+      </div>
+      <?php endif; ?>
     </section>
   </main>
 

@@ -4937,7 +4937,7 @@ a.hover--youtube:hover {
   -webkit-appearance: none;
   border-color: #4099FF;
   background-color: #4099FF;
-  color: #000;
+  color: #ffffff;
 }
 
 .button--twitter:before,
@@ -4959,7 +4959,7 @@ a.hover--youtube:hover {
 }
 
 .button--twitter:visited {
-  color: #000;
+  color: #ffffff;
 }
 
 .button--twitter:hover {
@@ -4997,7 +4997,7 @@ a.hover--youtube:hover {
   -webkit-appearance: none;
   border-color: #3b5998;
   background-color: #3b5998;
-  color: #fff;
+  color: #ffffff;
 }
 
 .button--facebook:before,
@@ -5019,7 +5019,7 @@ a.hover--youtube:hover {
 }
 
 .button--facebook:visited {
-  color: #fff;
+  color: #ffffff;
 }
 
 .button--facebook:hover {
@@ -5057,7 +5057,7 @@ a.hover--youtube:hover {
   -webkit-appearance: none;
   border-color: #e95950;
   background-color: #e95950;
-  color: #000;
+  color: #ffffff;
 }
 
 .button--instagram:before,
@@ -5079,7 +5079,7 @@ a.hover--youtube:hover {
 }
 
 .button--instagram:visited {
-  color: #000;
+  color: #ffffff;
 }
 
 .button--instagram:hover {

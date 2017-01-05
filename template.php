@@ -54,6 +54,15 @@ function nkf_base_css_alter(&$css) {
   $css = array_diff_key($css, $exclude);
 }
 
+
+function nkf_base_preprocess_node(&$vars) {
+  if ($vars['type'] == 'panel') {
+    if ($vars['content_attributes_array'] && $vars['content_attributes_array']['class']) {
+      $vars['content_attributes_array']['class'] = array_diff($vars['content_attributes_array']['class'], array('prose'));
+    }
+  }
+
+}
 /**
  * Implementation of preprocess_page().
  */
@@ -91,6 +100,19 @@ function nkf_base_preprocess_page(&$vars) {
       }
     }
   }
+
+  $widescreen = false;
+
+  $panel = panels_get_current_page_display();
+
+  if (!$panel && !empty($vars['node']) && isset($vars['node']->panels_node) ) {
+    $panel = panels_load_display($vars['node']->panels_node['did']);
+  }
+  if (isset($panel) && !empty($panel->layout) && $panel->layout == 'widescreen') {
+    $widescreen = true;
+  }
+  $vars['widescreen'] = $widescreen;
+
 
   // add magnific popup
   $magnificpath = libraries_get_path('magnific_popup');
@@ -430,7 +452,7 @@ function nkf_base_menu_link(array $variables) {
 function nkf_base_preprocess_panels_pane(&$vars) {
   // Add id and custom class if sent in.
 
-  if ($vars['display']->layout == 'flex') {
+  if ($vars['display']->layout == 'flex' || $vars['display']->layout == 'widescreen') {
     $vars['classes_array'][] = 'grid-cell';
   }
 }
