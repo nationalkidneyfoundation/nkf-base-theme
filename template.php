@@ -80,7 +80,7 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['microsite_path'] = '';
   $vars['microsite_name'] = '';
   $vars['v2'] = FALSE;
-  
+
   $microsites = array(
     //'scm' => '2017 Spring Clinical Meetings',
     'spring-clinical' => '2017 Spring Clinical Meetings',
@@ -285,34 +285,37 @@ function nkf_base_preprocess_entity_bean_hero(&$vars) {
 function nkf_base_preprocess_entity_bean_card(&$vars) {
   $type= $vars['entity_type'];
 
-  $vars['media_orientation'] = $media_orientation = $vars[$type]->field_card_media_orientation[LANGUAGE_NONE][0]['value'];
-  $vars['media_size'] = $media_size = $vars[$type]->field_card_media_size[LANGUAGE_NONE][0]['value'];
-  $vars['height'] = $height = $vars[$type]->field_card_height[LANGUAGE_NONE][0]['value'];
-  $vars['url'] = $url = $vars[$type]->field_base_link[LANGUAGE_NONE][0]['url'];
+  $vars['media_orientation'] = $media_orientation = (!empty($vars[$type]->field_card_media_orientation[LANGUAGE_NONE])) ? $vars[$type]->field_card_media_orientation[LANGUAGE_NONE][0]['value'] : FALSE;
+  $vars['media_size'] = $media_size = (!empty($vars[$type]->field_card_media_size[LANGUAGE_NONE])) ? $vars[$type]->field_card_media_size[LANGUAGE_NONE][0]['value'] : FALSE;
+  $vars['height'] = $height = (!empty($vars[$type]->field_card_height[LANGUAGE_NONE])) ? $vars[$type]->field_card_height[LANGUAGE_NONE][0]['value'] : FALSE;
+  $vars['url'] = $url = (!empty($vars[$type]->field_base_link[LANGUAGE_NONE])) ? $vars[$type]->field_base_link[LANGUAGE_NONE][0]['url'] : FALSE;
 
   $vars['action_links_width'] = floor((1 / count($vars[$type]->field_card_action_links[LANGUAGE_NONE])) * 100);
 
-  $vars['bg_color'] = $bg_color = $vars[$type]->field_card_bg_color[LANGUAGE_NONE][0]['value'];
+  $vars['bg_color'] = $bg_color = (!empty($vars[$type]->field_card_bg_color[LANGUAGE_NONE])) ? $vars[$type]->field_card_bg_color[LANGUAGE_NONE][0]['value'] : FALSE;
   $vars['text_color'] = $text_color = (preg_match('/gray-5|blue|navy|red|aqua|green|sienna/', $bg_color))? 'white' : 'black';
 
   $vars['action_links'] = array();
-  foreach($vars[$type]->field_card_action_links[LANGUAGE_NONE] as $l) {
-    $l['attributes']['class'][] = 'color--' . $text_color;
-    $l['attributes']['class'][] = 'display--block';
-    $l['attributes']['class'][] = 'padding--sm';
-    $vars['action_links'][] = l($l['title'], $l['url'], $l);
+  if (!empty($vars[$type]->field_card_action_links[LANGUAGE_NONE])) {
+    foreach($vars[$type]->field_card_action_links[LANGUAGE_NONE] as $l) {
+      $l['attributes']['class'][] = 'color--' . $text_color;
+      $l['attributes']['class'][] = 'display--block';
+      $l['attributes']['class'][] = 'padding--sm';
+      $vars['action_links'][] = l($l['title'], $l['url'], $l);
+    }
   }
+
 
   $vars['title'] = render($vars[$type]->title);
 
-  $description = $vars[$type]->field_base_description[LANGUAGE_NONE][0];
+  $description = (!empty($vars[$type]->field_base_description[LANGUAGE_NONE])) ? $vars[$type]->field_base_description[LANGUAGE_NONE][0] : FALSE;
   $vars['description'] = render(field_view_value('bean', $vars['bean'], 'field_base_description', $description));
 
-  if($image = $vars[$type]->field_base_image[LANGUAGE_NONE][0]['uri']) {
+  if(!empty($vars[$type]->field_base_image[LANGUAGE_NONE]) && $image = $vars[$type]->field_base_image[LANGUAGE_NONE][0]['uri']) {
     $media_uri = $image;
   }
 
-  if($video = $vars[$type]->field_card_video[LANGUAGE_NONE][0]) {
+  if(!empty($vars[$type]->field_card_video[LANGUAGE_NONE]) && $video = $vars[$type]->field_card_video[LANGUAGE_NONE][0]) {
     $video_settings = array('type'=>'video_embed_field_thumbnail');
     $video_info = field_view_value('bean', $vars['bean'], 'field_card_video', $video, $video_settings);
     $vars['video_embed'] = render(field_view_value('bean', $vars['bean'], 'field_card_video', $video));
@@ -320,9 +323,10 @@ function nkf_base_preprocess_entity_bean_card(&$vars) {
     //$vars['video'] = render(field_view_value('bean', $vars['bean'], 'field_card_video', $video, $video_settings));
   }
 
+  if (!empty($vars[$type]->field_card_caption[LANGUAGE_NONE]) && $caption = $vars[$type]->field_card_caption[LANGUAGE_NONE][0]) {
+    $vars['caption'] = render(field_view_value('bean', $vars['bean'], 'field_card_caption', $caption));
+  }
 
-  $caption = $vars[$type]->field_card_caption[LANGUAGE_NONE][0];
-  $vars['caption'] = render(field_view_value('bean', $vars['bean'], 'field_card_caption', $caption));
 
   $media_classes = array();
   $content_classes = array();

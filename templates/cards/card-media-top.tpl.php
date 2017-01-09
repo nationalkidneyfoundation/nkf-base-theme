@@ -1,4 +1,4 @@
-<?php if ($url): ?>
+<?php if (!empty($url)): ?>
   <a class="display--block" href="<?php print $url; ?>">
 <?php endif; ?>
 
@@ -9,7 +9,7 @@
     <?php if ($caption): ?>
       <div class="position--absolute bottom width--100 color--<?php print $text_color;?> bg--<?php print $bg_color;?>--o40 padding--xs font-size--sm text-align--center"><?php print $caption; ?></div>
     <?php endif; ?>
-    <?php if ($video_embed): ?>
+    <?php if (!empty($video_embed)): ?>
       <a href="#<?php print $random; ?>" class="modal-trigger width--100 height--100 top bottom left right position--absolute display--block">
         <div class="padding-left--xs"><i class=" font-size--xxl icon-play-circled bg--black--o90 color--white border-radius--md"></i></div>
       </a>
@@ -39,7 +39,7 @@
 <?php endif; ?>
 
 
-<?php if ($video_embed): ?>
+<?php if (!empty($video_embed)): ?>
   <div id="<?php print $random; ?>" class="modal bg--white padding--xl mfp-hide">
     <div class="max-width--xxxl padding--lg center">
       <div class="video-wrapper"><?php print $video_embed; ?></div>
