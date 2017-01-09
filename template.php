@@ -76,6 +76,11 @@ function nkf_base_preprocess_page(&$vars) {
     $page_classes[] = 'page-professionals-membership';
   }
 
+  $vars['microsite_home'] = FALSE;
+  $vars['microsite_path'] = '';
+  $vars['microsite_name'] = '';
+  $vars['v2'] = FALSE;
+  
   $microsites = array(
     //'scm' => '2017 Spring Clinical Meetings',
     'spring-clinical' => '2017 Spring Clinical Meetings',
