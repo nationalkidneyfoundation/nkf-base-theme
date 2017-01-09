@@ -6,7 +6,7 @@
   <div class="<?php print $media_classes;?> position--relative">
     <div class="<?php print $media_classes;?> background-size--cover background-position--center overflow--hidden" style="background-image: url(<?php print $media_uri;?>)">
     </div>
-    <?php if ($caption): ?>
+    <?php if (!empty($caption)): ?>
       <div class="position--absolute bottom width--100 color--<?php print $text_color;?> bg--<?php print $bg_color;?>--o40 padding--xs font-size--sm text-align--center"><?php print $caption; ?></div>
     <?php endif; ?>
     <?php if (!empty($video_embed)): ?>
@@ -16,10 +16,10 @@
     <?php endif; ?>
   </div>
   <div class="width--100 ">
-    <?php if ($title): ?>
+    <?php if (!empty($title)): ?>
       <div class="bold caps font-size--lg margin--md"><?php print $title; ?></div>
     <?php endif; ?>
-    <?php if ($description): ?>
+    <?php if (!empty($description)): ?>
       <div class="margin--md"><?php print $description; ?></div>
     <?php endif; ?>
     <?php if (!empty($action_links)) : ?>
@@ -34,7 +34,7 @@
   </div>
 </div>
 
-<?php if ($url): ?>
+<?php if (!empty($url)): ?>
   </a>
 <?php endif; ?>
 

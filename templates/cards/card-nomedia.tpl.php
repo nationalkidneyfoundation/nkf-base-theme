@@ -1,12 +1,12 @@
-<?php if ($url): ?>
+<?php if (!empty($url)): ?>
   <a class="display--block" href="<?php print $url; ?>">
 <?php endif; ?>
 
 <div class="width--100 overflow--hidden <?php print $classes; ?> <?php print $classes_plus; ?>">
-  <?php if ($title): ?>
+  <?php if (!empty($title)): ?>
     <div class="bold caps font-size--lg margin--md"><?php print $title; ?></div>
   <?php endif; ?>
-  <?php if ($description): ?>
+  <?php if (!empty($description)): ?>
     <div class="margin--md"><?php print $description; ?></div>
   <?php endif; ?>
   <?php if (!empty($action_links)) : ?>
@@ -20,12 +20,12 @@
   <?php endif; ?>
 </div>
 
-<?php if ($url): ?>
+<?php if (!empty($url)): ?>
   </a>
 <?php endif; ?>
 
 
-<?php if ($video_embed): ?>
+<?php if (!empty($video_embed)): ?>
   <div id="<?php print $random; ?>" class="modal--full padding--xl mfp-hide">
     <div class="max-width--xxxl center">
       <div class="video-wrapper"><?php print $video_embed; ?></div>

@@ -305,11 +305,15 @@ function nkf_base_preprocess_entity_bean_card(&$vars) {
     }
   }
 
-
-  $vars['title'] = render($vars[$type]->title);
+  $title = render($vars[$type]->title);
+  $vars['title'] = $title;
 
   $description = (!empty($vars[$type]->field_base_description[LANGUAGE_NONE])) ? $vars[$type]->field_base_description[LANGUAGE_NONE][0] : FALSE;
-  $vars['description'] = render(field_view_value('bean', $vars['bean'], 'field_base_description', $description));
+  if ($description) {
+    $description = render(field_view_value('bean', $vars['bean'], 'field_base_description', $description));
+    $vars['description'] = $description;
+  }
+
 
   if(!empty($vars[$type]->field_base_image[LANGUAGE_NONE]) && $image = $vars[$type]->field_base_image[LANGUAGE_NONE][0]['uri']) {
     $media_uri = $image;
@@ -318,7 +322,8 @@ function nkf_base_preprocess_entity_bean_card(&$vars) {
   if(!empty($vars[$type]->field_card_video[LANGUAGE_NONE]) && $video = $vars[$type]->field_card_video[LANGUAGE_NONE][0]) {
     $video_settings = array('type'=>'video_embed_field_thumbnail');
     $video_info = field_view_value('bean', $vars['bean'], 'field_card_video', $video, $video_settings);
-    $vars['video_embed'] = render(field_view_value('bean', $vars['bean'], 'field_card_video', $video));
+    $video_embed = render(field_view_value('bean', $vars['bean'], 'field_card_video', $video));
+    $vars['video_embed'] = $video_embed;
     $media_uri = $video_info['#item']['uri'];
     //$vars['video'] = render(field_view_value('bean', $vars['bean'], 'field_card_video', $video, $video_settings));
   }
