@@ -84,9 +84,10 @@ function nkf_base_preprocess_page(&$vars) {
   $microsites = array(
     //'scm' => '2017 Spring Clinical Meetings',
     'spring-clinical' => '2017 Spring Clinical Meetings',
+    //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );
-  if ($alias == 'support' || $alias == 'support-nkf' || $alias == 'atoz') {
+  if ($alias == 'support' || $alias == 'support-nkf' || $alias == 'atoz' || strpos($alias, 'transplantation/livingdonors') !== false) {
     $vars['v2'] = TRUE;
   }
   foreach ($microsites as $key => $value) {
