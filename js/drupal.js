@@ -21,11 +21,33 @@
       });
 
       $('[data-track="event"]').once().click(function(){
-        nkf_base.gaTrack('event', $(this));
+        var obj = {
+          hitType: 'event',
+          eventCategory: $(this).data('category') ? $(this).data('category') : '',
+          eventAction: $(this).data('action') ? $(this).data('action') : '',
+          eventLabel: $(this).data('label') ? $(this).data('label') : '',
+          eventValue: $(this).data('value') ? $(this).data('value') : '';
+        };
+        gaTrack(obj);
       });
+
       $('[data-track="social"]').once().click(function(){
-        nkf_base.gaTrack('social', $(this));
+        var obj = {
+          hitType: 'social',
+          socialNetwork: $(this).data('network') ? $(this).data('network') : '',
+          socialAction: $(this).data('action') ? $(this).data('action') : '',
+          socialTarget: $(this).data('target') ? $(this).data('target') : '',
+        };
+        gaTrack(obj);
       });
+
+      var gaTrack = function(obj) {
+        try {
+          ga('send', obj);
+        } catch (e) {
+            //console.log(e);
+        }
+      }
     }
 
   };
