@@ -43,9 +43,11 @@
 
       var gaTrack = function(obj) {
         try {
+          console.log(obj);
           ga('send', obj);
+
         } catch (e) {
-            //console.log(e);
+          console.log(e);
         }
       }
     }
