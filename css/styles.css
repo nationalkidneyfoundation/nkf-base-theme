@@ -17032,7 +17032,7 @@ nav .burger-time a {
   width: 100%;
 }
 
-.has-donation-form #edit-payment-method {
+.has-donation-form [id^=edit-payment-method] {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
