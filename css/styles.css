@@ -16667,7 +16667,7 @@ nav .burger-time a {
   display: none;
 }
 
-.has-donation-form #edit-product {
+.has-donation-form .form-item-product .form-radios {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -16679,7 +16679,7 @@ nav .burger-time a {
   text-align: center;
 }
 
-.has-donation-form #edit-product > * {
+.has-donation-form .form-item-product .form-radios > * {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -16694,11 +16694,11 @@ nav .burger-time a {
   padding: 0 0.5rem;
 }
 
-.has-donation-form #edit-product input {
+.has-donation-form .form-item-product .form-radios input {
   display: none !important;
 }
 
-.has-donation-form #edit-product label {
+.has-donation-form .form-item-product .form-radios label {
   text-transform: uppercase;
   letter-spacing: 2px;
   letter-spacing: .11rem;
@@ -16712,11 +16712,11 @@ nav .burger-time a {
   border-bottom: 3px solid transparent;
 }
 
-.has-donation-form #edit-product label::before {
+.has-donation-form .form-item-product .form-radios label::before {
   display: none;
 }
 
-.has-donation-form #edit-product input:checked + label {
+.has-donation-form .form-item-product .form-radios input:checked + label {
   border-color: #1E4497;
   color: #1E4497;
 }

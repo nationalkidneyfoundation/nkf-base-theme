@@ -209,7 +209,7 @@
       display: none;
     }
   }
-  #edit-product {
+  .form-item-product .form-radios {
     @include grid();
     padding-bottom: space(sm);
     width: 100%;
