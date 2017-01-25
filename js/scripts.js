@@ -18,10 +18,27 @@ var nkf_base_init = function($) {
     focus: 'input'
   });
 
+  function popup(href) {
+    var width = 550;
+    var height = 420
+    var left = Math.round((screen.width / 2) - (width / 2));
+    var top = 0;
+    if (screen.height > height) {
+      top = Math.round((width / 2) - (height / 2));
+    }
+    window.open(href, 'intent', `scrollbars=yes,resizable=yes,toolbar=no,
+        location=yes,width=${width},height=${height},left=${left},top=${top}`);
+  }
+
   // general print utility
   $('.js--print-link').on('click', function(){
     window.print();
     return false;
+  });
+
+  $('.js--share-link').on('click', function(e){
+    e.preventDefault();
+    popup(this.href);
   });
 
   // Scrolling utility with three scroll by points.
