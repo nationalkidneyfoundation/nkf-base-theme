@@ -87,7 +87,7 @@ function nkf_base_preprocess_page(&$vars) {
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );
-  if ($alias == 'support' || $alias == 'support-nkf' || $alias == 'atoz' || strpos($alias, 'transplantation/livingdonors') !== false) {
+  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
     $vars['v2'] = TRUE;
   }
   foreach ($microsites as $key => $value) {
