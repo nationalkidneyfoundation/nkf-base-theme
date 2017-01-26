@@ -457,7 +457,7 @@ function nkf_base_menu_link(array $variables) {
   }
   //if ($element ['#original_link']['menu_name'] == 'menu-scm-cta') {
   if (strpos($element ['#original_link']['menu_name'] , 'cta') !== false) {
-    $element ['#localized_options']['attributes']['class'][] = 'button--mustard caps';
+    $element ['#localized_options']['attributes']['class'][] = 'button--mustard caps white-space--nowrap';
     $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
     $element ['#attributes']['class'][] = '';
     return $output . $sub_menu ;
