@@ -407,8 +407,12 @@ function _nkf_base_status_messages() {
  * hook_menu_tree
  */
 function nkf_base_menu_tree($variables) {
-  watchdog('nkf_base_teplate', '<pre>' . print_r($variables,TRUE) . '</pre>');
-  return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
+  //watchdog('nkf_base_teplate', '<pre>' . print_r($variables,TRUE) . '</pre>');
+  if (strpos($variables['theme_hook_original'], 'cta') !== false) {
+    return $variables['tree'];
+  } else {
+    return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
+  }
 }
 function nkf_base_menu_tree__menu_scm_new($variables) {
   return $variables['tree'];
@@ -451,7 +455,8 @@ function nkf_base_menu_link(array $variables) {
     $element ['#attributes']['class'][] = 'grid-cell width--100 vertical-align--middle';
     return '<div' . drupal_attributes($element ['#attributes']) . '>' . $output . "</div>\n";
   }
-  if ($element ['#original_link']['menu_name'] == 'menu-scm-cta') {
+  //if ($element ['#original_link']['menu_name'] == 'menu-scm-cta') {
+  if (strpos($element ['#original_link']['menu_name'] , 'cta') !== false) {
     $element ['#localized_options']['attributes']['class'][] = 'button--mustard caps';
     $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
     $element ['#attributes']['class'][] = '';

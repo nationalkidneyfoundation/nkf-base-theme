@@ -42,13 +42,6 @@
       });
 
 
-  function init() {
-    $('body').on('click', 'a.js-share-link', function(event) {
-      event.preventDefault();
-      popup(this.href);
-    });
-  }
-
       var gaTrack = function(obj) {
         try {
           console.log('trying');
