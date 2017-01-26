@@ -87,8 +87,11 @@ function nkf_base_preprocess_page(&$vars) {
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );
-  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'atoz') !== false || strpos($alias, 'categoryf') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
+  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
     $vars['v2'] = TRUE;
+    if (strpos($alias, 'category') !== FALSE) {
+      $vars['title_prefix'] = '<div class="caps bold color--gray-3">A to Z Health Guide Topic</div>';
+    }
   }
   foreach ($microsites as $key => $value) {
     if (strpos($alias, $key) !== false) {
@@ -408,11 +411,12 @@ function _nkf_base_status_messages() {
  */
 function nkf_base_menu_tree($variables) {
   //watchdog('nkf_base_teplate', '<pre>' . print_r($variables,TRUE) . '</pre>');
-  if (strpos($variables['theme_hook_original'], 'cta') !== false) {
+  $name = _get_menu_name_css($variables);
+  if (strpos($name, 'cta') !== FALSE) {
     return $variables['tree'];
-  } else {
-    return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
   }
+  return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
+
 }
 function nkf_base_menu_tree__menu_scm_new($variables) {
   return $variables['tree'];
