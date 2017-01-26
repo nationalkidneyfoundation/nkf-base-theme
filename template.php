@@ -87,7 +87,7 @@ function nkf_base_preprocess_page(&$vars) {
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );
-  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
+  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'atoz') !== false || strpos($alias, 'categoryf') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
     $vars['v2'] = TRUE;
   }
   foreach ($microsites as $key => $value) {
@@ -407,6 +407,7 @@ function _nkf_base_status_messages() {
  * hook_menu_tree
  */
 function nkf_base_menu_tree($variables) {
+  watchdog('nkf_base_teplate', '<pre>' . print_r($variables,TRUE) . '</pre>');
   return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
 }
 function nkf_base_menu_tree__menu_scm_new($variables) {
