@@ -1618,16 +1618,6 @@ a.color--orange:hover {
   color: #F15E22;
 }
 
-.hover--color--orange:hover,
-.hover--orange:hover {
-  color: #F15E22;
-}
-
-a.hover--color--orange:hover,
-a.hover--orange:hover {
-  color: #F15E22;
-}
-
 .color--blue,
 .blue {
   color: #1E4497;
@@ -1637,16 +1627,6 @@ a.color--blue,
 a.color--blue:active,
 a.color--blue:visited,
 a.color--blue:hover {
-  color: #1E4497;
-}
-
-.hover--color--blue:hover,
-.hover--blue:hover {
-  color: #1E4497;
-}
-
-a.hover--color--blue:hover,
-a.hover--blue:hover {
   color: #1E4497;
 }
 
@@ -1662,16 +1642,6 @@ a.color--navy:hover {
   color: #26225E;
 }
 
-.hover--color--navy:hover,
-.hover--navy:hover {
-  color: #26225E;
-}
-
-a.hover--color--navy:hover,
-a.hover--navy:hover {
-  color: #26225E;
-}
-
 .color--red,
 .red {
   color: #d51217;
@@ -1681,16 +1651,6 @@ a.color--red,
 a.color--red:active,
 a.color--red:visited,
 a.color--red:hover {
-  color: #d51217;
-}
-
-.hover--color--red:hover,
-.hover--red:hover {
-  color: #d51217;
-}
-
-a.hover--color--red:hover,
-a.hover--red:hover {
   color: #d51217;
 }
 
@@ -1706,16 +1666,6 @@ a.color--mustard:hover {
   color: #FAAD1D;
 }
 
-.hover--color--mustard:hover,
-.hover--mustard:hover {
-  color: #FAAD1D;
-}
-
-a.hover--color--mustard:hover,
-a.hover--mustard:hover {
-  color: #FAAD1D;
-}
-
 .color--aqua,
 .aqua {
   color: #048499;
@@ -1725,16 +1675,6 @@ a.color--aqua,
 a.color--aqua:active,
 a.color--aqua:visited,
 a.color--aqua:hover {
-  color: #048499;
-}
-
-.hover--color--aqua:hover,
-.hover--aqua:hover {
-  color: #048499;
-}
-
-a.hover--color--aqua:hover,
-a.hover--aqua:hover {
   color: #048499;
 }
 
@@ -1750,16 +1690,6 @@ a.color--yellow:hover {
   color: #FEDC00;
 }
 
-.hover--color--yellow:hover,
-.hover--yellow:hover {
-  color: #FEDC00;
-}
-
-a.hover--color--yellow:hover,
-a.hover--yellow:hover {
-  color: #FEDC00;
-}
-
 .color--green,
 .green {
   color: #018241;
@@ -1769,16 +1699,6 @@ a.color--green,
 a.color--green:active,
 a.color--green:visited,
 a.color--green:hover {
-  color: #018241;
-}
-
-.hover--color--green:hover,
-.hover--green:hover {
-  color: #018241;
-}
-
-a.hover--color--green:hover,
-a.hover--green:hover {
   color: #018241;
 }
 
@@ -1794,16 +1714,6 @@ a.color--lime:hover {
   color: #91AE3C;
 }
 
-.hover--color--lime:hover,
-.hover--lime:hover {
-  color: #91AE3C;
-}
-
-a.hover--color--lime:hover,
-a.hover--lime:hover {
-  color: #91AE3C;
-}
-
 .color--sienna,
 .sienna {
   color: #9E2420;
@@ -1813,16 +1723,6 @@ a.color--sienna,
 a.color--sienna:active,
 a.color--sienna:visited,
 a.color--sienna:hover {
-  color: #9E2420;
-}
-
-.hover--color--sienna:hover,
-.hover--sienna:hover {
-  color: #9E2420;
-}
-
-a.hover--color--sienna:hover,
-a.hover--sienna:hover {
   color: #9E2420;
 }
 
@@ -1838,16 +1738,6 @@ a.color--white:hover {
   color: #FFFFFF;
 }
 
-.hover--color--white:hover,
-.hover--white:hover {
-  color: #FFFFFF;
-}
-
-a.hover--color--white:hover,
-a.hover--white:hover {
-  color: #FFFFFF;
-}
-
 .color--gray-1,
 .gray-1 {
   color: #EDEEEF;
@@ -1857,16 +1747,6 @@ a.color--gray-1,
 a.color--gray-1:active,
 a.color--gray-1:visited,
 a.color--gray-1:hover {
-  color: #EDEEEF;
-}
-
-.hover--color--gray-1:hover,
-.hover--gray-1:hover {
-  color: #EDEEEF;
-}
-
-a.hover--color--gray-1:hover,
-a.hover--gray-1:hover {
   color: #EDEEEF;
 }
 
@@ -1882,16 +1762,6 @@ a.color--gray-2:hover {
   color: #DBDDDF;
 }
 
-.hover--color--gray-2:hover,
-.hover--gray-2:hover {
-  color: #DBDDDF;
-}
-
-a.hover--color--gray-2:hover,
-a.hover--gray-2:hover {
-  color: #DBDDDF;
-}
-
 .color--gray-3,
 .gray-3 {
   color: #A6AAAF;
@@ -1901,16 +1771,6 @@ a.color--gray-3,
 a.color--gray-3:active,
 a.color--gray-3:visited,
 a.color--gray-3:hover {
-  color: #A6AAAF;
-}
-
-.hover--color--gray-3:hover,
-.hover--gray-3:hover {
-  color: #A6AAAF;
-}
-
-a.hover--color--gray-3:hover,
-a.hover--gray-3:hover {
   color: #A6AAAF;
 }
 
@@ -1926,16 +1786,6 @@ a.color--gray-4:hover {
   color: #3b444f;
 }
 
-.hover--color--gray-4:hover,
-.hover--gray-4:hover {
-  color: #3b444f;
-}
-
-a.hover--color--gray-4:hover,
-a.hover--gray-4:hover {
-  color: #3b444f;
-}
-
 .color--gray-5,
 .gray-5 {
   color: #363E48;
@@ -1945,16 +1795,6 @@ a.color--gray-5,
 a.color--gray-5:active,
 a.color--gray-5:visited,
 a.color--gray-5:hover {
-  color: #363E48;
-}
-
-.hover--color--gray-5:hover,
-.hover--gray-5:hover {
-  color: #363E48;
-}
-
-a.hover--color--gray-5:hover,
-a.hover--gray-5:hover {
   color: #363E48;
 }
 
@@ -1970,16 +1810,6 @@ a.color--black:hover {
   color: #111;
 }
 
-.hover--color--black:hover,
-.hover--black:hover {
-  color: #111;
-}
-
-a.hover--color--black:hover,
-a.hover--black:hover {
-  color: #111;
-}
-
 .color--twitter,
 .twitter {
   color: #4099FF;
@@ -1989,16 +1819,6 @@ a.color--twitter,
 a.color--twitter:active,
 a.color--twitter:visited,
 a.color--twitter:hover {
-  color: #4099FF;
-}
-
-.hover--color--twitter:hover,
-.hover--twitter:hover {
-  color: #4099FF;
-}
-
-a.hover--color--twitter:hover,
-a.hover--twitter:hover {
   color: #4099FF;
 }
 
@@ -2014,16 +1834,6 @@ a.color--facebook:hover {
   color: #3b5998;
 }
 
-.hover--color--facebook:hover,
-.hover--facebook:hover {
-  color: #3b5998;
-}
-
-a.hover--color--facebook:hover,
-a.hover--facebook:hover {
-  color: #3b5998;
-}
-
 .color--instagram,
 .instagram {
   color: #e95950;
@@ -2033,16 +1843,6 @@ a.color--instagram,
 a.color--instagram:active,
 a.color--instagram:visited,
 a.color--instagram:hover {
-  color: #e95950;
-}
-
-.hover--color--instagram:hover,
-.hover--instagram:hover {
-  color: #e95950;
-}
-
-a.hover--color--instagram:hover,
-a.hover--instagram:hover {
   color: #e95950;
 }
 
@@ -2058,16 +1858,6 @@ a.color--linkedin:hover {
   color: #4875B4;
 }
 
-.hover--color--linkedin:hover,
-.hover--linkedin:hover {
-  color: #4875B4;
-}
-
-a.hover--color--linkedin:hover,
-a.hover--linkedin:hover {
-  color: #4875B4;
-}
-
 .color--googleplus,
 .googleplus {
   color: #C63D2D;
@@ -2077,16 +1867,6 @@ a.color--googleplus,
 a.color--googleplus:active,
 a.color--googleplus:visited,
 a.color--googleplus:hover {
-  color: #C63D2D;
-}
-
-.hover--color--googleplus:hover,
-.hover--googleplus:hover {
-  color: #C63D2D;
-}
-
-a.hover--color--googleplus:hover,
-a.hover--googleplus:hover {
   color: #C63D2D;
 }
 
@@ -2100,6 +1880,226 @@ a.color--youtube:active,
 a.color--youtube:visited,
 a.color--youtube:hover {
   color: #FF3333;
+}
+
+.hover--color--orange:hover,
+.hover--orange:hover {
+  color: #F15E22;
+}
+
+a.hover--color--orange:hover,
+a.hover--orange:hover {
+  color: #F15E22;
+}
+
+.hover--color--blue:hover,
+.hover--blue:hover {
+  color: #1E4497;
+}
+
+a.hover--color--blue:hover,
+a.hover--blue:hover {
+  color: #1E4497;
+}
+
+.hover--color--navy:hover,
+.hover--navy:hover {
+  color: #26225E;
+}
+
+a.hover--color--navy:hover,
+a.hover--navy:hover {
+  color: #26225E;
+}
+
+.hover--color--red:hover,
+.hover--red:hover {
+  color: #d51217;
+}
+
+a.hover--color--red:hover,
+a.hover--red:hover {
+  color: #d51217;
+}
+
+.hover--color--mustard:hover,
+.hover--mustard:hover {
+  color: #FAAD1D;
+}
+
+a.hover--color--mustard:hover,
+a.hover--mustard:hover {
+  color: #FAAD1D;
+}
+
+.hover--color--aqua:hover,
+.hover--aqua:hover {
+  color: #048499;
+}
+
+a.hover--color--aqua:hover,
+a.hover--aqua:hover {
+  color: #048499;
+}
+
+.hover--color--yellow:hover,
+.hover--yellow:hover {
+  color: #FEDC00;
+}
+
+a.hover--color--yellow:hover,
+a.hover--yellow:hover {
+  color: #FEDC00;
+}
+
+.hover--color--green:hover,
+.hover--green:hover {
+  color: #018241;
+}
+
+a.hover--color--green:hover,
+a.hover--green:hover {
+  color: #018241;
+}
+
+.hover--color--lime:hover,
+.hover--lime:hover {
+  color: #91AE3C;
+}
+
+a.hover--color--lime:hover,
+a.hover--lime:hover {
+  color: #91AE3C;
+}
+
+.hover--color--sienna:hover,
+.hover--sienna:hover {
+  color: #9E2420;
+}
+
+a.hover--color--sienna:hover,
+a.hover--sienna:hover {
+  color: #9E2420;
+}
+
+.hover--color--white:hover,
+.hover--white:hover {
+  color: #FFFFFF;
+}
+
+a.hover--color--white:hover,
+a.hover--white:hover {
+  color: #FFFFFF;
+}
+
+.hover--color--gray-1:hover,
+.hover--gray-1:hover {
+  color: #EDEEEF;
+}
+
+a.hover--color--gray-1:hover,
+a.hover--gray-1:hover {
+  color: #EDEEEF;
+}
+
+.hover--color--gray-2:hover,
+.hover--gray-2:hover {
+  color: #DBDDDF;
+}
+
+a.hover--color--gray-2:hover,
+a.hover--gray-2:hover {
+  color: #DBDDDF;
+}
+
+.hover--color--gray-3:hover,
+.hover--gray-3:hover {
+  color: #A6AAAF;
+}
+
+a.hover--color--gray-3:hover,
+a.hover--gray-3:hover {
+  color: #A6AAAF;
+}
+
+.hover--color--gray-4:hover,
+.hover--gray-4:hover {
+  color: #3b444f;
+}
+
+a.hover--color--gray-4:hover,
+a.hover--gray-4:hover {
+  color: #3b444f;
+}
+
+.hover--color--gray-5:hover,
+.hover--gray-5:hover {
+  color: #363E48;
+}
+
+a.hover--color--gray-5:hover,
+a.hover--gray-5:hover {
+  color: #363E48;
+}
+
+.hover--color--black:hover,
+.hover--black:hover {
+  color: #111;
+}
+
+a.hover--color--black:hover,
+a.hover--black:hover {
+  color: #111;
+}
+
+.hover--color--twitter:hover,
+.hover--twitter:hover {
+  color: #4099FF;
+}
+
+a.hover--color--twitter:hover,
+a.hover--twitter:hover {
+  color: #4099FF;
+}
+
+.hover--color--facebook:hover,
+.hover--facebook:hover {
+  color: #3b5998;
+}
+
+a.hover--color--facebook:hover,
+a.hover--facebook:hover {
+  color: #3b5998;
+}
+
+.hover--color--instagram:hover,
+.hover--instagram:hover {
+  color: #e95950;
+}
+
+a.hover--color--instagram:hover,
+a.hover--instagram:hover {
+  color: #e95950;
+}
+
+.hover--color--linkedin:hover,
+.hover--linkedin:hover {
+  color: #4875B4;
+}
+
+a.hover--color--linkedin:hover,
+a.hover--linkedin:hover {
+  color: #4875B4;
+}
+
+.hover--color--googleplus:hover,
+.hover--googleplus:hover {
+  color: #C63D2D;
+}
+
+a.hover--color--googleplus:hover,
+a.hover--googleplus:hover {
+  color: #C63D2D;
 }
 
 .hover--color--youtube:hover,

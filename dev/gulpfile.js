@@ -13,6 +13,7 @@ var reworkIeLimits  = require('rework-ie-limits');
 //var reworkRename  = require('rework-selector-rename');
 var cssAutoprefix = require('gulp-autoprefixer');
 var cssMinify     = require('gulp-minify-css');
+var cssClean      = require('gulp-clean-css');
 var rename        = require('gulp-rename');
 var sass          = require('gulp-sass');
 var clean         = require('gulp-clean');
@@ -91,7 +92,8 @@ gulp.task('css-build', function () {
     .pipe(size({gzip: false, showFiles: true, title:'Raw css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Raw gzipped css'}))
     .pipe(gulp.dest(paths.stylesDistDir))
-    .pipe(cssMinify())
+    //.pipe(cssMinify())
+    .pipe(cssClean())
     .pipe(rename({suffix: '.min'}))
     .pipe(size({gzip: false, showFiles: true, title:'Min css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Min gzipped css'}))
