@@ -90,7 +90,7 @@ function nkf_base_preprocess_page(&$vars) {
   if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
     $vars['v2'] = TRUE;
     if (strpos($alias, 'category') !== FALSE || strpos($alias, 'atoz') !== false && $alias != 'atoz') {
-      $vars['title_prefix'] = '<a href="/atoz" class="display--block caps bold color--gray-3">A to Z Health Guide</a>';
+      $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
     }
   }
   foreach ($microsites as $key => $value) {
