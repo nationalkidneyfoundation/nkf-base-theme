@@ -1,5 +1,5 @@
 <!-- HEADER -->
-<header class="header <?php print (!empty($page['highlighted'])) ? 'bg--white' : 'bg--orange' ?>">
+<header class="header print--hide <?php print (!empty($page['highlighted'])) ? 'bg--white' : 'bg--orange' ?>">
   <!-- LOGO & TOP NAV -->
   <section>
     <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">

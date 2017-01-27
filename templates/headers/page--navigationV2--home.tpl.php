@@ -7,7 +7,7 @@
  * Available variables:
  */
 ?>
-<header class="width--100 bg--orange text-align--center">
+<header class="print--hide width--100 bg--orange text-align--center">
   <div class="container">
     <div class="grid width--100 padding-x--md padding-y--xxl">
       <div class="grid-cell width--25 md--display--inline-block display--none"></div>
@@ -28,7 +28,7 @@
   </div>
 <?php endif; ?>
 <?php if (!empty($page['navigation'])) : ?>
-<nav class="bg--orange--l1">
+<nav class="print--hide bg--orange--l1">
   <div class="container font-size--sm text-align--center ">
     <div class="nav__navigation grid md--display--inline-block display--none width--100 color--white text-align--center center">
       <?php print render($page['navigation']); ?>
