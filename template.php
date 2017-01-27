@@ -477,7 +477,7 @@ function nkf_base_menu_link(array $variables) {
 function nkf_base_preprocess_panels_pane(&$vars) {
   // Add id and custom class if sent in.
 
-  if ($vars['display']->layout == 'flex' || $vars['display']->layout == 'widescreen') {
+  if ($vars['display']->layout == 'flex' || $vars['display']->layout == 'flex-center' || $vars['display']->layout == 'widescreen') {
     $vars['classes_array'][] = 'grid-cell';
   }
 }
