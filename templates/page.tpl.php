@@ -45,7 +45,7 @@
     <?php endif; ?>
 
     <!-- BREADCRUMBS -->
-    <?php if ($breadcrumb && FALSE): ?>
+    <?php if ($breadcrumb): ?>
     <section class="main__breadcrumbs">
       <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <?php print $breadcrumb; ?>
