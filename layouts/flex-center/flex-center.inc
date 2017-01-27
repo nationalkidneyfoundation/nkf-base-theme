@@ -2,7 +2,7 @@
 
 // Plugin definition
 $plugin = array(
-  'title' => t('Flex Center'),
+  'title' => t('Flex'),
   'category' => t('NKF Base'),
   'icon' => 'flex-center.png',
   'theme' => 'flex-center',

@@ -28,3 +28,8 @@
     display: block !important;
   }
 }
+@media print {
+  .print--show
+    display: block !important;
+  }
+}

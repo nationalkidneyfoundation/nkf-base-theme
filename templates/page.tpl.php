@@ -24,6 +24,9 @@
   <?php else : ?>
     <?php include_once('headers/page--navigation.tpl.php'); ?>
   <?php endif; ?>
+  <div class="display--none print--display--block text-align--center">
+    <img src="<?php print base_path() . path_to_theme();?>/img/NKF-logoR_Hori_OB.png"/>
+  </div>
 
   <!-- MESSAGES -->
   <?php //if (!empty($page['help']) || ($show_messages && !empty($messages))): ?>
@@ -45,7 +48,7 @@
     <?php endif; ?>
 
     <!-- BREADCRUMBS -->
-    <?php if ($breadcrumb): ?>
+    <?php if ($breadcrumb && FALSE): ?>
     <section class="main__breadcrumbs">
       <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
         <?php print $breadcrumb; ?>
