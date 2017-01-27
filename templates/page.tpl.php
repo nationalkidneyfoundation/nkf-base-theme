@@ -59,10 +59,10 @@
     <!-- TITLE -->
     <?php if (!$microsite_home) : ?>
       <?php if ($title): ?>
-        <section class="main__title <?php if ($widescreen) { print 'invisible'; } ?>">
-          <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
+        <section class="main__title">
+          <div class="container padding-top--xl md--padding-top--xxl padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print render($title_prefix); ?>
-            <h1 class="font-size--xl sm--font-size--xxl padding-bottom--none"><?php print $title ?></h1>
+            <h1 class="font-size--xxl padding--none"><?php print $title ?></h1>
             <?php print render($title_suffix); ?>
           </div>
         </section>
