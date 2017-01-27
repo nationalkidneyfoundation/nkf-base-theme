@@ -24,7 +24,7 @@
   <?php else : ?>
     <?php include_once('headers/page--navigation.tpl.php'); ?>
   <?php endif; ?>
-  <div class="display--none print--show text-align--center">
+  <div class="display--none print--show text-align--center padding--xl">
     <img src="<?php print base_path() . path_to_theme();?>/img/NKF-logoR_Hori_OB.png"/>
   </div>
 
