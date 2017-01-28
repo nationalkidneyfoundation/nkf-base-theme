@@ -44,12 +44,12 @@
 
       var gaTrack = function(obj) {
         try {
-          console.log('trying');
-          console.log(obj);
+          //console.log('trying');
+          //console.log(obj);
           ga('send', obj);
         } catch (e) {
-          console.log('catching');
-          console.log(e);
+          //console.log('catching');
+          //console.log(e);
         }
       }
     }
