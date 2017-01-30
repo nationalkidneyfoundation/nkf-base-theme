@@ -26,7 +26,7 @@
           eventCategory: $(this).data('category') ? $(this).data('category') : '',
           eventAction: $(this).data('action') ? $(this).data('action') : '',
           eventLabel: $(this).data('label') ? $(this).data('label') : '',
-          eventValue: $(this).data('value') ? $(this).data('value') : '',
+          //eventValue: $(this).data('value') ? $(this).data('value') : '',
           transport: 'beacon'
         };
         gaTrack(obj);
