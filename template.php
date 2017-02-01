@@ -87,7 +87,7 @@ function nkf_base_preprocess_page(&$vars) {
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );
-  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
+  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'latest-news') !== false || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
     $vars['v2'] = TRUE;
     if (strpos($alias, 'category') !== FALSE || strpos($alias, 'atoz') !== false && $alias != 'atoz') {
       $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
