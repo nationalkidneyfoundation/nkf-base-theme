@@ -110,6 +110,10 @@ function nkf_base_preprocess_page(&$vars) {
     }
   }
 
+  if (nkf_base_version_2_allowed_pages(current_path())) {
+    $vars['v2'] = TRUE;
+  }
+
   $widescreen = false;
 
   $panel = panels_get_current_page_display();
@@ -479,5 +483,13 @@ function nkf_base_preprocess_panels_pane(&$vars) {
 
   if ($vars['display']->layout == 'flex' || $vars['display']->layout == 'flex-center' || $vars['display']->layout == 'widescreen') {
     $vars['classes_array'][] = 'grid-cell';
+  }
+}
+
+
+function nkf_base_version_2_allowed_pages($path) {
+  $patterns = variable_get('nkf_base_version_2_paths', "");
+  if (drupal_match_path($path, $patterns)) {
+    return TRUE;
   }
 }
