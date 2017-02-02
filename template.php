@@ -488,7 +488,7 @@ function nkf_base_preprocess_panels_pane(&$vars) {
 
 
 function nkf_base_version_2_allowed_pages($path) {
-  $patterns = theme_get_setting('nkf_base_version_2_paths', "");
+  $patterns = theme_get_setting('nkf_base_version_2_paths');
   if (drupal_match_path($path, $patterns)) {
     return TRUE;
   }
