@@ -40,3 +40,7 @@ scripts[] = js/donate-form.js
 
 ; Panels  =====================================================================
 plugins[panels][layouts]    = layouts
+
+
+; Settings ====================================================================
+settings[nkf_base_version_2_paths] = blahblah
