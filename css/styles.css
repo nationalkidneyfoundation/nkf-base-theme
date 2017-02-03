@@ -1489,6 +1489,14 @@ button.mfp-close {
   box-decoration-break: clone;
 }
 
+.text-highlight--pinterest {
+  background-color: #BD081C;
+  box-shadow: 8px 0 0 #BD081C, -7px 0 0 #BD081C;
+  box-shadow: 0.5rem 0 0 #BD081C, -0.5rem 0 0 #BD081C;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
 .wf-loading h1,
 .wf-loading h2,
 .wf-loading h3,
@@ -2894,6 +2902,18 @@ a.color--youtube:hover {
   color: #FF3333;
 }
 
+.color--pinterest,
+.pinterest {
+  color: #BD081C;
+}
+
+a.color--pinterest,
+a.color--pinterest:active,
+a.color--pinterest:visited,
+a.color--pinterest:hover {
+  color: #BD081C;
+}
+
 .hover--color--orange:hover,
 .hover--orange:hover {
   color: #F15E22;
@@ -3122,6 +3142,16 @@ a.hover--googleplus:hover {
 a.hover--color--youtube:hover,
 a.hover--youtube:hover {
   color: #FF3333;
+}
+
+.hover--color--pinterest:hover,
+.hover--pinterest:hover {
+  color: #BD081C;
+}
+
+a.hover--color--pinterest:hover,
+a.hover--pinterest:hover {
+  color: #BD081C;
 }
 
 /*
@@ -4865,6 +4895,81 @@ a.hover--youtube:hover {
   background-color: #FF3333;
 }
 
+.background-color--pinterest,
+.bg--pinterest {
+  background-color: #BD081C;
+}
+
+.background-color--pinterest--l1,
+.bg--pinterest--l1 {
+  background-color: #ee0a23;
+}
+
+.background-color--pinterest--l2,
+.bg--pinterest--l2 {
+  background-color: #f6354a;
+}
+
+.background-color--pinterest--d1,
+.bg--pinterest--d1 {
+  background-color: #8c0615;
+}
+
+.background-color--pinterest--d2,
+.bg--pinterest--d2 {
+  background-color: #5b040e;
+}
+
+.background-color--pinterest--o10,
+.bg--pinterest--o10 {
+  background-color: rgba(189, 8, 28, 0.1);
+}
+
+.background-color--pinterest--o20,
+.bg--pinterest--o20 {
+  background-color: rgba(189, 8, 28, 0.2);
+}
+
+.background-color--pinterest--o30,
+.bg--pinterest--o30 {
+  background-color: rgba(189, 8, 28, 0.3);
+}
+
+.background-color--pinterest--o40,
+.bg--pinterest--o40 {
+  background-color: rgba(189, 8, 28, 0.4);
+}
+
+.background-color--pinterest--o50,
+.bg--pinterest--o50 {
+  background-color: rgba(189, 8, 28, 0.5);
+}
+
+.background-color--pinterest--o60,
+.bg--pinterest--o60 {
+  background-color: rgba(189, 8, 28, 0.6);
+}
+
+.background-color--pinterest--o70,
+.bg--pinterest--o70 {
+  background-color: rgba(189, 8, 28, 0.7);
+}
+
+.background-color--pinterest--o80,
+.bg--pinterest--o80 {
+  background-color: rgba(189, 8, 28, 0.8);
+}
+
+.background-color--pinterest--o90,
+.bg--pinterest--o90 {
+  background-color: rgba(189, 8, 28, 0.9);
+}
+
+.hover--background-color--pinterest:hover,
+.hover--bg--pinterest:hover {
+  background-color: #BD081C;
+}
+
 .border-color--orange {
   border-color: #F15E22;
 }
@@ -4960,6 +5065,10 @@ a.hover--youtube:hover {
 
 .border-color--youtube {
   border-color: #FF3333;
+}
+
+.border-color--pinterest {
+  border-color: #BD081C;
 }
 
 /*
@@ -6422,7 +6531,7 @@ a.hover--youtube:hover {
   -webkit-appearance: none;
   border-color: #4875B4;
   background-color: #4875B4;
-  color: #fff;
+  color: #ffffff;
 }
 
 .button--linkedin:before,
@@ -6444,7 +6553,7 @@ a.hover--youtube:hover {
 }
 
 .button--linkedin:visited {
-  color: #fff;
+  color: #ffffff;
 }
 
 .button--linkedin:hover {
@@ -6575,6 +6684,66 @@ a.hover--youtube:hover {
 .button--youtube:active,
 .button--youtube.active {
   background-color: #cc2929;
+  color: #fff;
+}
+
+.button--pinterest {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: normal;
+  padding: 8px 15px;
+  padding: 0.5rem 1rem;
+  height: auto;
+  border-width: 0;
+  border-style: solid;
+  vertical-align: middle;
+  border-radius: 1000px;
+  vertical-align: middle;
+  text-align: center;
+  z-index: 2;
+  line-height: normal;
+  box-sizing: border-box;
+  margin: 0;
+  -webkit-appearance: none;
+  border-color: #BD081C;
+  background-color: #BD081C;
+  color: #ffffff;
+}
+
+.button--pinterest:before,
+.button--pinterest:after {
+  box-sizing: border-box;
+}
+
+.button--pinterest:focus {
+  outline: 0;
+}
+
+.button--pinterest:hover {
+  text-decoration: none;
+  color: currentColor;
+}
+
+.button--pinterest:disabled {
+  opacity: .5;
+}
+
+.button--pinterest:visited {
+  color: #ffffff;
+}
+
+.button--pinterest:hover {
+  background-color: #ca3949;
+  color: #fff;
+}
+
+.button--pinterest:active,
+.button--pinterest.active {
+  background-color: #970616;
   color: #fff;
 }
 
@@ -7790,6 +7959,10 @@ a.hover--youtube:hover {
 
 .fill--youtube {
   fill: #FF3333;
+}
+
+.fill--pinterest {
+  fill: #BD081C;
 }
 
 .line-height--xxxs {
@@ -15032,8 +15205,8 @@ th {
 
 @font-face {
   font-family: 'fontello';
-  src: url("../font/fontello.eot?34108611");
-  src: url("../font/fontello.eot?34108611#iefix") format("embedded-opentype"), url("../font/fontello.woff2?34108611") format("woff2"), url("../font/fontello.woff?34108611") format("woff"), url("../font/fontello.ttf?34108611") format("truetype"), url("../font/fontello.svg?34108611#fontello") format("svg");
+  src: url("../font/fontello.eot?48367146");
+  src: url("../font/fontello.eot?48367146#iefix") format("embedded-opentype"), url("../font/fontello.woff2?48367146") format("woff2"), url("../font/fontello.woff?48367146") format("woff"), url("../font/fontello.ttf?48367146") format("truetype"), url("../font/fontello.svg?48367146#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -15046,7 +15219,7 @@ th {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?34108611#fontello') format('svg');
+    src: url('../font/fontello.svg?48367146#fontello') format('svg');
   }
 }
 */
@@ -15241,6 +15414,12 @@ th {
 }
 
 /* '' */
+
+.icon-pinterest:before {
+  content: '\f231';
+}
+
+/* '' */
 
 .max-width--xxxs {
   max-width: 11px;

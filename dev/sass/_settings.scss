@@ -90,6 +90,7 @@ $colors: (
   , linkedin:   #4875B4
   , googleplus: #C63D2D
   , youtube:    #FF3333
+  , pinterest:  #BD081C
 ) !default;
 
 $white: #fff !default;
@@ -237,7 +238,7 @@ $breakpoints: (
   @if $color == null {
     @return null;
   }
-  @else if $color == color('twitter') or $color == color('facebook') or $color == color('instagram') {
+  @else if $color == color('pinterest') or $color == color('linkedin') or $color == color('twitter') or $color == color('facebook') or $color == color('instagram') {
     @return #ffffff;
   }
   @else {
