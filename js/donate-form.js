@@ -155,8 +155,8 @@
 
 
       // listen for changes to required fields to unset error
-      $('input.form-text, textarea').once().on('input', requiredFieldInputHandler);
-      $('input.form-radio, select').once().on('change', requiredFieldInputHandler);
+      $('input.form-text.required, textarea.required').once().on('input', requiredFieldInputHandler);
+      $('input.form-radio.required, select.required').once().on('change', requiredFieldInputHandler);
 
       // update the submit button with current donation amount
       $(".form-item-donation input").once('donation-value').on('input', setDonationAmount);
