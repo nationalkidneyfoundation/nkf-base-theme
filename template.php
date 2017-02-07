@@ -235,7 +235,8 @@ function nkf_base_preprocess_block(&$vars) {
   if ($vars['block']->module == 'bean') {
     $beans = $vars['elements']['bean'];
     // There is only 1 bean per block.
-    $bean = $beans[reset(element_children($beans))];
+    $b = reset(element_children($beans));
+    $bean = $beans[$b];
     // Add template suggestions for bean types.
     $vars['theme_hook_suggestions'][] = 'block__bean__' . $bean['#bundle'];
   }

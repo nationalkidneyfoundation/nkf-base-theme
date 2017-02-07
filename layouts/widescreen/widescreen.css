@@ -1,7 +1,7 @@
 .panel-separator {
   display: none !important;
 }
-.main__title h1 {
+.main__title {
   position: absolute !important;
   overflow: hidden !important;
   width: 1px !important;
