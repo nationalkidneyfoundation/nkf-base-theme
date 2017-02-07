@@ -126,7 +126,7 @@
 
 
   <!-- FOOTER -->
-  <footer class="footer margin-top--xxxl bg--gray-1">
+  <footer class="footer bg--gray-1">
     <div class="container padding-y--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg ">
       <?php if ($page['footer']): ?>
       <?php print render($page['footer']); ?>
