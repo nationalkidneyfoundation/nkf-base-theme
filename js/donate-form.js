@@ -224,7 +224,7 @@
            amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [2500, '$2,500'], [5000, '$5,000'], [0, 'Other']];
         }
         if(window.location.href.toLowerCase().indexOf("goodmorningamerica") != -1) {
-           amountOptionsArray = [[1,'$1'],[5,'$5'], [10,'$10'], [20, '$20'], [50, '$50'], [0, 'Other']];
+           amountOptionsArray = [[1,'$1'],[5,'$5'], [25,'$25'], [50, '$50'], [100, '$100'], [0, 'Other']];
         }
         $.each(amountOptionsArray, function(i, v) {
           var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
