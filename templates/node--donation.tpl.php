@@ -111,14 +111,7 @@
     ?>
 
     <div class="grid width--100  <?php print isset($content['field_hero_image_background']) ? '' : 'text-align--center';?>">
-      <?php if ((isset($content['body']) || isset($content['field_hero_image']))): ?>
-      <div class="grid-cell sm--width--50 width--100 sm--padding-right--xxl">
-        <div class="padding-bottom--md">
-          <?php print render($content['field_hero_image']); ?>
-          <?php print render($content['body']); ?>
-        </div>
-      </div>
-      <?php endif; ?>
+
 
       <div class="grid-cell sm--width--70 md--width--50 width--100">
         <div class="donation__container">
@@ -133,6 +126,15 @@
           <?php print render($content['field_donation_type']); ?>
         </div>
       </div>
+
+      <?php if ((isset($content['body']) || isset($content['field_hero_image']))): ?>
+      <div class="grid-cell display--none md--display--inline-block width--50">
+        <div class="padding-bottom--md">
+          <?php print render($content['field_hero_image']); ?>
+          <?php print render($content['body']); ?>
+        </div>
+      </div>
+      <?php endif; ?>
     </div>
   </div>
 
