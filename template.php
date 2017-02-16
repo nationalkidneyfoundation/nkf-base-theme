@@ -110,7 +110,7 @@ function nkf_base_preprocess_page(&$vars) {
     }
   }
 
-  if (nkf_base_version_2_allowed_pages(current_path())) {
+  if (nkf_base_version_2_allowed_pages(current_path()) || nkf_base_version_2_allowed_pages(strtolower(drupal_get_path_alias()))) {
     $vars['v2'] = TRUE;
   }
 
