@@ -223,6 +223,9 @@
         if(window.location.href.toLowerCase().indexOf("localboardchallenge") != -1) {
            amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [2500, '$2,500'], [5000, '$5,000'], [0, 'Other']];
         }
+        if(window.location.href.toLowerCase().indexOf("goodmorningamerica") != -1) {
+           amountOptionsArray = [[1,'$1'],[5,'$5'], [10,'$10'], [20, '$20'], [50, '$50'], [0, 'Other']];
+        }
         $.each(amountOptionsArray, function(i, v) {
           var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
           var button = $('<a class="button button--gray-1 color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
