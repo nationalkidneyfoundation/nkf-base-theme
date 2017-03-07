@@ -26,7 +26,7 @@ var nkf_base_init = function($) {
     if (screen.height > height) {
       top = Math.round((width / 2) - (height / 2));
     }
-    var str = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=' + width +',height=' + height + ',left='+ left ',top=' + top;
+    var str = 'scrollbars=yes,resizable=yes,toolbar=no,location=yes,width=' + width +',height=' + height + ',left='+ left + ',top=' + top;
     window.open(href, 'intent', str);
   }
 
