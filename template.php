@@ -235,7 +235,8 @@ function nkf_base_preprocess_block(&$vars) {
   if ($vars['block']->module == 'bean') {
     $beans = $vars['elements']['bean'];
     // There is only 1 bean per block.
-    $b = reset(element_children($beans));
+    $b = element_children($beans);
+    $b = reset($b);
     $bean = $beans[$b];
     // Add template suggestions for bean types.
     $vars['theme_hook_suggestions'][] = 'block__bean__' . $bean['#bundle'];
@@ -276,7 +277,8 @@ function nkf_base_preprocess_entity_bean_hero(&$vars) {
   $height = $vars['height'] = $vars[$type]->field_hero_height[LANGUAGE_NONE][0]['value'];
 
   $description = $vars[$type]->field_base_description[LANGUAGE_NONE][0];
-  $vars['description'] = render(field_view_value('bean', $vars['bean'], 'field_base_description', $description));
+  $description = field_view_value('bean', $vars['bean'], 'field_base_description', $description);
+  $vars['description'] = render($description);
 
   if($image = $vars[$type]->field_base_image[LANGUAGE_NONE][0]['uri']) {
     $image_style = 'hero';

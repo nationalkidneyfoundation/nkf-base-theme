@@ -4,7 +4,7 @@
 
 <div class="width--100 overflow--hidden <?php print $classes; ?> <?php print $classes_plus; ?>">
   <div class="<?php print $media_classes;?> position--relative">
-    <div class="<?php print $media_classes;?> background-size--cover background-position--center overflow--hidden" style="background-image: url(<?php print $media_uri;?>)">
+    <div class="<?php print $media_classes;?> background-size--cover background-position--center overflow--hidden" <?php if (!empty($media_uri)): ?>style="background-image: url(<?php print $media_uri;?>)"<?php endif; ?>>
     </div>
     <?php if (!empty($caption)): ?>
       <div class="position--absolute bottom width--100 color--<?php print $text_color;?> bg--<?php print $bg_color;?>--o40 padding--xs font-size--sm text-align--center"><?php print $caption; ?></div>

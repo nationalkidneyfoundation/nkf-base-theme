@@ -4,7 +4,7 @@
   <?php endif; ?>
 </div>
 
-<?php if ($video_embed): ?>
+<?php if (!empty($video_embed)): ?>
   <div id="<?php print $random; ?>" class="modal--full padding--xl mfp-hide">
     <div class="max-width--xxxl center">
       <div class="video-wrapper"><?php print $video_embed; ?></div>
