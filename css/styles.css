@@ -17573,6 +17573,21 @@ nav .burger-time a {
   }
 }
 
+#edit-field-professional-subspecialty-und {
+  max-height: 150px;
+  overflow: hidden;
+  overflow-y: scroll;
+  border: 1px solid #DBDDDF;
+  padding: 8px;
+  border-radius: 2px;
+}
+
+#edit-field-professional-subspecialty-und > .form-type-checkbox {
+  float: left;
+  width: 50%;
+  padding: 2px 0;
+}
+
 .view.grid .view-header,
 .view.grid .view-filters,
 .view.grid .view-footer {
