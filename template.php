@@ -85,7 +85,7 @@ function nkf_base_preprocess_page(&$vars) {
 
   $microsites = array(
     //'scm' => '2017 Spring Clinical Meetings',
-    'spring-clinical' => '2017 Spring Clinical Meetings',
+    'spring-clinical' => '2018 Spring Clinical Meetings',
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );
