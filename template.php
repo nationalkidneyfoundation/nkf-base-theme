@@ -80,6 +80,8 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['microsite_path'] = '';
   $vars['microsite_name'] = '';
   $vars['v2'] = FALSE;
+  $vars['microsite_header_color'] = 'orange';
+  $vars['microsite_band_color'] = 'mustard';
 
   $microsites = array(
     //'scm' => '2017 Spring Clinical Meetings',
@@ -108,6 +110,10 @@ function nkf_base_preprocess_page(&$vars) {
         $vars['microsite_name'] = 'www.kidney.org';
       }
     }
+  }
+  if (strpos($alias, 'spring-clinical') !== false ) {
+    $vars['microsite_header_color'] = 'aqua';
+    $vars['microsite_band_color'] = 'mustard';
   }
 
   if (nkf_base_version_2_allowed_pages(current_path()) || nkf_base_version_2_allowed_pages(strtolower(drupal_get_path_alias()))) {

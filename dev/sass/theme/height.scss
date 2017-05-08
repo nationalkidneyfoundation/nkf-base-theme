@@ -20,7 +20,7 @@
       }
     }
     @each $name, $height in $heights {
-      .#{$bp}--height--#{$name} { 
+      .#{$bp}--height--#{$name} {
         height: $height;
       }
     }
@@ -29,6 +29,6 @@
 
 .min-height {
   @each $name, $height in $heights {
-    &--#{$name} { height: $height; }
+    &--#{$name} { min-height: $height; }
   }
 }

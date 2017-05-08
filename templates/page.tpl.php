@@ -3,7 +3,7 @@
 <div class="<?php print $page_classes; ?>">
 
   <?php if ($microsite_path || !empty($page['id_band'])) : ?>
-    <div class="bg--mustard">
+    <div class="<?php print $microsite_band_color;?>">
       <div class="container text-align--center">
         <?php if ($microsite_path) : ?>
           <div class="caps font-size--sm"><?php print $microsite_path; ?></div>

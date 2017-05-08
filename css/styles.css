@@ -1731,6 +1731,29 @@ button.mfp-close {
   animation-name: subtle-focus;
 }
 
+.animate--shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.animate--shimmer:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: translateX(-100%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
 .square--0 {
   height: 0;
   padding-bottom: 0;
@@ -7604,48 +7627,48 @@ a.hover--pinterest:hover {
 }
 
 .min-height--xxxs {
-  height: 11px;
-  height: 0.707rem;
+  min-height: 11px;
+  min-height: 0.707rem;
 }
 
 .min-height--xxs {
-  height: 15px;
-  height: 1rem;
+  min-height: 15px;
+  min-height: 1rem;
 }
 
 .min-height--xs {
-  height: 21px;
-  height: 1.414rem;
+  min-height: 21px;
+  min-height: 1.414rem;
 }
 
 .min-height--sm {
-  height: 42px;
-  height: 2.827rem;
+  min-height: 42px;
+  min-height: 2.827rem;
 }
 
 .min-height--md {
-  height: 120px;
-  height: 7.993rem;
+  min-height: 120px;
+  min-height: 7.993rem;
 }
 
 .min-height--lg {
-  height: 240px;
-  height: 15.981rem;
+  min-height: 240px;
+  min-height: 15.981rem;
 }
 
 .min-height--xl {
-  height: 339px;
-  height: 22.597rem;
+  min-height: 339px;
+  min-height: 22.597rem;
 }
 
 .min-height--xxl {
-  height: 479px;
-  height: 31.952rem;
+  min-height: 479px;
+  min-height: 31.952rem;
 }
 
 .min-height--xxxl {
-  height: 958px;
-  height: 63.884rem;
+  min-height: 958px;
+  min-height: 63.884rem;
 }
 
 .container--xs {
@@ -16239,7 +16262,7 @@ html.js .js-hide {
 
 #logo.scm,
 #logo.spring-clinical {
-  background-image: url(../img/SCM17_Lockup_w.png);
+  background-image: url(../img/SCM18_Lockup_w.png);
   height: 110px;
   width: 100%;
 }

@@ -7,7 +7,7 @@
  * Available variables:
  */
 ?>
-<header class="print--hide width--100 bg--orange text-align--center">
+<header class="print--hide width--100 bg--<?php print $microsite_header_color;?> text-align--center">
   <div class="container">
     <div class="grid width--100 padding-x--md padding-y--xxl">
       <div class="grid-cell width--25 md--display--inline-block display--none"></div>
@@ -23,19 +23,19 @@
   </div>
 </header>
 <?php if (!empty($page['main_cta'])) : ?>
-  <div class="width--100 bg--orange md--display--none display--block text-align--center padding-y--md">
+  <div class="width--100 bg--<?php print $microsite_header_color;?> md--display--none display--block text-align--center padding-y--md">
     <?php print render($page['main_cta']); ?>
   </div>
 <?php endif; ?>
 <?php if (!empty($page['navigation'])) : ?>
-<nav class="print--hide bg--orange--l1">
+<nav class="print--hide bg--<?php print $microsite_header_color;?>--l1">
   <div class="container font-size--sm text-align--center ">
     <div class="nav__navigation grid md--display--inline-block display--none width--100 color--white text-align--center center">
       <?php print render($page['navigation']); ?>
       <?php if (!empty($page['navigation_search']) || TRUE) : ?>
         <div class="grid-cell md--width--auto vertical-align--middle">
           <a href="#search-modal" class="search modal-trigger padding-x--xs caps color--white display--block">
-            <button class="button--orange"><i class="icon-search"></i> <span class="caps">Search</span></button>
+            <button class="button--<?php print $microsite_header_color;?>"><i class="icon-search"></i> <span class="caps">Search</span></button>
           </a>
         </div>
       <?php endif; ?>
@@ -44,10 +44,10 @@
       <div class="position--relative grid-cell vertical-align--middle text-align--center width--50 font-size--md">
         <a href="#" class="position--relative z-index--300 display--inline-block white-space--nowrap color--white" data-toggle="class" data-target=".burger-time" data-class="hide">
           <div class="burger-time padding-y--md padding-x--sm"><i class="icon-menu"></i> <span class="caps">Menu</span></div>
-          <div class="burger-time padding-y--md padding-x--sm hide bg--orange"><i class="icon-cancel"></i> <span class="caps">Menu</span></div>
+          <div class="burger-time padding-y--md padding-x--sm hide bg--<?php print $microsite_header_color;?>"><i class="icon-cancel"></i> <span class="caps">Menu</span></div>
         </a>
         <div class="position--absolute top left right z-index--200 margin-top--xxl">
-          <div class="burger-time hide  grid-cell bg--orange max-width--xl width--100">
+          <div class="burger-time hide  grid-cell bg--<?php print $microsite_header_color;?> max-width--xl width--100">
             <?php print render($page['navigation']); ?>
           </div>
         </div>
