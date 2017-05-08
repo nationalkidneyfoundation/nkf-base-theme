@@ -7,7 +7,7 @@
  * Available variables:
  */
 ?>
-<header class="print--hide width--100 bg--orange color--white ">
+<header class="print--hide width--100 bg--<?php print $microsite_header_color;?> color--white ">
   <nav class="container position--relative">
     <div class="display--table width--100">
       <div class="display--table-cell width--100 vertical-align--middle padding-left--md">
@@ -25,7 +25,7 @@
               <i class="icon-menu"></i>
             </div>
           </div>
-          <div class="burger-time hide bg--orange--l1 md--padding-y--xl padding-y--lg padding-x--xs">
+          <div class="burger-time hide bg--<?php print $microsite_header_color;?>--l1 md--padding-y--xl padding-y--lg padding-x--xs">
             <div class="md--show">
               <i class="icon-cancel"></i>
               <span class="caps">Menu</span>
@@ -62,7 +62,7 @@
         <?php endif; ?>
     </div>
     <div class="position--absolute right z-index--200">
-      <div class="burger-time hide font-size--md grid-cell bg--orange--l1 max-width--xl width--100">
+      <div class="burger-time hide font-size--md grid-cell bg--<?php print $microsite_header_color;?>--l1 max-width--xl width--100">
         <?php print render($page['navigation']); ?>
       </div>
     </div>
