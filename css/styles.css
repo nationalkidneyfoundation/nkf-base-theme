@@ -8182,8 +8182,8 @@ a.hover--pinterest:hover {
 }
 
 .list-style--renumber {
-  padding-left: 30px;
-  padding-left: 1.999rem;
+  padding-left: 42px;
+  padding-left: 2.827rem;
   counter-reset: list-counter;
 }
 
@@ -8195,10 +8195,9 @@ a.hover--pinterest:hover {
 }
 
 .list-style--renumber li:before {
-  content: counter(step-counter);
+  content: counter(list-counter);
   font-weight: bold;
   background-color: #111;
-  display: inline-block;
   text-align: center;
   color: #FFFFFF;
   border-radius: 1000px;
@@ -8207,8 +8206,8 @@ a.hover--pinterest:hover {
   display: inline-block;
   width: 30px;
   width: 1.999rem;
-  margin-left: -30px;
-  margin-left: -1.999rem;
+  margin-left: -42px;
+  margin-left: -2.827rem;
 }
 
 .margin--none {
