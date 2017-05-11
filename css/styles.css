@@ -8187,14 +8187,14 @@ a.hover--pinterest:hover {
   counter-reset: list-counter;
 }
 
-.list-style--renumber li {
+.list-style--renumber > li {
   list-style-type: none;
   padding-bottom: 11px;
   padding-bottom: 0.707rem;
   counter-increment: list-counter;
 }
 
-.list-style--renumber li:before {
+.list-style--renumber > li:before {
   content: counter(list-counter);
   font-weight: bold;
   background-color: #111;

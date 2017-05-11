@@ -29,12 +29,12 @@
 .list-style--renumber {
   padding-left: space(xxl);
   counter-reset: list-counter;
-  li {
+  > li {
     list-style-type: none;
     padding-bottom: space(sm);
     counter-increment: list-counter;
   }
-  li:before {
+  > li:before {
     content: counter(list-counter);
     font-weight: bold;
     background-color: color(black);
