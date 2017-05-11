@@ -8206,6 +8206,10 @@ a.hover--pinterest:hover {
   display: inline-block;
   width: 30px;
   width: 1.999rem;
+  height: 30px;
+  height: 1.999rem;
+  line-height: 30px;
+  line-height: 1.999rem;
   margin-left: -42px;
   margin-left: -2.827rem;
   float: left;
