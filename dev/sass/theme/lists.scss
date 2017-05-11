@@ -25,3 +25,27 @@
     content: '\e804';
   }
 }
+
+.list-style--renumber {
+  padding-left: space(xl);
+  counter-reset: list-counter;
+  li {
+    list-style-type: none;
+    padding-bottom: space(sm);
+    counter-increment: list-counter;
+  }
+  li:before {
+    content: counter(step-counter);
+    font-weight: bold;
+    background-color: color(black);
+    display: inline-block;
+    text-align: center;
+    color: color(white);
+    border-radius: 1000px;
+    font-size: font-size(lg);
+    display: inline-block;
+    width: space(xl);
+    margin-left: space(xl) * -1;
+
+  }
+}

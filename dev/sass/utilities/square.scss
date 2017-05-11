@@ -6,3 +6,10 @@
     width: $perc;
   }
 }
+@each $name, $height in $heights {
+  .square--#{$name} {
+    height: 0;
+    padding-bottom: $height;
+    width: $height;
+  }
+}
