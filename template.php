@@ -50,8 +50,50 @@ function nkf_base_addressfield_administrative_areas_alter(&$adminstrative_areas)
 function nkf_base_css_alter(&$css) {
   $exclude = array(
     'profiles/kidneys_distro/modules/contrib/commerce/modules/payment/theme/commerce_payment.theme.css' => FALSE,
+    'profiles/kidneys_distro/modules/contrib/addtocal/addtocal.css' => FALSE,
   );
   $css = array_diff_key($css, $exclude);
+}
+
+/**
+ * Implementation of hook_js_alter().
+ * get rid of all css cruft
+ */
+function nkf_base_js_alter(&$js) {
+  $exclude = array(
+    'profiles/kidneys_distro/modules/contrib/addtocal/addtocal.js' => FALSE,
+  );
+  $js = array_diff_key($js, $exclude);
+}
+
+
+/**
+ * hook_field_attach_view_alter
+ * make addtocal a modal
+ */
+function nkf_base_field_attach_view_alter(&$output, $context) {
+  reset($output);
+  $field_name = key($output);
+  $formatter = $output[$field_name]['#formatter'];
+  if ($formatter == 'addtocal_view' && !empty($output[$field_name][0])) {
+    // remove css and js
+    unset($output[$field_name][0]['#attached']);
+    // add modal classes
+    $id = $output[$field_name][0]['menu']['#attributes']['id'];
+    unset($output[$field_name][0]['menu']['#attributes']);
+    foreach($output[$field_name][0]['menu']['#items'] as $i => $v) {
+      $output[$field_name][0]['menu']['#items'][$i] = '<div class="padding-y--xxs font-size--lg">' . $output[$field_name][0]['menu']['#items'][$i] . '</div>';
+    }
+    $output[$field_name][0]['menu']['#attributes']['class'] = 'list--reset';
+    $output[$field_name][0]['button']['#markup'] = '<a href="#' . $id . '-modal" class="modal-trigger">Add to Calendar</a>';
+    $output[$field_name][0]['modal']['#type'] = 'container';
+    $output[$field_name][0]['modal']['#attributes']['class'] = 'display--table modal mfp-hide sm--width--xxl bg--white padding-x--xxl padding-bottom--xxl center';
+    $output[$field_name][0]['modal']['#attributes']['id'] = $id . '-modal';
+    $output[$field_name][0]['modal']['title']['#markup'] = '<h3 class="caps">Add to Calendar</h3>';
+    $output[$field_name][0]['modal']['title']['#weight'] = -10;
+    $output[$field_name][0]['modal']['menu'] = $output[$field_name][0]['menu'];
+    unset($output[$field_name][0]['menu']);
+  }
 }
 
 
