@@ -124,6 +124,7 @@ gulp.task('css-build', function () {
     .pipe(rename({suffix: '.min'}))
     .pipe(size({gzip: false, showFiles: true, title:'Min css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Min gzipped css'}))
+    .pipe(gulp.dest(paths.stylesDistDir))
     //.pipe(rework(collectNames()))
     ;
 });
