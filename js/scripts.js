@@ -31,12 +31,12 @@ var nkf_base_init = function($) {
   }
 
   // general print utility
-  $('.js--print-link').on('click', function(){
+  $('.js--print-link').once().on('click', function(){
     window.print();
     return false;
   });
 
-  $('.js--share-link').on('click', function(e){
+  $('.js--share-link').once().on('click', function(e){
     e.preventDefault();
     popup(this.href);
   });

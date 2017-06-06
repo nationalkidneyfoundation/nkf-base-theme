@@ -62,7 +62,7 @@ $h2: font-size('xl')  !default;
 $h3: font-size('lg')  !default;
 $h4: font-size('md')  !default;
 $h5: font-size('sm')  !default;
-$h6: font-size('xs')  !default;
+$h6: font-size('sm')  !default;
 
 
 // Colors
@@ -222,6 +222,9 @@ $breakpoints: (
 
 // helper functions
 @function strip-units($number) {
+  @if $number == 'auto' {
+    @return $number;
+  }
   @return ($number / ($number * 0 + 1)) / 100;
 }
 

@@ -10,7 +10,7 @@ var reworkIeLimits  = require('rework-ie-limits');
 //var reworkCalc    = require('rework-calc');
 //var reworkColors  = require('rework-plugin-colors');
 //var reworkInherit = require('rework-inherit');
-//var reworkRename  = require('rework-selector-rename');
+var reworkRename  = require('rework-selector-rename');
 var cssAutoprefix = require('gulp-autoprefixer');
 var cssMinify     = require('gulp-minify-css');
 var cssClean      = require('gulp-clean-css');
@@ -24,8 +24,26 @@ var compress      = require('compression');
 var imageresize   = require('gulp-image-resize');
 var imagemin      = require('gulp-imagemin');
 var pngquant      = require('imagemin-pngquant');
+var fs            = require("fs");
+var replace       = require('./replace.js');
+var sourcemaps    = require('gulp-sourcemaps');
 
 
+function collectNames() {
+  var names         = [];
+  return function(style) {
+    style.rules = style.rules.map(function(rule) {
+      if (!rule.selectors) { return rule; }
+      rule.selectors = rule.selectors.map(function(selector) {
+        names.push(selector + "\n");
+
+        return selector;
+      });
+      return rule;
+    });
+    fs.writeFile('names.txt', names);
+  };
+}
 
 // Paths
 var paths = {
@@ -83,23 +101,30 @@ gulp.task('browser-reload', function () {
 
 gulp.task('css-build', function () {
   gulp.src(paths.style)
+    //.pipe(sourcemaps.init())
     .pipe(sass({errLogToConsole: true}))
     .pipe(cssAutoprefix(cssPrefixOptions))
     .pipe(rework(
-      reworkRemToPx(15) // need to manually check this with _setings.scss
-      //, reworkIeLimits
+      reworkRemToPx(16) // need to manually check this with _setings.scss
     ))
+    //.pipe(sourcemaps.write('./maps'))
     .pipe(size({gzip: false, showFiles: true, title:'Raw css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Raw gzipped css'}))
     .pipe(gulp.dest(paths.stylesDistDir))
-    //.pipe(cssMinify())
+    //.pipe(cssClean())
+    //.pipe(rename({suffix: '.min'}))
+    //.pipe(size({gzip: false, showFiles: true, title:'Min css'}))
+    //.pipe(size({gzip: true, showFiles: true, title:'Min gzipped css'}))
+    //.pipe(rework(reworkRename(replace.names)))
+    //.pipe(rename({prefix: 'rename.'}))
+    //.pipe(size({gzip: false, showFiles: true, title:'Rename css'}))
+    //.pipe(size({gzip: true, showFiles: true, title:'Rename gzipped css'}))
+    //.pipe(gulp.dest(paths.stylesDistDir))
     .pipe(cssClean())
     .pipe(rename({suffix: '.min'}))
     .pipe(size({gzip: false, showFiles: true, title:'Min css'}))
     .pipe(size({gzip: true, showFiles: true, title:'Min gzipped css'}))
-    .pipe(gulp.dest(paths.stylesDistDir))
-    //.pipe(gulp.dest(paths.hackPath))
-    //.pipe(browserSync.reload({stream:true}))
+    //.pipe(rework(collectNames()))
     ;
 });
 

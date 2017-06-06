@@ -22,12 +22,14 @@
     "gulp-rework": "^1.0.3",
     "gulp-sass": "^2.3.2",
     "gulp-size": "^1.2.1",
+    "gulp-sourcemaps": "^2.6.0",
     "iconfonts": "^0.7.0",
     "imagemin-pngquant": "^4.1.0",
     "node-sass": "^3.9.3",
     "normalize.css": "^3.0.3",
     "rework-ie-limits": "^0.1.1",
     "rework-rem-fallback": "^1.0.0",
+    "rework-selector-rename": "^0.1.0",
     "size": "^1.0.0"
   }
 }

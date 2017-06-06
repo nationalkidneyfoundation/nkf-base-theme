@@ -1,5 +1,5 @@
 @each $name, $color in $colors {
-  .background-color,
+  //.background-color,
   .bg {
     &--#{$name} {
       background-color: $color;
@@ -23,7 +23,7 @@
     }
   }
   .hover {
-    &--background-color--#{$name}:hover,
+    //&--background-color--#{$name}:hover,
     &--bg--#{$name}:hover {
       background-color: $color;
     }
