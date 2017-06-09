@@ -74,8 +74,7 @@ function nkf_base_js_alter(&$js) {
 function nkf_base_field_attach_view_alter(&$output, $context) {
   reset($output);
   $field_name = key($output);
-  $formatter = $output[$field_name]['#formatter'];
-  if ($formatter == 'addtocal_view' && !empty($output[$field_name][0])) {
+  if (!empty($output[$field_name]) && $formatter = $output[$field_name]['#formatter'] == 'addtocal_view' && !empty($output[$field_name][0])) {
     // remove css and js
     unset($output[$field_name][0]['#attached']);
     // add modal classes
