@@ -13,16 +13,10 @@
       </div>
     </div>
   <?php endif; ?>
-  <?php if ($v2) : ?>
-    <?php if ($microsite_home) : ?>
-      <?php include_once('headers/page--navigationV2--home.tpl.php'); ?>
-    <?php else : ?>
-      <?php include_once('headers/page--navigationV2.tpl.php'); ?>
-    <?php endif; ?>
-
-
+  <?php if ($microsite_home) : ?>
+    <?php include_once('headers/page--navigationV2--home.tpl.php'); ?>
   <?php else : ?>
-    <?php include_once('headers/page--navigation.tpl.php'); ?>
+    <?php include_once('headers/page--navigationV2.tpl.php'); ?>
   <?php endif; ?>
   <div class="display--none print--show text-align--center padding--xl">
     <img src="<?php print base_path() . path_to_theme();?>/img/NKF-logoR_Hori_OB.png"/>

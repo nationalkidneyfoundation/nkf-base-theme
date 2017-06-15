@@ -1,21 +1,6 @@
 <?php
 
 
- /**
-  * Implements hook_theme().
-  */
-
-//function nkf_base_theme($existing, $type, $theme, $path) {
-//  $items = array();
-  //$items['redhen_donation_form'] = array(
-  //  'render element' => 'form',
-  //  'template' => 'donate-form',
-  //  'path' => drupal_get_path('theme', 'nkf_base') . '/templates',
-  //);
-  //return $items;
-//}
-
-
 /**
  * Implementation of hook_form_alter
  */
@@ -35,11 +20,11 @@ function nkf_base_form_alter(&$form, &$form_state, $form_id) {
     }
   }
 }
+
 /**
  * Implementation of hook_addressfield_administrative_areas_alter
  * force all US stats to be abbreviations.
  */
-
 function nkf_base_addressfield_administrative_areas_alter(&$adminstrative_areas) {
   foreach ($adminstrative_areas['US'] as $key => $value) {
     $adminstrative_areas['US'][$key] = $key;
@@ -120,7 +105,7 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['microsite_home'] = FALSE;
   $vars['microsite_path'] = '';
   $vars['microsite_name'] = '';
-  $vars['v2'] = FALSE;
+  //$vars['v2'] = FALSE;
   $vars['microsite_header_color'] = 'orange';
   $vars['microsite_band_color'] = 'mustard';
 
@@ -131,14 +116,14 @@ function nkf_base_preprocess_page(&$vars) {
     //'kidneycars' => 'Kidney Cars'
   );
   if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'latest-news') !== false || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
-    $vars['v2'] = TRUE;
+    //$vars['v2'] = TRUE;
     if (strpos($alias, 'category') !== FALSE || strpos($alias, 'atoz') !== false && $alias != 'atoz') {
       $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
     }
   }
   foreach ($microsites as $key => $value) {
     if (strpos($alias, $key) !== false) {
-      $vars['v2'] = TRUE;
+      //$vars['v2'] = TRUE;
       //$vars['microsite_name'] = $value;
       $attributes = array(
         'attributes' => array('class' => array('color--black padding--xs display--block'))
@@ -158,7 +143,7 @@ function nkf_base_preprocess_page(&$vars) {
   }
 
   if (nkf_base_version_2_allowed_pages(current_path()) || nkf_base_version_2_allowed_pages(strtolower(drupal_get_path_alias()))) {
-    $vars['v2'] = TRUE;
+    //$vars['v2'] = TRUE;
   }
 
   $widescreen = false;
