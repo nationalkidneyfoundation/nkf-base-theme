@@ -127,6 +127,7 @@ function nkf_base_preprocess_page(&$vars) {
     if (strpos($alias, $key) !== false) {
       $vars['microsite'] = TRUE;
       $vars['header_color'] = $value['color'];
+      $vars['home'] = $key;
       //$attributes = array(
         //'attributes' => array('class' => array('color--white padding--xs display--block'))
       //);
