@@ -116,6 +116,9 @@ function nkf_base_preprocess_page(&$vars) {
     'spring-clinical' => array(
       'color' => 'aqua'
     ),
+    'support/kidneycars' => array(
+      'color' => 'gray-1'
+    )
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );

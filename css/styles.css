@@ -15917,6 +15917,12 @@ html.js .js-hide {
   width: 100%;
 }
 
+#logo.support-kidneycars {
+  background-image: url(../img/logo-kidneycars.png);
+  height: 110px;
+  width: 100%;
+}
+
 fieldset {
   margin: 0;
   padding: 16px;

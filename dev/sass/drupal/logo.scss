@@ -16,6 +16,12 @@
     height: 110px;
     width: 100%;
   }
+  &.support-kidneycars {
+    //@include when(md) { background-image: url(../img/SCM17_Lockup_w.png); }
+    background-image: url(../img/logo-kidneycars.png);
+    height: 110px;
+    width: 100%;
+  }
 
 }
 @media print {

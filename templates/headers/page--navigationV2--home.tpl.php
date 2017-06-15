@@ -12,7 +12,7 @@
     <div class="grid width--100 padding-x--md padding-y--xxl">
       <div class="grid-cell width--25 md--display--inline-block display--none"></div>
       <div class="grid-cell md--width--50 width--100">
-        <a id="logo" href="/<?php print $home; ?>" class="<?php print $home; ?> background-position--center text-align--center"></a>
+        <a id="logo" href="/<?php print $home; ?>" class="<?php print str_replace('/','-',$home); ?> background-position--center text-align--center"></a>
       </div>
       <div class="grid-cell width--25 md--display--inline-block display--none vertical-align--middle text-align--right padding-right--lg padding-top--xxl font-size--sm">
         <?php if (!empty($page['main_cta'])) : ?>
