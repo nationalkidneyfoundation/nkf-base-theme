@@ -102,32 +102,38 @@ function nkf_base_preprocess_page(&$vars) {
     $page_classes[] = 'page-professionals-membership';
   }
 
-  $vars['microsite_home'] = FALSE;
+  //$vars['microsite_home'] = FALSE;
   $vars['microsite_path'] = '';
   $vars['microsite_name'] = '';
   //$vars['v2'] = FALSE;
-  $vars['microsite_header_color'] = 'orange';
-  $vars['microsite_band_color'] = 'mustard';
-
+  //$vars['microsite_header_color'] = 'orange';
+  //$vars['microsite_band_color'] = 'mustard';
+  $vars['header_color'] = 'orange';
+  $vars['microsite'] = FALSE;
   $microsites = array(
     //'scm' => '2017 Spring Clinical Meetings',
-    'spring-clinical' => '2018 Spring Clinical Meetings',
+    //'spring-clinical' => '2018 Spring Clinical Meetings',
+    'spring-clinical' => array(
+      'color' => 'aqua'
+    ),
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
   );
-  if ($alias == 'support' || $alias == 'support-nkf' || strpos($alias, 'latest-news') !== false || strpos($alias, 'atoz') !== false || strpos($alias, 'category') !== false || strpos($alias, 'transplantation/livingdonors') !== false) {
-    //$vars['v2'] = TRUE;
-    if (strpos($alias, 'category') !== FALSE || strpos($alias, 'atoz') !== false && $alias != 'atoz') {
-      $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
-    }
+
+  if (strpos($alias, 'category') !== FALSE || strpos($alias, 'atoz') !== false && $alias != 'atoz') {
+    $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
   }
   foreach ($microsites as $key => $value) {
     if (strpos($alias, $key) !== false) {
+      $vars['microsite'] = TRUE;
+      $vars['header_color'] = $value['color'];
+      //$attributes = array(
+        //'attributes' => array('class' => array('color--white padding--xs display--block'))
+      //);
+      //$vars['global_home'] = l('www.kidney.org', 'http://www.kidney.org', $attributes);
       //$vars['v2'] = TRUE;
       //$vars['microsite_name'] = $value;
-      $attributes = array(
-        'attributes' => array('class' => array('color--black padding--xs display--block'))
-      );
+      /*
       $vars['microsite_path'] = l($value, $key, $attributes);
       $vars['home'] = $key;
       if ($alias == $key) {
@@ -135,16 +141,17 @@ function nkf_base_preprocess_page(&$vars) {
         $vars['microsite_path'] = l('www.kidney.org', 'http://www.kidney.org', $attributes);
         $vars['microsite_name'] = 'www.kidney.org';
       }
+      */
     }
   }
-  if (strpos($alias, 'spring-clinical') !== false ) {
-    $vars['microsite_header_color'] = 'aqua';
-    $vars['microsite_band_color'] = 'mustard';
-  }
+  //if (strpos($alias, 'spring-clinical') !== false ) {
+  //  $vars['microsite_header_color'] = 'aqua';
+  //  $vars['microsite_band_color'] = 'mustard';
+  //}
 
-  if (nkf_base_version_2_allowed_pages(current_path()) || nkf_base_version_2_allowed_pages(strtolower(drupal_get_path_alias()))) {
+  //if (nkf_base_version_2_allowed_pages(current_path()) || nkf_base_version_2_allowed_pages(strtolower(drupal_get_path_alias()))) {
     //$vars['v2'] = TRUE;
-  }
+  //}
 
   $widescreen = false;
 

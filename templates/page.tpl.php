@@ -2,18 +2,16 @@
 <!-- START OF PAGE TEMPLATE -->
 <div class="<?php print $page_classes; ?>">
 
-  <?php if ($microsite_path || !empty($page['id_band'])) : ?>
-    <div class="bg--<?php print $microsite_band_color;?>">
-      <div class="container text-align--center">
-        <?php if ($microsite_path) : ?>
-          <div class="caps font-size--sm"><?php print $microsite_path; ?></div>
-        <?php else : ?>
-          <?php print render($page['id_band']); ?>
-        <?php endif; ?>
-      </div>
+  <?php if ($microsite || !empty($page['id_band'])) : ?>
+    <div class="container text-align--center">
+      <?php if ($microsite) : ?>
+        <a href="/" class="display--block bg--gray-4 color--white padding--xs caps font-size--sm">www.kidney.org</a>
+      <?php else : ?>
+        <?php print render($page['id_band']); ?>
+      <?php endif; ?>
     </div>
   <?php endif; ?>
-  <?php if ($microsite_home) : ?>
+  <?php if ($microsite) : ?>
     <?php include_once('headers/page--navigationV2--home.tpl.php'); ?>
   <?php else : ?>
     <?php include_once('headers/page--navigationV2.tpl.php'); ?>
