@@ -94,6 +94,7 @@ function nkf_base_preprocess_node(&$vars) {
  */
 function nkf_base_preprocess_page(&$vars) {
   $page_classes = array('page');
+  $alias = strtolower(drupal_get_path_alias());
   $vars['home'] = '';
   $vars['header_color'] = 'orange';
   $vars['nav_color'] = 'orange--l1';
@@ -118,7 +119,7 @@ function nkf_base_preprocess_page(&$vars) {
   }
 
   // lets see if we are on a professionals page and add classes
-  $alias = strtolower(drupal_get_path_alias());
+
   if (strpos($alias, 'professionals/membership') !== false) {
     $page_classes[] = 'page-professionals';
     $page_classes[] = 'page-professionals-membership';
