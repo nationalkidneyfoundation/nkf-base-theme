@@ -40,7 +40,7 @@
         </div>
       <?php endif; ?>
     </div>
-    <div class="grid md--display--none display--block ">
+    <div class="grid-center md--display--none display--block ">
       <div class="position--relative grid-cell vertical-align--middle text-align--center width--50 font-size--md">
         <a href="#" class="position--relative z-index--300 display--inline-block white-space--nowrap color--white" data-toggle="class" data-target=".burger-time" data-class="hide">
           <div class="burger-time padding-y--md padding-x--sm"><i class="icon-menu"></i> <span class="caps">Menu</span></div>
@@ -52,11 +52,13 @@
           </div>
         </div>
       </div>
-      <div class="grid-cell vertical-align--middle text-align--center width--50 font-size--md">
-        <a href="#search-modal" class="modal-trigger display--inline-block padding-y--md padding-x--sm color--white white-space--nowrap">
-          <i class="icon-search"></i> <span class="caps">Search</span>
-        </a>
-      </div>
+      <?php if (!empty($page['navigation_search'])) : ?>
+        <div class="grid--cell vertical-align--middle text-align--center width--50 font-size--md">
+          <a href="#search-modal" class="modal-trigger display--inline-block padding-y--md padding-x--sm color--white white-space--nowrap">
+            <i class="icon-search"></i> <span class="caps">Search</span>
+          </a>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </nav>
