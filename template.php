@@ -474,7 +474,7 @@ function _nkf_base_status_messages() {
 function nkf_base_menu_tree($variables) {
   //watchdog('nkf_base_teplate', '<pre>' . print_r($variables,TRUE) . '</pre>');
   $name = _get_menu_name_css($variables);
-  if (strpos($name, 'cta') !== FALSE) {
+  if (strpos($name, 'cta') !== FALSE || strpos($name, 'cars') !== FALSE) {
     return $variables['tree'];
   }
   return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
