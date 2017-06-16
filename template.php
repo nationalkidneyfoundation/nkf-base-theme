@@ -95,25 +95,10 @@ function nkf_base_preprocess_node(&$vars) {
 function nkf_base_preprocess_page(&$vars) {
   $page_classes = array('page');
   $vars['home'] = '';
-  // lets see if we are on a professionals page and add classes
-  $alias = strtolower(drupal_get_path_alias());
-  if (strpos($alias, 'professionals/membership') !== false) {
-    $page_classes[] = 'page-professionals';
-    $page_classes[] = 'page-professionals-membership';
-  }
-
-  //$vars['microsite_home'] = FALSE;
-  $vars['microsite_path'] = '';
-  $vars['microsite_name'] = '';
-  //$vars['v2'] = FALSE;
-  //$vars['microsite_header_color'] = 'orange';
-  //$vars['microsite_band_color'] = 'mustard';
   $vars['header_color'] = 'orange';
   $vars['nav_color'] = 'orange--l1';
   $vars['microsite'] = FALSE;
   $microsites = array(
-    //'scm' => '2017 Spring Clinical Meetings',
-    //'spring-clinical' => '2018 Spring Clinical Meetings',
     'spring-clinical' => array(
       'header_color' => 'aqua',
       'nav_color' => 'aqua--l1'
@@ -122,44 +107,27 @@ function nkf_base_preprocess_page(&$vars) {
       'header_color' => 'white',
       'nav_color' => 'gray-4'
     )
-    //'transplantation/livingdonors' => FALSE,
-    //'kidneycars' => 'Kidney Cars'
   );
-
-  if (strpos($alias, 'category') !== FALSE || strpos($alias, 'atoz') !== false && $alias != 'atoz') {
-    $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
-  }
   foreach ($microsites as $key => $value) {
     if (strpos($alias, $key) !== false) {
       $vars['microsite'] = TRUE;
       $vars['header_color'] = $value['header_color'];
       $vars['nav_color'] = $value['nav_color'];
       $vars['home'] = $key;
-      //$attributes = array(
-        //'attributes' => array('class' => array('color--white padding--xs display--block'))
-      //);
-      //$vars['global_home'] = l('www.kidney.org', 'http://www.kidney.org', $attributes);
-      //$vars['v2'] = TRUE;
-      //$vars['microsite_name'] = $value;
-      /*
-      $vars['microsite_path'] = l($value, $key, $attributes);
-      $vars['home'] = $key;
-      if ($alias == $key) {
-        $vars['microsite_home'] = TRUE;
-        $vars['microsite_path'] = l('www.kidney.org', 'http://www.kidney.org', $attributes);
-        $vars['microsite_name'] = 'www.kidney.org';
-      }
-      */
     }
   }
-  //if (strpos($alias, 'spring-clinical') !== false ) {
-  //  $vars['microsite_header_color'] = 'aqua';
-  //  $vars['microsite_band_color'] = 'mustard';
-  //}
 
-  //if (nkf_base_version_2_allowed_pages(current_path()) || nkf_base_version_2_allowed_pages(strtolower(drupal_get_path_alias()))) {
-    //$vars['v2'] = TRUE;
-  //}
+  // lets see if we are on a professionals page and add classes
+  $alias = strtolower(drupal_get_path_alias());
+  if (strpos($alias, 'professionals/membership') !== false) {
+    $page_classes[] = 'page-professionals';
+    $page_classes[] = 'page-professionals-membership';
+  }
+
+  if (strpos($alias, 'category') !== FALSE || strpos($alias, 'atoz') !== false && $alias != 'atoz') {
+    $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
+  }
+
 
   $widescreen = false;
 
