@@ -119,8 +119,8 @@ function nkf_base_preprocess_page(&$vars) {
       'nav_color' => 'aqua--l1'
     ),
     'support/kidneycars' => array(
-      'header_color' => 'gray-1',
-      'nav_color' => 'gray-3'
+      'header_color' => 'white',
+      'nav_color' => 'gray-4'
     )
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'

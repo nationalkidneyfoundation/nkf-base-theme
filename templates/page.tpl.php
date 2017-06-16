@@ -4,7 +4,7 @@
 
   <?php if ($microsite || !empty($page['id_band'])) : ?>
     <?php if ($microsite) : ?>
-      <a href="/" class="display--block bg--gray-4 color--white padding--xs caps font-size--sm text-align--center">www.kidney.org</a>
+      <a href="/" class="display--block bg--gray-2 color--black padding--xs caps font-size--sm text-align--center">www.kidney.org</a>
     <?php else : ?>
       <?php print render($page['id_band']); ?>
     <?php endif; ?>
