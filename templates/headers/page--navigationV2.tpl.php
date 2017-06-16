@@ -25,7 +25,7 @@
               <i class="icon-menu"></i>
             </div>
           </div>
-          <div class="burger-time hide bg--<?php print $header_color;?>--l1 md--padding-y--xl padding-y--lg padding-x--xs">
+          <div class="burger-time hide bg--<?php print $nav_color;?> md--padding-y--xl padding-y--lg padding-x--xs">
             <div class="md--show">
               <i class="icon-cancel"></i>
               <span class="caps">Menu</span>
@@ -62,7 +62,7 @@
         <?php endif; ?>
     </div>
     <div class="position--absolute right z-index--200">
-      <div class="burger-time hide font-size--md grid-cell bg--<?php print $header_color;?>--l1 max-width--xl width--100">
+      <div class="burger-time hide font-size--md grid-cell bg--<?php print $nav_color;?> max-width--xl width--100">
         <?php print render($page['navigation']); ?>
       </div>
     </div>

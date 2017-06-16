@@ -109,15 +109,18 @@ function nkf_base_preprocess_page(&$vars) {
   //$vars['microsite_header_color'] = 'orange';
   //$vars['microsite_band_color'] = 'mustard';
   $vars['header_color'] = 'orange';
+  $vars['nav_color'] = 'orange--l1';
   $vars['microsite'] = FALSE;
   $microsites = array(
     //'scm' => '2017 Spring Clinical Meetings',
     //'spring-clinical' => '2018 Spring Clinical Meetings',
     'spring-clinical' => array(
-      'color' => 'aqua'
+      'header_color' => 'aqua',
+      'nav_color' => 'aqua--l1'
     ),
     'support/kidneycars' => array(
-      'color' => 'gray-1'
+      'header_color' => 'gray-1',
+      'nav_color' => 'gray-3'
     )
     //'transplantation/livingdonors' => FALSE,
     //'kidneycars' => 'Kidney Cars'
@@ -129,7 +132,8 @@ function nkf_base_preprocess_page(&$vars) {
   foreach ($microsites as $key => $value) {
     if (strpos($alias, $key) !== false) {
       $vars['microsite'] = TRUE;
-      $vars['header_color'] = $value['color'];
+      $vars['header_color'] = $value['header_color'];
+      $vars['nav_color'] = $value['nav_color'];
       $vars['home'] = $key;
       //$attributes = array(
         //'attributes' => array('class' => array('color--white padding--xs display--block'))

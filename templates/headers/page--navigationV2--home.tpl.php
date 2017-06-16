@@ -28,11 +28,11 @@
   </div>
 <?php endif; ?>
 <?php if (!empty($page['navigation'])) : ?>
-<nav class="print--hide bg--<?php print $header_color;?>--l1">
+<nav class="print--hide bg--<?php print $nav_color;?>">
   <div class="container font-size--sm text-align--center ">
     <div class="nav__navigation grid md--display--inline-block display--none width--100 color--white text-align--center center">
       <?php print render($page['navigation']); ?>
-      <?php if (!empty($page['navigation_search']) || TRUE) : ?>
+      <?php if (!empty($page['navigation_search'])) : ?>
         <div class="grid-cell md--width--auto vertical-align--middle">
           <a href="#search-modal" class="search modal-trigger padding-x--xs caps color--white display--block">
             <button class="button--<?php print $header_color;?>"><i class="icon-search"></i> <span class="caps">Search</span></button>
