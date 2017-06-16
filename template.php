@@ -104,8 +104,8 @@ function nkf_base_preprocess_page(&$vars) {
       'nav_color' => 'aqua--l1'
     ),
     'support/kidneycars' => array(
-      'header_color' => 'white',
-      'nav_color' => 'gray-4'
+      'header_color' => 'orange',
+      'nav_color' => 'orange--l1'
     )
   );
   foreach ($microsites as $key => $value) {
