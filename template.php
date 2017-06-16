@@ -514,8 +514,8 @@ function nkf_base_menu_link(array $variables) {
     $element ['#below']['#theme_wrappers'][] = 'menu_tree__menu_sub';
     $sub_menu = drupal_render($element ['#below']);
   }
-
-  if ($element ['#original_link']['menu_name'] == 'menu-scm-new' || $element ['#original_link']['menu_name'] == 'menu-scm-primary-nav') {
+  $name = $element ['#original_link']['menu_name'];
+  if ($name == 'menu-scm-new' || $name == 'menu-scm-primary-nav' || strpos($name, 'cars') !== FALSE) {
     $element ['#localized_options']['attributes']['class'][] = 'padding-y--xxs';
     $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
     $element ['#attributes']['class'][] = 'grid-cell width--100 vertical-align--middle';
