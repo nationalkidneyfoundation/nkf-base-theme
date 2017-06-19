@@ -101,20 +101,26 @@ function nkf_base_preprocess_page(&$vars) {
   $vars['microsite'] = FALSE;
   $microsites = array(
     'spring-clinical' => array(
+      'paths' => array('spring-clinical'),
       'header_color' => 'aqua',
       'nav_color' => 'aqua--l1'
     ),
     'kidneycars' => array(
+      'paths' => array('kidneycars', 'blog/kidney-cars'),
       'header_color' => 'orange',
       'nav_color' => 'orange--l1'
     )
   );
   foreach ($microsites as $key => $value) {
-    if (strpos($alias, $key) !== false) {
+    $is_microsite = array_filter($value['paths'], function ($haystack) {
+      return(strpos($haystack, $alias) === 0);
+    });
+    if (!empty($is_microsite)) {
       $vars['microsite'] = TRUE;
       $vars['header_color'] = $value['header_color'];
       $vars['nav_color'] = $value['nav_color'];
       $vars['home'] = $key;
+      break;
     }
   }
 
