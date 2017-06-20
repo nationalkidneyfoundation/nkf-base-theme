@@ -116,8 +116,8 @@ function nkf_base_preprocess_page(&$vars) {
       $alias = strtolower(drupal_get_path_alias());
       watchdog('template_0', $haystack);
       watchdog('template_1', $alias);
-      watchdog('template_2', strpos($haystack, $alias));
-      return(strpos($haystack, $alias) === 0);
+      watchdog('template_2', strpos($alia,$haystacks));
+      return(strpos($alias,$haystack) === 0);
     });
     if (!empty($is_microsite)) {
       $vars['microsite'] = TRUE;
