@@ -112,7 +112,7 @@ function nkf_base_preprocess_page(&$vars) {
     )
   );
   foreach ($microsites as $key => $value) {
-    $is_microsite = array_filter($value['paths'], function ($haystack) {
+    $is_microsite = array_filter($value['paths'], function ($haystack, $alias) {
       watchdog('template_0', $haystack);
       watchdog('template_1', $alias);
       watchdog('template_2', strpos($haystack, $alias));
