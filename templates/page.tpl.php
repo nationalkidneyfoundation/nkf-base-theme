@@ -47,7 +47,7 @@
     <?php endif; ?>
 
     <!-- TITLE -->
-    <?php if (!$microsite) : ?>
+    <?php if (TRUE) : ?>
       <?php if ($title): ?>
         <section class="main__title">
           <div class="container padding-top--xl md--padding-top--xxl padding-x--sm sm--padding-x--md md--padding-x--lg">
