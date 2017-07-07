@@ -106,7 +106,7 @@ function nkf_base_preprocess_page(&$vars) {
       'nav_color' => 'aqua--l1'
     ),
     'kidneycars' => array(
-      'paths' => array('kidneycars', 'blog/kidney-cars'),
+      'paths' => array('kidneycars', 'support/kidneycars','blog/kidney-cars'),
       'header_color' => 'orange',
       'nav_color' => 'orange--l1'
     )
