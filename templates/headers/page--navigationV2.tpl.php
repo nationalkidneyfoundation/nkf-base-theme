@@ -14,6 +14,7 @@
         <a href="/" id="logo" class="display--inline-block vertical-align--middle padding-x--md">
         </a>
       </div>
+      <?php if (!empty($page['navigation'])) : ?>
       <div class="display--table-cell vertical-align--middle width--auto">
         <a href="#" class="display--block white-space--nowrap color--white" data-toggle="class" data-target=".burger-time" data-class="hide">
           <div class="burger-time md--padding-y--xl padding-y--lg padding-x--xs">
@@ -36,6 +37,7 @@
           </div>
         </a>
       </div>
+      <?php endif; ?>
       <?php if (!empty($page['navigation_search'])) : ?>
         <div class="display--table-cell vertical-align--middle width--auto">
           <a href="#search-modal" class="modal-trigger display--block md--padding-y--xl padding-y--lg padding-x--xs white-space--nowrap color--white">
@@ -61,10 +63,12 @@
           </div>
         <?php endif; ?>
     </div>
+    <?php if (!empty($page['navigation'])) : ?>
     <div class="position--absolute right z-index--200">
       <div class="burger-time hide font-size--md grid-cell bg--<?php print $nav_color;?> max-width--xl width--100">
         <?php print render($page['navigation']); ?>
       </div>
     </div>
+    <?php endif; ?>
   </nav>
 </header>
