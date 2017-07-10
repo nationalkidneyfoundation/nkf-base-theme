@@ -11,7 +11,7 @@
   <nav class="container position--relative">
     <div class="display--table width--100">
       <div class="display--table-cell width--100 vertical-align--middle padding-left--md">
-        <a href="/" id="logo" class="display--inline-block vertical-align--middle padding-x--md margin-y--md">
+        <a href="/" id="logo" class="display--inline-block vertical-align--middle padding-x--md margin-y--sm">
         </a>
       </div>
       <?php if (!empty($page['navigation'])) : ?>
