@@ -1,7 +1,8 @@
 var nkf_base_init = function($) {
   // utility function to toggle classes on click
   // useful for toggling visibility
-  $('[data-toggle=class]').one('click', function (e) {
+  $('[data-toggle=class]:not(.processed)').on('click', function (e) {
+    $(this).addClass('processed');
     var targets = $(this).attr('data-target').split('|');
     var classes = $(this).attr('data-class').split('|');
     $(targets).each(function(i, v){
