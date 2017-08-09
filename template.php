@@ -124,6 +124,24 @@ function nkf_base_preprocess_page(&$vars) {
       break;
     }
   }
+  // if we are dealing with Kidneycars add js
+  if ($vars['home'] == 'support/kidneycars') {
+    $g_tags = "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-P3XGHNL');";
+    drupal_add_js($g_tags,
+      array('type' => 'inline', 'scope' => 'header')
+    );
+    drupal_add_js('https://a.remarketstats.com/px/smart/?c=2155a54adcacf52',
+      array('type' => 'external', 'scope' => 'footer')
+    );
+    $vars['cars_noscript'] = '<!-- Google Tag Manager (noscript) -->
+      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P3XGHNL"
+      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+      <!-- End Google Tag Manager (noscript) -->';
+  }
 
   // lets see if we are on a professionals page and add classes
 

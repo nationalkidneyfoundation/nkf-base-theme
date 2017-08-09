@@ -1,4 +1,8 @@
 
+<?php if(!empty($cars_noscript)) :?>
+  <?php print $cars_noscript;?>
+<?php endif; ?>
+
 <!-- START OF PAGE TEMPLATE -->
 <div class="<?php print $page_classes; ?>">
 
