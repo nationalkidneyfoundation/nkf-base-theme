@@ -1696,17 +1696,15 @@ button.mfp-close {
 
 @keyframes fade-in {
   0% {
-    transform: scale(0.99, 0.99);
-    opacity: .7;
+    opacity: 0;
   }
 
   75% {
-    transform: scale(1.01, 1.01);
-    opacity: 1;
+    opacity: .5;
   }
 
   100% {
-    transform: scale(1, 1);
+    opacity: 1;
   }
 }
 

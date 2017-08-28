@@ -102,11 +102,9 @@
   transition: transform .4s ease-in, opacity .4s ease-in;
 }
 @keyframes fade-in {
-  0%   { transform: scale(.99, .99);
-         opacity: .7; }
-  75%  { transform: scale(1.01, 1.01);
-        opacity: 1;}
-  100% { transform: scale(1,1);}
+  0%   { opacity: 0; }
+  75%  { opacity: .5; }
+  100% { opacity: 1; }
 }
 .animate--fade-in {
   animation-name: fade-in;
