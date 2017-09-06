@@ -226,6 +226,7 @@
         if(window.location.href.toLowerCase().indexOf("goodmorningamerica") != -1) {
            amountOptionsArray = [[1,'$1'],[5,'$5'], [25,'$25'], [50, '$50'], [100, '$100'], [0, 'Other']];
         }
+        // hurricane harvey donation options
         if(window.location.href.toLowerCase().indexOf("nkf-hurricane-harvey-relief-fund") != -1) {
            amountOptionsArray = [[25,'$25'],[50,'$50'], [100,'$100'], [250, '$250'], [500, '$500'], [0, 'Other']];
         }
