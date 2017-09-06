@@ -226,6 +226,9 @@
         if(window.location.href.toLowerCase().indexOf("goodmorningamerica") != -1) {
            amountOptionsArray = [[1,'$1'],[5,'$5'], [25,'$25'], [50, '$50'], [100, '$100'], [0, 'Other']];
         }
+        if(window.location.href.toLowerCase().indexOf("nkf-hurricane-harvey-relief-fund") != -1) {
+           amountOptionsArray = [[25,'$25'],[50,'$50'], [100,'$100'], [250, '$250'], [500, '$500'], [0, 'Other']];
+        }
         $.each(amountOptionsArray, function(i, v) {
           var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
           var button = $('<a class="button button--gray-1 color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
