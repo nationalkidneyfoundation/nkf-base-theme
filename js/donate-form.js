@@ -233,7 +233,7 @@
         if(window.location.href.toLowerCase().indexOf("nkf-hurricane-irma-relief-fund") != -1) {
            amountOptionsArray = [[25,'$25'],[50,'$50'], [100,'$100'], [250, '$250'], [500, '$500'], [0, 'Other']];
         }
-        if(window.location.href.toLowerCase().indexOf("KadinsFight") != -1) {
+        if(window.location.href.toLowerCase().indexOf("kadinsfight") != -1) {
            amountOptionsArray = [[5,'$5'],[10,'$10'], [15,'$15'], [20, '$20'], [25, '$25'], [0, 'Other']];
         }
         $.each(amountOptionsArray, function(i, v) {
