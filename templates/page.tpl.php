@@ -33,15 +33,18 @@
   </section>
   <?php endif; ?>
 
-  <!-- Top Promo -->
-  <?php if ($page['top_promo'] && !empty($page['top_promo'])): ?>
-  <section class="">
-    <?php print render($page['top_promo']);?>
-  </section>
-  <?php endif; ?>
+
 
   <!-- MAIN -->
   <main class="main position--relative z-index--100">
+
+    <!-- Top Promo -->
+    <?php if ($page['top_promo'] && !empty($page['top_promo'])): ?>
+    <section class="position--absolute top left right">
+      <?php print render($page['top_promo']);?>
+    </section>
+    <?php endif; ?>
+
     <!-- BACKGROUND IMAGE -->
     <?php if($background_image && $node->type =='donation'): ?>
       <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
