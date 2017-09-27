@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
@@ -666,7 +668,7 @@ select:not([multiple]) {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -677,7 +679,7 @@ select:not([multiple]) {
 }*/
 
 .grid-cell {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .tabs li {
@@ -687,7 +689,7 @@ select:not([multiple]) {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -716,7 +718,7 @@ select:not([multiple]) {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -994,7 +996,7 @@ button.mfp-close {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -2702,6 +2704,10 @@ button.mfp-close {
 
 .z-index--400 {
   z-index: 400;
+}
+
+body {
+  color: #3b444f;
 }
 
 a {
@@ -13337,7 +13343,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 100%;
 }
@@ -13358,7 +13364,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   padding: 0;
   margin: 0;
@@ -15635,7 +15641,7 @@ html.js input.throbbing {
 .draggable a.tabledrag-handle {
   cursor: move;
   float: left;
-  margin-right: 10px;
+  margin: 10px 10px 0;
   text-decoration: none;
 }
 
@@ -15646,7 +15652,7 @@ a.tabledrag-handle:hover {
 a.tabledrag-handle .handle {
   height: 20px;
   width: 20px;
-  background: url(drupal/draggable.png) 0px 0px no-repeat;
+  background: url(/misc/draggable.png) 0px 0px no-repeat;
 }
 
 a.tabledrag-handle-hover .handle {
@@ -16419,7 +16425,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -16558,7 +16564,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: auto;
@@ -16613,7 +16619,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 50%;
@@ -16721,7 +16727,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 100%;
@@ -16747,7 +16753,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -16775,7 +16781,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -16803,7 +16809,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -16861,7 +16867,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 100%;
@@ -16887,7 +16893,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 100%;
@@ -16919,7 +16925,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 50%;
@@ -16988,7 +16994,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   padding-top: 16px;
@@ -17019,7 +17025,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -17032,7 +17038,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -17048,7 +17054,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 60%;
@@ -17075,7 +17081,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
   width: 40%;
@@ -17107,7 +17113,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -17275,7 +17281,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -17296,7 +17302,7 @@ nav .burger-time a {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }

@@ -25,11 +25,18 @@
   <!-- MESSAGES -->
   <?php //if (!empty($page['help']) || ($show_messages && !empty($messages))): ?>
   <?php if ($show_messages && !empty($messages)): ?>
-  <section class="background-color--gray-1">
+  <section class="bg--gray-1">
     <div class="container padding-y--md md--padding-y--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
       <?php print render($page['help']); ?>
       <?php if ($show_messages && $messages): print $messages; endif; ?>
     </div>
+  </section>
+  <?php endif; ?>
+
+  <!-- Top Promo -->
+  <?php if ($top_promo && !empty($top_promo)): ?>
+  <section class="">
+    <?php print $top_promo;?>
   </section>
   <?php endif; ?>
 

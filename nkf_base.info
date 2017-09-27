@@ -22,6 +22,7 @@ regions[navigation]         = Main Navigation
 regions[navigation_search]  = Navigation Search
 regions[main_cta]           = Main CTA
 regions[id_band]            = ID Band
+regions[top_promo]          = Top Promo
 
 ; Stylesheets =================================================================
 

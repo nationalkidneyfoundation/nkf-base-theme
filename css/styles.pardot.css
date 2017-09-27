@@ -666,7 +666,7 @@ select:not([multiple]) {
   word-spacing: normal;
   text-rendering: auto;
   text-align: left;
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   *zoom: 1;
   *display: inline;
 }
@@ -677,7 +677,7 @@ select:not([multiple]) {
 }*/
 
 .grid-cell {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .center,
@@ -1595,6 +1595,10 @@ select:not([multiple]) {
 
 .z-index--400 {
   z-index: 400;
+}
+
+body {
+  color: #3b444f;
 }
 
 a {
@@ -9110,7 +9114,7 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   line-height: 1.5;
   font-size: 100%;
 }
@@ -9131,7 +9135,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, sans-serif;
   font-weight: bold;
   padding: 0;
   margin: 0;
