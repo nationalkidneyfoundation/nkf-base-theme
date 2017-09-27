@@ -34,9 +34,9 @@
   <?php endif; ?>
 
   <!-- Top Promo -->
-  <?php if ($top_promo && !empty($top_promo)): ?>
+  <?php if ($page['top_promo'] && !empty($page['top_promo'])): ?>
   <section class="">
-    <?php print $top_promo;?>
+    <?php print render($page['top_promo']);?>
   </section>
   <?php endif; ?>
 
