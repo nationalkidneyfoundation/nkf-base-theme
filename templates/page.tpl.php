@@ -40,7 +40,6 @@
   </section>
   <?php endif; ?>
 
-
   <!-- MAIN -->
   <main class="main position--relative z-index--100">
     <!-- BACKGROUND IMAGE -->

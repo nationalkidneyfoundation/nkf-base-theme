@@ -17,9 +17,6 @@ a:hover {
 
 @each $name, $color in $colors {
   .color--#{$name},
-  //.#{$name} {
-  //  color: $color;
-  //}
   a.color--#{$name},
   a.color--#{$name}:active,
   a.color--#{$name}:visited,

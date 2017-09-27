@@ -154,6 +154,7 @@ function nkf_base_preprocess_page(&$vars) {
     $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
   }
 
+
   // Add home link back to spe profile home.
   if (strpos($alias, 'personalized-health-information') !== FALSE && !empty(arg(2))) {
     $profile_link = l('Profile Home', arg(0) . '/' . arg(1),
