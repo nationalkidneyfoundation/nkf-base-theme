@@ -14737,6 +14737,12 @@ th {
   }
 }
 
+@media print {
+  .print--width--100 {
+    width: 100%;
+  }
+}
+
 .width--fit {
   display: block;
   float: left;
@@ -14753,106 +14759,6 @@ th {
   box-sizing: border-box;
   display: block;
   width: 100%;
-}
-
-@media (min-width: 20em) {
-  .xs--width--fit {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .xs--width--fill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .xs--width--full {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-  }
-}
-
-@media (min-width: 40em) {
-  .sm--width--fit {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .sm--width--fill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .sm--width--full {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-  }
-}
-
-@media (min-width: 52em) {
-  .md--width--fit {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .md--width--fill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .md--width--full {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-  }
-}
-
-@media (min-width: 64em) {
-  .lg--width--fit {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .lg--width--fill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .lg--width--full {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-  }
-}
-
-@media (min-width: 75em) {
-  .xl--width--fit {
-    display: block;
-    float: left;
-    width: auto;
-  }
-
-  .xl--width--fill {
-    display: block;
-    overflow: hidden;
-    width: auto;
-  }
-
-  .xl--width--full {
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-  }
 }
 
 /*@import '../../node_modules/iconfonts/stylesheets/font-awesome';

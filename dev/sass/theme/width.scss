@@ -39,6 +39,12 @@
   }
 }
 
+@media print {
+  .print--width--100 {
+    width: 100%;
+  }
+}
+
 .width--fit {
   display: block;
   float: left;
@@ -55,25 +61,4 @@
   box-sizing: border-box;
   display: block;
   width: 100%;
-}
-@each $bp, $bp-value in $breakpoints {
-  @media #{$bp-value} {
-    .#{$bp}--width--fit {
-      display: block;
-      float: left;
-      width: auto;
-    }
-
-    .#{$bp}--width--fill {
-      display: block;
-      overflow: hidden;
-      width: auto;
-    }
-
-    .#{$bp}--width--full {
-      box-sizing: border-box;
-      display: block;
-      width: 100%;
-    }
-  }
 }
