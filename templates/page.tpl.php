@@ -40,7 +40,7 @@
 
     <!-- Top Promo -->
     <?php if ($page['top_promo'] && !empty($page['top_promo'])): ?>
-    <section class="position--absolute top left right">
+    <section class="position--absolute top left right print--hide">
       <?php print render($page['top_promo']);?>
     </section>
     <?php endif; ?>
