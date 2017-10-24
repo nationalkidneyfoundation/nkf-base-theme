@@ -3,8 +3,8 @@
 // The scale variable is used in a variety  of
 // of fuctions to establish consistent sizes for
 // font sizes, heights, etc.
-// Currently this is based on an ugmented fourth scale.
-$scale: (
+// Currently this is based on an augmented fourth scale.
+$scaleOLD: (
     -4: 0.25rem
   , -3: 0.354rem
   , -2: 0.5rem
@@ -26,6 +26,35 @@ $scale: (
   , 15: 127.73rem
   , 16: 180.61rem
 ) !default;
+
+// This is a test scale based on http://type-scale.com/
+// the Perfect Fourth.
+// (so annoying that this webiste doesn't maintain state in their URL.
+// wait, they do:http://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&webfont=Libre+Baskerville&font-family=%27Libre%20Baskerville%27,%20serif&font-weight=400&font-family-headers=&font-weight-headers=inherit&background-color=white&font-color=%23333)
+$scale: (
+      -4: 0.317rem
+    , -3: 0.422rem
+    , -2: 0.563rem
+    , -1: 0.75rem
+    , 1: 1rem
+    , 2: 1.333rem
+    , 3: 1.777rem
+    , 4: 2.369rem
+    , 5: 3.157rem
+    , 6: 4.209rem
+    , 7: 5.61rem
+    , 8: 7.478rem
+    , 9: 9.969rem
+    , 10: 13.288rem
+    , 11: 17.713rem
+    , 12: 23.612rem
+    , 13: 31.475rem
+    , 14: 41.956rem
+    , 15: 55.927rem
+    , 16: 74.551rem
+    , 17: 99.376rem
+) !default;
+
 
 // Function that returns a value from the $scale array.
 @function base-scale($x){
@@ -170,11 +199,11 @@ $heights: (
   , 'xxs': base-scale(1)
   , 'xs': base-scale(2)
   , 'sm': base-scale(4)
-  , 'md': base-scale(7)
-  , 'lg': base-scale(9)
-  , 'xl': base-scale(10)
-  , 'xxl': base-scale(11)
-  , 'xxxl': base-scale(13)
+  , 'md': base-scale(9)
+  , 'lg': base-scale(11)
+  , 'xl': base-scale(12)
+  , 'xxl': base-scale(13)
+  , 'xxxl': base-scale(15)
 ) !default;
 
 
@@ -188,7 +217,7 @@ $containers: (
   , 'md': base-scale(9)
   //, 'lg': base-scale(13)
   , 'lg': 73.75rem
-  , 'xl': base-scale(15)
+  , 'xl': base-scale(17)
 ) !default;
 
 // Borders

@@ -31,7 +31,7 @@
 }
 
 button.mfp-close {
-  margin: space(sm);
+  margin: 0 space(sm);
   font-size: font-size(xxl);
 }
 @media #{breakpoint(md)} {

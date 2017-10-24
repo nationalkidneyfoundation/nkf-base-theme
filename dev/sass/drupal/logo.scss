@@ -25,6 +25,13 @@
   }
 
 }
-@media print {
 
+.logo--wb #logo {
+  @include when(sm) { background-image: url(../logo.png); }
+  background-image: url(../img/logo__bean--white.png);
+}
+
+.logo--w #logo {
+  @include when(sm) { background-image: url(../img/NKF-logoR_Hori_W.png); }
+  background-image: url(../img/logo__bean--white.png);
 }

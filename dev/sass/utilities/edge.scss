@@ -1,0 +1,134 @@
+
+.edge--angled--top--left,
+.edge--angled--top--right {
+  position: relative;
+  z-index: 1;
+  &:before {
+    background: inherit;
+    content: '';
+    height: 50%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+.edge--angled--bottom--left,
+.edge--angled--bottom--right{
+  position: relative;
+  z-index: 1;
+  &:after {
+    background: inherit;
+    content: '';
+    height: 50%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+  }
+}
+.edge--angled--top--left:before {
+  transform: skewY(2.5deg);
+  transform-origin: 100% 0;
+}
+.edge--angled--top--right:before {
+  transform: skewY(-2.5deg);
+  transform-origin: 0 100%;
+}
+.edge--angled--bottom--left:after {
+  transform: skewY(-2.5deg);
+  transform-origin: 100% 0;
+
+}
+.edge--angled--bottom--right:after {
+  transform: skewY(2.5deg);
+  transform-origin: 0 100%;
+}
+
+.edge--jagged--bottom {
+  position: relative;
+  padding-bottom: 50px !important;
+  &:after {
+    content: '';
+    background-image: url('../svg/edge--jagged--bottom.svg');
+    background-size: 100% 100%;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+  }
+}
+.edge--wavy--bottom {
+  position: relative;
+  padding-bottom: 50px !important;
+  &:after {
+    content: '';
+    background-image: url('../svg/edge--wavy--bottom.svg');
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+  }
+}
+
+.edge--icon--bottom {
+  position: relative;
+  padding-bottom: space(xxl);
+  background-color: transparent !important;
+  &:after {
+    content: '';
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: space(xxl);
+    padding: 0;
+    z-index: 1;
+  }
+}
+/*
+.edge--knife-fork--bottom {
+  position: relative;
+  padding-bottom: space(md);
+  margin-bottom: space(md);
+  &:after {
+    content: '';
+    background-image: url('../svg/icon--knife-fork.svg');
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    height: 70px;
+    background-color: color('gray-1');
+    padding: 0;
+    background-size: 50px;
+    background-position: 0px 10px;
+    z-index: 1;
+  }
+}
+.edge--wine--bottom {
+  position: relative;
+  padding-bottom: space(md);
+  margin-bottom: space(md);
+  &:after {
+    content: '';
+    background-image: url('../svg/icon--wine.svg');
+    background-repeat: repeat-x;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    height: 70px;
+    padding: 0;
+    background-size: 50px;
+    background-position: 0px 10px;
+    z-index: 1;
+  }
+}
+*/

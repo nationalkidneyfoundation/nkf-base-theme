@@ -53,7 +53,7 @@
         </div>
       </div>
       <?php if (!empty($page['navigation_search'])) : ?>
-        <div class="grid--cell vertical-align--middle text-align--center width--50 font-size--md">
+        <div class="grid-cell vertical-align--middle text-align--center width--50 font-size--md">
           <a href="#search-modal" class="modal-trigger display--inline-block padding-y--md padding-x--sm color--white white-space--nowrap">
             <i class="icon-search"></i> <span class="caps">Search</span>
           </a>

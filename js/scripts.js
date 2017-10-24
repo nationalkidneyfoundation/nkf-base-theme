@@ -18,6 +18,16 @@ var nkf_base_init = function($) {
     midClick: true,
     focus: 'input'
   });
+  // utility for general modal selection
+  $('.modal-gallery').each(function() {
+    $(this).magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      gallery: {
+        enabled:true
+      }
+    });
+  });
 
   function popup(href) {
     var width = 550;

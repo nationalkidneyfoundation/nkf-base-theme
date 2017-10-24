@@ -14,7 +14,12 @@ a:visited {
 a:hover {
   color: $link-color-hover;
 }
-
+.color--inherit,
+.color--inherit:hover,
+.color--inherit:active,
+.color--inherit:visited {
+  color: inherit;
+}
 @each $name, $color in $colors {
   .color--#{$name},
   a.color--#{$name},

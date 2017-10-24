@@ -8,13 +8,3 @@
 .container {
   @extend .container--lg;
 }
-@each $bp, $bp-value in $breakpoints {
-  @media #{$bp-value} {
-    @each $name, $value in $containers {
-      .#{$bp}--container--#{$name} {
-        @include center();
-        max-width: #{$value};
-      }
-    }
-  }
-}
