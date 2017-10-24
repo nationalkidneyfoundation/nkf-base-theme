@@ -40,7 +40,7 @@
         </div>
       <?php endif; ?>
     </div>
-    <div class="grid-center md--display--none display--block ">
+    <div class="grid--center md--display--none display--block ">
       <div class="position--relative grid-cell vertical-align--middle text-align--center width--50 font-size--md">
         <a href="#" class="position--relative z-index--300 display--inline-block white-space--nowrap color--white" data-toggle="class" data-target=".burger-time" data-class="hide">
           <div class="burger-time padding-y--md padding-x--sm"><i class="icon-menu"></i> <span class="caps">Menu</span></div>
