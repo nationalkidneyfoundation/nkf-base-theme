@@ -35,10 +35,15 @@
 
 .wForm .primaryAction {
   @extend .button--orange;
+  @extend .caps;
 }
 .wForm fieldset {
   @extend fieldset;
   margin-top: space(md);
+}
+legend {
+  font-size: font-size(lg);
+  font-weight: bold;
 }
 
 // Hack for wide select list.

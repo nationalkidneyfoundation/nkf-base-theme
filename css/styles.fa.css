@@ -4559,7 +4559,8 @@ p {
   }
 }
 
-.caps {
+.caps,
+.wForm .primaryAction {
   text-transform: uppercase;
   letter-spacing: 2px;
   letter-spacing: .11rem;
@@ -4603,6 +4604,12 @@ p {
 .wForm fieldset {
   margin-top: 16px;
   margin-top: 1rem;
+}
+
+legend {
+  font-size: 21px;
+  font-size: 1.333rem;
+  font-weight: bold;
 }
 
 .wForm select {
