@@ -38,6 +38,7 @@
 }
 .wForm fieldset {
   @extend fieldset;
+  margin-top: space(md);
 }
 
 // Hack for wide select list.

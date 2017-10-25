@@ -4600,6 +4600,11 @@ p {
   border-top: 0.75rem solid #3b444f;
 }
 
+.wForm fieldset {
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+
 .wForm select {
   width: 100%;
 }
