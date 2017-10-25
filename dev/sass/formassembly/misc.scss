@@ -1,0 +1,30 @@
+// This is for the body tag.
+.wFormWebPage {
+  background-color: color('gray-1');
+}
+
+// Main content container.
+#tfaContent {
+  position: relative;
+}
+
+#tfaContent:after {
+  background: color(orange);
+  width: 100%;
+  height: 300px;
+  content: '';
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  background-image: url(http://event-nkf.pantheonsite.io/profiles/kidneys_distro/themes/custom/nkf_base/img/NKF-logoR_Hori_W.png);
+  background-position: center 25px;
+  background-repeat: no-repeat;
+}
+
+// Form container.
+.wFormContainer {
+  background-color: color(white);
+  position: relative;
+  z-index: 2;
+  top: 120px;
+}
