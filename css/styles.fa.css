@@ -387,7 +387,8 @@ input[type="search"]::-webkit-search-decoration {
  * Define consistent border, margin, and padding.
  */
 
-fieldset {
+fieldset,
+.wForm fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
@@ -2649,7 +2650,8 @@ a.hover--pinterest:hover {
   background-color: #BD081C;
 }
 
-.button--orange {
+.button--orange,
+.wForm .primaryAction {
   display: inline-block;
   *zoom: 1;
   *display: inline;
@@ -2677,34 +2679,43 @@ a.hover--pinterest:hover {
 }
 
 .button--orange:before,
-.button--orange:after {
+.wForm .primaryAction:before,
+.button--orange:after,
+.wForm .primaryAction:after {
   box-sizing: border-box;
 }
 
-.button--orange:focus {
+.button--orange:focus,
+.wForm .primaryAction:focus {
   outline: 0;
 }
 
-.button--orange:hover {
+.button--orange:hover,
+.wForm .primaryAction:hover {
   text-decoration: none;
   color: currentColor;
 }
 
-.button--orange:disabled {
+.button--orange:disabled,
+.wForm .primaryAction:disabled {
   opacity: .5;
 }
 
-.button--orange:visited {
+.button--orange:visited,
+.wForm .primaryAction:visited {
   color: #000;
 }
 
-.button--orange:hover {
+.button--orange:hover,
+.wForm .primaryAction:hover {
   background-color: #f47e4e;
   color: #000;
 }
 
 .button--orange:active,
-.button--orange.active {
+.wForm .primaryAction:active,
+.button--orange.active,
+.wForm .active.primaryAction {
   background-color: #c14b1b;
   color: #fff;
 }
@@ -4576,8 +4587,25 @@ p {
 }
 
 .wFormContainer {
-  background-color: #FFFFFF;
   position: relative;
   z-index: 2;
   top: 120px;
+}
+
+.wForm {
+  background-color: #FFFFFF;
+  margin: 0 16px;
+  margin: 0 1rem;
+  border-top: 12px solid #3b444f;
+  border-top: 0.75rem solid #3b444f;
+}
+
+.wForm select {
+  width: 100%;
+}
+
+@media (min-width: 52em) {
+  .wForm select {
+    width: auto;
+  }
 }

@@ -23,8 +23,25 @@
 
 // Form container.
 .wFormContainer {
-  background-color: color(white);
   position: relative;
   z-index: 2;
   top: 120px;
+}
+.wForm {
+  background-color: color(white);
+  margin: 0 space(md);
+  border-top: space(sm) solid color(gray-4);
+}
+
+.wForm .primaryAction {
+  @extend .button--orange;
+}
+.wForm fieldset {
+  @extend fieldset;
+}
+
+// Hack for wide select list.
+.wForm select {
+  @include when(md) { width: auto; }
+  width: 100%;
 }
