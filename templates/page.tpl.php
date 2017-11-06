@@ -70,7 +70,7 @@
     <!-- TITLE -->
     <?php if ($has_title) : ?>
       <?php if ($title): ?>
-        <section class="main__title">
+        <section class="main__title padding-top--sm">
           <div class="container padding-top--xl md--padding-top--xxl padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print render($title_prefix); ?>
             <h1 class="font-size--xxl padding--none"><div class="prose display--inline-block"><?php print $title ?></div></h1>
