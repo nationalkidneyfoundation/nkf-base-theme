@@ -34,6 +34,14 @@
   <?php endif; ?>
 
 
+  <!-- PRIMARY TABS -->
+  <?php if ($primary_local_tasks): ?>
+  <section class="main__tabs bg--gray-2">
+    <div class="container padding-x--sm sm--padding-x--md md--padding-x--lg">
+      <ul class="tabs grid--center list-style-type--none padding--none margin--none"><?php print render($primary_local_tasks) ?></ul>
+    </div>
+  </section>
+  <?php endif; ?>
 
   <!-- MAIN -->
   <main class="main position--relative z-index--100">
@@ -60,10 +68,10 @@
     <?php endif; ?>
 
     <!-- TITLE -->
-    <?php if (TRUE) : ?>
+    <?php if ($has_title) : ?>
       <?php if ($title): ?>
-        <section class="main__title padding-top--sm">
-          <div class="container padding-top--xxl padding-x--sm sm--padding-x--md md--padding-x--lg">
+        <section class="main__title">
+          <div class="container padding-top--xl md--padding-top--xxl padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print render($title_prefix); ?>
             <h1 class="font-size--xxl padding--none"><div class="prose display--inline-block"><?php print $title ?></div></h1>
             <?php print render($title_suffix); ?>
@@ -72,14 +80,6 @@
       <?php endif; ?>
     <?php endif;?>
 
-    <!-- PRIMARY TABS -->
-    <?php if ($primary_local_tasks): ?>
-    <section class="main__tabs">
-      <div class="container padding-x--sm sm--padding-x--md md--padding-x--lg">
-        <ul class="tabs grid list-style-type--none padding--none margin--none"><?php print render($primary_local_tasks) ?></ul>
-      </div>
-    </section>
-    <?php endif; ?>
 
     <!-- SECONDARY TABS -->
     <?php if ($secondary_local_tasks): ?>

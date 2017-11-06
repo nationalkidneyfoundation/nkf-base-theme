@@ -7,7 +7,7 @@
  * Available variables:
  */
 ?>
-<header class="print--hide width--100 bg--<?php print $header_color;?> text-align--center">
+<header class="print--hide width--100 <?php print $th['header'];?> text-align--center">
   <div class="container">
     <div class="grid width--100 padding-x--md padding-y--xxl">
       <div class="grid-cell width--25 md--display--inline-block display--none"></div>

@@ -210,6 +210,22 @@ $heights: (
 @function height($x){
   @return map-get($heights, $x);
 }
+// Heights
+$squares: (
+    'xxxs': base-scale(-1)
+  , 'xxs': base-scale(1)
+  , 'xs': base-scale(2)
+  , 'sm': base-scale(4)
+  , 'md': base-scale(6)
+  , 'lg': base-scale(9)
+  , 'xl': base-scale(12)
+  , 'xxl': base-scale(15)
+) !default;
+
+
+@function square($x){
+  @return map-get($squares, $x);
+}
 
 $containers: (
     'xs': base-scale(1)
@@ -219,6 +235,10 @@ $containers: (
   , 'lg': 73.75rem
   , 'xl': base-scale(17)
 ) !default;
+
+@function container($x){
+  @return map-get($containers, $x);
+}
 
 // Borders
 $border-widths: (

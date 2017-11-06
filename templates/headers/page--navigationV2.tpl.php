@@ -7,7 +7,7 @@
  * Available variables:
  */
 ?>
-<header class="print--hide width--100 bg--<?php print $header_color;?> color--white ">
+<header class="print--hide width--100 <?php print $th['header'];?>">
   <nav class="container position--relative">
     <div class="display--table width--100">
       <div class="display--table-cell width--100 vertical-align--middle padding-left--md">

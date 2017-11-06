@@ -1,5 +1,7 @@
 <?php
 
+// Define theme directory path
+define('NKF_BASE_PATH', drupal_get_path('theme', 'nkf_base'));
 
 /**
  * Implementation of hook_form_alter
@@ -8,7 +10,7 @@
 function nkf_base_form_alter(&$form, &$form_state, $form_id) {
   if($form_id == 'views_exposed_form'){// && $form['#id'] == 'views-exposed-form-search-results-subsection-page') {
     $view = $form_state['view'];
-    if ($view->name == 'search_results_subsection') {
+    if ($view->name == 'search_results_subsection' || $view->name == 'new_events') {
       $form['search']['#attributes'] =
         array(
           'class' => array('width--100'),
@@ -36,6 +38,8 @@ function nkf_base_css_alter(&$css) {
   $exclude = array(
     'profiles/kidneys_distro/modules/contrib/commerce/modules/payment/theme/commerce_payment.theme.css' => FALSE,
     'profiles/kidneys_distro/modules/contrib/addtocal/addtocal.css' => FALSE,
+    'profiles/kidneys_distro/modules/contrib/field_collection/field_collection.theme.css' => FALSE,
+    'profiles/kidneys_distro/modules/contrib/geofield/css/proximity-element.css' => FALSE,
   );
   $css = array_diff_key($css, $exclude);
 }
@@ -82,19 +86,248 @@ function nkf_base_field_attach_view_alter(&$output, $context) {
 
 
 function nkf_base_preprocess_node(&$vars) {
+  $node = $vars['node'];
+  $wrapper = entity_metadata_wrapper('node', $node);
+
+  $vars['section_classes'] = '';
+  $vars['hero_classes'] = '';
+  if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value())) {
+    $vars['th'] = nkf_base_color_theme_helper($wrapper->field_color_theme->value());
+  }
   if ($vars['type'] == 'panel') {
     if ($vars['content_attributes_array'] && $vars['content_attributes_array']['class']) {
       $vars['content_attributes_array']['class'] = array_diff($vars['content_attributes_array']['class'], array('prose'));
     }
   }
 
+  if ($vars['type'] == 'new_event') {
+
+    // Sticky Nav.
+    $vars['sections'] = array(
+      'top' => array(
+        'include' => true,
+        'title' => 'Top'
+      ),
+      'about' => array(
+        'include' => true,
+        'title' => 'About This Event'
+      ),
+      'vip1' => array(
+        'include' => $wrapper->field_event_vip1_toggle->value(),
+        'title' => $wrapper->field_event_vip1_title->value()
+      ),
+      'vip2' => array(
+        'include' => $wrapper->field_event_vip2_toggle->value(),
+        'title' => $wrapper->field_event_vip2_title->value()
+      ),
+      'vip3' => array(
+        'include' => $wrapper->field_event_vip3_toggle->value(),
+        'title' => $wrapper->field_event_vip3_title->value()
+      ),
+      'auction' => array(
+        'include' => $wrapper->field_event_auction_toggle->value(),
+        'title' => $wrapper->field_event_auction_title->value()
+      ),
+      'location' => array(
+        'include' => $wrapper->field_event_location_toggle->value(),
+        'title' => $wrapper->field_event_location_title->value()
+      ),
+      'volunteer' => array(
+        'include' => $wrapper->field_event_volunteer_toggle->value(),
+        'title' => $wrapper->field_event_volunteer_title->value(),
+      ),
+      'photos' => array(
+        'include' => $wrapper->field_event_photos_toggle->value(),
+        'title' => $wrapper->field_event_photos_title->value()
+      ),
+      'aboutnkf' => array(
+        'include' => true,
+        'title' => $wrapper->field_event_branding_title->value()
+      ),
+    );
+
+
+    if (isset($wrapper->field_event_hero_image) && !empty($wrapper->field_event_hero_image->value())) {
+      //$hero_style = array(
+      //  'image_scale' => array()
+      //);
+      $vars['hero_url'] = nkf_base_get_image_style_url($wrapper->field_event_hero_image->value()['uri'], 'extra_large_landscape');
+      //print '<pre>';
+      //print_r(image_style_load('large'));
+      //print '</pre>';
+    }
+    if (isset($wrapper->field_base_address)) {
+      $vars['city'] = $wrapper->field_base_address->locality->value();
+      $vars['state'] = $wrapper->field_base_address->administrative_area->value();
+      $vars['zip'] = $wrapper->field_base_address->postal_code->value();
+      $vars['street'] = $wrapper->field_base_address->thoroughfare->value();
+      $vars['street2'] = $wrapper->field_base_address->premise->value();
+      $vars['address_url'] = urlencode($vars['street'] . ' ' . $vars['city'] . ' ' . $vars['state'] . ' ' . $vars['zip']);
+    }
+    if (isset($wrapper->field_base_geofield)) {
+      $vars['longitude'] = $wrapper->field_base_geofield->lon->value();
+      $vars['latitude'] = $wrapper->field_base_geofield->lat->value();
+    }
+
+    if (isset($wrapper->field_event_cta) && !empty($wrapper->field_event_cta->value())) {
+      foreach ($wrapper->field_event_cta as $i => $cta) {
+        $vars['ctas'][] = array(
+          'url' => $cta->url->value(),
+          'title' => $cta->title->value(),
+          'button' => ($i == 0) ? $vars['th']['header_button_1'] : $vars['th']['header_button_2']
+        );
+      }
+    }
+
+    if (module_exists('kidneys_misc')) {
+      $vars['social_actions'] = kidneys_misc_get_content_actions();
+    }
+    /*
+    if (isset($wrapper->field_event_vip_1) && !empty($wrapper->field_event_vip_1->value())) {
+      foreach ($wrapper->field_event_vip_1 as $key => $value) {
+        $vars['photos'][] = array(
+          'src_thumb' => nkf_base_get_image_style_url($value->value()['uri'], 'square_thumbnail'),
+          'src_full' => nkf_base_get_image_style_url($value->value()['uri']),
+          'title' => $value->value()['title'],
+          'alt' => $value->value()['alt'],
+        );
+      }
+    }
+    */
+
+    if (isset($wrapper->field_event_event_photos1) && !empty($wrapper->field_event_event_photos1->value())) {
+      foreach ($wrapper->field_event_event_photos1 as $key => $value) {
+        $vars['photos'][] = array(
+          'src_thumb' => nkf_base_get_image_style_url($value->value()['uri'], 'square_thumbnail'),
+          'src_full' => nkf_base_get_image_style_url($value->value()['uri']),
+          'title' => $value->value()['title'],
+          'alt' => $value->value()['alt'],
+        );
+      }
+    }
+
+    if (isset($wrapper->field_event_header_font) && !empty($wrapper->field_event_header_font->value())) {
+      $header_font = $wrapper->field_event_header_font->value();
+      $header_font_url = str_replace(' ','+', $header_font);
+      $css = '@import url("https://fonts.googleapis.com/css?family=' . $header_font_url . '");';
+      $css .= 'h1,h2,h3,h4 { font-family: ' . $header_font . ' !important; font-weight: normal !important}';
+      drupal_add_css($css, 'inline');
+    }
+
+    if (isset($wrapper->field_base_hero_divider) && !empty($wrapper->field_base_hero_divider->value())) {
+      $vars['hero_classes'] .= $wrapper->field_base_hero_divider->value();
+    }
+    if (isset($wrapper->field_base_section_divider) && !empty($wrapper->field_base_section_divider->value())) {
+      if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value())) {
+        $svg_color = nkf_base_color_hex_from_name($wrapper->field_color_theme->value());
+      } else {
+        $svg_color = nkf_base_color_hex_from_name();
+      }
+      $vars['section_classes'] .= 'edge--icon--bottom';
+      $icon_name = $wrapper->field_base_section_divider->value();
+      $svg_file = file_get_contents(NKF_BASE_PATH . "/svg/$icon_name.svg");
+      $svg_file = trim($svg_file);
+      $svg_file = str_replace(array("\n", "\t", "\r"), '', $svg_file);
+      $svg_url = 'data:image/svg+xml;utf8,' . str_replace('<svg','<svg fill="'.$svg_color.'"',$svg_file);
+      $css = '.edge--icon--bottom:after { background-image: url(\'' . $svg_url . '\'); }';
+      drupal_add_css($css, 'inline');
+    }
+
+    $vars['has_nav_sub'] = true;
+    $vars['sub_nav_title'] = $node->title;
+    $vars['sub_nav_actions'] = $vars['social_actions'];
+
+  }
+
+
 }
+
+function nkf_base_color_hex_from_name($name = 'gray-2') {
+  $colors = array(
+      'orange' =>     '#F15E22'
+    , 'blue' =>       '#1E4497'
+    , 'navy' =>       '#26225E'
+    , 'red' =>        '#d51217'
+    , 'mustard' =>    '#FAAD1D'
+    , 'aqua' =>       '#048499'
+    , 'yellow' =>     '#FEDC00'
+    , 'green' =>      '#018241'
+    , 'lime' =>       '#91AE3C'
+    , 'sienna' =>     '#9E2420'
+    , 'gray-2' =>     '#DBDDDF'
+  );
+  return $colors[$name];
+}
+function nkf_base_color_theme_helper($name) {
+  $themes = array (
+    'standard' => array(
+      'primary_color' => 'orange',
+      'header' => 'bg--orange color--white logo--wb',
+      'hero' => 'bg--gray-1 color--gray-4',
+      'odd_section' => 'bg--gray-1',
+      'header_button_1' => 'button--orange',
+      'header_button_2' => 'button--gray-2',
+    ),
+    'orange' => array(
+      'primary_color' => 'orange',
+      'header' => 'bg--orange color--white logo--wb',
+      'hero' => 'bg--orange--l1 color--white',
+      'odd_section' => 'bg--orange--l2',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--orange',
+    ),
+    'blue' => array(
+      'primary_color' => 'blue',
+      'header' => 'bg--blue color--white logo--w',
+      'hero' => 'bg--blue--l1 color--white',
+      'odd_section' => 'bg--blue--o20',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--blue'
+    ),
+    'navy' => array(
+      'primary_color' => 'navy',
+      'header' => 'bg--navy color--white logo--w',
+      'hero' => 'bg--navy--l1 color--white',
+      'odd_section' => 'bg--navy--o20 color--navy',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--navy'
+    ),
+    'mustard' => array(
+      'primary_color' => 'mustard',
+      'header' => 'bg--mustard color--white logo--w',
+      'hero' => 'bg--mustard--l1 color--white',
+      'odd_section' => 'bg--mustard--o20 color--gray-4',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--mustard'
+    ),
+    'aqua' => array(
+      'primary_color' => 'aqua',
+      'header' => 'bg--aqua color--white logo--w',
+      'hero' => 'bg--aqua--l1 color--white',
+      'odd_section' => 'bg--aqua--o20 color--gray-4',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--aqua'
+    ),
+    'red' => array(
+      'primary_color' => 'red',
+      'header' => 'bg--red color--white logo--w',
+      'hero' => 'bg--red--l1 color--white',
+      'odd_section' => 'bg--red--o20 color--gray-4',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--red'
+    ),
+  );
+  return $themes[$name];
+}
+
 /**
  * Implementation of preprocess_page().
  */
 function nkf_base_preprocess_page(&$vars) {
   $page_classes = array('page');
   $alias = strtolower(drupal_get_path_alias());
+  $vars['th'] = nkf_base_color_theme_helper('standard');
+  $vars['has_title'] = true;
   $vars['home'] = '';
   $vars['header_color'] = 'orange';
   $vars['nav_color'] = 'orange--l1';
@@ -155,14 +388,6 @@ function nkf_base_preprocess_page(&$vars) {
   }
 
 
-  // Add home link back to spe profile home.
-  if (strpos($alias, 'personalized-health-information') !== FALSE && !empty(arg(2))) {
-    $profile_link = l('Profile Home', arg(0) . '/' . arg(1),
-      array('attributes' => array('class' => array('display--inline-block','caps', 'bold', 'padding-y--xs')))
-    );
-    $vars['title_prefix'] = $profile_link;
-  }
-
   $widescreen = false;
 
   $panel = panels_get_current_page_display();
@@ -175,6 +400,13 @@ function nkf_base_preprocess_page(&$vars) {
   }
   $vars['widescreen'] = $widescreen;
 
+  // Add home link back to spe profile home.
+  if (strpos($alias, 'personalized-health-information') !== FALSE && !empty(arg(2))) {
+    $profile_link = l('Profile Home', arg(0) . '/' . arg(1),
+      array('attributes' => array('class' => array('display--inline-block','caps', 'bold', 'padding-y--xs')))
+    );
+    $vars['title_prefix'] = $profile_link;
+  }
 
   // add magnific popup
   $magnificpath = libraries_get_path('magnific_popup');
@@ -212,6 +444,16 @@ function nkf_base_preprocess_page(&$vars) {
       $page_classes[] = 'has-donation-form';
   }
 
+  if (!empty($vars['node']) && $vars['node']->type == 'new_event') {
+    $vars['widescreen'] = true;
+    $vars['has_title'] = false;
+  }
+
+  if (!empty($vars['node'])) {
+    $wrapper = entity_metadata_wrapper('node', $vars['node']);
+    if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value()))
+    $vars['th'] = nkf_base_color_theme_helper($wrapper->field_color_theme->value());
+  }
 
 
   $vars['node_highlight'] = FALSE;
@@ -449,7 +691,7 @@ function nkf_base_preprocess_entity_bean_card(&$vars) {
 
 }
 
-function nkf_base_get_image_style_url($image_uri, $style) {
+function nkf_base_get_image_style_url($image_uri, $style = 'large') {
   $derivative_uri = image_style_path($style, $image_uri);
   if (!file_exists($derivative_uri)) {
     image_style_create_derivative(image_style_load($style), $image_uri, $derivative_uri);
@@ -551,5 +793,79 @@ function nkf_base_version_2_allowed_pages($path) {
   $patterns = theme_get_setting('nkf_base_version_2_paths');
   if (drupal_match_path($path, $patterns)) {
     return TRUE;
+  }
+}
+
+function nkf_base_preprocess_field(&$vars, $hook){
+  if ($vars['element']['#field_type'] == 'field_collection') {
+    $fields = field_info_instances('field_collection_item', $vars['element']['#field_name']);
+    $field_array = array_keys($fields);
+    nkf_base_rows_from_field_collection($vars, $field_array);
+    if (in_array($vars['element']['#field_name'], array('field_event_vip_1','field_event_vip_2', 'field_event_vip_3'))) {
+      $groups = array();
+      foreach($vars['rows'] as $row) {
+        $groups[strtoupper($row['field_vip_subsection_text'])][] = $row;
+      }
+      $vars['rows'] = $groups;
+    }
+  }
+}
+
+
+/**
+ * Creates a simple text rows array from a field collections, to be used in a
+ * field_preprocess function.
+ * https://www.fourkitchens.com/blog/article/better-way-theme-field-collections/
+ *
+ * @param $vars
+ *   An array of variables to pass to the theme template.
+ *
+ * @param $field_name
+ *   The name of the field being altered.
+ *
+ * @param $field_array
+ *   Array of fields to be turned into rows in the field collection.
+ */
+
+function nkf_base_rows_from_field_collection(&$vars, $field_array) {
+  $vars['rows'] = array();
+  foreach($vars['element']['#items'] as $key => $item) {
+    $entity_id = $item['value'];
+    $entity = field_collection_item_load($entity_id);
+    $wrapper = entity_metadata_wrapper('field_collection_item', $entity);
+    $row = array();
+    foreach($field_array as $field) {
+      $info = $wrapper->$field->info();
+      $type = $info['type'];
+      //field_item_link
+      $field_value = $wrapper->$field->value();
+      switch ($type) {
+        case 'text_formatted':
+          $value = $wrapper->$field->value->value();
+          break;
+        case 'field_item_image':
+          if (isset($field_value)) {
+
+            $build = array(
+              '#theme' => 'image',
+              '#path' => $field_value['uri'],
+              '#url' => nkf_base_get_image_style_url($field_value['uri'], 'large'),
+              '#alt' => $field_value['alt'],
+              '#title' => $field_value['title'],
+              //'#width' => $field_value['width'],
+              //'#height' => $field_value['height'],
+            );
+            $value = $build;
+          } else {
+            $value = null;
+          }
+          break;
+        default:
+          $value = isset($field_value) ? $wrapper->$field->value() : null;
+
+      }
+      $row[$field] = $value;
+    }
+    $vars['rows'][] = $row;
   }
 }

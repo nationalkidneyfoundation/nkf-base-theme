@@ -11,7 +11,7 @@
     text-decoration: none;
     color: $gray-4;
     display: inline-block;
-    border-bottom: 7px solid $gray-1;
+    border-bottom: 7px solid transparent;
     &.active {
       color: $black;
       font-weight: bold;

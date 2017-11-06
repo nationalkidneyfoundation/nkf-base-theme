@@ -1,10 +1,35 @@
 
-@each $name, $value in $containers {
-  .container--#{$name} {
-    @include center();
-    max-width: #{$value};
-  }
-}
+//@each $name, $value in $containers {
+//  .container--#{$name} {
+//    @include center();
+//    max-width: #{$value};
+//  }
+//}
+
+
 .container {
-  @extend .container--lg;
+  @include center();
+  max-width: container(lg);
+}
+
+.container--50 {
+  max-width: container(lg) * .5;
+}
+.container--40 {
+  max-width: container(lg) * .4;
+}
+.container--60 {
+  max-width: container(lg) * .4;
+}
+.container--70 {
+  max-width: container(lg) * .7;
+}
+.container--30 {
+  max-width: container(lg) * .3;
+}
+.container--75 {
+  max-width: container(lg) * .75;
+}
+.container--25 {
+  max-width: container(lg) * .25;
 }

@@ -1,15 +1,8 @@
 
-@each $name, $perc in $widths {
+@each $name, $square in $squares {
   .square--#{$name} {
     height: 0;
-    padding-bottom: $perc;
-    width: $perc;
-  }
-}
-@each $name, $height in $heights {
-  .square--#{$name} {
-    height: 0;
-    padding-bottom: $height;
-    width: $height;
+    padding-bottom: $square;
+    width: $square;
   }
 }

@@ -18,6 +18,11 @@ legend {
 .form-actions {
   padding-top: space(sm);
   padding-bottom: space(sm);
+  .form-item,
+  .form-actions {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
 
 .form-item .description {

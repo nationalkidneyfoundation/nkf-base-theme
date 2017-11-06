@@ -701,7 +701,7 @@ select:not([multiple]) {
   text-decoration: none;
   color: #3b444f;
   display: inline-block;
-  border-bottom: 7px solid #EDEEEF;
+  border-bottom: 7px solid transparent;
 }
 
 .tabs a.active,
@@ -1755,150 +1755,6 @@ button.mfp-close {
   }
 }
 
-.square--0 {
-  height: 0;
-  padding-bottom: 0;
-  width: 0;
-}
-
-.square--5 {
-  height: 0;
-  padding-bottom: 5%;
-  width: 5%;
-}
-
-.square--10 {
-  height: 0;
-  padding-bottom: 10%;
-  width: 10%;
-}
-
-.square--15 {
-  height: 0;
-  padding-bottom: 15%;
-  width: 15%;
-}
-
-.square--20 {
-  height: 0;
-  padding-bottom: 20%;
-  width: 20%;
-}
-
-.square--25 {
-  height: 0;
-  padding-bottom: 25%;
-  width: 25%;
-}
-
-.square--30 {
-  height: 0;
-  padding-bottom: 30%;
-  width: 30%;
-}
-
-.square--33 {
-  height: 0;
-  padding-bottom: 33.33333%;
-  width: 33.33333%;
-}
-
-.square--35 {
-  height: 0;
-  padding-bottom: 35%;
-  width: 35%;
-}
-
-.square--40 {
-  height: 0;
-  padding-bottom: 40%;
-  width: 40%;
-}
-
-.square--45 {
-  height: 0;
-  padding-bottom: 45%;
-  width: 45%;
-}
-
-.square--50 {
-  height: 0;
-  padding-bottom: 50%;
-  width: 50%;
-}
-
-.square--55 {
-  height: 0;
-  padding-bottom: 55%;
-  width: 55%;
-}
-
-.square--60 {
-  height: 0;
-  padding-bottom: 60%;
-  width: 60%;
-}
-
-.square--65 {
-  height: 0;
-  padding-bottom: 65%;
-  width: 65%;
-}
-
-.square--66 {
-  height: 0;
-  padding-bottom: 66.66667%;
-  width: 66.66667%;
-}
-
-.square--70 {
-  height: 0;
-  padding-bottom: 70%;
-  width: 70%;
-}
-
-.square--75 {
-  height: 0;
-  padding-bottom: 75%;
-  width: 75%;
-}
-
-.square--80 {
-  height: 0;
-  padding-bottom: 80%;
-  width: 80%;
-}
-
-.square--85 {
-  height: 0;
-  padding-bottom: 85%;
-  width: 85%;
-}
-
-.square--90 {
-  height: 0;
-  padding-bottom: 90%;
-  width: 90%;
-}
-
-.square--95 {
-  height: 0;
-  padding-bottom: 95%;
-  width: 95%;
-}
-
-.square--100 {
-  height: 0;
-  padding-bottom: 100%;
-  width: 100%;
-}
-
-.square--auto {
-  height: 0;
-  padding-bottom: "auto";
-  width: "auto";
-}
-
 .square--xxxs {
   height: 0;
   padding-bottom: 12px;
@@ -1933,18 +1789,18 @@ button.mfp-close {
 
 .square--md {
   height: 0;
-  padding-bottom: 160px;
-  padding-bottom: 9.969rem;
-  width: 160px;
-  width: 9.969rem;
+  padding-bottom: 67px;
+  padding-bottom: 4.209rem;
+  width: 67px;
+  width: 4.209rem;
 }
 
 .square--lg {
   height: 0;
-  padding-bottom: 283px;
-  padding-bottom: 17.713rem;
-  width: 283px;
-  width: 17.713rem;
+  padding-bottom: 160px;
+  padding-bottom: 9.969rem;
+  width: 160px;
+  width: 9.969rem;
 }
 
 .square--xl {
@@ -1956,14 +1812,6 @@ button.mfp-close {
 }
 
 .square--xxl {
-  height: 0;
-  padding-bottom: 504px;
-  padding-bottom: 31.475rem;
-  width: 504px;
-  width: 31.475rem;
-}
-
-.square--xxxl {
   height: 0;
   padding-bottom: 895px;
   padding-bottom: 55.927rem;
@@ -7447,28 +7295,6 @@ a.hover--pinterest:hover {
   min-height: 55.927rem;
 }
 
-.container--xs {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 16px;
-  max-width: 1rem;
-}
-
-.container--sm {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 28px;
-  max-width: 1.777rem;
-}
-
-.container--md {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 160px;
-  max-width: 9.969rem;
-}
-
-.container--lg,
 .container {
   margin-left: auto;
   margin-right: auto;
@@ -7476,11 +7302,39 @@ a.hover--pinterest:hover {
   max-width: 73.75rem;
 }
 
-.container--xl {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1590px;
-  max-width: 99.376rem;
+.container--50 {
+  max-width: 590px;
+  max-width: 36.875rem;
+}
+
+.container--40 {
+  max-width: 472px;
+  max-width: 29.5rem;
+}
+
+.container--60 {
+  max-width: 472px;
+  max-width: 29.5rem;
+}
+
+.container--70 {
+  max-width: 826px;
+  max-width: 51.625rem;
+}
+
+.container--30 {
+  max-width: 354px;
+  max-width: 22.125rem;
+}
+
+.container--75 {
+  max-width: 885px;
+  max-width: 55.3125rem;
+}
+
+.container--25 {
+  max-width: 295px;
+  max-width: 18.4375rem;
 }
 
 .fill--orange {
@@ -15849,6 +15703,14 @@ legend {
   padding-top: 0.75rem;
   padding-bottom: 12px;
   padding-bottom: 0.75rem;
+}
+
+.form-item .form-item,
+.form-item .form-actions,
+.form-actions .form-item,
+.form-actions .form-actions {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .form-item .description {
