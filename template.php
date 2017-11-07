@@ -164,7 +164,7 @@ function nkf_base_preprocess_node(&$vars) {
       $vars['street2'] = $wrapper->field_base_address->premise->value();
       $vars['address_url'] = urlencode($vars['street'] . ' ' . $vars['city'] . ' ' . $vars['state'] . ' ' . $vars['zip']);
     }
-    if (isset($wrapper->field_base_geofield)) {
+    if (isset($wrapper->field_base_geofield) && isset($wrapper->field_base_geofield->lon)) {
       $vars['longitude'] = $wrapper->field_base_geofield->lon->value();
       $vars['latitude'] = $wrapper->field_base_geofield->lat->value();
     }
