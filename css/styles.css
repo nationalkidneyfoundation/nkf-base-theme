@@ -15647,13 +15647,13 @@ html.js .js-hide {
 
 #logo.scm,
 #logo.spring-clinical {
-  background-image: url(../img/SCM18_Lockup_w.png);
+  background-image: url(../img/SCM18_Lockup_w.png) !important;
   height: 110px;
   width: 100%;
 }
 
 #logo.support-kidneycars {
-  background-image: url(../img/NKF-Cars_LockupR_W.png);
+  background-image: url(../img/NKF-Cars_LockupR_W.png) !important;
   height: 110px;
   width: 100%;
 }
