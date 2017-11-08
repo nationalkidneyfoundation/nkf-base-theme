@@ -398,7 +398,7 @@
                 </div>
               </div>
             <?php endif; ?>
-            <?php if (isset($content['field_location_site'])): ?>
+            <?php if (isset($content['field_base_address'])): ?>
               <a class="display--block" href="https://www.google.com/maps/search/?api=1&query=<?php print $address_url; ?>">
                 <div
                   class="width--100 height--xl background-size--cover background-position--bottom"
@@ -407,9 +407,11 @@
               </a>
               <div class="text-align--center center padding--lg">
                 <div class="max-width--xxl display--inline-block">
-                  <div class="font-size--lg bold">
-                    <?php print render($content['field_location_site']); ?>
-                  </div>
+                  <?php if (isset($content['field_location_site'])): ?>
+                    <div class="font-size--lg bold">
+                      <?php print render($content['field_location_site']); ?>
+                    </div>
+                  <?php endif;?>
                   <?php print render($content['field_base_address']); ?>
 
                   <a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=<?php print $address_url; ?>">
