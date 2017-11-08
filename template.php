@@ -3,6 +3,16 @@
 // Define theme directory path
 define('NKF_BASE_PATH', drupal_get_path('theme', 'nkf_base'));
 
+/*
+ * Helper function to print field without markup.
+*/
+function print_field($field) {
+  $entity_id = $item['value'];
+  $wrapper = entity_metadata_wrapper($field['#entity_type'], $field['#object']);
+  $field_value = $wrapper->$field['#field_name']->value();
+  print ($field_value);
+}
+
 /**
  * Implementation of hook_form_alter
  */
@@ -164,7 +174,7 @@ function nkf_base_preprocess_node(&$vars) {
       $vars['street2'] = $wrapper->field_base_address->premise->value();
       $vars['address_url'] = urlencode($vars['street'] . ' ' . $vars['city'] . ' ' . $vars['state'] . ' ' . $vars['zip']);
     }
-    if (isset($wrapper->field_base_geofield) && isset($wrapper->field_base_geofield->lon)) {
+    if (isset($wrapper->field_base_geofield)) {
       $vars['longitude'] = $wrapper->field_base_geofield->lon->value();
       $vars['latitude'] = $wrapper->field_base_geofield->lat->value();
     }
@@ -315,6 +325,22 @@ function nkf_base_color_theme_helper($name) {
       'odd_section' => 'bg--red--o20 color--gray-4',
       'header_button_1' => 'button--white',
       'header_button_2' => 'button--red'
+    ),
+    'green' => array(
+      'primary_color' => 'green',
+      'header' => 'bg--green color--white logo--w',
+      'hero' => 'bg--green--l1 color--white',
+      'odd_section' => 'bg--green--o20 color--gray-4',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--green'
+    ),
+    'sienna' => array(
+      'primary_color' => 'sienna',
+      'header' => 'bg--sienna color--white logo--w',
+      'hero' => 'bg--sienna--l1 color--white',
+      'odd_section' => 'bg--sienna--o20 color--gray-4',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--sienna'
     ),
   );
   return $themes[$name];
@@ -796,7 +822,13 @@ function nkf_base_version_2_allowed_pages($path) {
   }
 }
 
-function nkf_base_preprocess_field(&$vars, $hook){
+function nkf_base_preprocess_field(&$vars, $hook) {
+  if ($vars['element']['#field_name'] == 'field_promo_block' ) {
+    print '<pre>';
+    print_r($vars);
+    print '</pre>';
+  }
+  // Hack into the field collection for VIP section on events.
   if ($vars['element']['#field_type'] == 'field_collection') {
     $fields = field_info_instances('field_collection_item', $vars['element']['#field_name']);
     $field_array = array_keys($fields);

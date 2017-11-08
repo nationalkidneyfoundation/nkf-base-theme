@@ -1,3 +1,6 @@
+<?php if(isset($row['field_base_link'])): ?>
+  <a href="<?php print $row['field_base_link']['url'];?>" class="display--block">
+<?php endif;?>
 <div class="grid-cell width--100 sm--width--50 md--width--33 padding-bottom--lg padding-right--lg">
   <?php if(isset($row['field_base_image'])): ?>
     <div class="height--md bg--white ">
@@ -15,3 +18,6 @@
     </div>
   <?php endif;?>
 </div>
+<?php if(isset($row['field_base_link'])): ?>
+  </a>
+<?php endif;?>

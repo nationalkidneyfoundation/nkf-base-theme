@@ -2094,18 +2094,25 @@ button.mfp-close {
   height: 50px;
 }
 
-.edge--wavy--bottom {
+.edge--wavy--bottom,
+.edge--wavy--bottom2 {
   position: relative;
   padding-bottom: 50px !important;
 }
 
-.edge--wavy--bottom:after {
+.edge--wavy--bottom:after,
+.edge--wavy--bottom2:after {
   content: '';
   background-image: url("../svg/edge--wavy--bottom.svg");
   position: absolute;
+  background-size: 100% 100%;
   bottom: 0;
   width: 100%;
   height: 50px;
+}
+
+.edge--wavy--bottom2:after {
+  background-size: 20% 100%;
 }
 
 .edge--icon--bottom {

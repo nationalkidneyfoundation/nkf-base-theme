@@ -233,6 +233,23 @@
           <div class="grid-cell md--width--66 width--100 padding-x--xl">
             <h2 class="title padding-bottom--lg caps">About this event</h2>
             <?php print render($content['body']); ?>
+            <?php if(isset($content['field_event_contact'])): ?>
+              <div class="padding-top--md">
+                <?php print_field($content['field_event_contact']);?>
+                For more information about this event contact <span class="bold"><?php print_field($content['field_event_contact']);?></span> at
+                <?php if (isset($content['field_base_email'])):?>
+                  <a href="mailto:<?php print_field($content['field_base_email']);?>">
+                    <?php print_field($content['field_base_email']);?>
+                  </a>
+                <?php endif;?>
+                <?php if (isset($content['field_base_phone']) && isset($content['field_base_email'])):?>
+                   /
+                <?php endif;?>
+                <?php if (isset($content['field_base_phone'])):?>
+                  <?php print_field($content['field_base_phone']);?>
+                <?php endif;?>
+              </div>
+            <?php endif;?>
             <?php if(isset($content['field_event_schedule_title']) && isset($content['field_event_schedule'])): ?>
               <h2 class="title padding-y--lg caps"><?php print render($content['field_event_schedule_title']);?></h2>
               <?php print render($content['field_event_schedule']); ?>
@@ -391,38 +408,45 @@
                 <?php print render($content['field_event_location_prefix']); ?>
               </div>
             <?php endif; ?>
-		        <?php if (isset($content['field_base_date_time'])): ?>
-              <div class="padding-bottom--lg text-align--center ">
+            <?php if (isset($content['field_base_date_time'])): ?>
+              <div class="padding-bottom--lg">
                 <div class="font-size--lg bold">
-									<?php print render($content['field_base_date_time']); ?>
+                  <?php print render($content['field_base_date_time']); ?>
                 </div>
               </div>
             <?php endif; ?>
             <?php if (isset($content['field_base_address'])): ?>
-              <a class="display--block" href="https://www.google.com/maps/search/?api=1&query=<?php print $address_url; ?>">
-                <div
-                  class="width--100 height--xl background-size--cover background-position--bottom"
-                  style="background-image:url('https://api.mapbox.com/styles/v1/mapbox/streets-v10/static/pin-l+000(<?php print $longitude; ?>,<?php print $latitude; ?>)/<?php print $longitude; ?>,<?php print $latitude; ?>,15/1000x350@2x?access_token=pk.eyJ1IjoibmtmIiwiYSI6ImNpeXlycHIwdTAwdGozMnBvcHVyb3dsMHUifQ.Ga4ktI5QmMOipTSAG1If7g')">
-                </div>
-              </a>
-              <div class="text-align--center center padding--lg">
-                <div class="max-width--xxl display--inline-block">
-                  <?php if (isset($content['field_location_site'])): ?>
-                    <div class="font-size--lg bold">
-                      <?php print render($content['field_location_site']); ?>
-                    </div>
-                  <?php endif;?>
-                  <?php print render($content['field_base_address']); ?>
+            <div class="grid padding-bottom--md">
+              <div class="grid-cell width--100 md--width--65">
+                <a class="display--block" href="https://www.google.com/maps/search/?api=1&query=<?php print $address_url; ?>">
+                  <div
+                    class="width--100 height--xl background-size--cover background-position--bottom"
+                    style="background-image:url('https://api.mapbox.com/styles/v1/mapbox/streets-v10/static/pin-l+000(<?php print $longitude; ?>,<?php print $latitude; ?>)/<?php print $longitude; ?>,<?php print $latitude; ?>,15/1000x350@2x?access_token=pk.eyJ1IjoibmtmIiwiYSI6ImNpeXlycHIwdTAwdGozMnBvcHVyb3dsMHUifQ.Ga4ktI5QmMOipTSAG1If7g')">
+                  </div>
+                </a>
+              </div>
+                <div class="grid-cell width--100 md--width--35">
 
-                  <a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=<?php print $address_url; ?>">
-                    Directions
-                  </a>
+                  <div class="padding--lg">
+                    <div class="display--inline-block">
+                      <?php if (isset($content['field_location_site'])): ?>
+                        <div class="font-size--lg bold">
+                          <?php print render($content['field_location_site']); ?>
+                        </div>
+                      <?php endif;?>
+                      <?php print render($content['field_base_address']); ?>
 
-                  <?php if (isset($content['field_event_special_instructions'])): ?>
-                    <div class="padding-top--sm center text-align--center">
-                      <?php print render($content['field_event_special_instructions']); ?>
+                      <a target="_blank" href="https://www.google.com/maps/dir/?api=1&destination=<?php print $address_url; ?>">
+                        Directions
+                      </a>
+
+                      <?php if (isset($content['field_event_special_instructions'])): ?>
+                        <div class="padding-top--sm">
+                          <?php print render($content['field_event_special_instructions']); ?>
+                        </div>
+                      <?php endif; ?>
                     </div>
-                  <?php endif; ?>
+                  </div>
                 </div>
               </div>
             <?php endif; ?>
