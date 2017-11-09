@@ -824,9 +824,9 @@ function nkf_base_version_2_allowed_pages($path) {
 
 function nkf_base_preprocess_field(&$vars, $hook) {
   if ($vars['element']['#field_name'] == 'field_promo_block' ) {
-    print '<pre>';
-    print_r($vars);
-    print '</pre>';
+    //print '<pre>';
+    //print_r($vars);
+    //print '</pre>';
   }
   // Hack into the field collection for VIP section on events.
   if ($vars['element']['#field_type'] == 'field_collection') {
