@@ -181,8 +181,8 @@
       <a id="home" class="nav-anchor"></a>
       <div class="container padding-y--xxl">
         <div class="md--display--table width--100">
-          <div class="md--display--table-cell vertical-align--middle width--100 md--width--50 text-align--center">
-            <div class="padding-x--lg padding-y--xl">
+          <div class="<?php print isset($hero_url) ? 'md--width--50' : '';?> md--display--table-cell vertical-align--middle width--100 text-align--center">
+            <div class="center max-width--xxxl padding-x--lg padding-y--xl">
               <?php if (isset($content['field_event_title_prefix'])): ?>
                 <div class="caps bold">
                   <?php print render($content['field_event_title_prefix']); ?>
@@ -207,7 +207,7 @@
                 </a>
               </div>
               <div class="padding-top--lg md--padding-top--xxl font-size--s">
-                <?php foreach($ctas as $i => $cta): ?>
+                <?php foreach($ctas as $cta): ?>
                   <a
                     class="<?php print $cta['button']; ?> sm--width--auto width--100 margin-y--xxs sm--margin-right--xs caps"
                     href="<?php print $cta['url']; ?>">
@@ -217,9 +217,11 @@
               </div>
             </div>
           </div>
-          <div class="md--display--table-cell vertical-align--middle width--100 md--width--50 md--padding--xs">
-            <img class="rounded display--block width--100" src="<?php print $hero_url; ?>">
-          </div>
+          <?php if (isset($hero_url)):?>
+            <div class="md--display--table-cell vertical-align--middle width--100 md--width--50 md--padding--xs">
+              <img class="rounded display--block width--100" src="<?php print $hero_url; ?>">
+            </div>
+          <?php endif;?>
         </div>
       </div>
     </section>
