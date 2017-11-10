@@ -4,6 +4,24 @@
 define('NKF_BASE_PATH', drupal_get_path('theme', 'nkf_base'));
 
 /*
+ * Implementation of hook_theme.
+ */
+function nkf_base_theme($existing, $type, $theme, $path){
+  return array(
+    'card_pic_date' => array(
+      'template' => 'card-pic-date',
+      'path' => NKF_BASE_PATH . '/templates/cards',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'some_text' => NULL,
+      ),
+    ),
+  );
+}
+
+
+/*
  * Helper function to print field without markup.
 */
 function print_field($field) {
@@ -174,7 +192,7 @@ function nkf_base_preprocess_node(&$vars) {
       $vars['street2'] = $wrapper->field_base_address->premise->value();
       $vars['address_url'] = urlencode($vars['street'] . ' ' . $vars['city'] . ' ' . $vars['state'] . ' ' . $vars['zip']);
     }
-    if (isset($wrapper->field_base_geofield)) {
+    if (isset($wrapper->field_base_geofield) && !empty($wrapper->field_base_geofield->value())) {
       $vars['longitude'] = $wrapper->field_base_geofield->lon->value();
       $vars['latitude'] = $wrapper->field_base_geofield->lat->value();
     }
@@ -823,10 +841,16 @@ function nkf_base_version_2_allowed_pages($path) {
 }
 
 function nkf_base_preprocess_field(&$vars, $hook) {
+  // Style promo block for New Event content
   if ($vars['element']['#field_name'] == 'field_promo_block' ) {
-    //print '<pre>';
-    //print_r($vars);
-    //print '</pre>';
+    $promo = $vars['element']['#object'];
+    $promo_wrapper = entity_metadata_wrapper('node', $promo);
+    // Check that we have a related event
+    if (!empty($promo_wrapper->field_base_related_entity->value())) {
+      $event_wrapper = entity_metadata_wrapper('node', $promo_wrapper->field_base_related_entity[0]->value());
+      nkf_base_event_card_theme_helper($vars, $event_wrapper);
+      $vars['theme_hook_suggestions'][] = 'card_pic_date';
+    }
   }
   // Hack into the field collection for VIP section on events.
   if ($vars['element']['#field_type'] == 'field_collection') {
@@ -900,4 +924,24 @@ function nkf_base_rows_from_field_collection(&$vars, $field_array) {
     }
     $vars['rows'][] = $row;
   }
+}
+
+/*
+ * Helper function to extract theme values from New Event for a card.
+ *
+ * @param array $vars Template variables
+ * @param entity_field_wrapper $event Entity field wrapper for New Event Node.
+ */
+function nkf_base_event_card_theme_helper(&$vars, $event) {
+  $vars['path'] = drupal_get_path_alias('node/' . $event->getIdentifier());
+  $vars['title'] = $event->title->value();
+  $date = $event->field_base_date_time->value->value();
+  $vars['img_src'] = nkf_base_get_image_style_url($event->field_event_hero_image->value()['uri'], '500x300_fixed');
+  $vars['month'] = date_format($date, 'M');
+  $vars['month'] = date("M", $date);
+  $vars['day'] = date_format($date, 'j');
+  $vars['day'] = date("j", $date);
+  $vars['title_prefix'] = $event->field_base_address->locality->value();
+  $vars['title_prefix'] += ', ' . $event->field_base_address->administrative_area->value();
+  $vars['bg_color'] = 'bg--gray-1';
 }

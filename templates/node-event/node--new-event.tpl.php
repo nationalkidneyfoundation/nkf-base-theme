@@ -235,7 +235,6 @@
             <?php print render($content['body']); ?>
             <?php if(isset($content['field_event_contact'])): ?>
               <div class="padding-top--md">
-                <?php print_field($content['field_event_contact']);?>
                 For more information about this event contact <span class="bold"><?php print_field($content['field_event_contact']);?></span> at
                 <?php if (isset($content['field_base_email'])):?>
                   <a href="mailto:<?php print_field($content['field_base_email']);?>">
