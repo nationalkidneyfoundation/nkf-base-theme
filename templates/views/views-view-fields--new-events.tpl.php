@@ -1,7 +1,5 @@
 <?php
 
-dpm($fields);
-
 $path = $fields['path']->content;
 $title = $fields['title']->content;
 $month = $fields['field_base_date_time']->content;

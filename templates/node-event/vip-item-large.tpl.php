@@ -4,7 +4,7 @@
 <div class="grid-cell width--100 padding-bottom--sm clearfix">
   <?php if(isset($row['field_base_image'])): ?>
     <img
-      src="<?php print nkf_base_get_image_style_url($row['field_base_image']['#path'],'extra_large_landscape'); ?>"
+      src="<?php print nkf_base_image_url($row['field_base_image']['#path'],'extra_large_landscape'); ?>"
       class="display--block"
       title="<?php print $row['field_base_image']['#title']; ?>"
       alt="<?php print $row['field_base_image']['#alt']; ?>"/>

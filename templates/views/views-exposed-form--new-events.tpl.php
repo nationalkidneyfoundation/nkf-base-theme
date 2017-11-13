@@ -19,9 +19,7 @@
  * @ingroup views_templates
  */
  $widget = $widgets['filter-field_geofield_distance'];
- //print '<pre>';
- //print_r(array_keys($widgets));
- //print '</pre>'
+
 ?>
 <?php if (!empty($q)): ?>
   <?php

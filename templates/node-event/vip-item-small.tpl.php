@@ -5,7 +5,7 @@
   <?php if(isset($row['field_base_image'])): ?>
     <div class="height--md bg--white ">
       <img
-        src="<?php print nkf_base_get_image_style_url($row['field_base_image']['#path'],'small'); ?>"
+        src="<?php print nkf_base_image_url($row['field_base_image']['#path'],'small'); ?>"
         class="centered display--block"
         title="<?php print $row['field_base_image']['#title']; ?>"
         alt="<?php print $row['field_base_image']['#alt']; ?>"/>
