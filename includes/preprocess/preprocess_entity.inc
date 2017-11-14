@@ -9,7 +9,6 @@ function nkf_base_preprocess_entity(&$vars) {
   // like nkf_base_preprocess_entity_<type>_<bundle>.
   if (isset($vars['entity_type']) && isset($vars[$vars['entity_type']]->type)) {
     $function = __FUNCTION__ . '_' . $vars['entity_type'] . '_' . $vars[$vars['entity_type']]->type;
-    print $function .'<br>';
     if (function_exists($function)) {
       $function($vars);
     }
@@ -34,5 +33,4 @@ function nkf_base_preprocess_entity(&$vars) {
 }
 
 function nkf_base_preprocess_node_new_event(&$vars) {
-  print 'we got a new event node';
 }
