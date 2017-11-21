@@ -46,7 +46,7 @@
           <div class="burger-time padding-y--md padding-x--sm"><i class="icon-menu"></i> <span class="caps">Menu</span></div>
           <div class="burger-time padding-y--md padding-x--sm hide bg--<?php print $header_color;?>"><i class="icon-cancel"></i> <span class="caps">Menu</span></div>
         </a>
-        <div class="position--absolute top left right z-index--200 margin-top--xxl">
+        <div class="position--absolute top left right z-index--200 margin-top--xxxl">
           <div class="burger-time hide  grid-cell bg--<?php print $header_color;?> max-width--xl width--100">
             <?php print render($page['navigation']); ?>
           </div>
