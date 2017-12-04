@@ -134,6 +134,15 @@ function nkf_base_color_theme_helper($name = 'standard') {
       'header_button_1' => 'button--white',
       'header_button_2' => 'button--sienna'
     ),
+    'gray-5' => array(
+      'primary_color' => 'gray-5',
+      'header' => 'bg--gray-5 color--white logo--w',
+      'nav' => 'bg--gray-4',
+      'hero' => 'bg--gray-4 color--white',
+      'odd_section' => 'bg--gray-1',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--gray-5'
+    ),
   );
   return $themes[$name];
 }

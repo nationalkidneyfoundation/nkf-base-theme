@@ -1,0 +1,10 @@
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--float {
+      &--none    { float: none; }
+      &--left    { float: left; }
+      &--right   { float: right; }
+      &--inherit { float: inherit; }
+    }
+  }
+}

@@ -4,7 +4,7 @@
   */
 ?>
 
-<a href="/<?php print $path ?>" class="display--block color--gray-4">
+<a href="<?php print $path ?>" class="display--block color--gray-4">
   <div class="<?php print $bg_color ?> max-width--xl">
     <div class="position--relative padding-bottom--xxl">
       <div class="position--absolute bottom left width--100 padding-left--md">

@@ -37,7 +37,7 @@
   > li:before {
     content: counter(list-counter);
     font-weight: bold;
-    background-color: color(black);
+    background-color: color(gray-4);
     text-align: center;
     color: color(white);
     border-radius: 1000px;
