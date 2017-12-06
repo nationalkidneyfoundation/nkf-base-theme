@@ -233,6 +233,9 @@
         if(window.location.href.toLowerCase().indexOf("kadinsfight") != -1) {
            amountOptionsArray = [[5,'$5'],[10,'$10'], [15,'$15'], [20, '$20'], [25, '$25'], [0, 'Other']];
         }
+        if(window.location.href.toLowerCase().indexOf("content/renalroundtable") != -1) {
+           amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [0, 'Other']];
+        }
         $.each(amountOptionsArray, function(i, v) {
           var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
           var button = $('<a class="button button--gray-1 color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
