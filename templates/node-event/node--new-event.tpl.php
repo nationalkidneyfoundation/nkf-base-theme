@@ -477,7 +477,14 @@
                 <?php print render($content['field_event_volunteer_prefix']); ?>
               </div>
             <?php endif; ?>
-            <?php print render($content['field_event_volunteer_descript']); ?>
+            <div class="padding-bottom--lg">
+              <?php print render($content['field_event_volunteer_descript']); ?>
+            </div>
+            <?php if (isset($content['field_event_volunteer_suffix'])): ?>
+              <div class="padding-bottom--md">
+                <?php print render($content['field_event_volunteer_suffix']); ?>
+              </div>
+            <?php endif; ?>
           </div>
           <div class="grid-cell md--width--33">
           </div>
