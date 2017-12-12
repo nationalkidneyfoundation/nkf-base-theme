@@ -15509,6 +15509,11 @@ div.tree-child-horizontal {
   background: url(drupal/tree.png) no-repeat -10px 50%;
 }
 
+tr.drag,
+tr.drag td {
+  background-color: #FEDC00;
+}
+
 /**
  * Teaser splitter
  */
