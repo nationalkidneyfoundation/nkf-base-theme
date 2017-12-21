@@ -7,7 +7,6 @@
 
 @each $bp, $bp-value in $breakpoints {
   @media #{$bp-value} {
-
     @each $name, $height in $heights {
       .#{$bp}--max-width--#{$name} {
         max-width: $height;

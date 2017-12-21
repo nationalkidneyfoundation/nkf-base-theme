@@ -1,0 +1,6 @@
+.top {
+  @each $name, $height in $heights {
+    &--#{$name} { top: $height; }
+    &--#{$name}- { top: -$height; }
+  }
+}

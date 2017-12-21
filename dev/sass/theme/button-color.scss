@@ -16,5 +16,8 @@
       background-color: mix(black, $color, 20%);
       color: color-contrast(mix(black, $color, 20%));
     }
+    &:focus {
+      box-shadow: 0 0 2px darken($color, 20%);
+    }
   }
 }

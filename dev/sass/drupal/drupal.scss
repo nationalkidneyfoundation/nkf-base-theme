@@ -163,11 +163,14 @@ thead th { text-align:auto; }
   font-weight:bold;
   margin-top: space(xxs);
   margin-bottom: space(xxs);
-  }
-
+}
+.form--lg .form-item label {
+  font-size: font-size(lg);
+}
 .form-item label.option {
   display:inline-block;
   font-weight:normal;
+  font-size: font-size(md);
 }
 
 //.marker,

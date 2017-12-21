@@ -8,6 +8,13 @@
     &-left--#{$name}    { margin-left: $space; }
     &-x--#{$name}       { margin-left: $space; margin-right: $space; }
     &-y--#{$name}       { margin-top: $space; margin-bottom: $space; }
+    &--#{$name}-         { margin: -$space; }
+    &-top--#{$name}-     { margin-top: -$space; }
+    &-right--#{$name}-   { margin-right: -$space; }
+    &-bottom--#{$name}-  { margin-bottom: -$space; }
+    &-left--#{$name}-    { margin-left: -$space; }
+    &-x--#{$name}-       { margin-left: -$space; margin-right: -$space; }
+    &-y--#{$name}-       { margin-top: -$space; margin-bottom: -$space; }
   }
 }
 

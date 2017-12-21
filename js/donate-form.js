@@ -7,7 +7,7 @@
       //$('.field-type-telephone input').inputmask("mask", {"mask": "(999) 999-9999"});
       //$('.form-item-payment-details-credit-card-number input').inputmask({ mask: "9999 9999 9999 9999"});
       $('.form-item-payment-details-credit-card-number input').payment('formatCardNumber');
-      $('.form-item-payment-details-credit-card-code input').payment('formatCardCVC');
+      //$('.form-item-payment-details-credit-card-code input').payment('formatCardCVC');
 
       restrictFloat = function(e) {
         if (e.metaKey || e.ctrlKey) {
