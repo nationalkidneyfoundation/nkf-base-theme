@@ -15,9 +15,11 @@
           </div>
         </div>
       </div>
-      <div class="width--100">
-        <img class="width--100 height--auto display--block" typeof="foaf:Image" src="<?php print $img_src; ?>">
-      </div>
+      <?php if(isset($img_src)):?>
+        <div class="width--100">
+          <img class="width--100 height--auto display--block" typeof="foaf:Image" src="<?php print $img_src; ?>">
+        </div>
+      <?php endif;?>
     </div>
     <div class="width-100 padding-x--md padding-top--xs padding-bottom--lg">
       <?php if (!empty($title_prefix)): ?>
@@ -39,4 +41,3 @@
     </div>
   </div>
 </a>
-e
