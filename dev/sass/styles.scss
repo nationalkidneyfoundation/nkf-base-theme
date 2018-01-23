@@ -40,7 +40,7 @@
 @import "utilities/positioning";
 @import "utilities/show";
 @import "utilities/text-truncate";
-@import "utilities/text-highlight";
+//@import "utilities/text-highlight";
 @import "utilities/typekit-fout";
 @import "utilities/animation";
 @import "utilities/square";
@@ -85,6 +85,7 @@
 @import "theme/border-width";
 @import "theme/border";
 @import "theme/button-color";
+@import "theme/box-shadow";
 @import "theme/height";
 @import "theme/container";
 @import "theme/fill-color";
