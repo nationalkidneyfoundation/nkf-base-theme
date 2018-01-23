@@ -5,7 +5,7 @@
 ?>
 
 <a href="<?php print $path ?>" class="display--block color--gray-4">
-  <div class="<?php print $bg_color ?> max-width--xl">
+  <div class="box-shadow overview--hidden border-radius--md bg--white min-height--xl max-width--xl">
     <div class="position--relative padding-bottom--xxl">
       <div class="position--absolute bottom left width--100 padding-left--md">
         <div class="square--md circle position--relative font-size--lg display--inline-block text-align--center line-height--80 bg--orange color--white ">
