@@ -45,6 +45,24 @@ button,
 input[type="submit"],
 .button {
   @include button();
+  border-color: color(gray-3);
+  background-color: color(gray-3);
+  color: color-contrast(color(gray-3));//$white;
+  &:visited {
+    color: color-contrast(color(gray-3));//$white;
+  }
+  &:hover{
+    background-color: mix(white, color(gray-3), 20%);
+    color: color-contrast(mix(white, color(gray-3), 20%));
+  }
+  &:active,
+  &.active {
+    background-color: mix(black, color(gray-3), 20%);
+    color: color-contrast(mix(black, color(gray-3), 20%));
+  }
+  &:focus {
+    box-shadow: 0 0 2px darken(color(gray-3), 20%);
+  }
 }
 /*
 button,

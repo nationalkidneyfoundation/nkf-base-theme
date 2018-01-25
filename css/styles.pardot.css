@@ -482,6 +482,9 @@ input[type="submit"],
   box-sizing: border-box;
   margin: 0;
   -webkit-appearance: none;
+  border-color: #A6AAAF;
+  background-color: #A6AAAF;
+  color: #000;
 }
 
 button:before,
@@ -510,6 +513,35 @@ button:disabled,
 input[type="submit"]:disabled,
 .button:disabled {
   opacity: .5;
+}
+
+button:visited,
+input[type="submit"]:visited,
+.button:visited {
+  color: #000;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.button:hover {
+  background-color: #b8bbbf;
+  color: #000;
+}
+
+button:active,
+button.active,
+input[type="submit"]:active,
+input[type="submit"].active,
+.button:active,
+.button.active {
+  background-color: #85888c;
+  color: #000;
+}
+
+button:focus,
+input[type="submit"]:focus,
+.button:focus {
+  box-shadow: 0 0 2px #71777e;
 }
 
 /*
@@ -605,6 +637,7 @@ textarea {
   height: 2.369rem;
   box-sizing: border-box;
   max-width: 100%;
+  color: #3b444f;
 }
 
 textarea {
