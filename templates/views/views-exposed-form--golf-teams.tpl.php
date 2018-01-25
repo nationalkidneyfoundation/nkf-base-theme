@@ -31,9 +31,9 @@
 <a id="event-search"></a>
 <div class="display--inline-block max-width--xxl padding--sm">
   <?php if (!empty($widget->label)): ?>
-    <h2 class="padding--none">
+    <div class="padding--none caps font-size--md">
       <?php print $widget->label; ?>
-    </h2>
+    </div>
   <?php endif; ?>
   <div class="sm--display--table width--100">
     <div class="sm--display--table-cell vertical-align--top display--block width--100">
