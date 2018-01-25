@@ -89,6 +89,17 @@ function nkf_base_preprocess_node(&$vars) {
           'button' => ($i == 0) ? $vars['th']['header_button_1'] : $vars['th']['header_button_2']
         );
       }
+      /*
+      if ($wrapper->field_new_event_type
+        && !empty($wrapper->field_new_event_type->value())
+        && $wrapper->field_new_event_type->value() == '2') {
+        $vars['ctas'][] = array(
+          'url' => '#jointeam',
+          'title' => t('Join a Team'),
+          'button' => $vars['th']['header_button_2']
+        );
+        $vars['modal'] = '';
+      }*/
     }
 
     if (module_exists('kidneys_misc')) {

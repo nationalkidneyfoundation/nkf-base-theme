@@ -188,7 +188,7 @@
                   <?php print render($content['field_event_title_prefix']); ?>
                 </div>
               <?php endif; ?>
-              <h1 class="md--font-size--xxxxl font-size--xxxl padding-y--none lg--padding-x--lg line-height--110">
+              <h1 class="font-size--xxxl padding-y--none lg--padding-x--lg">
                 <?php print render($title); ?>
               </h1>
               <?php if (isset($content['field_event_title_suffix'])): ?>

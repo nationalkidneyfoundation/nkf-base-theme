@@ -23,7 +23,7 @@
     </div>
     <div class="width-100 padding-x--md padding-top--xs padding-bottom--lg">
       <?php if (!empty($title_prefix)): ?>
-        <div class="font-size--sm caps bold">
+        <div class="font-size--sm caps">
           <?php print $title_prefix ?>
         </div>
       <?php endif;?>
