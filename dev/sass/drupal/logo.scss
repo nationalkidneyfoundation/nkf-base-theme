@@ -32,3 +32,7 @@
   @include when(sm) { background-image: url(../img/NKF-logoR_Hori_W.png); }
   background-image: url(../img/logo__bean--white.png);
 }
+.logo--ob #logo {
+  @include when(sm) { background-image: url(../img/NKF-logoR_Hori_OB.png); }
+  background-image: url(../img/logo__bean--orange.png);
+}

@@ -16132,6 +16132,16 @@ html.js .js-hide {
   }
 }
 
+.logo--ob #logo {
+  background-image: url(../img/logo__bean--orange.png);
+}
+
+@media (min-width: 40em) {
+  .logo--ob #logo {
+    background-image: url(../img/NKF-logoR_Hori_OB.png);
+  }
+}
+
 fieldset {
   margin: 0;
   padding: 16px;

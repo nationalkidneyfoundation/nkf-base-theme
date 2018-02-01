@@ -125,6 +125,15 @@ function nkf_base_color_theme_helper($name = 'standard') {
       'header_button_1' => 'button--white',
       'header_button_2' => 'button--green'
     ),
+    'lime' => array(
+      'primary_color' => 'lime',
+      'header' => 'bg--lime color--white logo--w',
+      'nav' => 'bg--lime--l1',
+      'hero' => 'bg--lime--l1 color--white',
+      'odd_section' => 'bg--lime--o10 color--gray-4',
+      'header_button_1' => 'button--white',
+      'header_button_2' => 'button--lime'
+    ),
     'sienna' => array(
       'primary_color' => 'sienna',
       'header' => 'bg--sienna color--white logo--w',
