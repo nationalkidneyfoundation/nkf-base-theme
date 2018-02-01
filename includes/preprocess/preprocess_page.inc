@@ -132,6 +132,10 @@ function nkf_base_preprocess_page(&$vars) {
     $vars['has_title'] = false;
   }
 
+  if (strpos($alias, 'golfevents') !== false) {
+    $vars['th'] = nkf_base_color_theme_helper('gray-5');
+  }
+
   if (!empty($vars['node'])) {
     $wrapper = entity_metadata_wrapper('node', $vars['node']);
     if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value()))
