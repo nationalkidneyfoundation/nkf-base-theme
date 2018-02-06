@@ -5,7 +5,7 @@
 ?>
 
 <a href="<?php print $path ?>" class="display--block color--gray-4">
-  <div class="box-shadow border-radius--md bg--white min-height--xl max-width--xl">
+  <div class="box-shadow border-radius--md bg--white min-height--xl max-width--xl padding-bottom--xxl position--relative">
     <div class="position--relative padding-bottom--xxl">
       <div class="position--absolute bottom left width--100 padding-left--md">
         <div class="square--md circle position--relative font-size--lg display--inline-block text-align--center line-height--80 bg--orange color--white ">
@@ -35,9 +35,9 @@
           <?php print $description ?>
         </div>
       <?php endif;?>
-      <div class="padding-top--sm">
-        <a href="<?php print $path ?>">Learn More</a>
-      </div>
+    </div>
+    <div class="padding--md position--absolute bottom">
+      <a href="<?php print $path ?>">Learn More</a>
     </div>
   </div>
 </a>
