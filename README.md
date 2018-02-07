@@ -2,6 +2,11 @@
 
 ## css development
 ### Getting started
+```
+cd dev
+npm install
+gulp
+```
 ### sass directory structure
 - base
   This directory includes files for global resets.
