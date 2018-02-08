@@ -1,5 +1,5 @@
 <?php if(isset($row['field_base_link'])): ?>
-  <a href="<?php print $row['field_base_link']['url'];?>" class="display--block color--gray-4">
+  <a href="<?php print $row['field_base_link']['url'];?>" class="color--gray-4">
 <?php endif;?>
 <div class="grid-cell width--100 padding-bottom--sm padding-right--sm clearfix">
   <?php if(isset($row['field_base_image'])): ?>
