@@ -236,6 +236,9 @@
         if(window.location.href.toLowerCase().indexOf("content/renalroundtable") != -1) {
            amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [0, 'Other']];
         }
+        if(window.location.href.toLowerCase().indexOf("content/join-hero-circle") != -1) {
+           amountOptionsArray = [[1000,'$1,000'],[5000,'$5000'], [10000,'$10,000'], [0, 'Other']];
+        }
         $.each(amountOptionsArray, function(i, v) {
           var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));
           var button = $('<a class="button button--gray-1 color--black width--100 padding-y--md padding-x--none" data-amount="' + v[0] + '">' + v[1] + '</a>')
