@@ -16163,10 +16163,10 @@ legend {
 
 .form-item,
 .form-actions {
-  padding-top: 16px;
-  padding-top: 1rem;
-  padding-bottom: 16px;
-  padding-bottom: 1rem;
+  padding-top: 9px;
+  padding-top: 0.563rem;
+  padding-bottom: 9px;
+  padding-bottom: 0.563rem;
 }
 
 .form-item .form-item,
