@@ -169,7 +169,7 @@ function nkf_base_color_theme_helper($name = 'standard') {
  */
 function nkf_base_image_url($value, $name = 'large', $width = FALSE, $height = FALSE) {
   if (is_string($value)) {
-    $image_uri = $value;
+    $image_uri = file_build_uri(basename($value));
   } else {
     $image_uri = $value->value()['uri'];
   }
