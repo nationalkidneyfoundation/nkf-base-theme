@@ -1,4 +1,5 @@
 # Drupal theme for kidney.org
+This is the theme that runs the show.
 
 ## css development
 ### Getting started
