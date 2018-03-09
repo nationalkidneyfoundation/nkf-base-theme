@@ -6336,8 +6336,8 @@ a.hover--pinterest:hover {
 
 .box-shadow,
 .box-shadow--gray-2 {
-  box-shadow: 0px 3px 4px #DBDDDF;
-  border: 1px solid #EDEEEF;
+  box-shadow: 0px 2px 2px #DBDDDF;
+  border: none;
 }
 
 .height--xxxs {

@@ -126,7 +126,7 @@
         // handle required fields per section
         $(context).find('input.required, select.required, textarea.required').each(function(i, d) {
           var r = false;
-          if ($(d).attr('type') === 'radio') {
+          if ($(d).attr('type') === 'radio' || $(d).attr('type') === 'checkbox') {
             r = !$("input[name='" + $(d).attr('name') + "']:checked").val();
           }
           if($(d).val().trim() === '' || r) {
@@ -143,7 +143,7 @@
       }
 
       function requiredFieldInputHandler() {
-        if ($(this).attr('type') === 'radio') {
+        if ($(this).attr('type') === 'radio' || $(d).attr('type') === 'checkbox') {
           if ($("input[name='" + $(this).attr('name') + "']:checked").val()) {
             $("input[name='" + $(this).attr('name') + "']").removeClass('error');
           }
