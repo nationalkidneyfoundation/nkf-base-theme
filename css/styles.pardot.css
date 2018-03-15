@@ -1159,6 +1159,11 @@ select:not([multiple]) {
   display: table-row;
 }
 
+.display--flex {
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .font-weight--100 {
   font-weight: 100;
 }
