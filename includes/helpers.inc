@@ -5,7 +5,7 @@
  * Helper function to print field without markup.
 */
 function print_field($field) {
-  $entity_id = $item['value'];
+  //$entity_id = $item['value'];
   $wrapper = entity_metadata_wrapper($field['#entity_type'], $field['#object']);
   $field_value = $wrapper->$field['#field_name']->value();
   print ($field_value);
