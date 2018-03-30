@@ -7,14 +7,6 @@
 
 function nkf_base_form_alter(&$form, &$form_state, $form_id) {
 
-  $actions = element_children($form['actions']);
-  //dpm($actions);
-  if (count($actions) > 1) {
-    foreach($actions as $action) {
-      $form['actions'][$action]['#attributes']['class'][] = 'margin-right--xs';
-    }
-  }
-  
   if($form_id == 'views_exposed_form'){
     $view = $form_state['view'];
     // Modify the exposed filter for search type views.
