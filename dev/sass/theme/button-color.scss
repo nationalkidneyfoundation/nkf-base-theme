@@ -20,4 +20,26 @@
       box-shadow: 0 0 2px darken($color, 20%);
     }
   }
+  .button--outline--#{$name} {
+    @include button();
+    border-color: $color;
+    border-width: 1px;
+    background-color: color(white);
+    color: $color;//$white;
+    &:visited {
+      color: color-contrast($color);//$white;
+    }
+    &:hover{
+      background-color: mix(white, $color, 20%);
+      color: color-contrast(mix(white, $color, 20%));
+    }
+    &:active,
+    &.active {
+      background-color: mix(black, $color, 20%);
+      color: color-contrast(mix(black, $color, 20%));
+    }
+    &:focus {
+      box-shadow: 0 0 2px darken($color, 20%);
+    }
+  }
 }
