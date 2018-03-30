@@ -83,10 +83,7 @@ p {
     }
   }
 }
-@mixin caps {
-  text-transform: uppercase;
-  letter-spacing: .11rem;
-}
+
 
 .caps {
   @include caps();

@@ -1,0 +1,45 @@
+/**
+ * Override of misc/vertical-tabs.css.
+ */
+.vertical-tabs {
+  border: 1px solid color(gray-2);
+  margin: 10px 0;
+  position: relative;
+}
+.field-group-tab fieldset {
+  border: solid 1px color(gray-2);
+
+}
+.vertical-tabs-panes {
+  padding: space(lg);
+}
+.vertical-tabs-list {
+  border-bottom: 1px solid color(gray-2);
+  float: left; /* LTR */
+  margin: 0 -100% -1px 0; /* LTR */
+  padding: 0;
+  width: 240px;
+  background-color: color(gray-1);
+}
+
+.vertical-tab-button {
+  list-style: none;
+  list-style-image: none;
+  margin: 0;
+}
+.vertical-tab-button.selected {
+  background-color: color(white);
+}
+.vertical-tab-button a {
+  border-top: 1px solid color(gray-2);
+  display: block;
+  padding: space(sm);
+}
+.vertical-tab-button.first a {
+  border-top: none;
+}
+
+.vertical-tab-button .summary {
+  color: color(gray-3);
+  display: block;
+}

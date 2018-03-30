@@ -93,6 +93,9 @@ $flex-shrink-max: 10;
     &--#{$name} { flex-basis: $width; }
   }
 }
+.flex-basis--0 {
+  flex-basis: 0;
+}
 
 //TODO: Fix this. This doesn't work. Shorthand property for flex-grow, flex-shrink and flex basis
 //.flex {

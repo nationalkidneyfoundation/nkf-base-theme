@@ -25,6 +25,18 @@ legend {
   }
 }
 
+input[id*=-edit-],
+#edit-submit {
+  @extend .button--orange;
+}
+input[id*=-remove-],
+#edit-delete {
+  @extend .button--gray-1;
+  color: color(red);
+}
+.form-actions input:not(:first-child) {
+  margin-left: space(xs) !important;
+}
 .form-item .description {
   color: $gray-3;
 }

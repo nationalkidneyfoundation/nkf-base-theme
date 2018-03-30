@@ -139,8 +139,8 @@ $instagram: #e95950 !default;
   @return map-get($colors, $x);
 }
 
-$link-color: color(sienna) !default;
-$link-color-hover: color(red) !default;
+$link-color: color(aqua) !default;
+$link-color-hover: color(orange) !default;
 $link-color-active: $link-color !default;
 $link-color-visited: $link-color !default;
 
@@ -225,6 +225,11 @@ $squares: (
 
 @function square($x){
   @return map-get($squares, $x);
+}
+
+@mixin caps {
+  text-transform: uppercase;
+  letter-spacing: .11rem;
 }
 
 $containers: (
