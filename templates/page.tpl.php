@@ -6,6 +6,7 @@
 <!-- START OF PAGE TEMPLATE -->
 <div class="<?php print $page_classes; ?>">
 
+  <!-- ID BAND -->
   <?php if ($microsite || !empty($page['id_band'])) : ?>
     <?php if ($microsite) : ?>
       <a href="/" class="display--block bg--gray-2 color--black padding--xs caps font-size--sm text-align--center">www.kidney.org</a>
@@ -13,14 +14,20 @@
       <?php print render($page['id_band']); ?>
     <?php endif; ?>
   <?php endif; ?>
+
+  <!-- NAVIGATION -->
   <?php if ($microsite) : ?>
     <?php include_once('headers/page--navigationV2--home.tpl.php'); ?>
   <?php else : ?>
     <?php include_once('headers/page--navigationV2.tpl.php'); ?>
   <?php endif; ?>
+
+
+  <!-- PRINT LOGO-->
   <div class="display--none print--show text-align--center padding--xl">
-    <img src="<?php print base_path() . path_to_theme();?>/img/NKF-logoR_Hori_OB.png"/>
+    <img src="<?php print NKF_BASE_PATH;?>/img/NKF-logoR_Hori_OB.png"/>
   </div>
+
 
   <!-- MESSAGES -->
   <?php //if (!empty($page['help']) || ($show_messages && !empty($messages))): ?>
@@ -43,22 +50,23 @@
   </section>
   <?php endif; ?>
 
+
   <!-- MAIN -->
   <main class="main position--relative z-index--100">
 
-    <!-- Top Promo -->
+    <!-- TOP PROMO -->
     <?php if ($page['top_promo'] && !empty($page['top_promo'])): ?>
     <section class="position--absolute top left right print--hide">
       <?php print render($page['top_promo']);?>
     </section>
     <?php endif; ?>
 
-    <!-- BACKGROUND IMAGE -->
+    <!-- (DEPRECATED) BACKGROUND IMAGE -->
     <?php if($background_image && $node->type =='donation'): ?>
       <div class="hero sm--show" style="background-image: url('<?php print $background_image_uri; ?>')"></div>
     <?php endif; ?>
 
-    <!-- BREADCRUMBS -->
+    <!-- (DEPRECATED) BREADCRUMBS -->
     <?php if ($breadcrumb && FALSE): ?>
     <section class="main__breadcrumbs">
       <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
@@ -70,10 +78,14 @@
     <!-- TITLE -->
     <?php if ($has_title) : ?>
       <?php if ($title): ?>
-        <section class="main__title padding-top--sm">
-          <div class="container padding-top--xl md--padding-top--xxl padding-x--sm sm--padding-x--md md--padding-x--lg">
+        <section class="main__title padding-y--lg">
+          <div class="container padding-y--xl padding-x--sm sm--padding-x--md md--padding-x--lg">
             <?php print render($title_prefix); ?>
-            <h1 class="font-size--xxl padding--none"><div class="prose display--inline-block"><?php print $title ?></div></h1>
+            <h1 class="font-size--xxl padding--none">
+              <div class="prose center padding-x--md md--padding-x--none">
+                <?php print $title ?>
+              </div>
+            </h1>
             <?php print render($title_suffix); ?>
           </div>
         </section>
@@ -81,7 +93,7 @@
     <?php endif;?>
 
 
-    <!-- SECONDARY TABS -->
+    <!-- SECONDARY TABS TODO: MOVE UP -->
     <?php if ($secondary_local_tasks): ?>
     <section class="main__tasks">
       <div class="container padding-top--md md--padding-top--lg padding-x--sm sm--padding-x--md md--padding-x--lg">
@@ -98,6 +110,7 @@
       </div>
     </section>
     <?php endif; ?>
+
 
     <!-- MAIN CONTENT -->
     <section class="main__content">

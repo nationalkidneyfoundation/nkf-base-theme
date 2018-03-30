@@ -9,6 +9,8 @@ define('NKF_BASE_PATH', drupal_get_path('theme', 'nkf_base'));
 require_once NKF_BASE_PATH . '/includes/preprocess.inc';
 require_once NKF_BASE_PATH . '/includes/helpers.inc';
 require_once NKF_BASE_PATH . '/includes/form.inc';
+require_once NKF_BASE_PATH . '/includes/styleguide.inc';
+
 
 
 /*
@@ -24,9 +26,123 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'title' => NULL,
       ),
     ),
+    'list_accordion' => array(
+      'template' => 'list-accordion',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL,
+      ),
+    ),
+    'list_accordion_item' => array(
+      'template' => 'list-accordion-item',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'description' => NULL,
+        'iid' => NULL,
+      ),
+    ),
+    'grid_cell' => array(
+      //'template' => 'list-accordion-item',
+      //'path' => NKF_BASE_PATH . '/templates/lists',
+      //'type' => 'theme',
+      'variables' => array(
+        'content' => NULL,
+        'attributes' => NULL
+      ),
+    ),
+
+    'component_wrapper' => array(
+      'render element'  => 'element'
+    ),
+
+    // Text templates.
+    'text_general' => array(
+      'template' => 'text-general',
+      'path' => NKF_BASE_PATH . '/templates/text',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'body' => NULL,
+        'left_media' => NULL,
+        'rigth_media' => NULL,
+        'left_pullquote' => NULL,
+        'right_pullquote' => NULL,
+      ),
+    ),
+    'text_general_preview' => array(
+      'template' => 'text-general-preview',
+      'path' => NKF_BASE_PATH . '/templates/text',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'body' => NULL,
+        'left_media' => NULL,
+        'rigth_media' => NULL,
+        'left_pullquote' => NULL,
+        'right_pullquote' => NULL,
+      ),
+    ),
+    'text_summary' => array(
+      'template' => 'text-summary',
+      'path' => NKF_BASE_PATH . '/templates/text',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'body' => NULL,
+      ),
+    ),
+    'big_media' => array(
+      'template' => 'big-media',
+      'path' => NKF_BASE_PATH . '/templates/media',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'body' => NULL,
+      ),
+    ),
+    'layout_50_50' => array(
+      'template' => 'layout-50-50',
+      'path' => NKF_BASE_PATH . '/templates/layouts',
+      'type' => 'theme',
+      'variables' => array(
+        'left' => NULL,
+        'right' => NULL,
+        'bg_color' => NULL,
+      ),
+    ),
+    'nkf_base_toc' => array(
+      'template' => 'list-toc',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL
+      ),
+    ),
   );
 }
+/**
+ * Default theme for the wrapper around a user's achievements page.
+ *
+ * @param $variables
+ *   An associative array containing:
+ *   - element: A render containing the user's achievements page.
+ */
+function theme_component_wrapper($variables) {
+  return '<div class="WRAPPER TEST">' . $variables['element']['#children'] . '</div>';
+}
 
+function nkf_base_grid_cell($vars) {
+  //dpm($vars, 'theme_grid_cell');
+  $content = $vars['content'];
+  $attributes = $vars['attributes'];
+  //print 'atr';
+  $attributes['class'][] = 'grid-cell';
+  //print 'attr';
+  return '<div ' . drupal_attributes($attributes) . '>'.$content.'</div>';
+}
 
 /**
  * Force all US stats to be abbreviations.

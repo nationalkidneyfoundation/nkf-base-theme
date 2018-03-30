@@ -7,10 +7,14 @@
 function nkf_base_preprocess_entity(&$vars) {
   // Add generic preprocessing so we can create functions
   // like nkf_base_preprocess_entity_<type>_<bundle>.
-  if (isset($vars['entity_type']) && isset($vars[$vars['entity_type']]->type)) {
-    $function = __FUNCTION__ . '_' . $vars['entity_type'] . '_' . $vars[$vars['entity_type']]->type;
-    if (function_exists($function)) {
-      $function($vars);
+
+  if (isset($vars['entity_type'])) {
+    if (isset($vars[$vars['entity_type']]->type) || isset($vars[$vars['entity_type']]->bundle)) {
+      $bundle = isset($vars[$vars['entity_type']]->type) ? $vars[$vars['entity_type']]->type : $vars[$vars['entity_type']]->bundle;
+      $function = __FUNCTION__ . '_' . $vars['entity_type'] . '_' . $bundle;
+      if (function_exists($function)) {
+        $function($vars);
+      }
     }
   }
 

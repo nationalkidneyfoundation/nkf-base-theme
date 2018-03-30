@@ -12,7 +12,7 @@ function nkf_base_preprocess_node(&$vars) {
   if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value())) {
     $vars['th'] = nkf_base_color_theme_helper($wrapper->field_color_theme->value());
   }
-  if ($vars['type'] == 'panel') {
+  if ($vars['type'] == 'panel' || $vars['type'] == 'page') {
     if ($vars['content_attributes_array'] && $vars['content_attributes_array']['class']) {
       $vars['content_attributes_array']['class'] = array_diff($vars['content_attributes_array']['class'], array('prose'));
     }
@@ -89,17 +89,6 @@ function nkf_base_preprocess_node(&$vars) {
           'button' => ($i == 0) ? $vars['th']['header_button_1'] : $vars['th']['header_button_2']
         );
       }
-      /*
-      if ($wrapper->field_new_event_type
-        && !empty($wrapper->field_new_event_type->value())
-        && $wrapper->field_new_event_type->value() == '2') {
-        $vars['ctas'][] = array(
-          'url' => '#jointeam',
-          'title' => t('Join a Team'),
-          'button' => $vars['th']['header_button_2']
-        );
-        $vars['modal'] = '';
-      }*/
     }
 
     if (module_exists('kidneys_misc')) {

@@ -132,7 +132,8 @@ function nkf_base_preprocess_page(&$vars) {
     $vars['has_title'] = false;
   }
 
-  if (strpos($alias, 'golfevents') !== false) {
+  if (!empty($vars['node']) && $vars['node']->type == 'page' && arg(2) !== 'edit') {
+    $vars['widescreen'] = true;
     $vars['th'] = nkf_base_color_theme_helper('gray-5');
   }
 
