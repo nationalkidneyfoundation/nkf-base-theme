@@ -10,7 +10,7 @@
    */
 ?>
 
-<div class="prose center padding-x--md md--padding-x--none padding-bottom--lg <?php print $classes; ?>" <?php print $attributes; ?>>
+<div class="container center padding-x--md md--padding-x--none padding-bottom--lg <?php print $classes; ?>" <?php print $attributes; ?>>
   <?php if (!empty($title)): ?>
     <h3><?php print $title;?></h3>
   <?php endif;?>
