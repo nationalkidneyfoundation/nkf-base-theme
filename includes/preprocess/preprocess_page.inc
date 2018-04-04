@@ -25,6 +25,12 @@ function nkf_base_preprocess_page(&$vars) {
       'header_color' => 'orange',
       'nav_color' => 'orange--l1',
       'theme' => 'orange',
+    ),
+    'golf' => array(
+      'paths' => array('golf', 'events/golf', 'golfevents'),
+      'header_color' => 'lime',
+      'nav_color' => 'lime--l1',
+      'theme' => 'lime',
     )
   );
   foreach ($microsites as $key => $value) {
