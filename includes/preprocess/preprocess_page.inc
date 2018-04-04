@@ -5,6 +5,18 @@
  */
 function nkf_base_preprocess_page(&$vars) {
 
+  // Get top level navigation taxonomy.
+  $ia_voc = taxonomy_vocabulary_machine_name_load('ia');
+  $ia_items = taxonomy_get_tree($ia_voc->vid, 0, 1);
+  foreach($ia_items as $ia_item) {
+    $vars['ia'][] = array(
+      'name' => $ia_item->name,
+      'path' => url("taxonomy/term/$ia_item->tid"),
+    );
+  }
+  //dpm($vars['ia']);
+
+
   $page_classes = array('page');
   $alias = strtolower(drupal_get_path_alias());
   $vars['th'] = nkf_base_color_theme_helper('standard');

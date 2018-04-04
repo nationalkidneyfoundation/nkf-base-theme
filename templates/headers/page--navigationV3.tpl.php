@@ -7,68 +7,34 @@
  * Available variables:
  */
 ?>
-<header class="print--hide width--100 <?php print $th['header'];?>">
-  <nav class="container position--relative">
-    <div class="display--table width--100">
-      <div class="display--table-cell width--100 vertical-align--middle padding-left--md">
-        <a href="/" id="logo" class="display--inline-block vertical-align--middle padding-x--md margin-y--sm">
-        </a>
+<header class="display--flex flex-direction--row align-items--center width--100 padding--xl border-bottom">
+  <div class="lg--show">
+    <a href="/">
+      <img class="width--md min-width--md padding--lg " src="/<?php print NKF_BASE_PATH;?>/dev/img/logos/vertical/NKF-logoR_Vert_OB.png" />
+    </a>
+  </div>
+  <div class="flex-grow--1">
+    <div class="clearfix lg--show">
+      <div class="display--flex pill align-items--center float--right width--xl border padding--xxxs">
+        <span class="color--gray-3 flex-grow--1 padding-left--sm caps font-size--sm">Search by keyword</span>
+        <button class="button--gray-2 float--right padding-y--xxs">search</button>
       </div>
-      <?php if (!empty($page['navigation'])) : ?>
-      <div class="display--table-cell vertical-align--middle width--auto">
-        <a href="#" class="display--block white-space--nowrap color--white" data-toggle="class" data-target=".burger-time" data-class="hide">
-          <div class="burger-time md--padding-y--xl padding-y--lg padding-x--xs">
-            <div class="md--show">
-              <i class="icon-menu"></i>
-              <span class="caps">Menu</span>
-            </div>
-            <div class="md--hide font-size--lg padding-x--xxs">
-              <i class="icon-menu"></i>
-            </div>
-          </div>
-          <div class="burger-time hide bg--<?php print $nav_color;?> md--padding-y--xl padding-y--lg padding-x--xs">
-            <div class="md--show">
-              <i class="icon-cancel"></i>
-              <span class="caps">Menu</span>
-            </div>
-            <div class="md--hide font-size--lg padding-x--xxs">
-              <i class="icon-cancel"></i>
-            </div>
-          </div>
+    </div>
+    <div class="lg--hide">
+      <a href="/">
+        <img class="padding--lg " src="/<?php print NKF_BASE_PATH;?>/img/NKF-logoR_Hori_OB.png" />
+      </a>
+    </div>
+    <nav class="lg--font-size--sm xl--font-size--md
+      display--flex flex-direction--row flex-wrap--wrap lg--flex-wrap--nowrap align-items--center
+      padding-left--md lg--padding-top--xxxl ">
+      <?php foreach($ia as $item): ?>
+        <a href="<?php print $item['path'];?>" class="display--block sm--width--50 width--100 padding--sm color--gray-4 caps">
+          <?php print $item['name'];?>
         </a>
-      </div>
-      <?php endif; ?>
-      <?php if (!empty($page['navigation_search'])) : ?>
-        <div class="display--table-cell vertical-align--middle width--auto">
-          <a href="#search-modal" class="modal-trigger display--block md--padding-y--xl padding-y--lg padding-x--xs white-space--nowrap color--white">
-            <div class="md--show">
-              <i class="icon-search"></i>
-              <span class="caps">Search</span>
-            </div>
-            <div class="md--hide font-size--lg padding-right--xxs">
-              <i class="icon-search"></i>
-            </div>
-          </a>
-        </div>
-        <div id="search-modal" class="modal padding--xl bg--white border-radius--md max-width--xxl center mfp-hide">
-          <div class="center padding-y--lg">
-            <div><?php print render($page['navigation_search']); ?></div>
-          </div>
-        </div>
-      <?php endif; ?>
+      <?php endforeach;?>
+      <div class="padding--sm flex-align--right lg--show"><a class="button--outline--aqua">Donate</a></div>
+    </nav>
+  </div>
 
-        <?php if (!empty($page['main_cta'])) : ?>
-          <div class="display--table-cell vertical-align--middle width--auto padding-x--xs">
-            <?php print render($page['main_cta']); ?>
-          </div>
-        <?php endif; ?>
-    </div>
-    <?php if (!empty($page['navigation'])) : ?>
-    <div class="position--absolute right z-index--200">
-      <div class="burger-time hide font-size--md grid-cell bg--<?php print $nav_color;?> max-width--xl width--100">
-        <?php print render($page['navigation']); ?>
-      </div>
-    </div>
-    <?php endif; ?>
-  </nav>
 </header>

@@ -1,0 +1,16 @@
+
+@each $name, $height in $heights {
+  .min-width--#{$name} {
+    min-width: $height;
+  }
+}
+
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    @each $name, $height in $heights {
+      .#{$bp}--min-width--#{$name} {
+        min-width: $height;
+      }
+    }
+  }
+}

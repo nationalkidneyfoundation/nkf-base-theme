@@ -14,7 +14,7 @@
    */
    //dpm(get_defined_vars());
 ?>
-<div class="prose center padding-x--xxxl">
+<div class="position--relative <?php print $classes; ?>" <?php print $attributes; ?>>
   <?php if ($title): ?>
     <h3><?php print $title;?></h3>
   <?php endif;?>
@@ -53,4 +53,7 @@
     <?php print $body;?>
 
   </div>
+  <?php if ($admin_footer): ?>
+    <?php print $admin_footer;?>
+  <?php endif;?>
 </div>

@@ -15,6 +15,16 @@
     &--nowrap   { flex-wrap: nowrap; }
     &--wrap-rev { flex-wrap: wrap-reverse; }
 }
+// Creates width rules for each breakpoint
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--flex-wrap {
+      &--wrap     { flex-wrap: wrap; }
+      &--nowrap   { flex-wrap: nowrap; }
+      &--wrap-rev { flex-wrap: wrap-reverse; }
+    }
+  }
+}
 
 //Shorthand property for setting flex-direction & flex-wrap values together
 .flex-flow {

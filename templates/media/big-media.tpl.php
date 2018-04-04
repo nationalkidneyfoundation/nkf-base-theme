@@ -10,7 +10,7 @@
    */
 ?>
 
-<div class="prose center padding-x--md md--padding-x--xxxl padding-y--xl">
+<div class="container center padding-x--md md--padding-x--xxxl padding-y--xl">
   <?php if (!empty($title)): ?>
     <h3><?php print $title;?></h3>
   <?php endif;?>

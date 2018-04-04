@@ -41,17 +41,36 @@ function nkf_base_preprocess_entity_paragraphs_item_summary_text(&$vars) {
  * Implements hook_preprocess_<entity_type>_<bundle>
  */
 function nkf_base_preprocess_entity_paragraphs_item_text_basic(&$vars) {
+  //dpm($vars);
+  $id = 'id-' . $vars['id'];
   $vars['title'] = render($vars['content']['field_paragraph_title']);
   $vars['body'] = render($vars['content']['field_base_description']);
   $vars['left_media'] = render($vars['content']['field_base_image']);
   $vars['right_pullquote'] = render($vars['content']['field_base_pull_quote']);
 
+  $vars['attributes_array']['id'] = $id;
+  $vars['classes_array'][] = 'prose';
+  $vars['classes_array'][] = 'padding-x--xxxl';
   if ($vars['view_mode'] === 'paragraphs_editor_preview') {
-    $vars['theme_hook_suggestions'][] = 'text_general_preview';
+    //$vars['theme_hook_suggestions'][] = 'text_general_preview';
+    $vars['classes_array'][] = 'height--md';
+    $vars['classes_array'][] = 'margin-y--xl';
+    $vars['classes_array'][] = 'border';
+    $vars['classes_array'][] = 'border-width--md';
+    $vars['classes_array'][] = 'border-color--gray-4';
+    $vars['classes_array'][] = 'overflow-y--scroll';
+    $vars['admin_footer'] = '<div class="position--absolute bottom margin-bottom--xl- z-index--100">
+      <a class="bg--gray-4 display--inline-block color--white padding-x--sm padding-bottom--sm"
+         href="#"
+         data-toggle="class" data-target="#'.$id.'|.blah i" data-class="height--md|hide">
+        <i class="icon-down-open "></i>
+        <i class="icon-up-open hide"></i>
+      </a>
+    </div>';
   } else {
-    $vars['theme_hook_suggestions'][] = 'text_general';
+    $vars['classes_array'][] = 'center';
   }
-
+  $vars['theme_hook_suggestions'][] = 'text_general';
 }
 
 /**

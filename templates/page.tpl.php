@@ -19,7 +19,7 @@
   <?php if ($microsite) : ?>
     <?php include_once('headers/page--navigationV2--home.tpl.php'); ?>
   <?php else : ?>
-    <?php include_once('headers/page--navigationV2.tpl.php'); ?>
+    <?php include_once('headers/page--navigationV3.tpl.php'); ?>
   <?php endif; ?>
 
 
