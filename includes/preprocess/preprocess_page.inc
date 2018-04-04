@@ -139,7 +139,7 @@ function nkf_base_preprocess_page(&$vars) {
   }
 
   if (strpos($alias, 'golfevents') !== false) {
-    $vars['th'] = nkf_base_color_theme_helper('gray-5');
+    //$vars['th'] = nkf_base_color_theme_helper('gray-5');
   }
 
   if (!empty($vars['node'])) {
