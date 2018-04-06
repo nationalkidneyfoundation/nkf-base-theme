@@ -43,7 +43,7 @@
 
     <!-- RIGHT PULL QUOTE -->
     <?php if ($right_pullquote): ?>
-      <div class="float--right margin-right--xxxl- md--max-width--lg padding-left--xxxl padding-bottom--lg bold font-size--lg">
+      <div class="float--right margin-right--xxxl- md--max-width--lg padding-left--xxxl padding-bottom--lg bold font-size--lg border border-style--solid border-left--orange">
         <?php print $right_pullquote; ?>
       </div>
     <?php endif; ?>
