@@ -1,12 +1,3 @@
-.list-style--dash {
-  list-style-type: none;
-  li:before {
-    content: "–";
-    float: left;
-    display: block;
-    margin-left: space(lg) * -1;
-  }
-}
 .list-style--check {
   padding-left: space(xl);
   li {
