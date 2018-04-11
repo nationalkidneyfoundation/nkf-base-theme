@@ -1,4 +1,7 @@
-//Flexbox properties
+/*Flexbox properties
+* be sure to define display property as display--flex
+* before applying any of these properties
+*/
 
 //Defines the direction in which items are stacked in the
 //container
@@ -65,15 +68,27 @@
 
 //Set the order property. Default set at 0.
 //TODO: is this right? I don't think this syntax is right.
-$grid-order-max: 10;
+$grid-order-max: 5;
 
-.order {
-  @for $i from 0 through $grid-order-max {
-    &--#{$i} {
-      order: $i;
+
+@for $i from 0 through $grid-order-max {
+    .order   
+    {
+        &--#{$i} {
+        order: $i;
+            }  
+        }
+        @each $bp, $bp-value in $breakpoints {
+            @media #{$bp-value} {
+              .#{$bp}--order {
+            &--#{$i}{
+                order: $i;
+            }
+              }
+            }
+        }
     }
-  }
-}
+
 
 //Specifies how much a flex item will grow relative to the rest
 //of the flex items. Default is 0.
