@@ -126,7 +126,7 @@
         // handle required fields per section
         $(context).find('input.required, select.required, textarea.required').each(function(i, d) {
           var r = false;
-          if ($(d).attr('type') === 'radio') {
+          if ($(d).attr('type') === 'radio' || $(d).attr('type') === 'checkbox') {
             r = !$("input[name='" + $(d).attr('name') + "']:checked").val();
           }
           if($(d).val().trim() === '' || r) {
@@ -143,7 +143,7 @@
       }
 
       function requiredFieldInputHandler() {
-        if ($(this).attr('type') === 'radio') {
+        if ($(this).attr('type') === 'radio' || $(d).attr('type') === 'checkbox') {
           if ($("input[name='" + $(this).attr('name') + "']:checked").val()) {
             $("input[name='" + $(this).attr('name') + "']").removeClass('error');
           }
@@ -235,6 +235,9 @@
         }
         if(window.location.href.toLowerCase().indexOf("content/renalroundtable") != -1) {
            amountOptionsArray = [[250,'$250'],[500,'$500'], [1000,'$1,000'], [0, 'Other']];
+        }
+        if(window.location.href.toLowerCase().indexOf("content/join-hero-circle") != -1) {
+           amountOptionsArray = [[1000,'$1,000'],[5000,'$5000'], [10000,'$10,000'], [0, 'Other']];
         }
         $.each(amountOptionsArray, function(i, v) {
           var buttonOuter = $('<div class="grid-cell width--33 padding--xxs"></div>').appendTo($(amountOptions));

@@ -20,8 +20,17 @@
     height: 110px;
     width: 100%;
   }
-
+  // NKF/Konica Minolta Lockup logo for use on NKF Golf Classic microsite
+  &.golf {
+    background-image: url(../img/GOLF_Lockup_W2.png) !important;
+    height: 110px;
+    width: 100%;
+  }
 }
+
+
+
+
 
 .logo--wb #logo {
   @include when(sm) { background-image: url(../logo.png); }

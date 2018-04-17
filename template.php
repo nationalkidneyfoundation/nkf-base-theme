@@ -102,7 +102,7 @@ function nkf_base_field_attach_view_alter(&$output, $context) {
  */
 function nkf_base_menu_tree($variables) {
   $name = _get_menu_name_css($variables);
-  if (strpos($name, 'cta') !== FALSE || strpos($name, 'cars') !== FALSE) {
+  if (strpos($name, 'cta') !== FALSE || strpos($name, 'cars') !== FALSE || strpos($name, 'golf') !== FALSE) {
     return $variables['tree'];
   }
   return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
@@ -137,7 +137,11 @@ function nkf_base_menu_link(array $variables) {
     $sub_menu = drupal_render($element ['#below']);
   }
   $name = $element ['#original_link']['menu_name'];
-  if ($name == 'menu-scm-new' || $name == 'menu-scm-primary-nav' || strpos($name, 'cars') !== FALSE) {
+  if ($name == 'menu-scm-new' ||
+      $name == 'menu-scm-primary-nav' ||
+      strpos($name, 'cars') !== FALSE ||
+      strpos($name, 'golf') !== FALSE
+    ) {
     $element ['#localized_options']['attributes']['class'][] = 'padding-y--xxs';
     $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
     $element ['#attributes']['class'][] = 'grid-cell width--100 vertical-align--middle';

@@ -3,7 +3,7 @@
 <?php endif;?>
 <div class="grid-cell width--100 sm--width--50 md--width--33 padding-bottom--lg padding-right--lg">
   <?php if(isset($row['field_base_image'])): ?>
-    <div class="height--md bg--white ">
+    <div class="height--md">
       <img
         src="<?php print nkf_base_image_url($row['field_base_image']['#path'],'small'); ?>"
         class="centered display--block"

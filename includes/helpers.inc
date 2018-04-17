@@ -5,7 +5,7 @@
  * Helper function to print field without markup.
 */
 function print_field($field) {
-  $entity_id = $item['value'];
+  //$entity_id = $item['value'];
   $wrapper = entity_metadata_wrapper($field['#entity_type'], $field['#object']);
   $field_value = $wrapper->$field['#field_name']->value();
   print ($field_value);
@@ -169,7 +169,13 @@ function nkf_base_color_theme_helper($name = 'standard') {
  */
 function nkf_base_image_url($value, $name = 'large', $width = FALSE, $height = FALSE) {
   if (is_string($value)) {
-    $image_uri = $value;
+    $scheme = file_uri_scheme($value);
+    if (!$scheme) {
+      // decode url as we will re encode it later through file_create_url
+      $image_uri = file_build_uri(basename(urldecode($value)));
+    } else {
+      $image_uri = $value;
+    }
   } else {
     $image_uri = $value->value()['uri'];
   }

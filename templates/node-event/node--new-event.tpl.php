@@ -561,7 +561,7 @@
                     <h2 class="title caps padding-bottom--lg"><?php print render($content['field_event_branding_title']); ?></h2>
                   <?php endif;?>
                   <?php print render($content['field_event_nkf_text']); ?>
-                  <?php if($content['field_event_local_text']): ?>
+                  <?php if (!empty($content['field_event_local_text'])): ?>
                   		<div class="padding-top--md">
 		                    <?php print render($content['field_event_local_text']); ?>
                     </div>
