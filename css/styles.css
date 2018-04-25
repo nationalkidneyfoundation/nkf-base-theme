@@ -15408,36 +15408,10 @@ th {
   width: 100%;
 }
 
-/*@import '../../node_modules/iconfonts/stylesheets/font-awesome';
-
-@include fa-font();
-
-
-
-.icon-facebook:before {
-  @include fa-icon("facebook", $font-size);
-}
-.icon-twitter:before {
-  @include fa-icon("twitter", $font-size);
-}
-.icon-chevron-left:before {
-  @include fa-icon("chevron-left", $font-size);
-}
-.icon-chevron-right:before {
-  @include fa-icon("chevron-right", $font-size);
-}
-.icon-arrow-right:before {
-  @include fa-icon("arrow-right", $font-size);
-}
-.icon-arrow-left:before {
-  @include fa-icon("arrow-left", $font-size);
-}
-*/
-
 @font-face {
   font-family: 'fontello';
-  src: url("../font/fontello.eot?43613445");
-  src: url("../font/fontello.eot?43613445#iefix") format("embedded-opentype"), url("../font/fontello.woff2?43613445") format("woff2"), url("../font/fontello.woff?43613445") format("woff"), url("../font/fontello.ttf?43613445") format("truetype"), url("../font/fontello.svg?43613445#fontello") format("svg");
+  src: url("../font/fontello.eot?48159619");
+  src: url("../font/fontello.eot?48159619#iefix") format("embedded-opentype"), url("../font/fontello.woff2?48159619") format("woff2"), url("../font/fontello.woff?48159619") format("woff"), url("../font/fontello.ttf?48159619") format("truetype"), url("../font/fontello.svg?48159619#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -15450,7 +15424,7 @@ th {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?43613445#fontello') format('svg');
+    src: url('../font/fontello.svg?48159619#fontello') format('svg');
   }
 }
 */
@@ -15615,6 +15589,36 @@ th {
 }
 
 /* '' */
+
+.icon-plus:before {
+  content: '\e816';
+}
+
+/* '' */
+
+.icon-minus:before {
+  content: '\e817';
+}
+
+/* '' */
+
+.icon-left-open:before {
+  content: '\e818';
+}
+
+/* '' */
+
+.icon-right-open:before {
+  content: '\e819';
+}
+
+/* '' */
+
+.icon-linkedin:before {
+  content: '\f0e1';
+}
+
+/* '' */
 
 .icon-play-circled:before {
   content: '\f144';
