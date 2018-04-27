@@ -5,16 +5,39 @@
  */
 function nkf_base_preprocess_node(&$vars) {
   $node = $vars['node'];
-  $wrapper = entity_metadata_wrapper('node', $node);
+  $vars['meta_info'] = nkf_base_get_node_meta($node);
+  $related_content = nkf_base_get_node_related_content($node);
+  foreach($related_content as $value) {
+    $c_vars = array();
+    nkf_base_set_node_vars($value, $c_vars);
 
+    $vars['related_content'][] = theme('tile_landscape_small', $c_vars);
+  }
+  $vars['actions'] = kidneys_misc_get_content_actions($node);
+  $wrapper = entity_metadata_wrapper('node', $node);
   $vars['section_classes'] = '';
   $vars['hero_classes'] = '';
   if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value())) {
     $vars['th'] = nkf_base_color_theme_helper($wrapper->field_color_theme->value());
   }
-  if ($vars['type'] == 'panel' || $vars['type'] == 'page') {
+  if ($vars['type'] == 'panel' || $vars['type'] == 'page' || $vars['type'] == 'design_system_component') {
     if ($vars['content_attributes_array'] && $vars['content_attributes_array']['class']) {
       $vars['content_attributes_array']['class'] = array_diff($vars['content_attributes_array']['class'], array('prose'));
+    }
+  }
+
+  if ($vars['type'] == 'design_system_component') {
+    $ds_status =  $wrapper->field_ds_status->value();
+    switch ($ds_status) {
+      case 1:
+        $vars['ds_status'] = 'color--white bg--green icon-smile';
+        break;
+      case 2:
+        $vars['ds_status'] = 'bg--yellow icon-meh';
+        break;
+      case 3:
+        $vars['ds_status'] = 'color--white bg--red icon-frown';
+        break;
     }
   }
 
@@ -89,6 +112,17 @@ function nkf_base_preprocess_node(&$vars) {
           'button' => ($i == 0) ? $vars['th']['header_button_1'] : $vars['th']['header_button_2']
         );
       }
+      /*
+      if ($wrapper->field_new_event_type
+        && !empty($wrapper->field_new_event_type->value())
+        && $wrapper->field_new_event_type->value() == '2') {
+        $vars['ctas'][] = array(
+          'url' => '#jointeam',
+          'title' => t('Join a Team'),
+          'button' => $vars['th']['header_button_2']
+        );
+        $vars['modal'] = '';
+      }*/
     }
 
     if (module_exists('kidneys_misc')) {

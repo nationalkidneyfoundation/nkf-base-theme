@@ -1,4 +1,5 @@
 var nkf_base_init = function($) {
+
   // utility function to toggle classes on click
   // useful for toggling visibility
   $('[data-toggle=class]').once().click(function (e) {
@@ -11,6 +12,30 @@ var nkf_base_init = function($) {
     e.preventDefault();
   });
 
+  //
+  $('body').once('accordion-hash', function(){
+    var accordHash = window.location.hash.slice(1).split('|');
+    for (var i of accordHash){
+      if (i.length > 0) {
+        $('#' + i +' a').trigger('click');
+      }
+    }
+  });
+
+  // utility for general slider selection
+  if ($.fn.slick !== undefined){
+    $('.slider, .slick').slick({
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      variableWidth: true,
+      swipeToSlide: true,
+      infinite: false,
+      touchThreshold: 8,
+      prevArrow: '<a href="#" class="slider-button-left"><i class="icon-left-open"></i></a>',
+      nextArrow: '<a href="#" class="slider-button-right"><i class="icon-right-open"></i></a>'
+    });
+  }
 
   // utility for general modal selection
   $('.modal-trigger').magnificPopup({
@@ -91,4 +116,4 @@ var nkf_base_init = function($) {
 }
 
 
-jQuery('document').ready(nkf_base_init(jQuery));
+//jQuery('document').ready(nkf_base_init(jQuery));

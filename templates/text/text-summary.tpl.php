@@ -10,11 +10,15 @@
    */
 ?>
 
-<div class="container center padding-x--md md--padding-x--none padding-bottom--lg <?php print $classes; ?>" <?php print $attributes; ?>>
+<?php if ($title_anchor): ?>
+  <a name="<?php print $title_anchor; ?>"></a>
+<?php endif; ?>
+
+<div class="prose center padding-x--md md--padding-x--xxxl <?php print $classes; ?>" <?php print $attributes; ?>>
   <?php if (!empty($title)): ?>
-    <h3><?php print $title;?></h3>
+    <h2><?php print $title;?></h2>
   <?php endif;?>
-  <div class="font-size--lg padding-top--md">
+  <div class="font-size-md md--font-size--lg padding-top--md">
     <?php print $body;?>
   </div>
 </div>

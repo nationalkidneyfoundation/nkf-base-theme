@@ -18,6 +18,8 @@
   <!-- NAVIGATION -->
   <?php if ($microsite) : ?>
     <?php include_once('headers/page--navigationV2--home.tpl.php'); ?>
+  <?php elseif($is_front) : ?>
+    <?php include_once('headers/page--navigationV3--home.tpl.php'); ?>
   <?php else : ?>
     <?php include_once('headers/page--navigationV3.tpl.php'); ?>
   <?php endif; ?>
@@ -75,23 +77,6 @@
     </section>
     <?php endif; ?>
 
-    <!-- TITLE -->
-    <?php if ($has_title) : ?>
-      <?php if ($title): ?>
-        <section class="main__title padding-y--lg">
-          <div class="container padding-y--xl padding-x--sm sm--padding-x--md md--padding-x--lg">
-            <?php print render($title_prefix); ?>
-            <h1 class="font-size--xxl padding--none">
-              <div class="prose center padding-x--md md--padding-x--none">
-                <?php print $title ?>
-              </div>
-            </h1>
-            <?php print render($title_suffix); ?>
-          </div>
-        </section>
-      <?php endif; ?>
-    <?php endif;?>
-
 
     <!-- SECONDARY TABS TODO: MOVE UP -->
     <?php if ($secondary_local_tasks): ?>
@@ -111,6 +96,53 @@
     </section>
     <?php endif; ?>
 
+
+    <!--IA Category Tags-->
+    <?php if (!empty($meta_info['filed_in']) && FALSE): ?>
+      <div class="">
+        <div class="prose center padding-y--md padding-x--md md--padding-x--none caps font-size--sm">
+          <?php foreach($meta_info['filed_in'] as $filed_in): ?>
+            <?php //print $filed_in;?>
+          <?php endforeach;?>
+          <?php print implode($meta_info['filed_in'], ' | ');?>
+        </div>
+      </div>
+    <?php endif;?>
+
+
+    <!--Node actions (sharing)-->
+    <?php if (!empty($actions)): ?>
+      <div class="">
+        <div class="prose center display--flex padding-top--xxl padding-x--md md--padding-x--none">
+          <?php foreach($actions as $id => $action): ?>
+            <a href="<?php print $action['href']?>"
+               class="circle height--sm width--sm
+                      display--flex align-items--center
+                      margin-right--xs color--<?php print $action['color']; ?> border border-color--<?php print $action['color']; ?>">
+              <i class="center <?php print $action['icon']; ?>"></i>
+            </a>
+          <?php endforeach;?>
+        </div>
+      </div>
+    <?php endif;?>
+
+
+    <!-- TITLE -->
+    <?php if ($has_title) : ?>
+      <?php if ($title): ?>
+        <section class="main__title padding-top--md">
+          <div class="container padding-y--lg">
+            <?php print render($title_prefix); ?>
+            <h1 class="font-size--xxl padding--none">
+              <div class="prose center padding-x--md md--padding-x--none">
+                <?php print $title ?>
+              </div>
+            </h1>
+            <?php print render($title_suffix); ?>
+          </div>
+        </section>
+      <?php endif; ?>
+    <?php endif;?>
 
     <!-- MAIN CONTENT -->
     <section class="main__content">
@@ -142,23 +174,27 @@
 
 
   <!-- FOOTER -->
-  <footer class="footer bg--gray-1">
-    <div class="container padding-y--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg ">
-      <?php if ($page['footer']): ?>
-      <?php print render($page['footer']); ?>
-      <?php endif; ?>
-      <?php if ($page['footer_half_left'] || $page['footer_half_right']): ?>
-        <div class="grid">
-          <div class="grid-cell width--50">
-          <?php print render($page['footer_half_left']); ?>
+  <?php if ($new_theme || TRUE) : ?>
+    <?php include_once('misc/footer.tpl.php'); ?>
+  <?php else: ?>
+    <footer class="footer bg--gray-1">
+      <div class="container padding-y--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg ">
+        <?php if ($page['footer']): ?>
+        <?php print render($page['footer']); ?>
+        <?php endif; ?>
+        <?php if ($page['footer_half_left'] || $page['footer_half_right']): ?>
+          <div class="grid">
+            <div class="grid-cell width--50">
+            <?php print render($page['footer_half_left']); ?>
+            </div>
+            <div class="grid-cell width--50">
+            <?php print render($page['footer_half_right']); ?>
+            </div>
           </div>
-          <div class="grid-cell width--50">
-          <?php print render($page['footer_half_right']); ?>
-          </div>
-        </div>
-      <?php endif; ?>
-    </div>
-  </footer>
+        <?php endif; ?>
+      </div>
+    </footer>
+  <?php endif;?>
 
 
 </div>

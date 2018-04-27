@@ -11,14 +11,14 @@
    */
 ?>
 
-<div class="<?php print $bg_color; ?> padding-x--md md--padding-x--xxxl padding-y--xl">
+<div class="margin-y--xxxl <?php print $bg_color; ?>">
   <div class="container">
-    <div class="display--flex flex-direction--row flex-wrap--wrap align-items--center">
-      <div class="width--100 md--width--50 padding--xl">
+    <div class="display--flex flex-direction--row flex-wrap--wrap md--align-items--baseline">
+      <div class="width--100 md--width--50 md--padding--xl">
         <?php print $left;?>
       </div>
 
-      <div class="width--100 md--width--50 padding--xl">
+      <div class="width--100 md--width--50 md--padding--xl">
         <?php print $right;?>
       </div>
     </div>

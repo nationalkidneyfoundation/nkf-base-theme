@@ -1,4 +1,7 @@
-
+/*Update, consider adding border-y props
+* and remove extends, cause we don't need it.
+*
+*/
 .border {
   @extend .border-width--xs;
   @extend .border-color--gray-2;
@@ -22,9 +25,11 @@
     @extend .border-bottom-width--xs;
   }
   &-left {
-    @extend .border-color--gray-2;
-    @extend .border-width--none;
-    @extend .border-style--solid;
-    @extend .border-left-width--xs;
+    border-color: color(gray-2);
+    border-top-width: 0px !important;
+    border-bottom-width: 0px !important;
+    border-right-width: 0px !important;
+    border-left-width: 1px;
+    border-style: solid;
   }
 }

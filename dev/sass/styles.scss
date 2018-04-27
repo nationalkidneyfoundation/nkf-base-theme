@@ -1,7 +1,5 @@
 // Font Import, might want to change this to <link>
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
-//@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,800');
-
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700');
 
 // Settings
 // -------------------------
@@ -16,6 +14,7 @@
 
 @import "base/box-model";
 @import "base/image";
+@import "base/blockquote";
 
 
 // Components
@@ -81,10 +80,10 @@
 
 @import "theme/color";
 @import "theme/background-color";
+@import "theme/border";
 @import "theme/border-color";
 @import "theme/border-radius";
 @import "theme/border-width";
-@import "theme/border";
 @import "theme/button-color";
 @import "theme/box-shadow";
 @import "theme/height";
@@ -102,7 +101,10 @@
 @import "theme/width";
 @import "theme/icons";
 @import "theme/max-width";
+<<<<<<< HEAD
+=======
 @import "theme/min-width";
+>>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 @import "theme/top";
 
 // Drupal
@@ -121,6 +123,10 @@
 @import "drupal/pager";
 @import "drupal/sidebar";
 @import "drupal/vertical-tabs";
+
+// Vendor stuff
+// -------------------------
+@import "slick/slick";
 
 
 

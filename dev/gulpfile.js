@@ -137,7 +137,7 @@ gulp.task('html-build', function () {
     ;
 });
 
-gulp.task('images-build-logos', function() {
+gulp.task('images-build-logos-hor', function() {
   gulp.src(paths.imagesDir + '/logos/horizontal/*')
     .pipe(imageresize({height: 70, crop: false}))
     .pipe(imagemin({
@@ -146,7 +146,7 @@ gulp.task('images-build-logos', function() {
     }))
     .pipe(gulp.dest(paths.imagesDistDir));
 });
-gulp.task('images-build-logos', function() {
+gulp.task('images-build-logos-ver', function() {
   gulp.src(paths.imagesDir + '/logos/vertical/*')
     .pipe(imageresize({height: 110, crop: false}))
     //.pipe(imagemin({
@@ -166,7 +166,7 @@ gulp.task('images-build-heros', function() {
     .pipe(gulp.dest(paths.imagesDistDir));
 });
 
-gulp.task('images-build', ['images-build-logos', 'images-build-heros']);
+gulp.task('images-build', ['images-build-logos-hor', 'images-build-logos-ver', 'images-build-heros']);
 
 
 // combine builds

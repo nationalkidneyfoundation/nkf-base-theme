@@ -11,7 +11,26 @@ require_once NKF_BASE_PATH . '/includes/helpers.inc';
 require_once NKF_BASE_PATH . '/includes/form.inc';
 require_once NKF_BASE_PATH . '/includes/styleguide.inc';
 
+/**
+ * Implements hook_library().
+ */
+function nkf_base_library() {
+  $library    = libraries_get_path('slick');
 
+  $libraries['slick'] = array(
+    'title' => 'Slick',
+    'website' => 'http://kenwheeler.github.io/slick/',
+    'version' => '1.x',
+    'js' => array(
+      $library . '/slick/slick.min.js'  => array(),
+    ),
+    'css' => array(
+      $library . '/slick/slick.css' => array(),
+    ),
+  );
+
+  return $libraries;
+}
 
 /*
  * Implementation of hook_theme.
@@ -26,11 +45,121 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'title' => NULL,
       ),
     ),
+    'card_pic' => array(
+      'template' => 'card-pic',
+      'path' => NKF_BASE_PATH . '/templates/cards',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+      ),
+    ),
+    'tile_landscape_small' => array(
+      'template' => 'tile-landscape-small',
+      'path' => NKF_BASE_PATH . '/templates/tiles',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'title_prefix' => NULL,
+        'img_src' => NULL,
+        'path' => NULL
+      ),
+    ),
+    'tile_landscape_medium' => array(
+      'template' => 'tile-landscape-medium',
+      'path' => NKF_BASE_PATH . '/templates/tiles',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'title_prefix' => NULL,
+        'img_src' => NULL,
+        'path' => NULL,
+        'body' => NULL,
+      ),
+    ),
+    'tile_landscape_large' => array(
+      'template' => 'tile-landscape-large',
+      'path' => NKF_BASE_PATH . '/templates/tiles',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'title_prefix' => NULL,
+        'img_src' => NULL,
+        'path' => NULL,
+        'body' => NULL,
+      ),
+    ),
+    'footer' => array(
+      'template' => 'footer',
+      'path' => NKF_BASE_PATH . '/templates/misc',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+      ),
+    ),
+    'list_content_grid' => array(
+      'template' => 'list-content-grid',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL,
+      ),
+    ),
+    'list_content_tiles_small' => array(
+      'template' => 'list-content-tiles-small',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL,
+      ),
+    ),
+    'list_content_tiles' => array(
+      'template' => 'list-content-tiles',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL,
+      ),
+    ),
+    'list_content_slider' => array(
+      'template' => 'list-content-slider',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL,
+      ),
+    ),
+    'promo_banner' => array(
+      'template' => 'banner-promo',
+      'path' => NKF_BASE_PATH . '/templates/media',
+      'type' => 'theme',
+      'variables' => array(
+        'header' => NULL,
+        'image' => NULL,
+        'body' => NULL,
+        'ctas' => NULL,
+        'bg_color' => NULL,
+        'publish' => NULL,
+        'unpublish' => NULL,
+      ),
+    ),
+    'nkf_hero' => array(
+      'template' => 'nkf-hero',
+      'path' => NKF_BASE_PATH . '/templates/media',
+      'type' => 'theme',
+      'variables' => array(
+        'header' => NULL,
+        'body' => NULL,
+        'ctas' => NULL,
+        'publish' => NULL,
+        'unpublish' => NULL,
+      ),
+    ),
     'list_accordion' => array(
       'template' => 'list-accordion',
       'path' => NKF_BASE_PATH . '/templates/lists',
       'type' => 'theme',
       'variables' => array(
+        'title' => NULL,
         'items' => NULL,
       ),
     ),
@@ -67,9 +196,10 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'title' => NULL,
         'body' => NULL,
         'left_media' => NULL,
-        'rigth_media' => NULL,
+        'right_media' => NULL,
         'left_pullquote' => NULL,
         'right_pullquote' => NULL,
+        'caption' => NULL,
       ),
     ),
     'text_general_preview' => array(
@@ -80,9 +210,10 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'title' => NULL,
         'body' => NULL,
         'left_media' => NULL,
-        'rigth_media' => NULL,
+        'right_media' => NULL,
         'left_pullquote' => NULL,
         'right_pullquote' => NULL,
+        'caption' => NULL,
       ),
     ),
     'text_summary' => array(
@@ -101,6 +232,7 @@ function nkf_base_theme($existing, $type, $theme, $path){
       'variables' => array(
         'title' => NULL,
         'body' => NULL,
+        'caption' => NULL,
       ),
     ),
     'layout_50_50' => array(
@@ -121,8 +253,35 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'items' => NULL
       ),
     ),
+    'freeform' => array(
+      'template' => 'freeform',
+      'path' => NKF_BASE_PATH . '/templates/misc',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL
+      ),
+    ),
+    'paragraphs_editor_view' => array(
+      'template' => 'paragraphs-editor-view',
+      'path' => NKF_BASE_PATH . '/templates/misc',
+      'type' => 'theme',
+      'variables' => array(
+        'label' => NULL,
+        'status' => NULL
+      ),
+    ),
+    'empty' => array(
+      'variables' => array(
+        'items' => NULL
+      ),
+    ),
   );
 }
+function nkf_base_empty($vars) {
+  return '<div></div>';
+}
+
+
 /**
  * Default theme for the wrapper around a user's achievements page.
  *
@@ -135,7 +294,6 @@ function theme_component_wrapper($variables) {
 }
 
 function nkf_base_grid_cell($vars) {
-  //dpm($vars, 'theme_grid_cell');
   $content = $vars['content'];
   $attributes = $vars['attributes'];
   //print 'atr';
@@ -218,7 +376,7 @@ function nkf_base_field_attach_view_alter(&$output, $context) {
  */
 function nkf_base_menu_tree($variables) {
   $name = _get_menu_name_css($variables);
-  if (strpos($name, 'cta') !== FALSE || strpos($name, 'cars') !== FALSE) {
+  if (strpos($name, 'cta') !== FALSE || strpos($name, 'cars') !== FALSE || strpos($name, 'golf') !== FALSE) {
     return $variables['tree'];
   }
   return '<ul class="menu ' . _get_menu_name_css($variables) . '">' . $variables['tree'] . '</ul>';
@@ -253,7 +411,11 @@ function nkf_base_menu_link(array $variables) {
     $sub_menu = drupal_render($element ['#below']);
   }
   $name = $element ['#original_link']['menu_name'];
-  if ($name == 'menu-scm-new' || $name == 'menu-scm-primary-nav' || strpos($name, 'cars') !== FALSE) {
+  if ($name == 'menu-scm-new' ||
+      $name == 'menu-scm-primary-nav' ||
+      strpos($name, 'cars') !== FALSE ||
+      strpos($name, 'golf') !== FALSE
+    ) {
     $element ['#localized_options']['attributes']['class'][] = 'padding-y--xxs';
     $output = l($element ['#title'], $element ['#href'], $element ['#localized_options']);
     $element ['#attributes']['class'][] = 'grid-cell width--100 vertical-align--middle';

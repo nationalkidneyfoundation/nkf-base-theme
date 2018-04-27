@@ -25,3 +25,21 @@
     min-height: 750px;
   }
 }
+
+.hero--geometric {
+  background-image: url(../svg/hero--geometric.svg);
+  background-size: cover;
+  background-position: 50% 70%;
+}
+
+.hero--waves-white {
+  background-image: url(../svg/hero--waves-white.svg);
+  background-size: cover;
+  background-position: 50% 70%;
+}
+
+.hero--waves-gray {
+  background-image: url(../svg/hero--waves-gray.svg);
+  background-size: cover;
+  background-position: 50% 70%;
+}

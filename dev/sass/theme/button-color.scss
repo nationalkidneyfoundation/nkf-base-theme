@@ -19,6 +19,8 @@
     &:focus {
       box-shadow: 0 0 2px darken($color, 20%);
     }
+<<<<<<< HEAD
+=======
   }
   .button--outline--#{$name} {
     @include button();
@@ -27,7 +29,8 @@
     background-color: color(white);
     color: $color;//$white;
     &:visited {
-      color: color-contrast($color);//$white;
+      background-color: color-contrast($color);//$white;
+      color: $color;
     }
     &:hover{
       background-color: mix(white, $color, 20%);
@@ -41,5 +44,6 @@
     &:focus {
       box-shadow: 0 0 2px darken($color, 20%);
     }
+>>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
   }
 }

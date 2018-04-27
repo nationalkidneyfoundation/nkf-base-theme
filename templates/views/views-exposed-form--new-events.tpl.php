@@ -35,8 +35,13 @@
       <?php print $widget->label; ?>
     </h2>
   <?php endif; ?>
+<<<<<<< HEAD
+  <div class="sm--display--table width--100">
+    <div class="sm--display--table-cell vertical-align--middle display--block width--100">
+=======
   <div class="display--flex align-items--center pill overflow--hidden bg--white padding--xxxs">
     <div class="flex-grow--1">
+>>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 
       <?php print $widget->widget; ?>
       <?php if (!empty($widget->description)): ?>
@@ -46,7 +51,11 @@
       <?php endif; ?>
     </div>
 
+<<<<<<< HEAD
+    <div class="sm--display--table-cell vertical-align--middle display--block sm--width--auto width--100 sm--padding--none sm--padding-left--sm">
+=======
     <div class="flex-grow--0">
+>>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
       <?php print $button; ?>
     </div>
   </div>

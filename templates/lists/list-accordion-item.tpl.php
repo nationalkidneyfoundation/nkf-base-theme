@@ -1,13 +1,14 @@
-<div id="<?php print $iid;?>" class="position--relative margin-y--md padding--md bg--white rounded">
-  <div class="position--absolute left top padding-y--md padding-left--sm width--md cursor--pointer" data-toggle="class" data-target="#<?php print $iid;?> i|#<?php print $iid;?> .desc" data-class="hide|hide">
-    <i class="icon-down-open position--absolute bg--gray-4 color--white rounded"></i>
-    <i class="hide icon-up-open position--absolute bg--gray-4 color--white rounded"></i>
+<div id="<?php print $iid;?>" class="border-bottom padding-y--md sm--padding-x--md">
+  <a href="#" class="display--flex color--gray-4" data-toggle="class" data-target="#<?php print $iid;?> i|#<?php print $iid;?> .desc" data-class="hide|hide">
+    <div class="cursor--pointer width--sm">
+      <i class="icon-down-open color--aqua"></i>
+      <i class="hide icon-up-open color--orange"></i>
+    </div>
+    <div class="bold sm--padding-left--md">
+      <?php print $title; ?>
+    </div>
+  </a>
+  <div class="desc hide sm--margin-left--xxl padding-top--xxs sm--padding-left--md">
+      <?php print $description; ?>
   </div>
-  <div class="margin-left--xl bold cursor--pointer" data-toggle="class" data-target="#<?php print $iid;?> i|#<?php print $iid;?> .desc" data-class="hide|hide">
-    <?php print $title; ?>
-  </div>
-  <div class="desc hide margin-left--xl padding-y--xs">
-    <?php print $description; ?>
-  </div>
-  <?php print theme('grid_cell', array('content'=>$title)); ?>
 </div>
