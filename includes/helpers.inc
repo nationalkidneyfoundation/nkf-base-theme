@@ -398,36 +398,6 @@ function nkf_base_color_theme_helper($name = 'standard') {
  *
  * @return String url of image.
  */
-<<<<<<< HEAD
-function nkf_base_image_url($value, $name = 'large', $width = FALSE, $height = FALSE) {
-  if (is_string($value)) {
-    $scheme = file_uri_scheme($value);
-    if (!$scheme) {
-      // decode url as we will re encode it later through file_create_url
-      $image_uri = file_build_uri(basename(urldecode($value)));
-    } else {
-      $image_uri = $value;
-    }
-  } else {
-    $image_uri = $value->value()['uri'];
-  }
-
-  // Try to get an image style on the fly.
-  if ($width && $height && $style = nkf_base_image_make_style($name, $width, $height)) {
-  } elseif ($style = nkf_base_image_style_load($name)) {
-  } else {
-    $style = image_style_load($name);
-  }
-  $style_name = $style['name'];
-  $derivative_uri = image_style_path($style_name, $image_uri);
-
-  if (!file_exists($derivative_uri)) {
-    image_style_create_derivative($style, $image_uri, $derivative_uri);
-  }
-
-  return file_create_url($derivative_uri);
-}
-=======
  function nkf_base_image_url($value, $name = 'large', $width = FALSE, $height = FALSE) {
    if (is_string($value)) {
      $scheme = file_uri_scheme($value);
@@ -453,7 +423,6 @@ function nkf_base_image_url($value, $name = 'large', $width = FALSE, $height = F
    }
    return file_create_url($derivative_uri);
  }
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 
 // DEPRECATED
 function nkf_base_get_image_style_url($image_uri, $style_name = 'large') {

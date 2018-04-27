@@ -235,6 +235,15 @@ function nkf_base_preprocess_entity_paragraphs_item_text_summary(&$vars) {
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
+function nkf_base_preprocess_entity_paragraphs_item_text_testimonial(&$vars) {
+  $published = nkf_base_paragraph_published($vars['paragraphs_item']);
+  $vars['body'] = render($vars['content']['field_base_description']);
+  $vars['image'] = render($vars['content']['field_base_image']);
+  $vars['name'] = render($vars['content']['field_base_caption']);
+  $vars['city'] = render($vars['content']['field_base_city']); 
+  $template = 'text_testimonial';
+  nkf_base_paragraph_set_theme($vars, $template);
+}
 
 /**
  * Implements hook_preprocess_<entity_type>_<bundle>

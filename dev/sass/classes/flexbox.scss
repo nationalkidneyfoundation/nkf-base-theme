@@ -1,66 +1,4 @@
 //Flexbox properties
-<<<<<<< HEAD
-
-//Defines the direction in which items are stacked in the
-//container
-.flex-direction {
-    &--column       { flex-direction: column; }
-    &--column-rev { flex-direction: column-reverse; }
-    &--row  { flex-direction: row; }
-    &--row-rev  { flex-direction: row-reverse; }
-  }
-
-  //Defines how items wrap to the next line (or not)
-.flex-wrap {
-    &--wrap     { flex-wrap: wrap; }
-    &--nowrap   { flex-wrap: nowrap; }
-    &--wrap-rev { flex-wrap: wrap-reverse; }
-}
-
-//Shorthand property for setting flex-direction & flex-wrap values together
-.flex-flow {
-    &--column--wrap  { flex-flow: column wrap; }
-    &--column--nowrap  { flex-flow: column nowrap; }
-    &--column--wrap-rev  { flex-flow: column wrap-reverse; }
-    &--row--wrap  { flex-flow: row wrap; }
-    &--row--nowrap  { flex-flow: row nowrap; }
-    &--row--wrap-rev  { flex-flow: row wrap-reverse }
-}
-
-//A way to set alignment of flex items
-.justify-content {
-    &--center { justify-content: center; }
-    &--flex-start { justify-content: flex-start; }
-    &--flex-end { justify-content: flex-end; }
-    &--space-around { justify-content: space-around; }
-    &--space-between { justify-content: space-between; }
-}
-
-//Align items aligns flex items vertically
-.align-items {
-    &--center { align-items: center; }
-    &--flex-start { align-items: flex-start; }
-    &--flex-end { align-items: flex-end; }
-    &--stretch  { align-items: stretch; }
-    &--baseline { align-items: baseline; }
-}
-
-.align-content {
-    &--center   { align-content: center; }
-    &--space-between { align-content: space-between; }
-    &--space-around { align-content: space-around; }
-    &--stretch  { align-content: stretch; }
-    &--flex-start { align-content: flex-start; }
-    &--flex-end { align-content: flex-end; }
-}
-
-//Set the order property. Default set at 0.
-//TODO: is this right? I don't think this syntax is right.
-$grid-order-max: 10;
-
-.order {
-  @for $i from 0 through $grid-order-max {
-=======
 //Defines the direction in which items are stacked in the
 //container
 .flex-direction {
@@ -187,15 +125,10 @@ $grid-order-max: 10;
 $grid-order-max: 5;
 @for $i from 0 through $grid-order-max {
   .order {
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
     &--#{$i} {
       order: $i;
     }
   }
-<<<<<<< HEAD
-}
-
-=======
   @each $bp, $bp-value in $breakpoints {
      @media #{$bp-value}{
       .#{$bp}--order {
@@ -206,47 +139,20 @@ $grid-order-max: 5;
     }
   }
 }
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 //Specifies how much a flex item will grow relative to the rest
 //of the flex items. Default is 0.
 $flex-grow-max: 10;
 .flex-grow {
-<<<<<<< HEAD
-    @for $i from 0 through $flex-grow-max {
-        &--#{$i}{
-            flex-grow: $i;
-        }
-    }
-}
-
-=======
   @for $i from 0 through $flex-grow-max {
     &--#{$i} {
       flex-grow: $i;
     }
   }
 }
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 //Specifies how much a flex item will shrink relative to the rest
 //of the flex items. Default is 1.
 $flex-shrink-max: 10;
 .flex-shrink {
-<<<<<<< HEAD
-    @for $i from 1 through $flex-shrink-max {
-        &--#{$i}{
-            flex-shrink: $i;
-        }
-    }
-}
-
-//Specifies the intial length of a flex item
-.flex-basis {
-@each $name, $width in $widths {
-    &--#{$name} { flex-basis: $width; }
-  }
-}
-
-=======
   @for $i from 1 through $flex-shrink-max {
     &--#{$i} {
       flex-shrink: $i;
@@ -264,7 +170,6 @@ $flex-shrink-max: 10;
 .flex-basis--0 {
   flex-basis: 0;
 }
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 //TODO: Fix this. This doesn't work. Shorthand property for flex-grow, flex-shrink and flex basis
 //.flex {
 //    @for $i from 0 through $flex-grow-max {
@@ -281,19 +186,10 @@ $flex-shrink-max: 10;
 //        &--#{$name} { flex-basis: $width; }
 //      }
 //}
-<<<<<<< HEAD
-
-=======
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 //Specifies the alignment for the selected item inside the flexible
 //container. Warning: Overrides the default alignment set by container's
 //align-items property.
 .align-self {
-<<<<<<< HEAD
-    &--center { align-self: center; }
-    &--flex-start { align-self: flex-start; }
-    &--flex-end { align-self: flex-end; }
-=======
   &--center {
     align-self: center;
   }
@@ -303,5 +199,4 @@ $flex-shrink-max: 10;
   &--flex-end {
     align-self: flex-end;
   }
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
 }

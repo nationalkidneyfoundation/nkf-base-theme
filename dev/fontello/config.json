@@ -149,8 +149,6 @@
       "css": "up-open",
       "code": 59413,
       "src": "fontawesome"
-<<<<<<< HEAD
-=======
     },
     {
       "uid": "44e04715aecbca7f266a17d5a7863c68",
@@ -181,7 +179,6 @@
       "css": "linkedin",
       "code": 61665,
       "src": "fontawesome"
->>>>>>> 073485da54bb344be4f62e5a2cbbb1a46f75d75b
     }
   ]
 }
