@@ -141,9 +141,9 @@ $instagram: #e95950 !default;
 }
 
 $link-color: color(aqua) !default;
-$link-color-hover: color(orange) !default;
+$link-color-hover: color(#F15E22) !default;
 $link-color-active: $link-color !default;
-$link-color-visited: $link-color !default;
+$link-color-visited: #32bff9 !default;
 
 // Spacing, used for padding and margin
 $spaces: (

@@ -4,6 +4,7 @@ body {
 
 a {
   color: $link-color;
+  transition: all 0.3s ease-in;
 }
 a:active {
   color: $link-color-active;
@@ -12,8 +13,10 @@ a:visited {
   color: $link-color-visited;
 }
 a:hover {
-  color: $link-color-hover;
+    color: #f15E22;
+    transition: all 0.3s ease-in;
 }
+
 .color--inherit,
 .color--inherit:hover,
 .color--inherit:active,
