@@ -13,3 +13,14 @@
   &--table-row    { display: table-row; }
   &--flex         { display: flex;  }
 }
+
+
+//Adds breakpoints for flex values. 
+//TODO: expand logic to include all display types?
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+     .#{$bp}--display--flex {
+      display: flex;
+    }
+  }
+}
