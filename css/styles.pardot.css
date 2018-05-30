@@ -1164,6 +1164,41 @@ select:not([multiple]) {
   display: flex;
 }
 
+@media (min-width: 20em) {
+  .xs--display--flex {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 40em) {
+  .sm--display--flex {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 52em) {
+  .md--display--flex {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 64em) {
+  .lg--display--flex {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media (min-width: 75em) {
+  .xl--display--flex {
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .font-weight--100 {
   font-weight: 100;
 }
