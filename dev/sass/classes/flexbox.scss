@@ -83,6 +83,25 @@
     }
   }
   //Align items aligns flex items vertically
+    .align-items {
+      &--center {
+      align-items: center;  
+    }
+      &--flex-start {
+      align-items: flex-start;
+    }
+      &--flex-end {
+      align-items: flex-end;
+    }
+      &--stretch {
+      align-items: stretch;
+    }
+      &--baseline {
+      align-items: baseline;
+    }
+  }
+  //align items with breakpoints
+  
   @each $bp, $bp-value in $breakpoints {
       @media #{$bp-value}{
       .#{$bp}--align-items {
