@@ -2349,6 +2349,31 @@ button.mfp-close {
   justify-content: space-between;
 }
 
+.align-items--center {
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.align-items--flex-start {
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.align-items--flex-end {
+  -ms-flex-align: end;
+  align-items: flex-end;
+}
+
+.align-items--stretch {
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+
+.align-items--baseline {
+  -ms-flex-align: baseline;
+  align-items: baseline;
+}
+
 @media (min-width: 20em) {
   .xs--align-items--center {
     -ms-flex-align: center;
