@@ -19,7 +19,7 @@ function nkf_base_preprocess_page(&$vars) {
     if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value()))
     $vars['th'] = nkf_base_color_theme_helper($wrapper->field_color_theme->value());
   }
-  
+
   $microsites = array(
     'spring-clinical' => array(
       'paths' => array('spring-clinical'),
@@ -148,7 +148,9 @@ function nkf_base_preprocess_page(&$vars) {
   if (strpos($alias, 'golfevents') !== false) {
     //$vars['th'] = nkf_base_color_theme_helper('gray-5');
   }
-
+  if (strpos($alias, 'iga-trial') !== false) {
+    $vars['th'] = nkf_base_color_theme_helper('gray-5');
+  }
 
 
   $vars['node_highlight'] = FALSE;

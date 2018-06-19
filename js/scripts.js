@@ -88,6 +88,69 @@ var nkf_base_init = function($) {
     return this;
   };
 
+  function checkRequiredFields(context) {
+    var t = 0;
+    // handle required fields per section
+    $(context).find('input.required, select.required, textarea.required, .form-radios.required').each(function(i, d) {
+      var r = false;
+
+      if ($(d).attr('type') === 'checkbox') {
+        r = !$("input[name='" + $(d).attr('name') + "']:checked").val();
+      }
+      if ($(d).hasClass('form-radios')) {
+        var radios = true;
+        r = $('input:checked', d).length === 0;
+      }
+      if((!radios && $(d).val().trim() === '') || r) {
+
+        // set focus on first required field without value
+        if(t === 0) {
+          $(d).focus();
+        }
+        t += 1;
+        $(d).addClass('error')
+          .closest('.form-item').addClass('animate').addClass('animation-duration--2').animationClass('animate--giggle');
+      }
+    });
+    return t === 0 ? true: false;
+  }
+  var $steps = $('form .step');
+  var l = $steps.length;
+  var $submit = $('.form-submit');
+  $steps.each(function(i,v) {
+    var $v = $(v);
+    //$v.prepend('<a name="step--'+i+'"></a>');
+    var prevNext = $('<div class="prev-next clearfix padding-x--xxl padding-y--md margin-x--xxl- margin-top--md bg--gray-2 sm--show"></div>').appendTo($v);
+    if (i !== 0) {
+      $v.addClass('sm--hide');
+      $('<a href="#" class="button--white float--left caps">Previous</a>')
+        .appendTo(prevNext)
+          .click(function(e){
+            //if(checkRequiredFields(v)) {
+              $(this).closest('.step').addClass('sm--hide')
+                .prevAll('.step').first().removeClass('sm--hide');
+            //}
+            e.preventDefault();
+          });
+    }
+    if (i !== l-1) {
+      //var nextTitle = $('h1,h2,h3,h4,legend', $steps[i+1]).first().text();
+      $('<a href="#" class="button--orange float--right caps">Next</a>')
+        .appendTo(prevNext)
+          .click(function(e){
+            if(checkRequiredFields(v)) {
+              $(this).closest('.step').addClass('sm--hide')
+                .nextAll('.step').first().removeClass('sm--hide');
+            }
+            e.preventDefault();
+          });
+    }
+    if (i === l-1 && $submit.length) {
+      $submit.clone().appendTo(prevNext)
+        .addClass('float--right').removeClass('sm--hide').addClass('width--auto');
+    }
+  });
+
 }
 
 

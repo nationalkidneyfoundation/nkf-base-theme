@@ -124,12 +124,18 @@
       function checkRequiredFields(context) {
         var t = 0;
         // handle required fields per section
-        $(context).find('input.required, select.required, textarea.required').each(function(i, d) {
+        $(context).find('input.required, select.required, textarea.required, .form-radios.required').each(function(i, d) {
           var r = false;
-          if ($(d).attr('type') === 'radio' || $(d).attr('type') === 'checkbox') {
+
+          if ($(d).attr('type') === 'checkbox') {
             r = !$("input[name='" + $(d).attr('name') + "']:checked").val();
           }
-          if($(d).val().trim() === '' || r) {
+          if ($(d).hasClass('form-radios')) {
+            var radios = true;
+            r = $('input:checked', d).length === 0;
+          }
+          if((!radios && $(d).val().trim() === '') || r) {
+
             // set focus on first required field without value
             if(t === 0) {
               $(d).focus();
@@ -143,7 +149,7 @@
       }
 
       function requiredFieldInputHandler() {
-        if ($(this).attr('type') === 'radio' || $(d).attr('type') === 'checkbox') {
+        if ($(this).attr('type') === 'radio' || $(this).attr('type') === 'checkbox') {
           if ($("input[name='" + $(this).attr('name') + "']:checked").val()) {
             $("input[name='" + $(this).attr('name') + "']").removeClass('error');
           }
@@ -156,7 +162,7 @@
 
       // listen for changes to required fields to unset error
       $('input.form-text.required, textarea.required').once().on('input', requiredFieldInputHandler);
-      $('input.form-radio.required, select.required').once().on('change', requiredFieldInputHandler);
+      $('input.form-radio.required, select.required, input.form-checkbox.required').once().on('change', requiredFieldInputHandler);
 
       // update the submit button with current donation amount
       $(".form-item-donation input").once('donation-value').on('input', setDonationAmount);
