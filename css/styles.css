@@ -18449,3 +18449,86 @@ nav .burger-time a {
   color: #000;
   font-weight: bold;
 }
+
+.slider .slick-list {
+  margin-bottom: 51px;
+  margin-bottom: 3.157rem;
+}
+
+@media (min-width: 40em) {
+  .slider .slick-list {
+    margin: 0 51px;
+    margin: 0 3.157rem;
+  }
+}
+
+.slider .slick-track {
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slider .slick-slide {
+  height: auto;
+}
+
+.slider .slick-prev {
+  background-color: transparent;
+}
+
+.slider .slider-button-left,
+.slider .slider-button-right {
+  position: absolute;
+  border: 1px solid;
+  color: #3b444f;
+  border-radius: 1000px;
+  display: none !important;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+@media (min-width: 52em) {
+  .slider .slider-button-left,
+  .slider .slider-button-right {
+    display: block !important;
+  }
+}
+
+.slider .slider-button-left {
+  left: 0;
+}
+
+.slider .slider-button-right {
+  right: 0;
+}
+
+.tabbed-slider--nav {
+  color: #3b444f;
+  text-align: center;
+}
+
+.tabbed-slider--nav .active {
+  color: #F15E22;
+}
+
+.tabbed-slider--nav .active > * {
+  border-color: inherit;
+}
+
+.tabbed-slider--nav .active::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  display: block;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -12px;
+  background-color: white;
+  transform: rotate(45deg);
+  z-index: 120;
+}

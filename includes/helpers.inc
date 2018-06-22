@@ -152,10 +152,22 @@ function nkf_base_color_theme_helper($name = 'standard') {
       'header_button_1' => 'button--white',
       'header_button_2' => 'button--gray-5'
     ),
+    'white' => array(
+      'primary_color' => 'white',
+      'header' => 'bg--white color--gray-4 logo--ob',
+      'nav' => 'bg--white',
+      'hero' => 'color--gray-4 bg--white',
+      'odd_section' => 'bg--gray-1',
+      'header_button_1' => 'button--orange',
+      'header_button_2' => 'button--gray-1'
+    ),
   );
   return $themes[$name];
 }
 
+function nkf_base_include_slick() {
+  drupal_add_library('nkf_base', 'slick');
+}
 
 /*
  * Helper function to get a styled image url.

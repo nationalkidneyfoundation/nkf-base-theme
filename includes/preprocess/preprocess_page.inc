@@ -213,6 +213,11 @@ function nkf_base_preprocess_page(&$vars) {
   if (!empty($messages['alert'])) {
     $page_classes[] = 'alert';
   }
+
+  // hack to add slick to planned giving page.
+  if (strpos($alias, 'planned-giving') !== false) {
+    nkf_base_include_slick();
+  }
   $vars['page_classes'] = implode(' ', $page_classes);
 }
 

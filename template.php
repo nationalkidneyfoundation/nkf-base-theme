@@ -11,6 +11,27 @@ require_once NKF_BASE_PATH . '/includes/helpers.inc';
 require_once NKF_BASE_PATH . '/includes/form.inc';
 
 
+/**
+ * Implements hook_library().
+ */
+function nkf_base_library() {
+  $library    = libraries_get_path('slick');
+
+  $libraries['slick'] = array(
+    'title' => 'Slick',
+    'website' => 'http://kenwheeler.github.io/slick/',
+    'version' => '1.x',
+    'js' => array(
+      $library . '/slick/slick.min.js'  => array(),
+    ),
+    'css' => array(
+      $library . '/slick/slick.css' => array(),
+    ),
+  );
+
+  return $libraries;
+}
+
 /*
  * Implementation of hook_theme.
  */
