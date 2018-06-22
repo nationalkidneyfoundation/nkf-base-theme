@@ -11,6 +11,37 @@ var nkf_base_init = function($) {
     e.preventDefault();
   });
 
+  // utility for general slider selection
+  if ($.fn.slick !== undefined){
+    $('.slider, .slick').slick({
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      variableWidth: true,
+      swipeToSlide: true,
+      touchThreshold: 8,
+      prevArrow: '<a href="#" class="slider-button-left"><i class="icon-left-open"></i></a>',
+      nextArrow: '<a href="#" class="slider-button-right"><i class="icon-right-open"></i></a>'
+    });
+    $('.tabbed-slider--container:not(.processed)').each(function() {
+      $(this).addClass('processed');
+      var slider = $('.tabbed-slider--slider', this);
+      $('.tabbed-slider--nav > *', this).each(function(i){
+        $(this).click(function(e){
+          e.preventDefault();
+          slider.slick('slickGoTo', i);
+          return false;
+        })
+      });
+      slider.slick({
+        speed: 300,
+        slidesToShow: 1,
+        arrows: false,
+        swipe: false,
+        adaptiveHeight: true
+      });
+    });
+  }
 
   // utility for general modal selection
   $('.modal-trigger').magnificPopup({
