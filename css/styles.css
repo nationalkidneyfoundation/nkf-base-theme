@@ -1590,66 +1590,102 @@ button.mfp-close {
 
 .square--xxxs {
   height: 0;
-  padding-bottom: 12px;
-  padding-bottom: 0.75rem;
   width: 12px;
   width: 0.75rem;
+  line-height: 12px !important;
+  line-height: 0.75rem !important;
+  padding: 0 0 12px 0 !important;
+  padding: 0 0 0.75rem 0 !important;
 }
 
 .square--xxs {
   height: 0;
-  padding-bottom: 16px;
-  padding-bottom: 1rem;
   width: 16px;
   width: 1rem;
+  line-height: 16px !important;
+  line-height: 1rem !important;
+  padding: 0 0 16px 0 !important;
+  padding: 0 0 1rem 0 !important;
 }
 
 .square--xs {
   height: 0;
-  padding-bottom: 21px;
-  padding-bottom: 1.333rem;
   width: 21px;
   width: 1.333rem;
+  line-height: 21px !important;
+  line-height: 1.333rem !important;
+  padding: 0 0 21px 0 !important;
+  padding: 0 0 1.333rem 0 !important;
 }
 
 .square--sm {
   height: 0;
-  padding-bottom: 38px;
-  padding-bottom: 2.369rem;
   width: 38px;
   width: 2.369rem;
+  line-height: 38px !important;
+  line-height: 2.369rem !important;
+  padding: 0 0 38px 0 !important;
+  padding: 0 0 2.369rem 0 !important;
 }
 
 .square--md {
   height: 0;
-  padding-bottom: 67px;
-  padding-bottom: 4.209rem;
   width: 67px;
   width: 4.209rem;
+  line-height: 67px !important;
+  line-height: 4.209rem !important;
+  padding: 0 0 67px 0 !important;
+  padding: 0 0 4.209rem 0 !important;
 }
 
 .square--lg {
   height: 0;
-  padding-bottom: 160px;
-  padding-bottom: 9.969rem;
   width: 160px;
   width: 9.969rem;
+  line-height: 160px !important;
+  line-height: 9.969rem !important;
+  padding: 0 0 160px 0 !important;
+  padding: 0 0 9.969rem 0 !important;
 }
 
 .square--xl {
   height: 0;
-  padding-bottom: 378px;
-  padding-bottom: 23.612rem;
   width: 378px;
   width: 23.612rem;
+  line-height: 378px !important;
+  line-height: 23.612rem !important;
+  padding: 0 0 378px 0 !important;
+  padding: 0 0 23.612rem 0 !important;
 }
 
 .square--xxl {
   height: 0;
-  padding-bottom: 895px;
-  padding-bottom: 55.927rem;
   width: 895px;
   width: 55.927rem;
+  line-height: 895px !important;
+  line-height: 55.927rem !important;
+  padding: 0 0 895px 0 !important;
+  padding: 0 0 55.927rem 0 !important;
+}
+
+.square {
+  position: relative;
+}
+
+.square::after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
+.square > * {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 @media (min-width: 20em) {
