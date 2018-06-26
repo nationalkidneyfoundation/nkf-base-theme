@@ -3321,6 +3321,36 @@ button.mfp-close {
   position: inherit;
 }
 
+@media (min-width: 20em) {
+  .xs--position--absolute {
+    position: absolute;
+  }
+}
+
+@media (min-width: 40em) {
+  .sm--position--absolute {
+    position: absolute;
+  }
+}
+
+@media (min-width: 52em) {
+  .md--position--absolute {
+    position: absolute;
+  }
+}
+
+@media (min-width: 64em) {
+  .lg--position--absolute {
+    position: absolute;
+  }
+}
+
+@media (min-width: 75em) {
+  .xl--position--absolute {
+    position: absolute;
+  }
+}
+
 .text-align--left {
   text-align: left;
 }

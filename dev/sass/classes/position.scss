@@ -10,3 +10,10 @@
   &--static   { position: static; }
   &--inherit  { position: inherit; }
 }
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+    .#{$bp}--position--absolute {
+      position: absolute;
+    }
+  }
+}
