@@ -291,8 +291,8 @@
             $('<a href="#" class="next grid-cell button--blue padding-y--md">'+nextHeader+' <i class="icon-arrow-right"></i></a>')
               .appendTo(previousNext).click(function(e) {
                 if(checkRequiredFields(v)) {
-                  $(this).closest('.donation-').addClass('sm--hide').removeClass('active')
-                    .nextAll('.donation-:first').removeClass('sm--hide').addClass('active')
+                  $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
+                    .nextAll('.donation-step:first').removeClass('sm--hide').addClass('active')
                     .find('input,select').first().focus();//.addClass('animate').animationClass('animate--subtle-focus');
                   $('.stepI.active').toggleClass('active').next('.stepI').toggleClass('active');
                 }
