@@ -281,7 +281,7 @@
         var steps = $('<div class="steps grid text-align--center sm--show bg--white"></div>').prependTo($('form > div'));
         var donationSteps = $('.donation-step');
         $('.donation-step').each(function(i, v) {
-          steps.append('<div class="step grid-cell width--xs height--xs bg--gray-2 circle margin-y--sm margin-x--xxs"><div class="step-' + i + '"></div>');
+          steps.append('<div class="stepI grid-cell width--xs height--xs bg--gray-2 circle margin-y--sm margin-x--xxs"><div class="step-' + i + '"></div>');
           var previousNext = $('<div class="previous-next clearfix grid text-align--center"></div>').appendTo($(v));
           if(i === 0) {
             $(v).addClass('active');
@@ -291,10 +291,10 @@
             $('<a href="#" class="next grid-cell button--blue padding-y--md">'+nextHeader+' <i class="icon-arrow-right"></i></a>')
               .appendTo(previousNext).click(function(e) {
                 if(checkRequiredFields(v)) {
-                  $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
-                    .nextAll('.donation-step:first').removeClass('sm--hide').addClass('active')
+                  $(this).closest('.donation-').addClass('sm--hide').removeClass('active')
+                    .nextAll('.donation-:first').removeClass('sm--hide').addClass('active')
                     .find('input,select').first().focus();//.addClass('animate').animationClass('animate--subtle-focus');
-                  $('.step.active').toggleClass('active').next('.step').toggleClass('active');
+                  $('.stepI.active').toggleClass('active').next('.stepI').toggleClass('active');
                 }
                 e.preventDefault();
               });
@@ -305,12 +305,12 @@
               .appendTo(previousNext).click(function(e) {
                 $(this).closest('.donation-step').addClass('sm--hide').removeClass('active')
                   .prevAll('.donation-step:first').removeClass('sm--hide').addClass('active');
-                $('.step.active').toggleClass('active').prev('.step').toggleClass('active');
+                $('.stepI.active').toggleClass('active').prev('.stepI').toggleClass('active');
                 e.preventDefault();
               });
           }
         });
-        $('.step:first-child').addClass('active');
+        $('.stepI:first-child').addClass('active');
 
       }
       donationProcessed = true;
