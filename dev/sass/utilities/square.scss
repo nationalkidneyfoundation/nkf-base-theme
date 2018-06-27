@@ -1,12 +1,13 @@
 
 @each $name, $square in $squares {
   .square--#{$name} {
-    height: 0;
+    height: $square;
     width: $square;
     //line-height: $square !important;
-    padding: 0 0 $square 0 !important;
+    //padding: 0 0 $square 0 !important;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
 
