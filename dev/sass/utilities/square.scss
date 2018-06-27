@@ -3,8 +3,10 @@
   .square--#{$name} {
     height: 0;
     width: $square;
-    line-height: $square !important;
+    //line-height: $square !important;
     padding: 0 0 $square 0 !important;
+    display: flex;
+    align-items: center;
   }
 }
 

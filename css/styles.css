@@ -1592,80 +1592,96 @@ button.mfp-close {
   height: 0;
   width: 12px;
   width: 0.75rem;
-  line-height: 12px !important;
-  line-height: 0.75rem !important;
   padding: 0 0 12px 0 !important;
   padding: 0 0 0.75rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square--xxs {
   height: 0;
   width: 16px;
   width: 1rem;
-  line-height: 16px !important;
-  line-height: 1rem !important;
   padding: 0 0 16px 0 !important;
   padding: 0 0 1rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square--xs {
   height: 0;
   width: 21px;
   width: 1.333rem;
-  line-height: 21px !important;
-  line-height: 1.333rem !important;
   padding: 0 0 21px 0 !important;
   padding: 0 0 1.333rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square--sm {
   height: 0;
   width: 38px;
   width: 2.369rem;
-  line-height: 38px !important;
-  line-height: 2.369rem !important;
   padding: 0 0 38px 0 !important;
   padding: 0 0 2.369rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square--md {
   height: 0;
   width: 67px;
   width: 4.209rem;
-  line-height: 67px !important;
-  line-height: 4.209rem !important;
   padding: 0 0 67px 0 !important;
   padding: 0 0 4.209rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square--lg {
   height: 0;
   width: 160px;
   width: 9.969rem;
-  line-height: 160px !important;
-  line-height: 9.969rem !important;
   padding: 0 0 160px 0 !important;
   padding: 0 0 9.969rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square--xl {
   height: 0;
   width: 378px;
   width: 23.612rem;
-  line-height: 378px !important;
-  line-height: 23.612rem !important;
   padding: 0 0 378px 0 !important;
   padding: 0 0 23.612rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square--xxl {
   height: 0;
   width: 895px;
   width: 55.927rem;
-  line-height: 895px !important;
-  line-height: 55.927rem !important;
   padding: 0 0 895px 0 !important;
   padding: 0 0 55.927rem 0 !important;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .square {
