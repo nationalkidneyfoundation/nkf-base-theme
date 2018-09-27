@@ -4,22 +4,41 @@
  * Implements theme_preprocess_node().
  */
 function nkf_base_preprocess_node(&$vars) {
+  // Get node and wrapper variables for ease of use later.
   $node = $vars['node'];
+  $wrapper = entity_metadata_wrapper('node', $node);
+
+  // Here we want to extract some common "meta" values
+  // to make template-based theming more consistent
+  // across different node types.
   $vars['meta_info'] = nkf_base_get_node_meta($node);
+  nkf_base_set_node_vars($node, $vars);
+
+  $vars['is_landing_page'] = nkf_base_is_landing_page($node);
+
+  // Get and theme related content links
   $related_content = nkf_base_get_node_related_content($node);
   foreach($related_content as $value) {
     $c_vars = array();
     nkf_base_set_node_vars($value, $c_vars);
-
-    $vars['related_content'][] = theme('tile_landscape_small', $c_vars);
+    $vars['related_content'][] = theme('tile_landscape_medium', $c_vars);
   }
+
   $vars['actions'] = kidneys_misc_get_content_actions($node);
-  $wrapper = entity_metadata_wrapper('node', $node);
+
+
+  // Set themes for view modes.
+  if($vars['view_mode'] == 'search_index') {
+    $vars['theme_hook_suggestions'][] = 'nkf_base_search_result_item';
+  }
+
   $vars['section_classes'] = '';
   $vars['hero_classes'] = '';
+
   if (isset($wrapper->field_color_theme) && !empty($wrapper->field_color_theme->value())) {
     $vars['th'] = nkf_base_color_theme_helper($wrapper->field_color_theme->value());
   }
+
   if ($vars['type'] == 'panel' || $vars['type'] == 'page' || $vars['type'] == 'design_system_component') {
     if ($vars['content_attributes_array'] && $vars['content_attributes_array']['class']) {
       $vars['content_attributes_array']['class'] = array_diff($vars['content_attributes_array']['class'], array('prose'));

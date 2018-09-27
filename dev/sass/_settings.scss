@@ -100,6 +100,7 @@ $h6: font-size('sm')  !default;
 $colors: (
     orange:     #F15E22
   , blue:       #1E4497
+  , sky:        #9EBCCF
   , navy:       #26225E
   , red:        #d51217
   , mustard:    #FAAD1D
@@ -140,10 +141,10 @@ $instagram: #e95950 !default;
   @return map-get($colors, $x);
 }
 
-$link-color: color(aqua) !default;
-$link-color-hover: color(#F15E22) !default;
+$link-color: color(gray-4); //color(aqua) !default;
+$link-color-hover: color(orange) !default;
 $link-color-active: $link-color !default;
-$link-color-visited: #32bff9 !default;
+$link-color-visited: $link-color !default;
 
 // Spacing, used for padding and margin
 $spaces: (
@@ -231,7 +232,7 @@ $squares: (
 
 @mixin caps {
   text-transform: uppercase;
-  letter-spacing: .11rem;
+  letter-spacing: .11rem !important;
 }
 
 $containers: (
@@ -298,7 +299,7 @@ $breakpoints: (
   @if $color == null {
     @return null;
   }
-  @else if $color == color('pinterest') or $color == color('linkedin') or $color == color('twitter') or $color == color('facebook') or $color == color('instagram') {
+  @else if $color == color(pinterest) or $color == color(linkedin) or $color == color(twitter) or $color == color(facebook) or $color == color(instagram) or $color == color(orange) {
     @return #ffffff;
   }
   @else {

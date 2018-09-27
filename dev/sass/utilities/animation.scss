@@ -137,3 +137,17 @@
 @keyframes shimmer {
   100% { transform: translate3d(100% , 0, 0); }
 }
+
+.zoom-image {  
+  &:hover,
+  &:focus {
+    img, a {
+      transform: scale(1.05);
+    }
+  }
+
+  img {
+    background-position: center;
+    transition: all 0.3s ease; 
+  }
+}

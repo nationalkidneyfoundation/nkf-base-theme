@@ -8,20 +8,17 @@
    * - $media: Image or video
    */
 ?>
-<?php if ($title_anchor): ?>
-  <a name="<?php print $title_anchor; ?>"></a>
-<?php endif; ?>
 
-<div class="prose center md--padding-x--xxxl padding-y--xl <?php print $classes; ?>">
-  <?php if (!empty($title)): ?>
-    <h2><?php print $title;?></h2>
-  <?php endif;?>
-  <div class="">
-    <?php print $media;?>
-    <?php if ($caption): ?>
-          <div class="font-size--sm text-align--center">
-            <?php print $caption; ?>
-          </div>
-        <?php endif; ?>
-  </div>
+<?php print theme('nkf_base_section_header', array('header' => $title)); ?>
+<div class="center max-width--xxxl">
+  <?php if (isset($image)):?>
+    <?php print $image;?>
+  <?php endif; ?>
+
+  <?php if (!empty ($video)): ?>
+    <div class="video-wrapper">
+  		<?php print $video; ?>
+    </div>
+    <?php endif; ?>
+      <?php print theme('nkf_base_section_caption', array('caption' => $caption)); ?> 
 </div>

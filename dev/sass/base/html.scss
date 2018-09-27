@@ -1,0 +1,12 @@
+@media screen and (min-width: 1919px) {
+  html {
+    background-color: color(gray-2);
+  }
+  body {
+    max-width: 1920px;
+    border-left: 1px solid color(gray-3);
+    border-right: 1px solid color(gray-3);
+    margin: 0 auto;
+    background-color: color(white);
+  }
+}

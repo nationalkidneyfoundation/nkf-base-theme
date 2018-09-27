@@ -1,16 +1,9 @@
 
+<?php print theme('nkf_base_section_header', array('header' => $title)); ?>
+<?php print theme('nkf_base_section_subheader', array('subheader' => $body)); ?>
 
-<?php if ($title_anchor): ?>
-  <a name="<?php print $title_anchor; ?>"></a>
-<?php endif; ?>
-
-<div class="padding-y--xxl padding-x--md md--padding-x--xxxl bg--gray-1 <?php print $classes; ?>" <?php print $attributes; ?>>
-  <?php if ($title): ?>
-    <h2><?php print $title;?></h2>
-  <?php endif;?>
-  <div class="slider container display--flex align-items--center position--relative">
-    <?php foreach($items as $item): ?>
-      <?php print $item ?>
-    <?php endforeach;?>
-  </div>
+<div class="slider container display--flex align-items--center position--relative">
+  <?php foreach($items as $item): ?>
+    <?php print $item ?>
+  <?php endforeach;?>
 </div>

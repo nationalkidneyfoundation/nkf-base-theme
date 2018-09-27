@@ -9,10 +9,13 @@
  */
 function nkf_base_get_node_meta($node) {
   $return = &drupal_static(__FUNCTION__ . $node->nid, FALSE);
-  if(empty($return)) {
+  //if(empty($return)) {
 
     $wrapper = entity_metadata_wrapper('node', $node);
-
+    $sections = nkf_base_entity_value($wrapper, 'field_paragraph_section');
+    if (!$sections) {
+      $sections = array();
+    }
     $return['title'] = $node->title;
     $return['path'] = url('node/' . $node->nid);
     // Let's get the text information first.
@@ -27,7 +30,7 @@ function nkf_base_get_node_meta($node) {
       if (!empty($desc = nkf_base_entity_value($wrapper, 'field_base_description'))) {
         $return['desc'] = $desc;
       } else {
-        foreach(nkf_base_entity_value($wrapper, 'field_paragraph_section') as $paragraph) {
+        foreach($sections as $paragraph) {
           if(isset($paragraph->field_base_description)
              && !empty($paragraph->field_base_description[LANGUAGE_NONE][0]['safe_value'])) {
                $return['desc'] = $paragraph->field_base_description[LANGUAGE_NONE][0]['safe_value'];
@@ -36,7 +39,25 @@ function nkf_base_get_node_meta($node) {
         }
       }
     }
+    $return['body'] = $return['desc'];
+    $alter = array(
+      'max_length' => 170, //Integer
+      'ellipsis' => TRUE, //Boolean
+      'word_boundary' => TRUE, //Boolean
+      'html' => FALSE, //Boolean
+    );
+    $return['teaser'] = views_trim_text($alter, strip_tags($return['desc']));
 
+    // Tagline
+    if (!empty($tagline = nkf_base_entity_value($wrapper, 'field_base_tagline'))) {
+      $return['tagline'] = $tagline;
+    } else {
+      // Get first sentence of description.
+      // There should be a better way:()
+      $return['tagline'] = current(explode(".", strip_tags($return['desc']))) . '.';
+    }
+
+    //strip_tags(text_summary($meta_h['desc'], NULL, 200));
     // 3. Do we have a TOC?
     if (!empty($toc = nkf_base_get_toc($node))) {
       $toc = $toc;
@@ -47,12 +68,16 @@ function nkf_base_get_node_meta($node) {
     // 1. Find field_base_image.
     if (!empty($image = nkf_base_entity_value($wrapper, 'field_base_image'))) {
       $return['image'] = $image;
+    } elseif (!empty($image = nkf_base_entity_value($wrapper, 'field_inline_image'))) {
+      $return['image'] = $image;
+    } elseif (!empty($image = nkf_base_entity_value($wrapper, 'field_newsletter_image'))) {
+      $return['image'] = $image;
     } else {
-      foreach(nkf_base_entity_value($wrapper, 'field_paragraph_section') as $paragraph) {
+
+      foreach($sections as $paragraph) {
         if(isset($paragraph->field_base_image)
            && !empty($paragraph->field_base_image[LANGUAGE_NONE][0])) {
              $return['image'] = $paragraph->field_base_image[LANGUAGE_NONE][0];
-             //$return['image1'] = nkf_base_image_url($paragraph->field_base_image[LANGUAGE_NONE][0]['uri']);
              break;
         }
       }
@@ -62,7 +87,7 @@ function nkf_base_get_node_meta($node) {
     // What about filed in?
     $return['filed_in'] = nkf_base_get_ia_category_links($wrapper);
     //$return['related_content'] = nkf_base_get_node_related_content($node);
-  }
+  //}
   return $return;
 }
 
@@ -134,17 +159,13 @@ function nkf_base_get_node_related_content($node) {
  */
 function nkf_base_get_ia_category_links($wrapper) {
   if (!empty($field_values = nkf_base_entity_value($wrapper, 'field_ia_category'))) {
-    //dpm($field_values, 'ia-cat-links');
     $return = array();
-    //print '<pre>';
-    //print_r($field_values);
-    //print '</pre>';
     foreach($field_values as $value) {
       if(!empty($value->field_base_related_entity)) {
         $nid = $value->field_base_related_entity[LANGUAGE_NONE][0]['target_id'];
         $path = l($value->name, 'node/' . $nid);
       } else {
-        $path = l($value->name,'search', array('query' => array('term' => $value->tid)));
+        $path = l($value->name,'site-search', array('query' => array('f[0]' => 'field_ia_category:'.$value->tid)));
       }
       $return[] = $path;
     }
@@ -156,21 +177,58 @@ function nkf_base_get_ia_category_links($wrapper) {
 }
 
 /*
- * Helper to get TOC for content.
+ * Helper to get status for content.
  */
 function nkf_base_paragraph_published($paragraph) {
+  //return true;
   if (isset($paragraph->field_paragraph_publish)
       && isset($paragraph->field_paragraph_publish[LANGUAGE_NONE][0]['value'])) {
+
     $item = $paragraph->field_paragraph_publish[LANGUAGE_NONE][0];
     $start_date = new DateObject($item['value'], $item['timezone_db']);
-    $end_date = new DateObject($item['value2'], $item['timezone_db']);
     $now = new DateObject('now', $item['timezone_db']);
+    if (isset($paragraph->field_paragraph_unpublish)
+        && isset($paragraph->field_paragraph_unpublish[LANGUAGE_NONE][0]['value'])) {
+      $end_item = $paragraph->field_paragraph_unpublish[LANGUAGE_NONE][0];
+      $end_date = new DateObject($end_item['value'],  $item['timezone_db']);
+      return ($start_date <= $now && $now <= $end_date) ? true : false;
+    } else {
+      return ($start_date <= $now) ? true : false;
+    }
 
-    return ($start_date <= $now && $now <= $end_date) ? true : false;
   } else {
     return true;
   }
 
+}
+/*
+ * Helper to get status for content.
+ */
+function nkf_base_paragraph_status($paragraph) {
+  if (isset($paragraph->field_paragraph_publish)
+      && isset($paragraph->field_paragraph_publish[LANGUAGE_NONE][0]['value'])) {
+
+    $start = $paragraph->field_paragraph_publish[LANGUAGE_NONE][0];
+    $start_date = new DateObject($start['value'], $start['timezone_db']);
+    $now = new DateObject('now', $start['timezone_db']);
+    if ($now < $start_date) {
+      return 'pending';
+    }
+    if (isset($paragraph->field_paragraph_publish_end)
+        && isset($paragraph->field_paragraph_publish_end[LANGUAGE_NONE][0]['value'])) {
+      $end = $paragraph->field_paragraph_publish[LANGUAGE_NONE][0];
+      $end_date = new DateObject($end['value'], $end['timezone_db']);
+      if ($start_date <= $now) {
+        if($now <= $end_date) {
+          return 'published';
+        } else {
+          return 'expired';
+        }
+      }
+    }
+  } else {
+    return 'published';
+  }
 }
 
 /*
@@ -191,7 +249,8 @@ function nkf_base_get_toc($node) {
   foreach ($paragraphs as $paragraph) {
     if (isset($paragraph->field_paragraph_title)
         && isset($paragraph->field_paragraph_title[LANGUAGE_NONE])) {
-      $title = strip_tags(render(field_view_field('paragraphs_item', $paragraph, 'field_paragraph_title',array('label' => 'hidden'))));
+      $title = field_view_field('paragraphs_item', $paragraph, 'field_paragraph_title',array('label' => 'hidden'));
+      $title = strip_tags(render($title));
       $clean_string = pathauto_cleanstring($title);
       $items[] = array(
         'title' => $title,
@@ -200,7 +259,8 @@ function nkf_base_get_toc($node) {
     }
   }
   if (count($items) > 0) {
-    return theme('nkf_base_toc', array('items' => $items));
+    //return theme('nkf_base_toc', array('items' => $items));
+    return array('items' => $items);
   } else {
     return '';
   }
@@ -399,6 +459,9 @@ function nkf_base_color_theme_helper($name = 'standard') {
  * @return String url of image.
  */
  function nkf_base_image_url($value, $name = 'large', $width = FALSE, $height = FALSE) {
+   if(empty($value)) {
+     return NULL;
+   }
    if (is_string($value)) {
      $scheme = file_uri_scheme($value);
      if (!$scheme) {
@@ -423,6 +486,47 @@ function nkf_base_color_theme_helper($name = 'standard') {
    }
    return file_create_url($derivative_uri);
  }
+
+function nkf_base_style_image($field, $name = 'large', $width = FALSE, $height = FALSE, $classes = NULL) {
+  $derivative_uri = nkf_base_style_image_url($field, $name, $width, $height, $classes);
+  if (empty($derivative_uri)){
+    return FALSE;
+  }
+
+  if ($classes) {
+    $field['attributes']['class'][] = $classes;
+  }
+
+  $image_dimensions = getimagesize($derivative_uri);
+  $field['path'] = $derivative_uri;
+  $field['width'] = $image_dimensions[0];
+  $field['height'] = $image_dimensions[1];
+  return theme('image', $field);
+}
+
+function nkf_base_style_image_url($field, $name = 'large', $width = FALSE, $height = FALSE, $classes = NULL) {
+  if(empty($field)) {
+    return NULL;
+  }
+  // Just take the first item, this is probably a dump idea.
+  if (isset($field[0])) {
+    $field = reset($field);
+  }
+
+  // Try to get an image style on the fly.
+  if ($width && $height && $style = nkf_base_image_make_style($name, $width, $height)) {
+  } elseif ($style = nkf_base_image_style_load($name)) {
+  } else {
+    $style = image_style_load($name);
+  }
+  $style_name = $style['name'];
+  $derivative_uri = image_style_path($style_name, $field['uri']);
+
+  if (!file_exists($derivative_uri)) {
+    image_style_create_derivative($style, $field['uri'], $derivative_uri);
+  }
+  return $derivative_uri;
+}
 
 // DEPRECATED
 function nkf_base_get_image_style_url($image_uri, $style_name = 'large') {
@@ -510,4 +614,42 @@ function nkf_base_image_make_style($effect, $width, $height) {
     ),
   );
   return $style;
+}
+
+
+/**
+ *
+ */
+function nkf_base_set_page_node_title($node) {
+  return nkf_base_is_landing_page($node);
+}
+/**
+ *
+ */
+function nkf_base_is_landing_page($node) {
+  $bundles = array(
+    'promo_banner',
+    'hero',
+    'freeform'
+  );
+  if (isset($node->field_paragraph_section)
+      && isset($node->field_paragraph_section[LANGUAGE_NONE][0]['value'])) {
+      $p_id = $node->field_paragraph_section[LANGUAGE_NONE][0]['value'];
+
+      $paragraph = entity_load_single('paragraphs_item', $p_id);
+      $bundle = $paragraph->bundle;
+      if (in_array($bundle, $bundles)) {
+        return TRUE;
+      } else {
+        return FALSE;
+      }
+  } else {
+    return FALSE;
+  }
+
+}
+
+function nkf_base_make_iframe($url) {
+  $iframe = '<iframe class="iframe-dynamic-height" src="' . $url . '" width="100%" type="text/html" frameborder="0" allowTransparency="true" style="border: 0"></iframe>';
+  return $iframe;
 }

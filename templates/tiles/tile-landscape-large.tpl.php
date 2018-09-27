@@ -4,17 +4,15 @@
   */
 ?>
 <div class="position--relative max-width--xxxl width--100 padding-bottom--lg">
-  <a href="<?php print $path ?>" class="display--flex">
+  <a href="<?php print $path ?>" class="zoom-image display--flex">
 
-    <?php if(isset($img_src)):?>
-      <div class="padding-right--xl width--40">
-        <img class="width--100 height--auto display--block"
-             typeof="foaf:Image"
-             src="<?php print nkf_base_image_url($img_src, 'resize', 170, 230) ; ?>">
+    <?php if(isset($image)):?>
+      <div class="padding-right--lg flex-shrink--0 overflow--hidden">
+          <?php print nkf_base_style_image($image, 'resize', 170, 230, 'display--block rounded');?>
       </div>
     <?php endif; ?>
 
-    <div class="padding-right--lg padding-top--md width--60">
+    <div class="padding-right--lg padding-top--md">
       <?php if (!empty($title_prefix)): ?>
         <div class="font-size--sm caps">
           <?php print $title_prefix ?>

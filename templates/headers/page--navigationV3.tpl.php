@@ -8,7 +8,7 @@
  * $ia: Array of navigation items with 'name' and 'path' variables
  */
 ?>
-<header class="display--flex flex-direction--row align-items--center justify-content--space-between width--100 border-bottom bg--white">
+<header class="print--hide display--flex flex-direction--row align-items--center justify-content--space-between width--100 border-bottom bg--white">
   <div class="display--flex position--relative align-items--center padding--md">
     <div class="sm--show">
       <a href="/" class="display--block">
@@ -23,15 +23,15 @@
   </div>
   <div class="display--flex align-items--center">
     <div class="search">
-      <a href="#" class="padding-y--lg padding-x--sm caps">
-        <i class="icon-search font-size--lg md--font-size--md"></i> <span class="md--display--inline display--none">Search</span>
+      <a href="#" class="novisit padding-y--lg padding-x--sm caps color--gray-4 md--font-size--sm">
+        <i class="icon-search"></i> <span class="md--display--inline display--none">Search</span>
       </a>
     </div>
     <div class="search position--relative">
-      <a href="#" class="nav padding-y--lg padding-x--sm caps"
-      data-toggle="class" data-target=".burger-time|.nav|.nav" data-class="hide|bg--aqua|color--white">
-        <i class="burger-time icon-menu font-size--lg md--font-size--md"></i>
-        <i class="burger-time icon-cancel hide font-size--lg md--font-size--md"></i>
+      <a href="#" class="nav novisit padding-y--lg padding-x--sm caps color--gray-4 md--font-size--sm"
+      data-toggle="class" data-target=".burger-time|.nav" data-class="hide|bg--gray-1">
+        <i class="burger-time icon-menu "></i>
+        <i class="burger-time icon-cancel hide "></i>
         <span class="md--display--inline display--none">Menu</span>
       </a>
 
@@ -45,10 +45,10 @@
 
   </div>
   <nav class="burger-time hide position--absolute right top--sm z-index--400
-              bg--aqua padding-y--md sm--width--lg width--100 margin-top--xxl sm--margin-right--md">
+              bg--gray-1 padding-y--sm sm--width--lg width--100 margin-top--xxl sm--margin-right--md">
     <?php foreach($ia as $item): ?>
       <a href="<?php print $item['path'];?>"
-         class="display--block width--100 padding-x--md padding-y--sm caps bg--aqua color--white">
+         class="novisit display--block width--100 padding-x--md padding-y--xs caps color--gray-4 md--font-size--sm">
         <?php print $item['name'];?>
       </a>
     <?php endforeach;?>

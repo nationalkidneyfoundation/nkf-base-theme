@@ -1,6 +1,6 @@
 <?php if (!empty($pre_object)) print render($pre_object) ?>
 
-<div class="bg--gray-1" <?php print ($attributes) ?>>
+<div class="" <?php print ($attributes) ?>>
 
 <?php if (!empty($content['field_ds_status'])): ?>
   <div class="prose center padding-x--md md--padding-x--none padding-top--xxl">
@@ -41,8 +41,8 @@
   <?php if (!empty($content)): ?>
     <div<?php print $content_attributes ?>>
 
-      <div class="padding-y--lg bg--gray-1">
-        <h2 class="hide border-top prose center padding-x--md md--padding-x--none">Usage</h2>
+      <div class="">
+        <h2 class="prose center padding-x--md md--padding-x--none">Usage</h2>
         <div class="prose center padding-x--md md--padding-x--none font-size--lg">
           <?php print render($content['body']) ?>
         </div>
@@ -59,8 +59,15 @@
         </div>
       </div>
       <div class="margin-top--xl padding-top--xl bg--white">
-        <h2 class="hide border-top prose center padding-x--md md--padding-x--none">Example(s)</h2>
-        <?php print render($content['field_paragraph_section']) ?>
+        <h2 class="prose center padding-x--md md--padding-x--none">Example(s)</h2>
+        <?php foreach(element_children($content['field_paragraph_section']) as $key):?>
+          <div class="bg--gray-3 height--xxxs "></div>
+          <?php print render($content['field_paragraph_section'][$key]); ?>
+
+        <?php endforeach;?>
+        <div class="bg--gray-3 height--xxxs "></div>
+        <?php //dpm($content['field_paragraph_section']);?>
+
       </div>
 
     </div>

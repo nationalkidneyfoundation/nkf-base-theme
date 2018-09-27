@@ -2,27 +2,24 @@
 /**
   *
   */
+
 ?>
-<div class="position--relative max-width--xl padding-bottom--sm">
-  <a href="<?php print $path ?>" class="display--flex align-items--center">
-
-    <?php if(isset($img_src)):?>
-      <div class="padding-right--sm">
-        <img class="width--100 height--auto display--block"
-             typeof="foaf:Image"
-             src="<?php print nkf_base_image_url($img_src, 'resize', 65, 65) ; ?>">
-      </div>
-    <?php endif; ?>
-
-    <div class="padding-right--sm">
+<div class="position--relative padding-y--xxs mutelink">
+  <a href="<?php print $path ?>" class="zoom-image display--flex">
+    <div class="width--100">
       <?php if (!empty($title_prefix)): ?>
         <div class="font-size--sm caps">
           <?php print $title_prefix ?>
         </div>
       <?php endif;?>
-      <div class="">
+      <div class=" ">
         <?php print $title ?>
       </div>
     </div>
+    <?php if(isset($image) && FALSE):?>
+      <div class="margin-left--sm flex-shrink--0 overflow--hidden">
+        <?php print nkf_base_style_image($image, 'resize', 65, 65, 'display--block rounded');?>
+      </div>
+    <?php endif; ?>
   </a>
 </div>

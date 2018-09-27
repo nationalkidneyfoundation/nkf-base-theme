@@ -15,26 +15,27 @@
   bottom: 0;
   left: 0;
 }
-.cover-absolute {
-  @include cover-absolute();
-}
-@each $bp, $bp-value in $breakpoints {
-  @media #{$bp-value} {
-    .#{$bp}--cover-absolute {
-      @include cover-absolute();
-    }
-  }
-}
-.cover-fixed {
-  @include cover-fixed();
-}
-@each $bp, $bp-value in $breakpoints {
-  @media #{$bp-value} {
-    .#{$bp}--cover-fixed {
-      @include cover-fixed();
-    }
-  }
-}
+//.cover-absolute {
+//  @include cover-absolute();
+//}
+//@each $bp, $bp-value in $breakpoints {
+//  @media #{$bp-value} {
+//    .#{$bp}--cover-absolute {
+//      @include cover-absolute();
+//    }
+//  }
+//}
+//.cover-fixed {
+//  @include cover-fixed();
+//}
+//@each $bp, $bp-value in $breakpoints {
+//  @media #{$bp-value} {
+//    .#{$bp}--cover-fixed {
+//      @include cover-fixed();
+//    }
+//  }
+//}
+
 .top {
   top: 0;
 }

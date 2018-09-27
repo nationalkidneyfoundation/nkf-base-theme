@@ -1,16 +1,18 @@
-
-
-<?php if ($title_anchor): ?>
-  <a name="<?php print $title_anchor; ?>"></a>
-<?php endif; ?>
-
-<div class="padding-y--xxl padding-x--md md--padding-x--xxxl bg--gray-1 <?php print $classes; ?>" <?php print $attributes; ?>>
-  <?php if ($title): ?>
-    <h2><?php print $title;?></h2>
-  <?php endif;?>
-  <div class="container display--flex flex-wrap--wrap justify-content--center">
-    <?php foreach($items as $item): ?>
-      <?php print $item ?>
-    <?php endforeach;?>
+<div class="display--flex flex-direction--row- justify-content--space-between padding-y--lg border-width--none border-top-width--sm border-color--gray-4 border-style--solid">
+  <div class="">
+    <?php print theme('nkf_base_section_header', array('header' => $title)); ?>
+    <?php print theme('nkf_base_section_subheader', array('subheader' => $body)); ?>
   </div>
+  <?php if(!empty($more)): ?>
+    <div class="linkHighlight top--sm right padding-top--lg padding-x--md order--2">
+      <?php print $more;?>
+    </div>
+  <?php endif; ?>
+</div>
+<div class="display--flex flex-wrap--wrap">
+  <?php foreach($items as $item): ?>
+    <div class="padding-bottom--xl sm--padding-right--xl <?php print $width; ?>">
+      <?php print $item ?>
+    </div>
+  <?php endforeach;?>
 </div>

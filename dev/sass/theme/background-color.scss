@@ -29,3 +29,43 @@
     }
   }
 }
+.bg--dazzle,
+.bg--dazzle--orange1,
+.bg--dazzle--orange2
+ {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    //background-color: rgba(color(orange), 50/100);
+    background-color: #F15E22;
+    top: -2px;
+    left: -2px;
+    right: 2px;
+    bottom: 2px;
+    z-index: -2;
+    border-radius: inherit;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    border: 2px solid black;
+    top: 2px;
+    left: 2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: inherit;
+  }
+}
+.bg--dazzle--orange1
+ {
+   &:before {
+     background-color:#FFA22B;
+   }
+ }
+.bg--dazzle--orange2
+ {
+   &:before {
+     background-color: #FF7E00;
+   }
+ }

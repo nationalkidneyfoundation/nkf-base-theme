@@ -1,0 +1,5 @@
+.card {
+  max-width: 20rem;
+  @include when(sm) { max-width: 18rem; }
+  @include when(md) { max-width: 15rem; }
+}

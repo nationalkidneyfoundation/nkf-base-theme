@@ -81,7 +81,7 @@ function nkf_base_preprocess_page(&$vars) {
     $vars['title_prefix'] = '<a href="/atoz" class="display--inline-block caps bold padding-y--xs">A to Z Health Guide</a>';
   }
 
-
+  $vars['search_form'] = kidneys_misc_get_filtered_form(NULL, 'search by keyword');
   $widescreen = false;
 
   $panel = panels_get_current_page_display();
@@ -232,32 +232,13 @@ function nkf_base_preprocess_page(&$vars) {
   }
   if (!empty($vars['node'])) {
     $vars['meta_info'] = nkf_base_get_node_meta($vars['node']);
-    $vars['actions'] = kidneys_misc_get_content_actions($node);
+    $vars['actions'] = kidneys_misc_get_content_actions($vars['node']);
   }
 
   $vars['page_classes'] = implode(' ', $page_classes);
 }
 
-/**
- *
- */
-function nkf_base_set_page_node_title($node) {
-  $bundles = array(
-    'promo_banner',
-    'hero',
-    'freeform'
-  );
-  $p_id = $node->field_paragraph_section[LANGUAGE_NONE][0]['value'];
 
-  $paragraph = entity_load_single('paragraphs_item', $p_id);
-  $bundle = $paragraph->bundle;
-  if (in_array($bundle, $bundles)) {
-    return TRUE;
-  } else {
-    return FALSE;
-  }
-
-}
 
 /**
  *

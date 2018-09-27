@@ -1,4 +1,3 @@
-
 <?php if(!empty($cars_noscript)) :?>
   <?php print $cars_noscript;?>
 <?php endif; ?>
@@ -27,7 +26,7 @@
 
   <!-- PRINT LOGO-->
   <div class="display--none print--show text-align--center padding--xl">
-    <img src="<?php print NKF_BASE_PATH;?>/img/NKF-logoR_Hori_OB.png"/>
+    <img src="/<?php print NKF_BASE_PATH;?>/img/NKF-logoR_Hori_OB.png"/>
   </div>
 
 
@@ -116,9 +115,9 @@
         <div class="prose center display--flex padding-top--xxl padding-x--md md--padding-x--none">
           <?php foreach($actions as $id => $action): ?>
             <a href="<?php print $action['href']?>"
-               class="circle height--sm width--sm
+               class="icon-soc height--sm width--sm
                       display--flex align-items--center
-                      margin-right--xs color--<?php print $action['color']; ?> border border-color--<?php print $action['color']; ?>">
+                      margin-right--xs">
               <i class="center <?php print $action['icon']; ?>"></i>
             </a>
           <?php endforeach;?>
@@ -174,27 +173,7 @@
 
 
   <!-- FOOTER -->
-  <?php if ($new_theme || TRUE) : ?>
-    <?php include_once('misc/footer.tpl.php'); ?>
-  <?php else: ?>
-    <footer class="footer bg--gray-1">
-      <div class="container padding-y--xxxl padding-x--sm sm--padding-x--md md--padding-x--lg ">
-        <?php if ($page['footer']): ?>
-        <?php print render($page['footer']); ?>
-        <?php endif; ?>
-        <?php if ($page['footer_half_left'] || $page['footer_half_right']): ?>
-          <div class="grid">
-            <div class="grid-cell width--50">
-            <?php print render($page['footer_half_left']); ?>
-            </div>
-            <div class="grid-cell width--50">
-            <?php print render($page['footer_half_right']); ?>
-            </div>
-          </div>
-        <?php endif; ?>
-      </div>
-    </footer>
-  <?php endif;?>
+  <?php include_once('misc/footer.tpl.php'); ?>
 
 
 </div>

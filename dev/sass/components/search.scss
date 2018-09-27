@@ -1,0 +1,27 @@
+.search-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  padding: space(xxxs);
+  padding-left: space(lg);
+  border: 1px solid color(gray-2);
+  border-radius: 100px;
+  background: white;
+  max-width: 550px;
+  .form-item {
+    padding: 0;
+    width: 100%;
+    input {
+      width: 100%;
+      background: transparent;
+      border: none;
+
+      height: 30px;
+      padding: 0;
+      &::placeholder {
+        @include caps();
+        font-size: font-size(sm);
+      }
+    }
+  }
+}

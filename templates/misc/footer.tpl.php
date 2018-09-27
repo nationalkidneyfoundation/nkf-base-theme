@@ -1,7 +1,7 @@
-<footer class="border-top">
-  <div class="container padding-top--xxxl margin-top--xxxl">
+<footer class="border-top padding-top--xxxl">
+  <div class="container">
     <div class="display--flex flex-wrap--wrap padding-x--md">
-      <div class="md--width--40 width--100 sm--padding-x--lg padding-x--md order--2">
+      <div class="md--width--40 width--100 order--2">
         <h4 class="padding-y--xxs padding-top--lg md--padding-top--none">Our Passion</h4>
         <p>
         Fueled by passion and urgency, NKF is a lifeline for all people affected by kidney disease. As pioneers of scientific research and innovation, NKF focuses on the whole patient through the lens of kidney health. Relentless in our work, we enhance lives through <strong>action</strong>, <strong>education</strong> and <strong>accelerating change</strong>.</p>
@@ -17,49 +17,48 @@
         <p class="">© 2017 National Kidney Foundation, Inc.</p>
         <p>
       </div>
-      <div class="hide sm--width--33 md--width--20 width--100 sm--padding-x--lg padding-x--md">
+      <div class="hide sm--width--33 md--width--20 width--100 sm--padding-right--xl">
         <h4 class="padding-y--xxs">Navigation</h4>
         <ul class="list--reset padding--none margin--none">
           <?php foreach($ia as $item): ?>
-            <li class="padding-bottom--xxxs"><a class="" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
+            <li class="padding-bottom--xxxs"><a class="novisit" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
           <?php endforeach;?>
         </ul>
       </div>
-      <div class="sm--width--33 md--width--20 width--100 sm--padding-x--lg padding-x--md">
+      <div class="sm--width--33 md--width--20 width--100 sm--padding-right--xl">
         <h4 class="padding-y--xxs">NKF</h4>
         <ul class="list--reset padding--none margin--none">
           <?php foreach($nkf as $item): ?>
-            <li class="padding-bottom--xxxs"><a class="" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
+            <li class="padding-bottom--xxxs"><a class="mutelink novisit" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
           <?php endforeach;?>
         </ul>
       </div>
-      <div class=" sm--width--33 md--width--20 width--100 sm--padding-x--lg padding-x--md">
+      <div class=" sm--width--33 md--width--20 width--100 sm--padding-right--xl">
         <h4 class="padding-y--xxs">Legal</h4>
         <ul class="list--reset padding--none margin--none">
           <?php foreach($legal as $item): ?>
-            <li class="padding-bottom--xxxs"><a class="" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
+            <li class="padding-bottom--xxxs"><a class="mutelink novisit" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
           <?php endforeach;?>
         </ul>
       </div>
-      <div class="hide sm--width--33 md--width--20 width--100 sm--padding-x--lg padding-x--md">
+      <div class="hide sm--width--33 md--width--20 width--100 sm--padding-right--xl">
         <h4 class="padding-y--xxs">Badges</h4>
         <ul class="list--reset padding--none margin--none">
           <?php foreach($badges as $item): ?>
-            <li class="padding-bottom--xxxs"><a class="" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
+            <li class="padding-bottom--xxxs"><a class="mutelink novisit" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
           <?php endforeach;?>
         </ul>
       </div>
-      <div class="sm--width--33 md--width--20 width--100 sm--padding-x--lg padding-x--md">
+      <div class="sm--width--33 md--width--20 width--100 sm--padding-right--xl">
         <h4 class="padding-y--xxs">Follow us</h4>
         <ul class="list--reset padding--none margin--none">
           <?php foreach($follow as $item): ?>
-            <li class="padding-bottom--xxxs"><a class="" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
+            <li class="padding-bottom--xxxs"><a class="mutelink novisit" href="<?php print $item['path'];?>"><?php print $item['name'];?></a>
           <?php endforeach;?>
         </ul>
       </div>
     </div>
   </div>
-  <div class="">
-    <img src="/<?php print NKF_BASE_PATH; ?>/img/footer_curve.png"></img>
+  <div class="height--lg background-size--cover" style="background-image:url('/<?php print NKF_BASE_PATH; ?>/img/footer_curve.png')">
   </div>
 </footer>

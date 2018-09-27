@@ -13,13 +13,15 @@
    * - $caption: optional caption text for images
    *
    */
-   //dpm(get_defined_vars());
+   dpm(get_defined_vars());
 ?>
 <?php if ($title_anchor): ?>
   <a name="<?php print $title_anchor; ?>"></a>
 <?php endif; ?>
 
-<div class="prose center padding-x--md md--padding-x--xxxl <?php print $classes; ?>" <?php print $attributes; ?>>
+<div class="prose center padding-x--md <?php print $classes; ?>" <?php print $attributes; ?>>
+  <?php print render($title_prefix); ?>
+  <?php print render($title_suffix); ?>
   <?php if ($title): ?>
     <h2><?php print $title;?></h2>
   <?php endif;?>

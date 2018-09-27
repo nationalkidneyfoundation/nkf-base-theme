@@ -1,33 +1,72 @@
-.slick-list {
-  @include when(sm) { margin: 0 space(xxxl); }
-  margin-bottom: space(xxxl);
+.slider {
+  .slick-list {
+    @include when(sm) { margin: 0 space(xxxl); }
+    margin-bottom: space(xxxl);
+  }
+  .slick-track {
+    display: flex;
+  }
+  .slick-slide {
+    height: auto;
+  }
+  .slick-prev {
+    background-color: transparent;
+  }
+  .slider-button-left,
+  .slider-button-right {
+    position: absolute;
+    //@include when(sm) { top: 0; }
+    //bottom: 0;
+    //padding: space(xxs);
+    //@include when(sm) { width: auto; }
+    //width: 50%;
+    border: 1px solid;
+    color: color(gray-4);
+    border-radius: 1000px;
+    display: none !important;
+    @include when(md) { display: block !important; }
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: font-size(sm);
+  }
+  .slider-button-left {
+    left: 0;
+  }
+  .slider-button-right {
+    right: 0;
+    //text-align: right;
+  }
+  .slider-button-left i,
+  .slider-button-right i {
+    //@include centered();
+
+  }
 }
-.slick-track {
-  display: flex;
+
+.tabbed-slider--nav {
+  color: color(gray-4);
+  text-align: center;
+
+  & .active {
+    color: color(orange);
+    & > * {
+      border-color: inherit;
+    }
+  }
 }
-.slick-slide {
-  height: auto;
-}
-.slick-prev {
-  background-color: transparent;
-}
-.slider-button-left,
-.slider-button-right {
-  position: absolute;
-  @include when(sm) { top: 0; }
-  bottom: 0;
-  padding: space(md);
-  @include when(sm) { width: auto; }
-  width: 50%;
-}
-.slider-button-left {
-  left: 0;
-}
-.slider-button-right {
-  right: 0;
-  text-align: right;
-}
-.slider-button-left i,
-.slider-button-right i {
-  @include centered();
+.tabbed-slider--nav .active::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    display: block;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -12px;
+    background-color: white;
+    transform: rotate(45deg);
+    z-index: 120;
 }

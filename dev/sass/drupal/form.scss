@@ -27,7 +27,7 @@ legend {
 
 input[id*=-edit-],
 #edit-submit {
-  @extend .button--orange;
+  //@extend .button--orange;
 }
 input[id*=-remove-],
 #edit-delete {

@@ -53,3 +53,34 @@ select:not([multiple]) {
   padding: 0;
   height: base-scale(4);
 }
+
+input[type="email-capture"]{
+  padding-left: space(xs);
+  padding-right: space(xs);
+  background-color: $white;
+  border: none;
+  border-radius: 1000px;
+  vertical-align: middle;
+  height: base-scale(4);
+  box-sizing: border-box;
+  max-width: 100%;
+  color: color(gray-4);
+  flex-grow: 2;
+}
+
+
+.embed-submit-field {
+  position: relative;
+  
+  input {
+    width: 100%;
+    padding: 15px 100px 15px 15px;
+    border-radius: 1000px;
+  }
+  button {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    bottom: 4px;
+    }
+  }

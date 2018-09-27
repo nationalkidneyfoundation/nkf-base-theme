@@ -4,19 +4,17 @@ body {
 
 a {
   color: $link-color;
-  transition: all 0.3s ease-in;
 }
 a:active {
   color: $link-color-active;
 }
 a:visited {
-  color: $link-color-visited;
+  color: #F6891E;
 }
 a:hover {
-    color: #f15E22;
-    transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  color: #F15E22;
 }
-
 .color--inherit,
 .color--inherit:hover,
 .color--inherit:active,
@@ -46,6 +44,70 @@ a:hover {
     }
   }
 }
+
+/*If you do not want the standard visited link color to apply,
+* ie for nav, footers, etc. use this class.
+*/
+.novisit {
+  color: $link-color;
+    &:visited {
+      color: $link-color;
+  }
+    &:hover {
+      transition: all 0.3s ease-in;
+      color: #F15E22;
+  }
+}
+/*If you do not want the standard link color to apply
+* ie for lists of content.
+*/
+a.mutelink,
+.mutelink a {
+  color: color(gray-4);
+  &:visited {
+    color: color(gray-4);
+  }
+  &:hover {
+    transition: all 0.3s ease-in;
+    color: #F15E22;
+  }
+}
+
+
+.icon-soc {
+  border: 1px #4d4d4f solid;
+  border-radius: 50%;
+
+  i {
+    color:#4d4d4f;
+  }
+
+  &:hover,
+  &:focus {
+    border-color:#F15E22;
+
+    i {
+      color: #F15E22;
+    }
+  }
+}
+
+// All elements with this class will have links with an underline in them that is 
+// 40% of the standard orange, and highlights on hover. 
+.linkHighlight a {
+  transition: box-shadow .1s cubic-bezier(0.895,.03,.685,.22);
+  transition-property: box-shadow;
+  transition-duration: 0.1s;
+  transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition-delay: initial;
+  box-shadow: inset 0 -5px 0 0 rgba(241, 94, 34, 0.4);
+  color: inherit;
+}
+
+.linkHighlight a:hover {
+  box-shadow: inset 0 -40px 0 0 rgba(241, 94, 34, 0.4);
+}
+
 
 .color {
   //&--white    { color: $white; }

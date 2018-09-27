@@ -30,16 +30,54 @@
   background-image: url(../svg/hero--geometric.svg);
   background-size: cover;
   background-position: 50% 70%;
+  color: white;
 }
 
 .hero--waves-white {
   background-image: url(../svg/hero--waves-white.svg);
   background-size: cover;
   background-position: 50% 70%;
+  color: white;
 }
-
-.hero--waves-gray {
-  background-image: url(../svg/hero--waves-gray.svg);
+.hero--kidneys {
+  background-image: url(../img/hero_hero.png);
   background-size: cover;
   background-position: 50% 70%;
+  color: white;
+}
+
+.hero--waves-orange {
+  background-image: url(../img/hero_headerwaves1.png);
+  background-size: cover;
+  background-position: 50% 79%;
+  color: white;
+  align-items: center;
+}
+.hero--waves-orange2 {
+  background-image: url(../img/hero--waves--orange2.png);
+  background-size: cover;
+  background-position: 95% 0;
+}
+.hero--waves-orange3 {
+  background-image: url(../img/hero--waves--orange3.png);
+  background-size: cover;
+  background-position: 95% 0;
+}
+.hero--waves-gray {
+  background-image: url(../svg/hero--waves-orange.svg);
+  background-size: cover;
+  background-position: 50% 70%;
+  color: color(gray-4);
+}
+.hero--waves-white-bottom {
+  background-image: url(../svg/edge--wavywhite--bottom.svg);
+  background-size: cover;
+  background-position: 100% 100%;
+}
+
+.image-grad-overlay {
+  background: url(http://paragraph-nkf.pantheonsite.io/profiles/kidneys_distro/themes/custom/nkf_base/img/hero--waves--orange2.png), linear-gradient(
+     rgba(59, 68, 79, 0.45), 
+      rgba(59, 68, 79, 0.45)
+    ), url(https://www.kidney.org/sites/default/files/AdobeStock_180098115_Preview_Volunteers.jpeg);
 }

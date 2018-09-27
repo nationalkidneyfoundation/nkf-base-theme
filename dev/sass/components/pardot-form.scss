@@ -1,0 +1,24 @@
+.pardot-form {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // Set default padding for all input wrappers.
+  > div {
+    padding: 0 space(xs) space(xs) 0;
+    width: 100%;
+  }
+  input, select {
+    width: 100%;
+  }
+  input[type=submit] {
+    @extend .button--orange;
+    width: auto;
+    color: white;
+  }
+
+  // Mess with display for individual fields.
+  .form-item-first-name,
+  .form-item-last-name {
+    @include when(sm) { width: 50%; }
+  }
+}

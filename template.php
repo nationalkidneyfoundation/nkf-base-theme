@@ -46,7 +46,7 @@ function nkf_base_theme($existing, $type, $theme, $path){
       ),
     ),
     'card_pic' => array(
-      'template' => 'card-pic',
+      'template' => 'card-pic-v2',
       'path' => NKF_BASE_PATH . '/templates/cards',
       'type' => 'theme',
       'variables' => array(
@@ -88,6 +88,30 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'body' => NULL,
       ),
     ),
+    'tile_portrait_large' => array(
+      'template' => 'tile-portrait-large',
+      'path' => NKF_BASE_PATH . '/templates/tiles',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'title_prefix' => NULL,
+        'img_src' => NULL,
+        'path' => NULL,
+        'body' => NULL,
+      ),
+    ),
+    'tile_portrait_medium' => array(
+      'template' => 'tile-portrait-medium',
+      'path' => NKF_BASE_PATH . '/templates/tiles',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'title_prefix' => NULL,
+        'img_src' => NULL,
+        'path' => NULL,
+        'body' => NULL,
+      ),
+    ),
     'footer' => array(
       'template' => 'footer',
       'path' => NKF_BASE_PATH . '/templates/misc',
@@ -100,12 +124,22 @@ function nkf_base_theme($existing, $type, $theme, $path){
       'template' => 'list-content-grid',
       'path' => NKF_BASE_PATH . '/templates/lists',
       'type' => 'theme',
+      'preprocess functions' => array('nkf_base_preprocess_list_content_grid'),
       'variables' => array(
         'items' => NULL,
       ),
     ),
-    'list_content_tiles_small' => array(
-      'template' => 'list-content-tiles-small',
+    'list_content_highlight_grid' => array(
+      'template' => 'list-content-highlight-grid',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'preprocess functions' => array('nkf_base_preprocess_list_content_grid'),
+      'variables' => array(
+        'items' => NULL,
+      ),
+    ),
+    'list_compact' => array(
+      'template' => 'list-compact',
       'path' => NKF_BASE_PATH . '/templates/lists',
       'type' => 'theme',
       'variables' => array(
@@ -126,6 +160,27 @@ function nkf_base_theme($existing, $type, $theme, $path){
       'type' => 'theme',
       'variables' => array(
         'items' => NULL,
+      ),
+    ),
+    'list_tabbed_slider' => array(
+      'template' => 'list-tabbed-slider',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'variables' => array(
+        'items' => NULL,
+      ),
+    ),
+    'nkf_base_search_result_item' => array(
+      'template' => 'search-result-item',
+      'path' => NKF_BASE_PATH . '/templates/search',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'body' => NULL,
+        'img_src' => NULL,
+        'toc' => NULL,
+        'path' => NULL,
+        'filed_in' => NULL,
       ),
     ),
     'promo_banner' => array(
@@ -167,6 +222,20 @@ function nkf_base_theme($existing, $type, $theme, $path){
       'template' => 'list-accordion-item',
       'path' => NKF_BASE_PATH . '/templates/lists',
       'type' => 'theme',
+      'preprocess functions' => array('nkf_base_preprocess_list_accordion_item'),
+      'override preprocess functions' => TRUE,
+      'variables' => array(
+        'title' => NULL,
+        'description' => NULL,
+        'iid' => NULL,
+      ),
+    ),
+    'list_accordion_preview_item' => array(
+      'template' => 'list-accordion-item',
+      'path' => NKF_BASE_PATH . '/templates/lists',
+      'type' => 'theme',
+      'preprocess functions' => array('nkf_base_preprocess_list_accordion_preview_item'),
+      'override preprocess functions' => TRUE,
       'variables' => array(
         'title' => NULL,
         'description' => NULL,
@@ -226,7 +295,7 @@ function nkf_base_theme($existing, $type, $theme, $path){
       ),
     ),
     'text_testimonial' => array(
-      'template' => 'text-testimonial',
+      'template' => 'text-testimonial-v2',
       'path' => NKF_BASE_PATH . '/templates/text',
       'type' => 'theme',
       'variables' => array(
@@ -234,6 +303,55 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'body' => NULL,
         'name' => NULL,
         'city' => NULL,
+      ),
+    ),
+    'basic_contact' => array(
+      'template' => 'basic-contact',
+      'path' => NKF_BASE_PATH . '/templates/misc',
+      'type' => 'theme',
+      'variables' => array(
+        'name' => NULL,
+        'form' => NULL,
+        'body' => NULL,
+        'bg_color' => NULL,
+        'tagline' => NULL,
+      ),
+    ),
+    'contact_special' => array(
+      'template' => 'special-contact',
+      'path' => NKF_BASE_PATH . '/templates/misc',
+      'type' => 'theme',
+      'variables' => array(
+        'name' => NULL,
+        'nkfrole'=> NULL,
+        'image' => NULL,
+        'form' => NULL,
+        'body' => NULL,
+        'bg_color' => NULL,
+        'tagline' => NULL,
+      ),
+    ),
+    'text_email_capture' => array(
+      'template' => 'text-email-capture',
+      'path' => NKF_BASE_PATH . '/templates/text',
+      'type' => 'theme',
+      'variables' => array(
+        'header' => NULL,
+        'body' => NULL,
+        'ctas' => NULL,
+        'bg_color' => NULL,
+        'publish' => NULL,
+        'unpublish' => NULL,
+      ),
+    ),
+    'filtered_search' => array(
+      'template' => 'filtered-search',
+      'path' => NKF_BASE_PATH . '/templates/search',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'description' => NULL,
+        'form' => NULL
       ),
     ),
     'big_media' => array(
@@ -244,6 +362,29 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'title' => NULL,
         'body' => NULL,
         'caption' => NULL,
+        'image' => NULL,
+        'video' => NULL,
+      ),
+    ),
+    'layout_flex' => array(
+      'template' => 'layout-flex',
+      'path' => NKF_BASE_PATH . '/templates/layouts',
+      'type' => 'theme',
+      'variables' => array(
+        'header' => NULL,
+        'subheader' => NULL,
+        'bg_color' => NULL,
+      ),
+    ),
+    'layout_30_30_30' => array(
+      'template' => 'layout-30-30-30',
+      'path' => NKF_BASE_PATH . '/templates/layouts',
+      'type' => 'theme',
+      'variables' => array(
+        'left' => NULL,
+        'center'=> NULL,
+        'right' => NULL,
+        'bg_color' => NULL,
       ),
     ),
     'layout_50_50' => array(
@@ -281,6 +422,80 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'status' => NULL
       ),
     ),
+    'paragraphs_editor_view_wrapper' => array(
+      'template' => 'paragraphs-editor-view-wrapper',
+      'path' => NKF_BASE_PATH . '/templates/misc',
+      'type' => 'theme',
+      'render element'  => 'element'
+    ),
+    'nkf_base_section_header' => array(
+      'template' => 'section-header',
+      'path' => NKF_BASE_PATH . '/templates/partials',
+      'type' => 'theme',
+      'variables' => array(
+        'header' => NULL
+      ),
+    ),
+    'nkf_base_section_sm_header' => array(
+      'template' => 'section-sm-header',
+      'path' => NKF_BASE_PATH . '/templates/partials',
+      'type' => 'theme',
+      'variables' => array(
+        'smheader' => NULL
+      ),
+    ),
+    'nkf_base_section_subheader' => array(
+      'template' => 'section-subheader',
+      'path' => NKF_BASE_PATH . '/templates/partials',
+      'type' => 'theme',
+      'variables' => array(
+        'subheader' => NULL
+      ),
+    ),
+    'nkf_base_section_body' => array(
+      'template' => 'section-body',
+      'path' => NKF_BASE_PATH . '/templates/partials',
+      'type' => 'theme',
+      'variables' => array(
+        'body' => NULL
+      ),
+    ),
+    'nkf_base_section_video_embed' => array(
+      'template' => 'section-video-embed',
+      'path' => NKF_BASE_PATH . '/templates/partials',
+      'type' => 'theme',
+      'variables' => array(
+        'video' => NULL
+      ),
+    ),
+    'nkf_base_section_caption' => array(
+      'template' => 'section-caption',
+      'path' => NKF_BASE_PATH . '/templates/partials',
+      'type' => 'theme',
+      'variables' => array(
+        'caption' => NULL
+      ),
+    ),
+    'logo_section' => array(
+      'template' => 'logo-section',
+      'path' => NKF_BASE_PATH . '/templates/media',
+      'type' => 'theme',
+      'variables' => array(
+        'title' => NULL,
+        'header' => NULL,
+        'subheader' => NULL,
+        'more' => NULL
+      ),
+    ),
+    'logo_item' => array(
+      'template' => 'logo-item',
+      'path' => NKF_BASE_PATH . '/templates/media',
+      'type' => 'theme',
+      'variables' => array(
+        'logo' => NULL,
+        'text-logo' => NULL
+      ),
+    ),
     'empty' => array(
       'variables' => array(
         'items' => NULL
@@ -292,6 +507,34 @@ function nkf_base_empty($vars) {
   return '<div></div>';
 }
 
+function nkf_base_paragraphs_field_widget_form_alter(&$element, &$form_state, $context) {
+  if (!isset($element['#after_build'])) {
+    $element['#theme'] = 'paragraphs_editor_view_wrapper';
+  }
+}
+/**
+ * Implements hook_form_FORM_ID_alter()
+ */
+function nkf_base_form_redhen_donation_form_alter(&$form, &$form_state, $form_id) {
+  drupal_add_js(NKF_BASE_PATH . '/js/donate-form.js');
+}
+
+/**
+ * Implements hook_entity_info_alter().
+ */
+function nkf_base_entity_info_alter(&$entity_info) {
+  $entity_info['node']['view modes']['search_result_item'] = array(
+    'label' => t('Search result item'),
+    'custom settings' => TRUE,
+  );
+}
+
+function nkf_base_item_list($vars) {
+  //dpm(debug_backtrace()[2]['function']);
+  //print 'test';
+  //return theme('item_list', $vars);
+  return theme_item_list($vars);
+}
 
 /**
  * Default theme for the wrapper around a user's achievements page.
@@ -335,8 +578,10 @@ function nkf_base_css_alter(&$css) {
     'profiles/kidneys_distro/modules/contrib/addtocal/addtocal.css' => FALSE,
     'profiles/kidneys_distro/modules/contrib/field_collection/field_collection.theme.css' => FALSE,
     'profiles/kidneys_distro/modules/contrib/geofield/css/proximity-element.css' => FALSE,
+    'profiles/kidneys_distro/modules/contrib/date/date_popup/themes/datepicker.1.7.css' => FALSE,
   );
   $css = array_diff_key($css, $exclude);
+
 }
 
 /**

@@ -82,24 +82,69 @@
     justify-content: space-between;
   }
 }
-//Align items aligns flex items vertically
-.align-items {
-  &--center {
-    align-items: center;
+
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value}{
+    .#{$bp}--justify-content{
+      &--center {
+      justify-content: center;
+    }
+      &--flex-start {
+      justify-content: flex-start;
+    }
+      &--flex-end {
+      justify-content: flex-end;
+    }
+      &--space-around {
+      justify-content: space-around;
+    }
+      &--space-between {
+      justify-content: space-between;
+    }
   }
-  &--flex-start {
+}
+}
+
+//Align items aligns flex items vertically
+  .align-items {
+    &--center {
+    align-items: center;  
+  }
+    &--flex-start {
     align-items: flex-start;
   }
-  &--flex-end {
+    &--flex-end {
     align-items: flex-end;
   }
-  &--stretch {
+    &--stretch {
     align-items: stretch;
   }
-  &--baseline {
+    &--baseline {
     align-items: baseline;
   }
 }
+@each $bp, $bp-value in $breakpoints {
+    @media #{$bp-value}{
+    .#{$bp}--align-items {
+        &--center {
+        align-items: center;
+      }
+        &--flex-start {
+        align-items: flex-start;
+      }
+        &--flex-end {
+        align-items: flex-end;
+      }
+        &--stretch {
+        align-items: stretch;
+      }
+        &--baseline {
+        align-items: baseline;
+      }
+    }
+  }
+}
+
 .align-content {
   &--center {
     align-content: center;
@@ -153,7 +198,7 @@ $flex-grow-max: 10;
 //of the flex items. Default is 1.
 $flex-shrink-max: 10;
 .flex-shrink {
-  @for $i from 1 through $flex-shrink-max {
+  @for $i from 0 through $flex-shrink-max {
     &--#{$i} {
       flex-shrink: $i;
     }
@@ -169,6 +214,9 @@ $flex-shrink-max: 10;
 }
 .flex-basis--0 {
   flex-basis: 0;
+}
+.flex-basis--auto {
+  flex-basis: auto;
 }
 //TODO: Fix this. This doesn't work. Shorthand property for flex-grow, flex-shrink and flex basis
 //.flex {

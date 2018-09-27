@@ -9,7 +9,7 @@
     <div class="padding-bottom--lg">
       <div class="width--100">
         <?php if(isset($img_src)):?>
-        <img class="width--100 height--auto display--block"
+        <img class="zoom-image width--100 height--auto display--block"
              typeof="foaf:Image"
              src="<?php print nkf_base_image_url($img_src, 'resize', 400, 250) ; ?>">
            <?php endif; ?>

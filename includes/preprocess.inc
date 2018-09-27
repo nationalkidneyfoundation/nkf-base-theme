@@ -11,3 +11,5 @@ require_once NKF_BASE_PATH . '/includes/preprocess/preprocess_entity_bean_hero.i
 require_once NKF_BASE_PATH . '/includes/preprocess/preprocess_entity_bean_card.inc';
 require_once NKF_BASE_PATH . '/includes/preprocess/preprocess_panels_pane.inc';
 require_once NKF_BASE_PATH . '/includes/preprocess/preprocess_paragraph.inc';
+require_once NKF_BASE_PATH . '/includes/preprocess/preprocess_view.inc';
+require_once NKF_BASE_PATH . '/includes/preprocess/preprocess_misc.inc';

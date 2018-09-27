@@ -13,3 +13,11 @@
   &--table-row    { display: table-row; }
   &--flex         { display: flex;  }
 }
+
+@each $bp, $bp-value in $breakpoints {
+  @media #{$bp-value} {
+     .#{$bp}--display--flex {
+      display: flex;
+    }
+  }
+}

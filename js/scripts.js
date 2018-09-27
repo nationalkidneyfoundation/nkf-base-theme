@@ -30,10 +30,27 @@ var nkf_base_init = function($) {
       slidesToShow: 1,
       variableWidth: true,
       swipeToSlide: true,
-      infinite: false,
       touchThreshold: 8,
       prevArrow: '<a href="#" class="slider-button-left"><i class="icon-left-open"></i></a>',
       nextArrow: '<a href="#" class="slider-button-right"><i class="icon-right-open"></i></a>'
+    });
+    $('.tabbed-slider--container:not(.processed)').each(function() {
+      $(this).addClass('processed');
+      var slider = $('.tabbed-slider--slider', this);
+      $('.tabbed-slider--nav > *', this).each(function(i){
+        $(this).click(function(e){
+          e.preventDefault();
+          slider.slick('slickGoTo', i);
+          return false;
+        })
+      });
+      slider.slick({
+        speed: 300,
+        slidesToShow: 1,
+        arrows: false,
+        swipe: false,
+        adaptiveHeight: true
+      });
     });
   }
 
@@ -52,6 +69,18 @@ var nkf_base_init = function($) {
         enabled:true
       }
     });
+  });
+  $(".iframe-dynamic-height").load(function() {
+    //console.log($(this);
+    //console.log($(this).contents().find("html").height());
+    //$(this).height( $(this).contents().find("html").height() );
+  });
+  $(window).on("message", function(e) {
+    console.log(e);
+    var data = e.originalEvent.data;
+    if (data.height) {
+
+    }
   });
 
   function popup(href) {
