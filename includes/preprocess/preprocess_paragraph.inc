@@ -293,6 +293,31 @@ function nkf_base_preprocess_entity_paragraphs_item_promo_banner(&$vars) {
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
+function nkf_base_preprocess_entity_paragraphs_item_promo_inline_banner(&$vars) {
+  $id = 'id-' . $vars['id'];
+  $vars['attributes_array']['id'] = $id;
+  $vars['title'] = render($vars['content']['field_paragraph_title']);
+  $vars ['inner_color'] = render($vars['field_inner_color'][0]['value']);
+  $vars['subtitle'] = render($vars['content']['field_paragraph_subtitle']);
+  $vars['body'] = render($vars['content']['field_base_description']);
+  $vars['video'] = render($vars['content']['field_paragraph_video']);
+  $vars['image'] = render($vars['content']['field_base_image']);
+  if (isset($vars['field_base_cta'])) {
+    $vars['ctas'] = $vars['field_base_cta'];
+    foreach ($vars['ctas'] as $key => $value){
+      if ($key == 0){
+        $vars['ctas'][$key]['button'] = 'button--gray-4';
+      } else {
+        $vars['ctas'][$key]['button'] = 'button--outline--gray-4';
+      }
+    }
+
+  }
+  nkf_base_set_css_wrapper($vars, 'narrow');
+  $template = 'promo_inline_banner';
+  nkf_base_paragraph_set_theme($vars, $template);
+}
+
 /**
  * Implements hook_preprocess_<entity_type>_<bundle>
  * Email capture callout
@@ -669,20 +694,8 @@ function nkf_base_preprocess_entity_paragraphs_item_logo_section(&$vars) {
 
 //Logo items
 function nkf_base_preprocess_entity_paragraphs_item_logo_item(&$vars) {
-  // foreach (element_children($vars['content']['field_base_image']) as $i) {
-  //   $vars ['logo'] = nkf_base_style_image($vars['field_base_image'][$i], 'resize', 250, 'auto', 'display--block max-width--100 width--100');
-  //  }
-  //  $i++;
   $vars ['logo'] = nkf_base_style_image($vars['field_base_image'], 'scale', 250, 250, 'display--block max-width--100 width--100');
-   //Iterate over Text based logos
-  //  foreach (element_children($vars['content']['field_paragraph_text_logo']) as $j) {
-  //   $vars ['text_logo'] = render($vars['content']['field_paragraph_text_logo'][$j]);
-  // }
-  // $j++;
-
   $vars ['text_logo'] = render($vars['content']['field_paragraph_text_logo']);
-
-  // nkf_base_set_css_wrapper($vars, 'nothing');
   $template = 'logo_item';
   nkf_base_paragraph_set_theme($vars, $template);
 }

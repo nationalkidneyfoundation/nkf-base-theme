@@ -489,9 +489,7 @@ function nkf_base_color_theme_helper($name = 'standard') {
 
 function nkf_base_style_image($field, $name = 'large', $width = FALSE, $height = FALSE, $classes = NULL) {
   $derivative_uri = nkf_base_style_image_url($field, $name, $width, $height, $classes);
-  if (empty($derivative_uri)){
-    return FALSE;
-  }
+  
 
   if ($classes) {
     $field['attributes']['class'][] = $classes;

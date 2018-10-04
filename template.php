@@ -197,6 +197,20 @@ function nkf_base_theme($existing, $type, $theme, $path){
         'unpublish' => NULL,
       ),
     ),
+    'promo_inline_banner' => array(
+      'template' => 'promo-inline-banner',
+      'path' => NKF_BASE_PATH . '/templates/media',
+      'type' => 'theme',
+      'variables' => array(
+        'header' => NULL,
+        'image' => NULL,
+        'body' => NULL,
+        'ctas' => NULL,
+        'bg_color' => NULL,
+        'publish' => NULL,
+        'unpublish' => NULL,
+      ),
+    ),
     'nkf_hero' => array(
       'template' => 'nkf-hero',
       'path' => NKF_BASE_PATH . '/templates/media',

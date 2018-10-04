@@ -2,23 +2,23 @@
   .button--#{$name},
   input[type="submit"].button--#{$name} {
     @include button();
-    border-color: $color;
-    background-color: $color;
+    border-color: $color !important;
+    background-color: $color !important;
     color: color-contrast($color);//$white;
     &:visited {
       color: color-contrast($color);//$white;
     }
     &:hover{
-      background-color: mix(white, $color, 20%);
-      color: color-contrast(mix(white, $color, 20%));
+      background-color: mix(white, $color, 20%) !important;
+      color: color-contrast(mix(white, $color, 20%)) !important;
     }
     &:active,
     &.active {
-      background-color: mix(black, $color, 20%);
-      color: color-contrast(mix(black, $color, 20%));
+      background-color: mix(black, $color, 20%) !important;
+      color: color-contrast(mix(black, $color, 20%)) !important;
     }
     &:focus {
-      box-shadow: 0 0 2px darken($color, 20%);
+      box-shadow: 0 0 2px darken($color, 20%) !important;
     }
   }
   .button--outline--#{$name},
