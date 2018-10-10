@@ -4,9 +4,9 @@
     @include button();
     border-color: $color !important;
     background-color: $color !important;
-    color: color-contrast($color);//$white;
+    color: color-contrast($color) !important;
     &:visited {
-      color: color-contrast($color);//$white;
+      color: color-contrast($color) !important;
     }
     &:hover{
       background-color: mix(white, $color, 20%) !important;
@@ -24,10 +24,10 @@
   .button--outline--#{$name},
   input[type="submit"].button--outline--#{$name} {
     @include button();
-    border-color: $color;
+    border-color: $color !important;
     border-width: 1px;
-    background-color: color(white);
-    color: $color;//$white;
+    background-color: color(white) !important;
+    color: $color !important;
     &:visited {
       background-color: color(white);
       color: $color;
