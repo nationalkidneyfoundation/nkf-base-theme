@@ -1595,6 +1595,42 @@ input[type="submit"].is-disabled,
   text-transform: inherit;
 }
 
+.vertical-align--baseline {
+  vertical-align: baseline;
+}
+
+.vertical-align--sub {
+  vertical-align: sub;
+}
+
+.vertical-align--super {
+  vertical-align: super;
+}
+
+.vertical-align--top {
+  vertical-align: top;
+}
+
+.vertical-align--textTop {
+  vertical-align: text-top;
+}
+
+.vertical-align--middle {
+  vertical-align: middle;
+}
+
+.vertical-align--bottom {
+  vertical-align: bottom;
+}
+
+.vertical-align--textBottom {
+  vertical-align: text-bottom;
+}
+
+.vertical-align--inherit {
+  vertical-align: inherit;
+}
+
 .white-space--normal {
   white-space: normal;
 }
