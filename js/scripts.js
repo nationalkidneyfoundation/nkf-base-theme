@@ -11,6 +11,14 @@ var nkf_base_init = function($) {
     e.preventDefault();
   });
 
+  //Accordion action
+  $('body').once('accordion-hash', function(){
+    var accordHash = window.location.hash.slice(1).split('|');
+    $.each(accordHash, function( index, value ) {
+      $('#' + index +' a').trigger('click');
+    });
+  });
+
   // utility for general slider selection
   if ($.fn.slick !== undefined){
     $('.slider, .slick').slick({
