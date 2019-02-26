@@ -25,4 +25,8 @@
   footer {
     display: none;
   }
+
+  .page-break--avoid {
+    page-break-inside: avoid; 
+  }
 }

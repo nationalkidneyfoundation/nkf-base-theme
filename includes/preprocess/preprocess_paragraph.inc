@@ -46,13 +46,14 @@ function nkf_base_set_css_wrapper(&$vars, $width = 'narrow') {
     $vars['classes_array'][] = 'prose';
     $vars['classes_array'][] = 'center';
     $vars['classes_array'][] = 'padding-x--md';
+    $vars['classes_array'][] = 'padding-y--xl';
   } elseif ($width == 'wide') {
     $vars['classes_array'][] = 'container';
     $vars['classes_array'][] = 'padding-y--xxxl';
     $vars['classes_array'][] = 'padding-x--md';
   } else if ($width == 'layout'){
     $vars['classes_array'][] = 'container';
-    $vars['classes_array'][] = 'padding-y--xxxl';
+    $vars['classes_array'][] = 'padding-y--md md--padding-y--xxxl';
   }
   $vars['wrapper_classes'] = array();
     if(!empty($vars['field_base_css'])) {
@@ -139,7 +140,7 @@ function nkf_base_paragraph_set_theme(&$vars, $template) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Accordion
  */
 function nkf_base_preprocess_entity_paragraphs_item_list_accordion(&$vars) {
   // Add class to panel panes.
@@ -157,7 +158,7 @@ function nkf_base_preprocess_entity_paragraphs_item_list_accordion(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Freeform
  */
 function nkf_base_preprocess_entity_paragraphs_item_freeform(&$vars) {
   $vars['title'] = render($vars['content']['field_paragraph_title']);
@@ -166,8 +167,9 @@ function nkf_base_preprocess_entity_paragraphs_item_freeform(&$vars) {
   $template = 'freeform';
   nkf_base_paragraph_set_theme($vars, $template);
 }
+
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Tabbed Slider
  */
 function nkf_base_preprocess_entity_paragraphs_item_tabbed_slider(&$vars) {
   // Add slider js library.
@@ -188,8 +190,21 @@ function nkf_base_preprocess_entity_paragraphs_item_tabbed_slider(&$vars) {
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
+/** Slider Item */
+function nkf_base_preprocess_entity_paragraphs_item_tabbed_slider_item(&$vars) {
+  $vars['title'] = render($vars['content']['field_paragraph_title']);
+  $vars['body'] = render($vars['content']['field_base_description']);
+  $vars['image'] = $vars['field_base_image'];
+  $vars['more'] = render($vars['content']['field_base_link']);
+
+  nkf_base_set_css_wrapper($vars, 'wide');
+  $template = 'tabbed_slider_item';
+  nkf_base_paragraph_set_theme($vars, $template);
+}
+
+
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Content lists
  */
 function nkf_base_preprocess_entity_paragraphs_item_list_content(&$vars) {
 
@@ -262,8 +277,7 @@ function nkf_base_preprocess_entity_paragraphs_item_list_content(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
- * Not setting css_wrapper wide class here because of image positioning
+ * Promo Banner 
  * TODO: set margin/padding for text section based on wrapper classes.
  *
  */
@@ -293,34 +307,33 @@ function nkf_base_preprocess_entity_paragraphs_item_promo_banner(&$vars) {
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
+/**
+ * Inline Promo Banner
+ */
 function nkf_base_preprocess_entity_paragraphs_item_promo_inline_banner(&$vars) {
-  $id = 'id-' . $vars['id'];
-  $vars['attributes_array']['id'] = $id;
   $vars['title'] = render($vars['content']['field_paragraph_title']);
   $vars ['inner_color'] = render($vars['field_inner_color'][0]['value']);
   $vars['subtitle'] = render($vars['content']['field_paragraph_subtitle']);
   $vars['body'] = render($vars['content']['field_base_description']);
   $vars['video'] = render($vars['content']['field_paragraph_video']);
-  $vars['image'] = render($vars['content']['field_base_image']);
+  $vars['image'] = $vars['field_base_image'];
   if (isset($vars['field_base_cta'])) {
     $vars['ctas'] = $vars['field_base_cta'];
     foreach ($vars['ctas'] as $key => $value){
       if ($key == 0){
-        $vars['ctas'][$key]['button'] = 'button--gray-4';
-      } else {
         $vars['ctas'][$key]['button'] = 'button--outline--gray-4';
+      } else {
+        $vars['ctas'][$key]['button'] = 'button--gray-4';
       }
     }
-
   }
-  nkf_base_set_css_wrapper($vars, 'narrow');
+  nkf_base_set_css_wrapper($vars, 'wide');
   $template = 'promo_inline_banner';
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
- * Email capture callout
+ * Email capture 
  */
 function nkf_base_preprocess_entity_paragraphs_item_email_capture(&$vars) {
 
@@ -332,6 +345,10 @@ function nkf_base_preprocess_entity_paragraphs_item_email_capture(&$vars) {
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
+/**
+ * Heros
+ */
+
 function nkf_base_preprocess_entity_paragraphs_item_hero(&$vars) {
   $id = 'id-' . $vars['id'];
   $vars['hero_class'] = $vars['field_hero_background_image'][0]['value'];
@@ -341,6 +358,7 @@ function nkf_base_preprocess_entity_paragraphs_item_hero(&$vars) {
   $vars['bg_color'] = $vars['field_section_background_color'][0]['value'];
   $vars['ctas'] = $vars['field_base_cta'];
   $vars['text_color'] = '';
+  $hero_template = '';
   foreach ($vars['ctas'] as $key => $value){
     if ($key == 0){
       $vars['ctas'][$key]['button'] = 'button--outline--gray-4';
@@ -348,27 +366,39 @@ function nkf_base_preprocess_entity_paragraphs_item_hero(&$vars) {
       $vars['ctas'][$key]['button'] = 'button--outline--white';
     }
   }
-  $hero_images = array();
-  foreach ($vars['field_hero_image'] as $key => $value){
-    $hero_images[] = file_create_url(nkf_base_style_image_url($value, 'resize', 2000, 600));
-  }
-
-  if (!empty($hero_images)) {
-    // Get the first image to show on load.
-    $vars['hero_image'] = $hero_images[0];
-    // Move the first image to the end of the line for rotation.
-    $hero_images[] = array_shift($hero_images);
-    $vars['hero_images'] = count($hero_images) > 1 ? implode(',', $hero_images) : '';
-    $vars['text_color'] = 'color--white text-shadow';
+  
+  //Switch templates based on which hero the user wants to use
+  if ($image == 'kidney--bean') {
+      $hero_template = 'kidney_bean_hero';
+      foreach ($vars['field_hero_image'] as $key => $value){
+        $hero_images[] = file_create_url(nkf_base_style_image_url($value, 'resize', 600, 350));
+        if (!empty($hero_images)) {
+          // Get the first image to show on load.
+          $vars['hero_image'] = $hero_images[0];
+        }
+      }
+  } else {
+    $hero_template = 'nkf_hero';
+    $hero_images = array();
+    foreach ($vars['field_hero_image'] as $key => $value){
+      $hero_images[] = file_create_url(nkf_base_style_image_url($value, 'resize', 2000, 600));
+      if (!empty($hero_images)) {
+        // Get the first image to show on load.
+        $vars['hero_image'] = $hero_images[0];
+        // Move the first image to the end of the line for rotation.
+        $hero_images[] = array_shift($hero_images);
+        $vars['hero_images'] = count($hero_images) > 1 ? implode(',', $hero_images) : '';
+        $vars['text_color'] = 'color--white text-shadow';
+      }
+    }
   }
 
   nkf_base_set_css_wrapper($vars, 'nothing');
-  $template = 'nkf_hero';
-  nkf_base_paragraph_set_theme($vars, $template);
+  nkf_base_paragraph_set_theme($vars, $hero_template);
 }
 
 /*
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Accordion Items
  */
 function nkf_base_preprocess_entity_paragraphs_item_list_accordion_item(&$vars) {
   $vars['title'] = render($vars['content']['field_list_title']);
@@ -381,7 +411,7 @@ function nkf_base_preprocess_entity_paragraphs_item_list_accordion_item(&$vars) 
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Text Summary
  */
 function nkf_base_preprocess_entity_paragraphs_item_text_summary(&$vars) {
   $vars['title'] = render($vars['content']['field_paragraph_title']);
@@ -405,6 +435,9 @@ function nkf_base_preprocess_entity_paragraphs_item_filtered_search_form(&$vars)
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
+/*
+* Text Testimonial
+*/
 
 function nkf_base_preprocess_entity_paragraphs_item_text_testimonial(&$vars) {
   $vars['title'] = render($vars['content']['field_paragraph_title']);
@@ -418,7 +451,7 @@ function nkf_base_preprocess_entity_paragraphs_item_text_testimonial(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Text Basic 
  */
 function nkf_base_preprocess_entity_paragraphs_item_text_basic(&$vars) {
 
@@ -435,6 +468,8 @@ function nkf_base_preprocess_entity_paragraphs_item_text_basic(&$vars) {
   $vars['body'] = render($vars['content']['field_base_description']);
   $vars['caption'] = render($vars['content']['field_base_caption']);
   $pullquote = render($vars['content']['field_base_pull_quote']);
+  $vars['more'] = render($vars['content']['field_base_link']);
+  $image = render($vars['content']['field_base_image']);
   $video = render($vars['content']['field_base_video']);
   $offset_orientation = 'left';
   if (isset($vars['field_base_offset_orientation'])) {
@@ -464,7 +499,7 @@ function nkf_base_preprocess_entity_paragraphs_item_text_basic(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Table of Contents
  */
 function nkf_base_preprocess_entity_paragraphs_item_list_toc(&$vars) {
   $published = nkf_base_paragraph_published($vars['paragraphs_item']);
@@ -488,9 +523,19 @@ function nkf_base_preprocess_entity_paragraphs_item_list_toc(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Big Media
  */
 function nkf_base_preprocess_entity_paragraphs_item_big_media(&$vars) {
+  $published = nkf_base_paragraph_published($vars['paragraphs_item']);
+  $id = 'id-' . $vars['id'];
+  $vars['attributes_array']['id'] = $id;
+
+  $vars['title'] = render($vars['content']['field_paragraph_title']);
+  if($vars['title']) {
+    module_load_include('inc', 'pathauto', 'pathauto');
+    $title_anchor = pathauto_cleanstring($vars['title']);
+    $vars['title_anchor'] = $title_anchor;
+  }
   $vars['title'] = render($vars['content']['field_paragraph_title']);
   $vars['image'] = nkf_base_style_image($vars['field_base_image'], 'scale_crop', 800, 600);
   $vars['video'] = render($vars['content']['field_paragraph_video']);
@@ -501,7 +546,7 @@ function nkf_base_preprocess_entity_paragraphs_item_big_media(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Flex Layout
  */
 function nkf_base_preprocess_entity_paragraphs_item_layout_flex(&$vars) {
 
@@ -517,13 +562,13 @@ function nkf_base_preprocess_entity_paragraphs_item_layout_flex(&$vars) {
     $l = count($ws) - 1;
     foreach ($ws as $i => $value) {
       $column_css[] = 'sm--width--' . $value;
-      if ($i === 0) {
-        $column_css[$i] .= ' sm--padding-right--md';
-      } else if($i === $l) {
-          $column_css[$i] .= ' sm--padding-left--md';
-      } else {
-          $column_css[$i] .= ' sm--padding-x--md';
-      }
+      // if ($i === 0) {
+      //   $column_css[$i] .= ' sm--margin-right--md';
+      // } else if($i === $l) {
+      //     $column_css[$i] .= ' sm--margin--none';
+      // } else {
+      //     $column_css[$i] .= ' sm--margin-right--md';
+      // }
       $column_css[$i] .= ' width--100';
     }
     $vars['column_css'] = $column_css;
@@ -563,7 +608,7 @@ function nkf_base_preprocess_entity_paragraphs_item_layout_flex(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Layout 50 x 50
  */
 function nkf_base_preprocess_entity_paragraphs_item_layout_50x50(&$vars) {
   $vars['left'] = render($vars['content']['field_paragraph_layout_left']);
@@ -578,7 +623,7 @@ function nkf_base_preprocess_entity_paragraphs_item_layout_50x50(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_<entity_type>_<bundle>
+ * Layout 30 x 30 x 30
  */
 function nkf_base_preprocess_entity_paragraphs_item_layout_30x30x30(&$vars) {
   $vars['left'] = render($vars['content']['field_paragraph_layout_left']);
@@ -593,7 +638,9 @@ function nkf_base_preprocess_entity_paragraphs_item_layout_30x30x30(&$vars) {
 }
 
 
-/**IN PROGRESSS */
+/*
+* Special Contact form
+*/
 function nkf_base_preprocess_entity_paragraphs_item_special_contact(&$vars) {
   $id = 'id-' . $vars['id'];
   $vars['attributes_array']['id'] = $id;
@@ -601,6 +648,7 @@ function nkf_base_preprocess_entity_paragraphs_item_special_contact(&$vars) {
   if(in_array($vars['bg_color'], array('bg--gray-4', 'bg--orange', 'bg--blue'))) {
     $vars['bg_color'] .= ' color--white';
   }
+  $vars['bg_color_only'] = $vars['field_section_background_color'][0]['value'];
   $vars['title'] = render($vars['content']['field_paragraph_title']);
   $vars['image'] = nkf_base_style_image($vars['field_base_image'], 'resize', 300, 400, 'display--block');
   $vars['name'] = render($vars['content']['field_base_caption']);
@@ -639,6 +687,9 @@ function nkf_base_preprocess_entity_paragraphs_item_special_contact(&$vars) {
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
+/*
+* Basic Contact Form
+*/
 function nkf_base_preprocess_entity_paragraphs_item_basic_contact(&$vars) {
   $id = 'id-' . $vars['id'];
   $vars['attributes_array']['id'] = $id;
@@ -672,18 +723,13 @@ function nkf_base_preprocess_entity_paragraphs_item_basic_contact(&$vars) {
 }
 
 
-//Layout for logo containers
+/*
+* Logo Container
+*/
 function nkf_base_preprocess_entity_paragraphs_item_logo_section(&$vars) {
-  foreach (element_children($vars['content']['field_base_image']) as $i) {
-    $vars ['logo'][] = nkf_base_style_image($vars['field_base_image'][$i], 'resize', 250, 'auto', 'display--block max-width--100 width--100');
-   }
-   $i++;
-   //Iterate over Text based logos
-   foreach (element_children($vars['content']['field_paragraph_text_logo']) as $j) {
-    $vars ['text_logo'][] = render($vars['content']['field_paragraph_text_logo'][$j]);
+  foreach(element_children($vars['content']['field_logo_item_complex']) as $item) {
+    $vars['items'][] = render($vars['content']['field_logo_item_complex'][$item]);
   }
-  $j++;
-
   $vars['header'] = render($vars['content']['field_paragraph_title']);
   $vars['subheader'] = render($vars['content']['field_base_description']);
   $vars['more'] = render($vars['content']['field_base_link']);
@@ -692,10 +738,62 @@ function nkf_base_preprocess_entity_paragraphs_item_logo_section(&$vars) {
   nkf_base_paragraph_set_theme($vars, $template);
 }
 
-//Logo items
+/*
+* Logo items
+*/
+
 function nkf_base_preprocess_entity_paragraphs_item_logo_item(&$vars) {
-  $vars ['logo'] = nkf_base_style_image($vars['field_base_image'], 'scale', 250, 250, 'display--block max-width--100 width--100');
+  $vars ['logo'] = $vars['field_base_image'];
   $vars ['text_logo'] = render($vars['content']['field_paragraph_text_logo']);
   $template = 'logo_item';
+  nkf_base_paragraph_set_theme($vars, $template);
+}
+
+/*
+* Card
+*/
+
+function nkf_base_preprocess_entity_paragraphs_item_card(&$vars){
+  $vars ['overlay_header'] = render($vars['content']['field_paragraph_text_overlay1']);
+  $vars ['overlay_subheader'] = render($vars['content']['field_paragraph_text_overlay2']);
+  $vars ['image'] = nkf_base_style_image($vars['field_base_image'], 'resize', 800, 500,'display--block rounded');
+  $vars ['video'] = render($vars['content']['field_paragraph_video']);
+  $vars ['headline'] = render($vars['content']['field_paragraph_title']);
+  $vars ['body'] = render($vars['content']['field_base_description']);
+  $vars['more'] = render($vars['content']['field_base_link']);
+  nkf_base_set_css_wrapper($vars, 'narrow');
+  $template = 'card';
+  nkf_base_paragraph_set_theme($vars, $template);
+}
+
+/*
+* Card: Job & Volunteer Opportunities
+*/
+
+function nkf_base_preprocess_entity_paragraphs_item_opportunity_item(&$vars){
+  $vars ['image'] = nkf_base_style_image($vars['field_base_image'], 'resize', 800, 500,'display--block rounded');
+  $vars ['op_type'] = $vars['field_base_opportunity_type'][0]['value'];
+  $vars ['headline'] = render($vars['content']['field_paragraph_title']);
+  $vars ['location'] = render($vars['content']['field_base_city']);
+  $vars ['body'] = render($vars['content']['field_base_description']);
+  $vars['more'] = render($vars['content']['field_base_link']);
+  nkf_base_set_css_wrapper($vars, 'narrow');
+  $template = 'opportunity_item';
+  nkf_base_paragraph_set_theme($vars, $template);
+}
+
+/*
+* Job/Volunteer Opportunities section
+*/
+
+function nkf_base_preprocess_entity_paragraphs_item_opportunity_section(&$vars){
+  foreach(element_children($vars['content']['field_opportunity_item_complex']) as $item) {
+    $vars['items'][] = render($vars['content']['field_opportunity_item_complex'][$item]);
+  }
+  $vars['header'] = render($vars['content']['field_paragraph_title']);
+  $vars['subheader'] = render($vars['content']['field_base_description']);
+  $vars['more'] = render($vars['content']['field_base_link']);
+  nkf_base_set_css_wrapper($vars, 'wide');
+  $template = 'opportunity_section';
   nkf_base_paragraph_set_theme($vars, $template);
 }

@@ -19,7 +19,8 @@ function nkf_base_preprocess_page(&$vars) {
   $page_classes = array('page');
   $alias = strtolower(drupal_get_path_alias());
   $vars['th'] = nkf_base_color_theme_helper('standard');
-  $vars['has_title'] = true;
+  $vars['has_title'] = isset($vars['has_title']) ? $vars['has_title'] : true;
+  $vars['widescreen'] = isset($vars['widescreen']) ? $vars['widescreen'] : true;
   $vars['home'] = '';
   $vars['header_color'] = 'orange';
   $vars['nav_color'] = 'orange--l1';
@@ -82,7 +83,7 @@ function nkf_base_preprocess_page(&$vars) {
   }
 
   $vars['search_form'] = kidneys_misc_get_filtered_form(NULL, 'search by keyword');
-  $widescreen = false;
+
 
   $panel = panels_get_current_page_display();
 
@@ -90,9 +91,8 @@ function nkf_base_preprocess_page(&$vars) {
     $panel = panels_load_display($vars['node']->panels_node['did']);
   }
   if (isset($panel) && !empty($panel->layout) && $panel->layout == 'widescreen') {
-    $widescreen = true;
+    $vars['widescreen'] = true;
   }
-  $vars['widescreen'] = $widescreen;
 
   // Add home link back to spe profile home.
   if (strpos($alias, 'personalized-health-information') !== FALSE && !empty(arg(2))) {
@@ -229,6 +229,16 @@ function nkf_base_preprocess_page(&$vars) {
       $vars['has_title'] = false;
 
     }
+  }
+  // Set parent link
+
+  if (!empty($vars['node'])
+     && isset($vars['node']->field_link_to_parent)
+     && isset($vars['node']->field_link_to_parent[LANGUAGE_NONE][0]['url'])) {
+       $parent = field_get_items('node', $vars['node'], 'field_link_to_parent');
+       //$parent[0]['html'] = true;
+       //$parent[0]['title'] = '<i class="icon-left-open"></i>' .  $parent[0]['title'];
+       $vars['parent'] = render(field_view_value('node', $vars['node'], 'field_link_to_parent', $parent[0]));
   }
   if (!empty($vars['node'])) {
     $vars['meta_info'] = nkf_base_get_node_meta($vars['node']);

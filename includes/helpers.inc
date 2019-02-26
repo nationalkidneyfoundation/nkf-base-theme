@@ -120,7 +120,8 @@ function nkf_base_get_node_related_content($node) {
         $nids[$value['target_id']] = $value['target_id'];
       }
     }
-
+    // Commenting out dynamic related content...might add back at some point.
+    /*
     // Get nodes that reference this node directly.
     $query = new EntityFieldQuery();
     $query->entityCondition('entity_type', 'node');
@@ -146,7 +147,7 @@ function nkf_base_get_node_related_content($node) {
         $nids[$value->nid] = $value->nid;
       }
 
-    }
+    }*/
 
     $return = entity_load('node', $nids);
   }
@@ -489,7 +490,9 @@ function nkf_base_color_theme_helper($name = 'standard') {
 
 function nkf_base_style_image($field, $name = 'large', $width = FALSE, $height = FALSE, $classes = NULL) {
   $derivative_uri = nkf_base_style_image_url($field, $name, $width, $height, $classes);
-  
+  if (empty($derivative_uri)){
+    return FALSE;
+  }
 
   if ($classes) {
     $field['attributes']['class'][] = $classes;

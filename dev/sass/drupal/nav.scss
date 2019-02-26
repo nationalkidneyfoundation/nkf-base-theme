@@ -1,170 +1,40 @@
-nav {
-  .nav__navigation {
-    .grid-cell {
-      @include when(md) { width: auto; }
-      text-align: center;
-    }
-    a {
-      @include caps();
-      padding: space(md) space(sm);
-      color: color(white);
-      display: block;
-    }
-    a.search {
-      padding: 0;
-    }
-  }
-  .burger-time {
-    a {
-      @include caps();
-      padding: space(xs) space(md);
-      color: color(white);
-      display: block;
-    }
-  }
+.menu-nav.expanded {
+  box-shadow: inset 0 -7px 0 0 #ffc10e;
+  padding-bottom: 0;
+  margin-bottom: space(lg);
 }
-.nav {
-
-  .menu {
-    //@include grid();
-    margin: 0;
-    @include when(sm) { padding: 0; }
-    padding: space(xxxl) space(md) space(md);
-    @include when(sm) { display: table-row; }
-    @include when(sm) { position: static; }
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    float: right;
-    list-style: none;
-    z-index: 1000;
-    @include when(sm) { background-color: transparent; }
-    background-color: color(orange);
-  }
-  li {
-    //@include grid-cell();
-    @include when(sm) { display: table-cell; }
-    display: block;
-    height: 56px;
-    vertical-align: middle;
-  }
-  a {
-    text-transform: uppercase;
-    font-size: .9rem;
-    white-space: nowrap;
-    display: inline-block;
-    padding: space(sm) space(sm);
-  }
+nav.burger-time {
+  background: white;
+  border: 2px solid;
+  border-radius: 5px;
+  top: 60px;
+  z-index: 400;
 }
-
-.nav__menu {
-  @include when(sm) { @include hide(); }
+nav.burger-time::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: space(lg) space(md) space(md) space(md);
-  z-index: 1001;
-  font-size: font-size(xl);
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid #000;
+  border-right: 12px solid transparent;
+  left: 50%;
+  top: -24px;
+  border-left: 12px solid transparent;
+  margin-left: -12px;
 }
-.nav--primary {
-
-  @include when(sm) {
-    //border-bottom: solid color(red) border-width(lg);
-  }
-  li {
-    width: 100%;
-    @include when(sm) { width: auto; }
-  }
-  a {
-    //background-color: $white;
-    //border-width: 0 0 border-width(lg) 0;
-    //border-style: solid;
-    position: relative;
-    color: $white;
-    width: 100%;
-    @include when(sm) {
-      //margin-bottom: -7px; //hack
-      width: auto;
-    }
-    &:hover {
-      color: $black;
-    }
-    /*&::before {
-      @include cover-absolute();
-      content: '';
-      display: block;
-      opacity: .3;
-    }
-    &:hover::before {
-      opacity: .4;
-    }*/
-  }
-  /*
-  .awareness {
-    border-color: color(orange);
-    &::before {
-      background-color: color(orange);
-    }
-  }
-  .prevention {
-    border-color: color(yellow);
-    &::before {
-      background-color: color(yellow);
-    }
-  }
-  .patients {
-    border-color: color(lime);
-    &::before {
-      background-color: color(lime);
-    }
-  }
-  .professionals {
-    border-color: color(red);
-    &::before {
-      background-color: color(red);
-    }
-  }
-  .involved {
-    border-color: color(blue);
-    &::before {
-    background-color: color(blue);
-    }
-  }
-  .search {
-    border-color: color(navy);
-    background-color: color(navy);
-    color: $white;
-    &:hover {
-      color: $white;
-    }
-    &::before {
-      @include hide();
-    }
-  }
-  */
-  .active {
-    color: $black;
-    &::before {
-      @include hide();
-    }
-  }
-
-}
-
-.nav--secondary {
-  text-align: right;
-  .donate {
-    @extend .button--white;
-    padding: space(md);
-    &::before {
-      //@extend .button--outline--white::before;
-    }
-    &:hover::before,
-    &:focus::before {
-      //@extend .button--outline--white:hover::before;
-    }
-    //@extend .background-color--white;
-  }
+nav.burger-time::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #fff;
+  border-right: 10px solid transparent;
+  left: 50%;
+  top: -19px;
+  border-left: 10px solid transparent;
+  margin-left: -10px;
 }

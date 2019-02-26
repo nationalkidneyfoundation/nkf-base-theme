@@ -15,11 +15,9 @@ var nkf_base_init = function($) {
   //
   $('body').once('accordion-hash', function(){
     var accordHash = window.location.hash.slice(1).split('|');
-    for (var i of accordHash){
-      if (i.length > 0) {
-        $('#' + i +' a').trigger('click');
-      }
-    }
+    $.each(accordHash, function( index, value ) {
+      $('#' + index +' a').trigger('click');
+    });
   });
 
   // utility for general slider selection

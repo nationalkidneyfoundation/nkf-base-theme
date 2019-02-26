@@ -122,11 +122,16 @@ function nkf_base_preprocess_node(&$vars) {
       $vars['longitude'] = $wrapper->field_base_geofield->lon->value();
       $vars['latitude'] = $wrapper->field_base_geofield->lat->value();
     }
-
+    if(isset($_SESSION['promo'])) {
+      $promo = $_SESSION['promo'];
+    } else {
+      $promo = 'noPromo';
+    }
     if (isset($wrapper->field_event_cta) && !empty($wrapper->field_event_cta->value())) {
       foreach ($wrapper->field_event_cta as $i => $cta) {
+        $p = (strpos($cta->url->value(), '?') !== false) ? '&' : '?';
         $vars['ctas'][] = array(
-          'url' => $cta->url->value(),
+          'url' => $cta->url->value() . $p . 'promo=' . $promo,
           'title' => $cta->title->value(),
           'button' => ($i == 0) ? $vars['th']['header_button_1'] : $vars['th']['header_button_2']
         );
