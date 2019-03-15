@@ -9,11 +9,14 @@
    * - $body: Text about the promotion
    * - $button: A call to action related to the promo.
    * - $media: Image or video, always right aligned.
-   *margin-bottom--xl 
+   *margin-bottom--xl
+     <!-- <?php print theme('kidney_bean_hero');?> -->
+
    *
+   * 
    */
 ?>
-<section class="display--flex min-height--xl position--relative">
+<section class="display--flex min-height--xxl position--relative align-items--center">
   <div class="<?php print $hero_class;?> position--absolute z-index--200 top bottom width--100"></div>
   <?php if (!empty($hero_image)): ?>
     <div data-images="<?php print $hero_images;?>"
@@ -21,7 +24,7 @@
          style="background-image:url(<?php print $hero_image;?>)">
     </div>
   <?php endif;?>
-  <div class="<?php print $text_color;?> width--100 position--relative z-index--300 padding-y--xxl">
+  <div class="<?php print $text_color;?> width--100 position--relative z-index--300 padding-bottom--xxl padding-top--xs">
     <div class="text-align--center">
       <?php if (!empty($title)): ?>
         <div class=" font-size--xxl padding-y--xs caps bold">
@@ -43,3 +46,6 @@
     </div>
   </div>
 </section>
+
+
+

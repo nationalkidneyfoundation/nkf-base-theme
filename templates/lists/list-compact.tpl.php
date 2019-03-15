@@ -1,13 +1,19 @@
 
-<div class="container display--flex flex-direction--column max-width--xxxl">
+<div class="container display--flex flex-direction--column max-width--xxl">
 
-  <?php print theme( 'nkf_base_section_sm_header', array( 'smheader'=>$title)); ?>
 
     <?php if(!empty($image)): ?>
-      <div class="padding-bottom--md">
-        <?php print nkf_base_style_image($image, 'resize', 600, 300, 'display--block rounded');?>
+      <div>
+        <?php print nkf_base_style_image($image, 'resize', 800, 500, 'display--block rounded');?>
       </div>
     <?php endif; ?>
+    <?php print theme( 'nkf_base_section_sm_header', array( 'smheader'=>$title)); ?>
+
+    <?php if (!empty($body)):?>
+      <div class="padding-bottom--md">
+        <?php print $body;?>
+      </div>
+    <?php endif;?>
     <ul class="padding-left--lg margin--none">
       <?php foreach($items as $i => $item): ?>
         <li><?php print $item ?></li>

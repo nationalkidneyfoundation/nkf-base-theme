@@ -81,6 +81,9 @@
   &--space-between {
     justify-content: space-between;
   }
+  &--space-evenly {
+    justify-content: space-evenly;
+  }
 }
 
 @each $bp, $bp-value in $breakpoints {
@@ -101,6 +104,9 @@
       &--space-between {
       justify-content: space-between;
     }
+      &--space-evenly {
+        justify-content: space-evenly;
+      }
   }
 }
 }

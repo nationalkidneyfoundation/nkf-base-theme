@@ -14,9 +14,9 @@
 
    */
 ?>
-<div class="<?php print $inner_color;?> container">
-	<div class="md--display--flex flex-wrap--wrap align-items--center rounded">
-	  <div class="align-self--flex-start padding-x--md padding-y--md width--100 md--width--40 md--padding-right--xxxl">
+<div class="<?php print $inner_color;?> rounded">
+	<div class="sm--display--flex flex-wrap--wrap align-items--center">
+	  <div class="padding-x--xl sm--padding-x--xxxl padding-y--md width--100 sm--width--50">
 
 		  <?php print theme( 'nkf_base_section_sm_header', array( 'smheader'=>$title)); ?>
 
@@ -35,15 +35,15 @@
 		</div>
 
 			<?php if(isset($image)):?>
-				<div class="width--100 md--width--60 md--padding-left--xxl">
-					<div class="display--block margin-top--xl display--flex align-items--bottom">
-		        <?php print nkf_base_style_image($image,'scale', 1000, 375, 'display--block center');?>
+				<div class="width--100 sm--width--50 padding--xl">
+					<div class="display--block display--flex">
+					<?php print nkf_base_style_image($image,'scale', 500, 500, 'display--block center rounded');?>
 		      </div>
 				</div>
 	    <?php endif; ?>
 
     	<?php if (!empty ($video)): ?>
-				<div class="width--100 md--width--60 md--padding-y--xxl md--padding-left--xxl">
+				<div class="width--100 sm--width--50 padding--xl">
 	    		<div class="video-wrapper display--block top bottom right width--100 rounded overflow--hidden">
 	  				<?php print $video; ?>
 	     		</div>

@@ -19,16 +19,17 @@
    */
 
 ?>
+<div class="edge--wavy--bottom">
 	<div class="container md--display--flex flex-wrap--wrap align-items--center">
-	  <div class="align-self--flex-start padding-x--md padding-y--xxxl width--100 md--width--40 md--padding-right--xxxl">
+	  <div class="align-self--flex-start padding-top--lg padding-x--md padding-y--xxxl width--100 md--width--40 md--padding-right--xxxl">
 
 		<?php if (!empty($title)): ?>
-      	<h1 class="padding-top--xl font-size--xxl font-weight--400">
+      	<h1 class="highlight display--inline padding-top--xl font-size--xxl md--font-size--xxxl">
           <?php print $title;?>
         </h1>
 	    <?php endif;?>
-	    <div class="width--100">
-	      <?php print theme( 'nkf_base_section_body', array( 'body'=>$body)); ?>
+	    <div class="width--100 font-size--lg margin-top--lg">
+	      <?php print $body; ?>
 			</div>
       <?php if (!empty($ctas)): ?>
 	      <div class="padding-y--md">
@@ -43,18 +44,17 @@
 
 
 			<?php if(isset($image)):?>
-				<div class="width--100 md--width--60 md--padding-left--xxl">
-					<div class="display--block margin-top--xl display--flex align-items--bottom">
-		        <?php print nkf_base_style_image($image,'scale', 1000, 375, 'display--block center');?>
+				<div class="width--100 md--width--60 padding-x--md md--padding-y--xxl  md--padding-left--xxl">
+					<div class="display--block">
+		        <?php print nkf_base_style_image($image,'resize', 1000, 545, 'display--block center rounded');?>
 		      </div>
 				</div>
 	    <?php endif; ?>
 
     	<?php if (!empty ($video)): ?>
-				<div class="width--100 md--width--60 md--padding-y--xxl md--padding-left--xxl">
-	    		<div class="video-wrapper display--block top bottom right width--100 rounded overflow--hidden">
-	  				<?php print $video; ?>
-	     		</div>
+				<div class="width--100 md--width--60 padding-x--md md--padding-y--xxl md--padding-left--xxl">
+	    		<div class="video-wrapper display--block top bottom right width--100 rounded overflow--hidden"><?php print $video; ?></div>
 				</div>
     	<?php endif; ?>
 	</div>
+</div>

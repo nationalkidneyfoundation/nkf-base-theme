@@ -70,12 +70,25 @@
 .edge--wavy--bottom2 {
   position: relative;
   padding-bottom: 50px !important;
-  &:after {
+  &::after {
     content: '';
     background-image: url('../svg/edge--wavy--bottom.svg');
     position: absolute;
     background-size: 100% 100%;
-    bottom: 0;
+    bottom: -1px;
+    width: 100%;
+    height: 50px;
+  }
+}
+.edge--wavy--top {
+  position: relative;
+  padding-top: 50px !important;
+  &::before {
+    content: '';
+    background-image: url('../svg/edge--wavy--top.svg');
+    position: absolute;
+    background-size: 100% 100%;
+    top: -1px;
     width: 100%;
     height: 50px;
   }
@@ -125,6 +138,26 @@
 .edge--wavy--bottom2:after {
   background-size: 20% 100%;
 }
+
+//For use on Kidney Bean Header 
+
+.edge--wavy--bottom--bean {
+  position: absolute;
+  width: 100%;
+}
+
+.edge--wavy--bottom--bean::after {
+    content: '';
+  background-image: url('../svg/edge--wavy--bottom--bean.png');
+  position: absolute;
+  background-size: 100% 100%;
+  left: 0;
+  bottom: -1px;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+}
+
 /*
 .edge--knife-fork--bottom {
   position: relative;

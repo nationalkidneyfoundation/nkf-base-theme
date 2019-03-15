@@ -9,7 +9,7 @@
    */
 ?>
 
-<?php print theme('nkf_base_section_header', array('header' => $title)); ?>
+<?php print theme( 'nkf_base_section_sm_header', array( 'smheader'=>$title)); ?>
 <div class="center max-width--xxxl">
   <?php if (isset($image)):?>
     <?php print $image;?>

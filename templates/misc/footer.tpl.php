@@ -59,6 +59,6 @@
       </div>
     </div>
   </div>
-  <div class="height--lg background-size--cover" style="background-image:url('/<?php print NKF_BASE_PATH; ?>/img/footer_curve.png')">
+  <!--<div class="height--lg background-size--cover" style="background-image:url('/<?php print NKF_BASE_PATH; ?>/img/footer_curve.png')">-->
   </div>
 </footer>

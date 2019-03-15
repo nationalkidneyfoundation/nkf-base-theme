@@ -1,4 +1,4 @@
-<div class="display--flex flex-direction--row- justify-content--space-between padding-y--lg border-width--none border-top-width--sm border-color--gray-4 border-style--solid">
+<div class="padding-bottom--xl">
   <div class="">
     <?php print theme('nkf_base_section_header', array('header' => $title)); ?>
     <?php print theme('nkf_base_section_subheader', array('subheader' => $body)); ?>

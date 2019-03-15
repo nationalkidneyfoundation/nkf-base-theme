@@ -35,7 +35,11 @@
         <div><?php print $name;?></div>
         <div><?php print $nkfrole;?></div>
         <div><?php print $phone;?></div>
+        <?php if ($bg_color_only == 'bg--gray-4'): ?>
+        <div><a class="color--white hover--color--orange" href="mailto:<?php print $email;?>"><?php print $email;?></a></div>
+<?php else:?>
         <div><a href="mailto:<?php print $email;?>"><?php print $email;?></a></div>
+<?php endif; ?>
       </div>
 
     </div>

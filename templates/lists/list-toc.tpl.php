@@ -10,7 +10,7 @@
 ?>
 
 
-<ul class="list-style--dash padding-left--lg margin--none">
+<ul class="list-style--dash padding-left--lg margin--none print--hide">
   <?php foreach($items as $i => $item): ?>
     <li class="">
       <a id="test-<?php print $i;?>" href="<?php print $item['path'];?>"

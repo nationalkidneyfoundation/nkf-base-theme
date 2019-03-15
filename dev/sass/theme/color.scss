@@ -92,46 +92,29 @@ a.mutelink,
   }
 }
 
-// All elements with this class will have links with an underline in them that is 
-// 40% of the standard orange, and highlights on hover. 
+// All elements with this class will have links with an underline in them that is
+// 40% of the standard orange, and highlights on hover.
 .linkHighlight a {
   transition: box-shadow .1s cubic-bezier(0.895,.03,.685,.22);
   transition-property: box-shadow;
   transition-duration: 0.1s;
   transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
   transition-delay: initial;
-  box-shadow: inset 0 -5px 0 0 rgba(241, 94, 34, 0.4);
+  box-shadow: inset 0 -5px 0 0 rgba(247, 153, 31, .7);
   color: inherit;
-}
+  
+  &:hover {
+    box-shadow: inset 0 -40px 0 0 rgba(247, 153, 31, .7);
+  }
 
-.linkHighlight a:hover {
-  box-shadow: inset 0 -40px 0 0 rgba(241, 94, 34, 0.4);
-}
-
-
-.color {
-  //&--white    { color: $white; }
-  //&--gray-1   { color: $gray-1; }
-  ///&--gray-2   { color: $gray-2; }
-  //&--gray-3   { color: $gray-3; }
-  //&--gray-4   { color: $gray-4; }
-  //&--gray-5   { color: $gray-5; }
-  //&--black    { color: $black; }
-  //&--twitter  { color: $twitter; }
-  //&--facebook { color: $facebook; }
-}
-/*
-.hover {
-  &--color {
-    &--white:hover    { color: $white; }
-    &--gray-1:hover   { color: $gray-1; }
-    &--gray-2:hover   { color: $gray-2; }
-    &--gray-3:hover   { color: $gray-3; }
-    &--gray-4:hover   { color: $gray-4; }
-    &--gray-5:hover   { color: $gray-5; }
-    &--black:hover    { color: $black; }
-    &--twitter:hover  { color: $twitter; }
-    &--facebook:hover { color: $facebook; }
+  &.linkHighlight--override {
+    transition: none;
+    transition-property: none;
+    transition-duration: 0s;
+    transition-timing-function: none;
+    transition-delay: 0s;
+    box-shadow: none;
+    color: none;
   }
 }
-*/
+

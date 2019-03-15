@@ -15,26 +15,33 @@
    */
    //dpm(get_defined_vars());
 ?>
-<?php print theme( 'nkf_base_section_sm_header', array( 'smheader'=>$title)); ?>
-<div class="linkHighlight">
-  <!-- LEFT CONTENT -->
-    <?php if ($offset_left): ?>
-      <div class="sm--float--left sm--max-width--lg
-                md--margin-left--xxl- padding-bottom--lg sm--padding-right--xxl">
-        <?php print ($offset_content); ?>
-        <?php print theme('nkf_base_section_caption', array('caption' => $caption)); ?>
-      </div>
-  <?php endif;?>
+<div class="padding-bottom--md">
+  <?php print theme( 'nkf_base_section_sm_header', array( 'smheader'=>$title)); ?>
+  <div class="linkHighlight">
+    <!-- LEFT CONTENT -->
+      <?php if ($offset_left): ?>
+        <div class="sm--float--left sm--max-width--lg
+                  md--margin-left--xxl- padding-bottom--lg sm--padding-right--xxl">
+          <?php print ($offset_content); ?>
+          <?php print theme('nkf_base_section_caption', array('caption' => $caption)); ?>
+        </div>
+    <?php endif;?>
 
-  <!-- RIGHT CONTENT -->
-    <?php if ($offset_right): ?>
-      <div class="sm--float--right sm--max-width--lg
-                md--margin-right--xxl- sm--padding-left--xxl padding-bottom--lg">
-        <?php print $offset_content; ?>
-        <?php print theme('nkf_base_section_caption', array('caption' => $caption)); ?>
-      </div>
+    <!-- RIGHT CONTENT -->
+      <?php if ($offset_right): ?>
+        <div class="sm--float--right sm--max-width--lg
+                  md--margin-right--xxl- sm--padding-left--xxl padding-bottom--lg">
+          <?php print $offset_content; ?>
+          <?php print theme('nkf_base_section_caption', array('caption' => $caption)); ?>
+        </div>
+    <?php endif; ?>
+
+    <!-- BODY -->
+    <?php print $body;?>
+    </div>
+    <?php if(!empty($more)): ?>
+        <div class="linkHighlight">
+          <?php print $more;?>
+        </div>
   <?php endif; ?>
-
-  <!-- BODY -->
-  <?php print $body;?>
 </div>

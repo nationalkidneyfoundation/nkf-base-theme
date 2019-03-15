@@ -56,12 +56,19 @@
 .hero--waves-orange2 {
   background-image: url(../img/hero--waves--orange2.png);
   background-size: cover;
-  background-position: 95% 0;
+  //@include when(md) { background-size: contain; }
+  background-position: 89% 100%;
+  background-repeat: no-repeat;
 }
 .hero--waves-orange3 {
   background-image: url(../img/hero--waves--orange3.png);
   background-size: cover;
   background-position: 95% 0;
+}
+.hero--waves-orange-tn {
+  background-image: url(../img/hero--waves--orange--top-narrow.png);
+  background-size: cover;
+  background-position: 50% 0;
 }
 .hero--waves-gray {
   background-image: url(../svg/hero--waves-orange.svg);
@@ -77,7 +84,38 @@
 
 .image-grad-overlay {
   background: url(http://paragraph-nkf.pantheonsite.io/profiles/kidneys_distro/themes/custom/nkf_base/img/hero--waves--orange2.png), linear-gradient(
-     rgba(59, 68, 79, 0.45), 
+     rgba(59, 68, 79, 0.45),
       rgba(59, 68, 79, 0.45)
     ), url(https://www.kidney.org/sites/default/files/AdobeStock_180098115_Preview_Volunteers.jpeg);
+  }
+
+.kidney--bean {
+  z-index: 0;
 }
+
+.kidney-bean--overlay {
+  position: absolute;
+  
+  &--right {
+    background-color: transparent;
+    background-image: url(../svg/kidney-bean--orangewave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 65%;
+    right: 0;
+    top: 0;
+    z-index: 2;
+  }
+}
+
+
+.kidney-bean--hero--text {
+  background-color: transparent;
+  height: 100%;
+  width: 50%; 
+  right: 1em;
+  top: 50px;
+  z-index: 4;
+}
+

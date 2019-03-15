@@ -98,39 +98,73 @@ $h6: font-size('sm')  !default;
 
 // Colors
 $colors: (
-    orange:     #F15E22
-  , blue:       #1E4497
-  , sky:        #9EBCCF
-  , navy:       #26225E
-  , red:        #d51217
-  , mustard:    #FAAD1D
-  , aqua:       #048499
-  , yellow:     #FEDC00
-  , green:      #018241
-  , lime:       #91AE3C
-  , sienna:     #9E2420
-  , white:      #FFFFFF
-  , gray-1:     #EDEEEF
-  , gray-2:     #DBDDDF
-  , gray-3:     #A6AAAF
-  , gray-4:     #3b444f
-  , gray-5:     #363E48
-  , black:      #111
-  , twitter:    #4099FF
-  , facebook:   #3b5998
-  , instagram:  #e95950
-  , linkedin:   #4875B4
-  , googleplus: #C63D2D
-  , youtube:    #FF3333
-  , pinterest:  #BD081C
+    orange:     #F15F22, 
+    orange-100: #FCDED2,
+    orange-300: #F5956D, 
+    orange-500: #C95125,
+    orange-600: #A34425,
+    bright-orange: #F7991F,
+    bright-orange-100: #FDE5C5,
+    bright-orange-300: #F9B357, 
+    bright-orange-500: #D7851C, 
+    bright-orange-600: #B87214, 
+    yellow: #FFC10E, 
+    yellow-100: #FFECB6, 
+    yellow-300: #FFD55D, 
+    yellow-500: #DCA712, 
+    yellow-600: #BC8F0D, 
+    magenta: #E62565, 
+    magenta-100: #F9C8D8, 
+    magenta-300: #EB5386, 
+    magenta-500: #C61E58, 
+    magenta-600: #AA144B, 
+    nkf-cyan: #39ACE2, 
+    nkf-cyan-100: #DBF0FA, 
+    nkf-cyan-300: #6BC1E9, 
+    nkf-cyan-500: #3290BD, 
+    nkf-cyan-600: #2A6E91, 
+    aqua: #4AC1B9, 
+    aqua-100: #CFEBE7, 
+    aqua-300: #6BC8C1, 
+    aqua-500: #3EA8A3, 
+    aqua-600: #21736F, 
+    gray: #9D9FA2, 
+    gray-100: #EFEFF0, 
+    gray-200: #E9E9EA, 
+    gray-300: #D1D3D4, 
+    gray-500: #67686B, 
+    gray-600: #4d4d4F, 
+    gray-700: #231F20, 
+    blue: #39ACE2, 
+    sky: #DBF0FA, 
+    navy: #39ace2, 
+    red: #E62565, 
+    mustard: #F7991F, 
+    green: #4AC1B9, 
+    lime: #4AC1B9, 
+    sienna: #E62565, 
+    white: #FFFFFF, 
+    gray-1: #EFEFF0, 
+    gray-2: #D1D3D4, 
+    gray-3: #9D9FA2, 
+    gray-4: #4d4d4F, 
+    gray-5: #231F20, 
+    black: #000, 
+    twitter: #4099FF, 
+    facebook: #3b5998, 
+    instagram: #e95950, 
+    linkedin: #4875B4, 
+    googleplus: #C63D2D, 
+    youtube: #FF3333, 
+    pinterest: #BD081C
 ) !default;
 
 $white: #fff !default;
-$gray-1: #EDEEEF !default;
-$gray-2: #DBDDDF !default;
-$gray-3: #A6AAAF !default;
-$gray-4: #3b444f !default;
-$gray-5: #363E48 !default;
+$gray-1: #EFEFF0 !default;
+$gray-2: #D1D3D4 !default;
+$gray-3: #9D9FA2 !default;
+$gray-4: #4d4d4F !default;
+$gray-5: #231F20 !default;
 $black: #000 !default;
 
 $twitter: #4099FF !default;
@@ -141,7 +175,7 @@ $instagram: #e95950 !default;
   @return map-get($colors, $x);
 }
 
-$link-color: color(gray-4); //color(aqua) !default;
+$link-color: color(gray-4); 
 $link-color-hover: color(orange) !default;
 $link-color-active: $link-color !default;
 $link-color-visited: $link-color !default;
@@ -299,7 +333,7 @@ $breakpoints: (
   @if $color == null {
     @return null;
   }
-  @else if $color == color(pinterest) or $color == color(linkedin) or $color == color(twitter) or $color == color(facebook) or $color == color(instagram) or $color == color(orange) {
+  @else if $color == color(pinterest) or $color == color(linkedin) or $color == color(twitter) or $color == color(facebook) or $color == color(instagram) or $color == color(orange) or $color == color(orange-2) {
     @return #ffffff;
   }
   @else {

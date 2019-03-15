@@ -108,29 +108,16 @@
       </div>
     <?php endif;?>
 
-
-    <!--Node actions (sharing)-->
-    <?php if (!empty($actions)): ?>
-      <div class="">
-        <div class="prose center display--flex padding-top--xxl padding-x--md md--padding-x--none">
-          <?php foreach($actions as $id => $action): ?>
-            <a href="<?php print $action['href']?>"
-               class="icon-soc height--sm width--sm
-                      display--flex align-items--center
-                      margin-right--xs">
-              <i class="center <?php print $action['icon']; ?>"></i>
-            </a>
-          <?php endforeach;?>
-        </div>
-      </div>
-    <?php endif;?>
-
-
     <!-- TITLE -->
     <?php if ($has_title) : ?>
       <?php if ($title): ?>
         <section class="main__title padding-top--md">
           <div class="container padding-y--lg">
+            <?php if (!empty($parent)): ?>
+              <div class="prose center padding-bottom--xs padding-x--md md--padding-x--none linkHighlight">
+                <?php print $parent ?>
+              </div>
+            <?php endif;?>
             <?php print render($title_prefix); ?>
             <h1 class="font-size--xxl padding--none">
               <div class="prose center padding-x--md md--padding-x--none">
@@ -141,6 +128,22 @@
           </div>
         </section>
       <?php endif; ?>
+    <?php endif;?>
+
+    <!--Node actions (sharing)-->
+    <?php if (!empty($actions)): ?>
+      <div class="print--hide">
+        <div class="prose center display--flex padding-top--xxl padding-x--md md--padding-x--none">
+          <?php foreach($actions as $id => $action): ?>
+            <a href="<?php print $action['href']?>"
+               class="icon-soc height--sm width--sm
+                      display--flex align-items--center
+                      margin-right--xs <?php print ($id == 'print') ? 'js--print-link':'';?>">
+              <i class="center <?php print $action['icon']; ?>"></i>
+            </a>
+          <?php endforeach;?>
+        </div>
+      </div>
     <?php endif;?>
 
     <!-- MAIN CONTENT -->
@@ -170,6 +173,7 @@
       <?php endif; ?>
     </section>
   </main>
+
 
 
   <!-- FOOTER -->
