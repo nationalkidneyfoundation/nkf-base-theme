@@ -153,11 +153,13 @@ var nkf_base_init = function($) {
     });
     return t === 0 ? true: false;
   }
-  var $steps = $('form .step');
+  var $steps = $('form .step:not(.processed)');
   var l = $steps.length;
   var $submit = $('.form-submit');
+
   $steps.each(function(i,v) {
     var $v = $(v);
+    $v.addClass('processed');
     //$v.prepend('<a name="step--'+i+'"></a>');
     var prevNext = $('<div class="prev-next clearfix padding-x--xxl padding-y--md margin-x--xxl- margin-top--md bg--gray-2 sm--show"></div>').appendTo($v);
     if (i !== 0) {
@@ -187,6 +189,7 @@ var nkf_base_init = function($) {
     if (i === l-1 && $submit.length) {
       $submit.clone().appendTo(prevNext)
         .addClass('float--right').removeClass('sm--hide').addClass('width--auto');
+      $submit.addClass('sm--hide');
     }
   });
 
