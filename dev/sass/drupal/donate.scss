@@ -121,7 +121,6 @@
   fieldset {
     padding: 0;
     border: none;
-    text-align: center;
   }
   legend {
     //@include grid-cell();
@@ -213,7 +212,7 @@
     @include grid();
     padding-bottom: space(sm);
     width: 100%;
-    text-align: center;
+    justify-content: center;
     > * {
       @include grid-cell();
       width: auto;
