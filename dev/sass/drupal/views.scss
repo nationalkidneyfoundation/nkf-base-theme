@@ -2,6 +2,14 @@
   .view-header,
   .view-filters,
   .view-footer {
-    @include grid-cell();  
-  }  
+    @include grid-cell();
+  }
+}
+
+.grid > .view-content {
+  @include grid();
+}
+.grid--center > .view-content {
+  @include grid();
+  justify-content: center;
 }

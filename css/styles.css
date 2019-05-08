@@ -688,7 +688,8 @@ select:not([multiple]) {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  text-align: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .grid-cell {
@@ -18634,6 +18635,26 @@ nav .burger-time a {
 .view.grid .view-filters,
 .view.grid .view-footer {
   display: inline-block;
+}
+
+.grid > .view-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.grid--center > .view-content {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 .pager {
