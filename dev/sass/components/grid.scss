@@ -1,4 +1,4 @@
-@mixin grid {
+@mixin gridDEPRECATED {
   letter-spacing: -0.31em;
   *letter-spacing: normal;
   *word-spacing: -0.43em;
@@ -6,7 +6,7 @@
   font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
 }
 
-@mixin grid-cell {
+@mixin grid-cellDEPRECATED {
   display: inline-block;
   vertical-align: top;
   letter-spacing: normal;
@@ -16,6 +16,15 @@
   font-family: $font-family;
   *zoom: 1;
   *display: inline;
+}
+@mixin grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@mixin grid-cell {
+  display: inline-block;
 }
 
 .grid {
@@ -27,7 +36,7 @@
 }
 .opera-only :-o-prefocus,
 .grid {
-  word-spacing: -0.43em;
+  //word-spacing: -0.43em;
 }
 
 .grid-cell {
@@ -38,5 +47,5 @@
   font-family: $font-family;
 }*/
 .grid-cell {
-  font-family: $font-family;
+  //font-family: $font-family;
 }
