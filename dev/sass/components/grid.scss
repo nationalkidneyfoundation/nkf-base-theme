@@ -32,7 +32,7 @@
 }
 .grid--center {
   @include grid();
-  text-align: center;
+  justify-content: center;
 }
 .opera-only :-o-prefocus,
 .grid {
