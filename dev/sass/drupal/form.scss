@@ -107,3 +107,9 @@ legend {
   }
 
 }
+.g-recaptcha {
+  padding: 0 space(xs);
+}
+.g-recaptcha > div {
+  margin: space(lg) auto 0;
+}
