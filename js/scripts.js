@@ -118,7 +118,6 @@ $('.js--bookmark-link').once().on('click', function(e) {
     // Other browsers (mainly WebKit & Blink - Safari, Chrome, Opera 15+)
     alert('Press ' + (/Mac/i.test(navigator.platform) ? 'Cmd' : 'Ctrl') + '+D to bookmark this page.');
   }
-
   return false;
 });
 
