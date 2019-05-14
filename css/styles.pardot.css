@@ -474,7 +474,7 @@ input[type="submit"],
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3227,7 +3227,7 @@ input[type="submit"].button--orange {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3302,7 +3302,7 @@ input[type="submit"].button--blue {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3377,7 +3377,7 @@ input[type="submit"].button--navy {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3452,7 +3452,7 @@ input[type="submit"].button--red {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3527,7 +3527,7 @@ input[type="submit"].button--mustard {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3602,7 +3602,7 @@ input[type="submit"].button--aqua {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3677,7 +3677,7 @@ input[type="submit"].button--yellow {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3752,7 +3752,7 @@ input[type="submit"].button--green {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3827,7 +3827,7 @@ input[type="submit"].button--lime {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3902,7 +3902,7 @@ input[type="submit"].button--sienna {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -3977,7 +3977,7 @@ input[type="submit"].button--white {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4052,7 +4052,7 @@ input[type="submit"].button--gray-1 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4127,7 +4127,7 @@ input[type="submit"].button--gray-2 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4202,7 +4202,7 @@ input[type="submit"].button--gray-3 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4277,7 +4277,7 @@ input[type="submit"].button--gray-4 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4352,7 +4352,7 @@ input[type="submit"].button--gray-5 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4427,7 +4427,7 @@ input[type="submit"].button--black {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4502,7 +4502,7 @@ input[type="submit"].button--twitter {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4577,7 +4577,7 @@ input[type="submit"].button--facebook {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4652,7 +4652,7 @@ input[type="submit"].button--instagram {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4727,7 +4727,7 @@ input[type="submit"].button--linkedin {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4802,7 +4802,7 @@ input[type="submit"].button--googleplus {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4877,7 +4877,7 @@ input[type="submit"].button--youtube {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -4952,7 +4952,7 @@ input[type="submit"].button--pinterest {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
