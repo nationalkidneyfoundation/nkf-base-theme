@@ -7,9 +7,9 @@ function nkf_base_preprocess_page(&$vars) {
 
   $page_classes = array('page');
   $alias = strtolower(drupal_get_path_alias());
-  $vars['th'] = nkf_base_color_theme_helper('standard');
   $vars['has_title'] = isset($vars['has_title']) ? $vars['has_title'] : true;
   $vars['widescreen'] = isset($vars['widescreen']) ? $vars['widescreen'] : false;
+  $vars['th'] = isset($vars['th']) ? $vars['th'] : nkf_base_color_theme_helper('standard');
   $vars['home'] = '';
   $vars['header_color'] = 'orange';
   $vars['nav_color'] = 'orange--l1';
