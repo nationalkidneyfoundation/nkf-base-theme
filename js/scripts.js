@@ -153,16 +153,18 @@ var nkf_base_init = function($) {
     });
     return t === 0 ? true: false;
   }
-  var $steps = $('form .step');
+  var $steps = $('form .step:not(.processed)');
   var l = $steps.length;
   var $submit = $('.form-submit');
+
   $steps.each(function(i,v) {
     var $v = $(v);
+    $v.addClass('processed');
     //$v.prepend('<a name="step--'+i+'"></a>');
-    var prevNext = $('<div class="prev-next clearfix padding-x--xxl padding-y--md margin-x--xxl- margin-top--md bg--gray-2 sm--show"></div>').appendTo($v);
+    var prevNext = $('<div class="prev-next sm--display--flex display--none align-items--center padding-x--xxl padding-y--md margin-x--xxl- margin-top--md border-style--solid border-top-width--sm border-color--gray-4 border-width--none"></div>').appendTo($v);
     if (i !== 0) {
       $v.addClass('sm--hide');
-      $('<a href="#" class="button--white float--left caps">Previous</a>')
+      $('<a href="#" class="prev button--gray-1 caps margin-right--sm">Previous</a>')
         .appendTo(prevNext)
           .click(function(e){
             //if(checkRequiredFields(v)) {
@@ -172,9 +174,14 @@ var nkf_base_init = function($) {
             e.preventDefault();
           });
     }
+    if (i === l-1 && $submit.length) {
+      $submit.clone().appendTo(prevNext)
+        .removeClass('sm--hide').addClass('width--auto');
+      $submit.addClass('sm--hide');
+    }
     if (i !== l-1) {
       //var nextTitle = $('h1,h2,h3,h4,legend', $steps[i+1]).first().text();
-      $('<a href="#" class="button--orange float--right caps">Next</a>')
+      $('<a href="#" class="next button--orange caps">Next</a>')
         .appendTo(prevNext)
           .click(function(e){
             if(checkRequiredFields(v)) {
@@ -184,10 +191,8 @@ var nkf_base_init = function($) {
             e.preventDefault();
           });
     }
-    if (i === l-1 && $submit.length) {
-      $submit.clone().appendTo(prevNext)
-        .addClass('float--right').removeClass('sm--hide').addClass('width--auto');
-    }
+    $('<div class="bold" style="margin-left:auto"><span class="color--orange">'+(i+1)+'</span> of '+l+'</div>')
+      .appendTo(prevNext)
   });
 
 }
