@@ -16,7 +16,7 @@
       </div>
       <?php if (!empty($page['navigation'])) : ?>
       <div class="display--table-cell vertical-align--middle width--auto">
-        <a href="#" class="display--block white-space--nowrap color--white" data-toggle="class" data-target=".burger-time" data-class="hide">
+        <a href="#" class="display--block white-space--nowrap  <?php print $th['header'];?>" data-toggle="class" data-target=".burger-time" data-class="hide">
           <div class="burger-time md--padding-y--xl padding-y--lg padding-x--xs">
             <div class="md--show">
               <i class="icon-menu"></i>
