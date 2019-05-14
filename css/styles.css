@@ -806,7 +806,8 @@ button.mfp-close {
   font-size: 2.369rem;
 }
 
-.video-wrapper {
+.video-wrapper,
+.embedded-video {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
@@ -815,7 +816,10 @@ button.mfp-close {
 
 .video-wrapper object,
 .video-wrapper embed,
-.video-wrapper iframe {
+.video-wrapper iframe,
+.embedded-video object,
+.embedded-video embed,
+.embedded-video iframe {
   position: absolute;
   top: 0;
   left: 0;
