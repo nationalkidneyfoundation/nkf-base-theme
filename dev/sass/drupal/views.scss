@@ -8,8 +8,10 @@
 
 .grid > .view-content {
   @include grid();
+  width: 100%;
 }
 .grid--center > .view-content {
   @include grid();
   justify-content: center;
+  width: 100%;
 }

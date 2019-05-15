@@ -679,6 +679,7 @@ select:not([multiple]) {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .grid--center {
@@ -688,6 +689,7 @@ select:not([multiple]) {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   -ms-flex-pack: center;
   justify-content: center;
 }
@@ -995,6 +997,7 @@ button.mfp-close {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .list--grid > li {
@@ -18003,6 +18006,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-type-radios.form-item-field-membership-term-und > label {
@@ -18024,6 +18028,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   padding-bottom: 12px;
   padding-bottom: 0.75rem;
   width: 100%;
@@ -18073,6 +18078,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   padding-bottom: 21px;
   padding-bottom: 1.333rem;
   width: 100%;
@@ -18163,6 +18169,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form #edit-name {
@@ -18172,6 +18179,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-item-first-name,
@@ -18218,6 +18226,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .street-block .form-item {
@@ -18239,6 +18248,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .locality-block .form-item {
@@ -18289,6 +18299,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   background-color: #EDEEEF;
 }
 
@@ -18333,6 +18344,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-type-radio.form-item-payment-method {
@@ -18417,6 +18429,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-item-payment-details-credit-card-number {
@@ -18475,6 +18488,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-actions > * {
@@ -18648,6 +18662,8 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
+  width: 100%;
 }
 
 .grid--center > .view-content {
@@ -18657,8 +18673,10 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 100%;
 }
 
 .pager {
@@ -18668,6 +18686,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   text-align: center;
 }
 

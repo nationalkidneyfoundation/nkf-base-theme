@@ -677,6 +677,7 @@ select:not([multiple]) {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .grid--center {
@@ -686,6 +687,7 @@ select:not([multiple]) {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   -ms-flex-pack: center;
   justify-content: center;
 }
