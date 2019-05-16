@@ -476,7 +476,7 @@ input[type="submit"],
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -679,6 +679,7 @@ select:not([multiple]) {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .grid--center {
@@ -688,6 +689,7 @@ select:not([multiple]) {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   -ms-flex-pack: center;
   justify-content: center;
 }
@@ -806,7 +808,8 @@ button.mfp-close {
   font-size: 2.369rem;
 }
 
-.video-wrapper {
+.video-wrapper,
+.embedded-video {
   position: relative;
   padding-bottom: 56.25%;
   padding-top: 25px;
@@ -815,7 +818,10 @@ button.mfp-close {
 
 .video-wrapper object,
 .video-wrapper embed,
-.video-wrapper iframe {
+.video-wrapper iframe,
+.embedded-video object,
+.embedded-video embed,
+.embedded-video iframe {
   position: absolute;
   top: 0;
   left: 0;
@@ -991,6 +997,7 @@ button.mfp-close {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .list--grid > li {
@@ -5717,7 +5724,7 @@ input[type="submit"].button--orange {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -5796,7 +5803,7 @@ input[type="submit"].button--blue,
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -5911,7 +5918,7 @@ input[type="submit"].button--navy {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -5986,7 +5993,7 @@ input[type="submit"].button--red {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6061,7 +6068,7 @@ input[type="submit"].button--mustard {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6136,7 +6143,7 @@ input[type="submit"].button--aqua {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6211,7 +6218,7 @@ input[type="submit"].button--yellow {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6286,7 +6293,7 @@ input[type="submit"].button--green {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6361,7 +6368,7 @@ input[type="submit"].button--lime {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6436,7 +6443,7 @@ input[type="submit"].button--sienna {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6513,7 +6520,7 @@ input[type="submit"].button--white,
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6608,7 +6615,7 @@ input[type="submit"].button--gray-1 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6683,7 +6690,7 @@ input[type="submit"].button--gray-2 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6758,7 +6765,7 @@ input[type="submit"].button--gray-3 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6833,7 +6840,7 @@ input[type="submit"].button--gray-4 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6908,7 +6915,7 @@ input[type="submit"].button--gray-5 {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -6983,7 +6990,7 @@ input[type="submit"].button--black {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -7058,7 +7065,7 @@ input[type="submit"].button--twitter {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -7133,7 +7140,7 @@ input[type="submit"].button--facebook {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -7208,7 +7215,7 @@ input[type="submit"].button--instagram {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -7283,7 +7290,7 @@ input[type="submit"].button--linkedin {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -7358,7 +7365,7 @@ input[type="submit"].button--googleplus {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -7433,7 +7440,7 @@ input[type="submit"].button--youtube {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -7508,7 +7515,7 @@ input[type="submit"].button--pinterest {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -17521,7 +17528,7 @@ legend {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -17999,6 +18006,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-type-radios.form-item-field-membership-term-und > label {
@@ -18020,6 +18028,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   padding-bottom: 12px;
   padding-bottom: 0.75rem;
   width: 100%;
@@ -18069,6 +18078,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   padding-bottom: 21px;
   padding-bottom: 1.333rem;
   width: 100%;
@@ -18102,7 +18112,7 @@ nav .burger-time a {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -18159,6 +18169,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form #edit-name {
@@ -18168,6 +18179,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-item-first-name,
@@ -18214,6 +18226,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .street-block .form-item {
@@ -18235,6 +18248,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .locality-block .form-item {
@@ -18285,6 +18299,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   background-color: #EDEEEF;
 }
 
@@ -18329,6 +18344,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-type-radio.form-item-payment-method {
@@ -18353,7 +18369,7 @@ nav .burger-time a {
   border-width: 0;
   border-style: solid;
   vertical-align: middle;
-  border-radius: 3px;
+  border-radius: 1000px;
   vertical-align: middle;
   text-align: center;
   z-index: 2;
@@ -18413,6 +18429,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-item-payment-details-credit-card-number {
@@ -18471,6 +18488,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
 }
 
 .has-donation-form .form-actions > * {
@@ -18644,6 +18662,8 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
+  width: 100%;
 }
 
 .grid--center > .view-content {
@@ -18653,8 +18673,10 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   -ms-flex-pack: center;
   justify-content: center;
+  width: 100%;
 }
 
 .pager {
@@ -18664,6 +18686,7 @@ nav .burger-time a {
   flex-direction: row;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  width: 100%;
   text-align: center;
 }
 

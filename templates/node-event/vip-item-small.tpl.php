@@ -1,7 +1,8 @@
-<?php if(isset($row['field_base_link'])): ?>
-  <a href="<?php print $row['field_base_link']['url'];?>" class="">
-<?php endif;?>
+
 <div class="grid-cell width--100 sm--width--50 md--width--33 padding-bottom--lg padding-right--lg">
+  <?php if(isset($row['field_base_link'])): ?>
+    <a href="<?php print $row['field_base_link']['url'];?>" class="">
+  <?php endif;?>
   <?php if(isset($row['field_base_image'])): ?>
     <div class="height--md">
       <img
@@ -17,7 +18,7 @@
       <div class=""><?php print $row['field_vip_description']; ?></div>
     </div>
   <?php endif;?>
+  <?php if(isset($row['field_base_link'])): ?>
+    </a>
+  <?php endif;?>
 </div>
-<?php if(isset($row['field_base_link'])): ?>
-  </a>
-<?php endif;?>

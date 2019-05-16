@@ -170,13 +170,14 @@ gulp.task('images-build', ['images-build-logos', 'images-build-heros']);
 
 
 // combine builds
-gulp.task('build', ['css-build', 'html-build', 'images-build']);
+//gulp.task('build', ['css-build', 'html-build', 'images-build']);
+gulp.task('build', ['css-build', 'html-build']);
 
 // watch for changes
 gulp.task('watch', function () {
   gulp.watch(paths.styles, ['css-build']);
   gulp.watch(paths.index, ['html-build']);
-  gulp.watch(paths.images, ['images-build']);
+  //gulp.watch(paths.images, ['images-build']);
 });
 
 // let's get started
