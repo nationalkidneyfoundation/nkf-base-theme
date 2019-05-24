@@ -1,7 +1,7 @@
 var nkf_base_init = function($) {
   // utility function to toggle classes on click
   // useful for toggling visibility
-  $('[data-toggle=class]').once().click(function (e) {
+  $('[data-toggle=class]').once('classToggle').click(function (e) {
     //$(this).addClass('processed');
     var targets = $(this).attr('data-target').split('|');
     var classes = $(this).attr('data-class').split('|');
@@ -81,18 +81,18 @@ var nkf_base_init = function($) {
   }
 
   // general print utility
-  $('.js--print-link').once().on('click', function(){
+  $('.js--print-link').once('jsPrint').on('click', function(){
     window.print();
     return false;
   });
 
-  $('.js--share-link').once().on('click', function(e){
+  $('.js--share-link').once('jsShare').on('click', function(e){
     e.preventDefault();
     popup(this.href);
   });
 
   // bookmark utility
-$('.js--bookmark-link').once().on('click', function(e) {
+$('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
   console.log("testing");
   var bookmarkURL = window.location.href;
   var bookmarkTitle = document.title;
