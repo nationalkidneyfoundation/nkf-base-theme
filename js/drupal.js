@@ -20,19 +20,19 @@
         return false;
       });
 
-      $('[data-track="event"]').once().click(function(){
+      $('[data-track="event"]').once('googleEvent').click(function(){
         var obj = {
           hitType: 'event',
           eventCategory: $(this).data('category') ? $(this).data('category') : '',
           eventAction: $(this).data('action') ? $(this).data('action') : '',
           eventLabel: $(this).data('label') ? $(this).data('label') : '',
-          //eventValue: $(this).data('value') ? $(this).data('value') : '',
+          eventValue: $(this).data('value') ? $(this).data('value') : '',
           transport: 'beacon'
         };
         gaTrack(obj);
       });
 
-      $('[data-track="social"]').once().click(function(){
+      $('[data-track="social"]').once('googleSocial').click(function(){
         var obj = {
           hitType: 'social',
           socialNetwork: $(this).data('network') ? $(this).data('network') : '',
