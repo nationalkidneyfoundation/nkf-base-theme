@@ -93,7 +93,6 @@ var nkf_base_init = function($) {
 
   // bookmark utility
 $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
-  console.log("testing");
   var bookmarkURL = window.location.href;
   var bookmarkTitle = document.title;
 
@@ -160,9 +159,8 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
   function checkRequiredFields(context) {
     var t = 0;
     // handle required fields per section
-    $(context).find('input.required, select.required, textarea.required, .form-radios.required').each(function(i, d) {
+    $(context).find('input.required:not(.form-radio), select.required, textarea.required, .form-radios.required').each(function(i, d) {
       var r = false;
-
       if ($(d).attr('type') === 'checkbox') {
         r = !$("input[name='" + $(d).attr('name') + "']:checked").val();
       }
@@ -179,14 +177,64 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
         t += 1;
         $(d).addClass('error')
           .closest('.form-item').addClass('animate').addClass('animation-duration--2').animationClass('animate--giggle');
+      } else {
+        $(d).removeClass('error');
       }
     });
     return t === 0 ? true: false;
   }
+
+
   var $steps = $('form .step:not(.processed)');
   var l = $steps.length;
   var $submit = $('.form-submit');
+  // Handle default submit handler for step forms.
+  var $stepForm = $steps.closest('form');
 
+  $stepForm.on('submit', (event)=>{
+    event.preventDefault();
+    event.stopPropagation();
+    $stepForm.addClass('js--stopped');
+    var s = false;
+    // Find the next submit button.
+    var $nextStep = $('.prev-next:visible');
+    if ($nextStep.length) {
+      if($('a.next', $nextStep).length) {
+        $('a.next', $nextStep).click();
+      }
+      if($('.form-submit', $nextStep).length) {
+        s = true;
+      }
+    } else {
+      // No next section, probably mobile.
+      s = true;
+    }
+    if(s && checkRequiredFields($stepForm)) {
+      $stepForm.removeClass('js--stopped');
+      event.currentTarget.submit();
+    }
+
+  });
+  // disable the submit button after first click
+  $('form').once('hideSubmitButton', function () {
+    var $form = $(this);
+    $form.find('.form-submit').click(function (e) {
+      var el = $(this);
+      el.after('<input type="hidden" name="' + el.attr('name') + '" value="' + el.attr('value') + '" />');
+      return true;
+    });
+    $form.submit(function (e) {
+      //if (checkRequiredFields($form)) {
+        if (!e.isPropagationStopped() || !$(this).hasClass('js--stopped')) {
+          $('input.form-submit', $(this))
+            .attr('disabled', 'disabled')
+            .val('processing');
+          return true;
+        }
+      //}
+      return false;
+    });
+  });
   $steps.each(function(i,v) {
     var $v = $(v);
     $v.addClass('processed');

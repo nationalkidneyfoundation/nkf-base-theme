@@ -32,7 +32,7 @@
 
 
       // disable the submit button after first click
-      $('form', context).once('hideSubmitButton', function () {
+      $('#redhen-donation-form', context).once('hideSubmitButton', function () {
         var $form = $(this);
         $form.find('.form-submit').click(function (e) {
           var el = $(this);
