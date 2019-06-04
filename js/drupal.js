@@ -21,6 +21,7 @@
       });
 
       $('[data-track="event"]').once('googleEvent').click(function(){
+
         var obj = {
           hitType: 'event',
           eventCategory: $(this).data('category') ? $(this).data('category') : '',
@@ -29,7 +30,16 @@
           eventValue: $(this).data('value') ? $(this).data('value') : '',
           transport: 'beacon'
         };
-        gaTrack(obj);
+        var hasSent = $(this).is('[data-sent]');
+        var wasSent = $(this).data('sent');
+        if (hasSent) {
+          if (wasSent === "" || wasSent == null) {
+            $(this).data('sent', true);
+            gaTrack(obj);
+          }
+        } else {
+          gaTrack(obj);
+        }
       });
 
       $('[data-track="social"]').once('googleSocial').click(function(){

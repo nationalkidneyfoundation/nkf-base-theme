@@ -7,6 +7,7 @@ var nkf_base_init = function($) {
     var classes = $(this).attr('data-class').split('|');
     $(targets).each(function(i, v){
       $(v).toggleClass(classes[i]);
+      $(v).trigger('toggleClass' + classes[i]);
     })
     e.preventDefault();
   });
@@ -184,6 +185,10 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
     return t === 0 ? true: false;
   }
 
+  // Set focus on radios when clicked, not default behavoir.
+  $('.form-type-radio').once('radioClicked').on('click', function(e){
+    $('input', this).focus();
+  })
 
   var $steps = $('form .step:not(.processed)');
   var l = $steps.length;
@@ -191,7 +196,10 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
   // Handle default submit handler for step forms.
   var $stepForm = $steps.closest('form');
 
-  $stepForm.on('submit', (event)=>{
+  $stepForm.on('submit keypress', function(event){
+    if(event.type == 'keypress' && event.keyCode != 13) {
+      return;
+    }
     event.preventDefault();
     event.stopPropagation();
     $stepForm.addClass('js--stopped');
@@ -223,7 +231,10 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
       el.after('<input type="hidden" name="' + el.attr('name') + '" value="' + el.attr('value') + '" />');
       return true;
     });
-    $form.submit(function (e) {
+    $form.on('submit keypress', function(e){
+      if(e.type == 'keypress' && e.keyCode != 13) {
+        return;
+      }
       //if (checkRequiredFields($form)) {
         if (!e.isPropagationStopped() || !$(this).hasClass('js--stopped')) {
           $('input.form-submit', $(this))
@@ -264,7 +275,8 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
           .click(function(e){
             if(checkRequiredFields(v)) {
               $(this).closest('.step').addClass('sm--hide')
-                .nextAll('.step').first().removeClass('sm--hide');
+                .nextAll('.step').first().removeClass('sm--hide')
+                .find('input').first().focus();
             }
             e.preventDefault();
           });
