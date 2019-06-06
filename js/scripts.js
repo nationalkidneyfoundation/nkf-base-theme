@@ -182,6 +182,11 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
         $(d).removeClass('error');
       }
     });
+    var recaptcha = $('.g-recaptcha', context);
+    if(recaptcha.length && !recaptcha.hasClass('recaptcha-success')) {
+      t += 1;
+      recaptcha.addClass('recaptcha-required').addClass('animate').addClass('animation-duration--2').animationClass('animate--giggle');
+    }
     return t === 0 ? true: false;
   }
 
