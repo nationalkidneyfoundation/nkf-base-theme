@@ -237,17 +237,21 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
       return true;
     });
     $form.on('submit keypress', function(e){
+      console.log('submit');
       if(e.type == 'keypress' && e.keyCode != 13) {
         return;
       }
-      //if (checkRequiredFields($form)) {
-        if (!e.isPropagationStopped() || !$(this).hasClass('js--stopped')) {
+      if (!e.isPropagationStopped() || !$(this).hasClass('js--stopped')) {
+        if (checkRequiredFields($form)) {
+          console.log('submitting');
           $('input.form-submit', $(this))
             .attr('disabled', 'disabled')
             .val('processing');
+
+          e.currentTarget.submit();
           return true;
         }
-      //}
+      }
       return false;
     });
   });
