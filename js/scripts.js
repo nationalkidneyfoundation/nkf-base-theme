@@ -229,7 +229,7 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
 
   });
   // disable the submit button after first click
-  $('form').once('hideSubmitButton', function () {
+  $('form:not(#redhen-donation-form)').once('hideSubmitButton', function () {
     var $form = $(this);
     $form.find('.form-submit').click(function (e) {
       var el = $(this);
