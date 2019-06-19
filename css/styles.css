@@ -3141,13 +3141,11 @@ button.mfp-close {
 
 .height--max-content {
   height: -webkit-max-content !important;
-  height: -moz-max-content !important;
   height: max-content !important;
 }
 
 .height--min-content {
   height: -webkit-min-content !important;
-  height: -moz-min-content !important;
   height: min-content !important;
 }
 
@@ -3157,7 +3155,6 @@ button.mfp-close {
 
 .height--fit-content {
   height: -webkit-fit-content !important;
-  height: -moz-fit-content !important;
   height: fit-content !important;
 }
 
