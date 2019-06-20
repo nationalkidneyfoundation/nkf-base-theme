@@ -25,7 +25,7 @@ function nkf_base_preprocess_page(&$vars) {
     'spring-clinical' => array(
       'paths' => array('spring-clinical'),
       'header_color' => 'blue',
-      'nav_color' => 'aqua--l1',
+      'nav_color' => 'blue--l1',
       'theme' => 'blue',
     ),
     'support/kidneycars' => array(
