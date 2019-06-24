@@ -24,9 +24,9 @@ function nkf_base_preprocess_page(&$vars) {
   $microsites = array(
     'spring-clinical' => array(
       'paths' => array('spring-clinical'),
-      'header_color' => 'aqua',
-      'nav_color' => 'aqua--l1',
-      'theme' => 'aqua',
+      'header_color' => 'blue',
+      'nav_color' => 'blue--l1',
+      'theme' => 'blue',
     ),
     'support/kidneycars' => array(
       'paths' => array('kidneycars', 'support/kidneycars','blog/kidney-cars'),
