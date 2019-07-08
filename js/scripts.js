@@ -161,6 +161,10 @@ $('.js--bookmark-link').once('jsBookmark').on('click', function(e) {
     var t = 0;
     // handle required fields per section
     $(context).find('input.required:not(.form-radio), select.required, textarea.required, .form-radios.required').each(function(i, d) {
+      // skip hidden fields
+      if ($(d).is(":hidden")) {
+        return true;
+      }
       var r = false;
       if ($(d).attr('type') === 'checkbox') {
         r = !$("input[name='" + $(d).attr('name') + "']:checked").val();
