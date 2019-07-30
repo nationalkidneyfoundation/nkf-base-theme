@@ -32,6 +32,15 @@ var nkf_base_init = function($) {
       prevArrow: '<a href="#" class="slider-button-left"><i class="icon-left-open"></i></a>',
       nextArrow: '<a href="#" class="slider-button-right"><i class="icon-right-open"></i></a>'
     });
+    $('.slider-single').slick({
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      swipeToSlide: true,
+      touchThreshold: 8,
+      prevArrow: '<a href="#" class="slider-button-left"><i class="icon-left-open"></i></a>',
+      nextArrow: '<a href="#" class="slider-button-right"><i class="icon-right-open"></i></a>'
+    });
     $('.tabbed-slider--container:not(.processed)').each(function() {
       $(this).addClass('processed');
       var slider = $('.tabbed-slider--slider', this);
