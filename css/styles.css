@@ -3141,11 +3141,13 @@ button.mfp-close {
 
 .height--max-content {
   height: -webkit-max-content !important;
+  height: -moz-max-content !important;
   height: max-content !important;
 }
 
 .height--min-content {
   height: -webkit-min-content !important;
+  height: -moz-min-content !important;
   height: min-content !important;
 }
 
@@ -3155,6 +3157,7 @@ button.mfp-close {
 
 .height--fit-content {
   height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
   height: fit-content !important;
 }
 
@@ -18707,33 +18710,33 @@ nav .burger-time a {
   font-weight: bold;
 }
 
-.slider .slick-list {
+.slick-slider .slick-list {
   margin-bottom: 51px;
   margin-bottom: 3.157rem;
 }
 
 @media (min-width: 40em) {
-  .slider .slick-list {
+  .slick-slider .slick-list {
     margin: 0 51px;
     margin: 0 3.157rem;
   }
 }
 
-.slider .slick-track {
+.slick-slider .slick-track {
   display: -ms-flexbox;
   display: flex;
 }
 
-.slider .slick-slide {
+.slick-slider .slick-slide {
   height: auto;
 }
 
-.slider .slick-prev {
+.slick-slider .slick-prev {
   background-color: transparent;
 }
 
-.slider .slider-button-left,
-.slider .slider-button-right {
+.slick-slider .slider-button-left,
+.slick-slider .slider-button-right {
   position: absolute;
   border: 1px solid;
   color: #3b444f;
@@ -18748,17 +18751,17 @@ nav .burger-time a {
 }
 
 @media (min-width: 52em) {
-  .slider .slider-button-left,
-  .slider .slider-button-right {
+  .slick-slider .slider-button-left,
+  .slick-slider .slider-button-right {
     display: block !important;
   }
 }
 
-.slider .slider-button-left {
+.slick-slider .slider-button-left {
   left: 0;
 }
 
-.slider .slider-button-right {
+.slick-slider .slider-button-right {
   right: 0;
 }
 

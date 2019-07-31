@@ -1,4 +1,4 @@
-.slider {
+.slick-slider {
   .slick-list {
     @include when(sm) { margin: 0 space(xxxl); }
     margin-bottom: space(xxxl);
