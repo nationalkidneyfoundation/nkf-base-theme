@@ -29,7 +29,7 @@ function nkf_base_preprocess_page(&$vars) {
       'theme' => 'blue',
     ),
     'support/kidneycars' => array(
-      'paths' => array('kidneycars', 'support/kidneycars','blog/kidney-cars'),
+      'paths' => array('blog/kidney-cars'),
       'header_color' => 'orange',
       'nav_color' => 'orange--l1',
       'theme' => 'orange',
