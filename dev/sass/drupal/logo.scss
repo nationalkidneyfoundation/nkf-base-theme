@@ -45,3 +45,9 @@
   @include when(sm) { background-image: url(../img/NKF-logoR_Hori_OB.png); }
   background-image: url(../img/logo__bean--orange.png);
 }
+
+.kidney-cars .logo--wb #logo {
+  background-image: url(../logo.png);
+  width: 250px;
+  @include when(sm) { width: 300px; }
+}

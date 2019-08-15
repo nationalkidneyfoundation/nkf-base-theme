@@ -17393,6 +17393,17 @@ html.js .js-hide {
   }
 }
 
+.kidney-cars .logo--wb #logo {
+  background-image: url(../logo.png);
+  width: 250px;
+}
+
+@media (min-width: 40em) {
+  .kidney-cars .logo--wb #logo {
+    width: 300px;
+  }
+}
+
 fieldset {
   margin: 0;
   padding: 16px;

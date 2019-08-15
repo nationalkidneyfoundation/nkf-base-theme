@@ -56,6 +56,9 @@ function nkf_base_preprocess_page(&$vars) {
     }
   }
   // if we are dealing with Kidneycars add js
+  if ($vars['home'] == 'support/kidneycars') {
+    $page_classes[] = 'kidney-cars';
+  }
   if ($vars['home'] == 'support/kidneycars' && FALSE) {
     $g_tags = "(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
                 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
