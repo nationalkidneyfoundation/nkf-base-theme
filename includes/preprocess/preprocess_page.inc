@@ -56,7 +56,7 @@ function nkf_base_preprocess_page(&$vars) {
     }
   }
   // if we are dealing with Kidneycars add js
-  if ($vars['home'] == 'support/kidneycars') {
+  if (strpos($alias, 'support/kidneycars') !== false) {
     $page_classes[] = 'kidney-cars';
   }
   if ($vars['home'] == 'support/kidneycars' && FALSE) {
